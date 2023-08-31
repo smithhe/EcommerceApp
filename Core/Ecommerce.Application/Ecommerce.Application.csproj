@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+        <HintPath>..\..\..\..\..\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\7.0.0\lib\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.1" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+      <PackageReference Include="FluentValidation" Version="11.7.1" />
+      <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
+      <PackageReference Include="MediatR" Version="12.1.1" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Features\" />
+      <Folder Include="Profiles\" />
+      <Folder Include="Validators\" />
+    </ItemGroup>
+
+</Project>
