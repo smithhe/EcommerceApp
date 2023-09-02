@@ -2,6 +2,7 @@ using AutoMapper;
 using Ecommerce.Application.Validators.Category;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
+using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Category;
 using FluentValidation.Results;
 using MediatR;
@@ -54,7 +55,7 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 			}
 
 			//Validate the dto that was passed in the command
-			CreateCategoryValidator validator = new CreateCategoryValidator();
+			CreateCategoryValidator validator = new CreateCategoryValidator(this._categoryAsyncRepository);
 			ValidationResult validationResult = await validator.ValidateAsync(command, cancellationToken);
 
 			//Check for validation errors
@@ -81,6 +82,10 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 				response.Success = false;
 				response.Message = "Failed to add new Category";
 			}
+
+			Domain.Entities.Category? category = await this._categoryAsyncRepository.GetByIdAsync(newId);
+
+			response.CategoryDto = this._mapper.Map<CategoryDto>(category);
 			
 			return response;
 		}
