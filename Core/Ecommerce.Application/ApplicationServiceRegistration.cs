@@ -1,3 +1,4 @@
+using Ecommerce.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -12,6 +13,8 @@ namespace Ecommerce.Application
 			{
 				cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly());
 			});
+			
+			services.AddPersistenceServices();
 		}
 	}
 }

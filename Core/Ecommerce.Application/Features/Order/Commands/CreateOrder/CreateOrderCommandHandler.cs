@@ -1,9 +1,12 @@
 using AutoMapper;
+using AutoMapper.Internal;
+using Ecommerce.Application.Features.OrderItem.Commands;
 using Ecommerce.Application.Validators.Order;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Order;
+using Ecommerce.Shared.Responses.OrderItem;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -20,6 +23,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 		private readonly ILogger<CreateOrderCommandHandler> _logger;
 		private readonly IMapper _mapper;
 		private readonly IOrderAsyncRepository _orderAsyncRepository;
+		private readonly IMediator _mediator;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="CreateOrderCommandHandler"/> class.
@@ -27,11 +31,14 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mapper">The <see cref="IMapper"/> instance used for mapping objects.</param>
 		/// <param name="orderAsyncRepository">The <see cref="IOrderAsyncRepository"/> instance used for data access for <see cref="Order"/> entities.</param>
-		public CreateOrderCommandHandler(ILogger<CreateOrderCommandHandler> logger, IMapper mapper, IOrderAsyncRepository orderAsyncRepository)
+		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
+		public CreateOrderCommandHandler(ILogger<CreateOrderCommandHandler> logger, IMapper mapper, IOrderAsyncRepository orderAsyncRepository,
+			IMediator mediator)
 		{
 			this._logger = logger;
 			this._mapper = mapper;
 			this._orderAsyncRepository = orderAsyncRepository;
+			this._mediator = mediator;
 		}
 		
 		/// <summary>
@@ -87,12 +94,35 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			if (newId == -1)
 			{
 				response.Success = false;
-				response.Message = "Failed to add new Category";
+				response.Message = "Failed to add new Order";
+				return response;
 			}
-			else
+			
+			Domain.Entities.Order? order = await this._orderAsyncRepository.GetByIdAsync(newId);
+			response.Order = this._mapper.Map<OrderDto?>(order);
+
+			//Create all the order items for the order
+			foreach (OrderItemDto orderItem in command.OrderToCreate.OrderItems)
 			{
-				Domain.Entities.Order? order = await this._orderAsyncRepository.GetByIdAsync(newId);
-				response.Order = this._mapper.Map<OrderDto?>(order);
+				//Update the order Id before sending the request
+				orderItem.OrderId = newId;
+				CreateOrderItemResponse orderItemResponse = await this._mediator.Send(new CreateOrderItemCommand { OrderItemToCreate = orderItem }, cancellationToken);
+
+				if (orderItemResponse.Success == false)
+				{
+					response.Success = false;
+					response.Message = "Failed to create order items";
+					
+					//Delete the order since the items failed to create
+					await this._orderAsyncRepository.DeleteAsync(order!);
+
+					break;
+				}
+
+				if (orderItemResponse.ValidationErrors.Count > 0)
+				{
+					response.ValidationErrors.Concat(orderItemResponse.ValidationErrors);
+				}
 			}
 
 			return response;

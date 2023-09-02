@@ -23,4 +23,8 @@
 
 
 
+    <ItemGroup>
+      <Folder Include="Features\Order\Queries\GetOrderById\" />
+    </ItemGroup>
+
 </Project>
