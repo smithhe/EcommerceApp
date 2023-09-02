@@ -1,0 +1,65 @@
+using AutoMapper;
+using Ecommerce.Persistence.Contracts;
+using Ecommerce.Shared.Dtos;
+using Ecommerce.Shared.Responses.Category;
+using MediatR;
+using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Ecommerce.Application.Features.Category.Queries.GetAllCategories
+{
+	/// <summary>
+	/// A <see cref="Mediator"/> request handler for <see cref="GetAllCategoriesQuery"/>
+	/// </summary>
+	public class GetAllCategoriesQueryHandler : IRequestHandler<GetAllCategoriesQuery, GetAllCategoriesResponse>
+	{
+		private readonly ILogger<GetAllCategoriesQueryHandler> _logger;
+		private readonly IMapper _mapper;
+		private readonly ICategoryAsyncRepository _categoryAsyncRepository;
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="GetAllCategoriesQueryHandler"/> class.
+		/// </summary>
+		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
+		/// <param name="mapper">The <see cref="IMapper"/> instance used for mapping objects.</param>
+		/// <param name="categoryAsyncRepository">The <see cref="ICategoryAsyncRepository"/> instance used for data access for <see cref="Category"/> entities.</param>
+		public GetAllCategoriesQueryHandler(ILogger<GetAllCategoriesQueryHandler> logger, IMapper mapper, ICategoryAsyncRepository categoryAsyncRepository)
+		{
+			this._logger = logger;
+			this._mapper = mapper;
+			this._categoryAsyncRepository = categoryAsyncRepository;
+		}
+		
+		/// <summary>
+		/// Handles the <see cref="GetAllCategoriesQuery"/> request
+		/// </summary>
+		/// <param name="query">The <see cref="GetAllCategoriesQuery"/> request to be handled.</param>
+		/// <param name="cancellationToken">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
+		/// <returns>
+		/// A <see cref="GetCategoryByIdResponse"/> with Success being <c>true</c> if any <see cref="Domain.Entities.Category"/> entities were found;
+		/// Success will be <c>false</c> if no <see cref="Domain.Entities.Category"/> entities were found.
+		/// Message will contain the error to display if Success is <c>false</c>
+		/// Categories will contain all <see cref="Domain.Entities.Category"/> entities or will be empty if none are found
+		/// </returns>
+		public async Task<GetAllCategoriesResponse> Handle(GetAllCategoriesQuery query, CancellationToken cancellationToken)
+		{
+			this._logger.LogInformation("Handling request to get all existing category entities");
+			
+			GetAllCategoriesResponse response = new GetAllCategoriesResponse { Success = true, Message = "Successfully Got all Categories" };
+
+			IEnumerable<Domain.Entities.Category> categories = await this._categoryAsyncRepository.ListAllAsync();
+			response.Categories = this._mapper.Map<IEnumerable<CategoryDto>>(categories);
+			
+			if (categories.Any() == false)
+			{
+				response.Success = false;
+				response.Message = "No Categories Found";
+			}
+
+			return response;
+		}
+	}
+}
