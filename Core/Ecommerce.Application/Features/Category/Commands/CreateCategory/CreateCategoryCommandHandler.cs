@@ -40,8 +40,8 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 		/// <param name="command">The <see cref="CreateCategoryCommand"/> request to be handled.</param>
 		/// <param name="cancellationToken">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		/// <returns>
-		/// A <see cref="CreateCategoryResponse"/> with Success being <c>true</c> if the Category was created;
-		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="Domain.Entities.Category"/>.
+		/// A <see cref="CreateCategoryResponse"/> with Success being <c>true</c> if the <see cref="Category"/> was created;
+		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="Category"/>.
 		/// Message will contain the error to display if Success is <c>false</c>;
 		/// Validation Errors will be populated with errors to present if validation fails
 		/// </returns>
@@ -80,6 +80,7 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 			}
 			
 			//Valid Command
+			//TODO: Add user who created the order
 			int newId = await this._categoryAsyncRepository.AddAsync(this._mapper.Map<Domain.Entities.Category>(command.CategoryToCreate));
 
 			//Sql operation failed
@@ -88,10 +89,11 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 				response.Success = false;
 				response.Message = "Failed to add new Category";
 			}
-
-			Domain.Entities.Category? category = await this._categoryAsyncRepository.GetByIdAsync(newId);
-
-			response.CategoryDto = this._mapper.Map<CategoryDto>(category);
+			else
+			{
+				Domain.Entities.Category? category = await this._categoryAsyncRepository.GetByIdAsync(newId);
+				response.CategoryDto = this._mapper.Map<CategoryDto>(category);
+			}
 			
 			return response;
 		}
