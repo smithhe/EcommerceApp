@@ -39,6 +39,12 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 		/// </summary>
 		/// <param name="command">The <see cref="CreateCategoryCommand"/> request to be handled.</param>
 		/// <param name="cancellationToken">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
+		/// <returns>
+		/// A <see cref="CreateCategoryResponse"/> with Success being <c>true</c> if the Category was created;
+		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="Domain.Entities.Category"/>.
+		/// Message will contain the error to display if Success is <c>false</c>;
+		/// Validation Errors will be populated with errors to present if validation fails
+		/// </returns>
 		public async Task<CreateCategoryResponse> Handle(CreateCategoryCommand command, CancellationToken cancellationToken)
 		{
 			this._logger.LogInformation("Handling request to create a new category");

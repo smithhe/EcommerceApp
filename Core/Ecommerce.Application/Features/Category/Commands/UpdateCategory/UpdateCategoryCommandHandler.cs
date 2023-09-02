@@ -37,6 +37,12 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 		/// </summary>
 		/// <param name="command">The <see cref="UpdateCategoryCommand"/> request to be handled.</param>
 		/// <param name="cancellationToken">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
+		/// <returns>
+		/// A <see cref="UpdateCategoryResponse"/> with Success being <c>true</c> if the Category was updated;
+		/// Success will be <c>false</c> if no <see cref="Domain.Entities.Category"/> is found or validation of the command fails.
+		/// Message will contain the error to display if Success is <c>false</c>;
+		/// Validation Errors will be populated with errors to present if validation fails
+		/// </returns>
 		public async Task<UpdateCategoryResponse> Handle(UpdateCategoryCommand command, CancellationToken cancellationToken)
 		{
 			this._logger.LogInformation("Handling request to update an existing category");
