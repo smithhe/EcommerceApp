@@ -4,8 +4,14 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Ecommerce.Persistence
 {
+	/// <summary>
+	/// Extension class of IServiceCollection to register services
+	/// </summary>
 	public static class PersistenceServiceRegistration
 	{
+		/// <summary>
+		/// Extension method to register services for the Persistence project
+		/// </summary>
 		public static void AddPersistenceServices(this IServiceCollection services)
 		{
 			services.AddScoped<ICategoryAsyncRepository, CategoryAsyncRepository>();
