@@ -2,7 +2,7 @@ using Ecommerce.Domain.Common;
 
 namespace Ecommerce.Domain.Entities
 {
-	public class Rating : AuditableEntity
+	public class Review : AuditableEntity
 	{
 		public int Id { get; set; }
 		public int ProductId { get; set; }

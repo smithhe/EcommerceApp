@@ -21,4 +21,8 @@
       <Folder Include="Validators\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\Infrastructure\Ecommerce.Persistence\Ecommerce.Persistence.csproj" />
+    </ItemGroup>
+
 </Project>

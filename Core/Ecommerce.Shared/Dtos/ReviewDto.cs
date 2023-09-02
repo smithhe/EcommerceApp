@@ -1,6 +1,6 @@
 namespace Ecommerce.Shared.Dtos
 {
-	public class RatingDto
+	public class ReviewDto
 	{
 		public int Id { get; set; }
 		public int ProductId { get; set; }

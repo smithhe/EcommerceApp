@@ -12,6 +12,6 @@ namespace Ecommerce.Domain.Entities
 		public double AverageRating { get; set; }
 		public int QuantityAvailable { get; set; }
 		public Category Category { get; set; } = null!;
-		public IEnumerable<Rating> CustomerRatings { get; set; } = null!;
+		public IEnumerable<Review> CustomerReviews { get; set; } = null!;
 	}
 }

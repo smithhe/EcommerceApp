@@ -11,6 +11,6 @@ namespace Ecommerce.Shared.Dtos
 		public double AverageRating { get; set; }
 		public int QuantityAvailable { get; set; }
 		public CategoryDto Category { get; set; } = null!;
-		public IEnumerable<RatingDto> CustomerRatings { get; set; } = null!;
+		public IEnumerable<ReviewDto> CustomerReviews { get; set; } = null!;
 	}
 }
