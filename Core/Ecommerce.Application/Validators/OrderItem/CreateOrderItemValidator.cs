@@ -1,4 +1,4 @@
-using Ecommerce.Application.Features.OrderItem.Commands;
+using Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem;
 using Ecommerce.Persistence.Contracts;
 using FluentValidation;
 using System.Threading;

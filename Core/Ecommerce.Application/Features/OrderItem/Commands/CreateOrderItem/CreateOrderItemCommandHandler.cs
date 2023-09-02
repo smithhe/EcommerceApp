@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Ecommerce.Application.Features.OrderItem.Commands
+namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 {
 	/// <summary>
 	/// A <see cref="Mediator"/> request handler for <see cref="CreateOrderItemCommand"/>

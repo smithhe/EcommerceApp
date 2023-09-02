@@ -1,6 +1,6 @@
 using AutoMapper;
 using AutoMapper.Internal;
-using Ecommerce.Application.Features.OrderItem.Commands;
+using Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem;
 using Ecommerce.Application.Validators.Order;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
