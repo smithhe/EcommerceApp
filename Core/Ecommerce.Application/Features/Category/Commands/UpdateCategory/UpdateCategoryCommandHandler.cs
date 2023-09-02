@@ -59,10 +59,10 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 			//Check for validation errors
 			if (validationResult.Errors.Count > 0)
 			{
-				this._logger.LogWarning("Dto failed validation, returning validation errors");
+				this._logger.LogWarning("Command failed validation, returning validation errors");
 				
 				response.Success = false;
-				response.Message = "Category was invalid";
+				response.Message = "Command was invalid";
 				foreach (ValidationFailure validationResultError in validationResult.Errors)
 				{
 					response.ValidationErrors.Add(validationResultError.ErrorMessage);
@@ -71,7 +71,7 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 				return response;
 			}
 			
-			//Valid Category
+			//Valid Command
 			bool success = await this._categoryAsyncRepository.UpdateAsync(this._mapper.Map<Domain.Entities.Category>(command.CategoryToUpdate));
 
 			if (success == false)

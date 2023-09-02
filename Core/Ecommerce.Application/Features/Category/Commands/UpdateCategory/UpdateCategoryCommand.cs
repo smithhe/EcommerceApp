@@ -1,3 +1,4 @@
+using Ecommerce.Domain.Entities;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Category;
 using MediatR;
@@ -5,7 +6,7 @@ using MediatR;
 namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 {
 	/// <summary>
-	/// A <see cref="Mediator"/> request for updating an existing Category
+	/// A <see cref="Mediator"/> request for updating an existing <see cref="Category"/>
 	/// </summary>
 	public class UpdateCategoryCommand : IRequest<UpdateCategoryResponse>
 	{
