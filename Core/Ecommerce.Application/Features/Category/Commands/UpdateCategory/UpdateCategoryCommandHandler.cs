@@ -1,5 +1,6 @@
 using AutoMapper;
 using Ecommerce.Application.Validators.Category;
+using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Responses.Category;
 using FluentValidation.Results;
@@ -38,8 +39,8 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 		/// <param name="command">The <see cref="UpdateCategoryCommand"/> request to be handled.</param>
 		/// <param name="cancellationToken">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		/// <returns>
-		/// A <see cref="UpdateCategoryResponse"/> with Success being <c>true</c> if the Category was updated;
-		/// Success will be <c>false</c> if no <see cref="Domain.Entities.Category"/> is found or validation of the command fails.
+		/// A <see cref="UpdateCategoryResponse"/> with Success being <c>true</c> if the <see cref="Category"/> was updated;
+		/// Success will be <c>false</c> if no <see cref="Category"/> is found or validation of the command fails.
 		/// Message will contain the error to display if Success is <c>false</c>;
 		/// Validation Errors will be populated with errors to present if validation fails
 		/// </returns>
@@ -47,7 +48,7 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 		{
 			this._logger.LogInformation("Handling request to update an existing category");
 
-			UpdateCategoryResponse response = new UpdateCategoryResponse { Success = true, Message = "Successfully updated Category" };
+			UpdateCategoryResponse response = new UpdateCategoryResponse { Success = true, Message = "Category Updated Successfully" };
 			
 			//Check if the dto is null
 			if (command.CategoryToUpdate == null)
