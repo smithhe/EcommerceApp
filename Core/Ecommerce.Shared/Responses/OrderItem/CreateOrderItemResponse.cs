@@ -7,6 +7,9 @@ namespace Ecommerce.Shared.Responses.OrderItem
 	/// </summary>
 	public class CreateOrderItemResponse : BaseResponse
 	{
+		/// <summary>
+		/// The OrderItem created if request was successful
+		/// </summary>
 		public OrderItemDto? OrderItem { get; set; }
 	}
 }

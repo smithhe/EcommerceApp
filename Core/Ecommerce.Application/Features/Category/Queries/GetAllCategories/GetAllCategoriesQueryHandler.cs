@@ -1,4 +1,5 @@
 using AutoMapper;
+using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Category;
@@ -39,10 +40,10 @@ namespace Ecommerce.Application.Features.Category.Queries.GetAllCategories
 		/// <param name="query">The <see cref="GetAllCategoriesQuery"/> request to be handled.</param>
 		/// <param name="cancellationToken">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		/// <returns>
-		/// A <see cref="GetCategoryByIdResponse"/> with Success being <c>true</c> if any <see cref="Domain.Entities.Category"/> entities were found;
-		/// Success will be <c>false</c> if no <see cref="Domain.Entities.Category"/> entities were found.
+		/// A <see cref="GetCategoryByIdResponse"/> with Success being <c>true</c> if any <see cref="Category"/> entities were found;
+		/// Success will be <c>false</c> if no <see cref="Category"/> entities were found.
 		/// Message will contain the error to display if Success is <c>false</c>
-		/// Categories will contain all <see cref="Domain.Entities.Category"/> entities or will be empty if none are found
+		/// Categories will contain all <see cref="Category"/> entities or will be empty if none are found
 		/// </returns>
 		public async Task<GetAllCategoriesResponse> Handle(GetAllCategoriesQuery query, CancellationToken cancellationToken)
 		{
