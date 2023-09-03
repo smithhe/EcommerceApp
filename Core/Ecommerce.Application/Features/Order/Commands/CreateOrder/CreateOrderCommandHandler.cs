@@ -30,10 +30,10 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mapper">The <see cref="IMapper"/> instance used for mapping objects.</param>
-		/// <param name="orderAsyncRepository">The <see cref="IOrderAsyncRepository"/> instance used for data access for <see cref="Order"/> entities.</param>
 		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
-		public CreateOrderCommandHandler(ILogger<CreateOrderCommandHandler> logger, IMapper mapper, IOrderAsyncRepository orderAsyncRepository,
-			IMediator mediator)
+		/// <param name="orderAsyncRepository">The <see cref="IOrderAsyncRepository"/> instance used for data access for <see cref="Order"/> entities.</param>
+		public CreateOrderCommandHandler(ILogger<CreateOrderCommandHandler> logger, IMapper mapper, IMediator mediator,
+			IOrderAsyncRepository orderAsyncRepository)
 		{
 			this._logger = logger;
 			this._mapper = mapper;

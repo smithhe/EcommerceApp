@@ -1,4 +1,5 @@
 using AutoMapper;
+using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Category;
@@ -37,8 +38,8 @@ namespace Ecommerce.Application.Features.Category.Queries.GetCategoryById
 		/// <param name="query">The <see cref="GetCategoryByIdQuery"/> request to be handled.</param>
 		/// <param name="cancellationToken">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		/// <returns>
-		/// A <see cref="GetCategoryByIdResponse"/> with Success being <c>true</c> if the <see cref="Domain.Entities.Category"/> was found;
-		/// Success will be <c>false</c> if no <see cref="Domain.Entities.Category"/> with the specified ID is found.
+		/// A <see cref="GetCategoryByIdResponse"/> with Success being <c>true</c> if the <see cref="Category"/> was found;
+		/// Success will be <c>false</c> if no <see cref="Category"/> with the specified ID is found.
 		/// Message will contain the error to display if Success is <c>false</c>
 		/// </returns>
 		public async Task<GetCategoryByIdResponse> Handle(GetCategoryByIdQuery query, CancellationToken cancellationToken)
