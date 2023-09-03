@@ -1,4 +1,5 @@
 using AutoMapper;
+using Ecommerce.Domain.Entities;
 using Ecommerce.Application.Validators.Category;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Responses.Category;
@@ -38,8 +39,8 @@ namespace Ecommerce.Application.Features.Category.Commands.DeleteCategory
 		/// <param name="command">The <see cref="DeleteCategoryCommand"/> request to be handled.</param>
 		/// <param name="cancellationToken">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		/// <returns>
-		/// A <see cref="DeleteCategoryResponse"/> with Success being <c>true</c> if the Category was deleted;
-		/// Success will be <c>false</c> if no <see cref="Domain.Entities.Category"/> is found or validation of the command fails.
+		/// A <see cref="DeleteCategoryResponse"/> with Success being <c>true</c> if the <see cref="Category"/> was deleted;
+		/// Success will be <c>false</c> if no <see cref="Category"/> is found or validation of the command fails.
 		/// Message will contain the error to display if Success is <c>false</c>;
 		/// Validation Errors will be populated with errors to present if validation fails
 		/// </returns>
@@ -58,25 +59,7 @@ namespace Ecommerce.Application.Features.Category.Commands.DeleteCategory
 				return response;
 			}
 			
-			DeleteCategoryValidator validator = new DeleteCategoryValidator();
-			ValidationResult validationResult = await validator.ValidateAsync(command, cancellationToken);
-			
-			//Check for validation errors
-			if (validationResult.Errors.Count > 0)
-			{
-				this._logger.LogWarning("Command failed validation, returning validation errors");
-				
-				response.Success = false;
-				response.Message = "Command was invalid";
-				foreach (ValidationFailure validationResultError in validationResult.Errors)
-				{
-					response.ValidationErrors.Add(validationResultError.ErrorMessage);
-				}
-
-				return response;
-			}
-			
-			//Valid Command
+			//Attempt the delete
 			bool success = await this._categoryAsyncRepository.DeleteAsync(this._mapper.Map<Domain.Entities.Category>(command.CategoryToDelete));
 
 			if (success == false)
