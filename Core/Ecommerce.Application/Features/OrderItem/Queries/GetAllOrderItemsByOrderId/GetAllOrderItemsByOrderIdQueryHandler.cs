@@ -43,7 +43,7 @@ namespace Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrd
 		/// <returns>
 		/// A <see cref="GetAllOrderItemsByOrderIdResponse"/> with Success being <c>true</c> if any <see cref="OrderItem"/> entities were found;
 		/// Success will be <c>false</c> if no <see cref="OrderItem"/> entities were found.
-		/// Message will contain the error to display if Success is <c>false</c>
+		/// Message will contain the error to display if Success is <c>false</c>.
 		/// OrderItems will contain all <see cref="OrderItem"/> entities or will be empty if none are found
 		/// </returns>
 		public async Task<GetAllOrderItemsByOrderIdResponse> Handle(GetAllOrderItemsByOrderIdQuery query, CancellationToken cancellationToken)
