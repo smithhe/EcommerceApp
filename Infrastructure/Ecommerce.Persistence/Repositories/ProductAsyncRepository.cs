@@ -219,5 +219,52 @@ namespace Ecommerce.Persistence.Repositories
 
 			return products;
 		}
+
+		/// <summary>
+		/// Checks the table to see if the Name of a <see cref="Product"/> already exists
+		/// </summary>
+		/// <param name="name">The name to check for</param>
+		/// <returns>
+		/// <c>false</c> if found;
+		/// <c>true</c> if not found
+		/// </returns>
+		public async Task<bool> IsNameUnique(string name)
+		{
+			Product? product = await GetByNameAsync(name);
+
+			return product == null;
+		}
+		
+		/// <summary>
+		/// Retrieves a <see cref="Product"/> from the database with the specified Name.
+		/// </summary>
+		/// <param name="name">The Name of the <see cref="Product"/></param>
+		/// <returns>
+		/// The <see cref="Product"/> if found;
+		/// <c>null</c> if no <see cref="Product"/> with the specified Name is found.
+		/// </returns>
+		private async Task<Product?> GetByNameAsync(string name)
+		{
+			const string sql = $"SELECT * FROM {_tableName} WHERE Name = @Name";
+			Product? product = null;
+
+			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			{
+				connection.Open();
+
+				try
+				{
+					product = await connection.QueryFirstOrDefaultAsync<Product?>(sql, new { Name = name });
+				}
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when fetching Category row with name {name}");
+				}
+				
+				connection.Close();
+			}
+
+			return product;
+		}
 	}
 }

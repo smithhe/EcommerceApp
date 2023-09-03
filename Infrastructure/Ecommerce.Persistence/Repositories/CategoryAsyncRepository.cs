@@ -247,7 +247,7 @@ namespace Ecommerce.Persistence.Repositories
 
 				try
 				{
-					category = await connection.QueryFirstOrDefaultAsync<Category>(sql, new { Name = name });
+					category = await connection.QueryFirstOrDefaultAsync<Category?>(sql, new { Name = name });
 				}
 				catch (Exception e)
 				{

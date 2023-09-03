@@ -18,5 +18,15 @@ namespace Ecommerce.Persistence.Contracts
 		/// A empty <c>IEnumerable</c> if none are found.
 		/// </returns>
 		Task<IEnumerable<Product>> ListAllAsync(int categoryId);
+		
+		/// <summary>
+		/// Checks the table to see if the Name of a <see cref="Product"/> already exists
+		/// </summary>
+		/// <param name="name">The name to check for</param>
+		/// <returns>
+		/// <c>false</c> if found;
+		/// <c>true</c> if not found
+		/// </returns>
+		Task<bool> IsNameUnique(string name);
 	}
 }
