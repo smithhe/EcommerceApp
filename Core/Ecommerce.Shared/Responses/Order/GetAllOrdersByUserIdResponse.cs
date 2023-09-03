@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Ecommerce.Shared.Responses.Order
 {
 	/// <summary>
-	/// A implementation of the <see cref="BaseResponse" /> for a <see cref="GetAllOrdersByUserIdApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a <see cref="GetAllOrdersByUserIdApiRequest"/>
 	/// </summary>
 	public class GetAllOrdersByUserIdResponse : BaseResponse
 	{

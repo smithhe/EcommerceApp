@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Ecommerce.Shared.Responses.Category
 {
 	/// <summary>
-	/// A implementation of the <see cref="BaseResponse" /> for a <see cref="GetAllCategoriesApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a <see cref="GetAllCategoriesApiRequest"/>
 	/// </summary>
 	public class GetAllCategoriesResponse : BaseResponse
 	{

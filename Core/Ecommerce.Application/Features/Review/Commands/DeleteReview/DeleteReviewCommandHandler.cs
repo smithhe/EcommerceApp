@@ -39,8 +39,7 @@ namespace Ecommerce.Application.Features.Review.Commands.DeleteReview
 		/// <returns>
 		/// A <see cref="DeleteReviewResponse"/> with Success being <c>true</c> if the <see cref="Review"/> was deleted;
 		/// Success will be <c>false</c> if no <see cref="Review"/> is found or validation of the command fails.
-		/// Message will contain the error to display if Success is <c>false</c>;
-		/// Validation Errors will be populated with errors to present if validation fails
+		/// Message will contain the error to display if Success is <c>false</c>.
 		/// </returns>
 		public async Task<DeleteReviewResponse> Handle(DeleteReviewCommand command, CancellationToken cancellationToken)
 		{

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Ecommerce.Shared.Responses.Review
 {
 	/// <summary>
-	/// A implementation of the <see cref="BaseResponse" /> for a <see cref="GetReviewsForProductApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a <see cref="GetReviewsForProductApiRequest"/>
 	/// </summary>
 	public class GetReviewsForProductResponse : BaseResponse
 	{

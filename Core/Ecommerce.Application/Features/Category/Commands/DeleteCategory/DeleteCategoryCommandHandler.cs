@@ -41,8 +41,7 @@ namespace Ecommerce.Application.Features.Category.Commands.DeleteCategory
 		/// <returns>
 		/// A <see cref="DeleteCategoryResponse"/> with Success being <c>true</c> if the <see cref="Category"/> was deleted;
 		/// Success will be <c>false</c> if no <see cref="Category"/> is found or validation of the command fails.
-		/// Message will contain the error to display if Success is <c>false</c>;
-		/// Validation Errors will be populated with errors to present if validation fails
+		/// Message will contain the error to display if Success is <c>false</c>.
 		/// </returns>
 		public async Task<DeleteCategoryResponse> Handle(DeleteCategoryCommand command, CancellationToken cancellationToken)
 		{
