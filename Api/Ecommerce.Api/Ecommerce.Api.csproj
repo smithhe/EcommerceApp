@@ -17,8 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Core\Ecommerce.Application\Ecommerce.Application.csproj" />
-      <ProjectReference Include="..\..\Infrastructure\Ecommerce.Identity\Ecommerce.Identity.csproj" />
       <ProjectReference Include="..\Ecommerce.FastEndpoints\Ecommerce.FastEndpoints.csproj" />
     </ItemGroup>
 

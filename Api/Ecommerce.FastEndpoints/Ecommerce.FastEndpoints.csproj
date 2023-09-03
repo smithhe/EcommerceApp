@@ -11,7 +11,13 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Endpoints\" />
+      <ProjectReference Include="..\..\Core\Ecommerce.Application\Ecommerce.Application.csproj" />
+      <ProjectReference Include="..\..\Core\Ecommerce.Shared\Ecommerce.Shared.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Ecommerce.Identity\Ecommerce.Identity.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\Ecommerce.Shared\Ecommerce.Shared.csproj" />
     </ItemGroup>
 
 </Project>

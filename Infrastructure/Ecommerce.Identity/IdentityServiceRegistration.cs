@@ -52,7 +52,7 @@ namespace Ecommerce.Identity
 						ValidateAudience = true,
 						ValidateLifetime = true,
 						RequireExpirationTime = true,
-						ClockSkew = TimeSpan.Zero,
+						ClockSkew = TimeSpan.FromMinutes(5),
 						ValidIssuer = configuration["JwtSettings:Issuer"],
 						ValidAudience = configuration["JwtSettings:Audience"],
 						IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Key"]!))
