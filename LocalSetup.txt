@@ -1,1 +1,10 @@
 docker run --name ecommerce-mysql -d -v /home/harold/Documents/DockerStorage/Ecommerce/MySql:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=ecommerce -e MYSQL_USER=applicationuser -e MYSQL_PASSWORD=Welcome1! mysql:latest
+
+//EF Commands--------------------------------------------------------------
+Open a terminal
+
+For new migrations change directory to the Identity Project's directory and run
+    dotnet ef --startup-project ../../Api/Ecommerce.Api/ migrations add "<MIGRATIONNAME>"
+
+For database updates change directory to the Identity Project's directory and run
+    dotnet ef --startup-project ../../Api/Ecommerce.Api/ database update

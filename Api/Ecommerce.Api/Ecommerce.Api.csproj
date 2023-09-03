@@ -9,7 +9,17 @@
         <PackageReference Include="FastEndpoints" Version="5.16.0" />
         <PackageReference Include="FastEndpoints.Swagger" Version="5.16.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.10">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\Ecommerce.Application\Ecommerce.Application.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Ecommerce.Identity\Ecommerce.Identity.csproj" />
+      <ProjectReference Include="..\Ecommerce.FastEndpoints\Ecommerce.FastEndpoints.csproj" />
     </ItemGroup>
 
 </Project>

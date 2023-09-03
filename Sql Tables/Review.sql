@@ -9,7 +9,7 @@ CREATE TABLE Review (
     LastModifiedBy VARCHAR(255),
     LastModifiedDate DATETIME,
     CONSTRAINT FK_Product FOREIGN KEY (ProductId) REFERENCES Product(Id),
-    CONSTRAINT FK_User FOREIGN KEY (UserId) REFERENCES User(Id),
+    CONSTRAINT FK_User FOREIGN KEY (UserId) REFERENCES AspNetUsers(Id),
     CONSTRAINT CHK_CreatedDate CHECK (CreatedDate <= LastModifiedDate),
     CONSTRAINT CHK_LastModifiedDate CHECK (LastModifiedDate IS NULL OR CreatedDate <= LastModifiedDate)
 );
