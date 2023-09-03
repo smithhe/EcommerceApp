@@ -1,4 +1,5 @@
 using Ecommerce.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -18,5 +19,16 @@ namespace Ecommerce.Persistence.Contracts
 		/// A empty <c>IEnumerable</c> if none are found.
 		/// </returns>
 		Task<IEnumerable<Review>> ListAllAsync(int productId);
+
+		/// <summary>
+		/// Retrieves a <see cref="Review"/> from the database with the specified UserId and ProductId
+		/// </summary>
+		/// <param name="userId">The unique identifier of the <see cref="EcommerceUser"/></param>
+		/// <param name="productId">The unique identifier of the <see cref="Product"/></param>
+		/// <returns>
+		/// The <see cref="Review"/> if found;
+		/// <c>null</c> if no <see cref="Review"/> with the specified UserId and ProductId is found.
+		/// </returns>
+		Task<Review?> GetUserReviewForProduct(Guid userId, int productId);
 	}
 }

@@ -11,6 +11,6 @@ namespace Ecommerce.Shared.Responses.Category
 		/// <summary>
 		/// The newly created Category if request was successful
 		/// </summary>
-		public CategoryDto? CategoryDto { get; set; }
+		public CategoryDto? Category { get; set; }
 	}
 }

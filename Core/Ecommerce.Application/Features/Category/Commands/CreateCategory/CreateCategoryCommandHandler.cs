@@ -92,7 +92,7 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 			else
 			{
 				Domain.Entities.Category? category = await this._categoryAsyncRepository.GetByIdAsync(newId);
-				response.CategoryDto = this._mapper.Map<CategoryDto>(category);
+				response.Category = this._mapper.Map<CategoryDto>(category);
 			}
 			
 			return response;

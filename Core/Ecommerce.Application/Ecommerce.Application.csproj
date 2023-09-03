@@ -25,4 +25,8 @@
 
 
 
+    <ItemGroup>
+      <Folder Include="Features\Review\Queries\" />
+    </ItemGroup>
+
 </Project>

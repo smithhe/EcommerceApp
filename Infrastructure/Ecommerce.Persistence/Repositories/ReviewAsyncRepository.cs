@@ -214,5 +214,38 @@ namespace Ecommerce.Persistence.Repositories
 
 			return reviews;
 		}
+
+		/// <summary>
+		/// Retrieves a <see cref="Review"/> from the database with the specified UserId and ProductId
+		/// </summary>
+		/// <param name="userId">The unique identifier of the <see cref="EcommerceUser"/></param>
+		/// <param name="productId">The unique identifier of the <see cref="Product"/></param>
+		/// <returns>
+		/// The <see cref="Review"/> if found;
+		/// <c>null</c> if no <see cref="Review"/> with the specified UserId and ProductId is found.
+		/// </returns>
+		public async Task<Review?> GetUserReviewForProduct(Guid userId, int productId)
+		{
+			const string sql = $"SELECT * FROM {_tableName} WHERE UserId = @UserId AND ProductId = @ProductId";
+			Review? review = null;
+			
+			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			{
+				connection.Open();
+
+				try
+				{
+					review = await connection.QueryFirstOrDefaultAsync<Review>(sql, new { UserId = userId, ProductId = productId });
+				}
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when fetching Review row for user {userId} on product {productId}");
+				}
+				
+				connection.Close();
+			}
+
+			return review;
+		}
 	}
 }
