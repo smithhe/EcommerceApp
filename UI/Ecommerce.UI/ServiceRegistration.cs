@@ -14,6 +14,7 @@ namespace Ecommerce.UI
 		public static void AddProjectServices(this IServiceCollection services, IConfiguration configuration)
 		{
 			services.AddScoped<ICategoryService, CategoryService>();
+			services.AddScoped<IProductService, ProductService>();
 			
 			services.AddBlazoredToast();
 			
@@ -26,6 +27,12 @@ namespace Ecommerce.UI
 			string apiEndpoint = configuration["ApiUri"] ?? "https://localhost:7205";
 			
 			services.AddRefitClient<ICategoryApiService>()
+				.ConfigureHttpClient(c =>
+				{
+					c.BaseAddress = new Uri(apiEndpoint);
+				});
+			
+			services.AddRefitClient<IProductApiService>()
 				.ConfigureHttpClient(c =>
 				{
 					c.BaseAddress = new Uri(apiEndpoint);

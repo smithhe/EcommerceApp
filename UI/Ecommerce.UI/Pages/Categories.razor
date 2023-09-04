@@ -28,7 +28,7 @@ else
                         <div class="card-body">
                             <h5 class="card-title">@category.Name</h5>
                             <p class="card-text">@category.Summary</p>
-                            <a class="btn btn-primary">View @category.Name</a>
+                            <a class="btn btn-primary" @onclick="() => OnCategoryButtonClick(category.Id)">View @category.Name</a>
                         </div>
                     </div>
                 </div>

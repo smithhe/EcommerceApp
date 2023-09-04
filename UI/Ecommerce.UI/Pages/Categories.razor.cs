@@ -12,6 +12,7 @@ namespace Ecommerce.UI.Pages
 	{
 		[Inject] public ICategoryService CategoryService { get; set; } = null!;
 		[Inject] public IToastService ToastService { get; set; } = null!;
+		[Inject] public NavigationManager NavigationManager { get; set; } = null!;
 		private IEnumerable<CategoryDto>? CategoryList { get; set; }
 
 
@@ -27,7 +28,11 @@ namespace Ecommerce.UI.Pages
 			{
 				this.ToastService.ShowError(response.Message!);
 			}
-			
+		}
+
+		private void OnCategoryButtonClick(int categoryId)
+		{
+			this.NavigationManager.NavigateTo($"/Products/{categoryId}");
 		}
 	}
 }

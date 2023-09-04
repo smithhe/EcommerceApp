@@ -99,3 +99,16 @@ a, .btn-link {
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
+    
+    .navbar-bg {
+        background-color: #f4f4f4;
+    }
+    
+.container-bg {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))!important;
+    padding: 20px; /* Add padding for spacing */
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap; /* Allow cards to wrap within the container */
+}

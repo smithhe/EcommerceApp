@@ -1,0 +1,61 @@
+@page "/Products/{CategoryId}"
+@using Blazored.Toast.Configuration
+
+<BlazoredToasts Position="ToastPosition.TopRight"
+                Timeout="10"
+                IconType="IconType.FontAwesome"
+                SuccessClass="success-toast-override"
+                SuccessIcon="done_outline"
+                ErrorIcon="fa fa-bug"/>
+
+@if (this.ProductList == null)
+{
+    <div style="position:fixed;top:50%;left:50%;margin-top:-50px;margin-left:-100px;">
+        <img src="images/ajax-loader.gif" alt="Loading..."/>
+    </div>
+}
+else
+{
+    <div class="container mt-5">
+        <div class="text-center mb-3">
+            <h1 class="products-header">Browse Our Products</h1>
+        </div>
+
+        <div class="row">
+            @foreach (var product in this.ProductList)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card clickable-card">
+                        <a href="/product/detailed/{@product.Id}" style="text-decoration: none;">
+                            <img src="@product.ImageUrl" class="card-img-top" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">@product.Name</h5>
+                                <p class="card-text">$@product.Price</p>
+                                <div class="ratings">
+                                    <span class="rating-stars">
+                                        @for (decimal i = 0; i < 5; i++)
+                                        {
+                                            if (product.AverageRating > i && product.AverageRating < i + 1)
+                                            {
+                                                <i class="bi bi-star-half"></i>
+                                            }
+                                            else if (product.AverageRating > i || product.AverageRating == i)
+                                            {
+                                                <i class="bi bi-star-fill"></i>
+                                            }
+                                            else
+                                            {
+                                                <i class="bi bi-star"></i>
+                                            }
+                                        }
+                                    </span>
+                                </div>
+                                <a href="#" class="btn btn-primary" style="text-decoration: none;">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
