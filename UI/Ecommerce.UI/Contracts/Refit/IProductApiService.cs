@@ -8,6 +8,9 @@ namespace Ecommerce.UI.Contracts.Refit
 	public interface IProductApiService
 	{
 		[Get("/api/product/all")]
-		Task<ApiResponse<GetAllProductsByCategoryIdResponse>> GetAllCategories(GetAllProductsByCategoryIdApiRequest getAllProducts);
+		Task<ApiResponse<GetAllProductsByCategoryIdResponse>> GetAllCategories(GetAllProductsByCategoryIdApiRequest getAllProductsRequest);
+		
+		[Get("/api/product/{ProductId}")]
+		Task<ApiResponse<GetProductByIdResponse>> GetProductById(GetProductByIdApiRequest getProductByIdApiRequest);
 	}
 }

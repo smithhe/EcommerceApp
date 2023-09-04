@@ -34,5 +34,23 @@ namespace Ecommerce.UI.Services
 			GetAllProductsByCategoryIdResponse? error = JsonConvert.DeserializeObject<GetAllProductsByCategoryIdResponse>(response.Error.Content);
 			return error!;
 		}
+
+		public async Task<GetProductByIdResponse> GetProductById(int productId)
+		{
+			ApiResponse<GetProductByIdResponse> response = await this._productApiService.GetProductById(new GetProductByIdApiRequest { ProductId = productId });
+
+			if (response.IsSuccessStatusCode)
+			{
+				return response.Content;
+			}
+
+			if (string.IsNullOrEmpty(response.Error.Content))
+			{
+				return new GetProductByIdResponse { Success = false, Message = "Unexpected Error Occurred" };
+			}
+
+			GetProductByIdResponse? error = JsonConvert.DeserializeObject<GetProductByIdResponse>(response.Error.Content);
+			return error!;
+		}
 	}
 }

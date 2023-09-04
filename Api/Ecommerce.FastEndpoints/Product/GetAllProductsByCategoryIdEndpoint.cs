@@ -29,7 +29,7 @@ namespace Ecommerce.FastEndpoints.Product
 
 		public override async Task HandleAsync(GetAllProductsByCategoryIdApiRequest req, CancellationToken ct)
 		{
-			this._logger.LogInformation("Handling Get All Categories Request");
+			this._logger.LogInformation("Handling Get All Products by Category Request");
 			GetAllProductsByCategoryIdResponse response;
 			
 			try
@@ -38,7 +38,7 @@ namespace Ecommerce.FastEndpoints.Product
 			}
 			catch (Exception e)
 			{
-				this._logger.LogError(e, "Error handling request to get all categories");
+				this._logger.LogError(e, "Error handling request to get all products by category");
 				await SendAsync(new GetAllProductsByCategoryIdResponse { Success = false, Message = "Unexpected Error Occurred" }, 500, ct);
 				return;
 			}
