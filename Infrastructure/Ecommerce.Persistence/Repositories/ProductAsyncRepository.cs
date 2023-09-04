@@ -77,9 +77,9 @@ namespace Ecommerce.Persistence.Repositories
 			int newId = -1;
 			const string sql =
 				$"INSERT INTO {_tableName} " +
-				"(Name, Description, Price, AverageRating, QuantityAvailable, CategoryId, CreatedBy, CreatedDate) " +
+				"(Name, Description, Price, AverageRating, QuantityAvailable, ImageUrl, CategoryId, CreatedBy, CreatedDate) " +
 				"VALUES " +
-				"(@Name, @Description, @Price, @AverageRating, @QuantityAvailable, @CategoryId, @CreatedBy, @CreatedDate)" +
+				"(@Name, @Description, @Price, @AverageRating, @QuantityAvailable, @ImageUrl, @CategoryId, @CreatedBy, @CreatedDate)" +
 				"SELECT LAST_INSERT_ID();";
 			
 			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
@@ -122,9 +122,10 @@ namespace Ecommerce.Persistence.Repositories
             SET Name = @Name,
                 Description = @Description,
                 Price = @Price,
-                AverageRating = @AverageRating
-                QuantityAvailable = @QuantityAvailable
-                CategoryId = @CategoryId
+                AverageRating = @AverageRating,
+                QuantityAvailable = @QuantityAvailable,
+                ImageUrl = @ImageUrl,
+                CategoryId = @CategoryId,
                 LastModifiedBy = @LastModifiedBy,
                 LastModifiedDate = @LastModifiedDate
             WHERE Id = @Id";

@@ -119,7 +119,7 @@ namespace Ecommerce.Persistence.Repositories
             UPDATE {_tableName}
             SET ProductId = @ProductId,
                 Stars = @Stars,
-                Comments = @Comments
+                Comments = @Comments,
                 LastModifiedBy = @LastModifiedBy,
                 LastModifiedDate = @LastModifiedDate
             WHERE Id = @Id";
