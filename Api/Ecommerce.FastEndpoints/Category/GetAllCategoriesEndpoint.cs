@@ -43,8 +43,7 @@ namespace Ecommerce.FastEndpoints.Category
 				return;
 			}
 
-			await SendAsync(new GetAllCategoriesResponse { Success = false, Message = "You cant do that" }, 400, ct);
-			//await SendOkAsync(response, ct);
+			await SendOkAsync(response, ct);
 		}
 	}
 }
