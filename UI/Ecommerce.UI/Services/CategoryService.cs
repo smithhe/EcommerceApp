@@ -2,6 +2,7 @@ using Ecommerce.Shared.Requests.Category;
 using Ecommerce.Shared.Responses.Category;
 using Ecommerce.UI.Contracts;
 using Ecommerce.UI.Contracts.Refit;
+using Newtonsoft.Json;
 using Refit;
 using System.Threading.Tasks;
 
@@ -25,7 +26,13 @@ namespace Ecommerce.UI.Services
 				return response.Content;
 			}
 
-			return new GetAllCategoriesResponse();
+			if (string.IsNullOrEmpty(response.Error.Content))
+			{
+				return new GetAllCategoriesResponse { Success = false, Message = "Unexpected Error Occurred" };
+			}
+
+			GetAllCategoriesResponse? error = JsonConvert.DeserializeObject<GetAllCategoriesResponse>(response.Error.Content);
+			return error!;
 		}
 	}
 }
