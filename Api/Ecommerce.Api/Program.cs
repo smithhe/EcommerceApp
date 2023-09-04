@@ -1,5 +1,7 @@
 using Ecommerce.Application;
+using Ecommerce.FastEndpoints;
 using Ecommerce.Identity;
+using FastEndpoints;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,9 +19,9 @@ builder.Services.AddCors(policy =>
 	);
 });
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddControllers();
+builder.Services.AddFastEndpointServices(builder.Configuration);
 
 WebApplication app = builder.Build();
 
@@ -30,6 +32,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("OpenCorsPolicy");
+app.UseFastEndpoints();
 
 app.UseAuthorization();
 

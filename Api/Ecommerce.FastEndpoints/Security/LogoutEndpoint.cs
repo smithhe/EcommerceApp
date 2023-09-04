@@ -20,7 +20,7 @@ namespace Ecommerce.FastEndpoints.Security
 		
 		public override void Configure()
 		{
-			Post("api/logout");
+			Post("/api/logout");
 		}
 
 		public override async Task HandleAsync(AuthenticatedUserModel req, CancellationToken ct)

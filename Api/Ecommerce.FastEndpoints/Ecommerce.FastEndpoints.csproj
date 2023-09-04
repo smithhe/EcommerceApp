@@ -20,4 +20,5 @@
       <ProjectReference Include="..\..\Core\Ecommerce.Shared\Ecommerce.Shared.csproj" />
     </ItemGroup>
 
+
 </Project>

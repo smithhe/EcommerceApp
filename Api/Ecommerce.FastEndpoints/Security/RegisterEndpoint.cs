@@ -20,7 +20,7 @@ namespace Ecommerce.FastEndpoints.Security
 		
 		public override void Configure()
 		{
-			Post("api/register");
+			Post("/api/register");
 			AllowAnonymous();
 		}
 
