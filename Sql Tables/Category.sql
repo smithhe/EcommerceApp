@@ -6,6 +6,6 @@ CREATE TABLE Category (
     CreatedDate DATETIME NOT NULL,
     LastModifiedBy VARCHAR(255),
     LastModifiedDate DATETIME,
-    CONSTRAINT CHK_CreatedDate CHECK (CreatedDate <= LastModifiedDate),
-    CONSTRAINT CHK_LastModifiedDate CHECK (LastModifiedDate IS NULL OR CreatedDate <= LastModifiedDate)
+    CONSTRAINT CHK_CCreatedDate CHECK (CreatedDate <= LastModifiedDate),
+    CONSTRAINT CHK_CLastModifiedDate CHECK (LastModifiedDate IS NULL OR CreatedDate <= LastModifiedDate)
 );

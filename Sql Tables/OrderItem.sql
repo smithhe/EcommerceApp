@@ -7,8 +7,8 @@ CREATE TABLE OrderItem (
     CreatedDate DATETIME NOT NULL,
     LastModifiedBy VARCHAR(255),
     LastModifiedDate DATETIME,
-    CONSTRAINT FK_Product FOREIGN KEY (ProductId) REFERENCES Product(Id),
-	CONSTRAINT FK_Order FOREIGN KEY (OrderId) REFERENCES Order(Id),
-    CONSTRAINT CHK_CreatedDate CHECK (CreatedDate <= LastModifiedDate),
-    CONSTRAINT CHK_LastModifiedDate CHECK (LastModifiedDate IS NULL OR CreatedDate <= LastModifiedDate)
+    CONSTRAINT FK_OIProduct FOREIGN KEY (ProductId) REFERENCES Product(Id),
+	CONSTRAINT FK_OIOrder FOREIGN KEY (OrderId) REFERENCES Order(Id),
+    CONSTRAINT CHK_OICreatedDate CHECK (CreatedDate <= LastModifiedDate),
+    CONSTRAINT CHK_OILastModifiedDate CHECK (LastModifiedDate IS NULL OR CreatedDate <= LastModifiedDate)
 );
