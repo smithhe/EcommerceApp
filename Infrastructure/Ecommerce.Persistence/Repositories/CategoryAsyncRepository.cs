@@ -76,8 +76,8 @@ namespace Ecommerce.Persistence.Repositories
 		{
 			int newId = -1;
 			const string sql =
-				$"INSERT INTO {_tableName} (Name, Description, CreatedBy, CreatedDate) " +
-				"VALUES (@Name, @Description, @CreatedBy, @CreatedDate)" +
+				$"INSERT INTO {_tableName} (Name, Summary, CreatedBy, CreatedDate) " +
+				"VALUES (@Name, @Summary, @CreatedBy, @CreatedDate)" +
 				"SELECT LAST_INSERT_ID();";
 
 			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
@@ -118,7 +118,7 @@ namespace Ecommerce.Persistence.Repositories
 			const string sql = $@"
             UPDATE {_tableName}
             SET Name = @Name,
-                Description = @Description,
+                Summary = @Summary,
                 LastModifiedBy = @LastModifiedBy,
                 LastModifiedDate = @LastModifiedDate
             WHERE Id = @Id";

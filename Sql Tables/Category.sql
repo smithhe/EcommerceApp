@@ -1,7 +1,7 @@
 CREATE TABLE Category (
     Id INT AUTO_INCREMENT PRIMARY KEY,
-    Name VARCHAR(255) NOT NULL,
-    Description TEXT NOT NULL,
+    Name VARCHAR(50) NOT NULL,
+    Summary VARCHAR(50) NOT NULL,
     CreatedBy VARCHAR(255) NOT NULL,
     CreatedDate DATETIME NOT NULL,
     LastModifiedBy VARCHAR(255),

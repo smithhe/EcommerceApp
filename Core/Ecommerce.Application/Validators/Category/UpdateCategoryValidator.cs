@@ -22,10 +22,10 @@ namespace Ecommerce.Application.Validators.Category
 			RuleFor(c => c)
 				.MustAsync(NameIsUnique).WithMessage("Name must be unique");
 
-			RuleFor(c => c.CategoryToUpdate!.Description)
-				.NotNull().WithMessage("Description cannot not be null")
-				.NotEmpty().WithMessage("Description cannot be empty")
-				.MaximumLength(500).WithMessage("Description cannot exceed 500 characters");
+			RuleFor(c => c.CategoryToUpdate!.Summary)
+				.NotNull().WithMessage("Summary cannot not be null")
+				.NotEmpty().WithMessage("Summary cannot be empty")
+				.MaximumLength(50).WithMessage("Summary cannot exceed 50 characters");
 		}
 		
 		private async Task<bool> NameIsUnique(UpdateCategoryCommand updateCategoryCommand, CancellationToken cancellationToken)
