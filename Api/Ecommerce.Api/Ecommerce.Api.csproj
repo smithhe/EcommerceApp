@@ -3,11 +3,11 @@
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
+        <UserSecretsId>d33faa8a-1ee6-495a-91c2-47b7bffbb1ce</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="FastEndpoints" Version="5.16.0" />
-        <PackageReference Include="FastEndpoints.Swagger" Version="5.16.0" />
+        <PackageReference Include="FastEndpoints" Version="5.17.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.10">
           <PrivateAssets>all</PrivateAssets>

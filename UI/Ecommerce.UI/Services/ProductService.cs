@@ -4,6 +4,7 @@ using Ecommerce.UI.Contracts;
 using Ecommerce.UI.Contracts.Refit;
 using Newtonsoft.Json;
 using Refit;
+using System;
 using System.Threading.Tasks;
 
 namespace Ecommerce.UI.Services
@@ -19,7 +20,7 @@ namespace Ecommerce.UI.Services
 		
 		public async Task<GetAllProductsByCategoryIdResponse> GetAllProducts(int categoryId)
 		{
-			ApiResponse<GetAllProductsByCategoryIdResponse> response = await this._productApiService.GetAllCategories(new GetAllProductsByCategoryIdApiRequest { CategoryId = categoryId });
+			ApiResponse<GetAllProductsByCategoryIdResponse> response = await this._productApiService.GetAllProductsByCategory(new GetAllProductsByCategoryIdApiRequest { CategoryId = categoryId });
 
 			if (response.IsSuccessStatusCode)
 			{

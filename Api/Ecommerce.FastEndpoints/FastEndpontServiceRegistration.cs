@@ -11,7 +11,7 @@ namespace Ecommerce.FastEndpoints
 		public static void AddFastEndpointServices(this IServiceCollection services, IConfiguration configuration)
 		{
 			//Add the services for Fast Endpoints
-			https://fast-endpoints.com/
+			//https://fast-endpoints.com/
 			services.AddFastEndpoints();
 			
 			//Add the application services

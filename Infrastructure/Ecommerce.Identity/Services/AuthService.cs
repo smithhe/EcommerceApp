@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,15 +58,79 @@ namespace Ecommerce.Identity.Services
 		/// <summary>
 		/// Logs the user out on the server
 		/// </summary>
-		/// <param name="request">The User to log out</param>
-		public async Task LogoutAsync(AuthenticatedUserModel request)
+		/// <param name="userName">The User to log out</param>
+		public async Task LogoutAsync(string userName)
 		{
-			EcommerceUser? user = await this._userManager.FindByNameAsync(request.UserName);
+			EcommerceUser? user = await this._userManager.FindByNameAsync(userName);
 
 			if (user != null)
 			{
 				// Invalidate the user's token by updating the security stamp
 				await this._userManager.UpdateSecurityStampAsync(user);
+			}
+		}
+		
+		/// <summary>
+		/// Validates the Jwt token provided in the request can still be used
+		/// </summary>
+		/// <param name="token">The Jwt token send in the request</param>
+		/// <returns>
+		/// <c>True</c> if the token is still valid
+		/// <c>False</c> if the token is no longer valid
+		/// </returns>
+		public async Task<bool> IsValidToken(string token)
+		{
+			JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+			
+			//Same as the parameters that are setup in Service Registration
+			TokenValidationParameters validationParameters = new TokenValidationParameters
+			{
+				ValidateIssuerSigningKey = true,
+				ValidateIssuer = true,
+				ValidateAudience = true,
+				ValidateLifetime = true,
+				RequireExpirationTime = true,
+				ClockSkew = TimeSpan.FromMinutes(5),
+				ValidIssuer = this._jwtSettings.Issuer,
+				ValidAudience = this._jwtSettings.Audience,
+				IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(this._jwtSettings.Key))
+			};
+
+			try
+			{
+				ClaimsPrincipal? claimsPrincipal = tokenHandler.ValidateToken(token, validationParameters, out SecurityToken validatedToken);
+				
+				// Extract the username claim from the token's claims
+				string? usernameClaim = claimsPrincipal.Claims.FirstOrDefault(claim => claim.Type == ClaimTypes.Name)?.Value;
+
+				if (string.IsNullOrEmpty(usernameClaim))
+				{
+					// Username claim is missing or invalid
+					return false;
+				}
+				
+				// Retrieve the user's security stamp
+				EcommerceUser? user = await this._userManager.FindByNameAsync(usernameClaim);
+				string? userSecurityStamp = user?.SecurityStamp;
+
+				string? securityStampClaim = claimsPrincipal.Claims.FirstOrDefault(claim => claim.Type == "AspNet.Identity.SecurityStamp")?.Value;
+
+				// Check if the token's security stamp matches the stored security stamp
+				if (string.IsNullOrEmpty(userSecurityStamp) == false &&
+				    string.Equals(securityStampClaim, userSecurityStamp) == false)
+				{
+					return false; // Token is invalidated due to logout
+				}
+
+				// Check other validation conditions if needed
+				// ...
+
+				return true; // Token is valid
+			}
+			catch (Exception)
+			{
+				// Token validation failed
+				return false;
 			}
 		}
 
@@ -74,43 +139,70 @@ namespace Ecommerce.Identity.Services
 		/// </summary>
 		/// <param name="createUserRequest">The information of the new User to register</param>
 		/// <returns>
-		///	<c>True</c> if the user does not exist and the information provided is valid;
-		/// <c>False</c> if any property in the request is empty or null, if the user exists, or if the information provided is invalid
+		///	A <see cref="CreateUserResponse"/> with success <c>true</c> if the user was created;
+		/// false if the user failed to create with Errors populated with the errors that caused failure
 		/// </returns>
-		public async Task<bool> CreateUserAsync(CreateUserRequest createUserRequest)
+		public async Task<CreateUserResponse> CreateUserAsync(CreateUserRequest createUserRequest)
 		{
+			CreateUserResponse response = new CreateUserResponse();
+			
 			//Check for null or empty properties in the request
 			if (string.IsNullOrEmpty(createUserRequest.UserName) || string.IsNullOrEmpty(createUserRequest.Password)
 			    || string.IsNullOrEmpty(createUserRequest.EmailAddress) || string.IsNullOrEmpty(createUserRequest.FirstName)
 			    || string.IsNullOrEmpty(createUserRequest.LastName))
 			{
-				return false;
+				response.Success = false;
+				response.Errors = new string[] { "All Fields are required" };
+				return response;
 			}
 			
 			//Check for an existing user
 			EcommerceUser? existingUser = await this._userManager.FindByNameAsync(createUserRequest.UserName);
 			if (existingUser != null)
 			{
-				return false;
+				response.Success = false;
+				response.Errors = new string[] { "UserName Already Exists" };
+				return response;
+			}
+			
+			//Validate the email address provided
+			try
+			{
+				MailAddress mailAddress = new MailAddress(createUserRequest.EmailAddress);
+			}
+			catch (FormatException)
+			{
+				response.Success = false;
+				response.Errors = new string[] { "Invalid Email Address" };
+				return response;
 			}
 
-			//Create the new domain user
+			//Create the new domain user after sanitizing input
 			EcommerceUser newUser = new EcommerceUser
 			{
-				FirstName = createUserRequest.FirstName,
-				LastName = createUserRequest.LastName,
-				UserName = createUserRequest.UserName,
-				Email = createUserRequest.EmailAddress,
+				FirstName = createUserRequest.FirstName.LowerAndUpperFirst(),
+				LastName = createUserRequest.LastName.LowerAndUpperFirst(),
+				UserName = createUserRequest.UserName.ToLower(),
+				Email = createUserRequest.EmailAddress.ToLower(),
 				EmailConfirmed = true //TODO: Update to send email to confirm
 			};
 
 			//Attempt to create the user
 			IdentityResult result = await this._userManager.CreateAsync(newUser, createUserRequest.Password);
 
-			//Return whether the create succeeded or failed
-			return result.Succeeded;
+			//Check for errors
+			if (result.Succeeded)
+			{
+				response.Success = true;
+				return response;
+			}
+			
+			//Add errors into the list then return the response
+			response.Success = false;
+			response.Errors = result.Errors.Select(error => error.Description).ToArray();
+			return response;
 		}
-		
+
 		/// <summary>
 		/// Validates if the Username and Password belong to an existing user
 		/// </summary>
@@ -153,8 +245,6 @@ namespace Ecommerce.Identity.Services
 			{
 				new Claim(ClaimTypes.Name, username),
 				new Claim(ClaimTypes.NameIdentifier, user!.Id),
-				new Claim(JwtRegisteredClaimNames.Nbf, new DateTimeOffset(DateTime.Now).ToUnixTimeSeconds().ToString()),
-				new Claim(JwtRegisteredClaimNames.Exp, new DateTimeOffset(DateTime.Now.StartOfNextDay(5)).ToUnixTimeSeconds().ToString())
 			};
 			
 			//Add the roles as claims
@@ -162,6 +252,10 @@ namespace Ecommerce.Identity.Services
 			{
 				claims.Add(new Claim(ClaimTypes.Role, role.Name));
 			}
+			
+			//Add the security stamp
+			string securityStamp = await this._userManager.GetSecurityStampAsync(user);
+			claims.Add(new Claim("AspNet.Identity.SecurityStamp", securityStamp));
 
 			//Create a new signing key for the token
 			SymmetricSecurityKey symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(this._jwtSettings.Key));
@@ -169,9 +263,12 @@ namespace Ecommerce.Identity.Services
 
 			//Create a token
 			JwtSecurityToken token = new JwtSecurityToken(
-				new JwtHeader(signingCredentials),
-				new JwtPayload(claims)
-			);
+				this._jwtSettings.Issuer,
+				this._jwtSettings.Audience,
+				claims,
+				DateTime.Now,
+				DateTime.Now.StartOfNextDay(5),
+				signingCredentials);
 
 			//Write the token to the model sent back to the client
 			AuthenticatedUserModel output = new AuthenticatedUserModel

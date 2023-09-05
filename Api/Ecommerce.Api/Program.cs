@@ -1,6 +1,4 @@
-using Ecommerce.Application;
 using Ecommerce.FastEndpoints;
-using Ecommerce.Identity;
 using FastEndpoints;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -33,9 +31,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors("OpenCorsPolicy");
-app.UseFastEndpoints();
 
+app.UseAuthentication();
 app.UseAuthorization();
+app.UseFastEndpoints();
 
 app.MapControllers();
 

@@ -23,7 +23,7 @@ namespace Ecommerce.FastEndpoints.Product
 		
 		public override void Configure()
 		{
-			Get("/api/product/{ProductId}");
+			Get("/api/product/get");
 			AllowAnonymous();
 		}
 

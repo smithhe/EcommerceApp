@@ -26,7 +26,7 @@ namespace Ecommerce.Identity
 
 			services.AddIdentity<EcommerceUser, IdentityRole>(options =>
 				{
-					options.Password.RequiredLength = 10;
+					options.Password.RequiredLength = 9;
 					options.Password.RequireUppercase = true;
 					options.Password.RequireLowercase = true;
 					options.Password.RequireDigit = true;

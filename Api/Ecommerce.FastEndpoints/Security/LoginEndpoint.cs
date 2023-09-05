@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.FastEndpoints.Security
 {
-	public class LoginEndpoint : Endpoint<AuthenticationRequest>
+	public class LoginEndpoint : Endpoint<AuthenticationRequest, AuthenticatedUserModel?>
 	{
 		private readonly ILogger<LoginEndpoint> _logger;
 		private readonly IAuthenticationService _authenticationService;
@@ -30,7 +30,7 @@ namespace Ecommerce.FastEndpoints.Security
 
 			if (result == null)
 			{
-				await SendAsync(400, cancellation: ct);
+				await SendAsync(null,400, cancellation: ct);
 				return;
 			}
 

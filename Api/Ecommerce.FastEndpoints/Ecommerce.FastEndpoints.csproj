@@ -6,8 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="FastEndpoints" Version="5.16.0" />
-      <PackageReference Include="FastEndpoints.Swagger" Version="5.16.0" />
+      <PackageReference Include="FastEndpoints" Version="5.17.1" />
+      <PackageReference Include="FastEndpoints.Swagger" Version="5.17.1" />
     </ItemGroup>
 
     <ItemGroup>
@@ -19,6 +19,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Core\Ecommerce.Shared\Ecommerce.Shared.csproj" />
     </ItemGroup>
+
 
 
 

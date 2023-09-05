@@ -21,17 +21,27 @@ namespace Ecommerce.Identity.Contracts
 		/// <summary>
 		/// Logs the user out on the server
 		/// </summary>
-		/// <param name="request">The User to log out</param>
-		Task LogoutAsync(AuthenticatedUserModel request);
+		/// <param name="userName">The User to log out</param>
+		Task LogoutAsync(string userName);
 		
 		/// <summary>
 		/// Creates a new user from the info provided in the request
 		/// </summary>
 		/// <param name="createUserRequest">The information of the new User to register</param>
 		/// <returns>
-		///	<c>True</c> if the user does not exist and the information provided is valid;
-		/// <c>False</c> if any property in the request is empty or null, if the user exists, or if the information provided is invalid
+		///	A <see cref="CreateUserResponse"/> with success <c>true</c> if the user was created;
+		/// false if the user failed to create with Errors populated with the errors that caused failure
 		/// </returns>
-		Task<bool> CreateUserAsync(CreateUserRequest createUserRequest);
+		Task<CreateUserResponse> CreateUserAsync(CreateUserRequest createUserRequest);
+		
+		/// <summary>
+		/// Validates the Jwt token provided in the request can still be used
+		/// </summary>
+		/// <param name="token">The Jwt token send in the request</param>
+		/// <returns>
+		/// <c>True</c> if the token is still valid
+		/// <c>False</c> if the token is no longer valid
+		/// </returns>
+		Task<bool> IsValidToken(string token);
 	}
 }

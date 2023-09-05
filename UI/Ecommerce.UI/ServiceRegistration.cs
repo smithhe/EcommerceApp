@@ -1,7 +1,10 @@
+using Blazored.LocalStorage;
 using Blazored.Toast;
 using Ecommerce.UI.Contracts;
 using Ecommerce.UI.Contracts.Refit;
+using Ecommerce.UI.Security;
 using Ecommerce.UI.Services;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Refit;
@@ -17,8 +20,18 @@ namespace Ecommerce.UI
 			services.AddScoped<IProductService, ProductService>();
 			
 			services.AddBlazoredToast();
+			services.AddBlazoredLocalStorage();
 			
+			AddSecurityServices(services, configuration);
 			AddRefit(services, configuration);
+		}
+
+		private static void AddSecurityServices(IServiceCollection services, IConfiguration configuration)
+		{
+			services.AddScoped<ISecurityService, SecurityService>();
+			services.AddAuthorizationCore();
+			services.AddScoped<AuthenticationStateProvider, AuthStateProvider>();
+			services.AddTransient<AuthHeaderHandler>();
 		}
 
 		//https://github.com/reactiveui/refit
@@ -30,13 +43,19 @@ namespace Ecommerce.UI
 				.ConfigureHttpClient(c =>
 				{
 					c.BaseAddress = new Uri(apiEndpoint);
-				});
+				}).AddHttpMessageHandler<AuthHeaderHandler>();
 			
 			services.AddRefitClient<IProductApiService>()
 				.ConfigureHttpClient(c =>
 				{
 					c.BaseAddress = new Uri(apiEndpoint);
-				});
+				}).AddHttpMessageHandler<AuthHeaderHandler>();
+			
+			services.AddRefitClient<ISecurityApiService>()
+				.ConfigureHttpClient(c =>
+				{
+					c.BaseAddress = new Uri(apiEndpoint);
+				}).AddHttpMessageHandler<AuthHeaderHandler>();
 		}
 	}
 }

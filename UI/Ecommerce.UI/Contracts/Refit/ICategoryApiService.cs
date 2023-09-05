@@ -1,7 +1,6 @@
 using Ecommerce.Shared.Requests.Category;
 using Ecommerce.Shared.Responses.Category;
 using Refit;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Ecommerce.UI.Contracts.Refit

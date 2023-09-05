@@ -1,0 +1,72 @@
+@page "/Register"
+@using Blazored.Toast.Configuration
+
+<BlazoredToasts Position="ToastPosition.TopRight"
+                Timeout="10"
+                IconType="IconType.FontAwesome"
+                SuccessClass="success-toast-override"
+                SuccessIcon="done_outline"
+                ErrorIcon="fa fa-bug"/>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            @if (this.RegistrationErrors != null)
+            {
+                foreach (var registrationError in RegistrationErrors)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @registrationError
+                    </div>
+                }
+            }
+            <div class="register-form">
+                <h2 class="text-center mb-4">Register</h2>
+                <EditForm Model="CreateUserRequestModel" OnValidSubmit="CreateUserButton_Click">
+                    <DataAnnotationsValidator/>
+                    <ValidationSummary/>
+
+                    <div class="form-group mt-2">
+                        <label for="username" class="form-label h5">Username</label>
+                        <InputText type="text" id="username" name="username" class="form-control" placeholder="Enter your username" @bind-Value="CreateUserRequestModel!.UserName"/>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label for="firstname" class="form-label h5">First Name</label>
+                        <InputText type="text" id="firstname" name="firstname" class="form-control" placeholder="Enter your username" @bind-Value="CreateUserRequestModel!.FirstName"/>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label for="lastname" class="form-label h5">Last Name</label>
+                        <InputText type="text" id="lastname" name="lastname" class="form-control" placeholder="Enter your username" @bind-Value="CreateUserRequestModel!.LastName"/>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label for="email" class="form-label h5">Email</label>
+                        <InputText type="text" id="email" name="email" class="form-control" placeholder="Enter your username" @bind-Value="CreateUserRequestModel!.EmailAddress"/>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label for="password" class="form-label h5">Password</label>
+                        <InputText type="password" id="password" name="password" class="form-control" placeholder="Enter your password" @bind-Value="CreateUserRequestModel!.Password"/>
+                    </div>
+
+                    @if (this.IsProcessing)
+                    {
+                        <button type="submit" class="btn btn-primary form-control mt-3" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status"></span>
+                            Registering
+                        </button>
+                    }
+                    else
+                    {
+                        <button type="submit" class="btn btn-primary form-control mt-3">Register</button>
+                    }
+                    
+                </EditForm>
+
+                <p class="text-center mt-3">Already have an account? <a href="/Login">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</div>

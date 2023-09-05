@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.FastEndpoints.Security
 {
-	public class RegisterEndpoint : Endpoint<CreateUserRequest>
+	public class RegisterEndpoint : Endpoint<CreateUserRequest, CreateUserResponse>
 	{
 		private readonly ILogger<RegisterEndpoint> _logger;
 		private readonly IAuthenticationService _authenticationService;
@@ -26,15 +26,15 @@ namespace Ecommerce.FastEndpoints.Security
 
 		public override async Task HandleAsync(CreateUserRequest req, CancellationToken ct)
 		{
-			bool success = await this._authenticationService.CreateUserAsync(req);
+			CreateUserResponse response = await this._authenticationService.CreateUserAsync(req);
 
-			if (success)
+			if (response.Success)
 			{
-				await SendAsync(201, cancellation: ct);
+				await SendAsync(response, 201, cancellation: ct);
 				return;
 			}
 
-			await SendAsync(400, cancellation: ct);
+			await SendAsync(response, 400, cancellation: ct);
 		}
 	}
 }
