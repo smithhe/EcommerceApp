@@ -1,4 +1,5 @@
-﻿<nav class="navbar navbar-expand-lg bg-dark-subtle">
+﻿@using Ecommerce.Shared.Security
+<nav class="navbar navbar-expand-lg bg-dark-subtle">
     <div class="container">
         <a class="navbar-brand" href="#">TechGear Forge</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
@@ -18,7 +19,14 @@
                     <AuthorizeView>
                         <Authorized>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Welcome, @context.User.Identity!.Name</a>
+                                @{
+                                    string? firstName = context.User.Claims.Where(claim => string.Equals(claim.Type, CustomClaims._firstName)).Select(c => c.Value).FirstOrDefault();
+                                    string? lastName = context.User.Claims.Where(claim => string.Equals(claim.Type, CustomClaims._lastName)).Select(c => c.Value).FirstOrDefault();
+                                    string displayName = string.IsNullOrEmpty(firstName) ? @context.User.Identity!.Name! : string.IsNullOrEmpty(lastName) ? firstName : $"{firstName} {lastName}";
+                                    
+                                    <a class="nav-link" href="#">Welcome, @displayName</a>
+                                }
+                                
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/Logout"><i class="bi bi-box-arrow-in-right"></i>Logout</a>

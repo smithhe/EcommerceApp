@@ -113,7 +113,7 @@ namespace Ecommerce.Identity.Services
 				EcommerceUser? user = await this._userManager.FindByNameAsync(usernameClaim);
 				string? userSecurityStamp = user?.SecurityStamp;
 
-				string? securityStampClaim = claimsPrincipal.Claims.FirstOrDefault(claim => claim.Type == "AspNet.Identity.SecurityStamp")?.Value;
+				string? securityStampClaim = claimsPrincipal.Claims.FirstOrDefault(claim => string.Equals(claim.Type, CustomClaims._securityStamp) )?.Value;
 
 				// Check if the token's security stamp matches the stored security stamp
 				if (string.IsNullOrEmpty(userSecurityStamp) == false &&
@@ -123,7 +123,7 @@ namespace Ecommerce.Identity.Services
 				}
 
 				// Check other validation conditions if needed
-				// ...
+				//TODO: Add additional checks on the token
 
 				return true; // Token is valid
 			}
@@ -232,7 +232,7 @@ namespace Ecommerce.Identity.Services
 		private async Task<AuthenticatedUserModel> GenerateToken(string username)
 		{
 			//Find the user in the database
-			EcommerceUser? user = await this._userManager.FindByNameAsync(username);
+			EcommerceUser user = (await this._userManager.FindByNameAsync(username))!;
 
 			//Linq expression to grab all roles for this user
 			var roles = from ur in this._context.UserRoles
@@ -245,6 +245,8 @@ namespace Ecommerce.Identity.Services
 			{
 				new Claim(ClaimTypes.Name, username),
 				new Claim(ClaimTypes.NameIdentifier, user!.Id),
+				new Claim(CustomClaims._firstName, user.FirstName),
+				new Claim(CustomClaims._lastName, user.LastName)
 			};
 			
 			//Add the roles as claims
@@ -255,7 +257,7 @@ namespace Ecommerce.Identity.Services
 			
 			//Add the security stamp
 			string securityStamp = await this._userManager.GetSecurityStampAsync(user);
-			claims.Add(new Claim("AspNet.Identity.SecurityStamp", securityStamp));
+			claims.Add(new Claim(CustomClaims._securityStamp, securityStamp));
 
 			//Create a new signing key for the token
 			SymmetricSecurityKey symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(this._jwtSettings.Key));
