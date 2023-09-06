@@ -13,6 +13,7 @@ namespace Ecommerce.Shared.Security
 		[Required]
 		public string? EmailAddress { get; set; }
 		[Required]
+		[MaxLength(50)]
 		public string? Password { get; set; }
 	}
 }
