@@ -1,5 +1,6 @@
 @page "/ProductDetail/{ProductId}"
 @using Blazored.Toast.Configuration
+@using Ecommerce.Shared.Dtos
 
 <BlazoredToasts Position="ToastPosition.TopRight"
                 Timeout="10"
@@ -17,27 +18,56 @@
 else
 {
     <div class="row w-100">
-        <div class="col-md-8">
-            <img src="@this.Product.ImageUrl" class="card-img-top" alt="Product 1">
-        </div>
-        <div class="col-md-4">
-            <div class="row w-100">
-                <div class="col">
-                    <h1 class="display-4">@this.Product.Name</h1>
-                </div>
-            </div>
-            <div class="row w-100">
-                <div class="col">
-                    <h1 class="display-4">@this.Product.Description</h1>
-                </div>
-            </div>
-            <div class="row w-100">
-                <div class="col">
-                    <h1 class="display-4">@this.Product.Description</h1>
-                </div>
+        <div class="container mt-5">
+            <div class="jumbotron text-center">
+                <h1 class="display-4">Laptop 1</h1>
+                <hr class="my-4">
             </div>
         </div>
     </div>
-    
-    
+
+    <div class="row text-center mt-3">
+        <div class="col">
+            <img src="@this.Product.ImageUrl" class="img-top" alt="Product 1">
+        </div>
+    </div>
+
+    <div class="row w-100 mt-3">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="display-6">Price: $@this.Product.Price</h1>
+                <button type="button" class="btn btn-primary btn-lg">Add to Cart <i class="bi bi-cart4"></i></button>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col text-center">
+                <h1 class="display-6">Description</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="lead">@this.Product.Description</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row w-100">
+        <div class="container mt-5">
+            <div class="jumbotron text-center">
+                <h1 class="display-4">Customer Reviews</h1>
+                <hr class="my-4">
+            </div>
+        </div>
+    </div>
+
+    <div class="row w-100">
+        @foreach (ReviewDto review in this.Product.CustomerReviews)
+        {
+            <div>
+
+            </div>
+        }
+    </div>
 }
