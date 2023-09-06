@@ -19,14 +19,18 @@ namespace Ecommerce.UI
 			services.AddScoped<ICategoryService, CategoryService>();
 			services.AddScoped<IProductService, ProductService>();
 			
+			//https://github.com/Blazored/Toast
 			services.AddBlazoredToast();
+			//https://github.com/Blazored/LocalStorage
 			services.AddBlazoredLocalStorage();
 			
-			AddSecurityServices(services, configuration);
+			AddSecurityServices(services);
 			AddRefit(services, configuration);
 		}
 
-		private static void AddSecurityServices(IServiceCollection services, IConfiguration configuration)
+		//Video series that includes going over .Net Identity in a real world context
+		//https://www.youtube.com/watch?v=2c4p6RGtkps&list=PLLWMQd6PeGY0bEMxObA6dtYXuJOGfxSPx&index=57
+		private static void AddSecurityServices(IServiceCollection services)
 		{
 			services.AddScoped<ISecurityService, SecurityService>();
 			services.AddAuthorizationCore();
