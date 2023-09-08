@@ -28,7 +28,7 @@ namespace Ecommerce.FastEndpoints.Security
 		{
 			string? token = HttpContext.Request.Headers["Authorization"].FirstOrDefault();
 			
-			if (await TokenValidatorService.ValidateTokenAsync(this._authenticationService, token) == false)
+			if (await TokenService.ValidateTokenAsync(this._authenticationService, token) == false)
 			{
 				//Token is Invalid
 				await SendUnauthorizedAsync(ct);

@@ -1,9 +1,12 @@
 using Ecommerce.Identity.Contracts;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Ecommerce.FastEndpoints
 {
-	public static class TokenValidatorService
+	public static class TokenService
 	{
 		public static async Task<bool> ValidateTokenAsync(IAuthenticationService authenticationService, string? token)
 		{
@@ -27,6 +30,24 @@ namespace Ecommerce.FastEndpoints
 
 			//Token is valid
 			return true;
+		}
+
+		public static string? GetUserNameFromToken(string? token)
+		{
+			//Check for null token
+			if (string.IsNullOrEmpty(token))
+			{
+				return null;
+			}
+			
+			// Decode the JWT token
+			JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+			JwtSecurityToken jwtToken = tokenHandler.ReadJwtToken(token);
+			
+			// Find the username claim
+			Claim? usernameClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name);
+
+			return usernameClaim?.Value;
 		}
 	}
 }
