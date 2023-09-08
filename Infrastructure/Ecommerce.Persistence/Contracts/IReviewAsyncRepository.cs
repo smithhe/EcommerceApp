@@ -23,12 +23,12 @@ namespace Ecommerce.Persistence.Contracts
 		/// <summary>
 		/// Retrieves a <see cref="Review"/> from the database with the specified UserId and ProductId
 		/// </summary>
-		/// <param name="userId">The unique identifier of the <see cref="EcommerceUser"/></param>
+		/// <param name="userName">The UserName of the <see cref="EcommerceUser"/></param>
 		/// <param name="productId">The unique identifier of the <see cref="Product"/></param>
 		/// <returns>
 		/// The <see cref="Review"/> if found;
 		/// <c>null</c> if no <see cref="Review"/> with the specified UserId and ProductId is found.
 		/// </returns>
-		Task<Review?> GetUserReviewForProduct(Guid userId, int productId);
+		Task<Review?> GetUserReviewForProduct(string userName, int productId);
 	}
 }

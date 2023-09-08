@@ -76,8 +76,8 @@ namespace Ecommerce.Persistence.Repositories
 		{
 			int newId = -1;
 			const string sql =
-				$"INSERT INTO {_tableName} (ProductId, Stars, Comments, CreatedBy, CreatedDate) " +
-				"VALUES (@ProductId, @Stars, Comments, @CreatedBy, @CreatedDate)" +
+				$"INSERT INTO {_tableName} (ProductId, UserName, Stars, Comments, CreatedBy, CreatedDate) " +
+				"VALUES (@ProductId, @UserName, @Stars, Comments, @CreatedBy, @CreatedDate)" +
 				"SELECT LAST_INSERT_ID();";
 			
 			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
@@ -118,6 +118,7 @@ namespace Ecommerce.Persistence.Repositories
 			const string sql = $@"
             UPDATE {_tableName}
             SET ProductId = @ProductId,
+                UserName = @UserName,
                 Stars = @Stars,
                 Comments = @Comments,
                 LastModifiedBy = @LastModifiedBy,
@@ -218,15 +219,15 @@ namespace Ecommerce.Persistence.Repositories
 		/// <summary>
 		/// Retrieves a <see cref="Review"/> from the database with the specified UserId and ProductId
 		/// </summary>
-		/// <param name="userId">The unique identifier of the <see cref="EcommerceUser"/></param>
+		/// <param name="userName">The UserName of the <see cref="EcommerceUser"/></param>
 		/// <param name="productId">The unique identifier of the <see cref="Product"/></param>
 		/// <returns>
 		/// The <see cref="Review"/> if found;
 		/// <c>null</c> if no <see cref="Review"/> with the specified UserId and ProductId is found.
 		/// </returns>
-		public async Task<Review?> GetUserReviewForProduct(Guid userId, int productId)
+		public async Task<Review?> GetUserReviewForProduct(string userName, int productId)
 		{
-			const string sql = $"SELECT * FROM {_tableName} WHERE UserId = @UserId AND ProductId = @ProductId";
+			const string sql = $"SELECT * FROM {_tableName} WHERE UserName = @UserName AND ProductId = @ProductId";
 			Review? review = null;
 			
 			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
@@ -235,11 +236,11 @@ namespace Ecommerce.Persistence.Repositories
 
 				try
 				{
-					review = await connection.QueryFirstOrDefaultAsync<Review>(sql, new { UserId = userId, ProductId = productId });
+					review = await connection.QueryFirstOrDefaultAsync<Review>(sql, new { UserName = userName, ProductId = productId });
 				}
 				catch (Exception e)
 				{
-					this._logger.LogError(e, $"SQL Error when fetching Review row for user {userId} on product {productId}");
+					this._logger.LogError(e, $"SQL Error when fetching Review row for user {userName} on product {productId}");
 				}
 				
 				connection.Close();
