@@ -235,7 +235,38 @@ namespace Ecommerce.Persistence.Repositories
 
 			return product == null;
 		}
-		
+
+		/// <summary>
+		/// Retrieves the id of the <see cref="Category"/> for the <see cref="Product"/> 
+		/// </summary>
+		/// <param name="id">The unique identifier of the <see cref="Product"/></param>
+		/// <returns>
+		/// The Id of the <see cref="Category"/> if found; -1 if not found
+		/// </returns>
+		public async Task<int> GetCategoryId(int id)
+		{
+			const string sql = $"SELECT CategoryId FROM {_tableName} WHERE Id = @Id";
+			int categoryId = -1;
+
+			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			{
+				connection.Open();
+
+				try
+				{
+					categoryId = await connection.QueryFirstOrDefaultAsync<int>(sql, new { Id = id });
+				}
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when fetching CategoryId for product {id}");
+				}
+				
+				connection.Close();
+			}
+
+			return categoryId;
+		}
+
 		/// <summary>
 		/// Retrieves a <see cref="Product"/> from the database with the specified Name.
 		/// </summary>

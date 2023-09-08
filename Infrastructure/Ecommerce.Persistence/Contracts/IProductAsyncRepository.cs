@@ -28,5 +28,14 @@ namespace Ecommerce.Persistence.Contracts
 		/// <c>true</c> if not found
 		/// </returns>
 		Task<bool> IsNameUnique(string name);
+
+		/// <summary>
+		/// Retrieves the id of the <see cref="Category"/> for the <see cref="Product"/> 
+		/// </summary>
+		/// <param name="id">The unique identifier of the <see cref="Product"/></param>
+		/// <returns>
+		/// The Id of the <see cref="Category"/> if found; -1 if not found
+		/// </returns>
+		Task<int> GetCategoryId(int id);
 	}
 }
