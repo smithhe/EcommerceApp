@@ -40,6 +40,8 @@ namespace Ecommerce.FastEndpoints
 				return null;
 			}
 			
+			token = token.Substring("Bearer ".Length);
+			
 			// Decode the JWT token
 			JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
 			JwtSecurityToken jwtToken = tokenHandler.ReadJwtToken(token);

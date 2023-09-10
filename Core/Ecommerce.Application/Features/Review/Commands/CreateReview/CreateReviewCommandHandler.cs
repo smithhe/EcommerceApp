@@ -64,6 +64,15 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 				return response;
 			}
 			
+			//Check if username is null
+			if (command.UserName == null)
+			{
+				this._logger.LogWarning("UserName was null in command, returning failed response");
+				response.Success = false;
+				response.Message = "Must provide a UserName to create";
+				return response;
+			}
+			
 			//Validate the dto that was passed in the command
 			CreateReviewValidator validator = new CreateReviewValidator(this._reviewAsyncRepository, this._productAsyncRepository);
 			ValidationResult validationResult = await validator.ValidateAsync(command, cancellationToken);
@@ -84,8 +93,9 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 			}
 			
 			//Valid Command
-			//TODO: Add user who created the order
-			int newId = await this._reviewAsyncRepository.AddAsync(this._mapper.Map<Domain.Entities.Review>(command.ReviewToCreate));
+			Domain.Entities.Review? newReview = this._mapper.Map<Domain.Entities.Review>(command.ReviewToCreate);
+			newReview.CreatedBy = command.UserName;
+			int newId = await this._reviewAsyncRepository.AddAsync(newReview);
 			
 			//Sql operation failed
 			if (newId == -1)

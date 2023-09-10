@@ -1,9 +1,12 @@
 using Blazored.Toast.Services;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Product;
+using Ecommerce.Shared.Responses.Review;
 using Ecommerce.UI.Contracts;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Ecommerce.UI.Pages
@@ -11,8 +14,10 @@ namespace Ecommerce.UI.Pages
 	public partial class ProductDetail
 	{
 		[Parameter] public string ProductId { get; set; } = null!;
+		[CascadingParameter] private Task<AuthenticationState> AuthenticationState { get; set; } = null!;
 		
 		[Inject] public IProductService ProductService { get; set; } = null!;
+		[Inject] public IReviewService ReviewService { get; set; } = null!;
 		[Inject] public IToastService ToastService { get; set; } = null!;
 
 		private ProductDto? Product { get; set; }
@@ -121,7 +126,7 @@ namespace Ecommerce.UI.Pages
 			}
 		}
 		
-		private void SubmitReview()
+		private async Task SubmitReview()
 		{
 			if (this.ReviewModel.Stars < 1)
 			{
@@ -129,7 +134,27 @@ namespace Ecommerce.UI.Pages
 				return;
 			}
 			
+			AuthenticationState authState = await this.AuthenticationState;
+			this.ReviewModel.UserName = authState.User.Identity?.Name ?? string.Empty;
+			this.ReviewModel.ProductId = Convert.ToInt32(this.ProductId);
 			
+			CreateReviewResponse response = await this.ReviewService.SubmitReview(this.ReviewModel);
+
+			if (response.Success)
+			{
+				this.ToastService.ShowSuccess("Review Submitted Successfully");
+			}
+			else
+			{
+				this.ToastService.ShowError(response.Message!);
+				if (response.ValidationErrors.Any())
+				{
+					foreach (string validationError in response.ValidationErrors)
+					{
+						this.ToastService.ShowWarning(validationError);
+					}
+				}
+			}
 		}
 	}
 }

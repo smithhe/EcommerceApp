@@ -83,10 +83,10 @@ else
 
                             <div class="form-group">
                                 <label for="comments">Comments (Max 500 characters):</label>
-                                <textarea class="form-control" id="comments" name="comments" rows="4" maxlength="500" required></textarea>
+                                <textarea class="form-control" id="comments" name="comments" rows="4" maxlength="500" required @bind="@this.ReviewModel.Comments"></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary mt-2" @onclick="SubmitReview">Submit Review</button>
+                            <button type="button" class="btn btn-primary mt-2" @onclick="SubmitReview">Submit Review</button>
                         </form>
                     </div>
                 </div>

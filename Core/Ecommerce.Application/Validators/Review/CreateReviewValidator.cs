@@ -18,7 +18,7 @@ namespace Ecommerce.Application.Validators.Review
 			this._productAsyncRepository = productAsyncRepository;
 
 			RuleFor(c => c.ReviewToCreate!)
-				.MustAsync(ReviewExists).WithMessage("Review already exists for this product");
+				.MustAsync(ReviewDoesNotExist).WithMessage("Review already exists for this product");
 			
 			RuleFor(c => c)
 				.MustAsync(ProductExists).WithMessage("Product must exist");
@@ -42,14 +42,14 @@ namespace Ecommerce.Application.Validators.Review
 			return comment.Length <= 500;
 		}
 
-		private async Task<bool> ReviewExists(ReviewDto review, CancellationToken cancellationToken)
+		private async Task<bool> ReviewDoesNotExist(ReviewDto review, CancellationToken cancellationToken)
 		{
 			return (await this._reviewAsyncRepository.GetUserReviewForProduct(review.UserName, review.ProductId)) == null;
 		}
 		
 		private async Task<bool> ProductExists(CreateReviewCommand command, CancellationToken cancellationToken)
 		{
-			return (await this._productAsyncRepository.GetByIdAsync(command.ReviewToCreate!.ProductId)) == null;
+			return (await this._productAsyncRepository.GetByIdAsync(command.ReviewToCreate!.ProductId)) != null;
 		}
 	}
 }

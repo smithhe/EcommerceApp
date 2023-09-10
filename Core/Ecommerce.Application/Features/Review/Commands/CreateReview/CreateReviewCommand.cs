@@ -14,5 +14,10 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 		/// The <see cref="Review"/> to be created
 		/// </summary>
 		public ReviewDto? ReviewToCreate { get; set; }
+		
+		/// <summary>
+		/// The User requesting to create the <see cref="Review"/>
+		/// </summary>
+		public string? UserName { get; set; }
 	}
 }
