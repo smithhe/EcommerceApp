@@ -79,7 +79,7 @@ namespace Ecommerce.Persistence.Repositories
 				$"INSERT INTO {_tableName} " +
 				"(Name, Description, Price, AverageRating, QuantityAvailable, ImageUrl, CategoryId, CreatedBy, CreatedDate) " +
 				"VALUES " +
-				"(@Name, @Description, @Price, @AverageRating, @QuantityAvailable, @ImageUrl, @CategoryId, @CreatedBy, @CreatedDate)" +
+				"(@Name, @Description, @Price, @AverageRating, @QuantityAvailable, @ImageUrl, @CategoryId, @CreatedBy, @CreatedDate);" +
 				"SELECT LAST_INSERT_ID();";
 			
 			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
