@@ -7,5 +7,7 @@ namespace Ecommerce.UI.Contracts
 	public interface IReviewService
 	{
 		Task<CreateReviewResponse> SubmitReview(ReviewDto review);
+
+		Task<GetUserReviewForProductResponse> GetUserReview(string userName, int productId);
 	}
 }

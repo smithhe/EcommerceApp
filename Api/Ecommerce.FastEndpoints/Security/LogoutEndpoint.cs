@@ -26,8 +26,9 @@ namespace Ecommerce.FastEndpoints.Security
 
 		public override async Task HandleAsync(LogoutUserRequest req, CancellationToken ct)
 		{
-			string? token = HttpContext.Request.Headers["Authorization"].FirstOrDefault();
 			
+			//Check if token is valid
+			string? token = HttpContext.Request.Headers["Authorization"].FirstOrDefault();
 			if (await TokenService.ValidateTokenAsync(this._authenticationService, token) == false)
 			{
 				//Token is Invalid

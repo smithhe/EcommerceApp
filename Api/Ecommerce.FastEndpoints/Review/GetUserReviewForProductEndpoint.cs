@@ -1,4 +1,4 @@
-using Ecommerce.Application.Features.Review.Commands.CreateReview;
+using Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Shared.Requests.Review;
 using Ecommerce.Shared.Responses.Review;
@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.FastEndpoints.Review
 {
-	public class CreateReviewEndpoint : Endpoint<CreateReviewApiRequest, CreateReviewResponse>
+	public class GetUserReviewForProductEndpoint : Endpoint<GetUserReviewForProductApiRequest, GetUserReviewForProductResponse>
 	{
-		private readonly ILogger<CreateReviewEndpoint> _logger;
+		private readonly ILogger<GetUserReviewForProductEndpoint> _logger;
 		private readonly IMediator _mediator;
 		private readonly IAuthenticationService _authenticationService;
 
-		public CreateReviewEndpoint(ILogger<CreateReviewEndpoint> logger, IMediator mediator,
+		public GetUserReviewForProductEndpoint(ILogger<GetUserReviewForProductEndpoint> logger, IMediator mediator,
 			IAuthenticationService authenticationService)
 		{
 			this._logger = logger;
@@ -28,12 +28,12 @@ namespace Ecommerce.FastEndpoints.Review
 		
 		public override void Configure()
 		{
-			Post("/api/review/create");
+			Get("/api/review/user");
 		}
 
-		public override async Task HandleAsync(CreateReviewApiRequest req, CancellationToken ct)
+		public override async Task HandleAsync(GetUserReviewForProductApiRequest req, CancellationToken ct)
 		{
-			this._logger.LogInformation("Handling Create Review Request");
+			this._logger.LogInformation("Handling Get User Review Request");
 			
 			//Check if token is valid
 			string? token = this.HttpContext.Request.Headers["Authorization"].FirstOrDefault();
@@ -44,25 +44,22 @@ namespace Ecommerce.FastEndpoints.Review
 				return;
 			}
 
-			CreateReviewResponse response;
+			GetUserReviewForProductResponse response;
 
 			try
 			{
-				response = await this._mediator.Send(new CreateReviewCommand
-				{
-					ReviewToCreate = req.ReviewToCreate, 
-					UserName = TokenService.GetUserNameFromToken(token)
-				}, ct);
+				response = await this._mediator.Send(new GetUserReviewForProductQuery { ProductId = req.ProductId, UserName = req.UserName }, ct);
 			}
 			catch (Exception e)
 			{
-				this._logger.LogError(e, "Error when attempt to create review");
-				await SendAsync(new CreateReviewResponse { Success = false, Message = "Unexpected Error Occurred" },
+				this._logger.LogError(e, "Error when attempt to get a user review");
+				await SendAsync(new GetUserReviewForProductResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
 			}
 
 			await SendOkAsync(response, ct);
 		}
+		
 	}
 }

@@ -64,33 +64,93 @@ else
 
     <AuthorizeView>
         <Authorized>
-            <div class="row w-100">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Submit Your Review</h5>
-                        <form>
-                            <div class="form-group">
-                                <div class="ratings">
-                                    <span class="rating-stars text-primary">
-                                        <i class="@this.Star1Class" @onmouseover="() => OnStarMouseOver(1)" @onmouseout="() => OnStarMouseOut(1)" @onclick="() => OnStarClick(1)"></i>
-                                        <i class="@this.Star2Class" @onmouseover="() => OnStarMouseOver(2)" @onmouseout="() => OnStarMouseOut(2)" @onclick="() => OnStarClick(2)"></i>
-                                        <i class="@this.Star3Class" @onmouseover="() => OnStarMouseOver(3)" @onmouseout="() => OnStarMouseOut(3)" @onclick="() => OnStarClick(3)"></i>
-                                        <i class="@this.Star4Class" @onmouseover="() => OnStarMouseOver(4)" @onmouseout="() => OnStarMouseOut(4)" @onclick="() => OnStarClick(4)"></i>
-                                        <i class="@this.Star5Class" @onmouseover="() => OnStarMouseOver(5)" @onmouseout="() => OnStarMouseOut(5)" @onclick="() => OnStarClick(5)"></i>
-                                    </span>
+            @if (this.UserHasReview == false)
+            {
+                <div class="row w-100 text-center">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Submit Your Review</h5>
+                            <form>
+                                <div class="form-group">
+                                    <div class="ratings">
+                                        <span class="rating-stars text-primary">
+                                            <i class="@this.Star1Class" @onmouseover="() => OnStarMouseOver(1)" @onmouseout="() => OnStarMouseOut(1)" @onclick="() => OnStarClick(1)"></i>
+                                            <i class="@this.Star2Class" @onmouseover="() => OnStarMouseOver(2)" @onmouseout="() => OnStarMouseOut(2)" @onclick="() => OnStarClick(2)"></i>
+                                            <i class="@this.Star3Class" @onmouseover="() => OnStarMouseOver(3)" @onmouseout="() => OnStarMouseOut(3)" @onclick="() => OnStarClick(3)"></i>
+                                            <i class="@this.Star4Class" @onmouseover="() => OnStarMouseOver(4)" @onmouseout="() => OnStarMouseOut(4)" @onclick="() => OnStarClick(4)"></i>
+                                            <i class="@this.Star5Class" @onmouseover="() => OnStarMouseOver(5)" @onmouseout="() => OnStarMouseOut(5)" @onclick="() => OnStarClick(5)"></i>
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group">
-                                <label for="comments">Comments (Max 500 characters):</label>
-                                <textarea class="form-control" id="comments" name="comments" rows="4" maxlength="500" required @bind="@this.ReviewModel.Comments"></textarea>
-                            </div>
+                                <div class="form-group">
+                                    <label for="comments">Comments (Max 500 characters):</label>
+                                    <textarea class="form-control" id="comments" name="comments" rows="4" maxlength="500" required @bind="@this.ReviewModel.Comments"></textarea>
+                                </div>
 
-                            <button type="button" class="btn btn-primary mt-2" @onclick="SubmitReview">Submit Review</button>
-                        </form>
+                                <button type="button" class="btn btn-primary mt-2" @onclick="SubmitReview">Submit Review</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
+            else if (this.UserHasReview && this.EditExistingReview)
+            {
+                <div class="row w-100 text-center">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Update Your Review</h5>
+                            <form>
+                                <div class="form-group">
+                                    <div class="ratings">
+                                        <span class="rating-stars text-primary">
+                                            <i class="@this.Star1Class" @onmouseover="() => OnStarMouseOver(1)" @onmouseout="() => OnStarMouseOut(1)" @onclick="() => OnStarClick(1)"></i>
+                                            <i class="@this.Star2Class" @onmouseover="() => OnStarMouseOver(2)" @onmouseout="() => OnStarMouseOut(2)" @onclick="() => OnStarClick(2)"></i>
+                                            <i class="@this.Star3Class" @onmouseover="() => OnStarMouseOver(3)" @onmouseout="() => OnStarMouseOut(3)" @onclick="() => OnStarClick(3)"></i>
+                                            <i class="@this.Star4Class" @onmouseover="() => OnStarMouseOver(4)" @onmouseout="() => OnStarMouseOut(4)" @onclick="() => OnStarClick(4)"></i>
+                                            <i class="@this.Star5Class" @onmouseover="() => OnStarMouseOver(5)" @onmouseout="() => OnStarMouseOut(5)" @onclick="() => OnStarClick(5)"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="comments">Comments (Max 500 characters):</label>
+                                    <textarea class="form-control" id="comments" name="comments" rows="4" maxlength="500" required @bind="@this.ExistingUserReview!.Comments"></textarea>
+                                </div>
+
+                                <button type="button" class="btn btn-primary mt-2" @onclick="">Save Changes</button>
+                                <button type="button" class="btn btn-danger" @onclick="">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+            else if (this.UserHasReview)
+            {
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">@this.ExistingUserReview!.UserName</h5>
+                        <div class="ratings">
+                            <span class="rating-stars text-primary">
+                                @for (decimal i = 0; i < 5; i++)
+                                {
+                                    if (this.ExistingUserReview!.Stars > i || this.ExistingUserReview!.Stars == i)
+                                    {
+                                        <i class="bi bi-star-fill"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="bi bi-star"></i>
+                                    }
+                                }
+                            </span>
+                        </div>
+                        <p class="card-text mt-2">@this.ExistingUserReview!.Comments</p>
+                        <button type="button" class="btn btn-primary" @onclick="EditReviewClick">Edit</button>
+                        <button type="button" class="btn btn-danger" @onclick="">Delete</button>
+                    </div>
+                </div>
+            }
         </Authorized>
     </AuthorizeView>
 
@@ -103,7 +163,7 @@ else
                     <div class="card-body">
                         <h5 class="card-title">@review.UserName</h5>
                         <div class="ratings">
-                            <span class="rating-stars">
+                            <span class="rating-stars text-primary">
                                 @for (decimal i = 0; i < 5; i++)
                                 {
                                     if (review.Stars > i || review.Stars == i)
@@ -117,7 +177,7 @@ else
                                 }
                             </span>
                         </div>
-                        <p class="card-text">@review.Comments</p>
+                        <p class="card-text mt-2">@review.Comments</p>
                     </div>
                 </div>
             }
@@ -126,7 +186,7 @@ else
     else
     {
         <div class="row w-100">
-            <div class="col text-center">
+            <div class="col">
                 <h3 class="display-4">No Customer Reviews Yet</h3>
             </div>
         </div>

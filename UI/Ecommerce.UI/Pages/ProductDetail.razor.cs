@@ -32,19 +32,38 @@ namespace Ecommerce.UI.Pages
 		private string Star4Class { get; set; } = _emptyStar;
 		private string Star5Class { get; set; } = _emptyStar;
 
+		private bool UserHasReview { get; set; } = false;
+		private bool EditExistingReview { get; set; } = false;
+		private ReviewDto? ExistingUserReview { get; set; }
+
 		protected override async Task OnInitializedAsync()
 		{
 			this.ReviewModel = new ReviewDto { Stars = -1, Comments = string.Empty };
+			AuthenticationState authState = await this.AuthenticationState;
 			
 			GetProductByIdResponse response = await this.ProductService.GetProductById(Convert.ToInt32(this.ProductId));
 
 			if (response.Success)
 			{
 				this.Product = response.Product;
+
+				//Filter out the review of the logged in user from the overall list
+				if (string.IsNullOrEmpty(authState.User.Identity?.Name ?? string.Empty) == false)
+				{
+					this.Product!.CustomerReviews = this.Product.CustomerReviews.Where(review => string.Equals(review.UserName, authState.User.Identity!.Name) == false);
+				}
 			}
 			else
 			{
 				this.ToastService.ShowError(response.Message!);
+			}
+			
+			GetUserReviewForProductResponse existingReviewResponse = await this.ReviewService.GetUserReview(authState.User.Identity?.Name ?? string.Empty, Convert.ToInt32(this.ProductId));
+
+			if (response.Success)
+			{
+				this.UserHasReview = true;
+				this.ExistingUserReview = existingReviewResponse.UserReview;
 			}
 		}
 
@@ -156,5 +175,26 @@ namespace Ecommerce.UI.Pages
 				}
 			}
 		}
+
+		private async Task DeleteReview()
+		{
+			
+		}
+
+		private void EditReviewClick()
+		{
+			this.EditExistingReview = true;
+		}
+
+		private async Task UpdateReview()
+		{
+			AuthenticationState authState = await this.AuthenticationState;
+			this.ReviewModel.UserName = authState.User.Identity?.Name ?? string.Empty;
+			this.ReviewModel.ProductId = Convert.ToInt32(this.ProductId);
+			
+			
+		}
+		
+		
 	}
 }

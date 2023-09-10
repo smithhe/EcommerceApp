@@ -31,5 +31,19 @@ namespace Ecommerce.UI.Services
 				new CreateReviewResponse { Success = false, Message = "Unexpected Error Occurred" } 
 				: JsonConvert.DeserializeObject<CreateReviewResponse>(response.Error.Content)!;
 		}
+
+		public async Task<GetUserReviewForProductResponse> GetUserReview(string userName, int productId)
+		{
+			ApiResponse<GetUserReviewForProductResponse> response = await this._reviewApiService.GetUserReview(new GetUserReviewForProductApiRequest { ProductId = productId, UserName = userName});
+			
+			if (response.IsSuccessStatusCode)
+			{
+				return response.Content;
+			}
+			
+			return string.IsNullOrEmpty(response.Error.Content) ? 
+				new GetUserReviewForProductResponse { Success = false, Message = "Unexpected Error Occurred" } 
+				: JsonConvert.DeserializeObject<GetUserReviewForProductResponse>(response.Error.Content)!;
+		}
 	}
 }

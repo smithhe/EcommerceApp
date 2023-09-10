@@ -7,6 +7,7 @@ using Ecommerce.Shared.Responses.Review;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -95,6 +96,8 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 			//Valid Command
 			Domain.Entities.Review? newReview = this._mapper.Map<Domain.Entities.Review>(command.ReviewToCreate);
 			newReview.CreatedBy = command.UserName;
+			newReview.CreatedDate = DateTime.Now;
+			
 			int newId = await this._reviewAsyncRepository.AddAsync(newReview);
 			
 			//Sql operation failed

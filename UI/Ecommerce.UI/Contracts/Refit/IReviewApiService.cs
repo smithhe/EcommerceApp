@@ -9,5 +9,8 @@ namespace Ecommerce.UI.Contracts.Refit
 	{
 		[Post("/api/review/create")]
 		Task<ApiResponse<CreateReviewResponse>> CreateReview(CreateReviewApiRequest createReviewApiRequest);
+		
+		[Get("/api/review/user")]
+		Task<ApiResponse<GetUserReviewForProductResponse>> GetUserReview(GetUserReviewForProductApiRequest getUserReviewForProductApiRequest);
 	}
 }
