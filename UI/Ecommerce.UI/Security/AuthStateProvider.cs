@@ -1,6 +1,8 @@
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.Extensions.Configuration;
+using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -12,8 +14,7 @@ namespace Ecommerce.UI.Security
 		private readonly IConfiguration _configuration;
 		private readonly AuthenticationState _anonymous;
 
-		public AuthStateProvider(ILocalStorageService localStorageService, IConfiguration configuration
-			)
+		public AuthStateProvider(ILocalStorageService localStorageService, IConfiguration configuration)
 		{
 			this._localStorageService = localStorageService;
 			this._configuration = configuration;
@@ -25,10 +26,39 @@ namespace Ecommerce.UI.Security
 			string authTokenStorageKey = this._configuration["authTokenStorageKey"]!;
 			string? token = await this._localStorageService.GetItemAsync<string>(authTokenStorageKey);
 
-			//User is not logged in
-			return string.IsNullOrWhiteSpace(token) ? 
-				this._anonymous 
-				: new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity(JwtParser.ParseClaimsFromJwt(token), "jwtAuthType")));
+			if (string.IsNullOrWhiteSpace(token))
+			{
+				return this._anonymous;
+			}
+
+			if (IsTokenExpired(token))
+			{
+				return this._anonymous;
+			}
+			
+			return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity(JwtParser.ParseClaimsFromJwt(token), "jwtAuthType")));
+		}
+
+		private bool IsTokenExpired(string token)
+		{
+			// Decode the JWT token
+			JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+			JwtSecurityToken jwtToken = tokenHandler.ReadJwtToken(token);
+
+			if (jwtToken == null)
+			{
+				// Invalid token format
+				return true;
+			}
+
+			if (jwtToken.ValidTo <= DateTime.Now)
+			{
+				// Token has expired
+				return true;
+			}
+
+			// Token is still valid
+			return false; 
 		}
 		
 		public void NotifyUserAuthentication(string token)
