@@ -8,6 +8,10 @@ namespace Ecommerce.UI.Contracts
 	{
 		Task<CreateReviewResponse> SubmitReview(ReviewDto review);
 
+		Task<DeleteReviewResponse> RemoveReview(ReviewDto review);
+
+		Task<UpdateReviewResponse> UpdateReview(ReviewDto review);
+
 		Task<GetUserReviewForProductResponse> GetUserReview(string userName, int productId);
 	}
 }

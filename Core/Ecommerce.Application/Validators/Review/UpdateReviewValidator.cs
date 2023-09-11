@@ -44,12 +44,12 @@ namespace Ecommerce.Application.Validators.Review
 		
 		private async Task<bool> ReviewExists(ReviewDto review, CancellationToken cancellationToken)
 		{
-			return (await this._reviewAsyncRepository.GetUserReviewForProduct(review.UserName, review.ProductId)) == null;
+			return (await this._reviewAsyncRepository.GetUserReviewForProduct(review.UserName, review.ProductId)) != null;
 		}
 		
 		private async Task<bool> ProductExists(UpdateReviewCommand command, CancellationToken cancellationToken)
 		{
-			return (await this._productAsyncRepository.GetByIdAsync(command.ReviewToUpdate!.ProductId)) == null;
+			return (await this._productAsyncRepository.GetByIdAsync(command.ReviewToUpdate!.ProductId)) != null;
 		}
 	}
 }

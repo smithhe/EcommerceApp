@@ -41,11 +41,11 @@ namespace Ecommerce.UI.Pages
 			this.ReviewModel = new ReviewDto { Stars = -1, Comments = string.Empty };
 			AuthenticationState authState = await this.AuthenticationState;
 			
-			GetProductByIdResponse response = await this.ProductService.GetProductById(Convert.ToInt32(this.ProductId));
+			GetProductByIdResponse productResponse = await this.ProductService.GetProductById(Convert.ToInt32(this.ProductId));
 
-			if (response.Success)
+			if (productResponse.Success)
 			{
-				this.Product = response.Product;
+				this.Product = productResponse.Product;
 
 				//Filter out the review of the logged in user from the overall list
 				if (string.IsNullOrEmpty(authState.User.Identity?.Name ?? string.Empty) == false)
@@ -55,12 +55,13 @@ namespace Ecommerce.UI.Pages
 			}
 			else
 			{
-				this.ToastService.ShowError(response.Message!);
+				this.ToastService.ShowError(productResponse.Message!);
+				return;
 			}
 			
 			GetUserReviewForProductResponse existingReviewResponse = await this.ReviewService.GetUserReview(authState.User.Identity?.Name ?? string.Empty, Convert.ToInt32(this.ProductId));
 
-			if (response.Success)
+			if (existingReviewResponse.Success)
 			{
 				this.UserHasReview = true;
 				this.ExistingUserReview = existingReviewResponse.UserReview;
@@ -94,53 +95,111 @@ namespace Ecommerce.UI.Pages
 
 		private void OnStarMouseOut(int starNum)
 		{
-			for (int i = starNum; i > 0; i--)
+			if (this.UserHasReview && this.EditExistingReview)
 			{
-				switch (i)
+				for (int i = 5; i > 0; i--)
 				{
-					case 1:
-						this.Star1Class = this.ReviewModel.Stars < 1 ? _emptyStar : this.Star1Class;
-						break;
-					case 2:
-						this.Star2Class = this.ReviewModel.Stars < 2 ? _emptyStar : this.Star2Class;
-						break;
-					case 3:
-						this.Star3Class = this.ReviewModel.Stars < 3 ? _emptyStar : this.Star3Class;
-						break;
-					case 4:
-						this.Star4Class = this.ReviewModel.Stars < 4 ? _emptyStar : this.Star4Class;
-						break;
-					case 5:
-						this.Star5Class = this.ReviewModel.Stars < 5 ? _emptyStar : this.Star5Class;
-						break;
+					switch (i)
+					{
+						case 1:
+							this.Star1Class = this.ExistingUserReview!.Stars < 1 ? _emptyStar : this.Star1Class;
+							break;
+						case 2:
+							this.Star2Class = this.ExistingUserReview!.Stars < 2 ? _emptyStar : this.Star2Class;
+							break;
+						case 3:
+							this.Star3Class = this.ExistingUserReview!.Stars < 3 ? _emptyStar : this.Star3Class;
+							break;
+						case 4:
+							this.Star4Class = this.ExistingUserReview!.Stars < 4 ? _emptyStar : this.Star4Class;
+							break;
+						case 5:
+							this.Star5Class = this.ExistingUserReview!.Stars < 5 ? _emptyStar : this.Star5Class;
+							break;
+					}
 				}
 			}
+			else
+			{
+				for (int i = 5; i > 0; i--)
+				{
+					switch (i)
+					{
+						case 1:
+							this.Star1Class = this.ReviewModel.Stars < 1 ? _emptyStar : this.Star1Class;
+							break;
+						case 2:
+							this.Star2Class = this.ReviewModel.Stars < 2 ? _emptyStar : this.Star2Class;
+							break;
+						case 3:
+							this.Star3Class = this.ReviewModel.Stars < 3 ? _emptyStar : this.Star3Class;
+							break;
+						case 4:
+							this.Star4Class = this.ReviewModel.Stars < 4 ? _emptyStar : this.Star4Class;
+							break;
+						case 5:
+							this.Star5Class = this.ReviewModel.Stars < 5 ? _emptyStar : this.Star5Class;
+							break;
+					}
+				}
+			}
+			
 		}
 
 		private void OnStarClick(int starNum)
 		{
 			this.OnStarMouseOut(5);
-			this.ReviewModel.Stars = starNum;
 			
-			for (int i = starNum; i > 0; i--)
+			if (this.UserHasReview && this.EditExistingReview)
 			{
-				switch (i)
+				this.ExistingUserReview!.Stars = starNum;
+				
+				for (int i = 5; i > 0; i--)
 				{
-					case 1:
-						this.Star1Class = _filledStar;
-						break;
-					case 2:
-						this.Star2Class = _filledStar;
-						break;
-					case 3:
-						this.Star3Class = _filledStar;
-						break;
-					case 4:
-						this.Star4Class = _filledStar;
-						break;
-					case 5:
-						this.Star5Class = _filledStar;
-						break;
+					switch (i)
+					{
+						case 1:
+							this.Star1Class = this.ExistingUserReview!.Stars >= 1 ? _filledStar : _emptyStar;
+							break;
+						case 2:
+							this.Star2Class = this.ExistingUserReview!.Stars >= 2 ? _filledStar : _emptyStar;
+							break;
+						case 3:
+							this.Star3Class = this.ExistingUserReview!.Stars >= 3 ? _filledStar : _emptyStar;
+							break;
+						case 4:
+							this.Star4Class = this.ExistingUserReview!.Stars >= 4 ? _filledStar : _emptyStar;
+							break;
+						case 5:
+							this.Star5Class = this.ExistingUserReview!.Stars >= 5 ? _filledStar : _emptyStar;
+							break;
+					}
+				}
+			}
+			else
+			{
+				this.ReviewModel.Stars = starNum;
+				
+				for (int i = 5; i > 0; i--)
+				{
+					switch (i)
+					{
+						case 1:
+							this.Star1Class = this.ReviewModel.Stars >= 1 ? _filledStar : _emptyStar;
+							break;
+						case 2:
+							this.Star2Class = this.ReviewModel.Stars >= 2 ? _filledStar : _emptyStar;
+							break;
+						case 3:
+							this.Star3Class = this.ReviewModel.Stars >= 3 ? _filledStar : _emptyStar;
+							break;
+						case 4:
+							this.Star4Class = this.ReviewModel.Stars >= 4 ? _filledStar : _emptyStar;
+							break;
+						case 5:
+							this.Star5Class = this.ReviewModel.Stars >= 5 ? _filledStar : _emptyStar;
+							break;
+					}
 				}
 			}
 		}
@@ -178,21 +237,59 @@ namespace Ecommerce.UI.Pages
 
 		private async Task DeleteReview()
 		{
+			DeleteReviewResponse response = await this.ReviewService.RemoveReview(this.ExistingUserReview!);
+
+			if (response.Success)
+			{
+				this.ToastService.ShowSuccess("Review deleted successfully");
+				this.ExistingUserReview = null;
+				this.UserHasReview = false;
+				this.EditExistingReview = false;
+
+				this.Star1Class = _emptyStar;
+				this.Star2Class = _emptyStar;
+				this.Star3Class = _emptyStar;
+				this.Star4Class = _emptyStar;
+				this.Star5Class = _emptyStar;
+				
+				return;
+			}
 			
+			this.ToastService.ShowError(response.Message!);
 		}
 
 		private void EditReviewClick()
 		{
 			this.EditExistingReview = true;
+			this.OnStarClick(this.ExistingUserReview!.Stars);
+		}
+
+		private void CancelEditing()
+		{
+			this.EditExistingReview = false;
 		}
 
 		private async Task UpdateReview()
 		{
-			AuthenticationState authState = await this.AuthenticationState;
-			this.ReviewModel.UserName = authState.User.Identity?.Name ?? string.Empty;
-			this.ReviewModel.ProductId = Convert.ToInt32(this.ProductId);
+			UpdateReviewResponse response = await this.ReviewService.UpdateReview(this.ExistingUserReview!);
+
+			if (response.Success)
+			{
+				this.ToastService.ShowSuccess("Review successfully updated");
+				this.EditExistingReview = false;
+				//StateHasChanged();
+				return;
+			}
 			
-			
+			this.ToastService.ShowError(response.Message!);
+
+			if (response.ValidationErrors.Any())
+			{
+				foreach (string validationError in response.ValidationErrors)
+				{
+					this.ToastService.ShowWarning(validationError);
+				}
+			}
 		}
 		
 		

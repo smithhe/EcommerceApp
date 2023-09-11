@@ -118,8 +118,9 @@ else
                                     <textarea class="form-control" id="comments" name="comments" rows="4" maxlength="500" required @bind="@this.ExistingUserReview!.Comments"></textarea>
                                 </div>
 
-                                <button type="button" class="btn btn-primary mt-2" @onclick="">Save Changes</button>
-                                <button type="button" class="btn btn-danger" @onclick="">Delete</button>
+                                <button type="button" class="btn btn-primary mt-2" @onclick="UpdateReview">Save Changes</button>
+                                <button type="button" class="btn btn-danger mt-2" @onclick="DeleteReview">Delete</button>
+                                <button type="button" class="btn btn-secondary mt-2" @onclick="CancelEditing">Cancel</button>
                             </form>
                         </div>
                     </div>
@@ -127,34 +128,36 @@ else
             }
             else if (this.UserHasReview)
             {
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">@this.ExistingUserReview!.UserName</h5>
-                        <div class="ratings">
-                            <span class="rating-stars text-primary">
-                                @for (decimal i = 0; i < 5; i++)
-                                {
-                                    if (this.ExistingUserReview!.Stars > i || this.ExistingUserReview!.Stars == i)
+                <div class="row w-100">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">@this.ExistingUserReview!.UserName</h5>
+                            <div class="ratings">
+                                <span class="rating-stars text-primary">
+                                    @for (int i = 1; i < 6; i++)
                                     {
-                                        <i class="bi bi-star-fill"></i>
+                                        if (this.ExistingUserReview!.Stars >= i)
+                                        {
+                                            <i class="bi bi-star-fill"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="bi bi-star"></i>
+                                        }
                                     }
-                                    else
-                                    {
-                                        <i class="bi bi-star"></i>
-                                    }
-                                }
-                            </span>
+                                </span>
+                            </div>
+                            <p class="card-text mt-2">@this.ExistingUserReview!.Comments</p>
+                            <button type="button" class="btn btn-primary" @onclick="EditReviewClick">Edit</button>
+                            <button type="button" class="btn btn-danger" @onclick="DeleteReview">Delete</button>
                         </div>
-                        <p class="card-text mt-2">@this.ExistingUserReview!.Comments</p>
-                        <button type="button" class="btn btn-primary" @onclick="EditReviewClick">Edit</button>
-                        <button type="button" class="btn btn-danger" @onclick="">Delete</button>
                     </div>
                 </div>
             }
         </Authorized>
     </AuthorizeView>
 
-    @if (this.Product.CustomerReviews.Any())
+    if (this.Product.CustomerReviews.Any())
     {
         <div class="row w-100">
             @foreach (ReviewDto review in this.Product.CustomerReviews)
@@ -164,9 +167,9 @@ else
                         <h5 class="card-title">@review.UserName</h5>
                         <div class="ratings">
                             <span class="rating-stars text-primary">
-                                @for (decimal i = 0; i < 5; i++)
+                                @for (int i = 1; i < 6; i++)
                                 {
-                                    if (review.Stars > i || review.Stars == i)
+                                    if (review.Stars >= i)
                                     {
                                         <i class="bi bi-star-fill"></i>
                                     }
@@ -186,8 +189,8 @@ else
     else
     {
         <div class="row w-100">
-            <div class="col">
-                <h3 class="display-4">No Customer Reviews Yet</h3>
+            <div class="col text-center">
+                <h3 class="display-6">No Customer Reviews Yet</h3>
             </div>
         </div>
     }
