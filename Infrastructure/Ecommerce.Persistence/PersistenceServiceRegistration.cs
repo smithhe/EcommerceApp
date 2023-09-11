@@ -19,6 +19,7 @@ namespace Ecommerce.Persistence
 			services.AddScoped<IOrderItemAsyncRepository, OrderItemAsyncRepository>();
 			services.AddScoped<IProductAsyncRepository, ProductAsyncRepository>();
 			services.AddScoped<IReviewAsyncRepository, ReviewAsyncRepository>();
+			services.AddScoped<ICartItemRepository, CartItemRepository>();
 		}
 	}
 }
