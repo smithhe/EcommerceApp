@@ -29,5 +29,16 @@ namespace Ecommerce.Persistence.Contracts
 		/// <c>false</c> if the DELETE fails or no <see cref="CartItem"/> entities are not found.
 		/// </returns>
 		Task<bool> RemoveUserCartItems(Guid userId);
+
+		/// <summary>
+		/// Checks to see if the user already has a <see cref="CartItem"/> for the <see cref="Product"/>
+		/// </summary>
+		/// <param name="userId">The unique identifier of the <see cref="EcommerceUser"/></param>
+		/// <param name="productId">The unique identifier of the <see cref="Product"/></param>
+		/// <returns>
+		/// <c>true</c> if the <see cref="CartItem"/> exists;
+		/// <c>false</c> no <see cref="CartItem"/> is found.
+		/// </returns>
+		Task<bool> CartItemExistsForUser(Guid userId, int productId);
 	}
 }

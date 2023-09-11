@@ -251,5 +251,38 @@ namespace Ecommerce.Persistence.Repositories
 
 			return rowsEffected >= 1;
 		}
+
+		/// <summary>
+		/// Checks to see if the user already has a <see cref="CartItem"/> for the <see cref="Product"/>
+		/// </summary>
+		/// <param name="userId">The unique identifier of the <see cref="EcommerceUser"/></param>
+		/// <param name="productId">The unique identifier of the <see cref="Product"/></param>
+		/// <returns>
+		/// <c>true</c> if the <see cref="CartItem"/> exists;
+		/// <c>false</c> no <see cref="CartItem"/> is found.
+		/// </returns>
+		public async Task<bool> CartItemExistsForUser(Guid userId, int productId)
+		{
+			const string sql = $"SELECT * FROM {_tableName} WHERE UserId = @UserId AND ProductId = @ProductId";
+			CartItem? cartItem = null;
+
+			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			{
+				connection.Open();
+
+				try
+				{
+					cartItem = await connection.QueryFirstOrDefaultAsync<CartItem>(sql, new { UserId = userId, ProductId = productId });
+				}
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when checking if a CartItem exists");
+				}
+				
+				connection.Close();
+			}
+
+			return cartItem == null;
+		}
 	}
 }

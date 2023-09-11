@@ -16,11 +16,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Infrastructure\Ecommerce.Persistence\Ecommerce.Persistence.csproj" />
-
-
     </ItemGroup>
-
-
-
 
 </Project>
