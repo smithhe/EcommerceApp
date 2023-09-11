@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Ecommerce.Shared.Responses.Product
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a requests to get all Products for a Category
+	/// A implementation of <see cref="BaseResponse" /> for a request to get all Products for a Category
 	/// </summary>
 	public class GetAllProductsByCategoryIdResponse : BaseResponse
 	{
