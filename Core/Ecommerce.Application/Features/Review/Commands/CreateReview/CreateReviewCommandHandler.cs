@@ -66,8 +66,8 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 				return response;
 			}
 			
-			//Check if username is null
-			if (command.UserName == null)
+			//Check if username is null or empty
+			if (string.IsNullOrEmpty(command.UserName))
 			{
 				this._logger.LogWarning("UserName was null in command, returning failed response");
 				response.Success = false;
