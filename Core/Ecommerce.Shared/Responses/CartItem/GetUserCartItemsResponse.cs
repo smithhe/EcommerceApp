@@ -12,6 +12,6 @@ namespace Ecommerce.Shared.Responses.CartItem
 		/// <summary>
 		/// The collection of CartItems if any exist for the User
 		/// </summary>
-		public IEnumerable<CartItemDto> Products { get; set; } = Array.Empty<CartItemDto>();
+		public IEnumerable<CartItemDto> CartItems { get; set; } = Array.Empty<CartItemDto>();
 	}
 }
