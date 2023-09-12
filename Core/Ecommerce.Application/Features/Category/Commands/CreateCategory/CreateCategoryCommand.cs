@@ -14,5 +14,10 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 		/// The Category to be created
 		/// </summary>
 		public CategoryDto? CategoryToCreate { get; set; }
+		
+		/// <summary>
+		/// The User requesting to create the Category
+		/// </summary>
+		public string? UserName { get; set; }
 	}
 }

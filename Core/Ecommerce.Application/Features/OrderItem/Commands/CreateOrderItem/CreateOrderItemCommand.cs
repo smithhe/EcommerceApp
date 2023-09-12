@@ -13,5 +13,10 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 		/// The OrderItem to be created
 		/// </summary>
 		public OrderItemDto OrderItemToCreate { get; set; } = null!;
+		
+		/// <summary>
+		/// The User requesting to create the OrderItem
+		/// </summary>
+		public string? UserName { get; set; }
 	}
 }

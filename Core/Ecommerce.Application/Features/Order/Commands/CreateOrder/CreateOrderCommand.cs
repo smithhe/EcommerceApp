@@ -14,5 +14,10 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 		/// The Order to be created
 		/// </summary>
 		public OrderDto? OrderToCreate { get; set; }
+		
+		/// <summary>
+		/// The User requesting to create the Order
+		/// </summary>
+		public string? UserName { get; set; }
 	}
 }

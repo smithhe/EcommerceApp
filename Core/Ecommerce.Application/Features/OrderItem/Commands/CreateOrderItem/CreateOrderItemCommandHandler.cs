@@ -7,6 +7,7 @@ using Ecommerce.Shared.Responses.OrderItem;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -59,6 +60,15 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 
 			CreateOrderItemResponse response = new CreateOrderItemResponse { Success = true, Message = "OrderItem Successfully Created" };
 			
+			//Check if username is null or empty
+			if (string.IsNullOrEmpty(command.UserName))
+			{
+				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
+				response.Success = false;
+				response.Message = "Must provide a UserName to create";
+				return response;
+			}
+			
 			//Validate the dto that was passed in the command
 			CreateOrderItemValidator validator = new CreateOrderItemValidator(this._productAsyncRepository, this._orderAsyncRepository);
 			ValidationResult validationResult = await validator.ValidateAsync(command, cancellationToken);
@@ -79,8 +89,11 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 			}
 			
 			//Valid Command
-			//TODO: Add user who created the order item
-			int newId = await this._orderItemAsyncRepository.AddAsync(this._mapper.Map<Domain.Entities.OrderItem>(command.OrderItemToCreate));
+			Domain.Entities.OrderItem orderItemToCreate = this._mapper.Map<Domain.Entities.OrderItem>(command.OrderItemToCreate);
+			orderItemToCreate.CreatedBy = command.UserName;
+			orderItemToCreate.CreatedDate = DateTime.Now;
+			
+			int newId = await this._orderItemAsyncRepository.AddAsync(orderItemToCreate);
 
 			//Sql operation failed
 			if (newId == -1)

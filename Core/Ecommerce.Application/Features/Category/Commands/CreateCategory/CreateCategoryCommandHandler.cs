@@ -7,6 +7,7 @@ using Ecommerce.Shared.Responses.Category;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -60,6 +61,15 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 				response.Message = "Must provide a Category to create";
 				return response;
 			}
+			
+			//Check if username is null or empty
+			if (string.IsNullOrEmpty(command.UserName))
+			{
+				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
+				response.Success = false;
+				response.Message = "Must provide a UserName to create";
+				return response;
+			}
 
 			//Validate the dto that was passed in the command
 			CreateCategoryValidator validator = new CreateCategoryValidator(this._categoryAsyncRepository);
@@ -81,8 +91,11 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 			}
 			
 			//Valid Command
-			//TODO: Add user who created the order
-			int newId = await this._categoryAsyncRepository.AddAsync(this._mapper.Map<Domain.Entities.Category>(command.CategoryToCreate));
+			Domain.Entities.Category categoryToCreate = this._mapper.Map<Domain.Entities.Category>(command.CategoryToCreate);
+			categoryToCreate.CreatedBy = command.UserName;
+			categoryToCreate.CreatedDate = DateTime.Now;
+			
+			int newId = await this._categoryAsyncRepository.AddAsync(categoryToCreate);
 
 			//Sql operation failed
 			if (newId == -1)

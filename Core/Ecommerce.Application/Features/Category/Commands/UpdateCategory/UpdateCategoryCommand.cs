@@ -14,5 +14,10 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 		/// The Category to update with
 		/// </summary>
 		public CategoryDto? CategoryToUpdate { get; set; }
+		
+		/// <summary>
+		/// The User requesting to update the Category
+		/// </summary>
+		public string? UserName { get; set; }
 	}
 }

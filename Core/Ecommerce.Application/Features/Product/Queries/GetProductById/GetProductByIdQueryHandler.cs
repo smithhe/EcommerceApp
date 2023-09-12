@@ -58,7 +58,7 @@ namespace Ecommerce.Application.Features.Product.Queries.GetProductById
 			GetProductByIdResponse response = new GetProductByIdResponse { Success = true, Message = "Successfully Got Product" };
 
 			Domain.Entities.Product? product = await this._productAsyncRepository.GetByIdAsync(query.Id);
-			response.Product = this._mapper.Map<ProductDto>(product);
+			response.Product = this._mapper.Map<ProductDto?>(product);
 			
 			if (product == null)
 			{

@@ -66,10 +66,10 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 				return response;
 			}
 			
-			//Check if username is null
-			if (command.UserName == null)
+			//Check if username is null or empty
+			if (string.IsNullOrEmpty(command.UserName))
 			{
-				this._logger.LogWarning("UserName was null in command, returning failed response");
+				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
 				response.Success = false;
 				response.Message = "Must provide a UserName to create";
 				return response;
@@ -95,11 +95,11 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 			}
 			
 			//Valid Command
-			Domain.Entities.CartItem? newCartItem = this._mapper.Map<Domain.Entities.CartItem>(command.CartItemToCreate);
-			newCartItem.CreatedBy = command.UserName;
-			newCartItem.CreatedDate = DateTime.Now;
+			Domain.Entities.CartItem cartItemToCreate = this._mapper.Map<Domain.Entities.CartItem>(command.CartItemToCreate);
+			cartItemToCreate.CreatedBy = command.UserName;
+			cartItemToCreate.CreatedDate = DateTime.Now;
 
-			int newId = await this._cartItemRepository.AddAsync(newCartItem);
+			int newId = await this._cartItemRepository.AddAsync(cartItemToCreate);
 			
 			//Sql operation failed
 			if (newId == -1)

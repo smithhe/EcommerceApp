@@ -14,5 +14,10 @@ namespace Ecommerce.Application.Features.Product.Commands.UpdateProduct
 		/// The Product to update with
 		/// </summary>
 		public ProductDto? ProductToUpdate { get; set; }
+		
+		/// <summary>
+		/// The User requesting to update the Product
+		/// </summary>
+		public string? UserName { get; set; }
 	}
 }

@@ -7,6 +7,7 @@ using Ecommerce.Shared.Responses.Product;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -65,6 +66,15 @@ namespace Ecommerce.Application.Features.Product.Commands.CreateProduct
 				return response;
 			}
 			
+			//Check if username is null or empty
+			if (string.IsNullOrEmpty(command.UserName))
+			{
+				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
+				response.Success = false;
+				response.Message = "Must provide a UserName to create";
+				return response;
+			}
+			
 			//Validate the dto that was passed in the command
 			CreateProductValidator validator = new CreateProductValidator(this._productAsyncRepository, this._categoryAsyncRepository);
 			ValidationResult validationResult = await validator.ValidateAsync(command, cancellationToken);
@@ -85,8 +95,11 @@ namespace Ecommerce.Application.Features.Product.Commands.CreateProduct
 			}
 			
 			//Valid Command
-			//TODO: Add user who created the order
-			int newId = await this._productAsyncRepository.AddAsync(this._mapper.Map<Domain.Entities.Product>(command.ProductToCreate));
+			Domain.Entities.Product productToCreate = this._mapper.Map<Domain.Entities.Product>(command.ProductToCreate);
+			productToCreate.CreatedBy = command.UserName;
+			productToCreate.CreatedDate = DateTime.Now;
+			
+			int newId = await this._productAsyncRepository.AddAsync(productToCreate);
 			
 			//Sql operation failed
 			if (newId == -1)

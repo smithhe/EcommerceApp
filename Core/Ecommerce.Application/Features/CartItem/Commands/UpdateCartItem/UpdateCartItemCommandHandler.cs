@@ -6,6 +6,7 @@ using Ecommerce.Shared.Responses.CartItem;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -66,9 +67,9 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 			//Check if username is null or empty
 			if (string.IsNullOrEmpty(command.UserName))
 			{
-				this._logger.LogWarning("UserName was null in command, returning failed response");
+				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a UserName to create";
+				response.Message = "Must provide a UserName to update";
 				return response;
 			}
 
@@ -90,8 +91,12 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 
 				return response;
 			}
+
+			Domain.Entities.CartItem cartItemToUpdate = this._mapper.Map<Domain.Entities.CartItem>(command.CartItemToUpdate);
+			cartItemToUpdate.LastModifiedBy = command.UserName;
+			cartItemToUpdate.LastModifiedDate = DateTime.Now;
 			
-			bool success = await this._cartItemRepository.UpdateAsync(this._mapper.Map<Domain.Entities.CartItem>(command.CartItemToUpdate));
+			bool success = await this._cartItemRepository.UpdateAsync(cartItemToUpdate);
 			
 			if (success == false)
 			{

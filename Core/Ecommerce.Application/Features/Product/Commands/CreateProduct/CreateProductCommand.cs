@@ -14,5 +14,10 @@ namespace Ecommerce.Application.Features.Product.Commands.CreateProduct
 		/// The Product to be created
 		/// </summary>
 		public ProductDto? ProductToCreate { get; set; }
+		
+		/// <summary>
+		/// The User requesting to create the Product
+		/// </summary>
+		public string? UserName { get; set; }
 	}
 }

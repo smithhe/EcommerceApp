@@ -6,6 +6,7 @@ using Ecommerce.Shared.Responses.Order;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -59,6 +60,15 @@ namespace Ecommerce.Application.Features.Order.Commands.UpdateOrder
 				return response;
 			}
 			
+			//Check if username is null or empty
+			if (string.IsNullOrEmpty(command.UserName))
+			{
+				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
+				response.Success = false;
+				response.Message = "Must provide a UserName to update";
+				return response;
+			}
+			
 			//Validate the dto that was passed in the command
 			UpdateOrderValidator validator = new UpdateOrderValidator();
 			ValidationResult? validationResult = await validator.ValidateAsync(command, cancellationToken);
@@ -79,7 +89,11 @@ namespace Ecommerce.Application.Features.Order.Commands.UpdateOrder
 			}
 			
 			//Valid Command
-			bool success = await this._orderAsyncRepository.UpdateAsync(this._mapper.Map<Domain.Entities.Order>(command.OrderToUpdate));
+			Domain.Entities.Order orderToUpdate = this._mapper.Map<Domain.Entities.Order>(command.OrderToUpdate);
+			orderToUpdate.LastModifiedBy = command.UserName;
+			orderToUpdate.LastModifiedDate = DateTime.Now;
+			
+			bool success = await this._orderAsyncRepository.UpdateAsync(orderToUpdate);
 			
 			if (success == false)
 			{

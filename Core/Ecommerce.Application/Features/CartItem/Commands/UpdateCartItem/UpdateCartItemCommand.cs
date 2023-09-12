@@ -11,12 +11,12 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 	public class UpdateCartItemCommand : IRequest<UpdateCartItemResponse>
 	{
 		/// <summary>
-		/// The Cart Item to update with
+		/// The CartItem to update with
 		/// </summary>
 		public CartItemDto? CartItemToUpdate { get; set; }
 		
 		/// <summary>
-		/// The User requesting to create the Cart Item
+		/// The User requesting to update the CartItem
 		/// </summary>
 		public string? UserName { get; set; }
 	}

@@ -95,7 +95,7 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 			}
 			
 			//Valid Command
-			Domain.Entities.Review? newReview = this._mapper.Map<Domain.Entities.Review>(command.ReviewToCreate);
+			Domain.Entities.Review newReview = this._mapper.Map<Domain.Entities.Review>(command.ReviewToCreate);
 			newReview.CreatedBy = command.UserName;
 			newReview.CreatedDate = DateTime.Now;
 			

@@ -14,5 +14,10 @@ namespace Ecommerce.Application.Features.Order.Commands.UpdateOrder
 		/// The Order to update with
 		/// </summary>
 		public OrderDto? OrderToUpdate { get; set; }
+		
+		/// <summary>
+		/// The User requesting to update the Order
+		/// </summary>
+		public string? UserName { get; set; }
 	}
 }

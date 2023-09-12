@@ -6,6 +6,7 @@ using Ecommerce.Shared.Responses.Review;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -63,6 +64,15 @@ namespace Ecommerce.Application.Features.Review.Commands.UpdateReview
 				return response;
 			}
 			
+			//Check if username is null or empty
+			if (string.IsNullOrEmpty(command.UserName))
+			{
+				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
+				response.Success = false;
+				response.Message = "Must provide a UserName to update";
+				return response;
+			}
+			
 			//Validate the dto that was passed in the command
 			UpdateReviewValidator validator = new UpdateReviewValidator(this._reviewAsyncRepository, this._productAsyncRepository);
 			ValidationResult? validationResult = await validator.ValidateAsync(command, cancellationToken);
@@ -81,8 +91,12 @@ namespace Ecommerce.Application.Features.Review.Commands.UpdateReview
 
 				return response;
 			}
+
+			Domain.Entities.Review? reviewToUpdate = this._mapper.Map<Domain.Entities.Review>(command.ReviewToUpdate);
+			reviewToUpdate.LastModifiedBy = command.UserName;
+			reviewToUpdate.LastModifiedDate = DateTime.Now;
 			
-			bool success = await this._reviewAsyncRepository.UpdateAsync(this._mapper.Map<Domain.Entities.Review>(command.ReviewToUpdate));
+			bool success = await this._reviewAsyncRepository.UpdateAsync(reviewToUpdate);
 			
 			if (success == false)
 			{

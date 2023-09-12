@@ -14,5 +14,10 @@ namespace Ecommerce.Application.Features.Review.Commands.UpdateReview
 		/// The Review to update with
 		/// </summary>
 		public ReviewDto? ReviewToUpdate { get; set; }
+		
+		/// <summary>
+		/// The User requesting to update the Review
+		/// </summary>
+		public string? UserName { get; set; }
 	}
 }
