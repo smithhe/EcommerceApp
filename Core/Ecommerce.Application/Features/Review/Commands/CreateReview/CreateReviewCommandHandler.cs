@@ -49,6 +49,7 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="Review"/>.
 		/// Message will contain the error to display if Success is <c>false</c>;
 		/// Validation Errors will be populated with errors to present if validation fails
+		/// Review will contain the new <see cref="ReviewDto"/> if creation was successful
 		/// </returns>
 		public async Task<CreateReviewResponse> Handle(CreateReviewCommand command, CancellationToken cancellationToken)
 		{

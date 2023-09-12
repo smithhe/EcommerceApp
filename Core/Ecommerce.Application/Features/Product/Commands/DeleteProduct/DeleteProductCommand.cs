@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Product.Commands.DeleteProduct
 	public class DeleteProductCommand : IRequest<DeleteProductResponse>
 	{
 		/// <summary>
-		/// The <see cref="Product"/> to delete
+		/// The Product to delete
 		/// </summary>
 		public ProductDto? ProductToDelete { get; set; }
 	}

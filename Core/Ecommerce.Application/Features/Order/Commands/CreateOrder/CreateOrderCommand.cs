@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 	public class CreateOrderCommand : IRequest<CreateOrderResponse>
 	{
 		/// <summary>
-		/// The <see cref="Order"/> to be created
+		/// The Order to be created
 		/// </summary>
 		public OrderDto? OrderToCreate { get; set; }
 	}

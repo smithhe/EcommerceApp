@@ -44,6 +44,7 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="Category"/>.
 		/// Message will contain the error to display if Success is <c>false</c>;
 		/// Validation Errors will be populated with errors to present if validation fails
+		/// Category will contain the new <see cref="CategoryDto"/> if creation was successful
 		/// </returns>
 		public async Task<CreateCategoryResponse> Handle(CreateCategoryCommand command, CancellationToken cancellationToken)
 		{

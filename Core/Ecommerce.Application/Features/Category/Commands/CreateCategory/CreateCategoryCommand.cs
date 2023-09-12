@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 	public class CreateCategoryCommand : IRequest<CreateCategoryResponse>
 	{
 		/// <summary>
-		/// The <see cref="Category"/> to be created
+		/// The Category to be created
 		/// </summary>
 		public CategoryDto? CategoryToCreate { get; set; }
 	}

@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Review.Commands.UpdateReview
 	public class UpdateReviewCommand : IRequest<UpdateReviewResponse>
 	{
 		/// <summary>
-		/// The <see cref="Review"/> to update with
+		/// The Review to update with
 		/// </summary>
 		public ReviewDto? ReviewToUpdate { get; set; }
 	}

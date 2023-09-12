@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Review.Commands.DeleteReview
 	public class DeleteReviewCommand : IRequest<DeleteReviewResponse>
 	{
 		/// <summary>
-		/// The <see cref="Review"/> to delete
+		/// The Review to delete
 		/// </summary>
 		public ReviewDto? ReviewToDelete { get; set; }
 	}

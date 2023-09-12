@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Product.Commands.CreateProduct
 	public class CreateProductCommand : IRequest<CreateProductResponse>
 	{
 		/// <summary>
-		/// The <see cref="Product"/> to be created
+		/// The Product to be created
 		/// </summary>
 		public ProductDto? ProductToCreate { get; set; }
 	}

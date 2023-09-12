@@ -11,12 +11,12 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 	public class CreateCartItemCommand : IRequest<CreateCartItemResponse>
 	{
 		/// <summary>
-		/// The <see cref="CartItem"/> to be created
+		/// The CartItem to be created
 		/// </summary>
 		public CartItemDto? CartItemToCreate { get; set; }
 		
 		/// <summary>
-		/// The User requesting to create the <see cref="CartItem"/>
+		/// The User requesting to create the CartItem
 		/// </summary>
 		public string? UserName { get; set; }
 	}

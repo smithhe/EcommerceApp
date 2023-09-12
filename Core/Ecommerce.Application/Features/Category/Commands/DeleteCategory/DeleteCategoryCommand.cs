@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Category.Commands.DeleteCategory
 	public class DeleteCategoryCommand : IRequest<DeleteCategoryResponse>
 	{
 		/// <summary>
-		/// The <see cref="Category"/> to delete
+		/// The Category to delete
 		/// </summary>
 		public CategoryDto? CategoryToDelete { get; set; }
 	}

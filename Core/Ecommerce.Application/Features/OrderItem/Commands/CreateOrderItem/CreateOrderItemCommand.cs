@@ -9,6 +9,9 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 	/// </summary>
 	public class CreateOrderItemCommand : IRequest<CreateOrderItemResponse>
 	{
+		/// <summary>
+		/// The OrderItem to be created
+		/// </summary>
 		public OrderItemDto OrderItemToCreate { get; set; } = null!;
 	}
 }

@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Product.Commands.UpdateProduct
 	public class UpdateProductCommand : IRequest<UpdateProductResponse>
 	{
 		/// <summary>
-		/// The <see cref="Product"/> to update with
+		/// The Product to update with
 		/// </summary>
 		public ProductDto? ProductToUpdate { get; set; }
 	}

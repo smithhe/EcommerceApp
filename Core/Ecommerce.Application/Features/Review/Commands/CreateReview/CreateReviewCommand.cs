@@ -11,12 +11,12 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 	public class CreateReviewCommand : IRequest<CreateReviewResponse>
 	{
 		/// <summary>
-		/// The <see cref="Review"/> to be created
+		/// The Review to be created
 		/// </summary>
 		public ReviewDto? ReviewToCreate { get; set; }
 		
 		/// <summary>
-		/// The User requesting to create the <see cref="Review"/>
+		/// The User requesting to create the Review
 		/// </summary>
 		public string? UserName { get; set; }
 	}

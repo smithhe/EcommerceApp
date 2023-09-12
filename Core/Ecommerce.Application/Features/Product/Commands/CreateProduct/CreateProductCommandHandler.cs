@@ -48,6 +48,7 @@ namespace Ecommerce.Application.Features.Product.Commands.CreateProduct
 		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="Product"/>.
 		/// Message will contain the error to display if Success is <c>false</c>.
 		/// Validation Errors will be populated with errors to present if validation fails
+		/// Product will contain the new <see cref="ProductDto"/> if creation was successful
 		/// </returns>
 		public async Task<CreateProductResponse> Handle(CreateProductCommand command, CancellationToken cancellationToken)
 		{

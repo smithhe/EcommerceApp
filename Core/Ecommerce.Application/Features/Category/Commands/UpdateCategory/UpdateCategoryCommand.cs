@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 	public class UpdateCategoryCommand : IRequest<UpdateCategoryResponse>
 	{
 		/// <summary>
-		/// The <see cref="Category"/> to update with
+		/// The Category to update with
 		/// </summary>
 		public CategoryDto? CategoryToUpdate { get; set; }
 	}

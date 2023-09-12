@@ -13,6 +13,9 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 {
+	/// <summary>
+	/// A <see cref="Mediator"/> request handler for <see cref="CreateCartItemCommand"/>
+	/// </summary>
 	public class CreateCartItemCommandHandler : IRequestHandler<CreateCartItemCommand, CreateCartItemResponse>
 	{
 		private readonly ILogger<CreateCartItemCommandHandler> _logger;
@@ -46,7 +49,7 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="CartItem"/>.
 		/// Message will contain the error to display if Success is <c>false</c>.
 		/// Validation Errors will be populated with errors to present if validation fails.
-		/// CartItem will contain the new <see cref="CartItem"/> if creation was successful
+		/// CartItem will contain the new <see cref="CartItemDto"/> if creation was successful
 		/// </returns>
 		public async Task<CreateCartItemResponse> Handle(CreateCartItemCommand command, CancellationToken cancellationToken)
 		{

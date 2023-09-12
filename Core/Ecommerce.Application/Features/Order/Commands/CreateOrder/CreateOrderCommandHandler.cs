@@ -51,6 +51,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="Order"/>.
 		/// Message will contain the error to display if Success is <c>false</c>;
 		/// Validation Errors will be populated with errors to present if validation fails
+		/// Order will contain the new <see cref="OrderDto"/> if creation was successful
 		/// </returns>
 		public async Task<CreateOrderResponse> Handle(CreateOrderCommand command, CancellationToken cancellationToken)
 		{

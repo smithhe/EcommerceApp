@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Order.Commands.UpdateOrder
 	public class UpdateOrderCommand : IRequest<UpdateOrderResponse>
 	{
 		/// <summary>
-		/// The <see cref="Order"/> to update with
+		/// The Order to update with
 		/// </summary>
 		public OrderDto? OrderToUpdate { get; set; }
 	}
