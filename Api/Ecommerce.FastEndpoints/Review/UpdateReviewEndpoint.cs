@@ -48,7 +48,11 @@ namespace Ecommerce.FastEndpoints.Review
 
 			try
 			{
-				response = await this._mediator.Send(new UpdateReviewCommand { ReviewToUpdate = req.ReviewToUpdate }, ct);
+				response = await this._mediator.Send(new UpdateReviewCommand
+				{
+					ReviewToUpdate = req.ReviewToUpdate,
+					UserName = TokenService.GetUserNameFromToken(token)
+				}, ct);
 			}
 			catch (Exception e)
 			{
