@@ -1,10 +1,9 @@
 using Ecommerce.Shared.Dtos;
-using Ecommerce.Shared.Requests.CartItem;
 
 namespace Ecommerce.Shared.Responses.CartItem
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a <see cref="CreateCartItemApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a request to create a new CartItem
 	/// </summary>
 	public class CreateCartItemResponse : BaseResponse
 	{

@@ -4,7 +4,7 @@ using Ecommerce.Shared.Requests.Category;
 namespace Ecommerce.Shared.Responses.Category
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a <see cref="GetCategoryByIdApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a request to get a Category by Id
 	/// </summary>
 	public class GetCategoryByIdResponse : BaseResponse
 	{

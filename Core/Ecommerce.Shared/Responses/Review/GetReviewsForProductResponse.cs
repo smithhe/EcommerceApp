@@ -1,12 +1,11 @@
 using Ecommerce.Shared.Dtos;
-using Ecommerce.Shared.Requests.Review;
 using System;
 using System.Collections.Generic;
 
 namespace Ecommerce.Shared.Responses.Review
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a <see cref="GetReviewsForProductApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a request to get all Reviews for a Product
 	/// </summary>
 	public class GetReviewsForProductResponse : BaseResponse
 	{

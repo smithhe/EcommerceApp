@@ -1,12 +1,11 @@
 using Ecommerce.Shared.Dtos;
-using Ecommerce.Shared.Requests.Order;
 using System;
 using System.Collections.Generic;
 
 namespace Ecommerce.Shared.Responses.Order
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a <see cref="GetAllOrdersByUserIdApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a request to get all Orders for a User
 	/// </summary>
 	public class GetAllOrdersByUserIdResponse : BaseResponse
 	{

@@ -1,10 +1,9 @@
 using Ecommerce.Shared.Dtos;
-using Ecommerce.Shared.Requests.Category;
 
 namespace Ecommerce.Shared.Responses.Category
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a <see cref="CreateCategoryApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a request to create a Category
 	/// </summary>
 	public class CreateCategoryResponse : BaseResponse
 	{

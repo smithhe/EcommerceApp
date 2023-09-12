@@ -3,7 +3,7 @@ using Ecommerce.Shared.Dtos;
 namespace Ecommerce.Shared.Responses.OrderItem
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a requests to create an OrderItem
+	/// A implementation of <see cref="BaseResponse" /> for a request to create a OrderItem
 	/// </summary>
 	public class CreateOrderItemResponse : BaseResponse
 	{

@@ -1,12 +1,11 @@
 using Ecommerce.Shared.Dtos;
-using Ecommerce.Shared.Requests.Category;
 using System;
 using System.Collections.Generic;
 
 namespace Ecommerce.Shared.Responses.Category
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a <see cref="GetAllCategoriesApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a request to get all Categories
 	/// </summary>
 	public class GetAllCategoriesResponse : BaseResponse
 	{

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Ecommerce.Shared.Responses.OrderItem
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a requests to get all OrderItems for a Order
+	/// A implementation of <see cref="BaseResponse" /> for a request to get all OrderItems for a Order
 	/// </summary>
 	public class GetAllOrderItemsByOrderIdResponse : BaseResponse
 	{

@@ -4,7 +4,7 @@ using Ecommerce.Shared.Requests.Order;
 namespace Ecommerce.Shared.Responses.Order
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a <see cref="GetOrderByIdApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a request to get a Order by Id
 	/// </summary>
 	public class GetOrderByIdResponse : BaseResponse
 	{

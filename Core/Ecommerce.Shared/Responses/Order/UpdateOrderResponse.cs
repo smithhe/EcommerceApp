@@ -1,10 +1,8 @@
-using Ecommerce.Shared.Dtos;
-using Ecommerce.Shared.Requests.Order;
 
 namespace Ecommerce.Shared.Responses.Order
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a <see cref="UpdateOrderApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a request to update a Order
 	/// </summary>
 	public class UpdateOrderResponse : BaseResponse
 	{

@@ -1,9 +1,8 @@
-using Ecommerce.Shared.Requests.Category;
 
 namespace Ecommerce.Shared.Responses.Category
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a <see cref="UpdateCategoryApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a request to update a Category
 	/// </summary>
 	public class UpdateCategoryResponse : BaseResponse
 	{

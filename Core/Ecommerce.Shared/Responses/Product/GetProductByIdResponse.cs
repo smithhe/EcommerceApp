@@ -4,7 +4,7 @@ using Ecommerce.Shared.Requests.Product;
 namespace Ecommerce.Shared.Responses.Product
 {
 	/// <summary>
-	/// A implementation of <see cref="BaseResponse" /> for a <see cref="GetProductByIdApiRequest"/>
+	/// A implementation of <see cref="BaseResponse" /> for a request to get a Product by Id
 	/// </summary>
 	public class GetProductByIdResponse : BaseResponse
 	{
