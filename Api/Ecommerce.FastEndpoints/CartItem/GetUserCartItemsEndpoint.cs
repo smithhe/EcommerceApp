@@ -1,4 +1,4 @@
-using Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem;
+using Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Shared.Requests.CartItem;
 using Ecommerce.Shared.Responses.CartItem;
@@ -13,21 +13,21 @@ using System.Threading.Tasks;
 namespace Ecommerce.FastEndpoints.CartItem
 {
 	/// <summary>
-	/// A Fast Endpoint implementation that handles updating an existing CartItem
+	/// A Fast Endpoint implementation that handles getting all CartItems for a User
 	/// </summary>
-	public class UpdateCartItemEndpoint : Endpoint<UpdateCartItemApiRequest, UpdateCartItemResponse>
+	public class GetUserCartItemsEndpoint : Endpoint<GetUserCartItemsApiRequest, GetUserCartItemsResponse>
 	{
-		private readonly ILogger<UpdateCartItemEndpoint> _logger;
+		private readonly ILogger<GetUserCartItemsEndpoint> _logger;
 		private readonly IMediator _mediator;
 		private readonly IAuthenticationService _authenticationService;
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="UpdateCartItemEndpoint"/> class.
+		/// Initializes a new instance of the <see cref="GetUserCartItemsEndpoint"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
 		/// <param name="authenticationService">The <see cref="IAuthenticationService"/> instance used for token validation</param>
-		public UpdateCartItemEndpoint(ILogger<UpdateCartItemEndpoint> logger, IMediator mediator, IAuthenticationService authenticationService)
+		public GetUserCartItemsEndpoint(ILogger<GetUserCartItemsEndpoint> logger, IMediator mediator, IAuthenticationService authenticationService)
 		{
 			this._logger = logger;
 			this._mediator = mediator;
@@ -39,18 +39,18 @@ namespace Ecommerce.FastEndpoints.CartItem
 		/// </summary>
 		public override void Configure()
 		{
-			Post("/api/cartitem/update");
+			Get("/api/cartitem/all");
 			//TODO: Add roles
 		}
 
 		/// <summary>
-		/// Handles the <see cref="UpdateCartItemApiRequest"/> and generates a <see cref="UpdateCartItemResponse"/> 
+		/// Handles the <see cref="GetUserCartItemsApiRequest"/> and generates a <see cref="GetUserCartItemsResponse"/> 
 		/// </summary>
-		/// <param name="req">The <see cref="UpdateCartItemApiRequest"/> object sent in the HTTP request</param>
+		/// <param name="req">The <see cref="GetUserCartItemsApiRequest"/> object sent in the HTTP request</param>
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
-		public override async Task HandleAsync(UpdateCartItemApiRequest req, CancellationToken ct)
+		public override async Task HandleAsync(GetUserCartItemsApiRequest req, CancellationToken ct)
 		{
-			this._logger.LogInformation("Handling Update CartItem Request");
+			this._logger.LogInformation("Handling Get All CartItems Request");
 			
 			//Check if token is valid
 			string? token = this.HttpContext.Request.Headers["Authorization"].FirstOrDefault();
@@ -61,21 +61,17 @@ namespace Ecommerce.FastEndpoints.CartItem
 				return;
 			}
 
-			UpdateCartItemResponse response;
+			GetUserCartItemsResponse response;
 			try
 			{
-				//Send the update command
-				response = await this._mediator.Send(new UpdateCartItemCommand
-				{
-					CartItemToUpdate = req.CartItemToUpdate, 
-					UserName = TokenService.GetUserNameFromToken(token)
-				}, ct);
+				//Send the query
+				response = await this._mediator.Send(new GetUserCartItemsQuery { UserId = req.UserId }, ct);
 			}
 			catch (Exception e)
 			{
 				//Unexpected error
-				this._logger.LogError(e, "Error when attempting to update CartItem");
-				await SendAsync(new UpdateCartItemResponse { Success = false, Message = "Unexpected Error Occurred" },
+				this._logger.LogError(e, "Error when attempting to get all CartItems");
+				await SendAsync(new GetUserCartItemsResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
 			}

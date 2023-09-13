@@ -74,7 +74,7 @@ namespace Ecommerce.FastEndpoints.CartItem
 			catch (Exception e)
 			{
 				//Unexpected error
-				this._logger.LogError(e, "Error when attempt to create CartItem");
+				this._logger.LogError(e, "Error when attempting to create CartItem");
 				await SendAsync(new CreateCartItemResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;

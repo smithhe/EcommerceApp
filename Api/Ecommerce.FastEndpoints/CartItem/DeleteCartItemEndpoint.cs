@@ -73,7 +73,7 @@ namespace Ecommerce.FastEndpoints.CartItem
 			catch (Exception e)
 			{
 				//Unexpected error
-				this._logger.LogError(e, "Error when attempt to delete CartItem");
+				this._logger.LogError(e, "Error when attempting to delete CartItem");
 				await SendAsync(new DeleteCartItemResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
