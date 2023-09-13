@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace Ecommerce.FastEndpoints.Order
 {
 	/// <summary>
-	/// A Fast Endpoint implementation that handles getting an Order based on a Id 
+	/// A Fast Endpoint implementation that handles getting a Order based on a Id 
 	/// </summary>
 	public class GetOrderByIdEndpoint : Endpoint<GetOrderByIdApiRequest, GetOrderByIdResponse>
 	{
