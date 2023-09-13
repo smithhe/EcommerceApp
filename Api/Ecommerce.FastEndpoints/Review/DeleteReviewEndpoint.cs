@@ -70,7 +70,7 @@ namespace Ecommerce.FastEndpoints.Review
 			catch (Exception e)
 			{
 				//Unexpected error
-				this._logger.LogError(e, "Error when attempt to delete review");
+				this._logger.LogError(e, "Error when attempting to delete review");
 				await SendAsync(new DeleteReviewResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;

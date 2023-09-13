@@ -74,7 +74,7 @@ namespace Ecommerce.FastEndpoints.Review
 			catch (Exception e)
 			{
 				//Unexpected error
-				this._logger.LogError(e, "Error when attempt to create review");
+				this._logger.LogError(e, "Error when attempting to create review");
 				await SendAsync(new CreateReviewResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
