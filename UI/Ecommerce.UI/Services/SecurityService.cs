@@ -66,12 +66,7 @@ namespace Ecommerce.UI.Services
 
 		public async Task<bool> Logout(string userName)
 		{
-			IApiResponse response = await this._securityApiService.Logout(new LogoutUserRequest { UserName = userName });
-
-			if (response.IsSuccessStatusCode == false)
-			{
-				return false;
-			}
+			await this._securityApiService.Logout(new LogoutUserRequest { UserName = userName });
 
 			await this._localStorageService.RemoveItemAsync(this._authTokenStorageKey);
 			((AuthStateProvider)this._authenticationStateProvider).NotifyUserLogout();
