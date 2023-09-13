@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.FastEndpoints
 {
+	/// <summary>
+	/// A static service class that handles operations on the JWT token passed in HTTP requests
+	/// </summary>
 	public static class TokenService
 	{
+		/// <summary>
+		/// Validates if the JWT token passed in the HTTP request is still valid for use
+		/// </summary>
+		/// <param name="authenticationService">The <see cref="IAuthenticationService"/> instance that handles verifying if a token is valid</param>
+		/// <param name="token">The JWT token passed in the HTTP request</param>
+		/// <returns></returns>
 		public static async Task<bool> ValidateTokenAsync(IAuthenticationService authenticationService, string? token)
 		{
 			if (string.IsNullOrEmpty(token))
@@ -32,6 +41,14 @@ namespace Ecommerce.FastEndpoints
 			return true;
 		}
 
+		/// <summary>
+		/// Retrieves the username from the token
+		/// </summary>
+		/// <param name="token">The JWT token passed in the HTTP request</param>
+		/// <returns>
+		/// A string containing the username if found;
+		/// <c>null</c> if token is null or no claim is found for Name
+		/// </returns>
 		public static string? GetUserNameFromToken(string? token)
 		{
 			//Check for null token
