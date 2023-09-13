@@ -13,6 +13,7 @@ namespace Ecommerce.Application.Profiles
 			CreateMap<OrderItem, OrderItemDto>().ReverseMap();
 			CreateMap<Product, ProductDto>().ReverseMap();
 			CreateMap<Review, ReviewDto>().ReverseMap();
+			CreateMap<CartItem, CartItemDto>().ReverseMap();
 		}
 	}
 }
