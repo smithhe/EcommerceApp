@@ -42,6 +42,8 @@ namespace Ecommerce.FastEndpoints.Security
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		public override async Task HandleAsync(AuthenticationRequest req, CancellationToken ct)
 		{
+			this._logger.LogInformation("Handling Login Request");
+			
 			//Attempt a login
 			AuthenticatedUserModel? result = await this._authenticationService.AuthenticateAsync(req);
 
