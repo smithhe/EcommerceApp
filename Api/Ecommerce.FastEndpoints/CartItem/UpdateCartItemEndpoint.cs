@@ -1,4 +1,4 @@
-using Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems;
+using Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Shared.Requests.CartItem;
 using Ecommerce.Shared.Responses.CartItem;
@@ -13,21 +13,21 @@ using System.Threading.Tasks;
 namespace Ecommerce.FastEndpoints.CartItem
 {
 	/// <summary>
-	/// A Fast Endpoint implementation that handles deleting a User's CartItems
+	/// A Fast Endpoint implementation that handles updating an existing CartItem
 	/// </summary>
-	public class DeleteUserCartItemsEndpoint : Endpoint<DeleteUserCartItemsApiRequest, DeleteUserCartItemsResponse>
+	public class UpdateCartItemEndpoint : Endpoint<UpdateCartItemApiRequest, UpdateCartItemResponse>
 	{
-		private readonly ILogger<DeleteUserCartItemsEndpoint> _logger;
+		private readonly ILogger<UpdateCartItemEndpoint> _logger;
 		private readonly IMediator _mediator;
 		private readonly IAuthenticationService _authenticationService;
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="DeleteUserCartItemsEndpoint"/> class.
+		/// Initializes a new instance of the <see cref="UpdateCartItemEndpoint"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
 		/// <param name="authenticationService">The <see cref="IAuthenticationService"/> instance used for token validation</param>
-		public DeleteUserCartItemsEndpoint(ILogger<DeleteUserCartItemsEndpoint> logger, IMediator mediator, IAuthenticationService authenticationService)
+		public UpdateCartItemEndpoint(ILogger<UpdateCartItemEndpoint> logger, IMediator mediator, IAuthenticationService authenticationService)
 		{
 			this._logger = logger;
 			this._mediator = mediator;
@@ -39,18 +39,18 @@ namespace Ecommerce.FastEndpoints.CartItem
 		/// </summary>
 		public override void Configure()
 		{
-			Post("/api/cartitem/user/delete");
+			Post("/api/cartitem/update");
 			//TODO: Add roles
 		}
 
 		/// <summary>
-		/// Handles the <see cref="DeleteUserCartItemsApiRequest"/> and generates a <see cref="DeleteUserCartItemsResponse"/> 
+		/// Handles the <see cref="UpdateCartItemApiRequest"/> and generates a <see cref="UpdateCartItemResponse"/> 
 		/// </summary>
-		/// <param name="req">The <see cref="DeleteUserCartItemsApiRequest"/> object sent in the HTTP request</param>
+		/// <param name="req">The <see cref="UpdateCartItemApiRequest"/> object sent in the HTTP request</param>
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
-		public override async Task HandleAsync(DeleteUserCartItemsApiRequest req, CancellationToken ct)
+		public override async Task HandleAsync(UpdateCartItemApiRequest req, CancellationToken ct)
 		{
-			this._logger.LogInformation("Handling Delete User CartItems Request");
+			this._logger.LogInformation("Handling Update CartItem Request");
 			
 			//Check if token is valid
 			string? token = this.HttpContext.Request.Headers["Authorization"].FirstOrDefault();
@@ -61,17 +61,21 @@ namespace Ecommerce.FastEndpoints.CartItem
 				return;
 			}
 
-			DeleteUserCartItemsResponse response;
+			UpdateCartItemResponse response;
 			try
 			{
-				//Send the delete command
-				response = await this._mediator.Send(new DeleteUserCartItemsCommand { UserId = req.UserId }, ct);
+				//Send the update command
+				response = await this._mediator.Send(new UpdateCartItemCommand
+				{
+					CartItemToUpdate = req.CartItemToUpdate, 
+					UserName = TokenService.GetUserNameFromToken(token)
+				}, ct);
 			}
 			catch (Exception e)
 			{
 				//Unexpected error
-				this._logger.LogError(e, "Error when attempt to delete user CartItems");
-				await SendAsync(new DeleteUserCartItemsResponse { Success = false, Message = "Unexpected Error Occurred" },
+				this._logger.LogError(e, "Error when attempt to update CartItem");
+				await SendAsync(new UpdateCartItemResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
 			}
