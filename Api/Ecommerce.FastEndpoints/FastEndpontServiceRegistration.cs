@@ -14,6 +14,8 @@ namespace Ecommerce.FastEndpoints
 			//https://fast-endpoints.com/
 			services.AddFastEndpoints();
 			
+			//TODO: Add swagger
+			
 			//Add the application services
 			services.AddApplicationServices();
 
