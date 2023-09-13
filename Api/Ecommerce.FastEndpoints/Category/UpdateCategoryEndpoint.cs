@@ -39,7 +39,7 @@ namespace Ecommerce.FastEndpoints.Category
 		/// </summary>
 		public override void Configure()
 		{
-			Post("/api/category/delete");
+			Put("/api/category/update");
 			//TODO: Add roles
 		}
 

@@ -39,7 +39,7 @@ namespace Ecommerce.FastEndpoints.Review
 		/// </summary>
 		public override void Configure()
 		{
-			Post("/api/review/update");
+			Put("/api/review/update");
 			//TODO: Add roles
 		}
 

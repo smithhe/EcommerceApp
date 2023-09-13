@@ -39,7 +39,7 @@ namespace Ecommerce.FastEndpoints.CartItem
 		/// </summary>
 		public override void Configure()
 		{
-			Post("/api/cartitem/update");
+			Put("/api/cartitem/update");
 			//TODO: Add roles
 		}
 

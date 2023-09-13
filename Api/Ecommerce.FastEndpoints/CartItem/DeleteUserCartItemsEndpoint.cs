@@ -39,7 +39,7 @@ namespace Ecommerce.FastEndpoints.CartItem
 		/// </summary>
 		public override void Configure()
 		{
-			Post("/api/cartitem/user/delete");
+			Delete("/api/cartitem/user/delete");
 			//TODO: Add roles
 		}
 

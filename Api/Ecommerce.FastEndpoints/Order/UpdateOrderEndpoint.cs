@@ -39,7 +39,7 @@ namespace Ecommerce.FastEndpoints.Order
 		/// </summary>
 		public override void Configure()
 		{
-			Post("/api/order/update");
+			Put("/api/order/update");
 			//TODO: Add roles
 		}
 
