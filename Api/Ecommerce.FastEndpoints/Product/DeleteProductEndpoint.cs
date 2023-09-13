@@ -1,7 +1,7 @@
-using Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem;
+using Ecommerce.Application.Features.Product.Commands.DeleteProduct;
 using Ecommerce.Identity.Contracts;
-using Ecommerce.Shared.Requests.CartItem;
-using Ecommerce.Shared.Responses.CartItem;
+using Ecommerce.Shared.Requests.Product;
+using Ecommerce.Shared.Responses.Product;
 using FastEndpoints;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -10,24 +10,24 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Ecommerce.FastEndpoints.CartItem
+namespace Ecommerce.FastEndpoints.Product
 {
 	/// <summary>
-	/// A Fast Endpoint implementation that handles deleting a CartItem
+	/// A Fast Endpoint implementation that handles deleting a Product
 	/// </summary>
-	public class DeleteCartItemEndpoint : Endpoint<DeleteCartItemApiRequest, DeleteCartItemResponse>
+	public class DeleteProductEndpoint : Endpoint<DeleteProductApiRequest, DeleteProductResponse>
 	{
-		private readonly ILogger<DeleteCartItemEndpoint> _logger;
+		private readonly ILogger<DeleteProductEndpoint> _logger;
 		private readonly IMediator _mediator;
 		private readonly IAuthenticationService _authenticationService;
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="DeleteCartItemEndpoint"/> class.
+		/// Initializes a new instance of the <see cref="DeleteProductEndpoint"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
 		/// <param name="authenticationService">The <see cref="IAuthenticationService"/> instance used for token validation</param>
-		public DeleteCartItemEndpoint(ILogger<DeleteCartItemEndpoint> logger, IMediator mediator, IAuthenticationService authenticationService)
+		public DeleteProductEndpoint(ILogger<DeleteProductEndpoint> logger, IMediator mediator, IAuthenticationService authenticationService)
 		{
 			this._logger = logger;
 			this._mediator = mediator;
@@ -39,18 +39,18 @@ namespace Ecommerce.FastEndpoints.CartItem
 		/// </summary>
 		public override void Configure()
 		{
-			Post("/api/cartitem/delete");
+			Post("/api/product/delete");
 			//TODO: Add roles
 		}
 
 		/// <summary>
-		/// Handles the <see cref="DeleteCartItemApiRequest"/> and generates a <see cref="DeleteCartItemResponse"/> 
+		/// Handles the <see cref="DeleteProductApiRequest"/> and generates a <see cref="DeleteProductResponse"/> 
 		/// </summary>
-		/// <param name="req">The <see cref="DeleteCartItemApiRequest"/> object sent in the HTTP request</param>
+		/// <param name="req">The <see cref="DeleteProductApiRequest"/> object sent in the HTTP request</param>
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
-		public override async Task HandleAsync(DeleteCartItemApiRequest req, CancellationToken ct)
+		public override async Task HandleAsync(DeleteProductApiRequest req, CancellationToken ct)
 		{
-			this._logger.LogInformation("Handling Delete CartItem Request");
+			this._logger.LogInformation("Handling Delete Product Request");
 			
 			//Check if token is valid
 			string? token = this.HttpContext.Request.Headers["Authorization"].FirstOrDefault();
@@ -61,20 +61,20 @@ namespace Ecommerce.FastEndpoints.CartItem
 				return;
 			}
 
-			DeleteCartItemResponse response;
+			DeleteProductResponse response;
 			try
 			{
 				//Send the delete command
-				response = await this._mediator.Send(new DeleteCartItemCommand
+				response = await this._mediator.Send(new DeleteProductCommand
 				{
-					CartItemToDelete = req.CartItemToDelete, 
+					ProductToDelete = req.ProductToDelete, 
 				}, ct);
 			}
 			catch (Exception e)
 			{
 				//Unexpected error
-				this._logger.LogError(e, "Error when attempting to delete CartItem");
-				await SendAsync(new DeleteCartItemResponse { Success = false, Message = "Unexpected Error Occurred" },
+				this._logger.LogError(e, "Error when attempting to delete Product");
+				await SendAsync(new DeleteProductResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
 			}
