@@ -3,7 +3,7 @@ using Ecommerce.Shared.Dtos;
 namespace Ecommerce.Shared.Requests.CartItem
 {
 	/// <summary>
-	/// An Api request to create a new CartItem
+	/// A Api request to create a new CartItem
 	/// </summary>
 	public class CreateCartItemApiRequest
 	{

@@ -1,4 +1,4 @@
-using Ecommerce.Application.Features.CartItem.Commands.CreateCartItem;
+using Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Shared.Requests.CartItem;
 using Ecommerce.Shared.Responses.CartItem;
@@ -13,21 +13,21 @@ using System.Threading.Tasks;
 namespace Ecommerce.FastEndpoints.CartItem
 {
 	/// <summary>
-	/// A Fast Endpoint implementation that handles creating a new CartItem
+	/// A Fast Endpoint implementation that handles deleting a CartItem
 	/// </summary>
-	public class CreateCartItemEndpoint : Endpoint<CreateCartItemApiRequest, CreateCartItemResponse>
+	public class DeleteCartItemEndpoint : Endpoint<DeleteCartItemApiRequest, DeleteCartItemResponse>
 	{
-		private readonly ILogger<CreateCartItemEndpoint> _logger;
+		private readonly ILogger<DeleteCartItemEndpoint> _logger;
 		private readonly IMediator _mediator;
 		private readonly IAuthenticationService _authenticationService;
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="CreateCartItemEndpoint"/> class.
+		/// Initializes a new instance of the <see cref="DeleteCartItemEndpoint"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
 		/// <param name="authenticationService">The <see cref="IAuthenticationService"/> instance used for token validation</param>
-		public CreateCartItemEndpoint(ILogger<CreateCartItemEndpoint> logger, IMediator mediator, IAuthenticationService authenticationService)
+		public DeleteCartItemEndpoint(ILogger<DeleteCartItemEndpoint> logger, IMediator mediator, IAuthenticationService authenticationService)
 		{
 			this._logger = logger;
 			this._mediator = mediator;
@@ -39,18 +39,18 @@ namespace Ecommerce.FastEndpoints.CartItem
 		/// </summary>
 		public override void Configure()
 		{
-			Post("/api/cartitem/create");
+			Post("/api/cartitem/delete");
 			//TODO: Add roles
 		}
-		
+
 		/// <summary>
-		/// Handles the <see cref="CreateCartItemApiRequest"/> and generates a <see cref="CreateCartItemResponse"/> 
+		/// Handles the <see cref="DeleteCartItemApiRequest"/> and generates a <see cref="DeleteCartItemResponse"/> 
 		/// </summary>
-		/// <param name="req">The <see cref="CreateCartItemApiRequest"/> object sent in the HTTP request</param>
+		/// <param name="req">The <see cref="DeleteCartItemApiRequest"/> object sent in the HTTP request</param>
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
-		public override async Task HandleAsync(CreateCartItemApiRequest req, CancellationToken ct)
+		public override async Task HandleAsync(DeleteCartItemApiRequest req, CancellationToken ct)
 		{
-			this._logger.LogInformation("Handling Create CartItem Request");
+			this._logger.LogInformation("Handling Delete CartItem Request");
 			
 			//Check if token is valid
 			string? token = this.HttpContext.Request.Headers["Authorization"].FirstOrDefault();
@@ -61,27 +61,27 @@ namespace Ecommerce.FastEndpoints.CartItem
 				return;
 			}
 
-			CreateCartItemResponse response;
+			DeleteCartItemResponse response;
 			try
 			{
 				//Send the create command
-				response = await this._mediator.Send(new CreateCartItemCommand
+				response = await this._mediator.Send(new DeleteCartItemCommand
 				{
-					CartItemToCreate = req.CartItemToCreate, 
-					UserName = TokenService.GetUserNameFromToken(token)
+					CartItemToDelete = req.CartItemToDelete, 
 				}, ct);
 			}
 			catch (Exception e)
 			{
 				//Unexpected error
 				this._logger.LogError(e, "Error when attempt to create CartItem");
-				await SendAsync(new CreateCartItemResponse { Success = false, Message = "Unexpected Error Occurred" },
+				await SendAsync(new DeleteCartItemResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
 			}
 
 			//Send the response object
 			await SendOkAsync(response, ct);
+			
 		}
 	}
 }
