@@ -10,10 +10,10 @@ namespace Ecommerce.UI.Contracts.Refit
 		[Post("/api/review/create")]
 		Task<ApiResponse<CreateReviewResponse>> CreateReview(CreateReviewApiRequest createReviewApiRequest);
 		
-		[Post("/api/review/delete")]
+		[Delete("/api/review/delete")]
 		Task<ApiResponse<DeleteReviewResponse>> DeleteReview(DeleteReviewApiRequest deleteReviewApiRequest);
 		
-		[Post("/api/review/update")]
+		[Put("/api/review/update")]
 		Task<ApiResponse<UpdateReviewResponse>> UpdateReview(UpdateReviewApiRequest updateReviewApiRequest);
 		
 		[Get("/api/review/user")]
