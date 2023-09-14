@@ -1,0 +1,60 @@
+@page "/Cart"
+@using Blazored.Toast.Configuration
+@using Ecommerce.Shared.Dtos
+
+<BlazoredToasts Position="ToastPosition.TopRight"
+                Timeout="10"
+                IconType="IconType.FontAwesome"
+                SuccessClass="success-toast-override"
+                SuccessIcon="done_outline"
+                ErrorIcon="fa fa-bug"/>
+
+@if (this.CartItems == null)
+{
+    <div style="position:fixed;top:50%;left:50%;margin-top:-50px;margin-left:-100px;">
+        <img src="images/ajax-loader.gif"/>
+    </div>
+}
+else
+{
+    <div class="container mt-4">
+        <h1 class="mt-4">
+            <i class="bi bi-cart"></i> Cart
+        </h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (CartItemDto cartItem in this.CartItems)
+            {
+                ProductDto? product = this.Products.FirstOrDefault(p => p.Id == cartItem.ProductId);
+                double price = cartItem.Quantity * product?.Price ?? 0;
+                <tr>
+                    <td>@(product?.Name)</td>
+                    <td>@cartItem.Quantity</td>
+                    <td>@string.Concat("$", price.ToString("0.00"))</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => EditCartItem(cartItem)">Edit</button>
+                        <button class="btn btn-danger" @onclick="() => RemoveCartItem(cartItem)">X</button>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+        <div class="row w-100 mt-2">
+            <button class="btn btn-success" @onclick="PayPalCheckoutClick">
+                <i class="bi bi-paypal"></i> Checkout with PayPal
+            </button>
+            <button class="btn btn-primary ml-2" @onclick="StripeCheckoutClick">
+                <i class="bi bi-credit-card"></i> Checkout with Stripe
+            </button>
+        </div>
+    </div>
+}
