@@ -1,7 +1,7 @@
 CREATE TABLE CartItem (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     ProductId INT NOT NULL,
-    UserId BINARY(16) NOT NULL,
+    UserId VARCHAR(255) NOT NULL,
     Quantity INT NOT NULL,
     CreatedBy VARCHAR(255) NOT NULL,
     CreatedDate DATETIME NOT NULL,
