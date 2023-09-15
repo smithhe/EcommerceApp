@@ -248,5 +248,37 @@ namespace Ecommerce.Persistence.Repositories
 
 			return review;
 		}
+
+		/// <summary>
+		/// Calculates the average value of all star ratings for a Product
+		/// </summary>
+		/// <param name="productId">The unique identifier of the Product</param>
+		/// <returns>
+		/// Returns the average of all ratings for a product;
+		/// 0 is none exist for the product
+		/// </returns>
+		public async Task<decimal> GetAverageRatingForProduct(int productId)
+		{
+			const string sql = $"SELECT AVG(Stars) FROM {_tableName} WHERE ProductId = @ProductId";
+			decimal average = 0;
+			
+			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			{
+				connection.Open();
+
+				try
+				{
+					average = await connection.QueryFirstOrDefaultAsync<decimal>(sql, new { ProductId = productId });
+				}
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when fetching average star rating on product {productId}");
+				}
+				
+				connection.Close();
+			}
+			
+			return average;
+		}
 	}
 }

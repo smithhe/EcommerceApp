@@ -30,5 +30,15 @@ namespace Ecommerce.Persistence.Contracts
 		/// <c>null</c> if no <see cref="Review"/> with the specified UserId and ProductId is found.
 		/// </returns>
 		Task<Review?> GetUserReviewForProduct(string userName, int productId);
+
+		/// <summary>
+		/// Calculates the average value of all star ratings for a Product
+		/// </summary>
+		/// <param name="productId">The unique identifier of the Product</param>
+		/// <returns>
+		/// Returns the average of all ratings for a product;
+		/// 0 is none exist for the product
+		/// </returns>
+		Task<decimal> GetAverageRatingForProduct(int productId);
 	}
 }
