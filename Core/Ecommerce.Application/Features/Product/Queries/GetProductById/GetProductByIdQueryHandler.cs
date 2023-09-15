@@ -85,7 +85,7 @@ namespace Ecommerce.Application.Features.Product.Queries.GetProductById
 				return response;
 			}
 
-			response.Product.Category = categoryResponse.Category!;
+			response.Product!.Category = categoryResponse.Category!;
 
 			GetReviewsForProductResponse reviewsResponse = await this._mediator.Send(new GetReviewsForProductQuery { ProductId = product.Id }, cancellationToken);
 
