@@ -282,7 +282,7 @@ namespace Ecommerce.Persistence.Repositories
 				connection.Close();
 			}
 
-			return cartItem == null;
+			return cartItem != null;
 		}
 	}
 }
