@@ -39,6 +39,12 @@ namespace Ecommerce.UI.Pages
 		protected override async Task OnInitializedAsync()
 		{
 			this.ReviewModel = new ReviewDto { Stars = -1, Comments = string.Empty };
+
+			await RefreshPageInfo();
+		}
+
+		private async Task RefreshPageInfo()
+		{
 			AuthenticationState authState = await this.AuthenticationState;
 			
 			GetProductByIdResponse productResponse = await this.ProductService.GetProductById(Convert.ToInt32(this.ProductId));
@@ -220,6 +226,8 @@ namespace Ecommerce.UI.Pages
 
 			if (response.Success)
 			{
+				await RefreshPageInfo();
+				this.ReviewModel.Comments = string.Empty;
 				this.ToastService.ShowSuccess("Review Submitted Successfully");
 			}
 			else
@@ -252,6 +260,7 @@ namespace Ecommerce.UI.Pages
 				this.Star4Class = _emptyStar;
 				this.Star5Class = _emptyStar;
 				
+				await RefreshPageInfo();
 				return;
 			}
 			
@@ -277,7 +286,8 @@ namespace Ecommerce.UI.Pages
 			{
 				this.ToastService.ShowSuccess("Review successfully updated");
 				this.EditExistingReview = false;
-				//StateHasChanged();
+				
+				await RefreshPageInfo();
 				return;
 			}
 			
