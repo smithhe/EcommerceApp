@@ -11,10 +11,10 @@ namespace Ecommerce.UI.Contracts.Refit
 		Task<ApiResponse<CreateCartItemResponse>> CreateCartItem(CreateCartItemApiRequest createCartItemApiRequest);
 		
 		[Delete("/api/cartitem/delete")]
-		Task<ApiResponse<DeleteCartItemResponse>> DeleteCartItem(DeleteCartItemApiRequest deleteCartItemApiRequest);
+		Task<ApiResponse<DeleteCartItemResponse>> DeleteCartItem([Body] DeleteCartItemApiRequest deleteCartItemApiRequest);
 		
 		[Delete("/api/cartitem/delete")]
-		Task<ApiResponse<DeleteUserCartItemsResponse>> DeleteAllCartItems(DeleteUserCartItemsApiRequest deleteUserCartItemsApiRequest);
+		Task<ApiResponse<DeleteUserCartItemsResponse>> DeleteAllCartItems([Body] DeleteUserCartItemsApiRequest deleteUserCartItemsApiRequest);
 		
 		[Put("/api/cartitem/update")]
 		Task<ApiResponse<UpdateCartItemResponse>> UpdateCartItem(UpdateCartItemApiRequest updateCartItemApiRequest);
