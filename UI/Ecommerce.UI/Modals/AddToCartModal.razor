@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    @if (this.ShowErrorMessage)
+    {
+        <div class="alert alert-danger" role="alert">
+            @this.ErrorMessage
+        </div>
+    }
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">Product Name</h1>
+            <p class="card-text">Description of the product goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <form action="addToCart.php" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-1">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1">
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-success" @onclick="SubmitForm">Add to Cart</button>
+                    <button class="btn btn-danger" @onclick="Cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

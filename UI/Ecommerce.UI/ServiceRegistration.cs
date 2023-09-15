@@ -1,4 +1,5 @@
 using Blazored.LocalStorage;
+using Blazored.Modal;
 using Blazored.Toast;
 using Ecommerce.UI.Contracts;
 using Ecommerce.UI.Contracts.Refit;
@@ -23,8 +24,12 @@ namespace Ecommerce.UI
 			
 			//https://github.com/Blazored/Toast
 			services.AddBlazoredToast();
+			
 			//https://github.com/Blazored/LocalStorage
 			services.AddBlazoredLocalStorage();
+			
+			//https://github.com/Blazored/Modal
+			services.AddBlazoredModal();
 			
 			AddSecurityServices(services);
 			AddRefit(services, configuration);
