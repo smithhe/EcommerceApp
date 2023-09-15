@@ -24,9 +24,6 @@ namespace Ecommerce.Application.Validators.Product
 				.NotEmpty().WithMessage("Name cannot not be empty")
 				.MaximumLength(50).WithMessage("Name cannot exceed 50 characters");
 			
-			RuleFor(c => c)
-				.MustAsync(NameIsUnique).WithMessage("Name must be unique");
-			
 			RuleFor(c => c.ProductToUpdate!.Description)
 				.NotNull().WithMessage("Description cannot not be null")
 				.NotEmpty().WithMessage("Description cannot be empty")
@@ -47,17 +44,12 @@ namespace Ecommerce.Application.Validators.Product
 
 		private async Task<bool> ProductExists(UpdateProductCommand updateProductCommand, CancellationToken cancellationToken)
 		{
-			return (await this._productAsyncRepository.GetByIdAsync(updateProductCommand.ProductToUpdate!.Id)) == null;
-		}
-		
-		private async Task<bool> NameIsUnique(UpdateProductCommand updateProductCommand, CancellationToken cancellationToken)
-		{
-			return await this._productAsyncRepository.IsNameUnique(updateProductCommand.ProductToUpdate!.Name);
+			return (await this._productAsyncRepository.GetByIdAsync(updateProductCommand.ProductToUpdate!.Id)) != null;
 		}
 		
 		private async Task<bool> CategoryExists(UpdateProductCommand updateProductCommand, CancellationToken cancellationToken)
 		{
-			return (await this._categoryAsyncRepository.GetByIdAsync(updateProductCommand.ProductToUpdate!.Category.Id)) == null;
+			return (await this._categoryAsyncRepository.GetByIdAsync(updateProductCommand.ProductToUpdate!.Category.Id)) != null;
 		}
 	}
 }

@@ -90,7 +90,18 @@ namespace Ecommerce.Persistence.Repositories
 				{
 					try
 					{
-						newId = await connection.QuerySingleAsync<int>(sql, entity, transaction: transaction);
+						newId = await connection.QuerySingleAsync<int>(sql, new
+						{
+							Name = entity.Name,
+							Description = entity.Description,
+							Price = entity.Price,
+							AverageRating = entity.AverageRating,
+							QuantityAvailable = entity.QuantityAvailable,
+							ImageUrl = entity.ImageUrl,
+							CategoryId = entity.Category.Id,
+							CreatedBy = entity.CreatedBy,
+							CreatedDate = entity.CreatedDate
+						}, transaction: transaction);
 						transaction.Commit();
 					}
 					catch (Exception e)
@@ -138,7 +149,19 @@ namespace Ecommerce.Persistence.Repositories
 				{
 					try
 					{
-						rowsEffected = await connection.ExecuteAsync(sql, entity, transaction: transaction);
+						rowsEffected = await connection.ExecuteAsync(sql, new
+						{
+							Id = entity.Id,
+							Name = entity.Name,
+							Description = entity.Description,
+							Price = entity.Price,
+							AverageRating = entity.AverageRating,
+							QuantityAvailable = entity.QuantityAvailable,
+							ImageUrl = entity.ImageUrl,
+							CategoryId = entity.Category.Id,
+							LastModifiedBy = entity.LastModifiedBy,
+							LastModifiedDate = entity.LastModifiedDate
+						}, transaction: transaction);
 						transaction.Commit();
 					}
 					catch (Exception e)
