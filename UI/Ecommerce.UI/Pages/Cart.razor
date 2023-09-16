@@ -19,7 +19,7 @@ else
 {
     <div class="container mt-4">
         <h1 class="mt-4">
-            <i class="bi bi-cart"></i> Cart
+            <i class="bi bi-cart4"></i> Cart
         </h1>
         <table class="table table-striped">
             <thead>
@@ -48,24 +48,40 @@ else
             </tbody>
         </table>
 
-        <div class="row w-100 mt-2">
-            <div class="col-md-3"></div>
+        @if (this.CartItems.Any())
+        {
+            <div class="row w-100 mt-2">
+                <div class="col-md-3"></div>
 
-            <div class="col-md-6">
-                <button class="btn btn-success form-control" @onclick="PayPalCheckoutClick">
-                    <i class="bi bi-paypal"></i> Checkout with PayPal
-                </button>
+                <div class="col-md-6">
+                    <button class="btn btn-success form-control" @onclick="PayPalCheckoutClick">
+                        <i class="bi bi-paypal"></i> Checkout with PayPal
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <div class="row w-100 mt-2">
-            <div class="col-md-3"></div>
+            <div class="row w-100 mt-2">
+                <div class="col-md-3"></div>
 
-            <div class="col-md-6">
-                <button class="btn btn-primary form-control" @onclick="StripeCheckoutClick">
-                    <i class="bi bi-credit-card"></i> Checkout with Stripe
-                </button>
+                <div class="col-md-6">
+                    <button class="btn btn-primary form-control" @onclick="StripeCheckoutClick">
+                        <i class="bi bi-credit-card"></i> Checkout with Stripe
+                    </button>
+                </div>
             </div>
-        </div>
+        }
+        else
+        {
+            <div class="row w-100 mt-2">
+                <div class="col-md-3"></div>
+
+                <div class="col-md-6">
+                    <button class="btn btn-primary form-control" @onclick="StartShoppingClick">
+                        Nothing Here Yet, Start Shopping Now!
+                    </button>
+                </div>
+            </div>
+        }
+        
     </div>
 }
