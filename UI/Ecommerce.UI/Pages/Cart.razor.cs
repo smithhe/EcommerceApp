@@ -21,7 +21,7 @@ namespace Ecommerce.UI.Pages
 		[Inject] public ICartService CartService { get; set; } = null!;
 		[Inject] public IProductService ProductService { get; set; } = null!;
 		
-		private IEnumerable<CartItemDto>? CartItems { get; set; }
+		private List<CartItemDto>? CartItems { get; set; }
 		private List<ProductDto> Products { get; set; } = new List<ProductDto>();
 		
 		protected override async Task OnInitializedAsync()
@@ -41,14 +41,9 @@ namespace Ecommerce.UI.Pages
 			GetUserCartItemsResponse getUserCartItemsResponse = await this.CartService.GetItemsInCart(new Guid(userId));
 
 			//Check for success in fetching cart items
-			if (getUserCartItemsResponse.Success == false)
-			{
-				this.CartItems = Array.Empty<CartItemDto>();
-			}
-			else
-			{
-				this.CartItems = getUserCartItemsResponse.CartItems;
-			}
+			this.CartItems = getUserCartItemsResponse.Success
+				? getUserCartItemsResponse.CartItems.ToList()
+				: new List<CartItemDto>();
 
 			//Check if any items are in the cart
 			IEnumerable<CartItemDto> cartItemDtos = this.CartItems.ToArray();
@@ -71,14 +66,27 @@ namespace Ecommerce.UI.Pages
 			}
 		}
 
+		private void StartShoppingClick()
+		{
+			this.NavigationManager.NavigateTo("/Categories");
+		}
+
 		private void EditCartItem(CartItemDto cartItem)
 		{
 			
 		}
 
-		private void RemoveCartItem(CartItemDto cartItem)
+		private async Task RemoveCartItem(CartItemDto cartItem)
 		{
+			DeleteCartItemResponse response = await this.CartService.RemoveItemFromCart(cartItem);
+
+			if (response.Success)
+			{
+				this.CartItems!.Remove(cartItem);
+				return;
+			}
 			
+			this.ToastService.ShowError(response.Message!);
 		}
 
 		private void PayPalCheckoutClick()
