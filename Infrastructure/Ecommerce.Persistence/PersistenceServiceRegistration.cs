@@ -1,6 +1,9 @@
+using Dapper;
 using Ecommerce.Persistence.Contracts;
+using Ecommerce.Persistence.Helpers;
 using Ecommerce.Persistence.Repositories;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Ecommerce.Persistence
 {
@@ -20,6 +23,11 @@ namespace Ecommerce.Persistence
 			services.AddScoped<IProductAsyncRepository, ProductAsyncRepository>();
 			services.AddScoped<IReviewAsyncRepository, ReviewAsyncRepository>();
 			services.AddScoped<ICartItemRepository, CartItemRepository>();
+			
+			//Add handler for Guid
+			SqlMapper.AddTypeHandler(new MySqlGuidTypeHandler());
+			SqlMapper.RemoveTypeMap(typeof(Guid));
+			SqlMapper.RemoveTypeMap(typeof(Guid?));
 		}
 	}
 }

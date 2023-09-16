@@ -18,5 +18,4 @@
       <ProjectReference Include="..\..\Core\Ecommerce.Domain\Ecommerce.Domain.csproj" />
     </ItemGroup>
 
-
 </Project>
