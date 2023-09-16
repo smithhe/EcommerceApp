@@ -13,7 +13,7 @@ namespace Ecommerce.UI.Contracts.Refit
 		[Delete("/api/cartitem/delete")]
 		Task<ApiResponse<DeleteCartItemResponse>> DeleteCartItem([Body] DeleteCartItemApiRequest deleteCartItemApiRequest);
 		
-		[Delete("/api/cartitem/delete")]
+		[Delete("/api/cartitem/user/delete")]
 		Task<ApiResponse<DeleteUserCartItemsResponse>> DeleteAllCartItems([Body] DeleteUserCartItemsApiRequest deleteUserCartItemsApiRequest);
 		
 		[Put("/api/cartitem/update")]

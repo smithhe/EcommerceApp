@@ -155,6 +155,24 @@ namespace Ecommerce.UI.Pages
 			this.ToastService.ShowError(response.Message!);
 		}
 
+		private async Task ClearCart()
+		{
+			AuthenticationState authState = await this.AuthenticationStateProvider.GetAuthenticationStateAsync();
+
+			Claim idClaim = authState.User.Claims.First(c => string.Equals(c.Type, ClaimTypes.NameIdentifier));
+
+			DeleteUserCartItemsResponse response = await this.CartService.ClearCart(new Guid(idClaim.Value));
+
+			if (response.Success)
+			{
+				this.CartItems!.Clear();
+			}
+			else
+			{
+				this.ToastService.ShowError(response.Message!);
+			}
+		}
+		
 		private void PayPalCheckoutClick()
 		{
 		}
