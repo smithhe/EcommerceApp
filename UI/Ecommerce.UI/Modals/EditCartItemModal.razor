@@ -1,0 +1,32 @@
+<div class="simple-form mx-4 ">
+    <div class="row text-center">
+        <h1 class="card-title">@this.SelectedProduct.Name</h1>
+        @if (this.ShowErrorMessage)
+        {
+            <div class="alert alert-danger" role="alert">
+                @this.ErrorMessage
+            </div>
+        }
+    </div>
+    <div class="row mt-3">
+        <div class="form-group text-center">
+            <label for="quantity" class="h5">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" min="1" @bind="@this.Quantity">
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <button type="submit" class="btn btn-primary form-control" @onclick="SubmitForm">Save Changes</button>
+        <button class="btn btn-secondary form-control mt-2" @onclick="Cancel">Cancel</button>
+    </div>
+</div>
+
+
+<form action="addToCart.php" method="post">
+    <div class="form-row">
+
+    </div>
+    <div class="btn-group">
+
+    </div>
+</form>
