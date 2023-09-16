@@ -1,8 +1,12 @@
+using Blazored.Modal;
+using Blazored.Modal.Services;
 using Blazored.Toast.Services;
 using Ecommerce.Shared.Dtos;
+using Ecommerce.Shared.Responses.CartItem;
 using Ecommerce.Shared.Responses.Product;
 using Ecommerce.Shared.Responses.Review;
 using Ecommerce.UI.Contracts;
+using Ecommerce.UI.Modals;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using System;
@@ -15,10 +19,13 @@ namespace Ecommerce.UI.Pages
 	{
 		[Parameter] public string ProductId { get; set; } = null!;
 		[CascadingParameter] private Task<AuthenticationState> AuthenticationState { get; set; } = null!;
+		[CascadingParameter] public IModalService Modal { get; set; } = null!;
 		
+		[Inject] public NavigationManager NavigationManager { get; set; } = null!;
 		[Inject] public IProductService ProductService { get; set; } = null!;
 		[Inject] public IReviewService ReviewService { get; set; } = null!;
 		[Inject] public IToastService ToastService { get; set; } = null!;
+		[Inject] public ICartService CartService { get; set; } = null!;
 
 		private ProductDto? Product { get; set; }
 
@@ -41,6 +48,49 @@ namespace Ecommerce.UI.Pages
 			this.ReviewModel = new ReviewDto { Stars = -1, Comments = string.Empty };
 
 			await RefreshPageInfo();
+		}
+
+		private async void AddToCartClick()
+		{
+			AuthenticationState authState = await this.AuthenticationState;
+
+			if (authState.User.Identity?.IsAuthenticated == false)
+			{
+				this.NavigationManager.NavigateTo("/Login");
+				return;
+			}
+			
+			ModalParameters parameters = new ModalParameters { { nameof(AddToCartModal.SelectedProduct), this.Product! } };
+			
+			IModalReference formModal = this.Modal.Show<AddToCartModal>("Add Item To Cart", parameters);
+			ModalResult result = await formModal.Result;
+
+			if (result.Cancelled)
+			{
+				return;
+			}
+
+			CartItemDto newCartItem = (CartItemDto)result.Data!;
+
+			CreateCartItemResponse response = await this.CartService.AddItemToCart(newCartItem);
+
+			if (response.Success)
+			{
+				this.ToastService.ShowSuccess("Added to cart");
+				return;
+			}
+			
+			if (response.ValidationErrors.Any())
+			{
+				foreach (string validationError in response.ValidationErrors)
+				{
+					this.ToastService.ShowError(validationError);
+				}
+			}
+			else
+			{
+				this.ToastService.ShowError(response.Message!);
+			}
 		}
 
 		private async Task RefreshPageInfo()
