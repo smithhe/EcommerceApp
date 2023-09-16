@@ -18,15 +18,24 @@
 else
 {
     <div class="container mt-4">
-        <h1 class="mt-4">
-            <i class="bi bi-cart4"></i> Cart
-        </h1>
+        <div class="row w-100 mt-4">
+            <div class="col-md-6">
+                <h1>
+                    <i class="bi bi-cart4"></i> Cart
+                </h1>
+            </div>
+            <div class="col-md-6 text-end">
+                <button class="btn btn-danger">Clear Cart</button>
+            </div>
+        </div>
+        
         <table class="table table-striped">
             <thead>
             <tr>
                 <th>Product Name</th>
                 <th>Quantity</th>
                 <th>Price</th>
+                <th>Item Total</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -38,6 +47,7 @@ else
                 <tr>
                     <td>@(product?.Name)</td>
                     <td>@cartItem.Quantity</td>
+                    <td>@product?.Price</td>
                     <td>@string.Concat("$", price.ToString("0.00"))</td>
                     <td>
                         <button class="btn btn-primary" @onclick="() => EditCartItem(cartItem)">Edit</button>
@@ -50,6 +60,11 @@ else
 
         @if (this.CartItems.Any())
         {
+            <div class="row w-100 text-center">
+                <h2>
+                    Total:$@this.CartTotal
+                </h2>
+            </div>
             <div class="row w-100 mt-2">
                 <div class="col-md-3"></div>
 
@@ -82,6 +97,6 @@ else
                 </div>
             </div>
         }
-        
+
     </div>
 }

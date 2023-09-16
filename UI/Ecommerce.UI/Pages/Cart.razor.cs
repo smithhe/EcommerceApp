@@ -1,8 +1,11 @@
+using Blazored.Modal;
+using Blazored.Modal.Services;
 using Blazored.Toast.Services;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.CartItem;
 using Ecommerce.Shared.Responses.Product;
 using Ecommerce.UI.Contracts;
+using Ecommerce.UI.Modals;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using System;
@@ -15,20 +18,23 @@ namespace Ecommerce.UI.Pages
 {
 	public partial class Cart
 	{
+		[CascadingParameter] public IModalService Modal { get; set; } = null!;
 		[Inject] public AuthenticationStateProvider AuthenticationStateProvider { get; set; } = null!;
 		[Inject] public NavigationManager NavigationManager { get; set; } = null!;
 		[Inject] public IToastService ToastService { get; set; } = null!;
 		[Inject] public ICartService CartService { get; set; } = null!;
 		[Inject] public IProductService ProductService { get; set; } = null!;
-		
+
 		private List<CartItemDto>? CartItems { get; set; }
 		private List<ProductDto> Products { get; set; } = new List<ProductDto>();
-		
+		private double CartTotal { get; set; }
+
 		protected override async Task OnInitializedAsync()
 		{
 			//Pull UserId from the claims of the authenticated user if the user is logged in
 			AuthenticationState authState = await this.AuthenticationStateProvider.GetAuthenticationStateAsync();
-			string? userId = authState.User.Claims.FirstOrDefault(claim => string.Equals(claim.Type, ClaimTypes.NameIdentifier))?.Value;
+			string? userId = authState.User.Claims
+				.FirstOrDefault(claim => string.Equals(claim.Type, ClaimTypes.NameIdentifier))?.Value;
 
 			//Check for a value to verify user is logged in
 			if (string.IsNullOrEmpty(userId))
@@ -51,7 +57,11 @@ namespace Ecommerce.UI.Pages
 			{
 				return;
 			}
-			
+			else
+			{
+				this.CartItems = this.CartItems.OrderBy(c => c.ProductId).ToList();
+			}
+
 			//Get the unique product ids out of the cart
 			IEnumerable<int> productIds = cartItemDtos.Select(cartItem => cartItem.ProductId).Distinct();
 
@@ -64,6 +74,18 @@ namespace Ecommerce.UI.Pages
 					this.Products.Add(getProductResponse.Product!);
 				}
 			}
+			
+			this.CalculateCartTotal();
+		}
+
+		private void CalculateCartTotal()
+		{
+			this.CartTotal = 0;
+			foreach (CartItemDto cartItem in this.CartItems!)
+			{
+				ProductDto? product = this.Products.FirstOrDefault(p => p.Id == cartItem.ProductId);
+				this.CartTotal += cartItem.Quantity * product?.Price ?? 0;
+			}
 		}
 
 		private void StartShoppingClick()
@@ -71,9 +93,52 @@ namespace Ecommerce.UI.Pages
 			this.NavigationManager.NavigateTo("/Categories");
 		}
 
-		private void EditCartItem(CartItemDto cartItem)
+		private async Task EditCartItem(CartItemDto cartItem)
 		{
-			
+			ProductDto product = this.Products!.First(p => p.Id == cartItem.ProductId);
+
+			ModalParameters parameters = new ModalParameters
+			{
+				{ nameof(EditCartItemModal.SelectedProduct), product }, 
+				{ nameof(EditCartItemModal.CurrentQuantity), cartItem.Quantity}
+			};
+
+			IModalReference formModal = this.Modal.Show<EditCartItemModal>("Update Quantity", parameters);
+			ModalResult result = await formModal.Result;
+
+			if (result.Cancelled)
+			{
+				return;
+			}
+
+			CartItemDto updatedCartItem = new CartItemDto
+			{
+				Id = cartItem.Id,
+				ProductId = cartItem.ProductId,
+				Quantity = (int)result.Data!,
+				UserId = cartItem.UserId
+			};
+
+			UpdateCartItemResponse updateCartItemResponse = await this.CartService.UpdateItemInCart(updatedCartItem);
+
+			if (updateCartItemResponse.Success)
+			{
+				this.CartItems!.Remove(cartItem);
+				this.CartItems.Add(updatedCartItem);
+				this.CartItems = this.CartItems.OrderBy(c => c.ProductId).ToList();
+				this.CalculateCartTotal();
+			}
+			else if (updateCartItemResponse.ValidationErrors.Any())
+			{
+				foreach (string validationError in updateCartItemResponse.ValidationErrors)
+				{
+					this.ToastService.ShowError(validationError);
+				}
+			}
+			else
+			{
+				this.ToastService.ShowError(updateCartItemResponse.Message!);
+			}
 		}
 
 		private async Task RemoveCartItem(CartItemDto cartItem)
@@ -83,20 +148,19 @@ namespace Ecommerce.UI.Pages
 			if (response.Success)
 			{
 				this.CartItems!.Remove(cartItem);
+				this.CalculateCartTotal();
 				return;
 			}
-			
+
 			this.ToastService.ShowError(response.Message!);
 		}
 
 		private void PayPalCheckoutClick()
 		{
-			
 		}
 
 		private void StripeCheckoutClick()
 		{
-			
 		}
 	}
 }
