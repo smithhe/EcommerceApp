@@ -2,6 +2,7 @@ using Ecommerce.Domain.Entities;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Identity.Models;
 using Ecommerce.Shared.Extensions;
+using Ecommerce.Shared.Responses.EcommerceUser;
 using Ecommerce.Shared.Security;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
@@ -282,5 +283,64 @@ namespace Ecommerce.Identity.Services
 			//Return the model
 			return output;
 		}
+
+		/// <summary>
+		/// Updates the information for an existing <see cref="EcommerceUser"/>
+		/// </summary>
+		/// <param name="user">The <see cref="EcommerceUser"/> to update with</param>
+		/// <returns>
+		/// A <see cref="UpdateEcommerceUserResponse"/> with success <c>true</c> if the user was updated;
+		/// false if the user failed to update with ValidationErrors populated with the errors that caused failure
+		/// </returns>
+		public async Task<UpdateEcommerceUserResponse> UpdateUser(EcommerceUser? user)
+		{
+			UpdateEcommerceUserResponse response = new UpdateEcommerceUserResponse();
+			
+			//Verify a user was sent
+			if (user == null)
+			{
+				response.Success = false;
+				response.Message = "Must Give a User to Update With";
+				return response;
+			}
+			
+			//Check for the existing user
+			EcommerceUser? existingUser = await this._userManager.FindByNameAsync(user.UserName ?? string.Empty);
+			if (existingUser == null)
+			{
+				response.Success = false;
+				response.Message = "User Must Exist To Update";
+				return response;
+			}
+
+			//Update the user
+			IdentityResult result = await this._userManager.UpdateAsync(user);
+			
+			//Check for errors
+			if (result.Succeeded)
+			{
+				response.Success = true;
+				return response;
+			}
+			
+			//Add errors into the list then return the response
+			response.Success = false;
+			response.ValidationErrors = result.Errors.Select(error => error.Description).ToList();
+			return response;
+		}
+
+		/// <summary>
+		/// Retrieves a <see cref="EcommerceUser"/> if any exist
+		/// </summary>
+		/// <param name="id">The unique identifier of the User to find</param>
+		/// <returns>
+		/// A <see cref="EcommerceUser"/>;
+		/// <c>null</c> if no User is found
+		/// </returns>
+		public async Task<EcommerceUser?> GetUserById(Guid id)
+		{
+			return await this._userManager.FindByIdAsync(id.ToString());
+		}
+		
 	}
 }

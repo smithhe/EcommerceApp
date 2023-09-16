@@ -1,4 +1,7 @@
+using Ecommerce.Domain.Entities;
+using Ecommerce.Shared.Responses.EcommerceUser;
 using Ecommerce.Shared.Security;
+using System;
 using System.Threading.Tasks;
 
 namespace Ecommerce.Identity.Contracts
@@ -43,5 +46,25 @@ namespace Ecommerce.Identity.Contracts
 		/// <c>False</c> if the token is no longer valid
 		/// </returns>
 		Task<bool> IsValidToken(string token);
+
+		/// <summary>
+		/// Updates the information for an existing <see cref="EcommerceUser"/>
+		/// </summary>
+		/// <param name="user">The <see cref="EcommerceUser"/> to update with</param>
+		/// <returns>
+		/// A <see cref="UpdateEcommerceUserResponse"/> with success <c>true</c> if the user was updated;
+		/// false if the user failed to update with ValidationErrors populated with the errors that caused failure
+		/// </returns>
+		Task<UpdateEcommerceUserResponse> UpdateUser(EcommerceUser? user);
+
+		/// <summary>
+		/// Retrieves a <see cref="EcommerceUser"/> if any exist
+		/// </summary>
+		/// <param name="id">The unique identifier of the User to find</param>
+		/// <returns>
+		/// A <see cref="EcommerceUser"/>;
+		/// <c>null</c> if no User is found
+		/// </returns>
+		Task<EcommerceUser?> GetUserById(Guid id);
 	}
 }
