@@ -22,9 +22,5 @@ namespace Ecommerce.Shared.Requests.EcommerceUser
 		/// </summary>
 		public string? LastName { get; set; }
 		
-		/// <summary>
-		/// The Email Address of the User to update
-		/// </summary>
-		public string? EmailAddress { get; set; }
 	}
 }

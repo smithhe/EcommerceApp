@@ -66,5 +66,15 @@ namespace Ecommerce.Identity.Contracts
 		/// <c>null</c> if no User is found
 		/// </returns>
 		Task<EcommerceUser?> GetUserById(Guid id);
+
+		/// <summary>
+		/// Retrieves the unique identifier of the <see cref="EcommerceUser"/> if it exists
+		/// </summary>
+		/// <param name="userName">The username of the User</param>
+		/// <returns>
+		/// The unique identifier of the <see cref="EcommerceUser"/>;
+		/// null if no User exists with the provided username
+		/// </returns>
+		Task<Guid?> GetUserIdByName(string userName);
 	}
 }

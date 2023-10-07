@@ -341,6 +341,21 @@ namespace Ecommerce.Identity.Services
 		{
 			return await this._userManager.FindByIdAsync(id.ToString());
 		}
+
+		/// <summary>
+		/// Retrieves the unique identifier of the <see cref="EcommerceUser"/> if it exists
+		/// </summary>
+		/// <param name="userName">The username of the User</param>
+		/// <returns>
+		/// The unique identifier of the <see cref="EcommerceUser"/>;
+		/// null if no User exists with the provided username
+		/// </returns>
+		public async Task<Guid?> GetUserIdByName(string userName)
+		{
+			EcommerceUser? user = await this._userManager.FindByNameAsync(userName);
+
+			return user == null ? null : new Guid(user.Id);
+		}
 		
 	}
 }
