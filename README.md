@@ -1,7 +1,7 @@
 # Ecommerce App
 A basic .Net project meant to demonstrate coding practices and knowledge of .Net technologies such as Blazor, .Net API and more
 
-## ***Dislaimer***
+## ***Disclaimer***
 This is app is not finished and is still being updated but following the instructions below will help you run locally
 
 # Local Setup
