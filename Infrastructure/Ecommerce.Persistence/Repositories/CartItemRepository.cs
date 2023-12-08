@@ -52,6 +52,7 @@ namespace Ecommerce.Persistence.Repositories
 				try
 				{
 					cartItem = await connection.QueryFirstOrDefaultAsync<CartItem>(sql, new { Id = id });
+					
 				}
 				catch (Exception e)
 				{

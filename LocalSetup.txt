@@ -8,3 +8,6 @@ For new migrations change directory to the Identity Project's directory and run
 
 For database updates change directory to the Identity Project's directory and run
     dotnet ef --startup-project ../../Api/Ecommerce.Api/ database update
+
+
+
