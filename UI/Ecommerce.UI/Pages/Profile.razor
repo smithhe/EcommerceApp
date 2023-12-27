@@ -1,0 +1,59 @@
+@page "/Profile"
+@using System.Runtime.CompilerServices
+<h3>Profile</h3>
+
+<div class="container py-5">
+    <!-- User Information Form -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4">User Profile</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your username" @bind="this.Username">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" @bind="this.Email">
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" @bind="this.FirstName">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" @bind="this.LastName">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" @onclick="UpdateProfileClick">Update Profile</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Password Update Form -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4">Change Password</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="currentPassword" class="form-label">Current Password</label>
+                    <input type="password" class="form-control" id="currentPassword" placeholder="Enter current password">
+                </div>
+                <div class="mb-3">
+                    <label for="newPassword" class="form-label">New Password</label>
+                    <input type="password" class="form-control" id="newPassword" placeholder="Enter new password">
+                </div>
+                <div class="mb-3">
+                    <label for="confirmNewPassword" class="form-label">Confirm New Password</label>
+                    <input type="password" class="form-control" id="confirmNewPassword" placeholder="Confirm new password">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" @onclick="UpdatePasswordClick">Update Password</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
