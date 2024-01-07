@@ -43,9 +43,9 @@ namespace Ecommerce.FastEndpoints.Security
 		}
 
 		/// <summary>
-		/// Handles the <see cref="UpdateEcommerceUserApiRequest"/> and generates a <see cref="UpdateEcommerceUserResponse"/> 
+		/// Handles the <see cref="UpdateEcommerceUserRequest"/> and generates a <see cref="UpdateEcommerceUserResponse"/> 
 		/// </summary>
-		/// <param name="req">The <see cref="UpdateEcommerceUserApiRequest"/> object sent in the HTTP request</param>
+		/// <param name="req">The <see cref="UpdateEcommerceUserRequest"/> object sent in the HTTP request</param>
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		public override async Task HandleAsync(UpdateEcommerceUserRequest req, CancellationToken ct)
 		{
