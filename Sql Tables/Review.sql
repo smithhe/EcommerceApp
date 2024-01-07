@@ -1,3 +1,5 @@
+CREATE UNIQUE INDEX IX_UniqueUserName ON AspNetUsers(UserName);
+
 CREATE TABLE Review (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     ProductId INT NOT NULL,
