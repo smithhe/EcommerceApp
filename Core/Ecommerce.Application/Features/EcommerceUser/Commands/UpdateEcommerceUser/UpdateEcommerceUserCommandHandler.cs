@@ -1,17 +1,16 @@
 using Ecommerce.Identity.Contracts;
-using Ecommerce.Shared.Responses.EcommerceUser;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Security;
 
 namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
 {
 	/// <summary>
 	/// A <see cref="Mediator"/> request handler for <see cref="UpdateEcommerceUserCommand"/>
 	/// </summary>
-	public class
-		UpdateEcommerceUserCommandHandler : IRequestHandler<UpdateEcommerceUserCommand, UpdateEcommerceUserResponse>
+	public class UpdateEcommerceUserCommandHandler : IRequestHandler<UpdateEcommerceUserCommand, UpdateEcommerceUserResponse>
 	{
 		private readonly ILogger<UpdateEcommerceUserCommandHandler> _logger;
 		private readonly IAuthenticationService _authenticationService;
@@ -43,7 +42,7 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceU
 			UpdateEcommerceUserResponse response = new UpdateEcommerceUserResponse();
 
 			//Check for null or empty properties in the command
-			if (string.IsNullOrEmpty(command.UserName) ||
+			if (string.IsNullOrEmpty(command.UserName) || string.IsNullOrEmpty(command.Email) ||
 			    string.IsNullOrEmpty(command.FirstName) || string.IsNullOrEmpty(command.LastName))
 			{
 				response.Success = false;
@@ -61,12 +60,12 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceU
 			}
 
 			//Update the user from the information in the command
-			existingUser.UserName = command.UserName;
 			existingUser.FirstName = command.FirstName;
 			existingUser.LastName = command.LastName;
+			existingUser.Email = command.Email;
 
 			//Return the response from the update attempt
-			return await this._authenticationService.UpdateUser(existingUser);
+			return await this._authenticationService.UpdateUser(existingUser, command.UserName);
 		}
 	}
 }

@@ -14,5 +14,8 @@ namespace Ecommerce.UI.Contracts.Refit
 		
 		[Post("/api/logout")]
 		Task<IApiResponse> Logout(LogoutUserRequest logoutRequest);
+		
+		[Put("/api/user/update")]
+		Task<ApiResponse<UpdateEcommerceUserResponse>> UpdateUser(UpdateEcommerceUserRequest updateUserRequest);
 	}
 }

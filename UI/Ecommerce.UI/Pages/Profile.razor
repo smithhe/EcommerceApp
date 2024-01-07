@@ -1,6 +1,13 @@
 @page "/Profile"
-@using System.Runtime.CompilerServices
+@using Blazored.Toast.Configuration
 <h3>Profile</h3>
+
+<BlazoredToasts Position="ToastPosition.TopRight"
+                Timeout="10"
+                IconType="IconType.FontAwesome"
+                SuccessClass="success-toast-override"
+                SuccessIcon="done_outline"
+                ErrorIcon="fa fa-bug"/>
 
 <div class="container py-5">
     <!-- User Information Form -->
@@ -10,7 +17,7 @@
             <form>
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Enter your username" @bind="this.Username">
+                    <input type="text" class="form-control" id="username" placeholder="Enter your username" @bind="this.UpdateUsername">
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
@@ -27,7 +34,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary" @onclick="UpdateProfileClick">Update Profile</button>
+                    <button type="button" class="btn btn-primary" @onclick="UpdateProfileClick">Update Profile</button>
                 </div>
             </form>
         </div>
@@ -51,7 +58,7 @@
                     <input type="password" class="form-control" id="confirmNewPassword" placeholder="Confirm new password">
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary" @onclick="UpdatePasswordClick">Update Password</button>
+                    <button type="button" class="btn btn-primary" @onclick="UpdatePasswordClick">Update Password</button>
                 </div>
             </form>
         </div>

@@ -25,7 +25,7 @@
                                     string? lastName = context.User.Claims.Where(claim => string.Equals(claim.Type, CustomClaims._lastName)).Select(c => c.Value).FirstOrDefault();
                                     string displayName = string.IsNullOrEmpty(firstName) ? @context.User.Identity!.Name! : string.IsNullOrEmpty(lastName) ? firstName : $"{firstName} {lastName}";
                                     
-                                    <a class="nav-link" href="#">Welcome, @displayName</a>
+                                    <a class="nav-link" href="/Profile">Welcome, @displayName</a>
                                 }
                                 
                             </li>

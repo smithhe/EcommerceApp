@@ -1,7 +1,5 @@
 using Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser;
 using Ecommerce.Identity.Contracts;
-using Ecommerce.Shared.Requests.EcommerceUser;
-using Ecommerce.Shared.Responses.EcommerceUser;
 using FastEndpoints;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -9,13 +7,14 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Security;
 
 namespace Ecommerce.FastEndpoints.Security
 {
 	/// <summary>
 	/// A Fast Endpoint implementation that handles updating an existing EcommerceUser
 	/// </summary>
-	public class UpdateEcommerceUserEndpoint : Endpoint<UpdateEcommerceUserApiRequest, UpdateEcommerceUserResponse>
+	public class UpdateEcommerceUserEndpoint : Endpoint<UpdateEcommerceUserRequest, UpdateEcommerceUserResponse>
 	{
 		private readonly ILogger<UpdateEcommerceUserEndpoint> _logger;
 		private readonly IMediator _mediator;
@@ -48,7 +47,7 @@ namespace Ecommerce.FastEndpoints.Security
 		/// </summary>
 		/// <param name="req">The <see cref="UpdateEcommerceUserApiRequest"/> object sent in the HTTP request</param>
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
-		public override async Task HandleAsync(UpdateEcommerceUserApiRequest req, CancellationToken ct)
+		public override async Task HandleAsync(UpdateEcommerceUserRequest req, CancellationToken ct)
 		{
 			this._logger.LogInformation("Handling Update User Request");
 			
@@ -80,9 +79,10 @@ namespace Ecommerce.FastEndpoints.Security
 				response = await this._mediator.Send(new UpdateEcommerceUserCommand
 				{
 					UserId = (Guid)userId,
-					UserName = req.UserName,
+					UserName = req.UpdateUserName,
 					FirstName = req.FirstName,
-					LastName = req.LastName
+					LastName = req.LastName,
+					Email = req.Email
 				}, ct);
 			}
 			catch (Exception e)

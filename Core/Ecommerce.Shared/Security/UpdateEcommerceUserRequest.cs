@@ -1,16 +1,19 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace Ecommerce.Shared.Requests.EcommerceUser
+namespace Ecommerce.Shared.Security
 {
 	/// <summary>
 	/// A Api request to update a User
 	/// </summary>
-	public class UpdateEcommerceUserApiRequest
+	public class UpdateEcommerceUserRequest
 	{
 		/// <summary>
 		/// The UserName of the User to update
 		/// </summary>
 		public string? UserName { get; set; }
+		
+		/// <summary>
+		/// The Updated Username to use
+		/// </summary>
+		public string? UpdateUserName { get; set; }
 		
 		/// <summary>
 		/// The First Name of the User to update
@@ -21,6 +24,11 @@ namespace Ecommerce.Shared.Requests.EcommerceUser
 		/// The Last Name of the User to update
 		/// </summary>
 		public string? LastName { get; set; }
+		
+		/// <summary>
+		/// The Email of the User to update
+		/// </summary>
+		public string? Email { get; set; }
 		
 	}
 }

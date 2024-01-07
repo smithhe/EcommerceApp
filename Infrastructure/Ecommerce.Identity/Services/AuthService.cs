@@ -2,7 +2,6 @@ using Ecommerce.Domain.Entities;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Identity.Models;
 using Ecommerce.Shared.Extensions;
-using Ecommerce.Shared.Responses.EcommerceUser;
 using Ecommerce.Shared.Security;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
@@ -246,6 +245,7 @@ namespace Ecommerce.Identity.Services
 			{
 				new Claim(ClaimTypes.Name, username),
 				new Claim(ClaimTypes.NameIdentifier, user!.Id),
+				new Claim(ClaimTypes.Email, user.Email!),
 				new Claim(CustomClaims._firstName, user.FirstName),
 				new Claim(CustomClaims._lastName, user.LastName)
 			};
@@ -288,11 +288,12 @@ namespace Ecommerce.Identity.Services
 		/// Updates the information for an existing <see cref="EcommerceUser"/>
 		/// </summary>
 		/// <param name="user">The <see cref="EcommerceUser"/> to update with</param>
+		/// <param name="username">The username to update the <see cref="EcommerceUser"/> with</param>
 		/// <returns>
-		/// A <see cref="UpdateEcommerceUserResponse"/> with success <c>true</c> if the user was updated;
+		/// A <see cref="UpdateEcommerceUserResponse"/> with success <c>true</c> if the user was updated and has a new access token;
 		/// false if the user failed to update with ValidationErrors populated with the errors that caused failure
 		/// </returns>
-		public async Task<UpdateEcommerceUserResponse> UpdateUser(EcommerceUser? user)
+		public async Task<UpdateEcommerceUserResponse> UpdateUser(EcommerceUser? user, string username)
 		{
 			UpdateEcommerceUserResponse response = new UpdateEcommerceUserResponse();
 			
@@ -305,27 +306,50 @@ namespace Ecommerce.Identity.Services
 			}
 			
 			//Check for the existing user
-			EcommerceUser? existingUser = await this._userManager.FindByNameAsync(user.UserName ?? string.Empty);
+			EcommerceUser? existingUser = await this._userManager.FindByIdAsync(user.Id);
 			if (existingUser == null)
 			{
 				response.Success = false;
 				response.Message = "User Must Exist To Update";
 				return response;
 			}
-
-			//Update the user
-			IdentityResult result = await this._userManager.UpdateAsync(user);
 			
-			//Check for errors
-			if (result.Succeeded)
+			//Update the username for the user
+			IdentityResult userNameUpdate = await this._userManager.SetUserNameAsync(user, username);
+			if (userNameUpdate.Succeeded == false)
 			{
-				response.Success = true;
+				response.Success = false;
+				response.Message = "Username Update Failed";
 				return response;
 			}
 			
-			//Add errors into the list then return the response
-			response.Success = false;
-			response.ValidationErrors = result.Errors.Select(error => error.Description).ToList();
+			//Update the user
+			user.UserName = username;
+			IdentityResult result = await this._userManager.UpdateAsync(user);
+			
+			//Check for errors
+			if (result.Succeeded == false)
+			{
+				//Add errors into the list then return the response
+				response.Success = false;
+				response.ValidationErrors = result.Errors.Select(error => error.Description).ToList();
+				return response;
+			}
+
+			//Generate a new token for the user
+			AuthenticatedUserModel userModel = await this.GenerateToken(user.UserName!);
+
+			//Check if the token was generated
+			if (string.IsNullOrEmpty(userModel.AccessToken))
+			{
+				response.Success = false;
+				response.Message = "Token Update Failed";
+				return response;
+			}
+			
+			//Return success with the new token
+			response.UpdatedAccessToken = userModel.AccessToken;
+			response.Success = true;
 			return response;
 		}
 

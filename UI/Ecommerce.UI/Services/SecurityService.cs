@@ -73,5 +73,34 @@ namespace Ecommerce.UI.Services
 
 			return true;
 		}
+		
+		public async Task<UpdateEcommerceUserResponse> UpdateUser(UpdateEcommerceUserRequest updateUserRequest)
+		{
+			ApiResponse<UpdateEcommerceUserResponse> response = await this._securityApiService.UpdateUser(updateUserRequest);
+
+			if (response.IsSuccessStatusCode == false)
+			{
+				if (string.IsNullOrEmpty(response.Error.Content))
+				{
+					return new UpdateEcommerceUserResponse { Success = false, Message = "Unexpected Error Occurred" };
+				}
+			
+				UpdateEcommerceUserResponse? error = JsonConvert.DeserializeObject<UpdateEcommerceUserResponse>(response.Error.Content);
+				return error!;
+			}
+			
+			UpdateEcommerceUserResponse content = response.Content;
+			
+			if (string.IsNullOrEmpty(content.UpdatedAccessToken))
+			{
+				return content;
+			}
+
+			//Store the access token on browser storage
+			await this._localStorageService.SetItemAsync(this._authTokenStorageKey, content.UpdatedAccessToken);
+			((AuthStateProvider)this._authenticationStateProvider).NotifyUserAuthentication(content.UpdatedAccessToken);
+			
+			return content;
+		}
 	}
 }

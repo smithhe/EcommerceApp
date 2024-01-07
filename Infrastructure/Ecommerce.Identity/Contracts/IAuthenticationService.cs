@@ -1,5 +1,4 @@
 using Ecommerce.Domain.Entities;
-using Ecommerce.Shared.Responses.EcommerceUser;
 using Ecommerce.Shared.Security;
 using System;
 using System.Threading.Tasks;
@@ -51,11 +50,12 @@ namespace Ecommerce.Identity.Contracts
 		/// Updates the information for an existing <see cref="EcommerceUser"/>
 		/// </summary>
 		/// <param name="user">The <see cref="EcommerceUser"/> to update with</param>
+		/// <param name="username">The username to update the <see cref="EcommerceUser"/> with</param>
 		/// <returns>
 		/// A <see cref="UpdateEcommerceUserResponse"/> with success <c>true</c> if the user was updated;
 		/// false if the user failed to update with ValidationErrors populated with the errors that caused failure
 		/// </returns>
-		Task<UpdateEcommerceUserResponse> UpdateUser(EcommerceUser? user);
+		Task<UpdateEcommerceUserResponse> UpdateUser(EcommerceUser? user, string username);
 
 		/// <summary>
 		/// Retrieves a <see cref="EcommerceUser"/> if any exist

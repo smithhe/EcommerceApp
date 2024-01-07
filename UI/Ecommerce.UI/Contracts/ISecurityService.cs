@@ -8,5 +8,6 @@ namespace Ecommerce.UI.Contracts
 		Task<CreateUserResponse> RegisterUser(CreateUserRequest createUserRequest);
 		Task<bool> Login(AuthenticationRequest authenticationRequest);
 		Task<bool> Logout(string userName);
+		Task<UpdateEcommerceUserResponse> UpdateUser(UpdateEcommerceUserRequest updateUserRequest);
 	}
 }

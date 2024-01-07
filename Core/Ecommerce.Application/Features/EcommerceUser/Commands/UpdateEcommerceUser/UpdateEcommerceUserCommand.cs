@@ -1,7 +1,7 @@
 using Ecommerce.Domain.Entities;
-using Ecommerce.Shared.Responses.EcommerceUser;
 using MediatR;
 using System;
+using Ecommerce.Shared.Security;
 
 namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
 {
@@ -30,5 +30,9 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceU
 		/// </summary>
 		public string? LastName { get; set; }
 		
+		/// <summary>
+		/// The Email of the User to update
+		/// </summary>
+		public string? Email { get; set; }
 	}
 }
