@@ -21,6 +21,9 @@ namespace Ecommerce.UI.Pages
 		private string? Email { get; set; }
 		private string? FirstName { get; set; }
 		private string? LastName { get; set; }
+		private string? CurrentPassword { get; set; }
+		private string? NewPassword { get; set; }
+		private string? NewPasswordConfirmation { get; set; }
 		
 		protected override async Task OnInitializedAsync()
 		{
@@ -70,9 +73,47 @@ namespace Ecommerce.UI.Pages
 			}
 		}
 		
-		private void UpdatePasswordClick()
+		private async Task UpdatePasswordClick()
 		{
-			this.ToastService.ShowInfo("Not Implemented Yet");
+			//Check that all password fields are filled in
+			if (string.IsNullOrEmpty(this.CurrentPassword) || string.IsNullOrEmpty(this.NewPassword) ||
+			    string.IsNullOrEmpty(this.NewPasswordConfirmation))
+			{
+				this.ToastService.ShowWarning("All Password Fields are Required");
+				return;
+			}
+			
+			//Check that the new password and confirmation match
+			if (string.Equals(this.NewPassword, this.NewPasswordConfirmation) == false)
+			{
+				this.ToastService.ShowWarning("New Password and Confirmation do not match");
+				return;
+			}
+			
+			//Send the update password request
+			UpdatePasswordResponse response = await this.SecurityService.UpdatePassword(this.Username!, this.CurrentPassword, this.NewPassword);
+
+			//Check if the password was updated successfully
+			if (response.Success)
+			{
+				this.ToastService.ShowSuccess("Password Updated Successfully");
+				return;
+			}
+			
+			//Check if there were validation errors
+			if (response.ValidationErrors?.Count > 0)
+			{
+				foreach (string error in response.ValidationErrors)
+				{
+					this.ToastService.ShowWarning(error);
+				}
+			}
+			
+			//Check if there was an error message
+			if (string.IsNullOrEmpty(response.Message) == false)
+			{
+				this.ToastService.ShowError(response.Message);
+			}
 		}
 	}
 }

@@ -17,5 +17,8 @@ namespace Ecommerce.UI.Contracts.Refit
 		
 		[Put("/api/user/update")]
 		Task<ApiResponse<UpdateEcommerceUserResponse>> UpdateUser(UpdateEcommerceUserRequest updateUserRequest);
+		
+		[Put("/api/password/update")]
+		Task<ApiResponse<UpdatePasswordResponse>> UpdatePassword(UpdatePasswordRequest updatePasswordRequest);
 	}
 }

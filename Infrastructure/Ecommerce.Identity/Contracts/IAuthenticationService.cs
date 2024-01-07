@@ -58,6 +58,18 @@ namespace Ecommerce.Identity.Contracts
 		Task<UpdateEcommerceUserResponse> UpdateUser(EcommerceUser? user, string username);
 
 		/// <summary>
+		/// Updates the password for an existing <see cref="EcommerceUser"/>
+		/// </summary>
+		/// <param name="user">The <see cref="EcommerceUser"/> to update the password for</param>
+		/// <param name="currentPassword">The current password of the User</param>
+		/// <param name="newPassword">The new password to update to</param>
+		/// <returns>
+		/// A <see cref="UpdatePasswordResponse"/> with success <c>true</c> if the password was updated;
+		/// false if the password failed to update with ValidationErrors populated with the errors that caused failure
+		/// </returns>
+		Task<UpdatePasswordResponse> UpdatePassword(EcommerceUser? user, string currentPassword, string newPassword);
+
+		/// <summary>
 		/// Retrieves a <see cref="EcommerceUser"/> if any exist
 		/// </summary>
 		/// <param name="id">The unique identifier of the User to find</param>

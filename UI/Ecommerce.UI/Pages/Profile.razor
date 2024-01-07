@@ -47,15 +47,15 @@
             <form>
                 <div class="mb-3">
                     <label for="currentPassword" class="form-label">Current Password</label>
-                    <input type="password" class="form-control" id="currentPassword" placeholder="Enter current password">
+                    <input type="password" class="form-control" id="currentPassword" placeholder="Enter current password" @bind="this.CurrentPassword">
                 </div>
                 <div class="mb-3">
                     <label for="newPassword" class="form-label">New Password</label>
-                    <input type="password" class="form-control" id="newPassword" placeholder="Enter new password">
+                    <input type="password" class="form-control" id="newPassword" placeholder="Enter new password" @bind="this.NewPassword">
                 </div>
                 <div class="mb-3">
                     <label for="confirmNewPassword" class="form-label">Confirm New Password</label>
-                    <input type="password" class="form-control" id="confirmNewPassword" placeholder="Confirm new password">
+                    <input type="password" class="form-control" id="confirmNewPassword" placeholder="Confirm new password" @bind="this.NewPasswordConfirmation">
                 </div>
                 <div class="text-center">
                     <button type="button" class="btn btn-primary" @onclick="UpdatePasswordClick">Update Password</button>

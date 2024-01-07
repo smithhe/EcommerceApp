@@ -354,6 +354,67 @@ namespace Ecommerce.Identity.Services
 		}
 
 		/// <summary>
+		/// Updates the password for an existing <see cref="EcommerceUser"/>
+		/// </summary>
+		/// <param name="user">The <see cref="EcommerceUser"/> to update the password for</param>
+		/// <param name="currentPassword">The current password of the User</param>
+		/// <param name="newPassword">The new password to update to</param>
+		/// <returns>
+		/// A <see cref="UpdatePasswordResponse"/> with success <c>true</c> if the password was updated;
+		/// false if the password failed to update with ValidationErrors populated with the errors that caused failure
+		/// </returns>
+		public async Task<UpdatePasswordResponse> UpdatePassword(EcommerceUser? user, string currentPassword, string newPassword)
+		{
+			UpdatePasswordResponse response = new UpdatePasswordResponse();
+			
+			//Verify a user was sent
+			if (user == null)
+			{
+				response.Success = false;
+				response.Message = "Must Give a User to Update With";
+				return response;
+			}
+			
+			//Check for the existing user
+			EcommerceUser? existingUser = await this._userManager.FindByIdAsync(user.Id);
+			if (existingUser == null)
+			{
+				response.Success = false;
+				response.Message = "User Must Exist To Update";
+				return response;
+			}
+			
+			//Update the password
+			IdentityResult updatePasswordResult = await this._userManager.ChangePasswordAsync(existingUser, currentPassword, newPassword);
+
+			//Check for errors
+			if (updatePasswordResult.Succeeded == false)
+			{
+				response.Success = false;
+				response.Message = "Password Update Failed";
+				response.ValidationErrors = updatePasswordResult.Errors.Select(error => error.Description).ToList();
+				return response;
+			}
+			
+			//Generate a new token for the user
+			AuthenticatedUserModel userModel = await this.GenerateToken(user.UserName!);
+
+			//Check if the token was generated
+			if (string.IsNullOrEmpty(userModel.AccessToken))
+			{
+				response.Success = false;
+				response.Message = "Token Update Failed";
+				return response;
+			}
+
+			//Return success
+			response.Success = true;
+			response.UpdatedAccessToken = userModel.AccessToken;
+			response.Message = "Password Updated Successfully";
+			return response;
+		}
+		
+		/// <summary>
 		/// Retrieves a <see cref="EcommerceUser"/> if any exist
 		/// </summary>
 		/// <param name="id">The unique identifier of the User to find</param>

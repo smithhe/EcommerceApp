@@ -102,5 +102,39 @@ namespace Ecommerce.UI.Services
 			
 			return content;
 		}
+
+		public async Task<UpdatePasswordResponse> UpdatePassword(string username, string currentPassword, string newPassword)
+		{
+			ApiResponse<UpdatePasswordResponse> response = await this._securityApiService.UpdatePassword(new UpdatePasswordRequest
+			{
+				UserName = username,
+				CurrentPassword = currentPassword,
+				NewPassword = newPassword
+			});
+
+			if (response.IsSuccessStatusCode == false)
+			{
+				if (string.IsNullOrEmpty(response.Error.Content))
+				{
+					return new UpdatePasswordResponse { Success = false, Message = "Unexpected Error Occurred" };
+				}
+
+				UpdatePasswordResponse? error = JsonConvert.DeserializeObject<UpdatePasswordResponse>(response.Error.Content);
+				return error!;
+			}
+			
+			UpdatePasswordResponse content = response.Content;
+			
+			if (string.IsNullOrEmpty(content.UpdatedAccessToken))
+			{
+				return content;
+			}
+			
+			//Store the access token on browser storage
+			await this._localStorageService.SetItemAsync(this._authTokenStorageKey, content.UpdatedAccessToken);
+			((AuthStateProvider)this._authenticationStateProvider).NotifyUserAuthentication(content.UpdatedAccessToken);
+			
+			return content;
+		}
 	}
 }
