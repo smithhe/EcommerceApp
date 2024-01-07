@@ -50,7 +50,7 @@ namespace Ecommerce.UI.Pages
 			await RefreshPageInfo();
 		}
 
-		private async void AddToCartClick()
+		private async Task AddToCartClick()
 		{
 			AuthenticationState authState = await this.AuthenticationState;
 
