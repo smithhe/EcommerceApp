@@ -21,6 +21,7 @@ namespace Ecommerce.UI
 			services.AddScoped<IProductService, ProductService>();
 			services.AddScoped<IReviewService, ReviewService>();
 			services.AddScoped<ICartService, CartService>();
+			services.AddScoped<IOrderService, OrderService>();
 			
 			//https://github.com/Blazored/Toast
 			services.AddBlazoredToast();
@@ -69,6 +70,12 @@ namespace Ecommerce.UI
 				}).AddHttpMessageHandler<AuthHeaderHandler>();
 			
 			services.AddRefitClient<ICartApiService>()
+				.ConfigureHttpClient(c =>
+				{
+					c.BaseAddress = new Uri(apiEndpoint);
+				}).AddHttpMessageHandler<AuthHeaderHandler>();
+			
+			services.AddRefitClient<IOrderApiService>()
 				.ConfigureHttpClient(c =>
 				{
 					c.BaseAddress = new Uri(apiEndpoint);
