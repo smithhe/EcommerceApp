@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Requests.Order;
 using Ecommerce.Shared.Responses.Order;
 using Ecommerce.UI.Contracts;
@@ -33,6 +34,23 @@ namespace Ecommerce.UI.Services
             return string.IsNullOrEmpty(response.Error.Content) ? 
                 new GetAllOrdersByUserIdResponse { Success = false, Message = "Unexpected Error Occurred" } 
                 : JsonConvert.DeserializeObject<GetAllOrdersByUserIdResponse>(response.Error.Content)!;
+        }
+
+        public async Task<UpdateOrderResponse> UpdateOrder(OrderDto orderDto)
+        {
+            ApiResponse<UpdateOrderResponse> response = await this._orderApiService.UpdateOrder(new UpdateOrderApiRequest
+            {
+                OrderToUpdate = orderDto
+            });
+            
+            if (response.IsSuccessStatusCode)
+            {
+                return response.Content;
+            }
+			
+            return string.IsNullOrEmpty(response.Error.Content) ? 
+                new UpdateOrderResponse { Success = false, Message = "Unexpected Error Occurred" } 
+                : JsonConvert.DeserializeObject<UpdateOrderResponse>(response.Error.Content)!;
         }
     }
 }

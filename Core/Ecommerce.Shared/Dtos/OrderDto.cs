@@ -8,6 +8,7 @@ namespace Ecommerce.Shared.Dtos
 	{
 		public int Id { get; set; }
 		public Guid UserId { get; set; }
+		public DateTime CreatedDate { get; set; }
 		public OrderStatus Status { get; set; }
 		public double Total { get; set; }
 		public IEnumerable<OrderItemDto> OrderItems { get; set; } = null!;

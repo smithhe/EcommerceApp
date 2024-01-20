@@ -9,5 +9,8 @@ namespace Ecommerce.UI.Contracts.Refit
     {
         [Get("/api/order/user/all")]
         Task<ApiResponse<GetAllOrdersByUserIdResponse>> GetUserOrders(GetAllOrdersByUserIdApiRequest getAllOrdersByUserIdApiRequest);
+        
+        [Put("/api/order/update")]
+        Task<ApiResponse<UpdateOrderResponse>> UpdateOrder(UpdateOrderApiRequest updateOrderApiRequest);
     }
 }
