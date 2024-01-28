@@ -116,7 +116,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			response.Order = this._mapper.Map<OrderDto?>(order);
 
 			//Create all the order items for the order
-			foreach (OrderItemDto orderItem in command.OrderToCreate.OrderItems)
+			foreach (OrderItemDto orderItem in command.OrderToCreate.OrderItems!)
 			{
 				//Update the order Id before sending the request
 				orderItem.OrderId = newId;

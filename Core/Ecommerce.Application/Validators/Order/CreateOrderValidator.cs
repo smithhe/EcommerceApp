@@ -11,6 +11,9 @@ namespace Ecommerce.Application.Validators.Order
 			RuleFor(c => c.OrderToCreate!.Status)
 				.Equal(OrderStatus.Pending).WithMessage("New Orders must have a Pending status");
 
+			RuleFor(c => c.OrderToCreate!.OrderItems)
+				.NotEmpty().WithMessage("Order must have at least one Order Item");
+			
 			RuleFor(c => c.OrderToCreate!.Total)
 				.GreaterThan(0).WithMessage("Total must be greater than 0");
 			
