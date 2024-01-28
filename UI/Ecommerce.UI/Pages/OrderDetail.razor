@@ -1,0 +1,62 @@
+@page "/OrderDetail/{OrderId}"
+@using Blazored.Toast.Configuration
+@using Ecommerce.Shared.Dtos
+
+<BlazoredToasts Position="ToastPosition.TopRight"
+                Timeout="10"
+                IconType="IconType.FontAwesome"
+                SuccessClass="success-toast-override"
+                SuccessIcon="done_outline"
+                ErrorIcon="fa fa-bug"/>
+
+@if (this.Order == null)
+{
+    <div style="position:fixed;top:50%;left:50%;margin-top:-50px;margin-left:-100px;">
+        <img src="images/ajax-loader.gif" alt="Loading..."/>
+    </div>
+}
+else
+{
+    <div class="container my-5 py-4 bg-white shadow-sm rounded-3">
+        <h2 class="mb-4">Order Details</h2>
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <p><strong>Order ID:</strong> @this.Order.Id</p>
+                        <p><strong>Creation Date:</strong> @this.Order.CreatedDate.ToShortDateString()</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Status:</strong> @this.OrderStatus</p>
+                        <p><strong>Total:</strong> $@this.Order.Total</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mb-3">Items in Order</h3>
+        <div class="table-responsive">
+            <table class="table table-striped rounded-3">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(OrderItemDto item in this.Order.OrderItems)
+                    {
+                        <tr>
+                            <th scope="row">@item.Id</th>
+                            <td>@this.OrderProducts.First(p => p.Id == item.ProductId).Name</td>
+                            <td>@item.Quantity</td>
+                            <td>$@this.OrderProducts.First(p => p.Id == item.ProductId).Price</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

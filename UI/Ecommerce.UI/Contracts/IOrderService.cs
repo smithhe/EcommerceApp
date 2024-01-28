@@ -9,5 +9,6 @@ namespace Ecommerce.UI.Contracts
     {
         Task<GetAllOrdersByUserIdResponse> GetUserOrders(Guid userId);
         Task<UpdateOrderResponse> UpdateOrder(OrderDto orderDto);
+        Task<GetOrderByIdResponse> GetOrderById(int orderId);
     }
 }

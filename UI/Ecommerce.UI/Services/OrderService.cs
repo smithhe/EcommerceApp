@@ -52,5 +52,22 @@ namespace Ecommerce.UI.Services
                 new UpdateOrderResponse { Success = false, Message = "Unexpected Error Occurred" } 
                 : JsonConvert.DeserializeObject<UpdateOrderResponse>(response.Error.Content)!;
         }
+        
+        public async Task<GetOrderByIdResponse> GetOrderById(int orderId)
+        {
+            ApiResponse<GetOrderByIdResponse> response = await this._orderApiService.GetOrderById(new GetOrderByIdApiRequest
+            {
+                Id = orderId
+            });
+            
+            if (response.IsSuccessStatusCode)
+            {
+                return response.Content;
+            }
+            
+            return string.IsNullOrEmpty(response.Error.Content) ? 
+                new GetOrderByIdResponse { Success = false, Message = "Unexpected Error Occurred" } 
+                : JsonConvert.DeserializeObject<GetOrderByIdResponse>(response.Error.Content)!;
+        }
     }
 }

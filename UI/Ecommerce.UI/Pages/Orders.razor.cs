@@ -69,9 +69,9 @@ namespace Ecommerce.UI.Pages
             }
         }
         
-        private async Task ShowOrderDetails(OrderDto order)
+        private void ShowOrderDetails(OrderDto order)
         {
-            
+            this.NavigationManager.NavigateTo($"/OrderDetail/{order.Id}");
         }
 
         private async Task GetUserOrders(string userId)

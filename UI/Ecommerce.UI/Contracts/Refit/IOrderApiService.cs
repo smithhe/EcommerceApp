@@ -12,5 +12,8 @@ namespace Ecommerce.UI.Contracts.Refit
         
         [Put("/api/order/update")]
         Task<ApiResponse<UpdateOrderResponse>> UpdateOrder(UpdateOrderApiRequest updateOrderApiRequest);
+        
+        [Get("/api/order/{id}")]
+        Task<ApiResponse<GetOrderByIdResponse>> GetOrderById(GetOrderByIdApiRequest getOrderByIdApiRequest);
     }
 }
