@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.FastEndpoints", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.IntegrationTests", "Tests\Ecommerce.IntegrationTests\Ecommerce.IntegrationTests.csproj", "{048E23B1-C077-4145-92B0-E63072C5C714}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.PayPal", "Infrastructure\Ecommerce.PayPal\Ecommerce.PayPal.csproj", "{C3E6D93C-F26F-4DAC-B76D-4555EE5A0799}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +78,10 @@ Global
 		{048E23B1-C077-4145-92B0-E63072C5C714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{048E23B1-C077-4145-92B0-E63072C5C714}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{048E23B1-C077-4145-92B0-E63072C5C714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3E6D93C-F26F-4DAC-B76D-4555EE5A0799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3E6D93C-F26F-4DAC-B76D-4555EE5A0799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3E6D93C-F26F-4DAC-B76D-4555EE5A0799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3E6D93C-F26F-4DAC-B76D-4555EE5A0799}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A3EC2982-029E-4FF8-8BB6-9CB25B2A98B6} = {50B88424-0C57-47B7-A92A-CCF01173C743}
@@ -88,5 +94,6 @@ Global
 		{39DA5CBA-B5E6-4FAF-970B-D00C125F5A11} = {50B88424-0C57-47B7-A92A-CCF01173C743}
 		{46622459-297A-4D74-AF44-E8312D4730C5} = {C22AE31D-354A-426D-9AF7-2BF2F0AD4CA9}
 		{048E23B1-C077-4145-92B0-E63072C5C714} = {EF16D4A9-E0DA-4E7B-83A0-648A527EC760}
+		{C3E6D93C-F26F-4DAC-B76D-4555EE5A0799} = {B94D7AF0-A111-48C8-9945-AAACFBC664B2}
 	EndGlobalSection
 EndGlobal

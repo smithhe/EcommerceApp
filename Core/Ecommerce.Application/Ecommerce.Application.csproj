@@ -16,7 +16,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Infrastructure\Ecommerce.Identity\Ecommerce.Identity.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Ecommerce.PayPal\Ecommerce.PayPal.csproj" />
       <ProjectReference Include="..\..\Infrastructure\Ecommerce.Persistence\Ecommerce.Persistence.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Features\PayPal\" />
     </ItemGroup>
 
 </Project>
