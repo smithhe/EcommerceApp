@@ -3,6 +3,7 @@ CREATE TABLE OrderItem (
     ProductId INT NOT NULL,
 	OrderId INT NOT NULL,
     Quantity INT NOT NULL,
+    Price DOUBLE NOT NULL,
     CreatedBy VARCHAR(255) NOT NULL,
     CreatedDate DATETIME NOT NULL,
     LastModifiedBy VARCHAR(255),

@@ -18,6 +18,9 @@ namespace Ecommerce.Application.Validators.OrderItem
 
 			RuleFor(c => c.OrderItemToCreate.Quantity)
 				.GreaterThan(0).WithMessage("Quantity must be greater than 0");
+			
+			RuleFor(c => c.OrderItemToCreate.Price)
+				.GreaterThan(0).WithMessage("Price must be greater than 0");
 
 			RuleFor(c => c)
 				.MustAsync(ProductExists).WithMessage("Product must exist");
