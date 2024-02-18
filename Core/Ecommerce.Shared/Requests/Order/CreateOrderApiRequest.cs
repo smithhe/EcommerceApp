@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Ecommerce.Shared.Dtos;
 
 namespace Ecommerce.Shared.Requests.Order
@@ -8,8 +9,8 @@ namespace Ecommerce.Shared.Requests.Order
 	public class CreateOrderApiRequest
 	{
 		/// <summary>
-		/// The Order to be created
+		/// The items in the cart to create the order from
 		/// </summary>
-		public OrderDto? OrderToCreate { get; set; }
+		public IEnumerable<CartItemDto>? CartItems { get; set; }
 	}
 }

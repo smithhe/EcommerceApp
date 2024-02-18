@@ -11,8 +11,13 @@ using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.Product.Queries.GetProductById;
+using Ecommerce.Shared.Enums;
+using Ecommerce.Shared.Responses.Product;
 
 namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 {
@@ -60,12 +65,12 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 
 			CreateOrderResponse response = new CreateOrderResponse { Success = true, Message = "Order Successfully Created" };
 			
-			//Check if the dto is null
-			if (command.OrderToCreate == null)
+			//Check if the CartItems is null or empty
+			if (command.CartItems == null || command.CartItems.Count() == 0)
 			{
-				this._logger.LogWarning("Dto was null in command, returning failed response");
+				this._logger.LogWarning("CartItems was null or empty in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a Order to create";
+				response.Message = "Must provide a CartItems to create";
 				return response;
 			}
 			
@@ -78,9 +83,47 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 				return response;
 			}
 			
+			//Create a new order
+			OrderDto newOrder = new OrderDto { Status = OrderStatus.Pending, OrderItems = new List<OrderItemDto>()};
+			List<OrderItemDto> orderItems = new List<OrderItemDto>();
+			double total = 0;
+			
+			//Create order items from the cart items
+			foreach (CartItemDto cartItem in command.CartItems)
+			{
+				//Get the price of the product
+				double productPrice = await this.GetProductPrice(cartItem.ProductId);
+				
+				//Verify we got a valid price back
+				if (productPrice != -1)
+				{
+					//Return a failed response due to error getting product price
+					response.Success = false;
+					response.Message = "Failed to get product price during order create";
+					return response;
+				}
+				
+				//Create the order item
+				OrderItemDto orderItem = new OrderItemDto
+				{
+					ProductId = cartItem.ProductId,
+					Quantity = cartItem.Quantity,
+					Price = productPrice
+				};
+				
+				//Add to the total
+				total += productPrice;
+				
+				orderItems.Add(orderItem);
+			}
+			
+			//Add the order items and total to the order
+			newOrder.OrderItems = orderItems.ToArray();
+			newOrder.Total = total;
+			
 			//Validate the dto that was passed in the command
 			CreateOrderValidator validator = new CreateOrderValidator();
-			ValidationResult validationResult = await validator.ValidateAsync(command, cancellationToken);
+			ValidationResult validationResult = await validator.ValidateAsync(newOrder, cancellationToken);
 			
 			//Check for validation errors
 			if (validationResult.Errors.Count > 0)
@@ -98,7 +141,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			}
 			
 			//Valid Command
-			Domain.Entities.Order orderToCreate = this._mapper.Map<Domain.Entities.Order>(command.OrderToCreate);
+			Domain.Entities.Order orderToCreate = this._mapper.Map<Domain.Entities.Order>(newOrder);
 			orderToCreate.CreatedBy = command.UserName;
 			orderToCreate.CreatedDate = DateTime.Now;
 			
@@ -116,7 +159,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			response.Order = this._mapper.Map<OrderDto?>(order);
 
 			//Create all the order items for the order
-			foreach (OrderItemDto orderItem in command.OrderToCreate.OrderItems!)
+			foreach (OrderItemDto orderItem in newOrder.OrderItems)
 			{
 				//Update the order Id before sending the request
 				orderItem.OrderId = newId;
@@ -140,6 +183,18 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			}
 
 			return response;
+		}
+
+		private async Task<double> GetProductPrice(int productId)
+		{
+			GetProductByIdResponse response = await this._mediator.Send(new GetProductByIdQuery() { Id = productId });
+			
+			if (response.Success)
+			{
+				return response.Product!.Price;
+			}
+			
+			return -1;
 		}
 	}
 }

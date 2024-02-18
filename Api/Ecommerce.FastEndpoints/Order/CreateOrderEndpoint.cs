@@ -67,7 +67,7 @@ namespace Ecommerce.FastEndpoints.Order
 				//Send the create command
 				response = await this._mediator.Send(new CreateOrderCommand
 				{
-					OrderToCreate = req.OrderToCreate, 
+					CartItems = req.CartItems, 
 					UserName = TokenService.GetUserNameFromToken(token)
 				}, ct);
 			}

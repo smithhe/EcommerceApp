@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Order;
@@ -11,9 +12,9 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 	public class CreateOrderCommand : IRequest<CreateOrderResponse>
 	{
 		/// <summary>
-		/// The Order to be created
+		/// The items in the cart to create the order from
 		/// </summary>
-		public OrderDto? OrderToCreate { get; set; }
+		public IEnumerable<CartItemDto>? CartItems { get; set; }
 		
 		/// <summary>
 		/// The User requesting to create the Order
