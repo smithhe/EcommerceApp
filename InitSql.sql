@@ -52,6 +52,7 @@ CREATE TABLE `Order` (
     UserId VARCHAR(255) NOT NULL,
     Status VARCHAR(255) NOT NULL,
     Total DOUBLE NOT NULL,
+    PayPalRequestId VARCHAR(255) NOT NULL,
     CreatedBy VARCHAR(255) NOT NULL,
     CreatedDate DATETIME NOT NULL,
     LastModifiedBy VARCHAR(255),

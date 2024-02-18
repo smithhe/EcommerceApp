@@ -83,8 +83,11 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 				return response;
 			}
 			
+			//Create a new Guid for the PayPal request to help ensure Idempotency
+			Guid payPalRequestId = Guid.NewGuid();
+			
 			//Create a new order
-			OrderDto newOrder = new OrderDto { Status = OrderStatus.Pending, OrderItems = new List<OrderItemDto>()};
+			OrderDto newOrder = new OrderDto { Status = OrderStatus.Pending, PayPalRequestId = Guid.NewGuid(), OrderItems = new List<OrderItemDto>()};
 			List<OrderItemDto> orderItems = new List<OrderItemDto>();
 			double total = 0;
 			

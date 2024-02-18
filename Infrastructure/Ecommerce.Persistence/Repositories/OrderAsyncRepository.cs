@@ -76,8 +76,8 @@ namespace Ecommerce.Persistence.Repositories
 		{
 			int newId = -1;
 			const string sql =
-				$"INSERT INTO {_tableName} (UserId, Status, Total, CreatedBy, CreatedDate) " +
-				"VALUES (@UserId, @Status, Total, @CreatedBy, @CreatedDate);" +
+				$"INSERT INTO {_tableName} (UserId, Status, Total, PayPalRequestId, CreatedBy, CreatedDate) " +
+				"VALUES (@UserId, @Status, Total, @PayPalRequestId, @CreatedBy, @CreatedDate);" +
 				"SELECT LAST_INSERT_ID();";
 			
 			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
@@ -120,6 +120,7 @@ namespace Ecommerce.Persistence.Repositories
             SET UserId = @UserId,
                 Status = @Status,
                 Total = @Total,
+                PayPalRequestId = @PayPalRequestId,
                 LastModifiedBy = @LastModifiedBy,
                 LastModifiedDate = @LastModifiedDate
             WHERE Id = @Id";

@@ -11,6 +11,7 @@ namespace Ecommerce.Domain.Entities
 		public Guid UserId { get; set; }
 		public OrderStatus Status { get; set; }
 		public double Total { get; set; }
+		public Guid PayPalRequestId { get; set; }
 		public IEnumerable<OrderItem> OrderItems { get; set; } = null!;
 	}
 }
