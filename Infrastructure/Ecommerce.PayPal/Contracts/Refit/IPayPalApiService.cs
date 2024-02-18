@@ -1,5 +1,5 @@
-using Ecommerce.Shared.Requests.PayPal;
-using Ecommerce.Shared.Responses.PayPal;
+using Ecommerce.PayPal.Models.Requests;
+using Ecommerce.PayPal.Models.Responses;
 using Refit;
 
 namespace Ecommerce.PayPal.Contracts.Refit
@@ -8,6 +8,6 @@ namespace Ecommerce.PayPal.Contracts.Refit
     {
         [Post("/v2/checkout/orders")]
         [Headers("Content-Type: application/json")]
-        Task<ApiResponse<CreatePayPalOrderResponse>> CreatePayPalOrder([Header("PayPal-Request-Id")] string payPalRequestId, [Body] CreatePayPalOrderApiRequest createPayPalOrderApiRequest);
+        Task<ApiResponse<PayPalCreateOrderResponse>> CreatePayPalOrder([Header("PayPal-Request-Id")] string payPalRequestId, [Body] PayPalCreateOrderRequest createPayPalOrderApiRequest);
     }
 }

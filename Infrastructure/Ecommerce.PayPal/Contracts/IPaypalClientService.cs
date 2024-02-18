@@ -5,6 +5,6 @@ namespace Ecommerce.PayPal.Contracts
 {
     public interface IPaypalClientService
     {
-        Task<CreatePayPalOrderResponse> CreateOrder(CreatePayPalOrderApiRequest request);
+        Task<CreatePayPalOrderResponse> CreateOrder(CreatePayPalOrderRequest request);
     }
 }

@@ -11,5 +11,10 @@ namespace Ecommerce.Shared.Responses.PayPal
         /// The unique identifier for the PayPal request to help ensure Idempotency
         /// </summary>
         public Guid PayPalRequestId { get; set; }
+        
+        /// <summary>
+        /// The url to redirect the user to for the PayPal Order
+        /// </summary>
+        public string? RedirectUrl { get; set; }
     }
 }
