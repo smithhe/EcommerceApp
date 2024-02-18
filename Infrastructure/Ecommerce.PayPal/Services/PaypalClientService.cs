@@ -52,18 +52,22 @@ namespace Ecommerce.PayPal.Services
                 Message = "Failed to create PayPal Order"
             };
             
-            //Create a new Guid for the PayPal request to help ensure Idempotency
-            Guid payPalRequestId = Guid.NewGuid();
-            
-            //Log the request
-            this._logger.LogInformation($"Creating PayPal Order: {payPalRequestId}");
-            
             //Verify we have a order to create
-            if (request.Order == null)
+            if (request.Order?.OrderItems == null || request.Order.OrderItems.Any() == false)
             {
                 response.Message = "No order provided to create a PayPal Order";
                 return response;
             }
+            
+            //Verify we have the product information
+            if (request.OrderProducts == null || request.OrderProducts.Any() == false)
+            {
+                response.Message = "No product information provided to create a PayPal Order";
+                return response;
+            }
+            
+            //Log the request
+            this._logger.LogInformation($"Creating PayPal Order: {request.Order.PayPalRequestId}");
             
             //Create the request object
             PayPalCreateOrderRequest payPalCreateOrderRequest = new PayPalCreateOrderRequest
@@ -82,39 +86,49 @@ namespace Ecommerce.PayPal.Services
                 }
             };
             
+            //Create the purchase units
             List<PurchaseUnit> purchaseUnits = new List<PurchaseUnit>();
-            
-            //Add the purchase units to the request
             foreach (OrderItemDto orderItem in request.Order.OrderItems)
             {
+                ProductDto? orderProduct = request.OrderProducts.FirstOrDefault(x => x.Id == orderItem.ProductId);
+                
+                if (orderProduct == null)
+                {
+                    response.Message = "Product information not found for order item";
+                    return response;
+                }
+                
                 purchaseUnits.Add(new PurchaseUnit
                 {
                     Amount = new Currency
                     {
                         CurrencyCode = "USD",
-                        Value = orderItem.Price.ToString("F")
+                        Value = (orderItem.Price * orderItem.Quantity).ToString("F")
                     },
                     Items = new List<Item>
                     {
                         new Item
                         {
-                            Name = orderItem.Name,
-                            Description = orderItem.Description,
-                            Sku = orderItem.Sku,
-                            UnitAmount = new UnitAmount
+                            Name = orderProduct.Name,
+                            Description = orderProduct.Description,
+                            Sku = orderProduct.Id.ToString(),
+                            UnitAmount = new Currency
                             {
                                 CurrencyCode = "USD",
                                 Value = orderItem.Price.ToString("F")
                             },
                             Quantity = orderItem.Quantity.ToString(),
-                            Category = "PHYSICAL_GOODS"
+                            Category = Category.DIGITAL_GOODS
                         }
                     }
                 });
             }
             
+            //Add the purchase units to the request
+            payPalCreateOrderRequest.PurchaseUnits = purchaseUnits.ToArray();
+            
             //Send the create order request to PayPal
-            ApiResponse<PayPalCreateOrderResponse> payPalApiResponse = await this._payPalApiService.CreatePayPalOrder(payPalRequestId.ToString(), payPalCreateOrderRequest);
+            ApiResponse<PayPalCreateOrderResponse> payPalApiResponse = await this._payPalApiService.CreatePayPalOrder(request.Order.PayPalRequestId.ToString(), payPalCreateOrderRequest);
 
             //Check if the response is unauthorized
             if (payPalApiResponse.StatusCode == HttpStatusCode.Unauthorized)
@@ -123,7 +137,7 @@ namespace Ecommerce.PayPal.Services
                 await this._tokenService.GetNewToken();
                 
                 //Send the create order request to PayPal again
-                payPalApiResponse = await this._payPalApiService.CreatePayPalOrder(payPalRequestId.ToString(), payPalCreateOrderRequest);
+                payPalApiResponse = await this._payPalApiService.CreatePayPalOrder(request.Order.PayPalRequestId.ToString(), payPalCreateOrderRequest);
             }
 
             //Check if the response is successful
@@ -135,7 +149,6 @@ namespace Ecommerce.PayPal.Services
                 //Update the response object
                 response.Success = true;
                 response.Message = "PayPal Order Created Successfully";
-                response.PayPalRequestId = payPalRequestId;
                 response.RedirectUrl = responseContent?.Links.FirstOrDefault(x => x.Rel == "approve")?.Href;
 
                 //Return the response
@@ -151,7 +164,5 @@ namespace Ecommerce.PayPal.Services
             //Return a failed response
             return response;
         }
-        
-        
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using Ecommerce.Shared.Dtos;
 
 namespace Ecommerce.Shared.Responses.Order
@@ -11,5 +12,10 @@ namespace Ecommerce.Shared.Responses.Order
 		/// The newly created Order if request was successful
 		/// </summary>
 		public OrderDto? Order { get; set; }
+        
+		/// <summary>
+		/// The url to redirect the user to for the PayPal Order
+		/// </summary>
+		public string? RedirectUrl { get; set; }
 	}
 }

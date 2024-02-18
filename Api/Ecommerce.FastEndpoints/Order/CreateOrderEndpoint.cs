@@ -9,6 +9,8 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder;
+using Ecommerce.Shared.Responses.PayPal;
 
 namespace Ecommerce.FastEndpoints.Order
 {
@@ -61,6 +63,7 @@ namespace Ecommerce.FastEndpoints.Order
 				return;
 			}
 
+			//Create the Ecommerce Order
 			CreateOrderResponse response;
 			try
 			{
@@ -79,6 +82,28 @@ namespace Ecommerce.FastEndpoints.Order
 					500, ct);
 				return;
 			}
+			
+			//Create the PayPal Order
+			CreatePayPalOrderResponse payPalResponse;
+			try
+			{
+				//Send the create command
+				payPalResponse = await this._mediator.Send(new CreatePayPalOrderCommand
+				{
+					Order = response.Order!
+				}, ct);
+			}
+			catch (Exception e)
+			{
+				//Unexpected error
+				this._logger.LogError(e, "Error when attempting to create PayPal Order");
+				await SendAsync(new CreateOrderResponse { Success = false, Message = "Unexpected Error Occurred" },
+					500, ct);
+				return;
+			}
+
+			//Add the RedirectUrl to the response
+			response.RedirectUrl = payPalResponse.RedirectUrl;
 
 			//Send the response object
 			await SendOkAsync(response, ct);
