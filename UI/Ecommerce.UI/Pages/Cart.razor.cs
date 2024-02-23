@@ -175,10 +175,7 @@ namespace Ecommerce.UI.Pages
 		
 		private void PayPalCheckoutClick()
 		{
-		}
-
-		private void StripeCheckoutClick()
-		{
+			
 		}
 	}
 }
