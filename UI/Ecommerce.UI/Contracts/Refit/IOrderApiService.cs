@@ -15,5 +15,8 @@ namespace Ecommerce.UI.Contracts.Refit
         
         [Get("/api/order/{id}")]
         Task<ApiResponse<GetOrderByIdResponse>> GetOrderById(GetOrderByIdApiRequest getOrderByIdApiRequest);
+        
+        [Post("/api/order/create")]
+        Task<ApiResponse<CreateOrderResponse>> CreateOrder(CreateOrderApiRequest createOrderApiRequest);
     }
 }

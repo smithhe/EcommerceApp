@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Requests.Order;
@@ -68,6 +69,23 @@ namespace Ecommerce.UI.Services
             return string.IsNullOrEmpty(response.Error.Content) ? 
                 new GetOrderByIdResponse { Success = false, Message = "Unexpected Error Occurred" } 
                 : JsonConvert.DeserializeObject<GetOrderByIdResponse>(response.Error.Content)!;
+        }
+        
+        public async Task<CreateOrderResponse> CreateOrder(IEnumerable<CartItemDto> cartItems)
+        {
+            ApiResponse<CreateOrderResponse> response = await this._orderApiService.CreateOrder(new CreateOrderApiRequest
+            {
+                CartItems = cartItems
+            });
+            
+            if (response.IsSuccessStatusCode)
+            {
+                return response.Content;
+            }
+            
+            return string.IsNullOrEmpty(response.Error.Content) ? 
+                new CreateOrderResponse { Success = false, Message = "Unexpected Error Occurred" } 
+                : JsonConvert.DeserializeObject<CreateOrderResponse>(response.Error.Content)!;
         }
     }
 }

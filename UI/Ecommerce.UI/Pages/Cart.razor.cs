@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Responses.Order;
 
 namespace Ecommerce.UI.Pages
 {
@@ -24,7 +25,8 @@ namespace Ecommerce.UI.Pages
 		[Inject] public IToastService ToastService { get; set; } = null!;
 		[Inject] public ICartService CartService { get; set; } = null!;
 		[Inject] public IProductService ProductService { get; set; } = null!;
-
+		[Inject] public IOrderService OrderService { get; set; } = null!;
+		
 		private List<CartItemDto>? CartItems { get; set; }
 		private List<ProductDto> Products { get; set; } = new List<ProductDto>();
 		private double CartTotal { get; set; }
@@ -173,9 +175,18 @@ namespace Ecommerce.UI.Pages
 			}
 		}
 		
-		private void PayPalCheckoutClick()
+		private async Task PayPalCheckoutClick()
 		{
+			CreateOrderResponse response = await this.OrderService.CreateOrder(this.CartItems!);
 			
+			if (response.Success && string.IsNullOrEmpty(response.RedirectUrl) == false)
+			{
+				this.NavigationManager.NavigateTo(response.RedirectUrl);
+			}
+			else
+			{
+				this.ToastService.ShowError(response.Message!);
+			}
 		}
 	}
 }
