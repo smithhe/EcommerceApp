@@ -8,6 +8,7 @@ using Ecommerce.PayPal.Models.Responses;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Requests.PayPal;
 using Ecommerce.Shared.Responses.PayPal;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Refit;
 
@@ -21,18 +22,22 @@ namespace Ecommerce.PayPal.Services
         private readonly ILogger<PaypalClientService> _logger;
         private readonly ITokenService _tokenService;
         private readonly IPayPalApiService _payPalApiService;
-        
+        private readonly IConfiguration _configuration;
+
         /// <summary>
         /// Constructor for the PayPal Client Service
         /// </summary>
         /// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
         /// <param name="tokenService">The <see cref="ITokenService"/> service used for Auth Token operations</param>
         /// <param name="payPalApiService">The Refit contract for calling the PayPal API</param>
-        public PaypalClientService(ILogger<PaypalClientService> logger, ITokenService tokenService, IPayPalApiService payPalApiService)
+        /// <param name="configuration">The <see cref="IConfiguration"/> instance used for configuration settings.</param>
+        public PaypalClientService(ILogger<PaypalClientService> logger, ITokenService tokenService, 
+            IPayPalApiService payPalApiService, IConfiguration configuration)
         {
             this._logger = logger;
             this._tokenService = tokenService;
             this._payPalApiService = payPalApiService;
+            this._configuration = configuration;
         }
         
         /// <summary>
@@ -69,6 +74,18 @@ namespace Ecommerce.PayPal.Services
             //Log the request
             this._logger.LogInformation($"Creating PayPal Order: {request.Order.PayPalRequestId}");
             
+            //Create the return urls
+            string? baseReturnUrl = this._configuration["PayPal:ReturnBaseUrl"];
+
+            if (string.IsNullOrEmpty(baseReturnUrl))
+            {
+                response.Message = "Return Base Url not found in configuration";
+                return response;
+            }
+            
+            string returnUrl = $"{baseReturnUrl}/checkout/success";
+            string cancelUrl = $"{baseReturnUrl}/checkout/cancel";
+            
             //Create the request object
             PayPalCreateOrderRequest payPalCreateOrderRequest = new PayPalCreateOrderRequest
             {
@@ -80,7 +97,13 @@ namespace Ecommerce.PayPal.Services
                         ExperienceContext = new ExperienceContext
                         {
                             PaymentMethodPreference = PaymentMethodPreference.IMMEDIATE_PAYMENT_REQUIRED,
-                            BrandName = "Ecommerce"
+                            BrandName = "Ecommerce",
+                            Locale = "en-US",
+                            LandingPage = LandingPage.LOGIN,
+                            ShippingPreference = ShippingPreference.NO_SHIPPING,
+                            UserAction = UserAction.PAY_NOW,
+                            ReturnUrl = returnUrl,
+                            CancelUrl = cancelUrl
                         }
                     }
                 }
