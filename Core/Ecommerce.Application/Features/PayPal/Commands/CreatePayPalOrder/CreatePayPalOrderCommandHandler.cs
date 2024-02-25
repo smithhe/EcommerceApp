@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId;
 using Ecommerce.Application.Features.Product.Queries.GetProductById;
 using Ecommerce.PayPal.Contracts;
 using Ecommerce.Shared.Dtos;
@@ -82,12 +84,27 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
                 orderProducts.Add(product);
             }
             
+            //Create a new Guid for the PayPal request to help ensure Idempotency
+            Guid payPalRequestId = Guid.NewGuid();
+            command.Order.PayPalRequestId = payPalRequestId;
+            
             //Create the PayPal Order
             response = await this._paypalClientService.CreateOrder(new CreatePayPalOrderRequest
             {
                 Order = command.Order,
                 OrderProducts = orderProducts.ToArray()
             });
+
+            //Check for success in creating the paypal order
+            if (response.Success)
+            {
+                //Add the PayPalRequestId to the order
+                bool addedPayPalRequestId = await this._mediator.Send(new AddPayPalRequestIdCommand
+                {
+                    OrderId = command.Order.Id,
+                    PayPalRequestId = payPalRequestId
+                }, cancellationToken);
+            }
 
             return response;
         }
