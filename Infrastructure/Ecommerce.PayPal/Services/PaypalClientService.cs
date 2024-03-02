@@ -83,7 +83,7 @@ namespace Ecommerce.PayPal.Services
                 return response;
             }
             
-            string returnUrl = $"{baseReturnUrl}/checkout/success";
+            string returnUrl = $"{baseReturnUrl}/api/checkout/success/{request.Order.Id}";
             string cancelUrl = $"{baseReturnUrl}/checkout/cancel";
             
             //Create the request object

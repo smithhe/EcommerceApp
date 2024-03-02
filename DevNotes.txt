@@ -1,0 +1,6 @@
+
+Order Lifecycle
+
+Create Order-> Put into created status which are orders hidden in the backend for a timed period until the paypal order expires
+Pending Order-> Payment confirmed successful by paypal and updated to this status upon the successful payment return url
+Processing Order-> Order successfully placed screen shown to the user after making a special API call so we only can show the success screen once

@@ -84,7 +84,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			}
 			
 			//Create a new order
-			OrderDto newOrder = new OrderDto { Status = OrderStatus.Pending, OrderItems = new List<OrderItemDto>()};
+			OrderDto newOrder = new OrderDto { Status = OrderStatus.Created, OrderItems = new List<OrderItemDto>()};
 			List<OrderItemDto> orderItems = new List<OrderItemDto>();
 			double total = 0;
 			

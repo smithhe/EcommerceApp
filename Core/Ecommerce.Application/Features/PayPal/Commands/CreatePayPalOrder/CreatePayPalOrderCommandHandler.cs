@@ -99,7 +99,7 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
             if (response.Success)
             {
                 //Add the PayPalRequestId to the order
-                bool addedPayPalRequestId = await this._mediator.Send(new AddPayPalRequestIdCommand
+                await this._mediator.Send(new AddPayPalRequestIdCommand
                 {
                     OrderId = command.Order.Id,
                     PayPalRequestId = payPalRequestId
