@@ -23,6 +23,7 @@ namespace Ecommerce.Persistence
 			services.AddScoped<IProductAsyncRepository, ProductAsyncRepository>();
 			services.AddScoped<IReviewAsyncRepository, ReviewAsyncRepository>();
 			services.AddScoped<ICartItemRepository, CartItemRepository>();
+			services.AddScoped<IOrderKeyRepository, OrderKeyRepository>();
 			
 			//Add handler for Guid
 			SqlMapper.AddTypeHandler(new MySqlGuidTypeHandler());
