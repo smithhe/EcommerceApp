@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Order.Queries.GetOrderById;
@@ -18,6 +19,7 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
         private readonly ILogger<CreatePayPalReturnKeyCommandHandler> _logger;
         private readonly IMediator _mediator;
         private readonly IOrderKeyRepository _orderKeyRepository;
+        private readonly Random _random;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePayPalReturnKeyCommandHandler"/> class.
@@ -31,6 +33,7 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
             this._logger = logger;
             this._mediator = mediator;
             this._orderKeyRepository = orderKeyRepository;
+            this._random = new Random();
         }
         
         /// <summary>
@@ -57,11 +60,11 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
             }
             
             //Create the PayPal return key
-            Guid orderToken = Guid.NewGuid();
+            string orderToken = this.GenerateRandomAlphanumericString(50);
             int newId = await this._orderKeyRepository.AddAsync(new OrderKey
             {
                 OrderId = command.OrderId,
-                OrderToken = orderToken.ToString(),
+                OrderToken = orderToken,
                 CreatedAt = DateTime.UtcNow
             });
             
@@ -73,7 +76,21 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
             }
             
             //Return the key
-            return orderToken.ToString();
+            return orderToken;
+        }
+
+        /// <summary>
+        /// Generates a random alphanumeric string of the given length
+        /// </summary>
+        /// <param name="length">The length of the random string</param>
+        /// <returns>
+        /// A random alphanumeric <see cref="string"/> of the given length
+        /// </returns>
+        private string GenerateRandomAlphanumericString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[this._random.Next(s.Length)]).ToArray());
         }
     }
 }
