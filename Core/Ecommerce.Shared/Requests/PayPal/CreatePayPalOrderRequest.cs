@@ -17,5 +17,10 @@ namespace Ecommerce.Shared.Requests.PayPal
         /// The product information for the products in the order
         /// </summary>
         public IEnumerable<ProductDto>? OrderProducts { get; set; }
+
+        /// <summary>
+        /// The return key to map the PayPal Order to the Ecommerce Order
+        /// </summary>
+        public string ReturnKey { get; set; } = null!;
     }
 }

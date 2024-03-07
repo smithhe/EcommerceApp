@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId;
+using Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey;
 using Ecommerce.Application.Features.Product.Queries.GetProductById;
 using Ecommerce.PayPal.Contracts;
 using Ecommerce.Shared.Dtos;
@@ -88,17 +89,34 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
             Guid payPalRequestId = Guid.NewGuid();
             command.Order.PayPalRequestId = payPalRequestId;
             
+            //Create the order key for the PayPal order
+            this._logger.LogInformation("Creating PayPal return key for order");
+            string? returnKey = await this._mediator.Send(new CreatePayPalReturnKeyCommand
+            {
+                OrderId = command.Order.Id
+            }, cancellationToken);
+            
+            //Check if the return key was created
+            if (string.IsNullOrEmpty(returnKey))
+            {
+                this._logger.LogError("Failed to create PayPal return key for order");
+                response.Message = "Failed to create order with PayPal";
+                return response;
+            }
+            
             //Create the PayPal Order
             response = await this._paypalClientService.CreateOrder(new CreatePayPalOrderRequest
             {
                 Order = command.Order,
-                OrderProducts = orderProducts.ToArray()
+                OrderProducts = orderProducts.ToArray(),
+                ReturnKey = returnKey
             });
 
             //Check for success in creating the paypal order
             if (response.Success)
             {
                 //Add the PayPalRequestId to the order
+                this._logger.LogInformation("Adding PayPalRequestId to order");
                 await this._mediator.Send(new AddPayPalRequestIdCommand
                 {
                     OrderId = command.Order.Id,
