@@ -145,6 +145,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			orderToCreate.CreatedBy = command.UserName;
 			orderToCreate.CreatedDate = DateTime.Now;
 			
+			//Create the order
 			int newId = await this._orderAsyncRepository.AddAsync(orderToCreate);
 			
 			//Sql operation failed
@@ -156,6 +157,20 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			}
 			
 			Domain.Entities.Order? order = await this._orderAsyncRepository.GetByIdAsync(newId);
+			
+			//Verify the order was created
+			if (order == null)
+			{
+				//Log the error
+				this._logger.LogError("Failed to create Order in SQL");
+				
+				//Return a failed response
+				response.Success = false;
+				response.Message = "Failed to create Order";
+				return response;
+			}
+			
+			//Map the order to the response
 			response.Order = this._mapper.Map<OrderDto?>(order);
 
 			//Create all the order items for the order
@@ -171,7 +186,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 					response.Message = "Failed to create order items";
 					
 					//Delete the order since the items failed to create
-					await this._orderAsyncRepository.DeleteAsync(order!);
+					await this._orderAsyncRepository.DeleteAsync(order);
 
 					break;
 				}
