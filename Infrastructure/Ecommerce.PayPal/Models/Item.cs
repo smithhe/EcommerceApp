@@ -42,7 +42,7 @@ namespace Ecommerce.PayPal.Models
         /// The item category type.
         /// </summary>
         [AliasAs("category")]
-        public Category Category { get; set; }
+        public string Category { get; set; } = null!;
 
         /// <summary>
         /// The URL of the item's image.

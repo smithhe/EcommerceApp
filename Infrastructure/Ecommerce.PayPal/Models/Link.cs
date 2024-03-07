@@ -1,5 +1,4 @@
 using Refit;
-using HttpMethod = Ecommerce.PayPal.Models.Enums.HttpMethod;
 
 namespace Ecommerce.PayPal.Models
 {
@@ -27,6 +26,6 @@ namespace Ecommerce.PayPal.Models
         /// The HTTP method required to make the related call.
         /// </summary>
         [AliasAs("method")]
-        public HttpMethod? Method { get; set; }
+        public string? Method { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 namespace Ecommerce.PayPal.Models.Enums
 {
-    public enum PaymentMethodPreference
+    public class PaymentMethodPreference
     {
-        UNRESTRICTED,
-        IMMEDIATE_PAYMENT_REQUIRED
+        public const string UNRESTRICTED = "UNRESTRICTED";
+        public const string IMMEDIATE_PAYMENT_REQUIRED = "IMMEDIATE_PAYMENT_REQUIRED";
     }
 }

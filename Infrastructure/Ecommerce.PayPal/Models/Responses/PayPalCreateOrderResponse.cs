@@ -30,19 +30,19 @@ namespace Ecommerce.PayPal.Models.Responses
         /// The instruction to process an order.
         /// </summary>
         [AliasAs("processing_instruction")]
-        public ProcessingInstruction? ProcessingInstruction { get; set; }
+        public string? ProcessingInstruction { get; set; }
 
         /// <summary>
         /// The order status.
         /// </summary>
         [AliasAs("status")]
-        public OrderStatus? Status { get; set; }
+        public string? Status { get; set; }
 
         /// <summary>
         /// The intent to either capture payment immediately or authorize a payment for an order after order creation.
         /// </summary>
         [AliasAs("intent")]
-        public Intent Intent { get; set; }
+        public string Intent { get; set; } = null!;
 
         /// <summary>
         /// An array of purchase units.

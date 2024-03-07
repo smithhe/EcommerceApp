@@ -19,25 +19,25 @@ namespace Ecommerce.PayPal.Models
         /// The location from which the shipping address is derived.
         /// </summary>
         [AliasAs("shipping_preference")]
-        public ShippingPreference? ShippingPreference { get; set; }
+        public string? ShippingPreference { get; set; }
         
         /// <summary>
         /// The type of landing page to show on the PayPal site for customer checkout.
         /// </summary>
         [AliasAs("landing_page")]
-        public LandingPage? LandingPage { get; set; }
+        public string? LandingPage { get; set; }
         
         /// <summary>
         /// Configures a Continue or Pay Now checkout flow.
         /// </summary>
         [AliasAs("user_action")]
-        public UserAction? UserAction { get; set; }
+        public string? UserAction { get; set; }
         
         /// <summary>
         /// The merchant-preferred payment methods.
         /// </summary>
         [AliasAs("payment_method_preference")]
-        public PaymentMethodPreference? PaymentMethodPreference { get; set; }
+        public string? PaymentMethodPreference { get; set; }
         
         /// <summary>
         /// The BCP 47-formatted locale of pages that the PayPal payment experience shows.

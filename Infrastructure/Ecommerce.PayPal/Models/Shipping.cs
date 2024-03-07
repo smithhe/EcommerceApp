@@ -13,7 +13,7 @@ namespace Ecommerce.PayPal.Models
         /// Either type or options may be present, but not both.
         /// </summary>
         [AliasAs("type")]
-        public ShippingType? Type { get; set; }
+        public string? Type { get; set; }
         
         /// <summary>
         /// An array of shipping options that the payee or merchant offers to the payer to ship or pick up their items.

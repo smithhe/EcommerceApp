@@ -1,8 +1,8 @@
 namespace Ecommerce.PayPal.Models.Enums
 {
-    public enum ProcessingInstruction
+    public class ProcessingInstruction
     {
-        ORDER_COMPLETE_ON_PAYMENT_APPROVAL,
-        NO_INSTRUCTION
+        public const string ORDER_COMPLETE_ON_PAYMENT_APPROVAL = "ORDER_COMPLETE_ON_PAYMENT_APPROVAL";
+        public const string NO_INSTRUCTION = "NO_INSTRUCTION";
     }
 }

@@ -1,9 +1,9 @@
 namespace Ecommerce.PayPal.Models.Enums
 {
-    public enum LandingPage
+    public class LandingPage
     {
-        LOGIN,
-        GUEST_CHECKOUT,
-        NO_PREFERENCE
+        public const string LOGIN = "LOGIN";
+        public const string GUEST_CHECKOUT = "GUEST_CHECKOUT";
+        public const string NO_PREFERENCE = "NO_PREFERENCE";
     }
 }

@@ -1,11 +1,11 @@
 namespace Ecommerce.PayPal.Models.Enums
 {
-    public enum PhoneType
+    public class PhoneType
     {
-        FAX,
-        HOME,
-        MOBILE,
-        OTHER,
-        PAGER
+        public const string FAX = "FAX";
+        public const string HOME = "HOME";
+        public const string MOBILE = "MOBILE";
+        public const string OTHER = "OTHER";
+        public const string PAGER = "PAGER";
     }
 }

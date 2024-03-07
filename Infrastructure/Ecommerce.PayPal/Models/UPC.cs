@@ -12,7 +12,7 @@ namespace Ecommerce.PayPal.Models
         /// The Universal Product Code type.
         /// </summary>
         [AliasAs("type")]
-        public UpcType Type { get; set; }
+        public string Type { get; set; } = null!;
         
         /// <summary>
         /// The UPC product code of the item.

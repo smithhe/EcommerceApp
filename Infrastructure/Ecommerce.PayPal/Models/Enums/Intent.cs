@@ -1,8 +1,8 @@
 namespace Ecommerce.PayPal.Models.Enums
 {
-    public enum Intent
+    public class Intent
     {
-        CAPTURE,
-        AUTHORIZE
+        public const string CAPTURE = "CAPTURE";
+        public const string AUTHORIZE = "AUTHORIZE";
     }
 }

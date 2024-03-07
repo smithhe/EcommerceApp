@@ -31,12 +31,12 @@ namespace Ecommerce.PayPal.Models
         /// </summary>
         [AliasAs("selected")]
         public bool Selected { get; set; }
-        
+
         /// <summary>
         /// A classification for the method of purchase fulfillment.
         /// </summary>
         [AliasAs("type")]
-        public ShippingType Type { get; set; }
+        public string Type { get; set; } = null!;
         
         /// <summary>
         /// The shipping cost for the selected option.

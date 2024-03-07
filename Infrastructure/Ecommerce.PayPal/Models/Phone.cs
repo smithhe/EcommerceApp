@@ -12,7 +12,7 @@ namespace Ecommerce.PayPal.Models
         /// The phone type.
         /// </summary>
         [AliasAs("phone_type")]
-        public PhoneType? PhoneType { get; set; }
+        public string? PhoneType { get; set; }
         
         /// <summary>
         /// The phone number, in its canonical international E.164 numbering plan format.

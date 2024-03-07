@@ -11,8 +11,8 @@ namespace Ecommerce.PayPal.Models.Requests
         /// <summary>
         /// The intent to either capture payment immediately or authorize a payment for an order after order creation.
         /// </summary>
-        [AliasAs("intent")] 
-        public Intent Intent { get; set; }
+        [AliasAs("intent")]
+        public string Intent { get; set; } = null!;
 
         /// <summary>
         /// An array of purchase units. Each purchase unit establishes a contract between a payer and the payee.
