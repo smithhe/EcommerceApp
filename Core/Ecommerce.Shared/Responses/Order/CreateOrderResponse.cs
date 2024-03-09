@@ -14,7 +14,7 @@ namespace Ecommerce.Shared.Responses.Order
 		public OrderDto? Order { get; set; }
         
 		/// <summary>
-		/// The url to redirect the user to for the PayPal Order
+		/// The url to redirect the user to for payment of the order
 		/// </summary>
 		public string? RedirectUrl { get; set; }
 	}

@@ -10,6 +10,8 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder;
+using Ecommerce.Shared.Enums;
+using Ecommerce.Shared.Exceptions;
 using Ecommerce.Shared.Responses.PayPal;
 
 namespace Ecommerce.FastEndpoints.Order
@@ -41,7 +43,7 @@ namespace Ecommerce.FastEndpoints.Order
 		/// </summary>
 		public override void Configure()
 		{
-			Post("/api/order/create");
+			this.Post("/api/order/create");
 			//TODO: Add roles
 		}
 
@@ -59,7 +61,7 @@ namespace Ecommerce.FastEndpoints.Order
 			if (await TokenService.ValidateTokenAsync(this._authenticationService, token) == false)
 			{
 				//Token is Invalid
-				await SendUnauthorizedAsync(ct);
+				await this.SendUnauthorizedAsync(ct);
 				return;
 			}
 
@@ -78,35 +80,73 @@ namespace Ecommerce.FastEndpoints.Order
 			{
 				//Unexpected error
 				this._logger.LogError(e, "Error when attempting to create Order");
-				await SendAsync(new CreateOrderResponse { Success = false, Message = "Unexpected Error Occurred" },
+				await this.SendAsync(new CreateOrderResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
 			}
 			
-			//Create the PayPal Order
-			CreatePayPalOrderResponse payPalResponse;
+			//Verify the order was created
+			if (response.Success == false)
+			{
+				//Order was not created send the response
+				await this.SendOkAsync(response, ct);
+				return;
+			}
+			
+			//Create a payment with the specified payment source
 			try
 			{
-				//Send the create command
-				payPalResponse = await this._mediator.Send(new CreatePayPalOrderCommand
+				switch (req.PaymentSource)
 				{
-					Order = response.Order!
-				}, ct);
+					case PaymentSource.PayPal:
+						await this.HandlePayPalPaymentSource(response, ct);
+						break;
+					default:
+						throw new InvalidPaymentSourceException("Invalid Payment Source Provided");
+				}
+			}
+			catch (InvalidPaymentSourceException)
+			{
+				this._logger.LogError($"Invalid Payment Source Provided");
+				await this.SendAsync(new CreateOrderResponse { Success = false, Message = "Invalid Payment Source Provided" },
+					400, ct);
+				return;
 			}
 			catch (Exception e)
 			{
 				//Unexpected error
 				this._logger.LogError(e, "Error when attempting to create PayPal Order");
-				await SendAsync(new CreateOrderResponse { Success = false, Message = "Unexpected Error Occurred" },
+				await this.SendAsync(new CreateOrderResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
 			}
 
-			//Add the RedirectUrl to the response
-			response.RedirectUrl = payPalResponse.RedirectUrl;
-
 			//Send the response object
-			await SendOkAsync(response, ct);
+			await this.SendOkAsync(response, ct);
+		}
+		
+		/// <summary>
+		/// Handles using PayPal as the payment source for the order
+		/// </summary>
+		/// <param name="response">The <see cref="CreateOrderResponse"/> from creating the internal system order</param>
+		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
+		private async Task HandlePayPalPaymentSource(CreateOrderResponse response, CancellationToken ct)
+		{
+			//Create the PayPal Order
+			CreatePayPalOrderResponse payPalResponse = await this._mediator.Send(new CreatePayPalOrderCommand
+				{
+					Order = response.Order!
+				}, ct);
+			
+			if (payPalResponse.Success)
+			{
+				//Add the RedirectUrl to the response
+				response.RedirectUrl = payPalResponse.RedirectUrl;
+			}
+			else
+			{
+				this._logger.LogWarning($"Failed to create PayPal Order{Environment.NewLine}{payPalResponse.Message}");
+			}
 		}
 	}
 }
