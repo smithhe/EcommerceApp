@@ -83,8 +83,8 @@ namespace Ecommerce.PayPal.Services
                 return response;
             }
             
-            string returnUrl = $"{baseReturnUrl}/api/checkout/success/{request.ReturnKey}";
-            string cancelUrl = $"{baseReturnUrl}/checkout/cancel";
+            string returnUrl = $"{baseReturnUrl}/api/paypal/checkout/success/{request.ReturnKey}";
+            string cancelUrl = $"{baseReturnUrl}/api/paypal/checkout/cancel/{request.ReturnKey}";
             
             //Create the request object
             PayPalCreateOrderRequest payPalCreateOrderRequest = new PayPalCreateOrderRequest
