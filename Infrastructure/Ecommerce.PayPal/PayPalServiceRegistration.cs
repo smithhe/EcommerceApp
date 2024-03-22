@@ -3,6 +3,7 @@ using Ecommerce.PayPal.Contracts;
 using Ecommerce.PayPal.Contracts.Refit;
 using Ecommerce.PayPal.Security;
 using Ecommerce.PayPal.Services;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Refit;
@@ -22,6 +23,8 @@ namespace Ecommerce.PayPal
                 throw new Exception(
                     "PayPal ClientId and Secret are required. Please add them to the appsettings.json file.");
             }
+
+            services.AddMemoryCache();
             
             services.AddScoped<IPaypalClientService, PaypalClientService>();
             services.AddScoped<ITokenCacheService, TokenCacheService>();
