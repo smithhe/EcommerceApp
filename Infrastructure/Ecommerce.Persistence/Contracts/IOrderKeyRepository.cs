@@ -38,5 +38,15 @@ namespace Ecommerce.Persistence.Contracts
         /// <c>null</c> if no <see cref="OrderKey"/> with the specified Order ID is found.
         /// </returns>
         Task<OrderKey?> GetByOrderIdAsync(int orderId);
+
+        /// <summary>
+        /// Retrieves a <see cref="OrderKey"/> from the database with the specified token.
+        /// </summary>
+        /// <param name="token">The token generated to map back to the order id</param>
+        /// <returns>
+        /// The <see cref="OrderKey"/> if found;
+        /// <c>null</c> if no <see cref="OrderKey"/> with the specified token is found.
+        /// </returns>
+        Task<OrderKey?> GetByReturnKeyAsync(string token);
     }
 }

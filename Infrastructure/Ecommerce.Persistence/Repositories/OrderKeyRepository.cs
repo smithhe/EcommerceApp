@@ -140,5 +140,37 @@ namespace Ecommerce.Persistence.Repositories
 
             return orderKey;
         }
+        
+        /// <summary>
+        /// Retrieves a <see cref="OrderKey"/> from the database with the specified token.
+        /// </summary>
+        /// <param name="token">The token generated to map back to the order id</param>
+        /// <returns>
+        /// The <see cref="OrderKey"/> if found;
+        /// <c>null</c> if no <see cref="OrderKey"/> with the specified token is found.
+        /// </returns>
+        public async Task<OrderKey?> GetByReturnKeyAsync(string token)
+        {
+            const string sql = $"SELECT * FROM {_tableName} WHERE OrderToken = @OrderToken";
+            OrderKey? orderKey = null;
+			
+            using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+            {
+                connection.Open();
+
+                try
+                {
+                    orderKey = await connection.QueryFirstOrDefaultAsync<OrderKey>(sql, new { OrderToken = token });
+                }
+                catch (Exception e)
+                {
+                    this._logger.LogError(e, $"SQL Error when fetching OrderKey row for {token}");
+                }
+				
+                connection.Close();
+            }
+
+            return orderKey;
+        }
     }
 }
