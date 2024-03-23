@@ -18,19 +18,16 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
     {
         private readonly ILogger<CancelPayPalOrderCommandHandler> _logger;
         private readonly IMediator _mediator;
-        private readonly IPaypalClientService _paypalClientService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CancelPayPalOrderCommandHandler"/> class.
         /// </summary>
         /// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
         /// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
-        /// <param name="paypalClientService">The <see cref="IPaypalClientService"/> instance for handling PayPal Api Requests</param>
-        public CancelPayPalOrderCommandHandler(ILogger<CancelPayPalOrderCommandHandler> logger, IMediator mediator, IPaypalClientService paypalClientService)
+        public CancelPayPalOrderCommandHandler(ILogger<CancelPayPalOrderCommandHandler> logger, IMediator mediator)
         {
             this._logger = logger;
             this._mediator = mediator;
-            this._paypalClientService = paypalClientService;
         }
         
         /// <summary>
