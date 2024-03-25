@@ -6,10 +6,12 @@ using FastEndpoints;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder;
+using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Enums;
 using Ecommerce.Shared.Exceptions;
 using Ecommerce.Shared.Responses.PayPal;
@@ -62,6 +64,14 @@ namespace Ecommerce.FastEndpoints.Order
 			{
 				//Token is Invalid
 				await this.SendUnauthorizedAsync(ct);
+				return;
+			}
+			
+			//Check if the request is valid
+			if (ValidateRequest(req) == false)
+			{
+				//Invalid Request
+				await this.SendAsync(new CreateOrderResponse { Success = false, Message = "Invalid Request" }, 400, ct);
 				return;
 			}
 
@@ -124,6 +134,24 @@ namespace Ecommerce.FastEndpoints.Order
 			//Send the response object
 			await this.SendOkAsync(response, ct);
 		}
+
+		private static bool ValidateRequest(CreateOrderApiRequest request)
+		{
+			//Check if we have any cart items
+			if (request.CartItems == null || request.CartItems.Any() == false)
+			{
+				return false;
+			}
+			
+			//Check if we have a valid payment source
+			if (Enum.IsDefined(typeof(PaymentSource), request.PaymentSource) == false)
+			{
+				return false;
+			}
+
+			//Valid Request
+			return true;
+		}
 		
 		/// <summary>
 		/// Handles using PayPal as the payment source for the order
@@ -135,7 +163,7 @@ namespace Ecommerce.FastEndpoints.Order
 			//Create the PayPal Order
 			CreatePayPalOrderResponse payPalResponse = await this._mediator.Send(new CreatePayPalOrderCommand
 				{
-					Order = response.Order!
+					Order = response.Order!,
 				}, ct);
 			
 			if (payPalResponse.Success)

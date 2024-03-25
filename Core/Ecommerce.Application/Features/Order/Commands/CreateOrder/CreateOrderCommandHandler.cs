@@ -66,7 +66,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			CreateOrderResponse response = new CreateOrderResponse { Success = true, Message = "Order Successfully Created" };
 			
 			//Check if the CartItems is null or empty
-			if (command.CartItems == null || command.CartItems.Count() == 0)
+			if (command.CartItems == null || command.CartItems.Any() == false)
 			{
 				this._logger.LogWarning("CartItems was null or empty in command, returning failed response");
 				response.Success = false;
@@ -92,27 +92,29 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			foreach (CartItemDto cartItem in command.CartItems)
 			{
 				//Get the price of the product
-				double productPrice = await this.GetProductPrice(cartItem.ProductId);
+				ProductDto? cartItemProduct = await this.GetProduct(cartItem.ProductId);
 				
 				//Verify we got a valid price back
-				if (productPrice != -1)
+				if (cartItemProduct == null)
 				{
 					//Return a failed response due to error getting product price
 					response.Success = false;
-					response.Message = "Failed to get product price during order create";
+					response.Message = "Failed to get product during order create";
 					return response;
 				}
 				
 				//Create the order item
 				OrderItemDto orderItem = new OrderItemDto
 				{
-					ProductId = cartItem.ProductId,
+					ProductName = cartItemProduct.Name,
+					ProductDescription = cartItemProduct.Description,
+					ProductSku = cartItemProduct.Id.ToString(),
 					Quantity = cartItem.Quantity,
-					Price = productPrice
+					Price = cartItemProduct.Price
 				};
 				
 				//Add to the total
-				total += productPrice;
+				total += cartItemProduct.Price * cartItem.Quantity;
 				
 				orderItems.Add(orderItem);
 			}
@@ -200,16 +202,11 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			return response;
 		}
 
-		private async Task<double> GetProductPrice(int productId)
+		private async Task<ProductDto?> GetProduct(int productId)
 		{
 			GetProductByIdResponse response = await this._mediator.Send(new GetProductByIdQuery() { Id = productId });
 			
-			if (response.Success)
-			{
-				return response.Product!.Price;
-			}
-			
-			return -1;
+			return response.Product;
 		}
 	}
 }

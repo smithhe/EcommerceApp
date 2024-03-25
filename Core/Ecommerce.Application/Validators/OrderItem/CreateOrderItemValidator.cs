@@ -23,15 +23,7 @@ namespace Ecommerce.Application.Validators.OrderItem
 				.GreaterThan(0).WithMessage("Price must be greater than 0");
 
 			RuleFor(c => c)
-				.MustAsync(ProductExists).WithMessage("Product must exist");
-			
-			RuleFor(c => c)
 				.MustAsync(OrderExists).WithMessage("Order must exist");
-		}
-
-		private async Task<bool> ProductExists(CreateOrderItemCommand command, CancellationToken cancellationToken)
-		{
-			return (await this._productAsyncRepository.GetByIdAsync(command.OrderItemToCreate.ProductId)) == null;
 		}
 		
 		private async Task<bool> OrderExists(CreateOrderItemCommand command, CancellationToken cancellationToken)
