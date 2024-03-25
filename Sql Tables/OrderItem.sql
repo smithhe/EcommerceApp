@@ -1,6 +1,8 @@
 CREATE TABLE OrderItem (
     Id INT AUTO_INCREMENT PRIMARY KEY,
-    ProductId INT NOT NULL,
+    ProductName VARCHAR(255) NOT NULL,
+    ProductSku VARCHAR(255) NOT NULL,
+    ProductDescription TEXT NOT NULL,
 	OrderId INT NOT NULL,
     Quantity INT NOT NULL,
     Price DOUBLE NOT NULL,

@@ -76,8 +76,8 @@ namespace Ecommerce.Persistence.Repositories
 		{
 			int newId = -1;
 			const string sql =
-				$"INSERT INTO {_tableName} (ProductId, OrderId, Quantity, Price, CreatedBy, CreatedDate) " +
-				"VALUES (@ProductId, @OrderId, @Quantity, @Price, @CreatedBy, @CreatedDate);" +
+				$"INSERT INTO {_tableName} (ProductName, ProductDescription, ProductSku, OrderId, Quantity, Price, CreatedBy, CreatedDate) " +
+				"VALUES (@ProductName, @ProductDescription, @ProductSku, @OrderId, @Quantity, @Price, @CreatedBy, @CreatedDate);" +
 				"SELECT LAST_INSERT_ID();";
 			
 			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
@@ -117,7 +117,9 @@ namespace Ecommerce.Persistence.Repositories
 			int rowsEffected = -1;
 			const string sql = $@"
             UPDATE {_tableName}
-            SET ProductId = @ProductId,
+            SET ProductName = @ProductName,
+                ProductDescription = @ProductDescription,
+                ProductSku = @ProductSku,
                 OrderId = @OrderId,
                 Quantity = @Quantity,
                 Price = @Price,
