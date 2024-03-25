@@ -113,14 +113,6 @@ namespace Ecommerce.PayPal.Services
             List<PurchaseUnit> purchaseUnits = new List<PurchaseUnit>();
             foreach (OrderItemDto orderItem in request.Order.OrderItems)
             {
-                ProductDto? orderProduct = request.OrderProducts.FirstOrDefault(x => x.Id == orderItem.ProductId);
-                
-                if (orderProduct == null)
-                {
-                    response.Message = "Product information not found for order item";
-                    return response;
-                }
-                
                 purchaseUnits.Add(new PurchaseUnit
                 {
                     Amount = new Currency
@@ -132,9 +124,9 @@ namespace Ecommerce.PayPal.Services
                     {
                         new Item
                         {
-                            Name = orderProduct.Name,
-                            Description = orderProduct.Description,
-                            Sku = orderProduct.Id.ToString(),
+                            Name = orderItem.ProductName,
+                            Description = orderItem.ProductDescription,
+                            Sku = orderItem.ProductSku,
                             UnitAmount = new Currency
                             {
                                 CurrencyCode = "USD",

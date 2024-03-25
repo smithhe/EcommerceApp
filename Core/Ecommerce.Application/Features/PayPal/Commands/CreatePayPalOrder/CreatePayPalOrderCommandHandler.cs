@@ -68,23 +68,6 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
                 return response;
             }
             
-            //Get the list of products from the order
-            List<ProductDto> orderProducts = new List<ProductDto>();
-            foreach (OrderItemDto orderItem in command.Order.OrderItems)
-            {
-                ProductDto? product = await this.GetProductInfo(orderItem.ProductId);
-                
-                //If the product is null, log the error and return the response
-                if (product == null)
-                {
-                    this._logger.LogError($"Failed to get product info for product for order item {orderItem.ProductId}");
-                    response.Message = "Failed to get product info for product in PayPal order create";
-                    return response;
-                }
-                
-                orderProducts.Add(product);
-            }
-            
             //Create a new Guid for the PayPal request to help ensure Idempotency
             Guid payPalRequestId = Guid.NewGuid();
             command.Order.PayPalRequestId = payPalRequestId;
@@ -108,7 +91,6 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
             response = await this._paypalClientService.CreateOrder(new CreatePayPalOrderRequest
             {
                 Order = command.Order,
-                OrderProducts = orderProducts.ToArray(),
                 ReturnKey = returnKey
             });
 
@@ -125,13 +107,6 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
             }
 
             return response;
-        }
-        
-        private async Task<ProductDto?> GetProductInfo(int productId)
-        {
-            GetProductByIdResponse response = await this._mediator.Send(new GetProductByIdQuery() { Id = productId });
-
-            return response.Product;
         }
     }
 }
