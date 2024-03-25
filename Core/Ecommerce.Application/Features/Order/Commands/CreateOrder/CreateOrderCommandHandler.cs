@@ -84,7 +84,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			}
 			
 			//Create a new order
-			OrderDto newOrder = new OrderDto { Status = OrderStatus.Created, OrderItems = new List<OrderItemDto>()};
+			OrderDto newOrder = new OrderDto { Status = OrderStatus.Created };
 			List<OrderItemDto> orderItems = new List<OrderItemDto>();
 			double total = 0;
 			
@@ -142,7 +142,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 				return response;
 			}
 			
-			//Valid Command
+			//Order is valid, map the dto to the entity
 			Domain.Entities.Order orderToCreate = this._mapper.Map<Domain.Entities.Order>(newOrder);
 			orderToCreate.CreatedBy = command.UserName;
 			orderToCreate.CreatedDate = DateTime.Now;
@@ -189,13 +189,13 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 					
 					//Delete the order since the items failed to create
 					await this._orderAsyncRepository.DeleteAsync(order);
+					
+					if (orderItemResponse.ValidationErrors.Count > 0)
+					{
+						response.ValidationErrors.Concat(orderItemResponse.ValidationErrors);
+					}
 
 					break;
-				}
-
-				if (orderItemResponse.ValidationErrors.Count > 0)
-				{
-					response.ValidationErrors.Concat(orderItemResponse.ValidationErrors);
 				}
 			}
 

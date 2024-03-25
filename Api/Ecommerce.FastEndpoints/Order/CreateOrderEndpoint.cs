@@ -6,12 +6,10 @@ using FastEndpoints;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder;
-using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Enums;
 using Ecommerce.Shared.Exceptions;
 using Ecommerce.Shared.Responses.PayPal;
@@ -135,6 +133,13 @@ namespace Ecommerce.FastEndpoints.Order
 			await this.SendOkAsync(response, ct);
 		}
 
+		/// <summary>
+		/// Validates the <see cref="CreateOrderApiRequest"/> to ensure it is valid
+		/// </summary>
+		/// <param name="request">The <see cref="CreateOrderApiRequest"/> to validate</param>
+		/// <returns>
+		/// <c>true</c> if the request is valid; otherwise, <c>false</c>.
+		/// </returns>
 		private static bool ValidateRequest(CreateOrderApiRequest request)
 		{
 			//Check if we have any cart items
