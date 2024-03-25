@@ -1,11 +1,7 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 using Blazored.Toast.Services;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Order;
-using Ecommerce.Shared.Responses.Product;
 using Ecommerce.UI.Contracts;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -18,7 +14,6 @@ namespace Ecommerce.UI.Pages.CheckoutReturn
         [Inject] public AuthenticationStateProvider AuthenticationStateProvider { get; set; } = null!;
         
         [Inject] private IOrderService OrderService { get; set; } = null!;
-        [Inject] private IProductService ProductService { get; set; } = null!;
         [Inject] private IToastService ToastService { get; set; } = null!;
         
         [Parameter] public string OrderId { get; set; } = null!;
