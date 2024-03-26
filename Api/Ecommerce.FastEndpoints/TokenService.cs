@@ -1,3 +1,4 @@
+using System;
 using Ecommerce.Identity.Contracts;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
@@ -67,6 +68,25 @@ namespace Ecommerce.FastEndpoints
 			Claim? usernameClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name);
 
 			return usernameClaim?.Value;
+		}
+
+		public static Guid? GetUserIdFromToken(string? token)
+		{
+			//Check for null token
+			if (string.IsNullOrEmpty(token))
+			{
+				return null;
+			}
+			
+			token = token.Substring("Bearer ".Length);
+			
+			// Decode the JWT token
+			JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+			JwtSecurityToken jwtToken = tokenHandler.ReadJwtToken(token);
+			
+			Claim? userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+
+			return userIdClaim == null ? null : Guid.Parse(userIdClaim.Value);
 		}
 	}
 }

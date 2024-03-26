@@ -83,6 +83,15 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 				return response;
 			}
 			
+			//Check if the userid is null or empty
+			if (command.UserId == null || command.UserId == Guid.Empty)
+			{
+				this._logger.LogWarning("UserId was null or empty in command, returning failed response");
+				response.Success = false;
+				response.Message = "Must provide a UserId to create";
+				return response;
+			}
+			
 			//Create a new order
 			OrderDto newOrder = new OrderDto { Status = OrderStatus.Created };
 			List<OrderItemDto> orderItems = new List<OrderItemDto>();
@@ -121,6 +130,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			
 			//Add the order items and total to the order
 			newOrder.OrderItems = orderItems.ToArray();
+			newOrder.UserId = (Guid)command.UserId;
 			newOrder.Total = total;
 			
 			//Validate the dto that was passed in the command

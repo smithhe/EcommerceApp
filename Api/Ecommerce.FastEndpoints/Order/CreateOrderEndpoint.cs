@@ -81,7 +81,8 @@ namespace Ecommerce.FastEndpoints.Order
 				response = await this._mediator.Send(new CreateOrderCommand
 				{
 					CartItems = req.CartItems, 
-					UserName = TokenService.GetUserNameFromToken(token)
+					UserName = TokenService.GetUserNameFromToken(token),
+					UserId = TokenService.GetUserIdFromToken(token)
 				}, ct);
 			}
 			catch (Exception e)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Shared.Dtos;
@@ -20,5 +21,10 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 		/// The User requesting to create the Order
 		/// </summary>
 		public string? UserName { get; set; }
+		
+		/// <summary>
+		/// The Id of the User requesting to create the Order
+		/// </summary>
+		public Guid? UserId { get; set; }
 	}
 }

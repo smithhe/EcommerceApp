@@ -1,3 +1,4 @@
+using System;
 using Ecommerce.Application.Features.Order.Commands.CreateOrder;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Enums;
@@ -10,10 +11,14 @@ namespace Ecommerce.Application.Validators.Order
 		public CreateOrderValidator()
 		{
 			RuleFor(o => o.Status)
-				.Equal(OrderStatus.Pending).WithMessage("New Orders must have a Pending status");
+				.Equal(OrderStatus.Created).WithMessage("New Orders must have a Creating status");
 
 			RuleFor(o => o.OrderItems)
 				.NotEmpty().WithMessage("Order must have at least one Order Item");
+			
+			RuleFor(o => o.UserId)
+				.NotNull().WithMessage("User Id must be provided")
+				.NotEqual(Guid.Empty).WithMessage("User Id must be provided");
 			
 			RuleFor(o => o.Total)
 				.GreaterThan(0).WithMessage("Total must be greater than 0");
