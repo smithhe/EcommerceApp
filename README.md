@@ -15,9 +15,9 @@ This is app is not finished and is still being updated but following the instruc
 2) Run the following command to setup a MySQL Docker Container
 
         docker run --name ecommerce-mysql -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=ecommerce -e MYSQL_USER=applicationuser -e MYSQL_PASSWORD=Welcome1! mysql:latest
-3) Run the following command to install the ef core cli tool if you don't already have it installed
+3) Run the following command to install the dotnet tools needed for this repo
 
-        dotnet tool install --global dotnet-ef --version 7.0.17
+        dotnet tool restore
 4) Update your appsettings.Development.json file in the API project to have the following connection string <br/> (You *SHOULD* change the values to match your MySQL container setup)
    ```
    "ConnectionStrings": {
