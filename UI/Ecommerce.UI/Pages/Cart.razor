@@ -49,8 +49,8 @@ else
                 <tr>
                     <td>@(product?.Name)</td>
                     <td>@cartItem.Quantity</td>
-                    <td>@product?.Price</td>
-                    <td>@string.Concat("$", price.ToString("0.00"))</td>
+                    <td>@product?.Price.ToString("C")</td>
+                    <td>@price.ToString("C")</td>
                     <td>
                         <button class="btn btn-primary" @onclick="() => EditCartItem(cartItem)">Edit</button>
                         <button class="btn btn-danger" @onclick="() => RemoveCartItem(cartItem)">X</button>
@@ -64,7 +64,7 @@ else
         {
             <div class="row w-100 text-center">
                 <h2>
-                    Total:$@this.CartTotal
+                    Total: @this.CartTotal.ToString("C")
                 </h2>
             </div>
             <div class="row w-100 mt-2">
