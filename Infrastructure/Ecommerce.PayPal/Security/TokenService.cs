@@ -11,9 +11,9 @@ namespace Ecommerce.PayPal.Security
         private readonly ITokenCacheService _tokenCacheService;
         private readonly string _payPalCacheKey;
         
-        public TokenService(HttpClient httpClient, ITokenCacheService tokenCacheService, IConfiguration configuration)
+        public TokenService(IHttpClientFactory httpClientFactory, ITokenCacheService tokenCacheService, IConfiguration configuration)
         {
-            this._httpClient = httpClient;
+            this._httpClient = httpClientFactory.CreateClient(nameof(TokenService));
             this._tokenCacheService = tokenCacheService;
             this._payPalCacheKey = configuration["Paypal:CacheKey"]!;
         }

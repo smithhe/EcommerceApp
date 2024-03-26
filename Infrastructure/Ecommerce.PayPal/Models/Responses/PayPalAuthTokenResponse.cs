@@ -1,4 +1,4 @@
-using Refit;
+using System.Text.Json.Serialization;
 
 namespace Ecommerce.PayPal.Models.Responses
 {
@@ -10,37 +10,37 @@ namespace Ecommerce.PayPal.Models.Responses
         /// <summary>
         /// The scope of the token.
         /// </summary>
-        [AliasAs("scope")]
+        [JsonPropertyName("scope")]
         public string? Scope { get; set; }
         
         /// <summary>
         /// The access token to use for requests.
         /// </summary>
-        [AliasAs("access_token")]
+        [JsonPropertyName("access_token")]
         public string? AccessToken { get; set; }
         
         /// <summary>
         /// The token type.
         /// </summary>
-        [AliasAs("token_type")]
+        [JsonPropertyName("token_type")]
         public string? TokenType { get; set; }
         
         /// <summary>
         /// The app id.
         /// </summary>
-        [AliasAs("app_id")]
+        [JsonPropertyName("app_id")]
         public string? AppId { get; set; }
         
         /// <summary>
         /// Time in seconds until the token expires.
         /// </summary>
-        [AliasAs("expires_in")]
+        [JsonPropertyName("expires_in")]
         public int ExpiresIn { get; set; }
         
         /// <summary>
         /// The nonce.
         /// </summary>
-        [AliasAs("nonce")]
+        [JsonPropertyName("nonce")]
         public string? Nonce { get; set; }
     }
 }
