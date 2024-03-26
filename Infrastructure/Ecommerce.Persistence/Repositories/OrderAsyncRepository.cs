@@ -18,7 +18,7 @@ namespace Ecommerce.Persistence.Repositories
 	{
 		private readonly ILogger<OrderAsyncRepository> _logger;
 		private readonly IConfiguration _configuration;
-		private const string _tableName = "Order";
+		private const string _tableName = "`Order`";
 		private const string _connectionStringName = "datastorage";
 
 		/// <summary>
@@ -77,7 +77,7 @@ namespace Ecommerce.Persistence.Repositories
 			int newId = -1;
 			const string sql =
 				$"INSERT INTO {_tableName} (UserId, Status, Total, PayPalRequestId, CreatedBy, CreatedDate) " +
-				"VALUES (@UserId, @Status, Total, @PayPalRequestId, @CreatedBy, @CreatedDate);" +
+				"VALUES (@UserId, @Status, @Total, @PayPalRequestId, @CreatedBy, @CreatedDate);" +
 				"SELECT LAST_INSERT_ID();";
 			
 			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
