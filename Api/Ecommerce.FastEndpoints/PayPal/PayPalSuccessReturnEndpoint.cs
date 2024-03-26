@@ -5,6 +5,7 @@ using Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey;
 using Ecommerce.Shared.Dtos;
 using FastEndpoints;
 using MediatR;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.PayPal
@@ -16,16 +17,19 @@ namespace Ecommerce.FastEndpoints.PayPal
     {
         private readonly ILogger<PayPalSuccessReturnEndpoint> _logger;
         private readonly IMediator _mediator;
+        private readonly IConfiguration _configuration;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PayPalSuccessReturnEndpoint"/> class.
         /// </summary>
         /// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
         /// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
-        public PayPalSuccessReturnEndpoint(ILogger<PayPalSuccessReturnEndpoint> logger, IMediator mediator)
+        /// <param name="configuration">The <see cref="IConfiguration"/> instance used for configuration settings.</param>
+        public PayPalSuccessReturnEndpoint(ILogger<PayPalSuccessReturnEndpoint> logger, IMediator mediator, IConfiguration configuration)
         {
             this._logger = logger;
             this._mediator = mediator;
+            this._configuration = configuration;
         }
         
         /// <summary>
@@ -49,12 +53,15 @@ namespace Ecommerce.FastEndpoints.PayPal
             //Get the return key from the route
             string? returnKey = this.Route<string>("returnKey");
             
+            //Get the UI Url from the configuration
+            string? uiUrl = this._configuration["Paypal:UIUrl"];
+            
             //Check if we have a return key
             if (string.IsNullOrEmpty(returnKey))
             {
                 //Redirect to the error page in the UI
                 //TODO: Update this to the correct error page when it is created
-                await this.SendRedirectAsync("/error", cancellation: ct);
+                await this.SendRedirectAsync($"{uiUrl}/error", cancellation: ct);
                 return;
             }
             
@@ -66,7 +73,7 @@ namespace Ecommerce.FastEndpoints.PayPal
             {
                 //Redirect to the error page in the UI
                 //TODO: Update this to the correct error page when it is created
-                await this.SendRedirectAsync("/error", cancellation: ct);
+                await this.SendRedirectAsync($"{uiUrl}/error", cancellation: ct);
                 return;
             }
             
@@ -79,12 +86,12 @@ namespace Ecommerce.FastEndpoints.PayPal
                 //Log the error and return false
                 this._logger.LogError("Failed to get the order from the return key");
                 //TODO: Update this to the correct error page when it is created
-                await this.SendRedirectAsync("/error", cancellation: ct);
+                await this.SendRedirectAsync($"{uiUrl}/error", cancellation: ct);
                 return;
             }
             
             //Redirect to the success page in the UI
-            await this.SendRedirectAsync($"/checkout/success/{order.Id}", cancellation: ct);
+            await this.SendRedirectAsync($"{uiUrl}/checkout/success/{order.Id}", cancellation: ct);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder;
 using FastEndpoints;
 using MediatR;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.PayPal
@@ -14,16 +15,19 @@ namespace Ecommerce.FastEndpoints.PayPal
     {
         private readonly ILogger<PayPalCancelReturnEndpoint> _logger;
         private readonly IMediator _mediator;
+        private readonly IConfiguration _configuration;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PayPalCancelReturnEndpoint"/> class.
         /// </summary>
         /// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
         /// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
-        public PayPalCancelReturnEndpoint(ILogger<PayPalCancelReturnEndpoint> logger, IMediator mediator)
+        /// <param name="configuration">The <see cref="IConfiguration"/> instance used for configuration settings.</param>
+        public PayPalCancelReturnEndpoint(ILogger<PayPalCancelReturnEndpoint> logger, IMediator mediator, IConfiguration configuration)
         {
             this._logger = logger;
             this._mediator = mediator;
+            this._configuration = configuration;
         }
         
         /// <summary>
@@ -44,6 +48,9 @@ namespace Ecommerce.FastEndpoints.PayPal
             //Log the request to cancel the PayPal return
             this._logger.LogInformation("Handling request to cancel an order from PayPal");
             
+            //Get the UI Url from the configuration
+            string? uiUrl = this._configuration["Paypal:UIUrl"];
+            
             //Get the return key from the route
             string? returnKey = this.Route<string>("returnKey");
             
@@ -52,7 +59,7 @@ namespace Ecommerce.FastEndpoints.PayPal
             {
                 //Redirect to the error page in the UI
                 //TODO: Update this to the correct error page when it is created
-                await this.SendRedirectAsync("/error", cancellation: ct);
+                await this.SendRedirectAsync($"{uiUrl}/error", cancellation: ct);
                 return;
             }
             
@@ -64,12 +71,12 @@ namespace Ecommerce.FastEndpoints.PayPal
             {
                 //Redirect to the error page in the UI
                 //TODO: Update this to the correct error page when it is created
-                await this.SendRedirectAsync("/error", cancellation: ct);
+                await this.SendRedirectAsync($"{uiUrl}/error", cancellation: ct);
             }
             else
             {
                 //Redirect to the success page in the UI
-                await this.SendRedirectAsync("/checkout/cancel", cancellation: ct);
+                await this.SendRedirectAsync($"{uiUrl}/checkout/cancel", cancellation: ct);
             }
         }
     }

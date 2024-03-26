@@ -68,7 +68,11 @@ namespace Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
             order.Status = OrderStatus.Pending;
             
             //Update the order in the database
-            UpdateOrderResponse updateOrderResponse = await this._mediator.Send(new UpdateOrderCommand { OrderToUpdate = order }, cancellationToken);
+            UpdateOrderResponse updateOrderResponse = await this._mediator.Send(new UpdateOrderCommand
+            {
+                OrderToUpdate = order,
+                UserName = "System"
+            }, cancellationToken);
             
             //Check if the update was successful
             if (updateOrderResponse.Success == false)

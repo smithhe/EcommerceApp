@@ -39,7 +39,7 @@ namespace Ecommerce.FastEndpoints.Order
         /// </summary>
         public override void Configure()
         {
-            Get("/api/checkout/order/{id}");
+            Get("/api/checkout/order");
             //TODO: Add roles
         }
 

@@ -1,4 +1,5 @@
 using System.Net;
+using System.Text.Json;
 using Ecommerce.PayPal.Contracts;
 using Ecommerce.PayPal.Contracts.Refit;
 using Ecommerce.PayPal.Models;
@@ -90,7 +91,7 @@ namespace Ecommerce.PayPal.Services
                         ExperienceContext = new ExperienceContext
                         {
                             PaymentMethodPreference = PaymentMethodPreference.IMMEDIATE_PAYMENT_REQUIRED,
-                            BrandName = "Ecommerce",
+                            BrandName = "TechGear Forge",
                             Locale = "en-US",
                             LandingPage = LandingPage.LOGIN,
                             ShippingPreference = ShippingPreference.NO_SHIPPING,
@@ -102,38 +103,49 @@ namespace Ecommerce.PayPal.Services
                 }
             };
             
-            //Create the purchase units
-            List<PurchaseUnit> purchaseUnits = new List<PurchaseUnit>();
+            //Create the items for the purchase unit
+            List<Item> purchaseUnitItems = new List<Item>();
             foreach (OrderItemDto orderItem in request.Order.OrderItems)
             {
-                purchaseUnits.Add(new PurchaseUnit
+                purchaseUnitItems.Add(new Item
                 {
-                    Amount = new Currency
+                    Name = orderItem.ProductName,
+                    Description = orderItem.ProductDescription,
+                    Sku = orderItem.ProductSku,
+                    UnitAmount = new Currency
                     {
                         CurrencyCode = "USD",
-                        Value = (orderItem.Price * orderItem.Quantity).ToString("F")
+                        Value = orderItem.Price.ToString("0.00")
                     },
-                    Items = new List<Item>
-                    {
-                        new Item
-                        {
-                            Name = orderItem.ProductName,
-                            Description = orderItem.ProductDescription,
-                            Sku = orderItem.ProductSku,
-                            UnitAmount = new Currency
-                            {
-                                CurrencyCode = "USD",
-                                Value = orderItem.Price.ToString("F")
-                            },
-                            Quantity = orderItem.Quantity.ToString(),
-                            Category = Category.DIGITAL_GOODS
-                        }
-                    }
+                    Quantity = orderItem.Quantity.ToString(),
+                    Category = Category.DIGITAL_GOODS
                 });
             }
             
+            PurchaseUnit purchaseUnit = new PurchaseUnit
+            {
+                Amount = new PurchaseAmount
+                {
+                    CurrencyCode = "USD",
+                    Value = request.Order.Total.ToString("0.00"),
+                    BreakDown = new BreakDown
+                    {
+                        ItemTotal = new Currency
+                        {
+                            CurrencyCode = "USD",
+                            Value = request.Order.Total.ToString("0.00")
+                        }
+                    }
+                },
+                Items = purchaseUnitItems.ToArray(),
+                Description = "TechGear Forge Order",
+                SoftDescriptor = "TechGear Forge Order",
+            };
+            
             //Add the purchase units to the request
-            payPalCreateOrderRequest.PurchaseUnits = purchaseUnits.ToArray();
+            payPalCreateOrderRequest.PurchaseUnits = new PurchaseUnit[1] { purchaseUnit };
+            
+            string json = JsonSerializer.Serialize(payPalCreateOrderRequest);
             
             //Send the create order request to PayPal
             ApiResponse<PayPalCreateOrderResponse> payPalApiResponse = await this._payPalApiService.CreatePayPalOrder(request.Order.PayPalRequestId.ToString(), payPalCreateOrderRequest);
@@ -157,7 +169,7 @@ namespace Ecommerce.PayPal.Services
                 //Update the response object
                 response.Success = true;
                 response.Message = "PayPal Order Created Successfully";
-                response.RedirectUrl = responseContent?.Links.FirstOrDefault(x => x.Rel == "approve")?.Href;
+                response.RedirectUrl = responseContent?.Links.FirstOrDefault(x => x.Rel == "payer-action")?.Href;
 
                 //Return the response
                 return response;
