@@ -8,17 +8,20 @@
                 SuccessClass="success-toast-override"
                 SuccessIcon="done_outline"
                 ErrorIcon="fa fa-bug"/>
-
-@if (this.Order == null)
+@if (this.ShowError)
+{
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="alert alert-danger text-center" role="alert">
+                @this.ErrorMessage
+            </div>
+        </div>
+    </div>
+}
+else if (this.Order == null)
 {
     <div style="position:fixed;top:50%;left:50%;margin-top:-50px;margin-left:-100px;">
         <img src="images/ajax-loader.gif" alt="Loading..."/>
-    </div>
-}
-else if (this.ShowError)
-{
-    <div class="alert alert-danger text-center" role="alert">
-        @this.ErrorMessage
     </div>
 }
 else
@@ -30,7 +33,7 @@ else
                 <p class="lead">Your order has been placed successfully.</p>
                 <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading">Order Confirmation</h4>
-                    <p>Your order number is <strong>#123456</strong>. You will receive an email confirmation shortly.</p>
+                    <p>Your order number is <strong>#@this.Order.Id</strong>. You will receive an email confirmation shortly.</p>
                 </div>
             </div>
         </div>

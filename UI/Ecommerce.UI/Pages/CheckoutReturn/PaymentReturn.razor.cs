@@ -26,14 +26,17 @@ namespace Ecommerce.UI.Pages.CheckoutReturn
         protected override async Task OnInitializedAsync()
         {
             //Get the order by the order id
-            GetOrderByIdResponse getOrderByIdResponse = await this.OrderService.GetOrderById(int.Parse(this.OrderId));
+            GetOrderAfterSuccessfulCheckoutResponse getOrderAfterSuccessfulCheckoutResponse = await this.OrderService.GetOrderAfterSuccessfulCheckout(int.Parse(this.OrderId));
             
             //Failed to get the order
-            if (getOrderByIdResponse.Success == false)
+            if (getOrderAfterSuccessfulCheckoutResponse.Success == false)
             {
-                this.ErrorMessage = getOrderByIdResponse.Message ?? "Unexpected Error Occurred";
+                this.ErrorMessage = getOrderAfterSuccessfulCheckoutResponse.Message ?? "Unexpected Error Occurred";
                 this.ShowError = true;    
             }
+            
+            //Set the order
+            this.Order = getOrderAfterSuccessfulCheckoutResponse.Order;
         }
         
         private double GetTotal()

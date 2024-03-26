@@ -72,6 +72,23 @@ namespace Ecommerce.UI.Services
                 : JsonConvert.DeserializeObject<GetOrderByIdResponse>(response.Error.Content)!;
         }
         
+        public async Task<GetOrderAfterSuccessfulCheckoutResponse> GetOrderAfterSuccessfulCheckout(int orderId)
+        {
+            ApiResponse<GetOrderAfterSuccessfulCheckoutResponse> response = await this._orderApiService.GetOrderAfterSuccessfulCheckout(new GetOrderAfterSuccessfulCheckoutApiRequest
+            {
+                Id = orderId
+            });
+            
+            if (response.IsSuccessStatusCode)
+            {
+                return response.Content;
+            }
+            
+            return string.IsNullOrEmpty(response.Error.Content) ? 
+                new GetOrderAfterSuccessfulCheckoutResponse { Success = false, Message = "Unexpected Error Occurred" } 
+                : JsonConvert.DeserializeObject<GetOrderAfterSuccessfulCheckoutResponse>(response.Error.Content)!;
+        }
+        
         public async Task<CreateOrderResponse> CreateOrder(IEnumerable<CartItemDto> cartItems)
         {
             ApiResponse<CreateOrderResponse> response = await this._orderApiService.CreateOrder(new CreateOrderApiRequest

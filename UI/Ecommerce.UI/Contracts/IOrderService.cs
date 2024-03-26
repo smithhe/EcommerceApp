@@ -11,6 +11,7 @@ namespace Ecommerce.UI.Contracts
         Task<GetAllOrdersByUserIdResponse> GetUserOrders(Guid userId);
         Task<UpdateOrderResponse> UpdateOrder(OrderDto orderDto);
         Task<GetOrderByIdResponse> GetOrderById(int orderId);
+        Task<GetOrderAfterSuccessfulCheckoutResponse> GetOrderAfterSuccessfulCheckout(int orderId);
         Task<CreateOrderResponse> CreateOrder(IEnumerable<CartItemDto> cartItems);
     }
 }
