@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Ecommerce.Shared.Dtos;
+using Ecommerce.Shared.Enums;
 using Ecommerce.Shared.Requests.Order;
 using Ecommerce.Shared.Responses.Order;
 using Ecommerce.UI.Contracts;
@@ -75,7 +76,8 @@ namespace Ecommerce.UI.Services
         {
             ApiResponse<CreateOrderResponse> response = await this._orderApiService.CreateOrder(new CreateOrderApiRequest
             {
-                CartItems = cartItems
+                CartItems = cartItems,
+                PaymentSource = PaymentSource.PayPal
             });
             
             if (response.IsSuccessStatusCode)

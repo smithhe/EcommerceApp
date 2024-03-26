@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Enums;
 
@@ -17,6 +18,7 @@ namespace Ecommerce.Shared.Requests.Order
 		/// <summary>
 		/// The method of payment for the order
 		/// </summary>
+		[JsonConverter(typeof(JsonStringEnumConverter))]
 		public PaymentSource PaymentSource { get; set; }
 	}
 }
