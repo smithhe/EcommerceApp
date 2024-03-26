@@ -190,7 +190,11 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			{
 				//Update the order Id before sending the request
 				orderItem.OrderId = newId;
-				CreateOrderItemResponse orderItemResponse = await this._mediator.Send(new CreateOrderItemCommand { OrderItemToCreate = orderItem }, cancellationToken);
+				CreateOrderItemResponse orderItemResponse = await this._mediator.Send(new CreateOrderItemCommand
+				{
+					OrderItemToCreate = orderItem,
+					UserName = command.UserName
+				}, cancellationToken);
 
 				if (orderItemResponse.Success == false)
 				{

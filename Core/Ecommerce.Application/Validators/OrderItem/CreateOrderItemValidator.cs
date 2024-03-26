@@ -28,7 +28,7 @@ namespace Ecommerce.Application.Validators.OrderItem
 		
 		private async Task<bool> OrderExists(CreateOrderItemCommand command, CancellationToken cancellationToken)
 		{
-			return (await this._orderAsyncRepository.GetByIdAsync(command.OrderItemToCreate.OrderId)) == null;
+			return (await this._orderAsyncRepository.GetByIdAsync(command.OrderItemToCreate.OrderId)) != null;
 		}
 	}
 }
