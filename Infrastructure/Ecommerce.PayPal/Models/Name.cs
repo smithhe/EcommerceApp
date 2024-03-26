@@ -1,4 +1,4 @@
-using Refit;
+using System.Text.Json.Serialization;
 
 namespace Ecommerce.PayPal.Models
 {
@@ -10,7 +10,7 @@ namespace Ecommerce.PayPal.Models
         /// <summary>
         /// When the party is a person, the party's given, or first, name.
         /// </summary>
-        [AliasAs("given_name")]
+        [JsonPropertyName("given_name")]
         public string? GivenName { get; set; }
         
         /// <summary>
@@ -19,7 +19,7 @@ namespace Ecommerce.PayPal.Models
         /// Required when the party is a person.
         /// Use also to store multiple surnames including the matronymic, or mother's, surname.
         /// </summary>
-        [AliasAs("surname")]
+        [JsonPropertyName("surname")]
         public string? Surname { get; set; }
     }
 }

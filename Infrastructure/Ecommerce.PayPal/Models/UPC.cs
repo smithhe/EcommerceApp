@@ -1,5 +1,4 @@
-using Ecommerce.PayPal.Models.Enums;
-using Refit;
+using System.Text.Json.Serialization;
 
 namespace Ecommerce.PayPal.Models
 {
@@ -11,13 +10,13 @@ namespace Ecommerce.PayPal.Models
         /// <summary>
         /// The Universal Product Code type.
         /// </summary>
-        [AliasAs("type")]
+        [JsonPropertyName("type")]
         public string Type { get; set; } = null!;
         
         /// <summary>
         /// The UPC product code of the item.
         /// </summary>
-        [AliasAs("code")]
+        [JsonPropertyName("code")]
         public string Code { get; set; } = null!;
     }
 }

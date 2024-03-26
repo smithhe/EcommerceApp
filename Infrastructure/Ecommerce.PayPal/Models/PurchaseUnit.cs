@@ -15,7 +15,7 @@ namespace Ecommerce.PayPal.Models
         /// </summary>
         [AliasAs("reference_id")]
         public string ReferenceId { get; set; } = null!;
-        
+
         /// <summary>
         /// The purchase description.
         /// The maximum length of the character is dependent on the type of characters used.
@@ -23,7 +23,7 @@ namespace Ecommerce.PayPal.Models
         /// Depending on type of character; (e.g. accented character, Japanese characters) the number of characters that that can be specified as input might not equal the permissible max length.
         /// </summary>
         [AliasAs("description")]
-        public string? Description { get; set; }
+        public string Description { get; set; } = null!;
             
         /// <summary>
         /// The API caller-provided external ID.
@@ -39,12 +39,12 @@ namespace Ecommerce.PayPal.Models
         /// </summary>
         [AliasAs("invoice_id")]
         public string? InvoiceId { get; set; }
-            
+
         /// <summary>
         /// The soft descriptor is the dynamic text used to construct the statement descriptor that appears on a payer's card statement.
         /// </summary>
         [AliasAs("soft_descriptor")]
-        public string? SoftDescriptor { get; set; }
+        public string SoftDescriptor { get; set; } = null!;
             
         /// <summary>
         /// An array of items that the customer purchases from the merchant.
@@ -59,7 +59,7 @@ namespace Ecommerce.PayPal.Models
         /// For a list of supported currencies, decimal precision, and maximum charge amount, see the PayPal REST APIs Currency Codes.
         /// </summary>
         [AliasAs("amount")]
-        public Currency Amount { get; set; } = null!;
+        public PurchaseAmount Amount { get; set; } = null!;
             
         /// <summary>
         /// The merchant who receives payment for this transaction.

@@ -3,10 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Ecommerce.PayPal.Models
 {
-    /// <summary>
-    /// Represents a currency amount in PayPal.
-    /// </summary>
-    public class Currency
+    public class PurchaseAmount
     {
         /// <summary>
         /// The three-character ISO-4217 currency code that identifies the currency.
@@ -24,5 +21,12 @@ namespace Ecommerce.PayPal.Models
         [JsonPropertyName("value")]
         [MaxLength(32)]
         public string Value { get; set; } = null!;
+        
+        /// <summary>
+        /// The breakdown of the amount.
+        /// Breakdown provides details such as total item amount, total tax amount, shipping, handling, insurance, and discounts, if any.
+        /// </summary>
+        [JsonPropertyName("breakdown")]
+        public BreakDown? BreakDown { get; set; }
     }
 }

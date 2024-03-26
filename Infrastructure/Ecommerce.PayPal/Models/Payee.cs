@@ -1,4 +1,4 @@
-using Refit;
+using System.Text.Json.Serialization;
 
 namespace Ecommerce.PayPal.Models
 {
@@ -10,13 +10,13 @@ namespace Ecommerce.PayPal.Models
         /// <summary>
         /// The email address of merchant.
         /// </summary>
-        [AliasAs("email_address")]
+        [JsonPropertyName("email_address")]
         public string? Email { get; set; }
         
         /// <summary>
         /// The encrypted PayPal account ID of the merchant.
         /// </summary>
-        [AliasAs("merchant_id")]
+        [JsonPropertyName("merchant_id")]
         public string? MerchantId { get; set; }
     }
 }

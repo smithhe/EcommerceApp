@@ -1,4 +1,4 @@
-using Refit;
+using System.Text.Json.Serialization;
 
 namespace Ecommerce.PayPal.Models
 {
@@ -10,13 +10,13 @@ namespace Ecommerce.PayPal.Models
         /// <summary>
         /// The customer's tax ID value.
         /// </summary>
-        [AliasAs("tax_id")]
+        [JsonPropertyName("tax_id")]
         public string TaxId { get; set; } = null!;
         
         /// <summary>
         /// The customer's tax ID type.
         /// </summary>
-        [AliasAs("tax_id_type")]
+        [JsonPropertyName("tax_id_type")]
         public string TaxIdType { get; set; } = null!;
     }
 }

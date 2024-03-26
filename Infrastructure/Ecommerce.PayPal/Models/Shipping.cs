@@ -1,5 +1,4 @@
-using Ecommerce.PayPal.Models.Enums;
-using Refit;
+using System.Text.Json.Serialization;
 
 namespace Ecommerce.PayPal.Models
 {
@@ -12,25 +11,25 @@ namespace Ecommerce.PayPal.Models
         /// A classification for the method of purchase fulfillment (e.g shipping, in-store pickup, etc).
         /// Either type or options may be present, but not both.
         /// </summary>
-        [AliasAs("type")]
+        [JsonPropertyName("type")]
         public string? Type { get; set; }
         
         /// <summary>
         /// An array of shipping options that the payee or merchant offers to the payer to ship or pick up their items.
         /// </summary>
-        [AliasAs("options")]
+        [JsonPropertyName("options")]
         public IEnumerable<ShippingOptions> Options { get; set; } = null!;
         
         /// <summary>
         /// The name of the person to whom to ship the items. Supports only the full_name property.
         /// </summary>
-        [AliasAs("name")]
+        [JsonPropertyName("name")]
         public Name Name { get; set; } = null!;
         
         /// <summary>
         /// The address of the person to whom to ship the items.
         /// </summary>
-        [AliasAs("address")]
+        [JsonPropertyName("address")]
         public Address Address { get; set; } = null!;
     }
 }

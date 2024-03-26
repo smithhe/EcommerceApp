@@ -1,5 +1,4 @@
-using Ecommerce.PayPal.Models.Enums;
-using Refit;
+using System.Text.Json.Serialization;
 
 namespace Ecommerce.PayPal.Models
 {
@@ -11,7 +10,7 @@ namespace Ecommerce.PayPal.Models
         /// <summary>
         /// A unique ID that identifies a payer-selected shipping option.
         /// </summary>
-        [AliasAs("id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; } = null!;
         
         /// <summary>
@@ -19,7 +18,7 @@ namespace Ecommerce.PayPal.Models
         /// For example, Free Shipping or USPS Priority Shipping.
         /// Localize this description to the payer's locale.
         /// </summary>
-        [AliasAs("label")]
+        [JsonPropertyName("label")]
         public string Label { get; set; } = null!;
         
         /// <summary>
@@ -29,19 +28,19 @@ namespace Ecommerce.PayPal.Models
         /// the payer selected during the course of checkout with PayPal.
         /// Only one shipping.option can be set to selected=true.
         /// </summary>
-        [AliasAs("selected")]
+        [JsonPropertyName("selected")]
         public bool Selected { get; set; }
 
         /// <summary>
         /// A classification for the method of purchase fulfillment.
         /// </summary>
-        [AliasAs("type")]
+        [JsonPropertyName("type")]
         public string Type { get; set; } = null!;
         
         /// <summary>
         /// The shipping cost for the selected option.
         /// </summary>
-        [AliasAs("amount")]
+        [JsonPropertyName("amount")]
         public Currency Amount { get; set; } = null!;
     }
 }

@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Ecommerce.PayPal.Models
 {
     /// <summary>
@@ -8,6 +10,7 @@ namespace Ecommerce.PayPal.Models
         /// <summary>
         /// The PayPal payment source.
         /// </summary>
+        [JsonPropertyName("paypal")]
         public PayPal? PayPal { get; set; }
     }
 }

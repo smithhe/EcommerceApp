@@ -1,5 +1,4 @@
-using Ecommerce.PayPal.Models.Enums;
-using Refit;
+using System.Text.Json.Serialization;
 
 namespace Ecommerce.PayPal.Models
 {
@@ -11,37 +10,37 @@ namespace Ecommerce.PayPal.Models
         /// <summary>
         /// The item name or title.
         /// </summary>
-        [AliasAs("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; } = null!;
         
         /// <summary>
         /// The item quantity. Must be a whole number.
         /// </summary>
-        [AliasAs("quantity")]
+        [JsonPropertyName("quantity")]
         public string Quantity { get; set; } = null!;
             
         /// <summary>
         /// The detailed item description.
         /// </summary>
-        [AliasAs("description")]
+        [JsonPropertyName("description")]
         public string? Description { get; set; }
             
         /// <summary>
         /// The stock keeping unit (SKU) for the item.
         /// </summary>
-        [AliasAs("sku")]
+        [JsonPropertyName("sku")]
         public string Sku { get; set; } = null!;
             
         /// <summary>
         /// The URL to the item being purchased. Visible to buyer and used in buyer experiences.
         /// </summary>
-        [AliasAs("url")]
+        [JsonPropertyName("url")]
         public string Url { get; set; } = null!;
 
         /// <summary>
         /// The item category type.
         /// </summary>
-        [AliasAs("category")]
+        [JsonPropertyName("category")]
         public string Category { get; set; } = null!;
 
         /// <summary>
@@ -49,7 +48,7 @@ namespace Ecommerce.PayPal.Models
         /// File type and size restrictions apply.
         /// An image that violates these restrictions will not be honored.
         /// </summary>
-        [AliasAs("image_url")]
+        [JsonPropertyName("image_url")]
         public string? ImageUrl { get; set; }
         
         /// <summary>
@@ -58,7 +57,7 @@ namespace Ecommerce.PayPal.Models
         /// Must equal unit_amount * quantity for all items.
         /// unit_amount.value can not be a negative number.
         /// </summary>
-        [AliasAs("unit_amount")]
+        [JsonPropertyName("unit_amount")]
         public Currency UnitAmount { get; set; } = null!;
         
         /// <summary>
@@ -66,13 +65,13 @@ namespace Ecommerce.PayPal.Models
         /// If tax is specified, purchase_units[].amount.breakdown.tax_total is required.
         /// Must equal tax * quantity for all items. tax.value can not be a negative number.
         /// </summary>
-        [AliasAs("tax")]
+        [JsonPropertyName("tax")]
         public Currency Tax { get; set; } = null!;
         
         /// <summary>
         /// The Universal Product Code of the item.
         /// </summary>
-        [AliasAs("upc")]
+        [JsonPropertyName("upc")]
         public UPC? Upc { get; set; }
     }
 }

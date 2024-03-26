@@ -1,5 +1,4 @@
-using Ecommerce.PayPal.Models.Enums;
-using Refit;
+using System.Text.Json.Serialization;
 
 namespace Ecommerce.PayPal.Models
 {
@@ -12,31 +11,31 @@ namespace Ecommerce.PayPal.Models
         /// The label that overrides the business name in the PayPal account on the PayPal site.
         /// The pattern is defined by an external party and supports Unicode.
         /// </summary>
-        [AliasAs("brand_name")]
+        [JsonPropertyName("brand_name")]
         public string? BrandName { get; set; }
         
         /// <summary>
         /// The location from which the shipping address is derived.
         /// </summary>
-        [AliasAs("shipping_preference")]
+        [JsonPropertyName("shipping_preference")]
         public string? ShippingPreference { get; set; }
         
         /// <summary>
         /// The type of landing page to show on the PayPal site for customer checkout.
         /// </summary>
-        [AliasAs("landing_page")]
+        [JsonPropertyName("landing_page")]
         public string? LandingPage { get; set; }
         
         /// <summary>
         /// Configures a Continue or Pay Now checkout flow.
         /// </summary>
-        [AliasAs("user_action")]
+        [JsonPropertyName("user_action")]
         public string? UserAction { get; set; }
         
         /// <summary>
         /// The merchant-preferred payment methods.
         /// </summary>
-        [AliasAs("payment_method_preference")]
+        [JsonPropertyName("payment_method_preference")]
         public string? PaymentMethodPreference { get; set; }
         
         /// <summary>
@@ -44,19 +43,19 @@ namespace Ecommerce.PayPal.Models
         /// PayPal supports a five-character code.
         /// For example, da-DK, he-IL, id-ID, ja-JP, no-NO, pt-BR, ru-RU, sv-SE, th-TH, zh-CN, zh-HK, or zh-TW.
         /// </summary>
-        [AliasAs("locale")]
+        [JsonPropertyName("locale")]
         public string? Locale { get; set; }
         
         /// <summary>
         /// The URL where the customer will be redirected upon approving a payment.
         /// </summary>
-        [AliasAs("return_url")]
+        [JsonPropertyName("return_url")]
         public string? ReturnUrl { get; set; }
         
         /// <summary>
         /// The URL where the customer will be redirected upon cancelling the payment approval.
         /// </summary>
-        [AliasAs("cancel_url")]
+        [JsonPropertyName("cancel_url")]
         public string? CancelUrl { get; set; }
     }
 }
