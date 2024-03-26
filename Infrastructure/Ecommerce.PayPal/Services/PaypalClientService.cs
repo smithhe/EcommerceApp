@@ -64,13 +64,6 @@ namespace Ecommerce.PayPal.Services
                 return response;
             }
             
-            //Verify we have the product information
-            if (request.OrderProducts == null || request.OrderProducts.Any() == false)
-            {
-                response.Message = "No product information provided to create a PayPal Order";
-                return response;
-            }
-            
             //Log the request
             this._logger.LogInformation($"Creating PayPal Order: {request.Order.PayPalRequestId}");
             

@@ -12,11 +12,6 @@ namespace Ecommerce.Shared.Requests.PayPal
         /// The Ecommerce order to create a PayPal Order for
         /// </summary>
         public OrderDto? Order { get; set; }
-        
-        /// <summary>
-        /// The product information for the products in the order
-        /// </summary>
-        public IEnumerable<ProductDto>? OrderProducts { get; set; }
 
         /// <summary>
         /// The return key to map the PayPal Order to the Ecommerce Order
