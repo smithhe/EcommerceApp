@@ -184,6 +184,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			
 			//Map the order to the response
 			response.Order = this._mapper.Map<OrderDto?>(order);
+			response.Order!.OrderItems = newOrder.OrderItems;
 
 			//Create all the order items for the order
 			foreach (OrderItemDto orderItem in newOrder.OrderItems)
