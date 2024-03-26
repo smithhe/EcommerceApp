@@ -29,6 +29,7 @@ namespace Ecommerce.PayPal
             services.AddScoped<IPaypalClientService, PaypalClientService>();
             services.AddScoped<ITokenCacheService, TokenCacheService>();
             services.AddScoped<ITokenService, TokenService>();
+            services.AddTransient<AuthHeaderHandler>();
             
             services.AddHttpClient<TokenService>()
                 .ConfigureHttpClient(c =>
