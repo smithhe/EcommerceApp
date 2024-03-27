@@ -3,6 +3,7 @@ using Microsoft.Extensions.Hosting;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
 using System;
+using Ecommerce.Mail;
 
 IHostBuilder builder = Host.CreateDefaultBuilder(args);
 
@@ -15,6 +16,8 @@ builder.ConfigureAppConfiguration((hostingContext, config) =>
 
 builder.ConfigureServices((hostContext, services) =>
 {
+    services.AddMailServices(hostContext.Configuration);
+    
     services.AddMassTransit(brc =>
     {
         brc.SetKebabCaseEndpointNameFormatter();
