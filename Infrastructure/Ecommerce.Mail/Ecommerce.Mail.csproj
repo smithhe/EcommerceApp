@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentEmail.Razor" Version="3.0.2" />
+      <PackageReference Include="FluentEmail.Smtp" Version="3.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Templates\EmailConfirmation.cshtml" />
+      <EmbeddedResource Include="Templates\EmailConfirmation.cshtml" />
+      <None Remove="Templates\OrderReceipt.cshtml" />
+      <EmbeddedResource Include="Templates\OrderReceipt.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\Ecommerce.Shared\Ecommerce.Shared.csproj" />
+    </ItemGroup>
+
+</Project>
