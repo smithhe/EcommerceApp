@@ -66,6 +66,9 @@ namespace Ecommerce.FastEndpoints.Security
 					500, ct);
 				return;
 			}
+			
+			//Remove the confirmation link from the response
+			response.ConfirmationLink = null;
 
 			//Failed registration
 			if (response.Success == false)
