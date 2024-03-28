@@ -19,15 +19,9 @@ namespace Ecommerce.UI.Pages.Security
 		private bool IsMessageVisible { get; set; }
 		private bool IsProcessing { get; set; } = false;
 
-		protected override async Task OnInitializedAsync()
+		protected override void OnInitialized()
 		{
 			this.IsMessageVisible = Convert.ToBoolean(this.NewUser);
-
-			if (this.IsMessageVisible)
-			{
-				await Task.Delay(5000); // Delay for 5 seconds
-				this.IsMessageVisible = false;
-			}
 		}
 
 		private async Task LoginButton_Click()
