@@ -10,9 +10,7 @@ IHostBuilder builder = Host.CreateDefaultBuilder(args);
 builder.ConfigureAppConfiguration((hostingContext, config) =>
 {
     config.AddEnvironmentVariables("Ecommerce_");
-    config.AddUserSecrets<Program>();
 });
-
 
 builder.ConfigureServices((hostContext, services) =>
 {
