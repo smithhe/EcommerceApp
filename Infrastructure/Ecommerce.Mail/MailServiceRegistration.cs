@@ -23,7 +23,7 @@ namespace Ecommerce.Mail
         {
             MailSettings? mailSettings = configuration.GetSection("MailSettings").Get<MailSettings>();
             
-            if (mailSettings == null)
+            if (mailSettings == null || string.IsNullOrEmpty(mailSettings.Host) || string.IsNullOrEmpty(mailSettings.UserName) || string.IsNullOrEmpty(mailSettings.Password) || mailSettings.Port == 0)
             {
                 throw new Exception("Mail settings not found");
             }
@@ -37,11 +37,11 @@ namespace Ecommerce.Mail
             // };
             
             //Use for sending emails with a real SMTP server
-            SmtpClient client = new SmtpClient
+            SmtpClient client = new SmtpClient (mailSettings.Host)
             {
                 EnableSsl = true,
                 Port = mailSettings.Port,
-                Host = mailSettings.Host ?? string.Empty,
+                UseDefaultCredentials = false,
                 Credentials = new System.Net.NetworkCredential(mailSettings.UserName, mailSettings.Password)
             };
             
