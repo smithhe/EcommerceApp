@@ -1,5 +1,5 @@
 docker run --name ecommerce-mysql -d -v /home/harold/Documents/DockerStorage/Ecommerce/MySql:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=ecommerce -e MYSQL_USER=applicationuser -e MYSQL_PASSWORD=Welcome1! mysql:latest
-docker run -d --name ecommerce-rabbit -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password rabbitmq:3-management
+docker run -d --name ecommerce-rabbit -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password -p 15672:15672 -p 5672:5672 rabbitmq:3-management
 
 //EF Commands--------------------------------------------------------------
 Open a terminal
