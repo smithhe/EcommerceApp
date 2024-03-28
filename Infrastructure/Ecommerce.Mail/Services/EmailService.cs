@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using Ecommerce.Mail.Contracts;
-using Ecommerce.Mail.Models;
 using Ecommerce.Mail.Models.Enums;
 using FluentEmail.Core;
 using Microsoft.Extensions.Logging;

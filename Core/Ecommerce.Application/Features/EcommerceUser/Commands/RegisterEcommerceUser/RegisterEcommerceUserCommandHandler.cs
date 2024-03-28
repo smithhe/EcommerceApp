@@ -69,7 +69,7 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerc
             //Create a new Bus to send the message
             IBusControl? bus = Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
-                cfg.Host(this._configuration["RabbitMQ:Username"], h =>
+                cfg.Host(this._configuration["RabbitMQ:Uri"], h =>
                 {
                     h.Username(this._configuration["RabbitMQ:Username"]);
                     h.Password(this._configuration["RabbitMQ:Password"]);

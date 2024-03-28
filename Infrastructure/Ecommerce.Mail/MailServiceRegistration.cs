@@ -1,4 +1,5 @@
 using System;
+using System.Net.Mail;
 using Ecommerce.Mail.Contracts;
 using Ecommerce.Mail.Models;
 using Ecommerce.Mail.Services;
@@ -27,10 +28,27 @@ namespace Ecommerce.Mail
                 throw new Exception("Mail settings not found");
             }
             
+            //Use for local testing with MailHog
+            // SmtpClient client = new SmtpClient
+            // {
+            //     EnableSsl = false,
+            //     Port = 1025,
+            //     Host = "mailhog"
+            // };
+            
+            //Use for sending emails with a real SMTP server
+            SmtpClient client = new SmtpClient
+            {
+                EnableSsl = true,
+                Port = mailSettings.Port,
+                Host = mailSettings.Host ?? string.Empty,
+                Credentials = new System.Net.NetworkCredential(mailSettings.UserName, mailSettings.Password)
+            };
+            
             //Register FluentEmail services
             services.AddFluentEmail(mailSettings.UserName)
                 .AddRazorRenderer()
-                .AddSmtpSender(mailSettings.Host, mailSettings.Port, mailSettings.UserName, mailSettings.Password);
+                .AddSmtpSender(client);
             
             //Register EmailService
             services.AddScoped<IEmailService, EmailService>();
