@@ -184,7 +184,7 @@ namespace Ecommerce.Identity.Services
 				LastName = createUserRequest.LastName.LowerAndUpperFirst(),
 				UserName = createUserRequest.UserName.ToLower(),
 				Email = createUserRequest.EmailAddress.ToLower(),
-				EmailConfirmed = true //TODO: Update to send email to confirm
+				EmailConfirmed = false
 			};
 
 			//Attempt to create the user
@@ -193,7 +193,9 @@ namespace Ecommerce.Identity.Services
 			//Check for errors
 			if (result.Succeeded)
 			{
+				//Generate a confirmation token for the user and return the response
 				response.Success = true;
+				response.ConfirmationLink = await this._userManager.GenerateEmailConfirmationTokenAsync(newUser); //Temporarily store the token in the confirmation link property
 				return response;
 			}
 			

@@ -13,6 +13,11 @@ namespace Ecommerce.Shared.Security
 		public bool Success { get; set; }
 		
 		/// <summary>
+		/// The link to confirm the User's email address
+		/// </summary>
+		public string? ConfirmationLink { get; set; }
+		
+		/// <summary>
 		/// Holds all errors that occurred during User registration
 		/// </summary>
 		public IEnumerable<string>? Errors { get; set; }
