@@ -46,7 +46,7 @@ else
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach(OrderItemDto item in this.Order.OrderItems)
+                    @foreach(OrderItemDto item in this.Order.OrderItems ?? Array.Empty<OrderItemDto>())
                     {
                         <tr>
                             <th scope="row">@item.Id</th>

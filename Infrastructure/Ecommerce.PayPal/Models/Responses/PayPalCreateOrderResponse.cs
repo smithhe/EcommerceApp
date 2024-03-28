@@ -49,8 +49,8 @@ namespace Ecommerce.PayPal.Models.Responses
         /// Each purchase unit represents either a full or partial order that the customer intends to purchase from the merchant.
         /// </summary>
         [JsonPropertyName("purchase_units")]
-        public List<PurchaseUnit> PurchaseUnits { get; set; }
-        
+        public List<PurchaseUnit>? PurchaseUnits { get; set; }
+
         /// <summary>
         /// An array of request-related HATEOAS links.
         /// To complete payer approval, use the approve link to redirect the payer.
@@ -58,6 +58,6 @@ namespace Ecommerce.PayPal.Models.Responses
         /// to redirect your payer. Once redirected, the API caller has 3 hours for the payer to approve the order and either authorize or capture the order.
         /// </summary>
         [JsonPropertyName("links")]
-        public List<Link> Links { get; set; }
+        public List<Link> Links { get; set; } = new List<Link>();
     }
 }
