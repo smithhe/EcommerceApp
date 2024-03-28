@@ -18,19 +18,22 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerc
         private readonly ILogger<RegisterEcommerceUserCommandHandler> _logger;
         private readonly IAuthenticationService _authenticationService;
         private readonly IConfiguration _configuration;
+        private readonly IBus _bus;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RegisterEcommerceUserCommandHandler"/> class.
         /// </summary>
         /// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
         /// <param name="authenticationService">The <see cref="IAuthenticationService"/> instance used for registering the User</param>
-        /// <param name="configuration"></param>
+        /// <param name="configuration">The <see cref="IConfiguration"/> instance used for configuration settings.</param>
+        /// <param name="bus">The <see cref="IBus"/> instance used for publishing messages</param>
         public RegisterEcommerceUserCommandHandler(ILogger<RegisterEcommerceUserCommandHandler> logger, IAuthenticationService authenticationService,
-            IConfiguration configuration)
+            IConfiguration configuration, IBus bus)
         {
             this._logger = logger;
             this._authenticationService = authenticationService;
             this._configuration = configuration;
+            this._bus = bus;
         }
         
         /// <summary>
@@ -65,36 +68,20 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerc
             
             //Update the response with the full URL
             response.ConfirmationLink = $"{command.LinkUrl}/{response.ConfirmationLink}";
-
-            //Create a new Bus to send the message
-            IBusControl? bus = Bus.Factory.CreateUsingRabbitMq(cfg =>
-            {
-                cfg.Host(this._configuration["RabbitMQ:Uri"], h =>
-                {
-                    h.Username(this._configuration["RabbitMQ:Username"]);
-                    h.Password(this._configuration["RabbitMQ:Password"]);
-                });
-            });
             
-            //Check if the bus was created
-            if (bus == null)
-            {
-                this._logger.LogError("Bus was null, returning response");
-                return response;
-            }
+            //Get the company name
+            string? companyName = this._configuration["CompanyName"];
 
-            //Start the bus
-            await bus.StartAsync(cancellationToken);
-			
             //Send the message
-            this._logger.LogInformation("Sending message");
-            await bus.Publish(new SendEmailConfirmationMessage
+            this._logger.LogInformation("Sending SendEmailConfirmationMessage to Rabbit");
+            await this._bus.Publish(new SendEmailConfirmationMessage
             {
                 ConfirmationLink = response.ConfirmationLink,
+                CompanyName = companyName ?? string.Empty,
                 Name = $"{command.CreateUserRequest.FirstName} {command.CreateUserRequest.LastName}",
                 SendTo = command.CreateUserRequest.EmailAddress!
             }, cancellationToken);
-            this._logger.LogInformation($"Message Sent to Rabbit");
+            this._logger.LogInformation($"SendEmailConfirmationMessage Sent to Rabbit");
 
             //Return the response
             return response;

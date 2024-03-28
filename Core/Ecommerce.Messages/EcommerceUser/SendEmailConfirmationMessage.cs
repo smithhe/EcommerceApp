@@ -11,6 +11,11 @@ namespace Ecommerce.Messages.EcommerceUser
         public string SendTo { get; init; } = null!;
         
         /// <summary>
+        /// The name of the company
+        /// </summary>
+        public string CompanyName { get; init; } = null!;
+        
+        /// <summary>
         /// Name of the user
         /// </summary>
         public string Name { get; init; } = null!;

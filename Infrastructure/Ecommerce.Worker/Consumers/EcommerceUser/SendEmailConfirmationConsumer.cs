@@ -41,6 +41,7 @@ namespace Ecommerce.Worker.Consumers.EcommerceUser
             EmailConfirmationModel model = new EmailConfirmationModel
             {
                 Name = context.Message.Name,
+                CompanyName = context.Message.CompanyName,
                 ConfirmationLink = context.Message.ConfirmationLink
             };
 

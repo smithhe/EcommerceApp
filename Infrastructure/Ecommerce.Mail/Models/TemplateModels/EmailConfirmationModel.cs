@@ -13,6 +13,11 @@ namespace Ecommerce.Mail.Models.TemplateModels
         public string Name { get; set; } = null!;
         
         /// <summary>
+        /// The name of the company
+        /// </summary>
+        public string CompanyName { get; init; } = null!;
+        
+        /// <summary>
         /// Link to confirm email
         /// </summary>
         public string ConfirmationLink { get; set; } = null!;
