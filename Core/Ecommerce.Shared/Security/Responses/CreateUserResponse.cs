@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Ecommerce.Shared.Security
+namespace Ecommerce.Shared.Security.Responses
 {
 	/// <summary>
 	/// A response object for creating a new User

@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using System.Threading.Tasks;
 using Ecommerce.Shared.Security;
+using Ecommerce.Shared.Security.Requests;
+using Ecommerce.Shared.Security.Responses;
 using Ecommerce.UI.Contracts;
 
 namespace Ecommerce.UI.Pages

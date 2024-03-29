@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Security.Requests;
 
 namespace Ecommerce.FastEndpoints.Security
 {

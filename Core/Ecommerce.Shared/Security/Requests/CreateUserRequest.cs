@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Ecommerce.Shared.Security
+namespace Ecommerce.Shared.Security.Requests
 {
 	/// <summary>
 	/// A Api request to create a new User

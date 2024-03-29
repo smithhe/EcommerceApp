@@ -1,6 +1,6 @@
 using Ecommerce.Shared.Responses;
 
-namespace Ecommerce.Shared.Security
+namespace Ecommerce.Shared.Security.Responses
 {
     /// <summary>
     /// A implementation of <see cref="BaseResponse" /> for a request to update a User's password

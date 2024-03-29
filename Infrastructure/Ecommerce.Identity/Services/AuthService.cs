@@ -14,6 +14,8 @@ using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Security.Requests;
+using Ecommerce.Shared.Security.Responses;
 
 namespace Ecommerce.Identity.Services
 {

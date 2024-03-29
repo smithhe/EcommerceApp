@@ -2,6 +2,7 @@ using Ecommerce.Domain.Entities;
 using MediatR;
 using System;
 using Ecommerce.Shared.Security;
+using Ecommerce.Shared.Security.Responses;
 
 namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
 {

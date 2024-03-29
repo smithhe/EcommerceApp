@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Shared.Security;
+using Ecommerce.Shared.Security.Responses;
 using MediatR;
 using Microsoft.Extensions.Logging;
 

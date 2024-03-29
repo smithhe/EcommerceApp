@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Shared.Security;
+using Ecommerce.Shared.Security.Requests;
+using Ecommerce.Shared.Security.Responses;
 using FastEndpoints;
 using MediatR;
 using Microsoft.Extensions.Logging;

@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Refit;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Security.Requests;
+using Ecommerce.Shared.Security.Responses;
 
 namespace Ecommerce.UI.Services
 {

@@ -1,4 +1,4 @@
-namespace Ecommerce.Shared.Security
+namespace Ecommerce.Shared.Security.Requests
 {
 	public class LogoutUserRequest
 	{

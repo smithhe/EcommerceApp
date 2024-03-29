@@ -2,6 +2,8 @@ using Ecommerce.Domain.Entities;
 using Ecommerce.Shared.Security;
 using System;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Security.Requests;
+using Ecommerce.Shared.Security.Responses;
 
 namespace Ecommerce.Identity.Contracts
 {

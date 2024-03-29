@@ -4,6 +4,7 @@ using Ecommerce.UI.Contracts;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Security.Requests;
 
 namespace Ecommerce.UI.Pages.Security
 {

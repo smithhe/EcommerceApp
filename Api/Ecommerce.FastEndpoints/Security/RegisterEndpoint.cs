@@ -5,6 +5,8 @@ using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser;
+using Ecommerce.Shared.Security.Requests;
+using Ecommerce.Shared.Security.Responses;
 using MediatR;
 
 namespace Ecommerce.FastEndpoints.Security

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Shared.Security;
+using Ecommerce.Shared.Security.Responses;
 
 namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
 {

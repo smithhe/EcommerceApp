@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Messages.EcommerceUser;
 using Ecommerce.Shared.Security;
+using Ecommerce.Shared.Security.Responses;
 using MassTransit;
 using MediatR;
 using Microsoft.Extensions.Configuration;

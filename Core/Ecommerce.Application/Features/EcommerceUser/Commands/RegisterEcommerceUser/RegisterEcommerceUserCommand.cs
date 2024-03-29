@@ -1,4 +1,6 @@
 using Ecommerce.Shared.Security;
+using Ecommerce.Shared.Security.Requests;
+using Ecommerce.Shared.Security.Responses;
 using MediatR;
 
 namespace Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
