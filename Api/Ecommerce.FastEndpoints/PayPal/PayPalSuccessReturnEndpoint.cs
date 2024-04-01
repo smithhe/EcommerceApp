@@ -54,7 +54,7 @@ namespace Ecommerce.FastEndpoints.PayPal
             string? returnKey = this.Route<string>("returnKey");
             
             //Get the UI Url from the configuration
-            string? uiUrl = this._configuration["Paypal:UIUrl"];
+            string? uiUrl = this._configuration["UIUrl"];
             
             //Check if we have a return key
             if (string.IsNullOrEmpty(returnKey))

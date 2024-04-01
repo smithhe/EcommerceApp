@@ -37,6 +37,17 @@ namespace Ecommerce.Identity.Contracts
 		/// false if the user failed to create with Errors populated with the errors that caused failure
 		/// </returns>
 		Task<CreateUserResponse> CreateUserAsync(CreateUserRequest createUserRequest);
+
+		/// <summary>
+		/// Attempts to confirm the email of the user with the provided token
+		/// </summary>
+		/// <param name="userId">The unique identifier of the user</param>
+		/// <param name="token">The token used to confirm the email address</param>
+		/// <returns>
+		/// Returns <c>true</c> if the email was confirmed;
+		/// Returns <c>false</c> if the user was not found or the token was invalid
+		/// </returns>
+		Task<ConfirmEmailResponse> ConfirmEmailAsync(string userId, string token);
 		
 		/// <summary>
 		/// Validates the Jwt token provided in the request can still be used

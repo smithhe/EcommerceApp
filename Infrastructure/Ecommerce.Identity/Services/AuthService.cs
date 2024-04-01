@@ -208,6 +208,35 @@ namespace Ecommerce.Identity.Services
 		}
 
 		/// <summary>
+		/// Attempts to confirm the email of the user with the provided token
+		/// </summary>
+		/// <param name="userId">The unique identifier of the user</param>
+		/// <param name="token">The token used to confirm the email address</param>
+		/// <returns>
+		/// Returns <c>true</c> if the email was confirmed;
+		/// Returns <c>false</c> if the user was not found or the token was invalid
+		/// </returns>
+		public async Task<ConfirmEmailResponse> ConfirmEmailAsync(string userId, string token)
+		{
+			//Attempt to find the user
+			EcommerceUser? user = await this._userManager.FindByIdAsync(userId);
+
+			//Check if the user was found
+			if (user == null)
+			{
+				return new ConfirmEmailResponse { Success = false, Message = "User Not Found" };
+			}
+
+			//Attempt to confirm the email
+			IdentityResult result = await this._userManager.ConfirmEmailAsync(user, token);
+
+			//Return the response
+			return result.Succeeded ? 
+				new ConfirmEmailResponse { Success = true, Message = "Email Confirmed" } 
+				: new ConfirmEmailResponse { Success = false, Message = "Email Confirmation Failed" };
+		}
+		
+		/// <summary>
 		/// Validates if the Username and Password belong to an existing user
 		/// </summary>
 		/// <param name="username">The username of the User attempting to authenticate</param>

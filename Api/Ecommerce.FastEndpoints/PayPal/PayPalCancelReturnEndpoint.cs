@@ -49,7 +49,7 @@ namespace Ecommerce.FastEndpoints.PayPal
             this._logger.LogInformation("Handling request to cancel an order from PayPal");
             
             //Get the UI Url from the configuration
-            string? uiUrl = this._configuration["Paypal:UIUrl"];
+            string? uiUrl = this._configuration["UIUrl"];
             
             //Get the return key from the route
             string? returnKey = this.Route<string>("returnKey");

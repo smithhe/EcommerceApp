@@ -1,8 +1,8 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Messages.EcommerceUser;
-using Ecommerce.Shared.Security;
 using Ecommerce.Shared.Security.Responses;
 using MassTransit;
 using MediatR;
@@ -67,8 +67,19 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerc
                 return response;
             }
             
+            //Get the id of the new user
+            Guid? id = await this._authenticationService.GetUserIdByName(command.CreateUserRequest.UserName!);
+            
+            //Check if the id is null
+            if (id == null)
+            {
+                this._logger.LogError("Failed to get the new User's Id, returning response");
+                return response;
+            }
+            
             //Update the response with the full URL
-            response.ConfirmationLink = $"{command.LinkUrl}/{response.ConfirmationLink}";
+            string token = response.ConfirmationLink;
+            response.ConfirmationLink = $"{command.LinkUrl}?userId={id}&emailToken={Uri.EscapeDataString(token)}";
             
             //Get the company name
             string? companyName = this._configuration["CompanyName"];
