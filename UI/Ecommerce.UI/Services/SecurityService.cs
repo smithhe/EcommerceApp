@@ -138,5 +138,23 @@ namespace Ecommerce.UI.Services
 			
 			return content;
 		}
+
+		public async Task<ConfirmEmailResponse> ConfirmUserEmail(string? userId, string? emailToken)
+		{
+			ApiResponse<ConfirmEmailResponse?> response = await this._securityApiService.ConfirmEmail(new ConfirmEmailRequest
+			{
+				UserId = userId,
+				EmailToken = emailToken
+			});
+			
+			if (response.IsSuccessStatusCode)
+			{
+				return response.Content;
+			}
+			
+			return string.IsNullOrEmpty(response.Error.Content) ? 
+				new ConfirmEmailResponse { Success = false, Message = "Unexpected Error Occurred" } 
+				: JsonConvert.DeserializeObject<ConfirmEmailResponse>(response.Error.Content)!;
+		}
 	}
 }

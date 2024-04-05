@@ -12,5 +12,6 @@ namespace Ecommerce.UI.Contracts
 		Task<bool> Logout(string userName);
 		Task<UpdateEcommerceUserResponse> UpdateUser(UpdateEcommerceUserRequest updateUserRequest);
 		Task<UpdatePasswordResponse> UpdatePassword(string username, string currentPassword, string newPassword);
+		Task<ConfirmEmailResponse> ConfirmUserEmail(string? userId, string? emailToken);
 	}
 }

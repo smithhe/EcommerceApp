@@ -31,7 +31,7 @@ namespace Ecommerce.FastEndpoints.Security
         /// </summary>
         public override void Configure()
         {
-            this.Post("/api/register");
+            this.Post("/api/user/confirm-email");
             this.AllowAnonymous();
         }
 

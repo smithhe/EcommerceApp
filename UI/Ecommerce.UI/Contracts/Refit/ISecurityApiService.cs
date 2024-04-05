@@ -22,5 +22,8 @@ namespace Ecommerce.UI.Contracts.Refit
 		
 		[Put("/api/password/update")]
 		Task<ApiResponse<UpdatePasswordResponse>> UpdatePassword(UpdatePasswordRequest updatePasswordRequest);
+		
+		[Post("/api/user/confirm-email")]
+		Task<ApiResponse<ConfirmEmailResponse?>> ConfirmEmail(ConfirmEmailRequest confirmEmailRequest);
 	}
 }

@@ -1,5 +1,4 @@
 using System;
-using Ecommerce.Shared.Security;
 using FastEndpoints;
 using Microsoft.Extensions.Logging;
 using System.Threading;
@@ -8,6 +7,7 @@ using Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUse
 using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
 using MediatR;
+using Microsoft.Extensions.Configuration;
 
 namespace Ecommerce.FastEndpoints.Security
 {
@@ -18,16 +18,19 @@ namespace Ecommerce.FastEndpoints.Security
 	{
 		private readonly ILogger<RegisterEndpoint> _logger;
 		private readonly IMediator _mediator;
+		private readonly IConfiguration _configuration;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="RegisterEndpoint"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
-		public RegisterEndpoint(ILogger<RegisterEndpoint> logger, IMediator mediator)
+		/// <param name="configuration">The <see cref="IConfiguration"/> instance used for configuration settings.</param>
+		public RegisterEndpoint(ILogger<RegisterEndpoint> logger, IMediator mediator, IConfiguration configuration)
 		{
 			this._logger = logger;
 			this._mediator = mediator;
+			this._configuration = configuration;
 		}
 		
 		/// <summary>
@@ -49,6 +52,18 @@ namespace Ecommerce.FastEndpoints.Security
 			//Log the request
 			this._logger.LogInformation("Handling request to register a new User");
 			
+			//Load the UI url from the configuration
+			string? uiUrl = this._configuration["UIUrl"];
+			
+			//Check if the UI url is null or empty
+			if (string.IsNullOrEmpty(uiUrl))
+			{
+				this._logger.LogError("UIUrl is not configured");
+				await this.SendAsync(new CreateUserResponse { Success = false, Errors = new string[] { "Unexpected Error Occurred" } },
+					500, ct);
+				return;
+			}
+			
 			//Attempt to register the user
 			CreateUserResponse response;
 			try
@@ -57,7 +72,7 @@ namespace Ecommerce.FastEndpoints.Security
 				response = await this._mediator.Send(new RegisterEcommerceUserCommand
 				{
 					CreateUserRequest = req,
-					LinkUrl = $"https://{this.HttpContext.Request.Host}/api/confirm"
+					LinkUrl = $"{uiUrl}/ConfirmEmail"
 				}, ct);
 			}
 			catch (Exception e)
