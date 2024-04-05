@@ -17,17 +17,28 @@
 }
 else
 {
-    <div class="container my-5 py-4 bg-white shadow-sm rounded-3">
-        <h2 class="mb-4">Order Details</h2>
+    <div class="container bg-white shadow-sm rounded-3">
+        <div class="header-container">
+            <h2>Order Details</h2>
+            <button @onclick="@this.OnBackToOrdersClicked" class="btn btn-borderless ">
+                <i class="bi bi-arrow-left"></i> Back to Orders
+            </button>
+        </div>
         <div class="card mb-4">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-6 mb-3 mb-md-0">
-                        <p><strong>Order ID:</strong> @this.Order.Id</p>
-                        <p><strong>Creation Date:</strong> @this.Order.CreatedDate.ToShortDateString()</p>
+                        <p>
+                            <strong>Order ID:</strong> @this.Order.Id
+                        </p>
+                        <p>
+                            <strong>Creation Date:</strong> @this.Order.CreatedDate.ToShortDateString()
+                        </p>
                     </div>
                     <div class="col-md-6">
-                        <p><strong>Status:</strong> @this.OrderStatus</p>
+                        <p>
+                            <strong>Status:</strong> @this.OrderStatus
+                        </p>
                         <p><strong>Total:</strong> $@this.Order.Total</p>
                     </div>
                 </div>
@@ -38,23 +49,23 @@ else
         <div class="table-responsive">
             <table class="table table-striped rounded-3">
                 <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Price</th>
-                    </tr>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                </tr>
                 </thead>
                 <tbody>
-                    @foreach(OrderItemDto item in this.Order.OrderItems ?? Array.Empty<OrderItemDto>())
-                    {
-                        <tr>
-                            <th scope="row">@item.Id</th>
-                            <td>@item.ProductName</td>
-                            <td>@item.Quantity</td>
-                            <td>$@item.Price</td>
-                        </tr>
-                    }
+                @foreach (OrderItemDto item in this.Order.OrderItems ?? Array.Empty<OrderItemDto>())
+                {
+                    <tr>
+                        <th scope="row">@item.Id</th>
+                        <td>@item.ProductName</td>
+                        <td>@item.Quantity</td>
+                        <td>$@item.Price</td>
+                    </tr>
+                }
                 </tbody>
             </table>
         </div>

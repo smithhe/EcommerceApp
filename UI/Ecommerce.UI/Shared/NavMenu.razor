@@ -24,13 +24,16 @@
                                     string? firstName = context.User.Claims.Where(claim => string.Equals(claim.Type, CustomClaims._firstName)).Select(c => c.Value).FirstOrDefault();
                                     string? lastName = context.User.Claims.Where(claim => string.Equals(claim.Type, CustomClaims._lastName)).Select(c => c.Value).FirstOrDefault();
                                     string displayName = string.IsNullOrEmpty(firstName) ? @context.User.Identity!.Name! : string.IsNullOrEmpty(lastName) ? firstName : $"{firstName} {lastName}";
-                                    
+
                                     <a class="nav-link" href="/Profile">Welcome, @displayName</a>
                                 }
-                                
+
                             </li>
                             <li>
                                 <a class="nav-link" href="/Cart"><i class="bi bi-cart4"></i> Cart</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="/Orders"><i class="bi bi-card-list"></i> Orders</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/Logout"><i class="bi bi-box-arrow-in-right"></i> Logout</a>

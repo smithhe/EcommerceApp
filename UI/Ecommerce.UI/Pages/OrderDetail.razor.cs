@@ -14,6 +14,8 @@ namespace Ecommerce.UI.Pages
         [Parameter] public string OrderId { get; set; } = null!;
         
         [CascadingParameter] private Task<AuthenticationState> AuthenticationState { get; set; } = null!;
+        
+        [Inject] public NavigationManager NavigationManager { get; set; } = null!;
         [Inject] public IToastService ToastService { get; set; } = null!;
         
         [Inject] public IOrderService OrderService { get; set; } = null!;
@@ -38,6 +40,9 @@ namespace Ecommerce.UI.Pages
             this.OrderStatus = Enum.GetName(this.Order!.Status);
         }
         
-        
+        private void OnBackToOrdersClicked()
+        {
+            this.NavigationManager.NavigateTo("/Orders");
+        }
     }
 }

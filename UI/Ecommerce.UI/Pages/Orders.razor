@@ -25,35 +25,43 @@ else
                 </h1>
             </div>
         </div>
-        
+
         <table class="table table-striped">
             <thead>
             <tr>
-                <th>Order ID</th>
-                <th>Order Date</th>
-                <th>Order Total</th>
-                <th>Order Status</th>
-                <th>Order Actions</th>
+                <th class="text-center">Order ID</th>
+                <th class="text-center">Date Placed</th>
+                <th class="text-center">Total</th>
+                <th class="text-center">Status</th>
+                <th class="text-center">Actions</th>
             </tr>
             </thead>
             <tbody>
             @foreach (var order in this.UserOrders)
             {
                 <tr>
-                    <td>@order.Id</td>
-                    <td>@order.CreatedDate</td>
-                    <td>@order.Total</td>
-                    <td>@Enum.GetName(order.Status)</td>
+                    <td class="text-center">@order.Id</td>
+                    <td class="text-center">@order.CreatedDate</td>
+                    <td class="text-center">@order.Total</td>
+                    <td class="text-center">@Enum.GetName(order.Status)</td>
                     <td>
-                        @if (order.Status == OrderStatus.Pending || order.Status == OrderStatus.Processing)
-                        {
-                            <button class="btn btn-danger" @onclick="(() => this.CancelOrder(order))">Cancel Order</button>
-                        }
-                        else
-                        {
-                            <button class="btn btn-danger" disabled>Cancel Order</button>
-                        }
-                        <button class="btn btn-primary" @onclick="(() => this.ShowOrderDetails(order))">Order Details</button>
+                        <div class="row text-center">
+                            <div class="col-2">&nbsp;</div>
+                            <div class="col-4">
+                                <button class="btn btn-primary" @onclick="(() => this.ShowOrderDetails(order))">Order Details</button>
+                            </div>
+                            <div class="col-4">
+                                @if (order.Status == OrderStatus.Processing)
+                                {
+                                    <button class="btn btn-danger" @onclick="(() => this.CancelOrder(order))">Cancel Order</button>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-danger" disabled>Cancel Order</button>
+                                }
+                            </div>
+                            <div class="col-2">&nbsp;</div>
+                        </div>
                     </td>
                 </tr>
             }
@@ -61,4 +69,3 @@ else
         </table>
     </div>
 }
-

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Enums;
 
 namespace Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId
 {
@@ -53,6 +54,9 @@ namespace Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId
 			GetAllOrdersByUserIdResponse response = new GetAllOrdersByUserIdResponse { Success = true, Message = "Successfully Got all Orders" };
 
 			IEnumerable<Domain.Entities.Order> orders = await this._orderAsyncRepository.ListAllAsync(query.UserId);
+			
+			//Filter out orders in a created or pending status
+			orders = orders.Where(o => o.Status != OrderStatus.Created && o.Status != OrderStatus.Pending);
 
 			//No orders found
 			if (orders.Any() == false)

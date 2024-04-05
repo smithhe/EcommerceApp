@@ -2,6 +2,7 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
 }
 
 h1:focus {
@@ -109,6 +110,12 @@ a, .btn-link {
     background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))!important;
     padding: 20px; /* Add padding for spacing */
     display: flex;
-    min-height: 100vh;
+    flex-direction: column;
+    min-height: calc(100vh - 56px);
     flex-wrap: wrap; /* Allow cards to wrap within the container */
+}
+
+.footer {
+    height: 50px; /* Adjust based on your footer's height */
+    background-color: lightcoral; /* Just for demonstration */
 }
