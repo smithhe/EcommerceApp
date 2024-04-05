@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.WebUtilities;
 
@@ -8,7 +9,7 @@ namespace Ecommerce.UI.Extensions
     {
         public static bool TryGetQueryString<T>(this NavigationManager navManager, string key, out T value)
         {
-            var uri = navManager.ToAbsoluteUri(navManager.Uri);
+            Uri uri = navManager.ToAbsoluteUri(navManager.Uri);
 
             if (QueryHelpers.ParseQuery(uri.Query).TryGetValue(key, out var valueFromQueryString))
             {
@@ -31,7 +32,7 @@ namespace Ecommerce.UI.Extensions
                 }
             }
 
-            value = default;
+            value = default!;
             return false;
         }
     }

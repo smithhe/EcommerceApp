@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <UserSecretsId>11e7c595-24e0-4d24-8d3a-1be9e4e30c3e</UserSecretsId>
         <PreserveCompilationContext>true</PreserveCompilationContext>

@@ -57,12 +57,12 @@ namespace Ecommerce.FastEndpoints.Category
 			{
 				//Unexpected error
 				this._logger.LogError(e, "Error handling request to get all categories");
-				await SendAsync(new GetAllCategoriesResponse { Success = false, Message = "Unexpected Error Occurred" }, 500, ct);
+				await this.SendAsync(new GetAllCategoriesResponse { Success = false, Message = "Unexpected Error Occurred" }, 500, ct);
 				return;
 			}
 
 			//Send the response object
-			await SendOkAsync(response, ct);
+			await this.SendOkAsync(response, ct);
 		}
 	}
 }

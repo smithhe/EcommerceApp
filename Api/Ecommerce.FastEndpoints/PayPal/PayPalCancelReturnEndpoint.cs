@@ -59,7 +59,7 @@ namespace Ecommerce.FastEndpoints.PayPal
             {
                 //Redirect to the error page in the UI
                 //TODO: Update this to the correct error page when it is created
-                await this.SendRedirectAsync($"{uiUrl}/error", cancellation: ct);
+                await this.SendRedirectAsync($"{uiUrl}/error");
                 return;
             }
             
@@ -71,12 +71,12 @@ namespace Ecommerce.FastEndpoints.PayPal
             {
                 //Redirect to the error page in the UI
                 //TODO: Update this to the correct error page when it is created
-                await this.SendRedirectAsync($"{uiUrl}/error", cancellation: ct);
+                await this.SendRedirectAsync($"{uiUrl}/error");
             }
             else
             {
                 //Redirect to the success page in the UI
-                await this.SendRedirectAsync($"{uiUrl}/checkout/cancel", cancellation: ct);
+                await this.SendRedirectAsync($"{uiUrl}/checkout/cancel");
             }
         }
     }
