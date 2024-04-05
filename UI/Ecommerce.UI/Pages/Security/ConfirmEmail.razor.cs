@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using Ecommerce.Shared.Security.Responses;
 using Ecommerce.UI.Contracts;
@@ -19,7 +18,6 @@ namespace Ecommerce.UI.Pages.Security
         protected override async Task OnInitializedAsync()
         {
             string? userId, emailToken;
-            Uri uri = this.NavigationManager.ToAbsoluteUri(this.NavigationManager.Uri);
             
             this.NavigationManager.TryGetQueryString("userId", out userId);
             this.NavigationManager.TryGetQueryString("emailToken", out emailToken);

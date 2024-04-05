@@ -35,6 +35,9 @@ namespace Ecommerce.Mail.Services
         /// <param name="templateModel">The model with the information to fill into the template</param>
         public async Task SendEmailAsync(string sendTo, string subject, EmailTemplate templateToUse, ITemplateModel templateModel)
         {
+            //Log the email being sent
+            this._logger.LogInformation("Sending email to {sendTo} with subject {subject}", sendTo, subject);
+            
             IFluentEmail? email = this._fluentEmail
                 .To(sendTo)
                 .Subject(subject);

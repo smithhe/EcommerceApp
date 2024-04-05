@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Ecommerce.Shared.Dtos;
 
 namespace Ecommerce.Shared.Requests.PayPal

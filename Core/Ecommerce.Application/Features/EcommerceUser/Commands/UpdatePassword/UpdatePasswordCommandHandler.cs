@@ -2,7 +2,6 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Identity.Contracts;
-using Ecommerce.Shared.Security;
 using Ecommerce.Shared.Security.Responses;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -41,6 +40,9 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword
         /// </returns>
         public async Task<UpdatePasswordResponse> Handle(UpdatePasswordCommand command, CancellationToken cancellationToken)
         {
+            //Log the request
+            this._logger.LogInformation("Handling request to update a User's password");
+            
             UpdatePasswordResponse response = new UpdatePasswordResponse();
             
             //Check for null or empty properties in the command

@@ -16,7 +16,7 @@ namespace Ecommerce.UI.Pages.Security
 		{
 			AuthenticationState authState = await this.AuthenticationState;
 
-			if (authState?.User?.Identity is null || authState.User.Identity.IsAuthenticated == false)
+			if (authState.User.Identity is null || authState.User.Identity.IsAuthenticated == false)
 			{
 				this.NavigationManager.NavigateTo("/Login");
 			}

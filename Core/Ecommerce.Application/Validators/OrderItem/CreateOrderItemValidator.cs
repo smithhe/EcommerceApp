@@ -8,12 +8,10 @@ namespace Ecommerce.Application.Validators.OrderItem
 {
 	public class CreateOrderItemValidator : AbstractValidator<CreateOrderItemCommand>
 	{
-		private readonly IProductAsyncRepository _productAsyncRepository;
 		private readonly IOrderAsyncRepository _orderAsyncRepository;
 
-		public CreateOrderItemValidator(IProductAsyncRepository productAsyncRepository, IOrderAsyncRepository orderAsyncRepository)
+		public CreateOrderItemValidator(IOrderAsyncRepository orderAsyncRepository)
 		{
-			this._productAsyncRepository = productAsyncRepository;
 			this._orderAsyncRepository = orderAsyncRepository;
 
 			RuleFor(c => c.OrderItemToCreate.Quantity)

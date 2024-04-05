@@ -1,5 +1,4 @@
 using Ecommerce.Identity.Contracts;
-using Ecommerce.Shared.Security;
 using FastEndpoints;
 using Microsoft.Extensions.Logging;
 using System.Linq;

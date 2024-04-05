@@ -1,3 +1,4 @@
+// ReSharper disable InconsistentNaming
 namespace Ecommerce.PayPal.Models.Enums
 {
     public class LandingPage

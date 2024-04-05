@@ -1,4 +1,3 @@
-using System;
 using Ecommerce.Shared.Dtos;
 
 namespace Ecommerce.Shared.Responses.Order

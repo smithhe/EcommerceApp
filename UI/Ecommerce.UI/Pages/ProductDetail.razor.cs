@@ -149,7 +149,7 @@ namespace Ecommerce.UI.Pages
 			}
 		}
 
-		private void OnStarMouseOut(int starNum)
+		private void OnStarMouseOut()
 		{
 			if (this.UserHasReview && this.EditExistingReview)
 			{
@@ -204,7 +204,7 @@ namespace Ecommerce.UI.Pages
 
 		private void OnStarClick(int starNum)
 		{
-			this.OnStarMouseOut(5);
+			this.OnStarMouseOut();
 			
 			if (this.UserHasReview && this.EditExistingReview)
 			{

@@ -97,7 +97,7 @@ namespace Ecommerce.UI.Pages
 
 		private async Task EditCartItem(CartItemDto cartItem)
 		{
-			ProductDto product = this.Products!.First(p => p.Id == cartItem.ProductId);
+			ProductDto product = this.Products.First(p => p.Id == cartItem.ProductId);
 
 			ModalParameters parameters = new ModalParameters
 			{

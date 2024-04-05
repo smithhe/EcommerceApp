@@ -1,16 +1,12 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId;
 using Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey;
-using Ecommerce.Application.Features.Product.Queries.GetProductById;
 using Ecommerce.PayPal.Contracts;
-using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Requests.PayPal;
 using Ecommerce.Shared.Responses.PayPal;
-using Ecommerce.Shared.Responses.Product;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
@@ -62,7 +58,7 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
             };
             
             //Verify the order is not null and has items
-            if (command.Order?.OrderItems == null || command.Order.OrderItems.Any() == false)
+            if (command.Order.OrderItems == null || command.Order.OrderItems.Any() == false)
             {
                 response.Message = "Order must have items to create a PayPal Order";
                 return response;

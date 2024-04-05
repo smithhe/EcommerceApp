@@ -1,5 +1,4 @@
 using System.Threading.Tasks;
-using Blazored.Toast.Services;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Order;
 using Ecommerce.UI.Contracts;
@@ -14,7 +13,6 @@ namespace Ecommerce.UI.Pages.CheckoutReturn
         [Inject] public AuthenticationStateProvider AuthenticationStateProvider { get; set; } = null!;
         
         [Inject] private IOrderService OrderService { get; set; } = null!;
-        [Inject] private IToastService ToastService { get; set; } = null!;
         
         [Parameter] public string OrderId { get; set; } = null!;
         

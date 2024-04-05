@@ -1,5 +1,4 @@
 using System;
-using Ecommerce.Application.Features.Order.Commands.CreateOrder;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Enums;
 using FluentValidation;

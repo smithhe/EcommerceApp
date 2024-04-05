@@ -1,9 +1,7 @@
 using AutoMapper;
 using Ecommerce.Domain.Entities;
-using Ecommerce.Application.Validators.Category;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Responses.Category;
-using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;

@@ -7,7 +7,6 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Ecommerce.Shared.Security;
 using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
 

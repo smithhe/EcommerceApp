@@ -3,7 +3,6 @@ using Ecommerce.PayPal.Contracts;
 using Ecommerce.PayPal.Contracts.Refit;
 using Ecommerce.PayPal.Security;
 using Ecommerce.PayPal.Services;
-using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Refit;

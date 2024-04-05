@@ -72,6 +72,6 @@ namespace Ecommerce.PayPal.Models
         /// The Universal Product Code of the item.
         /// </summary>
         [JsonPropertyName("upc")]
-        public UPC? Upc { get; set; }
+        public Upc? Upc { get; set; }
     }
 }

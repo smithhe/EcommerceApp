@@ -21,7 +21,6 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 		private readonly ILogger<CreateOrderItemCommandHandler> _logger;
 		private readonly IMapper _mapper;
 		private readonly IOrderItemAsyncRepository _orderItemAsyncRepository;
-		private readonly IProductAsyncRepository _productAsyncRepository;
 		private readonly IOrderAsyncRepository _orderAsyncRepository;
 
 		/// <summary>
@@ -30,15 +29,13 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mapper">The <see cref="IMapper"/> instance used for mapping objects.</param>
 		/// <param name="orderItemAsyncRepository">The <see cref="IOrderItemAsyncRepository"/> instance used for data access for <see cref="OrderItem"/> entities.</param>
-		/// <param name="productAsyncRepository">The <see cref="IProductAsyncRepository"/> instance used for data access for <see cref="Product"/> entities.</param>
 		/// <param name="orderAsyncRepository">The <see cref="IOrderAsyncRepository"/> instance used for data access for <see cref="Order"/> entities.</param>
 		public CreateOrderItemCommandHandler(ILogger<CreateOrderItemCommandHandler> logger, IMapper mapper, IOrderItemAsyncRepository orderItemAsyncRepository,
-			IProductAsyncRepository productAsyncRepository, IOrderAsyncRepository orderAsyncRepository)
+			IOrderAsyncRepository orderAsyncRepository)
 		{
 			this._logger = logger;
 			this._mapper = mapper;
 			this._orderItemAsyncRepository = orderItemAsyncRepository;
-			this._productAsyncRepository = productAsyncRepository;
 			this._orderAsyncRepository = orderAsyncRepository;
 		}
 		
@@ -70,7 +67,7 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 			}
 			
 			//Validate the dto that was passed in the command
-			CreateOrderItemValidator validator = new CreateOrderItemValidator(this._productAsyncRepository, this._orderAsyncRepository);
+			CreateOrderItemValidator validator = new CreateOrderItemValidator(this._orderAsyncRepository);
 			ValidationResult validationResult = await validator.ValidateAsync(command, cancellationToken);
 
 			//Check for validation errors

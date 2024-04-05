@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Ecommerce.Application.Features.Order.Commands.DeleteOrder;
 using Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey;
 using Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey;
-using Ecommerce.PayPal.Contracts;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Order;
 using MediatR;

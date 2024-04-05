@@ -1,4 +1,3 @@
-using System;
 using Ecommerce.Shared.Security.Responses;
 using MediatR;
 

@@ -1,5 +1,4 @@
 using Blazored.Toast.Services;
-using Ecommerce.Shared.Security;
 using Ecommerce.UI.Contracts;
 using Microsoft.AspNetCore.Components;
 using System.Collections.Generic;

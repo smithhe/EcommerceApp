@@ -16,7 +16,7 @@ namespace Ecommerce.UI.Pages.Security
 		{
 			AuthenticationState authState = await this.AuthenticationState;
 
-			bool success = await this.SecurityService.Logout(authState.User.Identity?.Name ?? string.Empty);
+			await this.SecurityService.Logout(authState.User.Identity?.Name ?? string.Empty);
 			
 			this.NavigationManager.NavigateTo("/");
 		}

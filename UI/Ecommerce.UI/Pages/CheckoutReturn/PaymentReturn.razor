@@ -1,13 +1,6 @@
 @page "/checkout/success/{OrderId}"
-@using Blazored.Toast.Configuration
 @using Ecommerce.Shared.Dtos
 
-<BlazoredToasts Position="ToastPosition.TopRight"
-                Timeout="10"
-                IconType="IconType.FontAwesome"
-                SuccessClass="success-toast-override"
-                SuccessIcon="done_outline"
-                ErrorIcon="fa fa-bug"/>
 @if (this.ShowError)
 {
     <div class="container mt-5">

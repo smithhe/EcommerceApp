@@ -1,5 +1,4 @@
 using Ecommerce.Application.Features.Order.Commands.UpdateOrder;
-using Ecommerce.Shared.Enums;
 using FluentValidation;
 
 namespace Ecommerce.Application.Validators.Order

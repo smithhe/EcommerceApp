@@ -100,7 +100,7 @@ namespace Ecommerce.Identity.Services
 
 			try
 			{
-				ClaimsPrincipal? claimsPrincipal = tokenHandler.ValidateToken(token, validationParameters, out SecurityToken validatedToken);
+				ClaimsPrincipal? claimsPrincipal = tokenHandler.ValidateToken(token, validationParameters, out SecurityToken _);
 				
 				// Extract the username claim from the token's claims
 				string? usernameClaim = claimsPrincipal.Claims.FirstOrDefault(claim => claim.Type == ClaimTypes.Name)?.Value;
@@ -154,7 +154,7 @@ namespace Ecommerce.Identity.Services
 			    || string.IsNullOrEmpty(createUserRequest.LastName))
 			{
 				response.Success = false;
-				response.Errors = new string[] { "All Fields are required" };
+				response.Errors = new [] { "All Fields are required" };
 				return response;
 			}
 			
@@ -163,19 +163,19 @@ namespace Ecommerce.Identity.Services
 			if (existingUser != null)
 			{
 				response.Success = false;
-				response.Errors = new string[] { "UserName Already Exists" };
+				response.Errors = new [] { "UserName Already Exists" };
 				return response;
 			}
 			
 			//Validate the email address provided
 			try
 			{
-				MailAddress mailAddress = new MailAddress(createUserRequest.EmailAddress);
+				MailAddress unused = new MailAddress(createUserRequest.EmailAddress);
 			}
 			catch (FormatException)
 			{
 				response.Success = false;
-				response.Errors = new string[] { "Invalid Email Address" };
+				response.Errors = new [] { "Invalid Email Address" };
 				return response;
 			}
 
@@ -277,7 +277,7 @@ namespace Ecommerce.Identity.Services
 			List<Claim> claims = new List<Claim>
 			{
 				new Claim(ClaimTypes.Name, username),
-				new Claim(ClaimTypes.NameIdentifier, user!.Id),
+				new Claim(ClaimTypes.NameIdentifier, user.Id),
 				new Claim(ClaimTypes.Email, user.Email!),
 				new Claim(CustomClaims._firstName, user.FirstName),
 				new Claim(CustomClaims._lastName, user.LastName)

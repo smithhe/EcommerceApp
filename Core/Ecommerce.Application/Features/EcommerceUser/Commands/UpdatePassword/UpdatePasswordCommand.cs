@@ -1,5 +1,4 @@
 using Ecommerce.Domain.Entities;
-using Ecommerce.Shared.Security;
 using Ecommerce.Shared.Security.Responses;
 using MediatR;
 

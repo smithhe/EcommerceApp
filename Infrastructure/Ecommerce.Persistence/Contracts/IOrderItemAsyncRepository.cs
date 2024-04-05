@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 namespace Ecommerce.Persistence.Contracts
 {
 	/// <summary>
-	/// Extends the <see cref="IAsyncRepository"/> interface with an additional method for <see cref="OrderItem"/> entities
+	/// Extends the <see cref="T:Ecommerce.Persistence.Contracts.IAsyncRepository`1"/> interface with an additional method for <see cref="OrderItem"/> entities
 	/// </summary>
 	public interface IOrderItemAsyncRepository : IAsyncRepository<OrderItem>
 	{

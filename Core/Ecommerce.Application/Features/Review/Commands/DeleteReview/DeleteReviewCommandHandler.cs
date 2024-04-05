@@ -6,7 +6,6 @@ using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Review;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 

@@ -1,4 +1,3 @@
-using AutoMapper;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Responses.CartItem;
 using MediatR;
@@ -14,19 +13,16 @@ namespace Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
 	public class DeleteUserCartItemsCommandHandler : IRequestHandler<DeleteUserCartItemsCommand, DeleteUserCartItemsResponse>
 	{
 		private readonly ILogger<DeleteUserCartItemsCommandHandler> _logger;
-		private readonly IMapper _mapper;
 		private readonly ICartItemRepository _cartItemRepository;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="DeleteUserCartItemsCommandHandler"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
-		/// <param name="mapper">The <see cref="IMapper"/> instance used for mapping objects.</param>
 		/// <param name="cartItemRepository">The <see cref="ICartItemRepository"/> instance used for data access for <see cref="CartItem"/> entities.</param>
-		public DeleteUserCartItemsCommandHandler(ILogger<DeleteUserCartItemsCommandHandler> logger, IMapper mapper, ICartItemRepository cartItemRepository)
+		public DeleteUserCartItemsCommandHandler(ILogger<DeleteUserCartItemsCommandHandler> logger, ICartItemRepository cartItemRepository)
 		{
 			this._logger = logger;
-			this._mapper = mapper;
 			this._cartItemRepository = cartItemRepository;
 		}
 		

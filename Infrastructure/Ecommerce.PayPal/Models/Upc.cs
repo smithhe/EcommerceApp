@@ -5,7 +5,7 @@ namespace Ecommerce.PayPal.Models
     /// <summary>
     /// Represents a Universal Product Code (UPC).
     /// </summary>
-    public class UPC
+    public class Upc
     {
         /// <summary>
         /// The Universal Product Code type.

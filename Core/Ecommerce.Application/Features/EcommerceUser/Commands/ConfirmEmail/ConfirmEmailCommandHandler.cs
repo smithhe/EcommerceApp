@@ -40,7 +40,7 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
             this._logger.LogInformation("Handling request to confirm a User's email address");
             
             //Attempt to confirm the user's email
-            return await this._authenticationService.ConfirmEmailAsync(command.UserId.ToString(), command.Token);
+            return await this._authenticationService.ConfirmEmailAsync(command.UserId, command.Token);
         }
     }
 }

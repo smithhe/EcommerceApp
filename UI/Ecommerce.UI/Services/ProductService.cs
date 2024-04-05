@@ -4,7 +4,6 @@ using Ecommerce.UI.Contracts;
 using Ecommerce.UI.Contracts.Refit;
 using Newtonsoft.Json;
 using Refit;
-using System;
 using System.Threading.Tasks;
 
 namespace Ecommerce.UI.Services

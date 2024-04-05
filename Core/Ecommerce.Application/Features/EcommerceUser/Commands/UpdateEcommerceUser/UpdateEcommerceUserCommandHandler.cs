@@ -3,7 +3,6 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
-using Ecommerce.Shared.Security;
 using Ecommerce.Shared.Security.Responses;
 
 namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
@@ -40,6 +39,9 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceU
 		/// </returns>
 		public async Task<UpdateEcommerceUserResponse> Handle(UpdateEcommerceUserCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
+			this._logger.LogInformation("Handling request to update a User's information");
+			
 			UpdateEcommerceUserResponse response = new UpdateEcommerceUserResponse();
 
 			//Check for null or empty properties in the command

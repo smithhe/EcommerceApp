@@ -1,4 +1,3 @@
-using System;
 
 namespace Ecommerce.Shared.Responses.PayPal
 {

@@ -59,7 +59,7 @@ namespace Ecommerce.FastEndpoints.Security
 			if (string.IsNullOrEmpty(uiUrl))
 			{
 				this._logger.LogError("UIUrl is not configured");
-				await this.SendAsync(new CreateUserResponse { Success = false, Errors = new string[] { "Unexpected Error Occurred" } },
+				await this.SendAsync(new CreateUserResponse { Success = false, Errors = new [] { "Unexpected Error Occurred" } },
 					500, ct);
 				return;
 			}
@@ -79,7 +79,7 @@ namespace Ecommerce.FastEndpoints.Security
 			{
 				//Log the exception
 				this._logger.LogError(e, "An error occurred while registering a new User");
-				await this.SendAsync(new CreateUserResponse { Success = false, Errors = new string[] { "Unexpected Error Occurred" } },
+				await this.SendAsync(new CreateUserResponse { Success = false, Errors = new [] { "Unexpected Error Occurred" } },
 					500, ct);
 				return;
 			}

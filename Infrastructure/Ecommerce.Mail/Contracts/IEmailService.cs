@@ -1,5 +1,4 @@
 using System.Threading.Tasks;
-using Ecommerce.Mail.Models;
 using Ecommerce.Mail.Models.Enums;
 
 namespace Ecommerce.Mail.Contracts

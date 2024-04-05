@@ -1,4 +1,3 @@
-using Ecommerce.PayPal.Models.Requests;
 using Refit;
 
 namespace Ecommerce.PayPal.Models

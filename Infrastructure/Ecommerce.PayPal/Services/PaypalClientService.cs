@@ -1,5 +1,4 @@
 using System.Net;
-using System.Text.Json;
 using Ecommerce.PayPal.Contracts;
 using Ecommerce.PayPal.Contracts.Refit;
 using Ecommerce.PayPal.Models;
@@ -143,9 +142,7 @@ namespace Ecommerce.PayPal.Services
             };
             
             //Add the purchase units to the request
-            payPalCreateOrderRequest.PurchaseUnits = new PurchaseUnit[1] { purchaseUnit };
-            
-            string json = JsonSerializer.Serialize(payPalCreateOrderRequest);
+            payPalCreateOrderRequest.PurchaseUnits = new PurchaseUnit[] { purchaseUnit };
             
             //Send the create order request to PayPal
             ApiResponse<PayPalCreateOrderResponse> payPalApiResponse = await this._payPalApiService.CreatePayPalOrder(request.Order.PayPalRequestId.ToString(), payPalCreateOrderRequest);

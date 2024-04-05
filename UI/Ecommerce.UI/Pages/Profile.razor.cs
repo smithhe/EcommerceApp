@@ -61,7 +61,7 @@ namespace Ecommerce.UI.Pages
 				return;
 			}
 
-			if (response.ValidationErrors?.Count > 0)
+			if (response.ValidationErrors.Count > 0)
 			{
 				foreach (string error in response.ValidationErrors)
 				{
@@ -103,7 +103,7 @@ namespace Ecommerce.UI.Pages
 			}
 			
 			//Check if there were validation errors
-			if (response.ValidationErrors?.Count > 0)
+			if (response.ValidationErrors.Count > 0)
 			{
 				foreach (string error in response.ValidationErrors)
 				{

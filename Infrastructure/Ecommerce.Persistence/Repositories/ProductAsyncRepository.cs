@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
+// ReSharper disable RedundantAnonymousTypePropertyName
 
 namespace Ecommerce.Persistence.Repositories
 {

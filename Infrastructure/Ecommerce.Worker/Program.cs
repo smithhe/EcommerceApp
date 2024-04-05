@@ -7,7 +7,7 @@ using Ecommerce.Mail;
 
 IHostBuilder builder = Host.CreateDefaultBuilder(args);
 
-builder.ConfigureAppConfiguration((hostingContext, config) =>
+builder.ConfigureAppConfiguration((_, config) =>
 {
     config.AddEnvironmentVariables("Ecommerce_");
 });
