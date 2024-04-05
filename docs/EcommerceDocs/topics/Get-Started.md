@@ -1,7 +1,7 @@
 # Local Setup
 ### Software Requirements:
-- .Net 7 SDK
-- Docker
+* .Net 8 SDK 
+* Docker
 
 ### Setup Steps
 1) Open Powershell and move into the Identity project directory
