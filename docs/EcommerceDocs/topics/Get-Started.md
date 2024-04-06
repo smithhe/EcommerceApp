@@ -4,7 +4,7 @@
 * Docker
 
 ### Setup Steps
-1) Open Powershell and move into the Identity project directory
+1) Open Powershell and move into the Persistence project directory
     - Your shell path should look similar to `C:\EcommerceApp/Infrastructure/Ecommerce.Persistence>`
 2) Run the following command to set up a MySQL Docker Container
     <code-block lang="bash">
