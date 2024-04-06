@@ -45,7 +45,7 @@ namespace Ecommerce.Application
 				cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly());
 			});
 			
-			services.AddPersistenceServices();
+			services.AddPersistenceServices(configuration);
 			services.AddPayPalServices(configuration);
 		}
 	}

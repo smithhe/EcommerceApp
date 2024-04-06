@@ -1,9 +1,7 @@
 using Dapper;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -17,19 +15,18 @@ namespace Ecommerce.Persistence.Repositories
 	public class CategoryAsyncRepository : ICategoryAsyncRepository
 	{
 		private readonly ILogger<CategoryAsyncRepository> _logger;
-		private readonly IConfiguration _configuration;
+		private readonly IConnectionProviderService _connectionProviderService;
 		private const string _tableName = "Category";
-		private const string _connectionStringName = "datastorage";
 		
 		/// <summary>
 		/// Initializes a new instance of the <see cref="CategoryAsyncRepository"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
-		/// <param name="configuration">The <see cref="IConfiguration"/> instance used for configuration settings.</param>
-		public CategoryAsyncRepository(ILogger<CategoryAsyncRepository> logger, IConfiguration configuration)
+		/// <param name="connectionProviderService">The <see cref="IConnectionProviderService"/> instance for getting a database connection</param>
+		public CategoryAsyncRepository(ILogger<CategoryAsyncRepository> logger, IConnectionProviderService connectionProviderService)
 		{
 			this._logger = logger;
-			this._configuration = configuration;
+			this._connectionProviderService = connectionProviderService;
 		}
 		
 		/// <summary>
@@ -45,7 +42,7 @@ namespace Ecommerce.Persistence.Repositories
 			const string sql = $"SELECT * FROM {_tableName} WHERE Id = @Id";
 			Category? category = null;
 
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 
@@ -80,7 +77,7 @@ namespace Ecommerce.Persistence.Repositories
 				"VALUES (@Name, @Summary, @CreatedBy, @CreatedDate);" +
 				"SELECT LAST_INSERT_ID();";
 
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 
@@ -123,7 +120,7 @@ namespace Ecommerce.Persistence.Repositories
                 LastModifiedDate = @LastModifiedDate
             WHERE Id = @Id";
 			
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 
@@ -160,7 +157,7 @@ namespace Ecommerce.Persistence.Repositories
 			int rowsEffected = -1;
 			const string sql = $"DELETE FROM {_tableName} WHERE Id = @Id";
 
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 
@@ -194,7 +191,7 @@ namespace Ecommerce.Persistence.Repositories
 			IEnumerable<Category> categories = Array.Empty<Category>();
 			const string sql = $"SELECT * FROM {_tableName}";
 			
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 
@@ -241,7 +238,7 @@ namespace Ecommerce.Persistence.Repositories
 			const string sql = $"SELECT * FROM {_tableName} WHERE Name = @Name";
 			Category? category = null;
 
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 

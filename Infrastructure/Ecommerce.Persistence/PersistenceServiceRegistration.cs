@@ -4,6 +4,9 @@ using Ecommerce.Persistence.Helpers;
 using Ecommerce.Persistence.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using Ecommerce.Persistence.Services;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Ecommerce.Persistence
 {
@@ -15,8 +18,18 @@ namespace Ecommerce.Persistence
 		/// <summary>
 		/// Extension method to register services for the Persistence project
 		/// </summary>
-		public static void AddPersistenceServices(this IServiceCollection services)
+		public static void AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
 		{
+			//Register the DbContext
+			services.AddDbContext<EcommercePersistenceDbContext>(options =>
+			{
+				options.UseMySQL(configuration.GetConnectionString("datastorage")!);
+			});
+			
+			//Register the connection provider service
+			services.AddScoped<IConnectionProviderService, ConnectionProviderService>();
+			
+			//Register the repositories
 			services.AddScoped<ICategoryAsyncRepository, CategoryAsyncRepository>();
 			services.AddScoped<IOrderAsyncRepository, OrderAsyncRepository>();
 			services.AddScoped<IOrderItemAsyncRepository, OrderItemAsyncRepository>();

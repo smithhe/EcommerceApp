@@ -14,6 +14,7 @@ using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Ecommerce.Persistence;
 using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
 
@@ -21,11 +22,11 @@ namespace Ecommerce.Identity.Services
 {
 	public class AuthService : IAuthenticationService
 	{
-		private readonly EcommerceIdentityDbContext _context;
+		private readonly EcommercePersistenceDbContext _context;
 		private readonly UserManager<EcommerceUser> _userManager;
 		private readonly JwtSettings _jwtSettings;
 
-		public AuthService(EcommerceIdentityDbContext context, UserManager<EcommerceUser> userManager, IOptions<JwtSettings> jwtSettings)
+		public AuthService(EcommercePersistenceDbContext context, UserManager<EcommerceUser> userManager, IOptions<JwtSettings> jwtSettings)
 		{
 			this._context = context;
 			this._userManager = userManager;
@@ -277,7 +278,7 @@ namespace Ecommerce.Identity.Services
 			List<Claim> claims = new List<Claim>
 			{
 				new Claim(ClaimTypes.Name, username),
-				new Claim(ClaimTypes.NameIdentifier, user.Id),
+				new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
 				new Claim(ClaimTypes.Email, user.Email!),
 				new Claim(CustomClaims._firstName, user.FirstName),
 				new Claim(CustomClaims._lastName, user.LastName)
@@ -339,7 +340,7 @@ namespace Ecommerce.Identity.Services
 			}
 			
 			//Check for the existing user
-			EcommerceUser? existingUser = await this._userManager.FindByIdAsync(user.Id);
+			EcommerceUser? existingUser = await this._userManager.FindByIdAsync(user.Id.ToString());
 			if (existingUser == null)
 			{
 				response.Success = false;
@@ -409,7 +410,7 @@ namespace Ecommerce.Identity.Services
 			}
 			
 			//Check for the existing user
-			EcommerceUser? existingUser = await this._userManager.FindByIdAsync(user.Id);
+			EcommerceUser? existingUser = await this._userManager.FindByIdAsync(user.Id.ToString());
 			if (existingUser == null)
 			{
 				response.Success = false;
@@ -472,7 +473,7 @@ namespace Ecommerce.Identity.Services
 		{
 			EcommerceUser? user = await this._userManager.FindByNameAsync(userName);
 
-			return user == null ? null : new Guid(user.Id);
+			return user?.Id;
 		}
 		
 	}

@@ -1,13 +1,12 @@
-using Dapper;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Ecommerce.Persistence.Repositories
 {
@@ -17,19 +16,17 @@ namespace Ecommerce.Persistence.Repositories
 	public class CartItemRepository : ICartItemRepository
 	{
 		private readonly ILogger<CartItemRepository> _logger;
-		private readonly IConfiguration _configuration;
-		private const string _tableName = "CartItem";
-		private const string _connectionStringName = "datastorage";
-		
+		private readonly EcommercePersistenceDbContext _dbContext;
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="ProductAsyncRepository"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
-		/// <param name="configuration">The <see cref="IConfiguration"/> instance used for configuration settings.</param>
-		public CartItemRepository(ILogger<CartItemRepository> logger, IConfiguration configuration)
+		/// <param name="dbContext">The <see cref="EcommercePersistenceDbContext"/> instance for database access</param>
+		public CartItemRepository(ILogger<CartItemRepository> logger, EcommercePersistenceDbContext dbContext)
 		{
 			this._logger = logger;
-			this._configuration = configuration;
+			this._dbContext = dbContext;
 		}
 		
 		/// <summary>
@@ -42,24 +39,16 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<CartItem?> GetByIdAsync(int id)
 		{
-			const string sql = $"SELECT * FROM {_tableName} WHERE Id = @Id";
 			CartItem? cartItem = null;
-
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					cartItem = await connection.QueryFirstOrDefaultAsync<CartItem>(sql, new { Id = id });
+				cartItem = await this._dbContext.CartItems.FirstOrDefaultAsync(c => c.Id == id);
 					
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching CartItem row for {id}");
-				}
-				
-				connection.Close();
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching CartItem row for {id}");
 			}
 
 			return cartItem;
@@ -75,36 +64,23 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<int> AddAsync(CartItem entity)
 		{
-			int newId = -1;
-			const string sql =
-				$"INSERT INTO {_tableName} " +
-				"(ProductId, UserId, Quantity, CreatedBy, CreatedDate) " +
-				"VALUES " +
-				"(@ProductId, @UserId, @Quantity, @CreatedBy, @CreatedDate);" +
-				"SELECT LAST_INSERT_ID();";
-			
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
-					{
-						newId = await connection.QuerySingleAsync<int>(sql, entity, transaction: transaction);
-						transaction.Commit();
-					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, "SQL Error when adding new CartItem");
-						transaction.Rollback();
-					}	
+					await this._dbContext.CartItems.AddAsync(entity);
+					await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
 				}
-				
-				connection.Close();
+				catch (Exception e)
+				{
+					this._logger.LogError(e, "SQL Error when adding new CartItem");
+					await transaction.RollbackAsync();
+				}	
 			}
 			
-			return newId;
+			return entity.Id;
 		}
 
 		/// <summary>
@@ -118,34 +94,31 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<bool> UpdateAsync(CartItem entity)
 		{
 			int rowsEffected = -1;
-			const string sql = $@"
-            UPDATE {_tableName}
-            SET ProductId = @ProductId,
-                UserId = @UserId,
-                Quantity = @Quantity,
-                LastModifiedBy = @LastModifiedBy,
-                LastModifiedDate = @LastModifiedDate
-            WHERE Id = @Id";
 			
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
+					CartItem? existingCartItem = await this._dbContext.CartItems.FirstOrDefaultAsync(c => c.Id == entity.Id);
+					
+					if (existingCartItem == null)
 					{
-						rowsEffected = await connection.ExecuteAsync(sql, entity, transaction: transaction);
-						transaction.Commit();
+						return false;
 					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, $"SQL Error when updating CartItem {entity.Id}");
-						transaction.Rollback();
-					}	
+					
+					existingCartItem.Quantity = entity.Quantity;
+					existingCartItem.LastModifiedBy = entity.LastModifiedBy;
+					existingCartItem.LastModifiedDate = entity.LastModifiedDate;
+					
+					rowsEffected = await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
 				}
-				
-				connection.Close();
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when updating CartItem {entity.Id}");
+					await transaction.RollbackAsync();
+				}	
 			}
 
 			return rowsEffected == 1;
@@ -162,24 +135,20 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<bool> DeleteAsync(CartItem entity)
 		{
 			int rowsEffected = -1;
-			const string sql = $"DELETE FROM {_tableName} WHERE Id = @Id";
 
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
-					{
-						rowsEffected = await connection.ExecuteAsync(sql, entity, transaction: transaction);
-						transaction.Commit();
-					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, $"SQL Error when deleting CartItem {entity.Id}");
-						transaction.Rollback();
-					}
+					this._dbContext.CartItems.Remove(entity);
+					rowsEffected = await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
+				}
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when deleting CartItem {entity.Id}");
+					await transaction.RollbackAsync();
 				}
 			}
 
@@ -197,22 +166,14 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<IEnumerable<CartItem>> ListAllAsync(Guid userId)
 		{
 			IEnumerable<CartItem> cartItems = Array.Empty<CartItem>();
-			const string sql = $"SELECT * FROM {_tableName} WHERE UserId = @UserId";
 			
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					cartItems = await connection.QueryAsync<CartItem>(sql, new { UserId = userId });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching all CartItem rows for User {userId}");
-				}
-				
-				connection.Close();
+				cartItems = await this._dbContext.CartItems.Where(c => c.UserId == userId).ToArrayAsync();
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching all CartItem rows for User {userId}");
 			}
 
 			return cartItems;
@@ -229,24 +190,22 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<bool> RemoveUserCartItems(Guid userId)
 		{
 			int rowsEffected = -1;
-			const string sql = $"DELETE FROM {_tableName} WHERE UserId = @UserId";
 
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
-					{
-						rowsEffected = await connection.ExecuteAsync(sql, new { UserId = userId }, transaction: transaction);
-						transaction.Commit();
-					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, $"SQL Error when deleting CartItems for User {userId}");
-						transaction.Rollback();
-					}
+					CartItem[] cartItemsToDelete = await this._dbContext.CartItems.Where(c => c.UserId == userId).ToArrayAsync();
+					this._dbContext.CartItems.RemoveRange(cartItemsToDelete);
+					
+					rowsEffected = await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
+				}
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when deleting CartItems for User {userId}");
+					await transaction.RollbackAsync();
 				}
 			}
 
@@ -264,23 +223,15 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<bool> CartItemExistsForUser(Guid userId, int productId)
 		{
-			const string sql = $"SELECT * FROM {_tableName} WHERE UserId = @UserId AND ProductId = @ProductId";
 			CartItem? cartItem = null;
 
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					cartItem = await connection.QueryFirstOrDefaultAsync<CartItem>(sql, new { UserId = userId, ProductId = productId });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when checking if a CartItem exists");
-				}
-				
-				connection.Close();
+				cartItem = await this._dbContext.CartItems.FirstOrDefaultAsync(c => c.UserId == userId && c.ProductId == productId);
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when checking if a CartItem exists");
 			}
 
 			return cartItem != null;

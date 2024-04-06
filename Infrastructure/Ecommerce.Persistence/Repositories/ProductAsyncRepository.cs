@@ -1,9 +1,7 @@
 using Dapper;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,19 +16,18 @@ namespace Ecommerce.Persistence.Repositories
 	public class ProductAsyncRepository : IProductAsyncRepository
 	{
 		private readonly ILogger<ProductAsyncRepository> _logger;
-		private readonly IConfiguration _configuration;
+		private readonly IConnectionProviderService _connectionProviderService;
 		private const string _tableName = "Product";
-		private const string _connectionStringName = "datastorage";
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="ProductAsyncRepository"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
-		/// <param name="configuration">The <see cref="IConfiguration"/> instance used for configuration settings.</param>
-		public ProductAsyncRepository(ILogger<ProductAsyncRepository> logger, IConfiguration configuration)
+		/// <param name="connectionProviderService">The <see cref="IConnectionProviderService"/> instance for getting a database connection</param>
+		public ProductAsyncRepository(ILogger<ProductAsyncRepository> logger, IConnectionProviderService connectionProviderService)
 		{
 			this._logger = logger;
-			this._configuration = configuration;
+			this._connectionProviderService = connectionProviderService;
 		}
 		
 		/// <summary>
@@ -46,7 +43,7 @@ namespace Ecommerce.Persistence.Repositories
 			const string sql = $"SELECT * FROM {_tableName} WHERE Id = @Id";
 			Product? product = null;
 
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 
@@ -83,7 +80,7 @@ namespace Ecommerce.Persistence.Repositories
 				"(@Name, @Description, @Price, @AverageRating, @QuantityAvailable, @ImageUrl, @CategoryId, @CreatedBy, @CreatedDate);" +
 				"SELECT LAST_INSERT_ID();";
 			
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 
@@ -142,7 +139,7 @@ namespace Ecommerce.Persistence.Repositories
                 LastModifiedDate = @LastModifiedDate
             WHERE Id = @Id";
 			
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 
@@ -191,7 +188,7 @@ namespace Ecommerce.Persistence.Repositories
 			int rowsEffected = -1;
 			const string sql = $"DELETE FROM {_tableName} WHERE Id = @Id";
 
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 
@@ -226,7 +223,7 @@ namespace Ecommerce.Persistence.Repositories
 			IEnumerable<Product> products = Array.Empty<Product>();
 			const string sql = $"SELECT * FROM {_tableName} WHERE CategoryId = @CategoryId";
 			
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 
@@ -272,7 +269,7 @@ namespace Ecommerce.Persistence.Repositories
 			const string sql = $"SELECT CategoryId FROM {_tableName} WHERE Id = @Id";
 			int categoryId = -1;
 
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 
@@ -304,7 +301,7 @@ namespace Ecommerce.Persistence.Repositories
 			const string sql = $"SELECT * FROM {_tableName} WHERE Name = @Name";
 			Product? product = null;
 
-			using (IDbConnection connection = new MySqlConnection(this._configuration.GetConnectionString(_connectionStringName)))
+			using (IDbConnection connection = this._connectionProviderService.GetConnection())
 			{
 				connection.Open();
 

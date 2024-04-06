@@ -4,12 +4,12 @@ using Ecommerce.Identity.Models;
 using Ecommerce.Identity.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Text;
+using Ecommerce.Persistence;
 
 namespace Ecommerce.Identity
 {
@@ -19,19 +19,14 @@ namespace Ecommerce.Identity
 		{
 			services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
 
-			services.AddDbContext<EcommerceIdentityDbContext>(options =>
-			{
-				options.UseMySQL(configuration.GetConnectionString("datastorage")!);
-			});
-
-			services.AddIdentity<EcommerceUser, IdentityRole>(options =>
+			services.AddIdentity<EcommerceUser, IdentityRole<Guid>>(options =>
 				{
 					options.Password.RequiredLength = 9;
 					options.Password.RequireUppercase = true;
 					options.Password.RequireLowercase = true;
 					options.Password.RequireDigit = true;
 				})
-				.AddEntityFrameworkStores<EcommerceIdentityDbContext>()
+				.AddEntityFrameworkStores<EcommercePersistenceDbContext>()
 				.AddDefaultTokenProviders();
 			
 			services.AddTransient<IAuthenticationService, AuthService>();
