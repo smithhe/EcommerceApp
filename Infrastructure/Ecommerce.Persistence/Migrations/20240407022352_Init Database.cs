@@ -375,9 +375,9 @@ namespace Ecommerce.Persistence.Migrations
                 columns: new[] { "Id", "CreatedBy", "CreatedDate", "LastModifiedBy", "LastModifiedDate", "Name", "Summary" },
                 values: new object[,]
                 {
-                    { 1, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7744), null, null, "Laptops", "Explore our range of laptops." },
-                    { 2, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7788), null, null, "Phones", "Discover the latest smartphones." },
-                    { 3, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7790), null, null, "Tablets", "Browse our collection of tablets." }
+                    { 1, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6078), null, null, "Laptops", "Explore our range of laptops." },
+                    { 2, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6131), null, null, "Phones", "Discover the latest smartphones." },
+                    { 3, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6134), null, null, "Tablets", "Browse our collection of tablets." }
                 });
 
             migrationBuilder.InsertData(
@@ -385,9 +385,9 @@ namespace Ecommerce.Persistence.Migrations
                 columns: new[] { "Id", "AverageRating", "CategoryId", "CreatedBy", "CreatedDate", "Description", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Name", "Price", "QuantityAvailable" },
                 values: new object[,]
                 {
-                    { 1, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7861), "This is a killer laptop that can handle all your home needs", "", null, null, "Laptop 1", 299.99000000000001, 5 },
-                    { 2, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7865), "This is a killer laptop that can handle all your home needs", "", null, null, "Laptop 2", 499.99000000000001, 5 },
-                    { 3, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7869), "This is a killer laptop that can handle all your home needs", "", null, null, "Laptop 3", 999.99000000000001, 5 }
+                    { 1, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6207), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop1.jpg", null, null, "Laptop 1", 299.99000000000001, 5 },
+                    { 2, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6211), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop2.jpg", null, null, "Laptop 2", 499.99000000000001, 5 },
+                    { 3, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6214), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop3.jpg", null, null, "Laptop 3", 999.99000000000001, 5 }
                 });
 
             migrationBuilder.CreateIndex(

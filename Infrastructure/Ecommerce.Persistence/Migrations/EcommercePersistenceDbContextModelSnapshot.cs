@@ -110,7 +110,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7744),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6078),
                             Name = "Laptops",
                             Summary = "Explore our range of laptops."
                         },
@@ -118,7 +118,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 2,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7788),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6131),
                             Name = "Phones",
                             Summary = "Discover the latest smartphones."
                         },
@@ -126,7 +126,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 3,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7790),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6134),
                             Name = "Tablets",
                             Summary = "Browse our collection of tablets."
                         });
@@ -376,9 +376,9 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7861),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6207),
                             Description = "This is a killer laptop that can handle all your home needs",
-                            ImageUrl = "",
+                            ImageUrl = "https://smith-ecommerce-app.s3.amazonaws.com/laptop1.jpg",
                             Name = "Laptop 1",
                             Price = 299.99000000000001,
                             QuantityAvailable = 5
@@ -389,9 +389,9 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7865),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6211),
                             Description = "This is a killer laptop that can handle all your home needs",
-                            ImageUrl = "",
+                            ImageUrl = "https://smith-ecommerce-app.s3.amazonaws.com/laptop2.jpg",
                             Name = "Laptop 2",
                             Price = 499.99000000000001,
                             QuantityAvailable = 5
@@ -402,9 +402,9 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7869),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6214),
                             Description = "This is a killer laptop that can handle all your home needs",
-                            ImageUrl = "",
+                            ImageUrl = "https://smith-ecommerce-app.s3.amazonaws.com/laptop3.jpg",
                             Name = "Laptop 3",
                             Price = 999.99000000000001,
                             QuantityAvailable = 5
