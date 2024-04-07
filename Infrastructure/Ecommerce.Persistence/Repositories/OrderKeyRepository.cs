@@ -51,6 +51,7 @@ namespace Ecommerce.Persistence.Repositories
                 {
                     this._logger.LogError(e, "SQL Error when adding new OrderKey");
                     await transaction.RollbackAsync();
+                    return -1;
                 }	
             }
 			

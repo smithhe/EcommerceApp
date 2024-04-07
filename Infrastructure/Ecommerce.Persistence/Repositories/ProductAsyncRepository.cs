@@ -76,6 +76,7 @@ namespace Ecommerce.Persistence.Repositories
 				{
 					this._logger.LogError(e, "SQL Error when adding new Product");
 					await transaction.RollbackAsync();
+					return -1;
 				}	
 			}
 			
