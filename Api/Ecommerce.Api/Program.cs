@@ -1,4 +1,5 @@
 using Ecommerce.FastEndpoints;
+using Ecommerce.Persistence;
 using FastEndpoints;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -23,10 +24,13 @@ builder.Services.AddFastEndpointServices(builder.Configuration);
 
 WebApplication app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Initialize the database
+using (IServiceScope scope = app.Services.CreateScope())
 {
-	
+	EcommercePersistenceDbContext dbContext = scope.ServiceProvider.GetRequiredService<EcommercePersistenceDbContext>();
+	dbContext.Database.EnsureCreated();
+	DatabaseInitializer.MigrateDatabase(dbContext);
+	DatabaseInitializer.PostMigrationUpdates(dbContext);
 }
 
 app.UseHttpsRedirection();
@@ -34,6 +38,8 @@ app.UseCors("OpenCorsPolicy");
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+// Add FastEndpoints
 app.UseFastEndpoints();
 
 app.MapControllers();

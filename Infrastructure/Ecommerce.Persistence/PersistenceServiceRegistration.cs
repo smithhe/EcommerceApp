@@ -26,6 +26,8 @@ namespace Ecommerce.Persistence
 				options.UseMySQL(configuration.GetConnectionString("datastorage")!);
 			});
 			
+			
+			
 			//Register the connection provider service
 			services.AddScoped<IConnectionProviderService, ConnectionProviderService>();
 			
@@ -43,5 +45,7 @@ namespace Ecommerce.Persistence
 			SqlMapper.RemoveTypeMap(typeof(Guid));
 			SqlMapper.RemoveTypeMap(typeof(Guid?));
 		}
+		
+		
 	}
 }

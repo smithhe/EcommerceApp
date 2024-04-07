@@ -27,13 +27,15 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime(6)");
@@ -44,9 +46,8 @@ namespace Ecommerce.Persistence.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
@@ -70,24 +71,28 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Summary")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar(200)");
 
                     b.HasKey("Id");
 
@@ -96,6 +101,32 @@ namespace Ecommerce.Persistence.Migrations
                             t.HasCheckConstraint("CHK_CCreatedDate", "CreatedDate <= LastModifiedDate");
 
                             t.HasCheckConstraint("CHK_CLastModifiedDate", "LastModifiedDate IS NULL OR CreatedDate <= LastModifiedDate");
+                        });
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedBy = "Harold",
+                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2429),
+                            Name = "Laptops",
+                            Summary = "Explore our range of laptops."
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedBy = "Harold",
+                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2487),
+                            Name = "Phones",
+                            Summary = "Discover the latest smartphones."
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedBy = "Harold",
+                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2490),
+                            Name = "Tablets",
+                            Summary = "Browse our collection of tablets."
                         });
                 });
 
@@ -183,13 +214,15 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime(6)");
@@ -226,13 +259,15 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime(6)");
@@ -245,15 +280,18 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.Property<string>("ProductDescription")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ProductSku")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -284,7 +322,8 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime(6)");
@@ -298,14 +337,16 @@ namespace Ecommerce.Persistence.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<double>("Price")
                         .HasColumnType("double");
@@ -315,13 +356,52 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
                     b.ToTable("Products", t =>
                         {
                             t.HasCheckConstraint("CHK_PCreatedDate", "CreatedDate <= LastModifiedDate");
 
                             t.HasCheckConstraint("CHK_PLastModifiedDate", "LastModifiedDate IS NULL OR CreatedDate <= LastModifiedDate");
+                        });
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AverageRating = 0m,
+                            CategoryId = 1,
+                            CreatedBy = "Harold",
+                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2560),
+                            Description = "This is a killer laptop that can handle all your home needs",
+                            ImageUrl = "",
+                            Name = "Laptop 1",
+                            Price = 299.99000000000001,
+                            QuantityAvailable = 5
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AverageRating = 0m,
+                            CategoryId = 1,
+                            CreatedBy = "Harold",
+                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2564),
+                            Description = "This is a killer laptop that can handle all your home needs",
+                            ImageUrl = "",
+                            Name = "Laptop 2",
+                            Price = 499.99000000000001,
+                            QuantityAvailable = 5
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AverageRating = 0m,
+                            CategoryId = 1,
+                            CreatedBy = "Harold",
+                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2567),
+                            Description = "This is a killer laptop that can handle all your home needs",
+                            ImageUrl = "",
+                            Name = "Laptop 3",
+                            Price = 999.99000000000001,
+                            QuantityAvailable = 5
                         });
                 });
 
@@ -336,13 +416,15 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime(6)");
@@ -355,6 +437,7 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.Property<string>("UserName")
                         .IsRequired()
+                        .HasMaxLength(256)
                         .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
@@ -549,17 +632,6 @@ namespace Ecommerce.Persistence.Migrations
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Ecommerce.Domain.Entities.Product", b =>
-                {
-                    b.HasOne("Ecommerce.Domain.Entities.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("Ecommerce.Domain.Entities.Review", b =>

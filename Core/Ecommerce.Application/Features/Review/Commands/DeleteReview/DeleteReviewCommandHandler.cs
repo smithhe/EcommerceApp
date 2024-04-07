@@ -84,7 +84,6 @@ namespace Ecommerce.Application.Features.Review.Commands.DeleteReview
 
 				//Send the update command
 				product.AverageRating = newAverageRating;
-				product.Category = (await this._categoryAsyncRepository.GetByIdAsync(await this._productAsyncRepository.GetCategoryId(product.Id)))!;
 				await this._mediator.Send(new UpdateProductCommand
 				{
 					ProductToUpdate = this._mapper.Map<ProductDto>(product), 

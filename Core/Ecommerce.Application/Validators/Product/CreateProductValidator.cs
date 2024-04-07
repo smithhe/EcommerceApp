@@ -49,7 +49,7 @@ namespace Ecommerce.Application.Validators.Product
 		
 		private async Task<bool> CategoryExists(CreateProductCommand createProductCommand, CancellationToken cancellationToken)
 		{
-			return (await this._categoryAsyncRepository.GetByIdAsync(createProductCommand.ProductToCreate!.Category.Id)) == null;
+			return (await this._categoryAsyncRepository.GetByIdAsync(createProductCommand.ProductToCreate!.CategoryId)) == null;
 		}
 	}
 }

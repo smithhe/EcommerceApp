@@ -96,7 +96,7 @@ namespace Ecommerce.Persistence.Repositories
 							AverageRating = entity.AverageRating,
 							QuantityAvailable = entity.QuantityAvailable,
 							ImageUrl = entity.ImageUrl,
-							CategoryId = entity.Category.Id,
+							CategoryId = entity.CategoryId,
 							CreatedBy = entity.CreatedBy,
 							CreatedDate = entity.CreatedDate
 						}, transaction: transaction);
@@ -156,7 +156,7 @@ namespace Ecommerce.Persistence.Repositories
 							AverageRating = entity.AverageRating,
 							QuantityAvailable = entity.QuantityAvailable,
 							ImageUrl = entity.ImageUrl,
-							CategoryId = entity.Category.Id,
+							CategoryId = entity.CategoryId,
 							LastModifiedBy = entity.LastModifiedBy,
 							LastModifiedDate = entity.LastModifiedDate
 						}, transaction: transaction);

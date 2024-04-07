@@ -60,34 +60,14 @@ namespace Ecommerce.Application.Features.Product.Queries.GetProductById
 			Domain.Entities.Product? product = await this._productAsyncRepository.GetByIdAsync(query.Id);
 			response.Product = this._mapper.Map<ProductDto?>(product);
 			
-			if (product == null)
+			if (response.Product == null)
 			{
 				response.Success = false;
 				response.Message = "Product was not found";
 				return response;
 			}
 
-			int categoryId = await this._productAsyncRepository.GetCategoryId(product.Id);
-
-			if (categoryId == -1)
-			{
-				response.Success = false;
-				response.Message = "Category for Product was not found";
-				return response;
-			}
-
-			GetCategoryByIdResponse categoryResponse = await this._mediator.Send(new GetCategoryByIdQuery { Id = categoryId }, cancellationToken);
-
-			if (response.Success == false)
-			{
-				response.Success = false;
-				response.Message = "Error retrieving Category for Product";
-				return response;
-			}
-
-			response.Product!.Category = categoryResponse.Category!;
-
-			GetReviewsForProductResponse reviewsResponse = await this._mediator.Send(new GetReviewsForProductQuery { ProductId = product.Id }, cancellationToken);
+			GetReviewsForProductResponse reviewsResponse = await this._mediator.Send(new GetReviewsForProductQuery { ProductId = response.Product.Id }, cancellationToken);
 
 			response.Product.CustomerReviews = response.Success ? reviewsResponse.Reviews : Array.Empty<ReviewDto>();
 			
