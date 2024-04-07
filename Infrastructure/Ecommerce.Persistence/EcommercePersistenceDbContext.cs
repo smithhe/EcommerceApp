@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Domain.Infrastructure;
 using Microsoft.AspNetCore.Identity;
