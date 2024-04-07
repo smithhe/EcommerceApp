@@ -21,7 +21,6 @@ namespace Ecommerce.Application.Features.Review.Commands.DeleteReview
 		private readonly IMediator _mediator;
 		private readonly IReviewAsyncRepository _reviewAsyncRepository;
 		private readonly IProductAsyncRepository _productAsyncRepository;
-		private readonly ICategoryAsyncRepository _categoryAsyncRepository;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="DeleteReviewCommandHandler"/> class.
@@ -31,16 +30,14 @@ namespace Ecommerce.Application.Features.Review.Commands.DeleteReview
 		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
 		/// <param name="reviewAsyncRepository">The <see cref="IReviewAsyncRepository"/> instance used for data access for <see cref="Review"/> entities.</param>
 		/// <param name="productAsyncRepository">The <see cref="IProductAsyncRepository"/> instance used for data access for <see cref="Product"/> entities.</param>
-		/// <param name="categoryAsyncRepository">The <see cref="ICategoryAsyncRepository"/> instance used for data access for <see cref="Category"/> entities.</param>
 		public DeleteReviewCommandHandler(ILogger<DeleteReviewCommandHandler> logger, IMapper mapper, IMediator mediator,
-			IReviewAsyncRepository reviewAsyncRepository, IProductAsyncRepository productAsyncRepository, ICategoryAsyncRepository categoryAsyncRepository)
+			IReviewAsyncRepository reviewAsyncRepository, IProductAsyncRepository productAsyncRepository)
 		{
 			this._logger = logger;
 			this._mapper = mapper;
 			this._mediator = mediator;
 			this._reviewAsyncRepository = reviewAsyncRepository;
 			this._productAsyncRepository = productAsyncRepository;
-			this._categoryAsyncRepository = categoryAsyncRepository;
 		}
 		
 		/// <summary>

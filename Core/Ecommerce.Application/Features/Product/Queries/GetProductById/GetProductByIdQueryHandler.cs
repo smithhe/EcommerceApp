@@ -1,10 +1,8 @@
 using AutoMapper;
-using Ecommerce.Application.Features.Category.Queries.GetCategoryById;
 using Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Dtos;
-using Ecommerce.Shared.Responses.Category;
 using Ecommerce.Shared.Responses.Product;
 using Ecommerce.Shared.Responses.Review;
 using MediatR;
