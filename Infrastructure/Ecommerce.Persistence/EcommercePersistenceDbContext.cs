@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Domain.Infrastructure;
 using Microsoft.AspNetCore.Identity;
@@ -10,13 +11,13 @@ namespace Ecommerce.Persistence
     public class EcommercePersistenceDbContext(DbContextOptions<EcommercePersistenceDbContext> options)
         : IdentityDbContext<EcommerceUser, IdentityRole<Guid>, Guid>(options)
     {
-        public DbSet<CartItem> CartItems { get; init; } = null!;
-        public DbSet<Category> Categories { get; init; } = null!;
-        public DbSet<Order> Orders { get; init; } = null!;
-        public DbSet<OrderItem> OrderItems { get; init; } = null!;
-        public DbSet<OrderKey> OrderKeys { get; init; } = null!;
-        public DbSet<Product> Products { get; init; } = null!;
-        public DbSet<Review> Reviews { get; init; } = null!;
+        public virtual DbSet<CartItem> CartItems { get; init; } = null!;
+        public virtual DbSet<Category> Categories { get; init; } = null!;
+        public virtual DbSet<Order> Orders { get; init; } = null!;
+        public virtual DbSet<OrderItem> OrderItems { get; init; } = null!;
+        public virtual DbSet<OrderKey> OrderKeys { get; init; } = null!;
+        public virtual DbSet<Product> Products { get; init; } = null!;
+        public virtual DbSet<Review> Reviews { get; init; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
