@@ -1,11 +1,12 @@
-using Dapper;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Ecommerce.Persistence.Repositories
 {
@@ -15,18 +16,17 @@ namespace Ecommerce.Persistence.Repositories
 	public class OrderItemAsyncRepository : IOrderItemAsyncRepository
 	{
 		private readonly ILogger<OrderItemAsyncRepository> _logger;
-		private readonly IConnectionProviderService _connectionProviderService;
-		private const string _tableName = "OrderItem";
+		private readonly EcommercePersistenceDbContext _dbContext;
 		
 		/// <summary>
 		/// Initializes a new instance of the <see cref="CategoryAsyncRepository"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
-		/// <param name="connectionProviderService">The <see cref="IConnectionProviderService"/> instance for getting a database connection</param>
-		public OrderItemAsyncRepository(ILogger<OrderItemAsyncRepository> logger, IConnectionProviderService connectionProviderService)
+		/// <param name="dbContext">The <see cref="EcommercePersistenceDbContext"/> instance for database access</param>
+		public OrderItemAsyncRepository(ILogger<OrderItemAsyncRepository> logger, EcommercePersistenceDbContext dbContext)
 		{
 			this._logger = logger;
-			this._connectionProviderService = connectionProviderService;
+			this._dbContext = dbContext;
 		}
 
 		/// <summary>
@@ -39,23 +39,15 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<OrderItem?> GetByIdAsync(int id)
 		{
-			const string sql = $"SELECT * FROM {_tableName} WHERE Id = @Id";
 			OrderItem? orderItem = null;
 
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					orderItem = await connection.QueryFirstOrDefaultAsync<OrderItem>(sql, new { Id = id });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching OrderItem row for {id}");
-				}
-				
-				connection.Close();
+				orderItem = await this._dbContext.OrderItems.FirstOrDefaultAsync(oi => oi.Id == id);
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching OrderItem row for {id}");
 			}
 
 			return orderItem;
@@ -71,34 +63,23 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<int> AddAsync(OrderItem entity)
 		{
-			int newId = -1;
-			const string sql =
-				$"INSERT INTO {_tableName} (ProductName, ProductDescription, ProductSku, OrderId, Quantity, Price, CreatedBy, CreatedDate) " +
-				"VALUES (@ProductName, @ProductDescription, @ProductSku, @OrderId, @Quantity, @Price, @CreatedBy, @CreatedDate);" +
-				"SELECT LAST_INSERT_ID();";
-			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
-					{
-						newId = await connection.QuerySingleAsync<int>(sql, entity, transaction: transaction);
-						transaction.Commit();
-					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, "SQL Error when adding new OrderItem");
-						transaction.Rollback();
-					}	
+					await this._dbContext.OrderItems.AddAsync(entity);
+					await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
 				}
-				
-				connection.Close();
+				catch (Exception e)
+				{
+					this._logger.LogError(e, "SQL Error when adding new OrderItem");
+					await transaction.RollbackAsync();
+				}	
 			}
 			
-			return newId;
+			return entity.Id;
 		}
 
 		/// <summary>
@@ -112,37 +93,35 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<bool> UpdateAsync(OrderItem entity)
 		{
 			int rowsEffected = -1;
-			const string sql = $@"
-            UPDATE {_tableName}
-            SET ProductName = @ProductName,
-                ProductDescription = @ProductDescription,
-                ProductSku = @ProductSku,
-                OrderId = @OrderId,
-                Quantity = @Quantity,
-                Price = @Price,
-                LastModifiedBy = @LastModifiedBy,
-                LastModifiedDate = @LastModifiedDate
-            WHERE Id = @Id";
 			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
+					OrderItem? existingOrderItem = await this._dbContext.OrderItems.FirstOrDefaultAsync(oi => oi.Id == entity.Id);
+					
+					if (existingOrderItem == null)
 					{
-						rowsEffected = await connection.ExecuteAsync(sql, entity, transaction: transaction);
-						transaction.Commit();
+						return false;
 					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, $"SQL Error when updating OrderItem {entity.Id}");
-						transaction.Rollback();
-					}	
+					
+					existingOrderItem.Quantity = entity.Quantity;
+					existingOrderItem.Price = entity.Price;
+					existingOrderItem.ProductName = entity.ProductName;
+					existingOrderItem.ProductDescription = entity.ProductDescription;
+					existingOrderItem.ProductSku = entity.ProductSku;
+					existingOrderItem.LastModifiedBy = entity.LastModifiedBy;
+					existingOrderItem.LastModifiedDate = entity.LastModifiedDate;
+					
+					rowsEffected = await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
 				}
-				
-				connection.Close();
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when updating OrderItem {entity.Id}");
+					await transaction.RollbackAsync();
+				}	
 			}
 
 			return rowsEffected == 1;
@@ -159,24 +138,20 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<bool> DeleteAsync(OrderItem entity)
 		{
 			int rowsEffected = -1;
-			const string sql = $"DELETE FROM {_tableName} WHERE Id = @Id";
 
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
-					{
-						rowsEffected = await connection.ExecuteAsync(sql, entity, transaction: transaction);
-						transaction.Commit();
-					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, $"SQL Error when deleting OrderItem {entity.Id}");
-						transaction.Rollback();
-					}
+					this._dbContext.OrderItems.Remove(entity);
+					rowsEffected = await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
+				}
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when deleting OrderItem {entity.Id}");
+					await transaction.RollbackAsync();
 				}
 			}
 
@@ -194,22 +169,14 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<IEnumerable<OrderItem>> ListAllAsync(int orderId)
 		{
 			IEnumerable<OrderItem> orderItems = Array.Empty<OrderItem>();
-			const string sql = $"SELECT * FROM {_tableName} WHERE OrderId = @OrderId";
 			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					orderItems = await connection.QueryAsync<OrderItem>(sql, new { OrderId = orderId });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching all OrderItem rows for Order {orderId}");
-				}
-				
-				connection.Close();
+				orderItems = await this._dbContext.OrderItems.Where(oi => oi.OrderId == orderId).ToArrayAsync();
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching all OrderItem rows for Order {orderId}");
 			}
 
 			return orderItems;

@@ -1,9 +1,6 @@
-using Dapper;
 using Ecommerce.Persistence.Contracts;
-using Ecommerce.Persistence.Helpers;
 using Ecommerce.Persistence.Repositories;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using Ecommerce.Persistence.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -26,11 +23,6 @@ namespace Ecommerce.Persistence
 				options.UseMySQL(configuration.GetConnectionString("datastorage")!);
 			});
 			
-			
-			
-			//Register the connection provider service
-			services.AddScoped<IConnectionProviderService, ConnectionProviderService>();
-			
 			//Register the repositories
 			services.AddScoped<ICategoryAsyncRepository, CategoryAsyncRepository>();
 			services.AddScoped<IOrderAsyncRepository, OrderAsyncRepository>();
@@ -40,10 +32,8 @@ namespace Ecommerce.Persistence
 			services.AddScoped<ICartItemRepository, CartItemRepository>();
 			services.AddScoped<IOrderKeyRepository, OrderKeyRepository>();
 			
-			//Add handler for Guid
-			SqlMapper.AddTypeHandler(new MySqlGuidTypeHandler());
-			SqlMapper.RemoveTypeMap(typeof(Guid));
-			SqlMapper.RemoveTypeMap(typeof(Guid?));
+			//Register services
+			services.AddScoped<IStorageService, ProductImageStorageService>();
 		}
 		
 		

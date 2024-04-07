@@ -66,7 +66,8 @@ namespace Ecommerce.Persistence
                             "CreatedDate <= LastModifiedDate"
                         );
                     }
-                );
+                )
+                .HasIndex(c => c.Name);
 
             //-----------------------------------------------------------------------------------------------------------
             // Order
@@ -128,7 +129,14 @@ namespace Ecommerce.Persistence
                             "CreatedDate <= LastModifiedDate"
                         );
                     }
-                );
+                )
+                .HasIndex(p => p.Name);
+            
+            modelBuilder.Entity<Product>()
+                .HasOne<Category>()
+                .WithMany()
+                .HasForeignKey(p => p.CategoryId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             //-----------------------------------------------------------------------------------------------------------
             // Review

@@ -1,11 +1,11 @@
-using Dapper;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Ecommerce.Persistence.Repositories
 {
@@ -15,18 +15,17 @@ namespace Ecommerce.Persistence.Repositories
 	public class CategoryAsyncRepository : ICategoryAsyncRepository
 	{
 		private readonly ILogger<CategoryAsyncRepository> _logger;
-		private readonly IConnectionProviderService _connectionProviderService;
-		private const string _tableName = "Category";
+		private readonly EcommercePersistenceDbContext _dbContext;
 		
 		/// <summary>
 		/// Initializes a new instance of the <see cref="CategoryAsyncRepository"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
-		/// <param name="connectionProviderService">The <see cref="IConnectionProviderService"/> instance for getting a database connection</param>
-		public CategoryAsyncRepository(ILogger<CategoryAsyncRepository> logger, IConnectionProviderService connectionProviderService)
+		/// <param name="dbContext">The <see cref="EcommercePersistenceDbContext"/> instance for database access</param>
+		public CategoryAsyncRepository(ILogger<CategoryAsyncRepository> logger, EcommercePersistenceDbContext dbContext)
 		{
 			this._logger = logger;
-			this._connectionProviderService = connectionProviderService;
+			this._dbContext = dbContext;
 		}
 		
 		/// <summary>
@@ -39,23 +38,15 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<Category?> GetByIdAsync(int id)
 		{
-			const string sql = $"SELECT * FROM {_tableName} WHERE Id = @Id";
 			Category? category = null;
 
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					category = await connection.QueryFirstOrDefaultAsync<Category>(sql, new { Id = id });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching Category row for {id}");
-				}
-				
-				connection.Close();
+				category = await this._dbContext.Categories.FirstOrDefaultAsync(c => c.Id == id);
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching Category row for {id}");
 			}
 
 			return category;
@@ -71,34 +62,23 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<int> AddAsync(Category entity)
 		{
-			int newId = -1;
-			const string sql =
-				$"INSERT INTO {_tableName} (Name, Summary, CreatedBy, CreatedDate) " +
-				"VALUES (@Name, @Summary, @CreatedBy, @CreatedDate);" +
-				"SELECT LAST_INSERT_ID();";
-
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
-					{
-						newId = await connection.QuerySingleAsync<int>(sql, entity, transaction: transaction);
-						transaction.Commit();
-					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, "SQL Error when adding new Category");
-						transaction.Rollback();
-					}	
+					await this._dbContext.Categories.AddAsync(entity);
+					await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
 				}
-				
-				connection.Close();
+				catch (Exception e)
+				{
+					this._logger.LogError(e, "SQL Error when adding new Category");
+					await transaction.RollbackAsync();
+				}	
 			}
 			
-			return newId;
+			return entity.Id;
 		}
 
 		/// <summary>
@@ -112,33 +92,32 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<bool> UpdateAsync(Category entity)
 		{
 			int rowsEffected = -1;
-			const string sql = $@"
-            UPDATE {_tableName}
-            SET Name = @Name,
-                Summary = @Summary,
-                LastModifiedBy = @LastModifiedBy,
-                LastModifiedDate = @LastModifiedDate
-            WHERE Id = @Id";
-			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
-			{
-				connection.Open();
 
-				using (IDbTransaction transaction = connection.BeginTransaction())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
+			{
+				try
 				{
-					try
+					Category? existingCategory = await this._dbContext.Categories.FirstOrDefaultAsync(c => c.Id == entity.Id);
+					
+					if (existingCategory == null)
 					{
-						rowsEffected = await connection.ExecuteAsync(sql, entity, transaction: transaction);
-						transaction.Commit();
+						return false;
 					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, $"SQL Error when updating Category {entity.Id}");
-						transaction.Rollback();
-					}	
+					
+					existingCategory.Name = entity.Name;
+					existingCategory.Summary = entity.Summary;
+					existingCategory.LastModifiedBy = entity.LastModifiedBy;
+					existingCategory.LastModifiedDate = entity.LastModifiedDate;
+					
+					rowsEffected = await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
 				}
-				
-				connection.Close();
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when updating Category {entity.Id}");
+					await transaction.RollbackAsync();
+				}	
 			}
 
 			return rowsEffected == 1;
@@ -155,24 +134,20 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<bool> DeleteAsync(Category entity)
 		{
 			int rowsEffected = -1;
-			const string sql = $"DELETE FROM {_tableName} WHERE Id = @Id";
 
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
-					{
-						rowsEffected = await connection.ExecuteAsync(sql, entity, transaction: transaction);
-						transaction.Commit();
-					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, $"SQL Error when deleting Category {entity.Id}");
-						transaction.Rollback();
-					}
+					this._dbContext.Categories.Remove(entity);
+					rowsEffected = await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
+				}
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when deleting Category {entity.Id}");
+					await transaction.RollbackAsync();
 				}
 			}
 
@@ -189,22 +164,14 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<IEnumerable<Category>> ListAllAsync()
 		{
 			IEnumerable<Category> categories = Array.Empty<Category>();
-			const string sql = $"SELECT * FROM {_tableName}";
 			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					categories = await connection.QueryAsync<Category>(sql);
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, "SQL Error when fetching all Category rows");
-				}
-				
-				connection.Close();
+				categories = await this._dbContext.Categories.ToListAsync();
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, "SQL Error when fetching all Category rows");
 			}
 
 			return categories;
@@ -220,7 +187,7 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<bool> IsNameUnique(string name)
 		{
-			Category? category = await GetByNameAsync(name);
+			Category? category = await this.GetByNameAsync(name);
 
 			return category == null;
 		}
@@ -235,23 +202,15 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		private async Task<Category?> GetByNameAsync(string name)
 		{
-			const string sql = $"SELECT * FROM {_tableName} WHERE Name = @Name";
 			Category? category = null;
 
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					category = await connection.QueryFirstOrDefaultAsync<Category?>(sql, new { Name = name });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching Category row with name {name}");
-				}
-				
-				connection.Close();
+				category = await this._dbContext.Categories.FirstOrDefaultAsync(c => string.Equals(c.Name, name));
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching Category row with name {name}");
 			}
 
 			return category;

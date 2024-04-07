@@ -1,10 +1,10 @@
 using System;
-using System.Data;
 using System.Threading.Tasks;
-using Dapper;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Domain.Infrastructure;
 using Ecommerce.Persistence.Contracts;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.Persistence.Repositories
@@ -15,18 +15,17 @@ namespace Ecommerce.Persistence.Repositories
     public class OrderKeyRepository : IOrderKeyRepository
     {
         private readonly ILogger<OrderKeyRepository> _logger;
-        private readonly IConnectionProviderService _connectionProviderService;
-        private const string _tableName = "OrderKey";
+        private readonly EcommercePersistenceDbContext _dbContext;
         
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderKeyRepository"/> class.
         /// </summary>
         /// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
-        /// <param name="connectionProviderService">The <see cref="IConnectionProviderService"/> instance for getting a database connection</param>
-        public OrderKeyRepository(ILogger<OrderKeyRepository> logger, IConnectionProviderService connectionProviderService)
+        /// <param name="dbContext">The <see cref="EcommercePersistenceDbContext"/> instance for database access</param>
+        public OrderKeyRepository(ILogger<OrderKeyRepository> logger, EcommercePersistenceDbContext dbContext)
         {
             this._logger = logger;
-            this._connectionProviderService = connectionProviderService;
+            this._dbContext = dbContext;
         }
         
         /// <summary>
@@ -39,34 +38,23 @@ namespace Ecommerce.Persistence.Repositories
         /// </returns>
         public async Task<int> AddAsync(OrderKey entity)
         {
-            int newId = -1;
-            const string sql =
-                $"INSERT INTO {_tableName} (OrderId, OrderToken, CreatedAt) " +
-                "VALUES (@OrderId, @OrderToken, @CreatedAt);" +
-                "SELECT LAST_INSERT_ID();";
-			
-            using (IDbConnection connection = this._connectionProviderService.GetConnection())
+            await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
             {
-                connection.Open();
-
-                using (IDbTransaction transaction = connection.BeginTransaction())
+                try
                 {
-                    try
-                    {
-                        newId = await connection.QuerySingleAsync<int>(sql, entity, transaction: transaction);
-                        transaction.Commit();
-                    }
-                    catch (Exception e)
-                    {
-                        this._logger.LogError(e, "SQL Error when adding new OrderKey");
-                        transaction.Rollback();
-                    }	
+                    await this._dbContext.OrderKeys.AddAsync(entity);
+                    await this._dbContext.SaveChangesAsync();
+                    
+                    await transaction.CommitAsync();
                 }
-				
-                connection.Close();
+                catch (Exception e)
+                {
+                    this._logger.LogError(e, "SQL Error when adding new OrderKey");
+                    await transaction.RollbackAsync();
+                }	
             }
 			
-            return newId;
+            return entity.Id;
         }
 
         /// <summary>
@@ -80,27 +68,21 @@ namespace Ecommerce.Persistence.Repositories
         public async Task<bool> DeleteAsync(OrderKey entity)
         {
             int rowsEffected = -1;
-            const string sql = $"DELETE FROM {_tableName} WHERE Id = @Id";
 
-            using (IDbConnection connection = this._connectionProviderService.GetConnection())
+            await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
             {
-                connection.Open();
-
-                using (IDbTransaction transaction = connection.BeginTransaction())
+                try
                 {
-                    try
-                    {
-                        rowsEffected = await connection.ExecuteAsync(sql, entity, transaction: transaction);
-                        transaction.Commit();
-                    }
-                    catch (Exception e)
-                    {
-                        this._logger.LogError(e, $"SQL Error when deleting OrderKey {entity.Id}");
-                        transaction.Rollback();
-                    }
+                    this._dbContext.OrderKeys.Remove(entity);
+                    rowsEffected = await this._dbContext.SaveChangesAsync();
+                    
+                    await transaction.CommitAsync();
                 }
-                
-                connection.Close();
+                catch (Exception e)
+                {
+                    this._logger.LogError(e, $"SQL Error when deleting OrderKey {entity.Id}");
+                    await transaction.RollbackAsync();
+                }
             }
 
             return rowsEffected == 1;
@@ -116,23 +98,15 @@ namespace Ecommerce.Persistence.Repositories
         /// </returns>
         public async Task<OrderKey?> GetByOrderIdAsync(int orderId)
         {
-            const string sql = $"SELECT * FROM {_tableName} WHERE OrderId = @OrderId";
             OrderKey? orderKey = null;
 			
-            using (IDbConnection connection = this._connectionProviderService.GetConnection())
+            try
             {
-                connection.Open();
-
-                try
-                {
-                    orderKey = await connection.QueryFirstOrDefaultAsync<OrderKey>(sql, new { OrderId = orderId });
-                }
-                catch (Exception e)
-                {
-                    this._logger.LogError(e, $"SQL Error when fetching OrderKey row for {orderId}");
-                }
-				
-                connection.Close();
+                orderKey = await this._dbContext.OrderKeys.FirstOrDefaultAsync(ok => ok.OrderId == orderId);
+            }
+            catch (Exception e)
+            {
+                this._logger.LogError(e, $"SQL Error when fetching OrderKey row for {orderId}");
             }
 
             return orderKey;
@@ -148,23 +122,15 @@ namespace Ecommerce.Persistence.Repositories
         /// </returns>
         public async Task<OrderKey?> GetByReturnKeyAsync(string token)
         {
-            const string sql = $"SELECT * FROM {_tableName} WHERE OrderToken = @OrderToken";
             OrderKey? orderKey = null;
 			
-            using (IDbConnection connection = this._connectionProviderService.GetConnection())
+            try
             {
-                connection.Open();
-
-                try
-                {
-                    orderKey = await connection.QueryFirstOrDefaultAsync<OrderKey>(sql, new { OrderToken = token });
-                }
-                catch (Exception e)
-                {
-                    this._logger.LogError(e, $"SQL Error when fetching OrderKey row for {token}");
-                }
-				
-                connection.Close();
+                orderKey = await this._dbContext.OrderKeys.FirstOrDefaultAsync(ok => ok.OrderToken == token);
+            }
+            catch (Exception e)
+            {
+                this._logger.LogError(e, $"SQL Error when fetching OrderKey row for {token}");
             }
 
             return orderKey;

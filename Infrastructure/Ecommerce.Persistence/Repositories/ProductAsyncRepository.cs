@@ -1,12 +1,12 @@
-using Dapper;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
-// ReSharper disable RedundantAnonymousTypePropertyName
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Ecommerce.Persistence.Repositories
 {
@@ -16,18 +16,17 @@ namespace Ecommerce.Persistence.Repositories
 	public class ProductAsyncRepository : IProductAsyncRepository
 	{
 		private readonly ILogger<ProductAsyncRepository> _logger;
-		private readonly IConnectionProviderService _connectionProviderService;
-		private const string _tableName = "Product";
+		private readonly EcommercePersistenceDbContext _dbContext;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="ProductAsyncRepository"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
-		/// <param name="connectionProviderService">The <see cref="IConnectionProviderService"/> instance for getting a database connection</param>
-		public ProductAsyncRepository(ILogger<ProductAsyncRepository> logger, IConnectionProviderService connectionProviderService)
+		/// <param name="dbContext">The <see cref="EcommercePersistenceDbContext"/> instance for database access</param>
+		public ProductAsyncRepository(ILogger<ProductAsyncRepository> logger, EcommercePersistenceDbContext dbContext)
 		{
 			this._logger = logger;
-			this._connectionProviderService = connectionProviderService;
+			this._dbContext = dbContext;
 		}
 		
 		/// <summary>
@@ -40,23 +39,15 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<Product?> GetByIdAsync(int id)
 		{
-			const string sql = $"SELECT * FROM {_tableName} WHERE Id = @Id";
 			Product? product = null;
 
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					product = await connection.QueryFirstOrDefaultAsync<Product>(sql, new { Id = id });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching Product row for {id}");
-				}
-				
-				connection.Close();
+				product = await this._dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching Product row for {id}");
 			}
 
 			return product;
@@ -72,47 +63,23 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<int> AddAsync(Product entity)
 		{
-			int newId = -1;
-			const string sql =
-				$"INSERT INTO {_tableName} " +
-				"(Name, Description, Price, AverageRating, QuantityAvailable, ImageUrl, CategoryId, CreatedBy, CreatedDate) " +
-				"VALUES " +
-				"(@Name, @Description, @Price, @AverageRating, @QuantityAvailable, @ImageUrl, @CategoryId, @CreatedBy, @CreatedDate);" +
-				"SELECT LAST_INSERT_ID();";
-			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
-					{
-						newId = await connection.QuerySingleAsync<int>(sql, new
-						{
-							Name = entity.Name,
-							Description = entity.Description,
-							Price = entity.Price,
-							AverageRating = entity.AverageRating,
-							QuantityAvailable = entity.QuantityAvailable,
-							ImageUrl = entity.ImageUrl,
-							CategoryId = entity.CategoryId,
-							CreatedBy = entity.CreatedBy,
-							CreatedDate = entity.CreatedDate
-						}, transaction: transaction);
-						transaction.Commit();
-					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, "SQL Error when adding new Product");
-						transaction.Rollback();
-					}	
+					await this._dbContext.Products.AddAsync(entity);
+					await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
 				}
-				
-				connection.Close();
+				catch (Exception e)
+				{
+					this._logger.LogError(e, "SQL Error when adding new Product");
+					await transaction.RollbackAsync();
+				}	
 			}
 			
-			return newId;
+			return entity.Id;
 		}
 
 		/// <summary>
@@ -126,50 +93,36 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<bool> UpdateAsync(Product entity)
 		{
 			int rowsEffected = -1;
-			const string sql = $@"
-            UPDATE {_tableName}
-            SET Name = @Name,
-                Description = @Description,
-                Price = @Price,
-                AverageRating = @AverageRating,
-                QuantityAvailable = @QuantityAvailable,
-                ImageUrl = @ImageUrl,
-                CategoryId = @CategoryId,
-                LastModifiedBy = @LastModifiedBy,
-                LastModifiedDate = @LastModifiedDate
-            WHERE Id = @Id";
-			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
-			{
-				connection.Open();
 
-				using (IDbTransaction transaction = connection.BeginTransaction())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
+			{
+				try
 				{
-					try
+					Product? existingProduct = await this._dbContext.Products.FirstOrDefaultAsync(p => p.Id == entity.Id);
+
+					if (existingProduct == null)
 					{
-						rowsEffected = await connection.ExecuteAsync(sql, new
-						{
-							Id = entity.Id,
-							Name = entity.Name,
-							Description = entity.Description,
-							Price = entity.Price,
-							AverageRating = entity.AverageRating,
-							QuantityAvailable = entity.QuantityAvailable,
-							ImageUrl = entity.ImageUrl,
-							CategoryId = entity.CategoryId,
-							LastModifiedBy = entity.LastModifiedBy,
-							LastModifiedDate = entity.LastModifiedDate
-						}, transaction: transaction);
-						transaction.Commit();
+						return false;
 					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, $"SQL Error when updating Product {entity.Id}");
-						transaction.Rollback();
-					}	
+					
+					existingProduct.Name = entity.Name;
+					existingProduct.Price = entity.Price;
+					existingProduct.QuantityAvailable = entity.QuantityAvailable;
+					existingProduct.Description = entity.Description;
+					existingProduct.AverageRating = entity.AverageRating;
+					existingProduct.ImageUrl = entity.ImageUrl;
+					existingProduct.LastModifiedBy = entity.LastModifiedBy;
+					existingProduct.LastModifiedDate = entity.LastModifiedDate;
+					
+					rowsEffected = await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
 				}
-				
-				connection.Close();
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when updating Product {entity.Id}");
+					await transaction.RollbackAsync();
+				}	
 			}
 
 			return rowsEffected == 1;
@@ -186,24 +139,20 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<bool> DeleteAsync(Product entity)
 		{
 			int rowsEffected = -1;
-			const string sql = $"DELETE FROM {_tableName} WHERE Id = @Id";
 
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
-					{
-						rowsEffected = await connection.ExecuteAsync(sql, entity, transaction: transaction);
-						transaction.Commit();
-					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, $"SQL Error when deleting Product {entity.Id}");
-						transaction.Rollback();
-					}
+					this._dbContext.Remove(entity);
+					rowsEffected = await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
+				}
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when deleting Product {entity.Id}");
+					await transaction.RollbackAsync();
 				}
 			}
 
@@ -221,22 +170,14 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<IEnumerable<Product>> ListAllAsync(int categoryId)
 		{
 			IEnumerable<Product> products = Array.Empty<Product>();
-			const string sql = $"SELECT * FROM {_tableName} WHERE CategoryId = @CategoryId";
 			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					products = await connection.QueryAsync<Product>(sql, new { CategoryId = categoryId });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching all Product rows for Category {categoryId}");
-				}
-				
-				connection.Close();
+				products = await this._dbContext.Products.Where(p => p.CategoryId == categoryId).ToArrayAsync();
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching all Product rows for Category {categoryId}");
 			}
 
 			return products;
@@ -252,40 +193,9 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<bool> IsNameUnique(string name)
 		{
-			Product? product = await GetByNameAsync(name);
+			Product? product = await this.GetByNameAsync(name);
 
 			return product == null;
-		}
-
-		/// <summary>
-		/// Retrieves the id of the <see cref="Category"/> for the <see cref="Product"/> 
-		/// </summary>
-		/// <param name="id">The unique identifier of the <see cref="Product"/></param>
-		/// <returns>
-		/// The Id of the <see cref="Category"/> if found; -1 if not found
-		/// </returns>
-		public async Task<int> GetCategoryId(int id)
-		{
-			const string sql = $"SELECT CategoryId FROM {_tableName} WHERE Id = @Id";
-			int categoryId = -1;
-
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
-			{
-				connection.Open();
-
-				try
-				{
-					categoryId = await connection.QueryFirstOrDefaultAsync<int>(sql, new { Id = id });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching CategoryId for product {id}");
-				}
-				
-				connection.Close();
-			}
-
-			return categoryId;
 		}
 
 		/// <summary>
@@ -298,23 +208,15 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		private async Task<Product?> GetByNameAsync(string name)
 		{
-			const string sql = $"SELECT * FROM {_tableName} WHERE Name = @Name";
 			Product? product = null;
 
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					product = await connection.QueryFirstOrDefaultAsync<Product?>(sql, new { Name = name });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching Category row with name {name}");
-				}
-				
-				connection.Close();
+				product = await this._dbContext.Products.FirstOrDefaultAsync(p => string.Equals(p.Name, name));
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching Category row with name {name}");
 			}
 
 			return product;

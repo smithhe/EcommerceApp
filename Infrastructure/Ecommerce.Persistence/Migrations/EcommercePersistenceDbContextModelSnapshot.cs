@@ -96,6 +96,8 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Name");
+
                     b.ToTable("Categories", t =>
                         {
                             t.HasCheckConstraint("CHK_CCreatedDate", "CreatedDate <= LastModifiedDate");
@@ -108,7 +110,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2429),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7744),
                             Name = "Laptops",
                             Summary = "Explore our range of laptops."
                         },
@@ -116,7 +118,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 2,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2487),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7788),
                             Name = "Phones",
                             Summary = "Discover the latest smartphones."
                         },
@@ -124,7 +126,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 3,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2490),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7790),
                             Name = "Tablets",
                             Summary = "Browse our collection of tablets."
                         });
@@ -356,6 +358,10 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("Name");
+
                     b.ToTable("Products", t =>
                         {
                             t.HasCheckConstraint("CHK_PCreatedDate", "CreatedDate <= LastModifiedDate");
@@ -370,7 +376,7 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2560),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7861),
                             Description = "This is a killer laptop that can handle all your home needs",
                             ImageUrl = "",
                             Name = "Laptop 1",
@@ -383,7 +389,7 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2564),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7865),
                             Description = "This is a killer laptop that can handle all your home needs",
                             ImageUrl = "",
                             Name = "Laptop 2",
@@ -396,7 +402,7 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2567),
+                            CreatedDate = new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7869),
                             Description = "This is a killer laptop that can handle all your home needs",
                             ImageUrl = "",
                             Name = "Laptop 3",
@@ -630,6 +636,15 @@ namespace Ecommerce.Persistence.Migrations
                     b.HasOne("Ecommerce.Domain.Entities.Order", null)
                         .WithMany("OrderItems")
                         .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Ecommerce.Domain.Entities.Product", b =>
+                {
+                    b.HasOne("Ecommerce.Domain.Entities.Category", null)
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

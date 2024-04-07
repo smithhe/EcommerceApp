@@ -99,32 +99,6 @@ namespace Ecommerce.Persistence.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Products",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    CategoryId = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    Description = table.Column<string>(type: "longtext", nullable: false),
-                    Price = table.Column<double>(type: "double", nullable: false),
-                    AverageRating = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    QuantityAvailable = table.Column<int>(type: "int", nullable: false),
-                    ImageUrl = table.Column<string>(type: "longtext", nullable: false),
-                    CreatedBy = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "datetime(6)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Products", x => x.Id);
-                    table.CheckConstraint("CHK_PCreatedDate", "CreatedDate <= LastModifiedDate");
-                    table.CheckConstraint("CHK_PLastModifiedDate", "LastModifiedDate IS NULL OR CreatedDate <= LastModifiedDate");
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -265,6 +239,69 @@ namespace Ecommerce.Persistence.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Products",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    CategoryId = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
+                    Description = table.Column<string>(type: "longtext", nullable: false),
+                    Price = table.Column<double>(type: "double", nullable: false),
+                    AverageRating = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    QuantityAvailable = table.Column<int>(type: "int", nullable: false),
+                    ImageUrl = table.Column<string>(type: "longtext", nullable: false),
+                    CreatedBy = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime(6)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Products", x => x.Id);
+                    table.CheckConstraint("CHK_PCreatedDate", "CreatedDate <= LastModifiedDate");
+                    table.CheckConstraint("CHK_PLastModifiedDate", "LastModifiedDate IS NULL OR CreatedDate <= LastModifiedDate");
+                    table.ForeignKey(
+                        name: "FK_Products_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "OrderItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    OrderId = table.Column<int>(type: "int", nullable: false),
+                    ProductName = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
+                    ProductDescription = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
+                    ProductSku = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<double>(type: "double", nullable: false),
+                    CreatedBy = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime(6)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OrderItems", x => x.Id);
+                    table.CheckConstraint("CHK_OICreatedDate", "CreatedDate <= LastModifiedDate");
+                    table.CheckConstraint("CHK_OILastModifiedDate", "LastModifiedDate IS NULL OR CreatedDate <= LastModifiedDate");
+                    table.ForeignKey(
+                        name: "FK_OrderItems_Orders_OrderId",
+                        column: x => x.OrderId,
+                        principalTable: "Orders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "CartItems",
                 columns: table => new
                 {
@@ -333,45 +370,14 @@ namespace Ecommerce.Persistence.Migrations
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
 
-            migrationBuilder.CreateTable(
-                name: "OrderItems",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    OrderId = table.Column<int>(type: "int", nullable: false),
-                    ProductName = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    ProductDescription = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    ProductSku = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    Price = table.Column<double>(type: "double", nullable: false),
-                    CreatedBy = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "datetime(6)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_OrderItems", x => x.Id);
-                    table.CheckConstraint("CHK_OICreatedDate", "CreatedDate <= LastModifiedDate");
-                    table.CheckConstraint("CHK_OILastModifiedDate", "LastModifiedDate IS NULL OR CreatedDate <= LastModifiedDate");
-                    table.ForeignKey(
-                        name: "FK_OrderItems_Orders_OrderId",
-                        column: x => x.OrderId,
-                        principalTable: "Orders",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
             migrationBuilder.InsertData(
                 table: "Categories",
                 columns: new[] { "Id", "CreatedBy", "CreatedDate", "LastModifiedBy", "LastModifiedDate", "Name", "Summary" },
                 values: new object[,]
                 {
-                    { 1, "Harold", new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2429), null, null, "Laptops", "Explore our range of laptops." },
-                    { 2, "Harold", new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2487), null, null, "Phones", "Discover the latest smartphones." },
-                    { 3, "Harold", new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2490), null, null, "Tablets", "Browse our collection of tablets." }
+                    { 1, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7744), null, null, "Laptops", "Explore our range of laptops." },
+                    { 2, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7788), null, null, "Phones", "Discover the latest smartphones." },
+                    { 3, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7790), null, null, "Tablets", "Browse our collection of tablets." }
                 });
 
             migrationBuilder.InsertData(
@@ -379,9 +385,9 @@ namespace Ecommerce.Persistence.Migrations
                 columns: new[] { "Id", "AverageRating", "CategoryId", "CreatedBy", "CreatedDate", "Description", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Name", "Price", "QuantityAvailable" },
                 values: new object[,]
                 {
-                    { 1, 0m, 1, "Harold", new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2560), "This is a killer laptop that can handle all your home needs", "", null, null, "Laptop 1", 299.99000000000001, 5 },
-                    { 2, 0m, 1, "Harold", new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2564), "This is a killer laptop that can handle all your home needs", "", null, null, "Laptop 2", 499.99000000000001, 5 },
-                    { 3, 0m, 1, "Harold", new DateTime(2024, 4, 6, 19, 46, 25, 844, DateTimeKind.Local).AddTicks(2567), "This is a killer laptop that can handle all your home needs", "", null, null, "Laptop 3", 999.99000000000001, 5 }
+                    { 1, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7861), "This is a killer laptop that can handle all your home needs", "", null, null, "Laptop 1", 299.99000000000001, 5 },
+                    { 2, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7865), "This is a killer laptop that can handle all your home needs", "", null, null, "Laptop 2", 499.99000000000001, 5 },
+                    { 3, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 11, 19, 975, DateTimeKind.Local).AddTicks(7869), "This is a killer laptop that can handle all your home needs", "", null, null, "Laptop 3", 999.99000000000001, 5 }
                 });
 
             migrationBuilder.CreateIndex(
@@ -432,6 +438,11 @@ namespace Ecommerce.Persistence.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Categories_Name",
+                table: "Categories",
+                column: "Name");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_OrderItems_OrderId",
                 table: "OrderItems",
                 column: "OrderId");
@@ -440,6 +451,16 @@ namespace Ecommerce.Persistence.Migrations
                 name: "IX_Orders_UserId",
                 table: "Orders",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_CategoryId",
+                table: "Products",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_Name",
+                table: "Products",
+                column: "Name");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Reviews_ProductId",
@@ -474,9 +495,6 @@ namespace Ecommerce.Persistence.Migrations
                 name: "CartItems");
 
             migrationBuilder.DropTable(
-                name: "Categories");
-
-            migrationBuilder.DropTable(
                 name: "OrderItems");
 
             migrationBuilder.DropTable(
@@ -496,6 +514,9 @@ namespace Ecommerce.Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Categories");
         }
     }
 }

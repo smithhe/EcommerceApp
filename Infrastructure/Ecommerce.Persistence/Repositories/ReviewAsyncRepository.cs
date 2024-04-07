@@ -1,11 +1,12 @@
-using Dapper;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Ecommerce.Persistence.Repositories
 {
@@ -15,18 +16,17 @@ namespace Ecommerce.Persistence.Repositories
 	public class ReviewAsyncRepository : IReviewAsyncRepository
 	{
 		private readonly ILogger<ReviewAsyncRepository> _logger;
-		private readonly IConnectionProviderService _connectionProviderService;
-		private const string _tableName = "Review";
+		private readonly EcommercePersistenceDbContext _dbContext;
 		
 		/// <summary>
 		/// Initializes a new instance of the <see cref="ReviewAsyncRepository"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
-		/// <param name="connectionProviderService">The <see cref="IConnectionProviderService"/> instance for getting a database connection</param>
-		public ReviewAsyncRepository(ILogger<ReviewAsyncRepository> logger, IConnectionProviderService connectionProviderService)
+		/// <param name="dbContext">The <see cref="EcommercePersistenceDbContext"/> instance for database access</param>
+		public ReviewAsyncRepository(ILogger<ReviewAsyncRepository> logger, EcommercePersistenceDbContext dbContext)
 		{
 			this._logger = logger;
-			this._connectionProviderService = connectionProviderService;
+			this._dbContext = dbContext;
 		}
 		
 		/// <summary>
@@ -39,23 +39,15 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<Review?> GetByIdAsync(int id)
 		{
-			const string sql = $"SELECT * FROM {_tableName} WHERE Id = @Id";
 			Review? review = null;
 			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					review = await connection.QueryFirstOrDefaultAsync<Review>(sql, new { Id = id });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching Review row for {id}");
-				}
-				
-				connection.Close();
+				review = await this._dbContext.Reviews.FirstOrDefaultAsync(r => r.Id == id);
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching Review row for {id}");
 			}
 
 			return review;
@@ -71,34 +63,23 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<int> AddAsync(Review entity)
 		{
-			int newId = -1;
-			const string sql =
-				$"INSERT INTO {_tableName} (ProductId, UserName, Stars, Comments, CreatedBy, CreatedDate) " +
-				"VALUES (@ProductId, @UserName, @Stars, @Comments, @CreatedBy, @CreatedDate);" +
-				"SELECT LAST_INSERT_ID();";
-			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
-					{
-						newId = await connection.QuerySingleAsync<int>(sql, entity, transaction: transaction);
-						transaction.Commit();
-					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, "SQL Error when adding new Review");
-						transaction.Rollback();
-					}	
+					await this._dbContext.Reviews.AddAsync(entity);
+					await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
 				}
-				
-				connection.Close();
+				catch (Exception e)
+				{
+					this._logger.LogError(e, "SQL Error when adding new Review");
+					await transaction.RollbackAsync();
+				}	
 			}
 			
-			return newId;
+			return entity.Id;
 		}
 
 		/// <summary>
@@ -112,35 +93,33 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<bool> UpdateAsync(Review entity)
 		{
 			int rowsEffected = -1;
-			const string sql = $@"
-            UPDATE {_tableName}
-            SET ProductId = @ProductId,
-                UserName = @UserName,
-                Stars = @Stars,
-                Comments = @Comments,
-                LastModifiedBy = @LastModifiedBy,
-                LastModifiedDate = @LastModifiedDate
-            WHERE Id = @Id";
-			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
-			{
-				connection.Open();
 
-				using (IDbTransaction transaction = connection.BeginTransaction())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
+			{
+				try
 				{
-					try
+					Review? existingReview = await this._dbContext.Reviews.FirstOrDefaultAsync(r => r.Id == entity.Id);
+					
+					if (existingReview == null)
 					{
-						rowsEffected = await connection.ExecuteAsync(sql, entity, transaction: transaction);
-						transaction.Commit();
+						return false;
 					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, $"SQL Error when updating Review {entity.Id}");
-						transaction.Rollback();
-					}
+					
+					existingReview.UserName = entity.UserName;
+					existingReview.Comments = entity.Comments;
+					existingReview.Stars = entity.Stars;
+					existingReview.LastModifiedBy = entity.LastModifiedBy;
+					existingReview.LastModifiedDate = entity.LastModifiedDate;
+					
+					rowsEffected = await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
 				}
-				
-				connection.Close();
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when updating Review {entity.Id}");
+					await transaction.RollbackAsync();
+				}
 			}
 
 			return rowsEffected == 1;
@@ -157,24 +136,20 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<bool> DeleteAsync(Review entity)
 		{
 			int rowsEffected = -1;
-			const string sql = $"DELETE FROM {_tableName} WHERE Id = @Id";
 
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			await using (IDbContextTransaction transaction = await this._dbContext.Database.BeginTransactionAsync())
 			{
-				connection.Open();
-
-				using (IDbTransaction transaction = connection.BeginTransaction())
+				try
 				{
-					try
-					{
-						rowsEffected = await connection.ExecuteAsync(sql, entity, transaction: transaction);
-						transaction.Commit();
-					}
-					catch (Exception e)
-					{
-						this._logger.LogError(e, $"SQL Error when deleting Review {entity.Id}");
-						transaction.Rollback();
-					}
+					this._dbContext.Reviews.Remove(entity);
+					rowsEffected = await this._dbContext.SaveChangesAsync();
+					
+					await transaction.CommitAsync();
+				}
+				catch (Exception e)
+				{
+					this._logger.LogError(e, $"SQL Error when deleting Review {entity.Id}");
+					await transaction.RollbackAsync();
 				}
 			}
 
@@ -192,22 +167,14 @@ namespace Ecommerce.Persistence.Repositories
 		public async Task<IEnumerable<Review>> ListAllAsync(int productId)
 		{
 			IEnumerable<Review> reviews = Array.Empty<Review>();
-			const string sql = $"SELECT * FROM {_tableName} WHERE ProductId = @ProductId";
 			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					reviews = await connection.QueryAsync<Review>(sql, new { ProductId = productId });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching all Review rows for Product {productId}");
-				}
-				
-				connection.Close();
+				reviews = await this._dbContext.Reviews.Where(r => r.ProductId == productId).ToArrayAsync();
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching all Review rows for Product {productId}");
 			}
 
 			return reviews;
@@ -224,23 +191,15 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<Review?> GetUserReviewForProduct(string userName, int productId)
 		{
-			const string sql = $"SELECT * FROM {_tableName} WHERE UserName = @UserName AND ProductId = @ProductId";
 			Review? review = null;
 			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					review = await connection.QueryFirstOrDefaultAsync<Review>(sql, new { UserName = userName, ProductId = productId });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching Review row for user {userName} on product {productId}");
-				}
-				
-				connection.Close();
+				review = await this._dbContext.Reviews.FirstOrDefaultAsync(r => string.Equals(r.UserName, userName) && r.ProductId == productId);
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching Review row for user {userName} on product {productId}");
 			}
 
 			return review;
@@ -256,26 +215,18 @@ namespace Ecommerce.Persistence.Repositories
 		/// </returns>
 		public async Task<decimal> GetAverageRatingForProduct(int productId)
 		{
-			const string sql = $"SELECT AVG(Stars) FROM {_tableName} WHERE ProductId = @ProductId";
-			decimal average = 0;
+			double average = 0;
 			
-			using (IDbConnection connection = this._connectionProviderService.GetConnection())
+			try
 			{
-				connection.Open();
-
-				try
-				{
-					average = await connection.QueryFirstOrDefaultAsync<decimal>(sql, new { ProductId = productId });
-				}
-				catch (Exception e)
-				{
-					this._logger.LogError(e, $"SQL Error when fetching average star rating on product {productId}");
-				}
-				
-				connection.Close();
+				average = await this._dbContext.Reviews.Where(r => r.ProductId == productId).AverageAsync(r => r.Stars);
+			}
+			catch (Exception e)
+			{
+				this._logger.LogError(e, $"SQL Error when fetching average star rating on product {productId}");
 			}
 			
-			return average;
+			return (decimal)average;
 		}
 	}
 }
