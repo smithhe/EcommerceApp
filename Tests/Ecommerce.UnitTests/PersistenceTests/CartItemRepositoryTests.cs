@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
+using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence;
 using Ecommerce.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Logging;
 using Moq;
 // ReSharper disable PossibleMultipleEnumeration
@@ -16,11 +18,38 @@ namespace Ecommerce.UnitTests.PersistenceTests
 {
     public class CartItemRepositoryTests
     {
-        private readonly Guid _userId = new Guid("095a987b-b4da-4eb6-a286-19aa3c75be53");
+        private static readonly Guid _userId = new Guid("095a987b-b4da-4eb6-a286-19aa3c75be53");
         private const string _userName = "Test User";
 
-        private CartItem _cartItemOne = null!;
-        private CartItem _cartItemTwo = null!;
+        private readonly CartItem _cartItemOne = new CartItem
+        {
+            Id = 1,
+            ProductId = 1,
+            Quantity = 1,
+            UserId = _userId,
+            CreatedBy = _userName,
+            CreatedDate = DateTime.MinValue
+        };
+
+        private readonly CartItem _cartItemTwo = new CartItem
+        {
+            Id = 2,
+            ProductId = 2,
+            Quantity = 2,
+            UserId = _userId,
+            CreatedBy = _userName,
+            CreatedDate = DateTime.MinValue
+        };
+        
+        private readonly CartItem _cartItemThree = new CartItem
+        {
+            Id = 3,
+            ProductId = 3,
+            Quantity = 3,
+            UserId = _userId,
+            CreatedBy = _userName,
+            CreatedDate = DateTime.MinValue
+        };
 
         private EcommercePersistenceDbContext _dbContext = null!;
 
@@ -34,33 +63,12 @@ namespace Ecommerce.UnitTests.PersistenceTests
                     .Options;
 
             this._dbContext = new EcommercePersistenceDbContext(options);
-
-            this._cartItemOne = new CartItem
-            {
-                Id = 1,
-                ProductId = 1,
-                Quantity = 1,
-                UserId = this._userId,
-                CreatedBy = _userName,
-                CreatedDate = DateTime.MinValue
-            };
-
-            this._cartItemTwo = new CartItem
-            {
-                Id = 2,
-                ProductId = 2,
-                Quantity = 2,
-                UserId = this._userId,
-                CreatedBy = _userName,
-                CreatedDate = DateTime.MinValue
-            };
             
             //Seed the database
             this._dbContext.CartItems.AddRange(
                 this._cartItemOne,
                 this._cartItemTwo
             );
-
             this._dbContext.SaveChanges();
         }
 
@@ -77,17 +85,9 @@ namespace Ecommerce.UnitTests.PersistenceTests
         public async Task GetByIdAsync_WhenCartItemExists_ShouldReturnCartItem()
         {
             // Arrange
-            CartItem cartItem = new CartItem
-            {
-                Id = 1,
-                ProductId = 1,
-                Quantity = 1,
-                CreatedBy = _userName,
-                CreatedDate = DateTime.MinValue
-            };
+            CartItem expectedCartItem = this._cartItemOne;
 
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
             CartItem? result = await repository.GetByIdAsync(1);
@@ -96,9 +96,12 @@ namespace Ecommerce.UnitTests.PersistenceTests
             Assert.That(result, Is.Not.Null);
             Assert.Multiple(() =>
             {
-                Assert.That(result?.Id, Is.EqualTo(cartItem.Id));
-                Assert.That(result?.ProductId, Is.EqualTo(cartItem.ProductId));
-                Assert.That(result?.Quantity, Is.EqualTo(cartItem.Quantity));
+                Assert.That(result?.Id, Is.EqualTo(expectedCartItem.Id));
+                Assert.That(result?.ProductId, Is.EqualTo(expectedCartItem.ProductId));
+                Assert.That(result?.Quantity, Is.EqualTo(expectedCartItem.Quantity));
+                Assert.That(result?.UserId, Is.EqualTo(expectedCartItem.UserId));
+                Assert.That(result?.CreatedBy, Is.EqualTo(expectedCartItem.CreatedBy));
+                Assert.That(result?.CreatedDate, Is.EqualTo(expectedCartItem.CreatedDate));
             });
         }
 
@@ -106,8 +109,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         public async Task GetByIdAsync_WhenCartItemDoesNotExist_ShouldReturnNull()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
             CartItem? result = await repository.GetByIdAsync(100);
@@ -116,10 +118,35 @@ namespace Ecommerce.UnitTests.PersistenceTests
             Assert.That(result, Is.Null);
         }
 
+        [Test]
+        public async Task GetByIdAsync_WhenExceptionThrown_ShouldReturnNull()
+        {
+            // Arrange
+            DbContextOptions<EcommercePersistenceDbContext> options =
+                new DbContextOptionsBuilder<EcommercePersistenceDbContext>()
+                    .UseInMemoryDatabase(databaseName: "Ecommerce")
+                    .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
+                    .Options;
+            
+            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>(options);
+            Mock<DbSet<CartItem>> mockSet = new Mock<DbSet<CartItem>>();
+
+            mockDbContext.Setup(x => x.CartItems).Returns(mockSet.Object);
+
+
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), mockDbContext.Object);
+
+            // Act
+            CartItem? result = await repository.GetByIdAsync(1);
+
+            // Assert
+            Assert.That(result, Is.Null);
+        }
+
         #endregion
-        
+
         #region AddAsync Tests
-        
+
         [Test]
         public async Task AddAsync_WhenCartItemIsValid_ShouldReturnId()
         {
@@ -128,13 +155,12 @@ namespace Ecommerce.UnitTests.PersistenceTests
             {
                 ProductId = 3,
                 Quantity = 3,
-                UserId = this._userId,
+                UserId = _userId,
                 CreatedBy = _userName,
                 CreatedDate = DateTime.MinValue
             };
 
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
             int result = await repository.AddAsync(cartItem);
@@ -142,28 +168,51 @@ namespace Ecommerce.UnitTests.PersistenceTests
             // Assert
             Assert.That(result, Is.EqualTo(3));
         }
-        
+
         [Test]
-        public async Task AddAsync_WhenExceptionThrown_ShouldReturnMinusOne()
+        public async Task AddAsync_WhenCartItemIsInvalid_ShouldReturnMinusOne()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            
-            Mock<DbSet<CartItem>> mockSet = new Mock<DbSet<CartItem>>();
-            mockSet.Setup(x => x.AddAsync(It.IsAny<CartItem>(), default)).ThrowsAsync(new Exception());
-            
-            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>();
-            mockDbContext.Setup(x => x.CartItems).Returns(mockSet.Object);
-            
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
-            
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
+
             // Act
-            int result = await repository.AddAsync(new CartItem());
+            int result = await repository.AddAsync(null!);
 
             // Assert
             Assert.That(result, Is.EqualTo(-1));
         }
-        
+
+        [Test]
+        public async Task AddAsync_WhenExceptionThrown_ShouldReturnMinusOne()
+        {
+            // Arrange
+            DbContextOptions<EcommercePersistenceDbContext> options =
+                new DbContextOptionsBuilder<EcommercePersistenceDbContext>()
+                    .UseInMemoryDatabase(databaseName: "Ecommerce")
+                    .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
+                    .Options;
+
+            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>(options);
+            Mock<DbSet<CartItem>> mockSet = new Mock<DbSet<CartItem>>();
+            Mock<DatabaseFacade> mockDatabase = new Mock<DatabaseFacade>(mockDbContext.Object);
+            
+            mockDatabase.Setup(d => d.BeginTransactionAsync(It.IsAny<CancellationToken>()))
+                .ReturnsAsync(Mock.Of<IDbContextTransaction>());
+            mockSet.Setup(m => m.AddAsync(It.IsAny<CartItem>(), It.IsAny<CancellationToken>()))
+                .ThrowsAsync(new Exception("Test exception"));
+
+            mockDbContext.Setup(x => x.CartItems).Returns(mockSet.Object);
+            mockDbContext.Setup(x => x.Database).Returns(mockDatabase.Object);
+
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), mockDbContext.Object);
+
+            // Act
+            int result = await repository.AddAsync(this._cartItemThree);
+
+            // Assert
+            Assert.That(result, Is.EqualTo(-1));
+        }
+
         #endregion
 
         #region UpdateAsync Tests
@@ -177,13 +226,12 @@ namespace Ecommerce.UnitTests.PersistenceTests
                 Id = 1,
                 ProductId = 1,
                 Quantity = 5,
-                UserId = this._userId,
+                UserId = _userId,
                 CreatedBy = _userName,
                 CreatedDate = DateTime.MinValue
             };
 
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
             bool result = await repository.UpdateAsync(cartItem);
@@ -191,7 +239,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
             // Assert
             Assert.That(result, Is.True);
         }
-        
+
         [Test]
         public async Task UpdateAsync_WhenCartItemDoesNotExist_ShouldReturnFalse()
         {
@@ -201,13 +249,12 @@ namespace Ecommerce.UnitTests.PersistenceTests
                 Id = 100,
                 ProductId = 1,
                 Quantity = 5,
-                UserId = this._userId,
+                UserId = _userId,
                 CreatedBy = _userName,
                 CreatedDate = DateTime.MinValue
             };
 
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
             bool result = await repository.UpdateAsync(cartItem);
@@ -215,25 +262,29 @@ namespace Ecommerce.UnitTests.PersistenceTests
             // Assert
             Assert.That(result, Is.False);
         }
-        
+
         [Test]
         public async Task UpdateAsync_WhenExceptionThrown_ShouldReturnFalse()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            
-            Mock<IQueryProvider> mockProvider = new Mock<IQueryProvider>();
-            mockProvider
-                .Setup(p => p.Execute(It.IsAny<Expression>()))
-                .Throws(new Exception("Database error"));
-            
+            DbContextOptions<EcommercePersistenceDbContext> options =
+                new DbContextOptionsBuilder<EcommercePersistenceDbContext>()
+                    .UseInMemoryDatabase(databaseName: "Ecommerce")
+                    .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
+                    .Options;
+
+            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>(options);
             Mock<DbSet<CartItem>> mockSet = new Mock<DbSet<CartItem>>();
+            Mock<DatabaseFacade> mockDatabase = new Mock<DatabaseFacade>(mockDbContext.Object);
             
-            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>();
+            mockDatabase.Setup(d => d.BeginTransactionAsync(It.IsAny<CancellationToken>()))
+                .ReturnsAsync(Mock.Of<IDbContextTransaction>());
+            
             mockDbContext.Setup(x => x.CartItems).Returns(mockSet.Object);
-            
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
-            
+            mockDbContext.Setup(x => x.Database).Returns(mockDatabase.Object);
+
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), mockDbContext.Object);
+
             // Act
             bool result = await repository.UpdateAsync(new CartItem());
 
@@ -244,13 +295,12 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #endregion
 
         #region DeleteAsync Tests
-        
+
         [Test]
         public async Task DeleteAsync_WhenCartItemExists_ShouldReturnTrue()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
             bool result = await repository.DeleteAsync(this._cartItemOne);
@@ -258,7 +308,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
             // Assert
             Assert.That(result, Is.True);
         }
-        
+
         [Test]
         public async Task DeleteAsync_WhenCartItemDoesNotExist_ShouldReturnFalse()
         {
@@ -268,13 +318,12 @@ namespace Ecommerce.UnitTests.PersistenceTests
                 Id = 100,
                 ProductId = 1,
                 Quantity = 5,
-                UserId = this._userId,
+                UserId = _userId,
                 CreatedBy = _userName,
                 CreatedDate = DateTime.MinValue
             };
 
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
             bool result = await repository.DeleteAsync(cartItem);
@@ -282,25 +331,31 @@ namespace Ecommerce.UnitTests.PersistenceTests
             // Assert
             Assert.That(result, Is.False);
         }
-        
+
         [Test]
         public async Task DeleteAsync_WhenExceptionThrown_ShouldReturnFalse()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            
-            Mock<IQueryProvider> mockProvider = new Mock<IQueryProvider>();
-            mockProvider
-                .Setup(p => p.Execute(It.IsAny<Expression>()))
-                .Throws(new Exception("Database error"));
-            
+            DbContextOptions<EcommercePersistenceDbContext> options =
+                new DbContextOptionsBuilder<EcommercePersistenceDbContext>()
+                    .UseInMemoryDatabase(databaseName: "Ecommerce")
+                    .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
+                    .Options;
+
+            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>(options);
             Mock<DbSet<CartItem>> mockSet = new Mock<DbSet<CartItem>>();
+            Mock<DatabaseFacade> mockDatabase = new Mock<DatabaseFacade>(mockDbContext.Object);
             
-            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>();
+            mockDatabase.Setup(d => d.BeginTransactionAsync(It.IsAny<CancellationToken>()))
+                .ReturnsAsync(Mock.Of<IDbContextTransaction>());
+            mockSet.Setup(m => m.Remove(It.IsAny<CartItem>()))
+                .Throws(new Exception("Test exception"));
+
             mockDbContext.Setup(x => x.CartItems).Returns(mockSet.Object);
-            
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
-            
+            mockDbContext.Setup(x => x.Database).Returns(mockDatabase.Object);
+
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), mockDbContext.Object);
+
             // Act
             bool result = await repository.DeleteAsync(new CartItem());
 
@@ -311,57 +366,57 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #endregion
 
         #region ListAllAsync Tests
-        
+
         [Test]
         public async Task ListAllAsync_WhenCartItemsExist_ShouldReturnCartItems()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
-            IEnumerable<CartItem> result = await repository.ListAllAsync(this._userId);
+            IEnumerable<CartItem> result = await repository.ListAllAsync(_userId);
 
             // Assert
             Assert.That(result, Is.Not.Null);
             Assert.That(result.Count, Is.EqualTo(2));
         }
-        
+
         [Test]
         public async Task ListAllAsync_WhenNoCartItemsExist_ShouldReturnEmptyList()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
+            Guid randomUserId = new Guid("f8cdc893-9cd9-40fa-a0a4-5da4003a9b5f");
+            
             // Act
-            IEnumerable<CartItem> result = await repository.ListAllAsync(Guid.NewGuid());
+            IEnumerable<CartItem> result = await repository.ListAllAsync(randomUserId);
 
             // Assert
             Assert.That(result, Is.Not.Null);
             Assert.That(result.Count, Is.EqualTo(0));
         }
-        
+
         [Test]
         public async Task ListAllAsync_WhenExceptionThrown_ShouldReturnEmptyList()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            
-            Mock<IQueryProvider> mockProvider = new Mock<IQueryProvider>();
-            mockProvider
-                .Setup(p => p.Execute(It.IsAny<Expression>()))
-                .Throws(new Exception("Database error"));
-            
+            DbContextOptions<EcommercePersistenceDbContext> options =
+                new DbContextOptionsBuilder<EcommercePersistenceDbContext>()
+                    .UseInMemoryDatabase(databaseName: "Ecommerce")
+                    .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
+                    .Options;
+
+            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>(options);
             Mock<DbSet<CartItem>> mockSet = new Mock<DbSet<CartItem>>();
-            
-            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>();
+
             mockDbContext.Setup(x => x.CartItems).Returns(mockSet.Object);
-            
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
-            
+
+
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), mockDbContext.Object);
+
             // Act
-            IEnumerable<CartItem> result = await repository.ListAllAsync(Guid.NewGuid());
+            IEnumerable<CartItem> result = await repository.ListAllAsync(_userId);
 
             // Assert
             Assert.That(result, Is.Not.Null);
@@ -369,29 +424,27 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
 
         #endregion
-        
+
         #region RemoveUserCartItems Tests
-        
+
         [Test]
         public async Task RemoveUserCartItems_WhenCartItemsExist_ShouldReturnTrue()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
-            bool result = await repository.RemoveUserCartItems(this._userId);
+            bool result = await repository.RemoveUserCartItems(_userId);
 
             // Assert
             Assert.That(result, Is.True);
         }
-        
+
         [Test]
         public async Task RemoveUserCartItems_WhenNoCartItemsExist_ShouldReturnFalse()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
             bool result = await repository.RemoveUserCartItems(Guid.NewGuid());
@@ -399,89 +452,93 @@ namespace Ecommerce.UnitTests.PersistenceTests
             // Assert
             Assert.That(result, Is.False);
         }
-        
+
         [Test]
         public async Task RemoveUserCartItems_WhenExceptionThrown_ShouldReturnFalse()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            
-            Mock<IQueryProvider> mockProvider = new Mock<IQueryProvider>();
-            mockProvider
-                .Setup(p => p.Execute(It.IsAny<Expression>()))
-                .Throws(new Exception("Database error"));
-            
+            DbContextOptions<EcommercePersistenceDbContext> options =
+                new DbContextOptionsBuilder<EcommercePersistenceDbContext>()
+                    .UseInMemoryDatabase(databaseName: "Ecommerce")
+                    .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
+                    .Options;
+
+            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>(options);
             Mock<DbSet<CartItem>> mockSet = new Mock<DbSet<CartItem>>();
+            Mock<DatabaseFacade> mockDatabase = new Mock<DatabaseFacade>(mockDbContext.Object);
             
-            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>();
+            mockDatabase.Setup(d => d.BeginTransactionAsync(It.IsAny<CancellationToken>()))
+                .ReturnsAsync(Mock.Of<IDbContextTransaction>());
+            mockSet.Setup(m => m.RemoveRange(It.IsAny<CartItem>()))
+                .Throws(new Exception("Test exception"));
+
             mockDbContext.Setup(x => x.CartItems).Returns(mockSet.Object);
-            
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
-            
+            mockDbContext.Setup(x => x.Database).Returns(mockDatabase.Object);
+
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), mockDbContext.Object);
+
             // Act
-            bool result = await repository.RemoveUserCartItems(Guid.NewGuid());
+            bool result = await repository.RemoveUserCartItems(_userId);
 
             // Assert
             Assert.That(result, Is.False);
         }
-        
+
         #endregion
-        
+
         #region CartItemExistsForUser Tests
-        
+
         [Test]
         public async Task CartItemExistsForUser_WhenCartItemExists_ShouldReturnTrue()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
-            bool result = await repository.CartItemExistsForUser(this._userId, 1);
+            bool result = await repository.CartItemExistsForUser(_userId, 1);
 
             // Assert
             Assert.That(result, Is.True);
         }
-        
+
         [Test]
         public async Task CartItemExistsForUser_WhenCartItemDoesNotExist_ShouldReturnFalse()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
-            bool result = await repository.CartItemExistsForUser(this._userId, 100);
+            bool result = await repository.CartItemExistsForUser(_userId, 100);
 
             // Assert
             Assert.That(result, Is.False);
         }
-        
+
         [Test]
         public async Task CartItemExistsForUser_WhenExceptionThrown_ShouldReturnFalse()
         {
             // Arrange
-            Mock<ILogger<CartItemRepository>> logger = new Mock<ILogger<CartItemRepository>>();
-            
-            Mock<IQueryProvider> mockProvider = new Mock<IQueryProvider>();
-            mockProvider
-                .Setup(p => p.Execute(It.IsAny<Expression>()))
-                .Throws(new Exception("Database error"));
-            
+            DbContextOptions<EcommercePersistenceDbContext> options =
+                new DbContextOptionsBuilder<EcommercePersistenceDbContext>()
+                    .UseInMemoryDatabase(databaseName: "Ecommerce")
+                    .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
+                    .Options;
+
+            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>(options);
             Mock<DbSet<CartItem>> mockSet = new Mock<DbSet<CartItem>>();
-            
-            Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>();
+
             mockDbContext.Setup(x => x.CartItems).Returns(mockSet.Object);
-            
-            CartItemRepository repository = new CartItemRepository(logger.Object, this._dbContext);
-            
+
+
+            CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), mockDbContext.Object);
+
             // Act
-            bool result = await repository.CartItemExistsForUser(Guid.NewGuid(), 1);
+            bool result = await repository.CartItemExistsForUser(_userId, 1);
 
             // Assert
             Assert.That(result, Is.False);
         }
-        
+
         #endregion
     }
 }

@@ -44,7 +44,6 @@ namespace Ecommerce.Persistence.Repositories
 			try
 			{
 				cartItem = await this._dbContext.CartItems.FirstOrDefaultAsync(c => c.Id == id);
-					
 			}
 			catch (Exception e)
 			{
