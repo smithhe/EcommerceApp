@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Primitives;
 
 namespace Ecommerce.UI.Extensions
 {
@@ -11,9 +12,9 @@ namespace Ecommerce.UI.Extensions
         {
             Uri uri = navManager.ToAbsoluteUri(navManager.Uri);
 
-            if (QueryHelpers.ParseQuery(uri.Query).TryGetValue(key, out var valueFromQueryString))
+            if (QueryHelpers.ParseQuery(uri.Query).TryGetValue(key, out StringValues valueFromQueryString))
             {
-                if (typeof(T) == typeof(int) && int.TryParse(valueFromQueryString, out var valueAsInt))
+                if (typeof(T) == typeof(int) && int.TryParse(valueFromQueryString, out int valueAsInt))
                 {
                     value = (T)(object)valueAsInt;
                     return true;
@@ -25,14 +26,14 @@ namespace Ecommerce.UI.Extensions
                     return true;
                 }
 
-                if (typeof(T) == typeof(decimal) && decimal.TryParse(valueFromQueryString, out var valueAsDecimal))
+                if (typeof(T) == typeof(decimal) && decimal.TryParse(valueFromQueryString, out decimal valueAsDecimal))
                 {
                     value = (T)(object)valueAsDecimal;
                     return true;
                 }
             }
 
-            value = default!;
+            value = default(T)!;
             return false;
         }
     }

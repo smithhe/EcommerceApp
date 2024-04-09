@@ -13,7 +13,7 @@
         <div class="col-md-6">
             @if (this.RegistrationErrors != null)
             {
-                foreach (var registrationError in RegistrationErrors)
+                foreach (string registrationError in RegistrationErrors)
                 {
                     <div class="alert alert-danger" role="alert">
                         @registrationError

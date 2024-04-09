@@ -1,5 +1,6 @@
 @page "/Orders"
 @using Blazored.Toast.Configuration
+@using Ecommerce.Shared.Dtos
 @using Ecommerce.Shared.Enums
 
 <BlazoredToasts Position="ToastPosition.TopRight"
@@ -37,7 +38,7 @@ else
             </tr>
             </thead>
             <tbody>
-            @foreach (var order in this.UserOrders)
+            @foreach (OrderDto order in this.UserOrders)
             {
                 <tr>
                     <td class="text-center">@order.Id</td>

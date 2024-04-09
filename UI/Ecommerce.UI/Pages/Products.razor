@@ -1,5 +1,6 @@
 @page "/Products/{CategoryId}"
 @using Blazored.Toast.Configuration
+@using Ecommerce.Shared.Dtos
 
 <BlazoredToasts Position="ToastPosition.TopRight"
                 Timeout="10"
@@ -22,7 +23,7 @@ else
         </div>
 
         <div class="row">
-            @foreach (var product in this.ProductList)
+            @foreach (ProductDto product in this.ProductList)
             {
                 <div class="col-md-4 mb-4">
                     <div class="card product-card clickable-card">

@@ -1,5 +1,6 @@
 @page "/Categories"
 @using Blazored.Toast.Configuration
+@using Ecommerce.Shared.Dtos
 
 <BlazoredToasts Position="ToastPosition.TopRight"
                 Timeout="10"
@@ -21,7 +22,7 @@ else
             <h1 class="category-heading">Explore Our Categories</h1>
         </div>
         <div class="row mt-3">
-            @foreach (var category in this.CategoryList)
+            @foreach (CategoryDto category in this.CategoryList)
             {
                 <div class="col-md-4 mb-4">
                     <div class="card">
