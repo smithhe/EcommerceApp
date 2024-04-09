@@ -83,22 +83,6 @@ namespace Ecommerce.Persistence.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "OrderKeys",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    OrderId = table.Column<int>(type: "int", nullable: false),
-                    OrderToken = table.Column<string>(type: "longtext", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_OrderKeys", x => x.Id);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -302,6 +286,28 @@ namespace Ecommerce.Persistence.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "OrderKeys",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    OrderId = table.Column<int>(type: "int", nullable: false),
+                    OrderToken = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OrderKeys", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_OrderKeys_Orders_OrderId",
+                        column: x => x.OrderId,
+                        principalTable: "Orders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "CartItems",
                 columns: table => new
                 {
@@ -375,9 +381,9 @@ namespace Ecommerce.Persistence.Migrations
                 columns: new[] { "Id", "CreatedBy", "CreatedDate", "LastModifiedBy", "LastModifiedDate", "Name", "Summary" },
                 values: new object[,]
                 {
-                    { 1, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6078), null, null, "Laptops", "Explore our range of laptops." },
-                    { 2, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6131), null, null, "Phones", "Discover the latest smartphones." },
-                    { 3, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6134), null, null, "Tablets", "Browse our collection of tablets." }
+                    { 1, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5029), null, null, "Laptops", "Explore our range of laptops." },
+                    { 2, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5085), null, null, "Phones", "Discover the latest smartphones." },
+                    { 3, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5088), null, null, "Tablets", "Browse our collection of tablets." }
                 });
 
             migrationBuilder.InsertData(
@@ -385,9 +391,9 @@ namespace Ecommerce.Persistence.Migrations
                 columns: new[] { "Id", "AverageRating", "CategoryId", "CreatedBy", "CreatedDate", "Description", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Name", "Price", "QuantityAvailable" },
                 values: new object[,]
                 {
-                    { 1, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6207), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop1.jpg", null, null, "Laptop 1", 299.99000000000001, 5 },
-                    { 2, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6211), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop2.jpg", null, null, "Laptop 2", 499.99000000000001, 5 },
-                    { 3, 0m, 1, "Harold", new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6214), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop3.jpg", null, null, "Laptop 3", 999.99000000000001, 5 }
+                    { 1, 0m, 1, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5166), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop1.jpg", null, null, "Laptop 1", 299.99000000000001, 5 },
+                    { 2, 0m, 1, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5171), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop2.jpg", null, null, "Laptop 2", 499.99000000000001, 5 },
+                    { 3, 0m, 1, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5175), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop3.jpg", null, null, "Laptop 3", 999.99000000000001, 5 }
                 });
 
             migrationBuilder.CreateIndex(
@@ -445,6 +451,11 @@ namespace Ecommerce.Persistence.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_OrderItems_OrderId",
                 table: "OrderItems",
+                column: "OrderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderKeys_OrderId",
+                table: "OrderKeys",
                 column: "OrderId");
 
             migrationBuilder.CreateIndex(

@@ -110,7 +110,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6078),
+                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5029),
                             Name = "Laptops",
                             Summary = "Explore our range of laptops."
                         },
@@ -118,7 +118,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 2,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6131),
+                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5085),
                             Name = "Phones",
                             Summary = "Discover the latest smartphones."
                         },
@@ -126,7 +126,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 3,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6134),
+                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5088),
                             Name = "Tablets",
                             Summary = "Browse our collection of tablets."
                         });
@@ -376,7 +376,7 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6207),
+                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5166),
                             Description = "This is a killer laptop that can handle all your home needs",
                             ImageUrl = "https://smith-ecommerce-app.s3.amazonaws.com/laptop1.jpg",
                             Name = "Laptop 1",
@@ -389,7 +389,7 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6211),
+                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5171),
                             Description = "This is a killer laptop that can handle all your home needs",
                             ImageUrl = "https://smith-ecommerce-app.s3.amazonaws.com/laptop2.jpg",
                             Name = "Laptop 2",
@@ -402,7 +402,7 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 6, 22, 23, 52, 488, DateTimeKind.Local).AddTicks(6214),
+                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5175),
                             Description = "This is a killer laptop that can handle all your home needs",
                             ImageUrl = "https://smith-ecommerce-app.s3.amazonaws.com/laptop3.jpg",
                             Name = "Laptop 3",
@@ -474,9 +474,12 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.Property<string>("OrderToken")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
 
                     b.ToTable("OrderKeys");
                 });
@@ -661,6 +664,15 @@ namespace Ecommerce.Persistence.Migrations
                         .WithMany()
                         .HasForeignKey("UserName")
                         .HasPrincipalKey("UserName")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Ecommerce.Domain.Infrastructure.OrderKey", b =>
+                {
+                    b.HasOne("Ecommerce.Domain.Entities.Order", null)
+                        .WithMany()
+                        .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
