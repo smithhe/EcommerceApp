@@ -82,7 +82,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region GetByIdAsync Tests
 
         [Test]
-        public async Task GetByIdAsync_WithExistingId_ReturnsReview()
+        public async Task GetByIdAsync_WhenReviewExists_ReturnsReview()
         {
             // Arrange
             Review expectedReview = this._reviewOne;
@@ -95,7 +95,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
             Assert.That(result, Is.Not.Null);
             Assert.Multiple(() =>
             {
-                Assert.That(result.Id, Is.EqualTo(expectedReview.Id));
+                Assert.That(result!.Id, Is.EqualTo(expectedReview.Id));
                 Assert.That(result.ProductId, Is.EqualTo(expectedReview.ProductId));
                 Assert.That(result.UserName, Is.EqualTo(expectedReview.UserName));
                 Assert.That(result.Stars, Is.EqualTo(expectedReview.Stars));
@@ -106,7 +106,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task GetByIdAsync_WithNonExistantId_ReturnsNull()
+        public async Task GetByIdAsync_WhenReviewDoesNotExist_ReturnsNull()
         {
             // Arrange
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
@@ -222,7 +222,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task UpdateAsync_WithNonExistentReview_ReturnsFalse()
+        public async Task UpdateAsync_WhenReviewDoesNotExist_ReturnsFalse()
         {
             // Arrange
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
@@ -268,7 +268,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region DeleteAsync Tests
 
         [Test]
-        public async Task DeleteAsync_WithExistingReview_ReturnsTrue()
+        public async Task DeleteAsync_WhenReviewExists_ReturnsTrue()
         {
             // Arrange
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
@@ -281,7 +281,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task DeleteAsync_WithNonExistentReview_ReturnsFalse()
+        public async Task DeleteAsync_WhenReviewDoesNotExist_ReturnsFalse()
         {
             // Arrange
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
@@ -329,7 +329,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region ListAllAsync Tests
 
         [Test]
-        public async Task ListAllAsync_ProductWithExistingReviews_ReturnsReviews()
+        public async Task ListAllAsync_WhenReviewsExist_ReturnsReviews()
         {
             // Arrange
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
@@ -343,7 +343,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task ListAllAsync_ProductWithNoReviews_ReturnsEmpty()
+        public async Task ListAllAsync_WhenNoReviewsExist_ReturnsEmpty()
         {
             // Arrange
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
@@ -384,7 +384,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region GetUserReviewForProduct Tests
 
         [Test]
-        public async Task GetUserReviewForProduct_WithExistingReview_ReturnsReview()
+        public async Task GetUserReviewForProduct_WhenReviewExists_ReturnsReview()
         {
             // Arrange
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
@@ -397,7 +397,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task GetUserReviewForProduct_WithNoReview_ReturnsNull()
+        public async Task GetUserReviewForProduct_WhenReviewDoesNotExist_ReturnsNull()
         {
             // Arrange
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
@@ -438,7 +438,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region GetAverageRatingForProduct Tests
 
         [Test]
-        public async Task GetAverageRatingForProduct_WithExistingReviews_ReturnsAverage()
+        public async Task GetAverageRatingForProduct_WhenReviewsExist_ReturnsAverage()
         {
             // Arrange
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
@@ -451,7 +451,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task GetAverageRatingForProduct_WithNoReviews_ReturnsZero()
+        public async Task GetAverageRatingForProduct_WhenNoReviewsExist_ReturnsZero()
         {
             // Arrange
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);

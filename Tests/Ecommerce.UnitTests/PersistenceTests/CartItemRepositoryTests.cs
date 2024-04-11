@@ -148,7 +148,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region AddAsync Tests
 
         [Test]
-        public async Task AddAsync_WhenCartItemIsValid_ShouldReturnId()
+        public async Task AddAsync_WithNewCartItem_ShouldReturnId()
         {
             // Arrange
             CartItem cartItem = new CartItem
@@ -170,13 +170,13 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
 
         [Test]
-        public async Task AddAsync_WhenCartItemIsInvalid_ShouldReturnMinusOne()
+        public async Task AddAsync_WithExistingCartItem_ShouldReturnMinusOne()
         {
             // Arrange
             CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
-            int result = await repository.AddAsync(null!);
+            int result = await repository.AddAsync(this._cartItemOne);
 
             // Assert
             Assert.That(result, Is.EqualTo(-1));
@@ -218,23 +218,14 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region UpdateAsync Tests
 
         [Test]
-        public async Task UpdateAsync_WhenCartItemIsValid_ShouldReturnTrue()
+        public async Task UpdateAsync_WithExistingCartItem_ShouldReturnTrue()
         {
             // Arrange
-            CartItem cartItem = new CartItem
-            {
-                Id = 1,
-                ProductId = 1,
-                Quantity = 5,
-                UserId = _userId,
-                CreatedBy = _userName,
-                CreatedDate = DateTime.MinValue
-            };
-
             CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
-
+            this._cartItemOne.LastModifiedBy = _userName;
+            
             // Act
-            bool result = await repository.UpdateAsync(cartItem);
+            bool result = await repository.UpdateAsync(this._cartItemOne);
 
             // Assert
             Assert.That(result, Is.True);
@@ -244,20 +235,10 @@ namespace Ecommerce.UnitTests.PersistenceTests
         public async Task UpdateAsync_WhenCartItemDoesNotExist_ShouldReturnFalse()
         {
             // Arrange
-            CartItem cartItem = new CartItem
-            {
-                Id = 100,
-                ProductId = 1,
-                Quantity = 5,
-                UserId = _userId,
-                CreatedBy = _userName,
-                CreatedDate = DateTime.MinValue
-            };
-
             CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
-            bool result = await repository.UpdateAsync(cartItem);
+            bool result = await repository.UpdateAsync(this._cartItemThree);
 
             // Assert
             Assert.That(result, Is.False);
@@ -313,20 +294,10 @@ namespace Ecommerce.UnitTests.PersistenceTests
         public async Task DeleteAsync_WhenCartItemDoesNotExist_ShouldReturnFalse()
         {
             // Arrange
-            CartItem cartItem = new CartItem
-            {
-                Id = 100,
-                ProductId = 1,
-                Quantity = 5,
-                UserId = _userId,
-                CreatedBy = _userName,
-                CreatedDate = DateTime.MinValue
-            };
-
             CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
-            bool result = await repository.DeleteAsync(cartItem);
+            bool result = await repository.DeleteAsync(this._cartItemThree);
 
             // Assert
             Assert.That(result, Is.False);
@@ -502,7 +473,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
 
         [Test]
-        public async Task CartItemExistsForUser_WhenCartItemDoesNotExist_ShouldReturnFalse()
+        public async Task CartItemExistsForUser_WhenNoCartItemExists_ShouldReturnFalse()
         {
             // Arrange
             CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);

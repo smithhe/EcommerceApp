@@ -78,7 +78,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region GetByIdAsync Tests
 
         [Test]
-        public async Task GetByIdAsync_WithValidId_ReturnsCategory()
+        public async Task GetByIdAsync_WhenCategoryExists_ReturnsCategory()
         {
             // Arrange
             Category expectedCategory = this._categoryOne;
@@ -100,7 +100,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
 
         [Test]
-        public async Task GetByIdAsync_WithInvalidId_ReturnsNull()
+        public async Task GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull()
         {
             // Arrange
             CategoryAsyncRepository repository = new CategoryAsyncRepository(Mock.Of<ILogger<CategoryAsyncRepository>>(), this._dbContext);
@@ -113,7 +113,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
 
         [Test]
-        public async Task GetByIdAsync_WithException_ReturnsNull()
+        public async Task GetByIdAsync_WhenExceptionThrown_ReturnsNull()
         {
             // Arrange
             DbContextOptions<EcommercePersistenceDbContext> options =
@@ -141,7 +141,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region AddAsync Tests
 
         [Test]
-        public async Task AddAsync_WithValidCategory_ReturnsId()
+        public async Task AddAsync_WithNewCategory_ReturnsId()
         {
             // Arrange
             CategoryAsyncRepository repository = new CategoryAsyncRepository(Mock.Of<ILogger<CategoryAsyncRepository>>(), this._dbContext);
@@ -154,20 +154,20 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
 
         [Test]
-        public async Task AddAsync_WithInvalidCategory_ReturnsMinusOne()
+        public async Task AddAsync_WithExistingCategory_ReturnsMinusOne()
         {
             // Arrange
             CategoryAsyncRepository repository = new CategoryAsyncRepository(Mock.Of<ILogger<CategoryAsyncRepository>>(), this._dbContext);
 
             // Act
-            int result = await repository.AddAsync(null!);
+            int result = await repository.AddAsync(this._categoryOne);
 
             // Assert
             Assert.That(result, Is.EqualTo(-1));
         }
 
         [Test]
-        public async Task AddAsync_WithException_ReturnsMinusOne()
+        public async Task AddAsync_WhenExceptionThrown_ReturnsMinusOne()
         {
             // Arrange
             DbContextOptions<EcommercePersistenceDbContext> options =
@@ -202,29 +202,21 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region UpdateAsync Tests
 
         [Test]
-        public async Task UpdateAsync_WithValidCategory_ReturnsTrue()
+        public async Task UpdateAsync_WithExistingCategory_ReturnsTrue()
         {
             // Arrange
-            Category category = new Category
-            {
-                Id = 1,
-                Name = "Category 1 Updated",
-                Summary = "Category 1 Summary Updated",
-                CreatedBy = _userName,
-                CreatedDate = DateTime.MinValue
-            };
-
             CategoryAsyncRepository repository = new CategoryAsyncRepository(Mock.Of<ILogger<CategoryAsyncRepository>>(), this._dbContext);
-
+            this._categoryOne.LastModifiedBy = _userName;
+            
             // Act
-            bool result = await repository.UpdateAsync(category);
+            bool result = await repository.UpdateAsync(this._categoryOne);
 
             // Assert
             Assert.That(result, Is.True);
         }
 
         [Test]
-        public async Task UpdateAsync_WithNonExistingCategory_ReturnsFalse()
+        public async Task UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse()
         {
             // Arrange
             CategoryAsyncRepository repository = new CategoryAsyncRepository(Mock.Of<ILogger<CategoryAsyncRepository>>(), this._dbContext);
@@ -237,7 +229,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
 
         [Test]
-        public async Task UpdateAsync_WithException_ReturnsFalse()
+        public async Task UpdateAsync_WhenExceptionThrown_ReturnsFalse()
         {
             // Arrange
             DbContextOptions<EcommercePersistenceDbContext> options =
@@ -270,7 +262,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region DeleteAsync Tests
 
         [Test]
-        public async Task DeleteAsync_WithExistingCategory_ReturnsTrue()
+        public async Task DeleteAsync_WhenCategoryExists_ReturnsTrue()
         {
             // Arrange
             CategoryAsyncRepository repository = new CategoryAsyncRepository(Mock.Of<ILogger<CategoryAsyncRepository>>(), this._dbContext);
@@ -283,29 +275,20 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task DeleteAsync_WithNonExistingCategory_ReturnsFalse()
+        public async Task DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse()
         {
             // Arrange
-            Category category = new Category
-            {
-                Id = 100,
-                Name = "Category 100",
-                Summary = "Category 100 Summary",
-                CreatedBy = _userName,
-                CreatedDate = DateTime.MinValue
-            };
-
             CategoryAsyncRepository repository = new CategoryAsyncRepository(Mock.Of<ILogger<CategoryAsyncRepository>>(), this._dbContext);
 
             // Act
-            bool result = await repository.DeleteAsync(category);
+            bool result = await repository.DeleteAsync(this._categoryThree);
 
             // Assert
             Assert.That(result, Is.False);
         }
         
         [Test]
-        public async Task DeleteAsync_WithException_ReturnsFalse()
+        public async Task DeleteAsync_WhenExceptionThrown_ReturnsFalse()
         {
             // Arrange
             DbContextOptions<EcommercePersistenceDbContext> options =
@@ -339,7 +322,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region ListAllAsync Tests
         
         [Test]
-        public async Task ListAllAsync_WithCategories_ReturnsAllCategories()
+        public async Task ListAllAsync_WhenCategoriesExist_ReturnsAllCategories()
         {
             // Arrange
             CategoryAsyncRepository repository = new CategoryAsyncRepository(Mock.Of<ILogger<CategoryAsyncRepository>>(), this._dbContext);
@@ -353,7 +336,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task ListAllAsync_WithNoCategories_ReturnsEmptyList()
+        public async Task ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList()
         {
             // Arrange
             DbContextOptions<EcommercePersistenceDbContext> options =
@@ -374,7 +357,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task ListAllAsync_WithException_ReturnsEmptyList()
+        public async Task ListAllAsync_WhenExceptionThrown_ReturnsEmptyList()
         {
             // Arrange
             DbContextOptions<EcommercePersistenceDbContext> options =
@@ -416,7 +399,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task IsNameUnique_WithNonUniqueName_ReturnsFalse()
+        public async Task IsNameUnique_WithExistingName_ReturnsFalse()
         {
             // Arrange
             CategoryAsyncRepository repository = new CategoryAsyncRepository(Mock.Of<ILogger<CategoryAsyncRepository>>(), this._dbContext);

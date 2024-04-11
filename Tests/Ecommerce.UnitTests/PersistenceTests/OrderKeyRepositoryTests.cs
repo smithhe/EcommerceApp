@@ -70,7 +70,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region AddAsync Tests
 
         [Test]
-        public async Task AddAsync_ValidOrderKey_ReturnsId()
+        public async Task AddAsync_WithNewOrderKey_ReturnsId()
         {
             // Arrange
             OrderKeyRepository repository = new OrderKeyRepository(Mock.Of<ILogger<OrderKeyRepository>>(), this._dbContext);
@@ -83,7 +83,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task AddAsync_ExistingOrderKey_ReturnsMinusOne()
+        public async Task AddAsync_WithExistingOrderKey_ReturnsMinusOne()
         {
             // Arrange
             OrderKeyRepository repository = new OrderKeyRepository(Mock.Of<ILogger<OrderKeyRepository>>(), this._dbContext);
@@ -131,7 +131,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region DeleteAsync Tests
 
         [Test]
-        public async Task DeleteAsync_ExistingOrderKey_ReturnsTrue()
+        public async Task DeleteAsync_WhenOrderKeyExists_ReturnsTrue()
         {
             // Arrange
             OrderKeyRepository repository = new OrderKeyRepository(Mock.Of<ILogger<OrderKeyRepository>>(), this._dbContext);
@@ -144,7 +144,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task DeleteAsync_NonExistingOrderKey_ReturnsFalse()
+        public async Task DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse()
         {
             // Arrange
             OrderKeyRepository repository = new OrderKeyRepository(Mock.Of<ILogger<OrderKeyRepository>>(), this._dbContext);
@@ -190,7 +190,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region GetByOrderIdAsync Tests
 
         [Test]
-        public async Task GetByOrderIdAsync_ExistingOrderKey_ReturnsOrderKey()
+        public async Task GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey()
         {
             // Arrange
             OrderKeyRepository repository = new OrderKeyRepository(Mock.Of<ILogger<OrderKeyRepository>>(), this._dbContext);
@@ -203,7 +203,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task GetByOrderIdAsync_NonExistingOrderKey_ReturnsNull()
+        public async Task GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull()
         {
             // Arrange
             OrderKeyRepository repository = new OrderKeyRepository(Mock.Of<ILogger<OrderKeyRepository>>(), this._dbContext);
@@ -244,7 +244,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region GetByReturnKeyAsync Tests
 
         [Test]
-        public async Task GetByReturnKeyAsync_ExistingOrderKey_ReturnsOrderKey()
+        public async Task GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey()
         {
             // Arrange
             OrderKeyRepository repository = new OrderKeyRepository(Mock.Of<ILogger<OrderKeyRepository>>(), this._dbContext);
@@ -257,7 +257,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task GetByReturnKeyAsync_NonExistingOrderKey_ReturnsNull()
+        public async Task GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull()
         {
             // Arrange
             OrderKeyRepository repository = new OrderKeyRepository(Mock.Of<ILogger<OrderKeyRepository>>(), this._dbContext);

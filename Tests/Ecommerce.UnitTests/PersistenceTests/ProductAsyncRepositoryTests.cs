@@ -17,6 +17,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
 {
     public class ProductAsyncRepositoryTests
     {
+        private const string _userName = "Test User";
         
         private readonly Product _productOne = new Product
         {
@@ -91,7 +92,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region GetByIdAsync Tests
 
         [Test]
-        public async Task GetByIdAsync_WithIdOfExistingProduct_ReturnsProduct()
+        public async Task GetByIdAsync_WhenProductExists_ReturnsProduct()
         {
             // Arrange
             Product expectedProduct = this._productOne;
@@ -104,7 +105,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
             Assert.That(result, Is.Not.Null);
             Assert.Multiple(() =>
             {
-                Assert.That(result.Id, Is.EqualTo(expectedProduct.Id));
+                Assert.That(result!.Id, Is.EqualTo(expectedProduct.Id));
                 Assert.That(result.CategoryId, Is.EqualTo(expectedProduct.CategoryId));
                 Assert.That(result.Name, Is.EqualTo(expectedProduct.Name));
                 Assert.That(result.Description, Is.EqualTo(expectedProduct.Description));
@@ -118,13 +119,13 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task GetByIdAsync_WithIdOfNonExistingProduct_ReturnsNull()
+        public async Task GetByIdAsync_WhenProductDoesNotExist_ReturnsNull()
         {
             // Arrange
             ProductAsyncRepository repository = new ProductAsyncRepository(Mock.Of<ILogger<ProductAsyncRepository>>(), this._dbContext);
 
             // Act
-            Product? result = await repository.GetByIdAsync(3);
+            Product? result = await repository.GetByIdAsync(100);
 
             // Assert
             Assert.That(result, Is.Null);
@@ -160,7 +161,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region AddAsync Tests
 
         [Test]
-        public async Task AddAsync_WithValidProduct_ReturnsIdOfNewProduct()
+        public async Task AddAsync_WithNewProduct_ReturnsIdOfNewProduct()
         {
             // Arrange
             ProductAsyncRepository repository = new ProductAsyncRepository(Mock.Of<ILogger<ProductAsyncRepository>>(), this._dbContext);
@@ -221,11 +222,11 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region UpdateAsync Tests
 
         [Test]
-        public async Task UpdateAsync_WithExistingProduct_ReturnsTrue()
+        public async Task UpdateAsync_WhenProductExists_ReturnsTrue()
         {
             // Arrange
             ProductAsyncRepository repository = new ProductAsyncRepository(Mock.Of<ILogger<ProductAsyncRepository>>(), this._dbContext);
-            this._productOne.Description = "Updated Description";
+            this._productOne.LastModifiedBy = _userName;
 
             // Act
             bool result = await repository.UpdateAsync(this._productOne);
@@ -235,7 +236,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task UpdateAsync_WithNonExistingProduct_ReturnsFalse()
+        public async Task UpdateAsync_WhenProductDoesNotExist_ReturnsFalse()
         {
             // Arrange
             ProductAsyncRepository repository = new ProductAsyncRepository(Mock.Of<ILogger<ProductAsyncRepository>>(), this._dbContext);
@@ -281,7 +282,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region DeleteAsync Tests
 
         [Test]
-        public async Task DeleteAsync_WithExistingProduct_ReturnsTrue()
+        public async Task DeleteAsync_WhenProductExists_ReturnsTrue()
         {
             // Arrange
             ProductAsyncRepository repository = new ProductAsyncRepository(Mock.Of<ILogger<ProductAsyncRepository>>(), this._dbContext);
@@ -294,7 +295,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task DeleteAsync_WithNonExistingProduct_ReturnsFalse()
+        public async Task DeleteAsync_WhenProductDoesNotExist_ReturnsFalse()
         {
             // Arrange
             ProductAsyncRepository repository = new ProductAsyncRepository(Mock.Of<ILogger<ProductAsyncRepository>>(), this._dbContext);
@@ -342,7 +343,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region ListAllAsync Tests
 
         [Test]
-        public async Task ListAllAsync_WithCategoryIdOfExistingProducts_ReturnsProducts()
+        public async Task ListAllAsync_WhenProductsExist_ReturnsProducts()
         {
             // Arrange
             ProductAsyncRepository repository = new ProductAsyncRepository(Mock.Of<ILogger<ProductAsyncRepository>>(), this._dbContext);
@@ -356,7 +357,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task ListAllAsync_WithCategoryIdOfNonExistingProducts_ReturnsEmptyList()
+        public async Task ListAllAsync_WhenNoProductsExist_ReturnsEmptyList()
         {
             // Arrange
             ProductAsyncRepository repository = new ProductAsyncRepository(Mock.Of<ILogger<ProductAsyncRepository>>(), this._dbContext);

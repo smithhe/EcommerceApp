@@ -88,7 +88,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region GetByIdAsync Tests
 
         [Test]
-        public async Task GetByIdAsync_WithValidId_ReturnsOrder()
+        public async Task GetByIdAsync_WhenOrderExists_ReturnsOrder()
         {
             // Arrange
             Order expectedOrder = this._orderOne;
@@ -115,7 +115,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
 
         [Test]
-        public async Task GetByIdAsync_WithInvalidId_ReturnsNull()
+        public async Task GetByIdAsync_WhenOrderDoesNotExist_ReturnsNull()
         {
             // Arrange
             OrderAsyncRepository repository =
@@ -158,38 +158,27 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region AddAsync Tests
 
         [Test]
-        public async Task AddAsync_WithValidOrder_ReturnsId()
+        public async Task AddAsync_WithNewOrder_ReturnsId()
         {
             // Arrange
-            Order order = new Order
-            {
-                UserId = _userId,
-                Status = OrderStatus.Created,
-                Total = 300.00,
-                PayPalRequestId = Guid.Empty,
-                OrderItems = Array.Empty<OrderItem>(),
-                CreatedBy = _userName,
-                CreatedDate = DateTime.MinValue
-            };
-
             OrderAsyncRepository repository = new OrderAsyncRepository(Mock.Of<ILogger<OrderAsyncRepository>>(), this._dbContext);
 
             // Act
-            int result = await repository.AddAsync(order);
+            int result = await repository.AddAsync(this._orderThree);
 
             // Assert
             Assert.That(result, Is.EqualTo(3));
         }
 
         [Test]
-        public async Task AddAsync_WithInvalidOrder_ReturnsMinusOne()
+        public async Task AddAsync_WithExistingOrder_ReturnsMinusOne()
         {
             // Arrange
             OrderAsyncRepository repository =
                 new OrderAsyncRepository(Mock.Of<ILogger<OrderAsyncRepository>>(), this._dbContext);
 
             // Act
-            int result = await repository.AddAsync(null!);
+            int result = await repository.AddAsync(this._orderOne);
 
             // Assert
             Assert.That(result, Is.EqualTo(-1));
@@ -231,12 +220,11 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region UpdateAsync
 
         [Test]
-        public async Task UpdateAsync_WithValidOrder_ReturnsTrue()
+        public async Task UpdateAsync_WithExistingOrder_ReturnsTrue()
         {
             // Arrange
             OrderAsyncRepository repository = new OrderAsyncRepository(Mock.Of<ILogger<OrderAsyncRepository>>(), this._dbContext);
-
-            this._orderOne.Status = OrderStatus.Pending;
+            this._orderOne.LastModifiedBy = _userName;
 
             // Act
             bool result = await repository.UpdateAsync(this._orderOne);
@@ -292,7 +280,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region DeleteAsync
 
         [Test]
-        public async Task DeleteAsync_WithValidOrder_ReturnsTrue()
+        public async Task DeleteAsync_WhenOrderExists_ReturnsTrue()
         {
             // Arrange
             OrderAsyncRepository repository = new OrderAsyncRepository(Mock.Of<ILogger<OrderAsyncRepository>>(), this._dbContext);
@@ -305,7 +293,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task DeleteAsync_WithNonExistentOrder_ReturnsFalse()
+        public async Task DeleteAsync_WithOrderDoesNotExist_ReturnsFalse()
         {
             // Arrange
             OrderAsyncRepository repository = new OrderAsyncRepository(Mock.Of<ILogger<OrderAsyncRepository>>(), this._dbContext);
@@ -353,7 +341,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         #region ListAllAsync Tests
 
         [Test]
-        public async Task ListAllAsync_WithValidUserId_ReturnsOrders()
+        public async Task ListAllAsync_WhenOrdersExist_ReturnsOrders()
         {
             // Arrange
             OrderAsyncRepository repository = new OrderAsyncRepository(Mock.Of<ILogger<OrderAsyncRepository>>(), this._dbContext);
@@ -367,7 +355,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task ListAllAsync_WithInvalidUserId_ReturnsEmpty()
+        public async Task ListAllAsync_WhenNoOrdersExist_ReturnsEmpty()
         {
             // Arrange
             OrderAsyncRepository repository = new OrderAsyncRepository(Mock.Of<ILogger<OrderAsyncRepository>>(), this._dbContext);
