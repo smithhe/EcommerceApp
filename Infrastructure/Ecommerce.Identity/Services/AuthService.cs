@@ -22,14 +22,14 @@ namespace Ecommerce.Identity.Services
 {
 	public class AuthService : IAuthenticationService
 	{
-		private readonly EcommercePersistenceDbContext _context;
 		private readonly UserManager<EcommerceUser> _userManager;
+		private readonly RoleManager<EcommerceUser> _roleManager;
 		private readonly JwtSettings _jwtSettings;
 
-		public AuthService(EcommercePersistenceDbContext context, UserManager<EcommerceUser> userManager, IOptions<JwtSettings> jwtSettings)
+		public AuthService(UserManager<EcommerceUser> userManager, RoleManager<EcommerceUser> roleManager, IOptions<JwtSettings> jwtSettings)
 		{
-			this._context = context;
 			this._userManager = userManager;
+			this._roleManager = roleManager;
 			this._jwtSettings = jwtSettings.Value;
 		}
 		
@@ -202,6 +202,9 @@ namespace Ecommerce.Identity.Services
 				return response;
 			}
 			
+			//TODO: Add default roles
+			
+			
 			//Add errors into the list then return the response
 			response.Success = false;
 			response.Errors = result.Errors.Select(error => error.Description).ToArray();
@@ -269,10 +272,11 @@ namespace Ecommerce.Identity.Services
 			EcommerceUser user = (await this._userManager.FindByNameAsync(username))!;
 
 			//Linq expression to grab all roles for this user
-			var roles = from ur in this._context.UserRoles
-				join r in this._context.Roles on ur.RoleId equals r.Id
-				where ur.UserId == user.Id
-				select new { ur.UserId, ur.RoleId, r.Name };
+			IList<string> roles = await this._userManager.GetRolesAsync(user);
+			// var roles = from ur in this._context.UserRoles
+			// 	join r in this._context.Roles on ur.RoleId equals r.Id
+			// 	where ur.UserId == user.Id
+			// 	select new { ur.UserId, ur.RoleId, r.Name };
 
 			//Add additional claims for the token
 			List<Claim> claims = new List<Claim>
@@ -287,7 +291,7 @@ namespace Ecommerce.Identity.Services
 			//Add the roles as claims
 			foreach(var role in roles)
 			{
-				claims.Add(new Claim(ClaimTypes.Role, role.Name));
+				claims.Add(new Claim(ClaimTypes.Role, role));
 			}
 			
 			//Add the security stamp
