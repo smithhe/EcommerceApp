@@ -1,4 +1,3 @@
-using Ecommerce.Shared.Security;
 using Refit;
 using System.Threading.Tasks;
 using Ecommerce.Shared.Security.Requests;
@@ -12,7 +11,7 @@ namespace Ecommerce.UI.Contracts.Refit
 		Task<ApiResponse<CreateUserResponse>> CreateUser(CreateUserRequest createUserRequest);
 		
 		[Post("/api/login")]
-		Task<ApiResponse<AuthenticatedUserModel?>> Login(AuthenticationRequest authenticationRequest);
+		Task<ApiResponse<AuthenticateResponse>> Login(AuthenticationRequest authenticationRequest);
 		
 		[Post("/api/logout")]
 		Task<IApiResponse> Logout(LogoutUserRequest logoutRequest);

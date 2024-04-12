@@ -20,7 +20,7 @@ namespace Ecommerce.Identity.Contracts
 		///	A <see cref="AuthenticatedUserModel"/> if the user is found and the information matches correctly
 		/// <c>null</c> if either property in the request is null or if the information provided does not match to an existing user correctly
 		/// </returns>
-		Task<AuthenticatedUserModel?> AuthenticateAsync(AuthenticationRequest request);
+		Task<AuthenticateResponse> AuthenticateAsync(AuthenticationRequest request);
 		
 		/// <summary>
 		/// Logs the user out on the server

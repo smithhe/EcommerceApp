@@ -1,5 +1,5 @@
+using System.Net;
 using Blazored.LocalStorage;
-using Ecommerce.Shared.Security;
 using Ecommerce.UI.Contracts;
 using Ecommerce.UI.Contracts.Refit;
 using Ecommerce.UI.Security;
@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Refit;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Security;
 using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
 
@@ -47,23 +48,41 @@ namespace Ecommerce.UI.Services
 			return error!;
 		}
 
-		public async Task<bool> Login(AuthenticationRequest authenticationRequest)
+		public async Task<LoginResponse> Login(AuthenticationRequest authenticationRequest)
 		{
-			ApiResponse<AuthenticatedUserModel?> response = await this._securityApiService.Login(authenticationRequest);
+			ApiResponse<AuthenticateResponse> apiResponse = await this._securityApiService.Login(authenticationRequest);
 
-			if (response.IsSuccessStatusCode == false)
+			if (apiResponse.IsSuccessStatusCode == false)
 			{
-				return false;
+				if (apiResponse.StatusCode == HttpStatusCode.Unauthorized)
+				{
+					return new LoginResponse { IsSuccessful = false, Message = "Invalid Credentials" };
+				}
+				else if (apiResponse.StatusCode == HttpStatusCode.Forbidden)
+				{
+					return new LoginResponse { IsSuccessful = false, Message = "Account is Locked or Disabled" };
+				}
 			}
 
-			AuthenticatedUserModel userModel = response.Content;
+			AuthenticateResponse? response = apiResponse.Content;
 
+			if (response == null)
+			{
+				return new LoginResponse { IsSuccessful = false, Message = "Unexpected Error Occurred" };
+			}
+			
+			if (response.SignInResult == SignInResponseResult.TwoFactorRequired)
+			{
+				//TODO: Implement Two Factor Authentication
+				return new LoginResponse {IsSuccessful = true, Message = "Two Factor Authentication Required"};
+			}
+			
 			//Store the access token on browser storage
-			await this._localStorageService.SetItemAsync(this._authTokenStorageKey, userModel.AccessToken);
+			await this._localStorageService.SetItemAsync(this._authTokenStorageKey, response.Token);
 				
-			((AuthStateProvider)this._authenticationStateProvider).NotifyUserAuthentication(userModel.AccessToken);
+			((AuthStateProvider)this._authenticationStateProvider).NotifyUserAuthentication(response.Token!);
 
-			return true;
+			return new LoginResponse { IsSuccessful = true };
 		}
 
 		public async Task<bool> Logout(string userName)

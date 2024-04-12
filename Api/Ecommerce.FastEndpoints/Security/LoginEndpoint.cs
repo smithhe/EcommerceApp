@@ -5,13 +5,14 @@ using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Shared.Security.Requests;
+using Ecommerce.Shared.Security.Responses;
 
 namespace Ecommerce.FastEndpoints.Security
 {
 	/// <summary>
 	/// A Fast Endpoint implementation that handles logging in a User
 	/// </summary>
-	public class LoginEndpoint : Endpoint<AuthenticationRequest, AuthenticatedUserModel?>
+	public class LoginEndpoint : Endpoint<AuthenticationRequest, AuthenticateResponse>
 	{
 		private readonly ILogger<LoginEndpoint> _logger;
 		private readonly IAuthenticationService _authenticationService;
@@ -46,17 +47,20 @@ namespace Ecommerce.FastEndpoints.Security
 			this._logger.LogInformation("Handling Login Request");
 			
 			//Attempt a login
-			AuthenticatedUserModel? result = await this._authenticationService.AuthenticateAsync(req);
+			AuthenticateResponse response = await this._authenticationService.AuthenticateAsync(req);
 
-			if (result == null)
+			if (response.SignInResult == SignInResponseResult.InvalidCredentials)
 			{
-				//Login failed
-				await SendAsync(null,400, cancellation: ct);
-				return;
+				await this.SendUnauthorizedAsync(ct);
+			}
+			
+			if (response.SignInResult == SignInResponseResult.AccountLocked || response.SignInResult == SignInResponseResult.AccountNotAllowed)
+			{
+				await this.SendForbiddenAsync(ct);
 			}
 
 			//Login succeeded
-			await SendAsync(result, 200, cancellation: ct);
+			await SendAsync(response, 200, cancellation: ct);
 		}
 	}
 }

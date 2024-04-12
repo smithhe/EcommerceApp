@@ -14,7 +14,6 @@ using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using Ecommerce.Persistence;
 using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
 
@@ -23,13 +22,14 @@ namespace Ecommerce.Identity.Services
 	public class AuthService : IAuthenticationService
 	{
 		private readonly UserManager<EcommerceUser> _userManager;
-		private readonly RoleManager<EcommerceUser> _roleManager;
+		private readonly SignInManager<EcommerceUser> _signInManager;
 		private readonly JwtSettings _jwtSettings;
 
-		public AuthService(UserManager<EcommerceUser> userManager, RoleManager<EcommerceUser> roleManager, IOptions<JwtSettings> jwtSettings)
+		public AuthService(UserManager<EcommerceUser> userManager, SignInManager<EcommerceUser> signInManager, 
+			IOptions<JwtSettings> jwtSettings)
 		{
 			this._userManager = userManager;
-			this._roleManager = roleManager;
+			this._signInManager = signInManager;
 			this._jwtSettings = jwtSettings.Value;
 		}
 		
@@ -41,21 +41,55 @@ namespace Ecommerce.Identity.Services
 		///	A <see cref="AuthenticatedUserModel"/> if the user is found and the information matches correctly
 		/// <c>null</c> if either property in the request is null or if the information provided does not match to an existing user correctly
 		/// </returns>
-		public async Task<AuthenticatedUserModel?> AuthenticateAsync(AuthenticationRequest request)
+		public async Task<AuthenticateResponse> AuthenticateAsync(AuthenticationRequest request)
 		{
+			AuthenticateResponse response = new AuthenticateResponse();
+			
 			//Check if either property is null in the request
 			if (request.UserName == null || request.Password == null)
 			{
-				return null;
-			}
-			
-			//Check if the username and password are valid
-			if (await IsValidUsernameAndPassword(request.UserName, request.Password))
-			{
-				return await GenerateToken(request.UserName);
+				response.SignInResult = SignInResponseResult.InvalidCredentials;
+				return response;
 			}
 
-			return null;
+			//Find the user in the database
+			EcommerceUser? user = await this._userManager.FindByNameAsync(request.UserName);
+
+			if (user == null)
+			{
+				response.SignInResult = SignInResponseResult.InvalidCredentials;
+				return response;
+			}
+			
+			//Check if the user's email is confirmed
+			if (await this._userManager.IsEmailConfirmedAsync(user) == false)
+			{
+				response.SignInResult = SignInResponseResult.EmailNotConfirmed;
+				return response;
+			}
+			
+			//Attempt to sign in the user with the password provided
+			SignInResult result = await this._signInManager.CheckPasswordSignInAsync(user, request.Password, true);
+			
+			//Check if the user is locked out or not allowed
+			if (result.IsLockedOut || result.IsNotAllowed)
+			{
+				response.SignInResult = result.IsLockedOut ? SignInResponseResult.AccountLocked : SignInResponseResult.AccountNotAllowed;
+				return response;
+			}
+
+			//Check if the user is Two Factor enabled
+			if (await this._userManager.GetTwoFactorEnabledAsync(user))
+			{
+				//TODO: Implement Two Factor Authentication
+				response.SignInResult = SignInResponseResult.TwoFactorRequired;
+				
+			}
+
+			//User signed in successfully
+			response.SignInResult = SignInResponseResult.Success;
+			response.Token = await GenerateToken(request.UserName);
+			return response;
 		}
 
 		/// <summary>
@@ -241,42 +275,17 @@ namespace Ecommerce.Identity.Services
 		}
 		
 		/// <summary>
-		/// Validates if the Username and Password belong to an existing user
-		/// </summary>
-		/// <param name="username">The username of the User attempting to authenticate</param>
-		/// <param name="password">The password of the User attempting to authenticate</param>
-		/// <returns>
-		/// <c>True</c> if the username and password belong to a existing user;
-		/// <c>False</c> if the user is not found or the password doesn't match
-		/// </returns>
-		private async Task<bool> IsValidUsernameAndPassword(string username, string password)
-		{
-			EcommerceUser? user = await this._userManager.FindByNameAsync(username);
-
-			if (user == null)
-			{
-				return false;
-			}
-
-			return await this._userManager.CheckPasswordAsync(user, password);
-		}
-		
-		/// <summary>
 		/// Generates JWT token for the specified user
 		/// </summary>
 		/// <param name="username">The UserName of the User to create a Token for</param>
 		/// <returns>A <see cref="AuthenticatedUserModel"/> with the generated token</returns>
-		private async Task<AuthenticatedUserModel> GenerateToken(string username)
+		private async Task<string> GenerateToken(string username)
 		{
 			//Find the user in the database
 			EcommerceUser user = (await this._userManager.FindByNameAsync(username))!;
 
 			//Linq expression to grab all roles for this user
 			IList<string> roles = await this._userManager.GetRolesAsync(user);
-			// var roles = from ur in this._context.UserRoles
-			// 	join r in this._context.Roles on ur.RoleId equals r.Id
-			// 	where ur.UserId == user.Id
-			// 	select new { ur.UserId, ur.RoleId, r.Name };
 
 			//Add additional claims for the token
 			List<Claim> claims = new List<Claim>
@@ -289,11 +298,8 @@ namespace Ecommerce.Identity.Services
 			};
 			
 			//Add the roles as claims
-			foreach(var role in roles)
-			{
-				claims.Add(new Claim(ClaimTypes.Role, role));
-			}
-			
+			claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
+
 			//Add the security stamp
 			string securityStamp = await this._userManager.GetSecurityStampAsync(user);
 			claims.Add(new Claim(CustomClaims._securityStamp, securityStamp));
@@ -307,19 +313,12 @@ namespace Ecommerce.Identity.Services
 				this._jwtSettings.Issuer,
 				this._jwtSettings.Audience,
 				claims,
-				DateTime.Now,
-				DateTime.Now.StartOfNextDay(5),
+				DateTime.UtcNow.ToEst(),
+				DateTime.UtcNow.ToEst().StartOfNextDay(5),
 				signingCredentials);
 
-			//Write the token to the model sent back to the client
-			AuthenticatedUserModel output = new AuthenticatedUserModel
-			{
-				AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
-				UserName = username
-			};
-
-			//Return the model
-			return output;
+			//Write the token and return it
+			return new JwtSecurityTokenHandler().WriteToken(token);
 		}
 
 		/// <summary>
@@ -375,10 +374,10 @@ namespace Ecommerce.Identity.Services
 			}
 
 			//Generate a new token for the user
-			AuthenticatedUserModel userModel = await this.GenerateToken(user.UserName!);
+			string accessToken = await this.GenerateToken(user.UserName!);
 
 			//Check if the token was generated
-			if (string.IsNullOrEmpty(userModel.AccessToken))
+			if (string.IsNullOrEmpty(accessToken))
 			{
 				response.Success = false;
 				response.Message = "Token Update Failed";
@@ -386,7 +385,7 @@ namespace Ecommerce.Identity.Services
 			}
 			
 			//Return success with the new token
-			response.UpdatedAccessToken = userModel.AccessToken;
+			response.UpdatedAccessToken = accessToken;
 			response.Success = true;
 			return response;
 		}
@@ -435,10 +434,10 @@ namespace Ecommerce.Identity.Services
 			}
 			
 			//Generate a new token for the user
-			AuthenticatedUserModel userModel = await this.GenerateToken(user.UserName!);
+			string accessToken = await this.GenerateToken(user.UserName!);
 
 			//Check if the token was generated
-			if (string.IsNullOrEmpty(userModel.AccessToken))
+			if (string.IsNullOrEmpty(accessToken))
 			{
 				response.Success = false;
 				response.Message = "Token Update Failed";
@@ -447,7 +446,7 @@ namespace Ecommerce.Identity.Services
 
 			//Return success
 			response.Success = true;
-			response.UpdatedAccessToken = userModel.AccessToken;
+			response.UpdatedAccessToken = accessToken;
 			response.Message = "Password Updated Successfully";
 			return response;
 		}

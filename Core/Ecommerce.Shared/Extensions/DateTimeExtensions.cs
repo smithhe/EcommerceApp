@@ -10,6 +10,10 @@ namespace Ecommerce.Shared.Extensions
 			return new DateTime(nextDay.Year, nextDay.Month, nextDay.Day, 0, 0, 0);
 		}
 		
-		
+		public static DateTime ToEst(this DateTime date)
+		{
+			TimeZoneInfo easternZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+			return TimeZoneInfo.ConvertTimeFromUtc(date, easternZone);
+		}
 	}
 }

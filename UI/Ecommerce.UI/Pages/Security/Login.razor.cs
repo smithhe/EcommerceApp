@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components;
 using System;
 using System.Threading.Tasks;
 using Ecommerce.Shared.Security.Requests;
+using Ecommerce.UI.Security;
 
 namespace Ecommerce.UI.Pages.Security
 {
@@ -18,6 +19,9 @@ namespace Ecommerce.UI.Pages.Security
 		public AuthenticationRequest AuthenticationRequestModel { get; set; } = new AuthenticationRequest();
 		private bool IsMessageVisible { get; set; }
 		private bool IsProcessing { get; set; } = false;
+		
+		private bool ShowError { get; set; }
+		private string ErrorMessage { get; set; } = string.Empty;
 
 		protected override void OnInitialized()
 		{
@@ -27,12 +31,13 @@ namespace Ecommerce.UI.Pages.Security
 		private async Task LoginButton_Click()
 		{
 			this.IsProcessing = true;
-			bool success = await this.SecurityService.Login(this.AuthenticationRequestModel);
+			LoginResponse response = await this.SecurityService.Login(this.AuthenticationRequestModel);
 			this.IsProcessing = false;
 			
-			if (success == false)
+			if (response.IsSuccessful == false)
 			{
-				this.ToastService.ShowError("Login Attempt Failed");
+				this.ErrorMessage = response.Message!;
+				this.ShowError = true;
 				return;
 			}
 			

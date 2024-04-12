@@ -15,6 +15,11 @@
             <div class="alert alert-success text-center" role="alert">
                 Account created successfully, Please check your email to verify your account.
             </div>
+        } else if (this.ShowError)
+        {
+            <div class="alert alert-danger text-center" role="alert">
+                @this.ErrorMessage
+            </div>
         }
         <div class="col-md-6">
             <div class="login-form">
