@@ -178,10 +178,10 @@ namespace Ecommerce.Persistence
                 .OnDelete(DeleteBehavior.Cascade);
 
             //Finish by seeding the data
-            this.SeedData(modelBuilder);
+            SeedData(modelBuilder);
         }
 
-        private void SeedData(ModelBuilder modelBuilder)
+        private static void SeedData(ModelBuilder modelBuilder)
         {
             //-----------------------------------------------------------------------------------------------------------
             // Categories
@@ -234,10 +234,6 @@ namespace Ecommerce.Persistence
                     ImageUrl = "https://smith-ecommerce-app.s3.amazonaws.com/laptop3.jpg", CreatedDate = DateTime.Now
                 }
             );
-        }
-
-        public void InitializeDatabase()
-        {
         }
     }
 }
