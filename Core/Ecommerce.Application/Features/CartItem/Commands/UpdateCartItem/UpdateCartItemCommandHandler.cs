@@ -108,7 +108,7 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 			{
 				this._logger.LogWarning("Sql returned false, returning failed response");
 				response.Success = false;
-				response.Message = "Failed to update the CartItem";
+				response.Message = CartItemConstants._updateErrorMessage;
 			}
 			
 			//Return the response
