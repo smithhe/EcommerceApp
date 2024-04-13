@@ -3,7 +3,6 @@
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
-
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
     </PropertyGroup>
@@ -25,6 +24,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Api\Ecommerce.FastEndpoints\Ecommerce.FastEndpoints.csproj" />
+      <ProjectReference Include="..\..\Core\Ecommerce.Application\Ecommerce.Application.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Ecommerce.Mail\Ecommerce.Mail.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Ecommerce.PayPal\Ecommerce.PayPal.csproj" />
       <ProjectReference Include="..\..\Infrastructure\Ecommerce.Persistence\Ecommerce.Persistence.csproj" />
     </ItemGroup>
 

@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Ecommerce.Mail.Contracts;
 using Ecommerce.Mail.Models.Enums;
 using FluentEmail.Core;
+using FluentEmail.Core.Models;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.Mail.Services
@@ -44,7 +45,16 @@ namespace Ecommerce.Mail.Services
             
             this.SetTemplate(templateToUse, templateModel, email);
             
-            await email.SendAsync();
+            SendResponse sendResponse = await email.SendAsync();
+            
+            if (sendResponse.Successful)
+            {
+                this._logger.LogInformation("Email sent successfully to {sendTo} with subject {subject}", sendTo, subject);
+            }
+            else
+            {
+                this._logger.LogError("Failed to send email to {sendTo} with subject {subject}", sendTo, subject);
+            }
         }
         
         /// <summary>
