@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 {
@@ -20,7 +21,7 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 		private readonly ILogger<UpdateCartItemCommandHandler> _logger;
 		private readonly IMapper _mapper;
 		private readonly ICartItemRepository _cartItemRepository;
-		private readonly IProductAsyncRepository _productAsyncRepository;
+		private readonly IMediator _mediator;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="UpdateCartItemCommandHandler"/> class.
@@ -28,14 +29,14 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mapper">The <see cref="IMapper"/> instance used for mapping objects.</param>
 		/// <param name="cartItemRepository">The <see cref="ICartItemRepository"/> instance used for data access for <see cref="CartItem"/> entities.</param>
-		/// <param name="productAsyncRepository">The <see cref="IProductAsyncRepository"/> instance used for data access for <see cref="Product"/> entities.</param>
+		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
 		public UpdateCartItemCommandHandler(ILogger<UpdateCartItemCommandHandler> logger, IMapper mapper, ICartItemRepository cartItemRepository,
-			IProductAsyncRepository productAsyncRepository)
+			IMediator mediator)
 		{
 			this._logger = logger;
 			this._mapper = mapper;
 			this._cartItemRepository = cartItemRepository;
-			this._productAsyncRepository = productAsyncRepository;
+			this._mediator = mediator;
 		}
 		
 		/// <summary>
@@ -46,21 +47,23 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 		/// <returns>
 		/// A <see cref="UpdateCartItemResponse"/> with Success being <c>true</c> if the <see cref="CartItem"/> was updated;
 		/// Success will be <c>false</c> if no <see cref="CartItem"/> is found or validation of the command fails;
-		/// Message will contain the error to display if Success is <c>false</c>;
+		/// Message will contain the message to display.
 		/// Validation Errors will be populated with errors to present if validation fails
 		/// </returns>
 		public async Task<UpdateCartItemResponse> Handle(UpdateCartItemCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to update an existing cart item");
 			
-			UpdateCartItemResponse response = new UpdateCartItemResponse { Success = true, Message = "Review Updated Successfully" };
+			//Create the response object
+			UpdateCartItemResponse response = new UpdateCartItemResponse { Success = true, Message = CartItemConstants._updateSuccessMessage };
 			
 			//Check if the dto is null
 			if (command.CartItemToUpdate == null)
 			{
 				this._logger.LogWarning("Dto was null in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a CartItem to update";
+				response.Message = CartItemConstants._updateErrorMessage;
 				return response;
 			}
 			
@@ -69,12 +72,12 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 			{
 				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a UserName to update";
+				response.Message = CartItemConstants._updateErrorMessage;
 				return response;
 			}
 
 			//Validate the dto that was passed in the command
-			UpdateCartItemValidator validator = new UpdateCartItemValidator(this._cartItemRepository, this._productAsyncRepository);
+			UpdateCartItemValidator validator = new UpdateCartItemValidator(this._cartItemRepository, this._mediator);
 			ValidationResult? validationResult = await validator.ValidateAsync(command, cancellationToken);
 			
 			//Check for validation errors
@@ -83,7 +86,7 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 				this._logger.LogWarning("Command failed validation, returning validation errors");
 				
 				response.Success = false;
-				response.Message = "Command was invalid";
+				response.Message = CartItemConstants._genericValidationErrorMessage;
 				foreach (ValidationFailure validationResultError in validationResult.Errors)
 				{
 					response.ValidationErrors.Add(validationResultError.ErrorMessage);
@@ -92,18 +95,23 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 				return response;
 			}
 
+			//Valid command
 			Domain.Entities.CartItem cartItemToUpdate = this._mapper.Map<Domain.Entities.CartItem>(command.CartItemToUpdate);
 			cartItemToUpdate.LastModifiedBy = command.UserName;
 			cartItemToUpdate.LastModifiedDate = DateTime.Now;
 			
+			//Update the cart item
 			bool success = await this._cartItemRepository.UpdateAsync(cartItemToUpdate);
 			
+			//If the update failed, update to a failed response
 			if (success == false)
 			{
+				this._logger.LogWarning("Sql returned false, returning failed response");
 				response.Success = false;
 				response.Message = "Failed to update the CartItem";
 			}
 			
+			//Return the response
 			return response;
 		}
 	}

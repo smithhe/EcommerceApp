@@ -5,6 +5,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
 {
@@ -38,32 +39,38 @@ namespace Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
 		/// <returns>
 		/// A <see cref="DeleteCartItemResponse"/> with Success being <c>true</c> if the <see cref="CartItem"/> was deleted;
 		/// Success will be <c>false</c> if no <see cref="CartItem"/> is found or validation of the command fails.
-		/// Message will contain the error to display if Success is <c>false</c>.
+		/// Message will contain the message to display.
 		/// </returns>
 		public async Task<DeleteCartItemResponse> Handle(DeleteCartItemCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to delete a cart item");
 			
-			DeleteCartItemResponse response = new DeleteCartItemResponse { Success = true, Message = "Review deleted successfully" };
+			//Create the response object
+			DeleteCartItemResponse response = new DeleteCartItemResponse { Success = true, Message = CartItemConstants._deleteSingleItemSuccessMessage };
 			
 			//Check if the dto is null
 			if (command.CartItemToDelete == null)
 			{
 				this._logger.LogWarning("Dto was null in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a CartItem to delete";
+				response.Message = CartItemConstants._deleteSingleItemErrorMessage;
 				return response;
 			}
 			
 			//Attempt the delete
 			bool success = await this._cartItemRepository.DeleteAsync(this._mapper.Map<Domain.Entities.CartItem>(command.CartItemToDelete));
 			
+			//If the delete failed, update to a failed response
 			if (success == false)
 			{
+				this._logger.LogWarning("Sql returned false, returning failed response");
+				
 				response.Success = false;
-				response.Message = "CartItem failed to delete or doesn't exist";
+				response.Message = CartItemConstants._deleteSingleItemErrorMessage;
 			}
 			
+			//Return the response
 			return response;
 		}
 	}

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 {
@@ -21,7 +22,7 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 		private readonly ILogger<CreateCartItemCommandHandler> _logger;
 		private readonly IMapper _mapper;
 		private readonly ICartItemRepository _cartItemRepository;
-		private readonly IProductAsyncRepository _productAsyncRepository;
+		private readonly IMediator _mediator;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="CreateCartItemCommandHandler"/> class.
@@ -29,14 +30,14 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mapper">The <see cref="IMapper"/> instance used for mapping objects.</param>
 		/// <param name="cartItemRepository">The <see cref="ICartItemRepository"/> instance used for data access for <see cref="CartItem"/> entities.</param>
-		/// <param name="productAsyncRepository">The <see cref="IProductAsyncRepository"/> instance used for data access for <see cref="Product"/> entities.</param>
+		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
 		public CreateCartItemCommandHandler(ILogger<CreateCartItemCommandHandler> logger, IMapper mapper, ICartItemRepository cartItemRepository,
-			IProductAsyncRepository productAsyncRepository)
+			IMediator mediator)
 		{
 			this._logger = logger;
 			this._mapper = mapper;
 			this._cartItemRepository = cartItemRepository;
-			this._productAsyncRepository = productAsyncRepository;
+			this._mediator = mediator;
 		}
 		
 		/// <summary>
@@ -47,22 +48,24 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 		/// <returns>
 		/// A <see cref="CreateCartItemResponse"/> with Success being <c>true</c> if the <see cref="CartItem"/> was created;
 		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="CartItem"/>.
-		/// Message will contain the error to display if Success is <c>false</c>.
+		/// Message will contain the message to display.
 		/// Validation Errors will be populated with errors to present if validation fails.
 		/// CartItem will contain the new <see cref="CartItemDto"/> if creation was successful
 		/// </returns>
 		public async Task<CreateCartItemResponse> Handle(CreateCartItemCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to create a new CartItem");
 			
-			CreateCartItemResponse response = new CreateCartItemResponse { Success = true, Message = "Successfully Created CartItem" };
+			//Create the response object
+			CreateCartItemResponse response = new CreateCartItemResponse { Success = true, Message = CartItemConstants._createSuccessMessage };
 			
 			//Check if the dto is null
 			if (command.CartItemToCreate == null)
 			{
 				this._logger.LogWarning("Dto was null in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a CartItem to create";
+				response.Message = CartItemConstants._createErrorMessage;
 				return response;
 			}
 			
@@ -71,12 +74,12 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 			{
 				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a UserName to create";
+				response.Message = CartItemConstants._createErrorMessage;
 				return response;
 			}
 			
 			//Validate the dto that was passed in the command
-			CreateCartItemValidator validator = new CreateCartItemValidator(this._cartItemRepository, this._productAsyncRepository);
+			CreateCartItemValidator validator = new CreateCartItemValidator(this._cartItemRepository, this._mediator);
 			ValidationResult validationResult = await validator.ValidateAsync(command, cancellationToken);
 			
 			//Check for validation errors
@@ -85,7 +88,7 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 				this._logger.LogWarning("Command failed validation, returning validation errors");
 				
 				response.Success = false;
-				response.Message = "Command was invalid";
+				response.Message = CartItemConstants._genericValidationErrorMessage;
 				foreach (ValidationFailure validationResultError in validationResult.Errors)
 				{
 					response.ValidationErrors.Add(validationResultError.ErrorMessage);
@@ -99,20 +102,25 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 			cartItemToCreate.CreatedBy = command.UserName;
 			cartItemToCreate.CreatedDate = DateTime.Now;
 
+			//Attempt to create the cart item
 			int newId = await this._cartItemRepository.AddAsync(cartItemToCreate);
 			
-			//Sql operation failed
+			//If the create failed, return a response
 			if (newId == -1)
 			{
+				this._logger.LogWarning("Sql returned -1, returning failed response");
+				
 				response.Success = false;
-				response.Message = "Failed to add new CartItem";
-			}
-			else
-			{
-				Domain.Entities.CartItem? cartItem = await this._cartItemRepository.GetByIdAsync(newId);
-				response.CartItem = this._mapper.Map<CartItemDto?>(cartItem);
+				response.Message = CartItemConstants._createErrorMessage;
+				
+				return response;
 			}
 			
+			//Get the new cart item
+			Domain.Entities.CartItem? cartItem = await this._cartItemRepository.GetByIdAsync(newId);
+			response.CartItem = this._mapper.Map<CartItemDto?>(cartItem);
+			
+			//Return the response
 			return response;
 		}
 	}

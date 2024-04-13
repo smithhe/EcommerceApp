@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
 {
@@ -34,23 +35,27 @@ namespace Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
 		/// <returns>
 		/// A <see cref="DeleteUserCartItemsResponse"/> with Success being <c>true</c> if the <see cref="CartItem"/> entities were deleted;
 		/// Success will be <c>false</c> if no <see cref="CartItem"/> entities are found or validation of the command fails.
-		/// Message will contain the error to display if Success is <c>false</c>.
+		/// Message will contain the message to display.
 		/// </returns>
 		public async Task<DeleteUserCartItemsResponse> Handle(DeleteUserCartItemsCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to delete all cart items for a user");
 			
-			DeleteUserCartItemsResponse response = new DeleteUserCartItemsResponse { Success = true, Message = "Review deleted successfully" };
+			//Create the response object
+			DeleteUserCartItemsResponse response = new DeleteUserCartItemsResponse { Success = true, Message = CartItemConstants._deleteAllItemsSuccessMessage };
 			
 			//Attempt the delete
 			bool success = await this._cartItemRepository.RemoveUserCartItems(command.UserId);
 			
+			//If the delete failed, update to a failed response
 			if (success == false)
 			{
 				response.Success = false;
-				response.Message = "CartItems failed to delete or none exist";
+				response.Message = CartItemConstants._deleteAllItemsErrorMessage;
 			}
 			
+			//Return the response
 			return response;
 		}
 	}
