@@ -3,18 +3,20 @@ using Ecommerce.Persistence.Contracts;
 using FluentValidation;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.Product.Queries.GetProductById;
+using MediatR;
 
 namespace Ecommerce.Application.Validators.CartItem
 {
 	public class CreateCartItemValidator : AbstractValidator<CreateCartItemCommand>
 	{
 		private readonly ICartItemRepository _cartItemRepository;
-		private readonly IProductAsyncRepository _productAsyncRepository;
+		private readonly IMediator _mediator;
 
-		public CreateCartItemValidator(ICartItemRepository cartItemRepository, IProductAsyncRepository productAsyncRepository)
+		public CreateCartItemValidator(ICartItemRepository cartItemRepository, IMediator mediator)
 		{
 			this._cartItemRepository = cartItemRepository;
-			this._productAsyncRepository = productAsyncRepository;
+			this._mediator = mediator;
 
 			RuleFor(c => c)
 				.MustAsync(CartItemDoesNotExist).WithMessage("Cart Item Already Exists")
@@ -32,7 +34,7 @@ namespace Ecommerce.Application.Validators.CartItem
 		
 		private async Task<bool> ProductExists(CreateCartItemCommand command, CancellationToken cancellationToken)
 		{
-			return (await this._productAsyncRepository.GetByIdAsync(command.CartItemToCreate!.ProductId)) != null;
+			return (await this._mediator.Send(new GetProductByIdQuery { Id = command.CartItemToCreate!.ProductId }, cancellationToken)).Product != null;
 		}
 	}
 }

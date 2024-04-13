@@ -3,19 +3,21 @@ using Ecommerce.Persistence.Contracts;
 using FluentValidation;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.Product.Queries.GetProductById;
+using MediatR;
 
 namespace Ecommerce.Application.Validators.CartItem
 {
 	public class UpdateCartItemValidator : AbstractValidator<UpdateCartItemCommand>
 	{
 		private readonly ICartItemRepository _cartItemRepository;
-		private readonly IProductAsyncRepository _productAsyncRepository;
+		private readonly IMediator _mediator;
 
-		public UpdateCartItemValidator(ICartItemRepository cartItemRepository, IProductAsyncRepository productAsyncRepository)
+		public UpdateCartItemValidator(ICartItemRepository cartItemRepository, IMediator mediator)
 		{
 			this._cartItemRepository = cartItemRepository;
-			this._productAsyncRepository = productAsyncRepository;
-			
+			this._mediator = mediator;
+
 			RuleFor(c => c)
 				.MustAsync(CartItemExists).WithMessage("Cart Item must exist")
 				.MustAsync(ProductExists).WithMessage("Product must exist");
@@ -31,7 +33,7 @@ namespace Ecommerce.Application.Validators.CartItem
 		
 		private async Task<bool> ProductExists(UpdateCartItemCommand updateCartItemCommand, CancellationToken cancellationToken)
 		{
-			return (await this._productAsyncRepository.GetByIdAsync(updateCartItemCommand.CartItemToUpdate!.ProductId)) != null;
+			return (await this._mediator.Send(new GetProductByIdQuery { Id = updateCartItemCommand.CartItemToUpdate!.ProductId }, cancellationToken)).Product != null;
 		}
 	}
 }
