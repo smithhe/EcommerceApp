@@ -38,8 +38,8 @@ namespace Ecommerce.Identity.Services
 		/// </summary>
 		/// <param name="request">The information of the user attempting to authenticate</param>
 		/// <returns>
-		///	A <see cref="AuthenticatedUserModel"/> if the user is found and the information matches correctly
-		/// <c>null</c> if either property in the request is null or if the information provided does not match to an existing user correctly
+		///	A <see cref="AuthenticateResponse"/> if the user is found and the information matches correctly
+		/// A <see cref="SignInResponseResult"/> will be set appropriately based on the result of authentication
 		/// </returns>
 		public async Task<AuthenticateResponse> AuthenticateAsync(AuthenticationRequest request)
 		{
@@ -278,7 +278,7 @@ namespace Ecommerce.Identity.Services
 		/// Generates JWT token for the specified user
 		/// </summary>
 		/// <param name="username">The UserName of the User to create a Token for</param>
-		/// <returns>A <see cref="AuthenticatedUserModel"/> with the generated token</returns>
+		/// <returns>A authentication token</returns>
 		private async Task<string> GenerateToken(string username)
 		{
 			//Find the user in the database
