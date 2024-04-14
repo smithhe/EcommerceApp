@@ -39,7 +39,7 @@ namespace Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
 		/// <returns>
 		/// A <see cref="DeleteCartItemResponse"/> with Success being <c>true</c> if the <see cref="CartItem"/> was deleted;
 		/// Success will be <c>false</c> if no <see cref="CartItem"/> is found or validation of the command fails.
-		/// Message will contain the message to display.
+		/// Message will contain the message to display to the user.
 		/// </returns>
 		public async Task<DeleteCartItemResponse> Handle(DeleteCartItemCommand command, CancellationToken cancellationToken)
 		{

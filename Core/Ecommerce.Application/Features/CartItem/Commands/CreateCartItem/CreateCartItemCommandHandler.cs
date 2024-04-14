@@ -48,7 +48,7 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 		/// <returns>
 		/// A <see cref="CreateCartItemResponse"/> with Success being <c>true</c> if the <see cref="CartItem"/> was created;
 		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="CartItem"/>.
-		/// Message will contain the message to display.
+		/// Message will contain the message to display to the user.
 		/// Validation Errors will be populated with errors to present if validation fails.
 		/// CartItem will contain the new <see cref="CartItemDto"/> if creation was successful
 		/// </returns>

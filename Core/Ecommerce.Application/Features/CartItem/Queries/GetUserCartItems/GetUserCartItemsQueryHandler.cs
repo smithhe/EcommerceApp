@@ -1,3 +1,4 @@
+using System;
 using AutoMapper;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
@@ -43,7 +44,7 @@ namespace Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
 		/// <returns>
 		/// A <see cref="GetUserCartItemsResponse"/> with Success being <c>true</c> if any <see cref="CartItem"/> entities were found;
 		/// Success will be <c>false</c> if no <see cref="CartItem"/> entities were found.
-		/// Message will contain the message to display.
+		/// Message will contain the message to display to the user.
 		/// CartItems will contain all <see cref="CartItemDto"/> entities or will be empty if none are found
 		/// </returns>
 		public async Task<GetUserCartItemsResponse> Handle(GetUserCartItemsQuery query, CancellationToken cancellationToken)
@@ -53,6 +54,14 @@ namespace Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
 			
 			//Create the response object
 			GetUserCartItemsResponse response = new GetUserCartItemsResponse { Success = true, Message = CartItemConstants._getAllItemsSuccessMessage };
+			
+			//If the user id is empty, return a failed response
+			if (query.UserId == Guid.Empty)
+			{
+				response.Success = false;
+				response.Message = CartItemConstants._getAllItemsErrorMessage;
+				return response;
+			}
 			
 			//Get all the cart items for the user
 			IEnumerable<Domain.Entities.CartItem> cartItems = await this._cartItemRepository.ListAllAsync(query.UserId);

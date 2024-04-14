@@ -47,7 +47,7 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 		/// <returns>
 		/// A <see cref="UpdateCartItemResponse"/> with Success being <c>true</c> if the <see cref="CartItem"/> was updated;
 		/// Success will be <c>false</c> if no <see cref="CartItem"/> is found or validation of the command fails;
-		/// Message will contain the message to display.
+		/// Message will contain the message to display to the user.
 		/// Validation Errors will be populated with errors to present if validation fails
 		/// </returns>
 		public async Task<UpdateCartItemResponse> Handle(UpdateCartItemCommand command, CancellationToken cancellationToken)
