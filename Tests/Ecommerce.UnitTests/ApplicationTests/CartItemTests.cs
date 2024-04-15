@@ -26,22 +26,10 @@ namespace Ecommerce.UnitTests.ApplicationTests
     {
         private static readonly Guid _userId = new Guid("095a987b-b4da-4eb6-a286-19aa3c75be53");
         private const string _userName = "Test User";
-        
-        private readonly CartItemDto _cartItemDto = new CartItemDto
-        {
-            Id = 1,
-            ProductId = 1,
-            Quantity = 1,
-            UserId = _userId
-        };
-        
-        private readonly CartItem _cartItem = new CartItem
-        {
-            Id = 1,
-            ProductId = 1,
-            Quantity = 1,
-            UserId = _userId
-        };
+
+        private CartItemDto _cartItemDto = null!;
+
+        private CartItem _cartItem = null!;
         
         private Mock<ICartItemRepository> _cartItemRepository = null!;
         private Mock<IMediator> _mediator = null!;
@@ -52,6 +40,22 @@ namespace Ecommerce.UnitTests.ApplicationTests
         {
             this._cartItemRepository = new Mock<ICartItemRepository>();
             this._mediator = new Mock<IMediator>();
+            
+            this._cartItemDto = new CartItemDto
+            {
+                Id = 1,
+                ProductId = 1,
+                Quantity = 1,
+                UserId = _userId
+            };
+            
+            this._cartItem = new CartItem
+            {
+                Id = 1,
+                ProductId = 1,
+                Quantity = 1,
+                UserId = _userId
+            };
             
             MapperConfiguration config = new MapperConfiguration(cfg =>
             {
