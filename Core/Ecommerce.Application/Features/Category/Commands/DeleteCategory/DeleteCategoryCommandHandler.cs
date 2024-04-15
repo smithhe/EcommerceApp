@@ -6,6 +6,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.Category.Commands.DeleteCategory
 {
@@ -39,32 +40,36 @@ namespace Ecommerce.Application.Features.Category.Commands.DeleteCategory
 		/// <returns>
 		/// A <see cref="DeleteCategoryResponse"/> with Success being <c>true</c> if the <see cref="Category"/> was deleted;
 		/// Success will be <c>false</c> if no <see cref="Category"/> is found or validation of the command fails.
-		/// Message will contain the error to display if Success is <c>false</c>.
+		/// Message will contain the message to display to the user.
 		/// </returns>
 		public async Task<DeleteCategoryResponse> Handle(DeleteCategoryCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to delete a category");
 
-			DeleteCategoryResponse response = new DeleteCategoryResponse { Success = true, Message = "Category deleted successfully" };
+			//Create the response object
+			DeleteCategoryResponse response = new DeleteCategoryResponse { Success = true, Message = CategoryConstants._deleteSuccessMessage };
 
 			//Check if the dto is null
 			if (command.CategoryToDelete == null)
 			{
 				this._logger.LogWarning("Dto was null in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a Category to delete";
+				response.Message = CategoryConstants._deleteErrorMessage;
 				return response;
 			}
 			
 			//Attempt the delete
 			bool success = await this._categoryAsyncRepository.DeleteAsync(this._mapper.Map<Domain.Entities.Category>(command.CategoryToDelete));
 
+			//Sql failed to delete the category, update the response
 			if (success == false)
 			{
 				response.Success = false;
-				response.Message = "Category failed to delete or doesn't exist";
+				response.Message = CategoryConstants._deleteErrorMessage;
 			}
 
+			//Return the response
 			return response;
 		}
 	}

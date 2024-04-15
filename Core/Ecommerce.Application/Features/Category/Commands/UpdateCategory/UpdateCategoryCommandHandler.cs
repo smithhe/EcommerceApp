@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 {
@@ -42,21 +43,23 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 		/// <returns>
 		/// A <see cref="UpdateCategoryResponse"/> with Success being <c>true</c> if the <see cref="Category"/> was updated;
 		/// Success will be <c>false</c> if no <see cref="Category"/> is found or validation of the command fails.
-		/// Message will contain the error to display if Success is <c>false</c>;
-		/// Validation Errors will be populated with errors to present if validation fails
+		/// Message will contain the message to display to the user.
+		/// Validation Errors will be populated with errors to present if validation fails.
 		/// </returns>
 		public async Task<UpdateCategoryResponse> Handle(UpdateCategoryCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to update an existing category");
 
-			UpdateCategoryResponse response = new UpdateCategoryResponse { Success = true, Message = "Category Updated Successfully" };
+			//Create the response object
+			UpdateCategoryResponse response = new UpdateCategoryResponse { Success = true, Message = CategoryConstants._updateSuccessMessage };
 			
 			//Check if the dto is null
 			if (command.CategoryToUpdate == null)
 			{
 				this._logger.LogWarning("Dto was null in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a Category to update";
+				response.Message = CategoryConstants._updateErrorMessage;
 				return response;
 			}
 			
@@ -65,7 +68,7 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 			{
 				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a UserName to update";
+				response.Message = CategoryConstants._updateErrorMessage;
 				return response;
 			}
 			
@@ -79,7 +82,7 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 				this._logger.LogWarning("Command failed validation, returning validation errors");
 				
 				response.Success = false;
-				response.Message = "Command was invalid";
+				response.Message = CategoryConstants._genericValidationErrorMessage;
 				foreach (ValidationFailure validationResultError in validationResult.Errors)
 				{
 					response.ValidationErrors.Add(validationResultError.ErrorMessage);
@@ -93,14 +96,17 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 			categoryToUpdate.LastModifiedBy = command.UserName;
 			categoryToUpdate.LastModifiedDate = DateTime.Now;
 			
+			//Attempt the update
 			bool success = await this._categoryAsyncRepository.UpdateAsync(categoryToUpdate);
 
+			//Sql failed to update the category, update the response
 			if (success == false)
 			{
 				response.Success = false;
-				response.Message = "Failed to update the Category";
+				response.Message = CategoryConstants._updateErrorMessage;
 			}
 			
+			//Return the response
 			return response;
 		}
 	}

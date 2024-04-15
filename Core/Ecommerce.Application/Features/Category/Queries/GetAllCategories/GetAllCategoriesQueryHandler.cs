@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.Category.Queries.GetAllCategories
 {
@@ -42,24 +43,29 @@ namespace Ecommerce.Application.Features.Category.Queries.GetAllCategories
 		/// <returns>
 		/// A <see cref="GetCategoryByIdResponse"/> with Success being <c>true</c> if any <see cref="Category"/> entities were found;
 		/// Success will be <c>false</c> if no <see cref="Category"/> entities were found.
-		/// Message will contain the error to display if Success is <c>false</c>
-		/// Categories will contain all <see cref="Category"/> entities or will be empty if none are found
+		/// Message will contain the message to display to the user.
+		/// Categories will contain all <see cref="Category"/> entities or will be empty if none are found.
 		/// </returns>
 		public async Task<GetAllCategoriesResponse> Handle(GetAllCategoriesQuery query, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to get all existing category entities");
 			
-			GetAllCategoriesResponse response = new GetAllCategoriesResponse { Success = true, Message = "Successfully Got all Categories" };
+			//Create the response object
+			GetAllCategoriesResponse response = new GetAllCategoriesResponse { Success = true, Message = CategoryConstants._getAllSuccessMessage };
 
+			//Attempt to get all categories
 			IEnumerable<Domain.Entities.Category> categories = await this._categoryAsyncRepository.ListAllAsync();
 			response.Categories = this._mapper.Map<IEnumerable<CategoryDto>>(categories);
 			
+			//Check if any categories were found
 			if (categories.Any() == false)
 			{
 				response.Success = false;
-				response.Message = "No Categories Found";
+				response.Message = CategoryConstants._getAllErrorMessage;
 			}
 
+			//Return the response
 			return response;
 		}
 	}

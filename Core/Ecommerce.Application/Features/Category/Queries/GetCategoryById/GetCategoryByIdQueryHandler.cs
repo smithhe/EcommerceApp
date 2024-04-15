@@ -7,6 +7,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.Category.Queries.GetCategoryById
 {
@@ -40,23 +41,28 @@ namespace Ecommerce.Application.Features.Category.Queries.GetCategoryById
 		/// <returns>
 		/// A <see cref="GetCategoryByIdResponse"/> with Success being <c>true</c> if the <see cref="Category"/> was found;
 		/// Success will be <c>false</c> if no <see cref="Category"/> with the specified ID is found.
-		/// Message will contain the error to display if Success is <c>false</c>
+		/// Message will contain the message to display to the user.
 		/// </returns>
 		public async Task<GetCategoryByIdResponse> Handle(GetCategoryByIdQuery query, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to get an existing category by Id");
 
-			GetCategoryByIdResponse response = new GetCategoryByIdResponse { Success = true, Message = "Successfully Got Category" };
+			//Create the response object
+			GetCategoryByIdResponse response = new GetCategoryByIdResponse { Success = true, Message = CategoryConstants._getByIdSuccessMessage };
 
+			//Attempt to get the category
 			Domain.Entities.Category? category = await this._categoryAsyncRepository.GetByIdAsync(query.Id);
 			response.Category = this._mapper.Map<CategoryDto?>(category);
 			
+			//Check if the category was found
 			if (category == null)
 			{
 				response.Success = false;
-				response.Message = "Category was not found";
+				response.Message = CategoryConstants._getByIdErrorMessage;
 			}
 
+			//Return the response
 			return response;
 		}
 	}
