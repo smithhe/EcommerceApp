@@ -22,6 +22,7 @@ using Refit;
 
 namespace Ecommerce.UnitTests.PayPalTests
 {
+    [TestFixture]
     public class PaypalClientServiceTests
     {
         private OrderDto _order = new OrderDto

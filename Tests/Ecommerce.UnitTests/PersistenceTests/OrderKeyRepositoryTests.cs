@@ -13,6 +13,7 @@ using Moq;
 
 namespace Ecommerce.UnitTests.PersistenceTests
 {
+    [TestFixture]
     public class OrderKeyRepositoryTests
     {
         private const string _orderOneToken = "OrderTokenOne";

@@ -11,6 +11,7 @@ using Moq;
 
 namespace Ecommerce.UnitTests.EmailTests
 {
+    [TestFixture]
     public class EmailServiceTests
     {
         private const string _sendTo = "test@email.com";

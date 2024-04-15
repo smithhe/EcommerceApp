@@ -18,6 +18,7 @@ using Moq;
 
 namespace Ecommerce.UnitTests.ApplicationTests
 {
+    [TestFixture]
     public class CategoryTests
     {
         private const string _userName = "Test User";

@@ -16,6 +16,7 @@ using Moq;
 
 namespace Ecommerce.UnitTests.PersistenceTests
 {
+    [TestFixture]
     public class CategoryAsyncRepositoryTests
     {
         private const string _userName = "Test User";
