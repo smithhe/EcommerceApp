@@ -25,7 +25,7 @@ namespace Ecommerce.Application.Validators.Category
 			RuleFor(c => c.CategoryToCreate!.Summary)
 				.NotNull().WithMessage("Summary cannot not be null")
 				.NotEmpty().WithMessage("Summary cannot be empty")
-				.MaximumLength(50).WithMessage("Summary cannot exceed 50 characters");
+				.MaximumLength(200).WithMessage("Summary cannot exceed 200 characters");
 		}
 		
 		private async Task<bool> NameIsUnique(CreateCategoryCommand createCategoryCommand, CancellationToken cancellationToken)
