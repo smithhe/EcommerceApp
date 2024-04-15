@@ -11,6 +11,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Domain.Constants;
+using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 {
@@ -100,7 +101,7 @@ namespace Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
 			//Valid Command
 			Domain.Entities.CartItem cartItemToCreate = this._mapper.Map<Domain.Entities.CartItem>(command.CartItemToCreate);
 			cartItemToCreate.CreatedBy = command.UserName;
-			cartItemToCreate.CreatedDate = DateTime.Now;
+			cartItemToCreate.CreatedDate = DateTime.UtcNow.ToEst();
 
 			//Attempt to create the cart item
 			int newId = await this._cartItemRepository.AddAsync(cartItemToCreate);

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.Product.Commands.CreateProduct
 {
@@ -97,7 +98,7 @@ namespace Ecommerce.Application.Features.Product.Commands.CreateProduct
 			//Valid Command
 			Domain.Entities.Product productToCreate = this._mapper.Map<Domain.Entities.Product>(command.ProductToCreate);
 			productToCreate.CreatedBy = command.UserName;
-			productToCreate.CreatedDate = DateTime.Now;
+			productToCreate.CreatedDate = DateTime.UtcNow.ToEst();
 			
 			int newId = await this._productAsyncRepository.AddAsync(productToCreate);
 			

@@ -17,6 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Product.Queries.GetProductById;
 using Ecommerce.Shared.Enums;
+using Ecommerce.Shared.Extensions;
 using Ecommerce.Shared.Responses.Product;
 
 namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
@@ -155,7 +156,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			//Order is valid, map the dto to the entity
 			Domain.Entities.Order orderToCreate = this._mapper.Map<Domain.Entities.Order>(newOrder);
 			orderToCreate.CreatedBy = command.UserName;
-			orderToCreate.CreatedDate = DateTime.Now;
+			orderToCreate.CreatedDate = DateTime.UtcNow.ToEst();
 			
 			//Create the order
 			int newId = await this._orderAsyncRepository.AddAsync(orderToCreate);

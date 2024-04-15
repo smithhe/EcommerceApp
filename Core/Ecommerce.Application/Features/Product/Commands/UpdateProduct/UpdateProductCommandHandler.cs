@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.Product.Commands.UpdateProduct
 {
@@ -95,7 +96,7 @@ namespace Ecommerce.Application.Features.Product.Commands.UpdateProduct
 			//Valid Command
 			Domain.Entities.Product productToUpdate = this._mapper.Map<Domain.Entities.Product>(command.ProductToUpdate);
 			productToUpdate.LastModifiedBy = command.UserName;
-			productToUpdate.LastModifiedDate = DateTime.Now;
+			productToUpdate.LastModifiedDate = DateTime.UtcNow.ToEst();
 			
 			bool success = await this._productAsyncRepository.UpdateAsync(productToUpdate);
 			

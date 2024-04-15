@@ -10,6 +10,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Domain.Constants;
+using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 {
@@ -98,7 +99,7 @@ namespace Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
 			//Valid command
 			Domain.Entities.CartItem cartItemToUpdate = this._mapper.Map<Domain.Entities.CartItem>(command.CartItemToUpdate);
 			cartItemToUpdate.LastModifiedBy = command.UserName;
-			cartItemToUpdate.LastModifiedDate = DateTime.Now;
+			cartItemToUpdate.LastModifiedDate = DateTime.UtcNow.ToEst();
 			
 			//Update the cart item
 			bool success = await this._cartItemRepository.UpdateAsync(cartItemToUpdate);

@@ -5,6 +5,7 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.UI.Security
 {
@@ -51,7 +52,7 @@ namespace Ecommerce.UI.Security
 				return true;
 			}
 
-			if (jwtToken.ValidTo <= DateTime.Now)
+			if (jwtToken.ValidTo <= DateTime.UtcNow.ToEst())
 			{
 				// Token has expired
 				return true;

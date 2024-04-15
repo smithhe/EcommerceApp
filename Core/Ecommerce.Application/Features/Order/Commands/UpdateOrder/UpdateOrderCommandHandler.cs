@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.Order.Commands.UpdateOrder
 {
@@ -91,7 +92,7 @@ namespace Ecommerce.Application.Features.Order.Commands.UpdateOrder
 			//Valid Command
 			Domain.Entities.Order orderToUpdate = this._mapper.Map<Domain.Entities.Order>(command.OrderToUpdate);
 			orderToUpdate.LastModifiedBy = command.UserName;
-			orderToUpdate.LastModifiedDate = DateTime.Now;
+			orderToUpdate.LastModifiedDate = DateTime.UtcNow.ToEst();
 			
 			bool success = await this._orderAsyncRepository.UpdateAsync(orderToUpdate);
 			

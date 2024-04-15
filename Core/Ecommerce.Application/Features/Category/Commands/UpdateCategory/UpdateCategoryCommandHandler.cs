@@ -10,6 +10,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Domain.Constants;
+using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 {
@@ -94,7 +95,7 @@ namespace Ecommerce.Application.Features.Category.Commands.UpdateCategory
 			//Valid Command
 			Domain.Entities.Category categoryToUpdate = this._mapper.Map<Domain.Entities.Category>(command.CategoryToUpdate);
 			categoryToUpdate.LastModifiedBy = command.UserName;
-			categoryToUpdate.LastModifiedDate = DateTime.Now;
+			categoryToUpdate.LastModifiedDate = DateTime.UtcNow.ToEst();
 			
 			//Attempt the update
 			bool success = await this._categoryAsyncRepository.UpdateAsync(categoryToUpdate);

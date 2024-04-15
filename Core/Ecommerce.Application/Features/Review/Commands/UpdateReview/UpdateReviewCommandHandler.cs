@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.Review.Commands.UpdateReview
 {
@@ -99,7 +100,7 @@ namespace Ecommerce.Application.Features.Review.Commands.UpdateReview
 
 			Domain.Entities.Review? reviewToUpdate = this._mapper.Map<Domain.Entities.Review>(command.ReviewToUpdate);
 			reviewToUpdate.LastModifiedBy = command.UserName;
-			reviewToUpdate.LastModifiedDate = DateTime.Now;
+			reviewToUpdate.LastModifiedDate = DateTime.UtcNow.ToEst();
 			
 			bool success = await this._reviewAsyncRepository.UpdateAsync(reviewToUpdate);
 			

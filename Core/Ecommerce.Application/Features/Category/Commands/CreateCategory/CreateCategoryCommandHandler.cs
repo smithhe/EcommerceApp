@@ -11,6 +11,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Domain.Constants;
+using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
 {
@@ -100,7 +101,7 @@ namespace Ecommerce.Application.Features.Category.Commands.CreateCategory
             Domain.Entities.Category categoryToCreate =
                 this._mapper.Map<Domain.Entities.Category>(command.CategoryToCreate);
             categoryToCreate.CreatedBy = command.UserName;
-            categoryToCreate.CreatedDate = DateTime.Now;
+            categoryToCreate.CreatedDate = DateTime.UtcNow.ToEst();
 
             //Attempt to create the category
             int newId = await this._categoryAsyncRepository.AddAsync(categoryToCreate);
