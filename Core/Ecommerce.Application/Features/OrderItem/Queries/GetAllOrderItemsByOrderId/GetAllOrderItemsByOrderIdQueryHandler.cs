@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
 {
@@ -43,24 +44,29 @@ namespace Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrd
 		/// <returns>
 		/// A <see cref="GetAllOrderItemsByOrderIdResponse"/> with Success being <c>true</c> if any <see cref="OrderItem"/> entities were found;
 		/// Success will be <c>false</c> if no <see cref="OrderItem"/> entities were found.
-		/// Message will contain the error to display if Success is <c>false</c>.
-		/// OrderItems will contain all <see cref="OrderItem"/> entities or will be empty if none are found
+		/// Message will contain an error message if Success is <c>false</c>.
+		/// OrderItems will contain all <see cref="OrderItem"/> entities or will be empty if none are found.
 		/// </returns>
 		public async Task<GetAllOrderItemsByOrderIdResponse> Handle(GetAllOrderItemsByOrderIdQuery query, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to get all existing order item entities");
 			
-			GetAllOrderItemsByOrderIdResponse response = new GetAllOrderItemsByOrderIdResponse { Success = true, Message = "Successfully Got all OrderItems" };
+			//Create the response object
+			GetAllOrderItemsByOrderIdResponse response = new GetAllOrderItemsByOrderIdResponse { Success = true, Message = string.Empty };
 
+			//Get all order items by order id
 			IEnumerable<Domain.Entities.OrderItem> orderItems = await this._orderItemAsyncRepository.ListAllAsync(query.OrderId);
 			response.OrderItems = this._mapper.Map<IEnumerable<OrderItemDto>>(orderItems);
 
+			//If no order items were found, set the response to false
 			if (orderItems.Any() == false)
 			{
 				response.Success = false;
-				response.Message = "No OrderItems Found";
+				response.Message = OrderItemConstants._getAllOrderItemsByOrderIdErrorMessage;
 			}
 
+			//Return the response
 			return response;
 		}
 	}

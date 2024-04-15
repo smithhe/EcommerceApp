@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
+using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 {
@@ -21,7 +23,7 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 		private readonly ILogger<CreateOrderItemCommandHandler> _logger;
 		private readonly IMapper _mapper;
 		private readonly IOrderItemAsyncRepository _orderItemAsyncRepository;
-		private readonly IOrderAsyncRepository _orderAsyncRepository;
+		private readonly IMediator _mediator;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="CreateOrderItemCommandHandler"/> class.
@@ -29,14 +31,14 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mapper">The <see cref="IMapper"/> instance used for mapping objects.</param>
 		/// <param name="orderItemAsyncRepository">The <see cref="IOrderItemAsyncRepository"/> instance used for data access for <see cref="OrderItem"/> entities.</param>
-		/// <param name="orderAsyncRepository">The <see cref="IOrderAsyncRepository"/> instance used for data access for <see cref="Order"/> entities.</param>
+		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
 		public CreateOrderItemCommandHandler(ILogger<CreateOrderItemCommandHandler> logger, IMapper mapper, IOrderItemAsyncRepository orderItemAsyncRepository,
-			IOrderAsyncRepository orderAsyncRepository)
+			IMediator mediator)
 		{
 			this._logger = logger;
 			this._mapper = mapper;
 			this._orderItemAsyncRepository = orderItemAsyncRepository;
-			this._orderAsyncRepository = orderAsyncRepository;
+			this._mediator = mediator;
 		}
 		
 		/// <summary>
@@ -47,27 +49,29 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 		/// <returns>
 		/// A <see cref="CreateOrderItemResponse"/> with Success being <c>true</c> if the <see cref="Order"/> was created;
 		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="Order"/>.
-		/// Message will contain the error to display if Success is <c>false</c>;
-		/// Validation Errors will be populated with errors to present if validation fails
-		/// OrderItem will contain the new <see cref="OrderItemDto"/> if creation was successful
+		/// Message will contain an error message if Success is <c>false</c>.
+		/// Validation Errors will be populated with errors to present if validation fails.
+		/// OrderItem will contain the new <see cref="OrderItemDto"/> if creation was successful.
 		/// </returns>
 		public async Task<CreateOrderItemResponse> Handle(CreateOrderItemCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to create a new order item");
 
-			CreateOrderItemResponse response = new CreateOrderItemResponse { Success = true, Message = "OrderItem Successfully Created" };
+			//Create the response object
+			CreateOrderItemResponse response = new CreateOrderItemResponse { Success = true, Message = string.Empty };
 			
 			//Check if username is null or empty
 			if (string.IsNullOrEmpty(command.UserName))
 			{
 				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a UserName to create";
+				response.Message = OrderItemConstants._createUserNameErrorMessage;
 				return response;
 			}
 			
 			//Validate the dto that was passed in the command
-			CreateOrderItemValidator validator = new CreateOrderItemValidator(this._orderAsyncRepository);
+			CreateOrderItemValidator validator = new CreateOrderItemValidator(this._mediator);
 			ValidationResult validationResult = await validator.ValidateAsync(command, cancellationToken);
 
 			//Check for validation errors
@@ -76,7 +80,7 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 				this._logger.LogWarning("Command failed validation, returning validation errors");
 				
 				response.Success = false;
-				response.Message = "Command was invalid";
+				response.Message = OrderItemConstants._genericValidationErrorMessage;
 				foreach (ValidationFailure validationResultError in validationResult.Errors)
 				{
 					response.ValidationErrors.Add(validationResultError.ErrorMessage);
@@ -88,22 +92,25 @@ namespace Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
 			//Valid Command
 			Domain.Entities.OrderItem orderItemToCreate = this._mapper.Map<Domain.Entities.OrderItem>(command.OrderItemToCreate);
 			orderItemToCreate.CreatedBy = command.UserName;
-			orderItemToCreate.CreatedDate = DateTime.Now;
+			orderItemToCreate.CreatedDate = DateTime.UtcNow.ToEst();
 			
+			//Add the new OrderItem to the database
 			int newId = await this._orderItemAsyncRepository.AddAsync(orderItemToCreate);
 
-			//Sql operation failed
+			//Sql operation failed, return failed response
 			if (newId == -1)
 			{
+				this._logger.LogWarning("Sql operation failed to create OrderItem, returning failed response");
 				response.Success = false;
-				response.Message = "Failed to add new Order Item";
-			}
-			else
-			{
-				Domain.Entities.OrderItem? order = await this._orderItemAsyncRepository.GetByIdAsync(newId);
-				response.OrderItem = this._mapper.Map<OrderItemDto?>(order);
+				response.Message = OrderItemConstants._createSqlErrorMessage;
+				return response;
 			}
 			
+			//Get the new OrderItem from the database
+			Domain.Entities.OrderItem? order = await this._orderItemAsyncRepository.GetByIdAsync(newId);
+			response.OrderItem = this._mapper.Map<OrderItemDto?>(order);
+			
+			//Return the response
 			return response;
 		}
 	}

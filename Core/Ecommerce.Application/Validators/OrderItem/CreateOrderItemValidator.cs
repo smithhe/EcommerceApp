@@ -1,18 +1,19 @@
 using Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem;
-using Ecommerce.Persistence.Contracts;
 using FluentValidation;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.Order.Queries.GetOrderById;
+using MediatR;
 
 namespace Ecommerce.Application.Validators.OrderItem
 {
 	public class CreateOrderItemValidator : AbstractValidator<CreateOrderItemCommand>
 	{
-		private readonly IOrderAsyncRepository _orderAsyncRepository;
+		private readonly IMediator _mediator;
 
-		public CreateOrderItemValidator(IOrderAsyncRepository orderAsyncRepository)
+		public CreateOrderItemValidator(IMediator mediator)
 		{
-			this._orderAsyncRepository = orderAsyncRepository;
+			this._mediator = mediator;
 
 			RuleFor(c => c.OrderItemToCreate.Quantity)
 				.GreaterThan(0).WithMessage("Quantity must be greater than 0");
@@ -26,7 +27,7 @@ namespace Ecommerce.Application.Validators.OrderItem
 		
 		private async Task<bool> OrderExists(CreateOrderItemCommand command, CancellationToken cancellationToken)
 		{
-			return (await this._orderAsyncRepository.GetByIdAsync(command.OrderItemToCreate.OrderId)) != null;
+			return (await this._mediator.Send(new GetOrderByIdQuery { Id = command.OrderItemToCreate.OrderId }, cancellationToken)).Order != null;
 		}
 	}
 }
