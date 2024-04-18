@@ -6,6 +6,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.Product.Commands.DeleteProduct
 {
@@ -40,32 +41,36 @@ namespace Ecommerce.Application.Features.Product.Commands.DeleteProduct
 		/// <returns>
 		/// A <see cref="DeleteProductResponse"/> with Success being <c>true</c> if the <see cref="Product"/> was deleted;
 		/// Success will be <c>false</c> if no <see cref="Product"/> is found or validation of the command fails.
-		/// Message will contain the error to display if Success is <c>false</c>.
+		/// Message will contain the message to display to the user.
 		/// </returns>
 		public async Task<DeleteProductResponse> Handle(DeleteProductCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to delete a product");
 			
-			DeleteProductResponse response = new DeleteProductResponse { Success = true, Message = "Product deleted successfully" };
+			//Create the response
+			DeleteProductResponse response = new DeleteProductResponse { Success = true, Message = ProductConstants._deleteSuccessMessage };
 			
 			//Check if the dto is null
 			if (command.ProductToDelete == null)
 			{
 				this._logger.LogWarning("Dto was null in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a Product to delete";
+				response.Message = ProductConstants._deleteErrorMessage;
 				return response;
 			}
 			
 			//Attempt the delete
 			bool success = await this._productAsyncRepository.DeleteAsync(this._mapper.Map<Domain.Entities.Product>(command.ProductToDelete));
 			
+			//Check if the delete was successful
 			if (success == false)
 			{
 				response.Success = false;
-				response.Message = "Product failed to delete or doesn't exist";
+				response.Message = ProductConstants._deleteErrorMessage;
 			}
 
+			//Return the response
 			return response;
 		}
 	}

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
 {
@@ -43,24 +44,31 @@ namespace Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
 		/// <returns>
 		/// A <see cref="GetAllProductsByCategoryIdResponse"/> with Success being <c>true</c> if any <see cref="Product"/> entities were found;
 		/// Success will be <c>false</c> if no <see cref="Product"/> entities were found.
-		/// Message will contain the error to display if Success is <c>false</c>.
+		/// Message will contain the message to display to the user.
 		/// Products will contain all <see cref="Product"/> entities or will be empty if none are found
 		/// </returns>
 		public async Task<GetAllProductsByCategoryIdResponse> Handle(GetAllProductsByCategoryIdQuery query, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to get all existing product entities for a category");
 			
-			GetAllProductsByCategoryIdResponse response = new GetAllProductsByCategoryIdResponse { Success = true, Message = "Successfully Got all Products" };
+			//Create the response object
+			GetAllProductsByCategoryIdResponse response = new GetAllProductsByCategoryIdResponse { Success = true, Message = ProductConstants._getAllProductsByCategorySuccessMessage };
 
+			//Get all products for the category
 			IEnumerable<Domain.Entities.Product> products = await this._productAsyncRepository.ListAllAsync(query.CategoryId);
 			response.Products = this._mapper.Map<IEnumerable<ProductDto>>(products);
 			
+			//Check if any products were found
 			if (products.Any() == false)
 			{
+				this._logger.LogWarning("Failed to find any products for the category");
+				
 				response.Success = false;
-				response.Message = "No Products Found";
+				response.Message = ProductConstants._getAllProductsByCategoryErrorMessage;
 			}
 
+			//Return the response
 			return response;
 		}
 	}

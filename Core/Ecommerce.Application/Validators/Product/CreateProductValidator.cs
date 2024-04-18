@@ -3,23 +3,25 @@ using Ecommerce.Persistence.Contracts;
 using FluentValidation;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.Category.Queries.GetCategoryById;
+using MediatR;
 
 namespace Ecommerce.Application.Validators.Product
 {
 	public class CreateProductValidator : AbstractValidator<CreateProductCommand>
 	{
 		private readonly IProductAsyncRepository _productAsyncRepository;
-		private readonly ICategoryAsyncRepository _categoryAsyncRepository;
+		private readonly IMediator _mediator;
 
-		public CreateProductValidator(IProductAsyncRepository productAsyncRepository, ICategoryAsyncRepository categoryAsyncRepository)
+		public CreateProductValidator(IProductAsyncRepository productAsyncRepository, IMediator mediator)
 		{
 			this._productAsyncRepository = productAsyncRepository;
-			this._categoryAsyncRepository = categoryAsyncRepository;
+			this._mediator = mediator;
 			
 			RuleFor(c => c.ProductToCreate!.Name)
 				.NotNull().WithMessage("Name cannot not be null")
 				.NotEmpty().WithMessage("Name cannot not be empty")
-				.MaximumLength(50).WithMessage("Name cannot exceed 50 characters");
+				.MaximumLength(100).WithMessage("Name cannot exceed 100 characters");
 			
 			RuleFor(c => c)
 				.MustAsync(NameIsUnique).WithMessage("Name must be unique");
@@ -35,11 +37,8 @@ namespace Ecommerce.Application.Validators.Product
 			RuleFor(c => c.ProductToCreate!.QuantityAvailable)
 				.GreaterThanOrEqualTo(0).WithMessage("Quantity Available cannot be less than 0");
 			
-			RuleFor(c => c.ProductToCreate!.AverageRating)
-				.GreaterThanOrEqualTo(0).WithMessage("Average Rating cannot be less than 0");
-			
 			RuleFor(c => c)
-				.MustAsync(CategoryExists).WithMessage("Average Rating cannot be less than 0");
+				.MustAsync(CategoryExists).WithMessage("Category must exist");
 		}
 		
 		private async Task<bool> NameIsUnique(CreateProductCommand createProductCommand, CancellationToken cancellationToken)
@@ -49,7 +48,7 @@ namespace Ecommerce.Application.Validators.Product
 		
 		private async Task<bool> CategoryExists(CreateProductCommand createProductCommand, CancellationToken cancellationToken)
 		{
-			return (await this._categoryAsyncRepository.GetByIdAsync(createProductCommand.ProductToCreate!.CategoryId)) == null;
+			return (await this._mediator.Send(new GetCategoryByIdQuery { Id = createProductCommand.ProductToCreate!.CategoryId }, cancellationToken)).Category != null;
 		}
 	}
 }

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.Product.Queries.GetProductById
 {
@@ -47,28 +48,45 @@ namespace Ecommerce.Application.Features.Product.Queries.GetProductById
 		/// <returns>
 		/// A <see cref="GetProductByIdResponse"/> with Success being <c>true</c> if the <see cref="Product"/> was found;
 		/// Success will be <c>false</c> if no <see cref="Product"/> with the specified ID is found.
-		/// Message will contain the error to display if Success is <c>false</c>
+		/// Message will contain the message to display to the user.
 		/// </returns>
 		public async Task<GetProductByIdResponse> Handle(GetProductByIdQuery query, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to get an existing product by Id");
 			
-			GetProductByIdResponse response = new GetProductByIdResponse { Success = true, Message = "Successfully Got Product" };
+			//Create the response object
+			GetProductByIdResponse response = new GetProductByIdResponse { Success = true, Message = ProductConstants._getProductByIdSuccessMessage };
 
+			//Attempt to get the product
 			Domain.Entities.Product? product = await this._productAsyncRepository.GetByIdAsync(query.Id);
 			response.Product = this._mapper.Map<ProductDto?>(product);
 			
+			//Check if the product was found
 			if (response.Product == null)
 			{
 				response.Success = false;
-				response.Message = "Product was not found";
+				response.Message = ProductConstants._getProductByIdErrorMessage;
 				return response;
 			}
 
+			//Get the reviews for the product
 			GetReviewsForProductResponse reviewsResponse = await this._mediator.Send(new GetReviewsForProductQuery { ProductId = response.Product.Id }, cancellationToken);
 
-			response.Product.CustomerReviews = response.Success ? reviewsResponse.Reviews : Array.Empty<ReviewDto>();
+			//Check if the reviews were found
+			if (reviewsResponse.Success == false)
+			{
+				this._logger.LogError("Failed to get reviews for product, returning empty reviews array in response");
+				
+				response.Message = ProductConstants._getProductByIdReviewsNotFoundErrorMessage;
+				response.Product.CustomerReviews = Array.Empty<ReviewDto>();
+			}
+			else
+			{
+				response.Product.CustomerReviews = reviewsResponse.Reviews;
+			}
 			
+			//Return the response
 			return response;
 		}
 	}

@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.Product.Commands.UpdateProduct
@@ -21,7 +22,7 @@ namespace Ecommerce.Application.Features.Product.Commands.UpdateProduct
 		private readonly ILogger<UpdateProductCommandHandler> _logger;
 		private readonly IMapper _mapper;
 		private readonly IProductAsyncRepository _productAsyncRepository;
-		private readonly ICategoryAsyncRepository _categoryAsyncRepository;
+		private readonly IMediator _mediator;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="UpdateProductCommandHandler"/> class.
@@ -29,14 +30,14 @@ namespace Ecommerce.Application.Features.Product.Commands.UpdateProduct
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mapper">The <see cref="IMapper"/> instance used for mapping objects.</param>
 		/// <param name="productAsyncRepository">The <see cref="IProductAsyncRepository"/> instance used for data access for <see cref="Product"/> entities.</param>
-		/// <param name="categoryAsyncRepository">The <see cref="ICategoryAsyncRepository"/> instance used for data access for <see cref="Category"/> entities.</param>
+		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
 		public UpdateProductCommandHandler(ILogger<UpdateProductCommandHandler> logger, IMapper mapper,
-			IProductAsyncRepository productAsyncRepository, ICategoryAsyncRepository categoryAsyncRepository)
+			IProductAsyncRepository productAsyncRepository, IMediator mediator)
 		{
 			this._logger = logger;
 			this._mapper = mapper;
 			this._productAsyncRepository = productAsyncRepository;
-			this._categoryAsyncRepository = categoryAsyncRepository;
+			this._mediator = mediator;
 		}
 		
 		/// <summary>
@@ -47,21 +48,23 @@ namespace Ecommerce.Application.Features.Product.Commands.UpdateProduct
 		/// <returns>
 		/// A <see cref="UpdateProductResponse"/> with Success being <c>true</c> if the <see cref="Product"/> was updated;
 		/// Success will be <c>false</c> if no <see cref="Product"/> is found or validation of the command fails.
-		/// Message will contain the error to display if Success is <c>false</c>;
+		/// Message will contain the message to display to the user.
 		/// Validation Errors will be populated with errors to present if validation fails
 		/// </returns>
 		public async Task<UpdateProductResponse> Handle(UpdateProductCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to update an existing product");
 			
-			UpdateProductResponse response = new UpdateProductResponse { Success = true, Message = "Product Updated Successfully" };
+			//Create the response object
+			UpdateProductResponse response = new UpdateProductResponse { Success = true, Message = ProductConstants._updateSuccessMessage };
 			
 			//Check if the dto is null
 			if (command.ProductToUpdate == null)
 			{
 				this._logger.LogWarning("Dto was null in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a Product to update";
+				response.Message = ProductConstants._updateErrorMessage;
 				return response;
 			}
 			
@@ -70,12 +73,12 @@ namespace Ecommerce.Application.Features.Product.Commands.UpdateProduct
 			{
 				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a UserName to update";
+				response.Message = ProductConstants._updateErrorMessage;
 				return response;
 			}
 			
 			//Validate the dto that was passed in the command
-			UpdateProductValidator validator = new UpdateProductValidator(this._productAsyncRepository, this._categoryAsyncRepository);
+			UpdateProductValidator validator = new UpdateProductValidator(this._productAsyncRepository, this._mediator);
 			ValidationResult? validationResult = await validator.ValidateAsync(command, cancellationToken);
 			
 			//Check for validation errors
@@ -84,7 +87,7 @@ namespace Ecommerce.Application.Features.Product.Commands.UpdateProduct
 				this._logger.LogWarning("Command failed validation, returning validation errors");
 				
 				response.Success = false;
-				response.Message = "Command was invalid";
+				response.Message = ProductConstants._genericValidationErrorMessage;
 				foreach (ValidationFailure validationResultError in validationResult.Errors)
 				{
 					response.ValidationErrors.Add(validationResultError.ErrorMessage);
@@ -98,14 +101,19 @@ namespace Ecommerce.Application.Features.Product.Commands.UpdateProduct
 			productToUpdate.LastModifiedBy = command.UserName;
 			productToUpdate.LastModifiedDate = DateTime.UtcNow.ToEst();
 			
+			//Attempt the update
 			bool success = await this._productAsyncRepository.UpdateAsync(productToUpdate);
 			
+			//Check if the update was successful
 			if (success == false)
 			{
+				this._logger.LogError("Sql operation failed, returning failed response");
+				
 				response.Success = false;
-				response.Message = "Failed to update the Product";
+				response.Message = ProductConstants._updateErrorMessage;
 			}
 			
+			//Return the response
 			return response;
 		}
 	}
