@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.Order.Commands.UpdateOrder
@@ -43,21 +44,23 @@ namespace Ecommerce.Application.Features.Order.Commands.UpdateOrder
 		/// <returns>
 		/// A <see cref="UpdateOrderResponse"/> with Success being <c>true</c> if the <see cref="Order"/> was updated;
 		/// Success will be <c>false</c> if no <see cref="Order"/> is found or validation of the command fails.
-		/// Message will contain the error to display if Success is <c>false</c>;
-		/// Validation Errors will be populated with errors to present if validation fails
+		/// Message will contain the message to display to the user.
+		/// Validation Errors will be populated with errors to present if validation fails.
 		/// </returns>
 		public async Task<UpdateOrderResponse> Handle(UpdateOrderCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to update an existing order");
 
-			UpdateOrderResponse response = new UpdateOrderResponse { Success = true, Message = "Order Updated Successfully" };
+			//Create a new response
+			UpdateOrderResponse response = new UpdateOrderResponse { Success = true, Message = OrderConstants._updateSuccessMessage };
 			
 			//Check if the dto is null
 			if (command.OrderToUpdate == null)
 			{
 				this._logger.LogWarning("Dto was null in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a Order to update";
+				response.Message = OrderConstants._updateErrorMessage;
 				return response;
 			}
 			
@@ -66,7 +69,7 @@ namespace Ecommerce.Application.Features.Order.Commands.UpdateOrder
 			{
 				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a UserName to update";
+				response.Message = OrderConstants._updateErrorMessage;
 				return response;
 			}
 			
@@ -80,7 +83,7 @@ namespace Ecommerce.Application.Features.Order.Commands.UpdateOrder
 				this._logger.LogWarning("Command failed validation, returning validation errors");
 				
 				response.Success = false;
-				response.Message = "Command was invalid";
+				response.Message = OrderConstants._genericValidationErrorMessage;
 				foreach (ValidationFailure validationResultError in validationResult.Errors)
 				{
 					response.ValidationErrors.Add(validationResultError.ErrorMessage);
@@ -94,14 +97,17 @@ namespace Ecommerce.Application.Features.Order.Commands.UpdateOrder
 			orderToUpdate.LastModifiedBy = command.UserName;
 			orderToUpdate.LastModifiedDate = DateTime.UtcNow.ToEst();
 			
+			//Update the order
 			bool success = await this._orderAsyncRepository.UpdateAsync(orderToUpdate);
 			
+			//Check if the order was updated
 			if (success == false)
 			{
 				response.Success = false;
-				response.Message = "Failed to update the Order";
+				response.Message = OrderConstants._updateErrorMessage;
 			}
 
+			//Return the response
 			return response;
 		}
 	}

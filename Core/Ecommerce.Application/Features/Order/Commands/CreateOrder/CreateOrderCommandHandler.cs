@@ -16,6 +16,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Product.Queries.GetProductById;
+using Ecommerce.Domain.Constants;
 using Ecommerce.Shared.Enums;
 using Ecommerce.Shared.Extensions;
 using Ecommerce.Shared.Responses.Product;
@@ -56,22 +57,28 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 		/// <returns>
 		/// A <see cref="CreateOrderResponse"/> with Success being <c>true</c> if the <see cref="Order"/> was created;
 		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="Order"/>.
-		/// Message will contain the error to display if Success is <c>false</c>;
-		/// Validation Errors will be populated with errors to present if validation fails
-		/// Order will contain the new <see cref="OrderDto"/> if creation was successful
+		/// Message will contain the message to display to the user.
+		/// Validation Errors will be populated with errors to present if validation fails.
+		/// Order will contain the new <see cref="OrderDto"/> if creation was successful.
 		/// </returns>
 		public async Task<CreateOrderResponse> Handle(CreateOrderCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to create a new order");
 
-			CreateOrderResponse response = new CreateOrderResponse { Success = true, Message = "Order Successfully Created" };
+			//Create the response object
+			CreateOrderResponse response = new CreateOrderResponse { Success = true, Message = OrderConstants._createSuccessMessage };
+			
+			//-----------------------------------------------------------------------------------------------
+			// Validating the command
+			//-----------------------------------------------------------------------------------------------
 			
 			//Check if the CartItems is null or empty
 			if (command.CartItems == null || command.CartItems.Any() == false)
 			{
 				this._logger.LogWarning("CartItems was null or empty in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a CartItems to create";
+				response.Message = OrderConstants._createErrorMessage;
 				return response;
 			}
 			
@@ -80,7 +87,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			{
 				this._logger.LogWarning("UserName was null or empty in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a UserName to create";
+				response.Message = OrderConstants._createErrorMessage;
 				return response;
 			}
 			
@@ -89,7 +96,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			{
 				this._logger.LogWarning("UserId was null or empty in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a UserId to create";
+				response.Message = OrderConstants._createErrorMessage;
 				return response;
 			}
 			
@@ -109,7 +116,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 				{
 					//Return a failed response due to error getting product price
 					response.Success = false;
-					response.Message = "Failed to get product during order create";
+					response.Message = OrderConstants._createErrorMessage;
 					return response;
 				}
 				
@@ -144,7 +151,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 				this._logger.LogWarning("Command failed validation, returning validation errors");
 				
 				response.Success = false;
-				response.Message = "Command was invalid";
+				response.Message = OrderConstants._genericValidationErrorMessage;
 				foreach (ValidationFailure validationResultError in validationResult.Errors)
 				{
 					response.ValidationErrors.Add(validationResultError.ErrorMessage);
@@ -152,6 +159,10 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 
 				return response;
 			}
+			
+			//-----------------------------------------------------------------------------------------------
+			// Creating the order
+			//-----------------------------------------------------------------------------------------------
 			
 			//Order is valid, map the dto to the entity
 			Domain.Entities.Order orderToCreate = this._mapper.Map<Domain.Entities.Order>(newOrder);
@@ -165,10 +176,11 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			if (newId == -1)
 			{
 				response.Success = false;
-				response.Message = "Failed to add new Order";
+				response.Message = OrderConstants._createErrorMessage;
 				return response;
 			}
 			
+			//Get the order that was created
 			Domain.Entities.Order? order = await this._orderAsyncRepository.GetByIdAsync(newId);
 			
 			//Verify the order was created
@@ -179,7 +191,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 				
 				//Return a failed response
 				response.Success = false;
-				response.Message = "Failed to create Order";
+				response.Message = OrderConstants._createErrorMessage;
 				return response;
 			}
 			
@@ -187,6 +199,10 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			response.Order = this._mapper.Map<OrderDto?>(order);
 			response.Order!.OrderItems = newOrder.OrderItems;
 
+			//-----------------------------------------------------------------------------------------------
+			// Creating the order items
+			//-----------------------------------------------------------------------------------------------
+			
 			//Create all the order items for the order
 			foreach (OrderItemDto orderItem in newOrder.OrderItems)
 			{
@@ -200,8 +216,10 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 
 				if (orderItemResponse.Success == false)
 				{
+					this._logger.LogError("Order Item failed to create, rolling back order creation");
 					response.Success = false;
-					response.Message = "Failed to create order items";
+					response.Message = OrderConstants._createErrorMessage;
+					response.Order = null;
 					
 					//Delete the order since the items failed to create
 					await this._orderAsyncRepository.DeleteAsync(order);
@@ -220,7 +238,7 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 
 		private async Task<ProductDto?> GetProduct(int productId)
 		{
-			GetProductByIdResponse response = await this._mediator.Send(new GetProductByIdQuery() { Id = productId });
+			GetProductByIdResponse response = await this._mediator.Send(new GetProductByIdQuery { Id = productId });
 			
 			return response.Product;
 		}

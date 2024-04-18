@@ -1,6 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
+using Ecommerce.Domain.Constants;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Responses.Order;
 using MediatR;
@@ -38,19 +39,24 @@ namespace Ecommerce.Application.Features.Order.Commands.DeleteOrder
         /// <returns>
         /// A <see cref="DeleteOrderResponse"/> with Success being <c>true</c> if the <see cref="Order"/> was deleted;
         /// Success will be <c>false</c> if no <see cref="Order"/> is found or validation of the command fails.
-        /// Message will contain the error to display if Success is <c>false</c>.
+        /// Message will contain the message to display to the user.
         /// </returns>
         public async Task<DeleteOrderResponse> Handle(DeleteOrderCommand command, CancellationToken cancellationToken)
         {
             //Log the request
             this._logger.LogInformation("Handling request to delete an order");
 
+            //Create the response object
+            DeleteOrderResponse response = new DeleteOrderResponse { Success = true, Message = OrderConstants._deleteSuccessMessage };
+            
             //Check if the order dto is null
             if (command.Order == null)
             {
                 //Log the error and return a failed response
                 this._logger.LogWarning("Order was null in command, returning failed response");
-                return new DeleteOrderResponse { Success = false, Message = "Must provide an Order to delete" };
+                response.Success = false;
+                response.Message = OrderConstants._deleteErrorMessage;
+                return response;
             }
             
             //Delete the order from the database
@@ -61,11 +67,13 @@ namespace Ecommerce.Application.Features.Order.Commands.DeleteOrder
             {
                 //Log the error and return a failed response
                 this._logger.LogError("Failed to delete the order from the database");
-                return new DeleteOrderResponse { Success = false, Message = "Failed to delete the order" };
+                response.Success = false;
+                response.Message = OrderConstants._deleteErrorMessage;
+                return response;
             }
             
             //Return the successful response
-            return new DeleteOrderResponse { Success = true, Message = "Order deleted successfully" };
+            return response;
         }
     }
 }

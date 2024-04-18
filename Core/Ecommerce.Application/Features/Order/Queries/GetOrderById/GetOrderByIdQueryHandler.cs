@@ -9,6 +9,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.Order.Queries.GetOrderById
 {
@@ -43,37 +44,43 @@ namespace Ecommerce.Application.Features.Order.Queries.GetOrderById
 		/// <returns>
 		/// A <see cref="GetOrderByIdResponse"/> with Success being <c>true</c> if the <see cref="Order"/> was found;
 		/// Success will be <c>false</c> if no <see cref="Order"/> with the specified ID is found.
-		/// Message will contain the error to display if Success is <c>false</c>
+		/// Message will contain the message to display to the user.
 		/// </returns>
 		public async Task<GetOrderByIdResponse> Handle(GetOrderByIdQuery query, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to get an existing Order by Id");
 
-			GetOrderByIdResponse response = new GetOrderByIdResponse { Success = true, Message = "Successfully Got Order" };
+			//Create the response object
+			GetOrderByIdResponse response = new GetOrderByIdResponse { Success = true, Message = OrderConstants._getOrderByIdSuccessMessage };
 
+			//Get the order by the ID
 			Domain.Entities.Order? order = await this._orderAsyncRepository.GetByIdAsync(query.Id);
 
 			//Check if the order was found or not
 			if (order == null)
 			{
 				response.Success = false;
-				response.Message = "Order does not exist";
+				response.Message = OrderConstants._getOrderByIdErrorMessage;
 				return response;
 			}
 			
+			//Get all order items by order ID
 			GetAllOrderItemsByOrderIdResponse orderItemsResponse = await this._mediator.Send(new GetAllOrderItemsByOrderIdQuery { OrderId = query.Id }, cancellationToken);
 
 			//Check if the order items were retrieved successfully
-			if (response.Success == false)
+			if (orderItemsResponse.Success == false)
 			{
 				response.Success = false;
-				response.Message = "Failed to get order items";
+				response.Message = OrderConstants._getOrderByIdErrorMessage;
 				return response;
 			}
 			
+			//Map the order and order items to the response
 			response.Order = this._mapper.Map<OrderDto>(order);
 			response.Order.OrderItems = orderItemsResponse.OrderItems;
 			
+			//Return the response
 			return response;
 		}
 	}

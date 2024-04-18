@@ -2,6 +2,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Order.Commands.UpdateOrder;
 using Ecommerce.Application.Features.Order.Queries.GetOrderById;
+using Ecommerce.Domain.Constants;
 using Ecommerce.Shared.Enums;
 using Ecommerce.Shared.Responses.Order;
 using MediatR;
@@ -38,7 +39,7 @@ namespace Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCh
         /// <returns>
         /// Returns a <see cref="GetOrderAfterSuccessfulCheckoutResponse"/> with Success being <c>true</c> if the Order was found and the status was updated to processing;
         /// Success will be false if the Order was not found or the status was not updated to processing;
-        /// Message will contain the error to display if Success is <c>false</c>
+        /// Message will contain the message to display to the user.
         /// </returns>
         public async Task<GetOrderAfterSuccessfulCheckoutResponse> Handle(GetOrderAfterSuccessfulCheckoutQuery query,
             CancellationToken cancellationToken)
@@ -49,21 +50,19 @@ namespace Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCh
             //Create a new response
             GetOrderAfterSuccessfulCheckoutResponse response = new GetOrderAfterSuccessfulCheckoutResponse
             {
-                Success = false,
-                Message = "Error Processing Order"
+                Success = true,
+                Message = OrderConstants._getOrderAfterSuccessfulCheckoutSuccessMessage
             };
 
             //Lookup the Order
-            GetOrderByIdResponse getOrderByIdResponse =
-                await this._mediator.Send(new GetOrderByIdQuery { Id = query.Id }, cancellationToken);
+            GetOrderByIdResponse getOrderByIdResponse = await this._mediator.Send(new GetOrderByIdQuery { Id = query.Id }, cancellationToken);
 
             //Check if we have an order
             if (getOrderByIdResponse.Success == false || getOrderByIdResponse.Order == null)
             {
                 //Log the error and return false
                 this._logger.LogError("Failed to get the Order by Id");
-                return new GetOrderAfterSuccessfulCheckoutResponse
-                    { Success = false, Message = "Failed to get the Order by Id" };
+                return new GetOrderAfterSuccessfulCheckoutResponse { Success = false, Message = OrderConstants._getOrderAfterSuccessfulCheckoutErrorMessage };
             }
 
             //Check if the order was already processed
@@ -71,8 +70,7 @@ namespace Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCh
             {
                 //Log the error and return false
                 this._logger.LogError("The Order has already been processed");
-                return new GetOrderAfterSuccessfulCheckoutResponse
-                    { Success = false, Message = "The Order has already been processed" };
+                return new GetOrderAfterSuccessfulCheckoutResponse { Success = false, Message = OrderConstants._getOrderAfterSuccessfulCheckoutErrorMessage };
             }
 
             //Update the order status to processing
@@ -91,12 +89,10 @@ namespace Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCh
             {
                 //Log the error and return false
                 this._logger.LogError("Failed to update the Order status to Processing");
-                return new GetOrderAfterSuccessfulCheckoutResponse { Success = false, Message = "Error Loading Order" };
+                return new GetOrderAfterSuccessfulCheckoutResponse { Success = false, Message = OrderConstants._getOrderAfterSuccessfulCheckoutErrorMessage };
             }
 
-            //Return success
-            response.Success = true;
-            response.Message = "Order processed successfully";
+            //Return the response
             return response;
         }
     }

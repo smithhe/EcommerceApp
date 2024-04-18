@@ -1,3 +1,4 @@
+using System;
 using AutoMapper;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
@@ -9,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 using Ecommerce.Shared.Enums;
 
 namespace Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId
@@ -44,15 +46,26 @@ namespace Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId
 		/// <returns>
 		/// A <see cref="GetAllOrdersByUserIdResponse"/> with Success being <c>true</c> if any <see cref="Order"/> entities were found;
 		/// Success will be <c>false</c> if no <see cref="Order"/> entities were found.
-		/// Message will contain the error to display if Success is <c>false</c>
-		/// Orders will contain all <see cref="Order"/> entities or will be empty if none are found
+		/// Message will contain the message to display to the user.
+		/// Orders will contain all <see cref="Order"/> entities or will be empty if none are found.
 		/// </returns>
 		public async Task<GetAllOrdersByUserIdResponse> Handle(GetAllOrdersByUserIdQuery query, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to get all existing order entities");
 
-			GetAllOrdersByUserIdResponse response = new GetAllOrdersByUserIdResponse { Success = true, Message = "Successfully Got all Orders" };
+			//Create a new response
+			GetAllOrdersByUserIdResponse response = new GetAllOrdersByUserIdResponse { Success = true, Message = OrderConstants._getAllOrdersSuccessMessage };
 
+			//Check if the user id is valid
+			if (query.UserId == Guid.Empty)
+			{
+				response.Success = false;
+				response.Message = OrderConstants._getAllOrdersErrorMessage;
+				return response;
+			}
+			
+			//Get all orders for the user
 			IEnumerable<Domain.Entities.Order> orders = await this._orderAsyncRepository.ListAllAsync(query.UserId);
 			
 			//Filter out orders in a created or pending status
@@ -62,10 +75,11 @@ namespace Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId
 			if (orders.Any() == false)
 			{
 				response.Success = false;
-				response.Message = "No orders found for the User";
+				response.Message = OrderConstants._getAllOrdersErrorMessage;
 				return response;
 			}
 
+			//Map the orders and return the response
 			response.Orders = this._mapper.Map<IEnumerable<OrderDto>>(orders);
 			return response;
 		}
