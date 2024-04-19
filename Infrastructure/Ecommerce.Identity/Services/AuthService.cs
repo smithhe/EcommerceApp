@@ -14,6 +14,7 @@ using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
 
@@ -332,13 +333,18 @@ namespace Ecommerce.Identity.Services
 		/// </returns>
 		public async Task<UpdateEcommerceUserResponse> UpdateUser(EcommerceUser? user, string username)
 		{
-			UpdateEcommerceUserResponse response = new UpdateEcommerceUserResponse();
+			//Create the response object
+			UpdateEcommerceUserResponse response = new UpdateEcommerceUserResponse
+			{
+				Success = true,
+				Message = EcommerceUserConstants._updateUserSuccessMessage
+			};
 			
 			//Verify a user was sent
 			if (user == null)
 			{
 				response.Success = false;
-				response.Message = "Must Give a User to Update With";
+				response.Message = EcommerceUserConstants._updateUserErrorMessage;
 				return response;
 			}
 			
@@ -347,7 +353,7 @@ namespace Ecommerce.Identity.Services
 			if (existingUser == null)
 			{
 				response.Success = false;
-				response.Message = "User Must Exist To Update";
+				response.Message = EcommerceUserConstants._updateUserErrorMessage;
 				return response;
 			}
 			
@@ -356,7 +362,20 @@ namespace Ecommerce.Identity.Services
 			if (userNameUpdate.Succeeded == false)
 			{
 				response.Success = false;
-				response.Message = "Username Update Failed";
+				response.Message = EcommerceUserConstants._updateUserErrorMessage;
+				return response;
+			}
+			
+			//Validate the email address provided
+			try
+			{
+				MailAddress unused = new MailAddress(user.Email ?? string.Empty);
+			}
+			catch (FormatException)
+			{
+				response.Success = false;
+				response.Message = EcommerceUserConstants._genericValidationErrorMessage;
+				response.ValidationErrors = new List<string> { "Invalid Email Address" };
 				return response;
 			}
 			
@@ -369,6 +388,7 @@ namespace Ecommerce.Identity.Services
 			{
 				//Add errors into the list then return the response
 				response.Success = false;
+				response.Message = EcommerceUserConstants._genericValidationErrorMessage;
 				response.ValidationErrors = result.Errors.Select(error => error.Description).ToList();
 				return response;
 			}
@@ -380,13 +400,12 @@ namespace Ecommerce.Identity.Services
 			if (string.IsNullOrEmpty(accessToken))
 			{
 				response.Success = false;
-				response.Message = "Token Update Failed";
+				response.Message = EcommerceUserConstants._updateUserErrorMessage;
 				return response;
 			}
 			
 			//Return success with the new token
 			response.UpdatedAccessToken = accessToken;
-			response.Success = true;
 			return response;
 		}
 

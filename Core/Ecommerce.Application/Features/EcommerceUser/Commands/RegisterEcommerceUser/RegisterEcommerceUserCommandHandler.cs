@@ -74,6 +74,8 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerc
             if (id == null)
             {
                 this._logger.LogError("Failed to get the new User's Id, returning response");
+                response.Success = false;
+                response.ConfirmationLink = string.Empty;
                 return response;
             }
             

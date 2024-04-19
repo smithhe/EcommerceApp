@@ -29,7 +29,6 @@ namespace Ecommerce.UnitTests.ApplicationTests
         private const string _userName = "Test User";
 
         private CartItemDto _cartItemDto = null!;
-
         private CartItem _cartItem = null!;
         
         private Mock<ICartItemRepository> _cartItemRepository = null!;

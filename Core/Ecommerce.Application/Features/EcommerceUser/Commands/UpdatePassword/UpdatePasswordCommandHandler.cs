@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Shared.Security.Responses;
 using MediatR;
@@ -13,7 +14,7 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword
     /// </summary>
     public class UpdatePasswordCommandHandler : IRequestHandler<UpdatePasswordCommand, UpdatePasswordResponse>
     {
-        private readonly ILogger<UpdatePasswordCommand> _logger;
+        private readonly ILogger<UpdatePasswordCommandHandler> _logger;
         private readonly IAuthenticationService _authenticationService;
 
         /// <summary>
@@ -21,7 +22,7 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword
         /// </summary>
         /// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
         /// <param name="authenticationService">The <see cref="IAuthenticationService"/> instance used for updating the user.</param>
-        public UpdatePasswordCommandHandler(ILogger<UpdatePasswordCommand> logger, IAuthenticationService authenticationService)
+        public UpdatePasswordCommandHandler(ILogger<UpdatePasswordCommandHandler> logger, IAuthenticationService authenticationService)
         {
             this._logger = logger;
             this._authenticationService = authenticationService;
@@ -43,14 +44,19 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword
             //Log the request
             this._logger.LogInformation("Handling request to update a User's password");
             
-            UpdatePasswordResponse response = new UpdatePasswordResponse();
+            //Create the response object
+            UpdatePasswordResponse response = new UpdatePasswordResponse
+            {
+                Success = true,
+                Message = EcommerceUserConstants._updatePasswordSuccessMessage
+            };
             
             //Check for null or empty properties in the command
             if (string.IsNullOrEmpty(command.UserName) || string.IsNullOrEmpty(command.CurrentPassword) ||
                 string.IsNullOrEmpty(command.NewPassword))
             {
                 response.Success = false;
-                response.Message = "All Fields are required";
+                response.Message = EcommerceUserConstants._updatePasswordErrorMessage;
                 return response;
             }
             
@@ -60,7 +66,7 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword
             if (existingUserId == null)
             {
                 response.Success = false;
-                response.Message = "No User Found to Update";
+                response.Message = EcommerceUserConstants._updatePasswordErrorMessage;
                 return response;
             }
             

@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Shared.Security.Responses;
 
 namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
@@ -34,7 +35,7 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceU
 		/// <returns>
 		/// A <see cref="UpdateEcommerceUserResponse"/> with Success being <c>true</c> if the <see cref="EcommerceUser"/> was updated;
 		/// Success will be <c>false</c> if no <see cref="EcommerceUser"/> is found or validation of the command fails.
-		/// Message will contain the error to display if Success is <c>false</c>;
+		/// Message will contain the message to display to the user.
 		/// Validation Errors will be populated with errors to present if validation fails
 		/// </returns>
 		public async Task<UpdateEcommerceUserResponse> Handle(UpdateEcommerceUserCommand command, CancellationToken cancellationToken)
@@ -42,14 +43,15 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceU
 			//Log the request
 			this._logger.LogInformation("Handling request to update a User's information");
 			
-			UpdateEcommerceUserResponse response = new UpdateEcommerceUserResponse();
+			//Create the response object
+			UpdateEcommerceUserResponse response = new UpdateEcommerceUserResponse { Success = true, Message = EcommerceUserConstants._updateUserSuccessMessage };
 
 			//Check for null or empty properties in the command
 			if (string.IsNullOrEmpty(command.UserName) || string.IsNullOrEmpty(command.Email) ||
 			    string.IsNullOrEmpty(command.FirstName) || string.IsNullOrEmpty(command.LastName))
 			{
 				response.Success = false;
-				response.Message = "All Fields are required";
+				response.Message = EcommerceUserConstants._updateUserErrorMessage;
 				return response;
 			}
 
@@ -58,7 +60,7 @@ namespace Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceU
 			if (existingUser == null)
 			{
 				response.Success = false;
-				response.Message = "No User Found to Update";
+				response.Message = EcommerceUserConstants._updateUserErrorMessage;
 				return response;
 			}
 
