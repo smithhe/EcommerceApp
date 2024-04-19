@@ -1,4 +1,6 @@
 using Ecommerce.Application;
+using Ecommerce.FastEndpoints.Contracts;
+using Ecommerce.FastEndpoints.Services;
 using Ecommerce.Identity;
 using FastEndpoints;
 using Microsoft.Extensions.Configuration;
@@ -11,6 +13,8 @@ namespace Ecommerce.FastEndpoints
 		public static void AddFastEndpointServices(this IServiceCollection services, IConfiguration configuration)
 		{
 			//Add the services for Fast Endpoints
+			services.AddScoped<ITokenService, TokenService>();
+			
 			//https://fast-endpoints.com/
 			services.AddFastEndpoints();
 			

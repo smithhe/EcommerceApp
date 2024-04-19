@@ -20,6 +20,10 @@
       <ProjectReference Include="..\..\Core\Ecommerce.Shared\Ecommerce.Shared.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Endpoints\" />
+    </ItemGroup>
+
 
 
 
