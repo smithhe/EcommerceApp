@@ -6,7 +6,7 @@ using Ecommerce.Application.Features.Order.Queries.GetOrderById;
 using Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem;
 using Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId;
 using Ecommerce.Application.Profiles;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Dtos;

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Entities;
 
 namespace Ecommerce.Application.Features.Category.Queries.GetAllCategories
 {

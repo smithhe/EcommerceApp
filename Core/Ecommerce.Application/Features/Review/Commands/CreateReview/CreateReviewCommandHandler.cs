@@ -12,7 +12,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Product.Queries.GetProductById;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.Review.Commands.CreateReview

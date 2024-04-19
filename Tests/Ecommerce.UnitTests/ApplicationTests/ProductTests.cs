@@ -10,7 +10,7 @@ using Ecommerce.Application.Features.Product.Queries.GetProductById;
 using Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId;
 using Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct;
 using Ecommerce.Application.Profiles;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Dtos;

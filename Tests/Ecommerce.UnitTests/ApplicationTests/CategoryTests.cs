@@ -8,7 +8,7 @@ using Ecommerce.Application.Features.Category.Commands.UpdateCategory;
 using Ecommerce.Application.Features.Category.Queries.GetAllCategories;
 using Ecommerce.Application.Features.Category.Queries.GetCategoryById;
 using Ecommerce.Application.Profiles;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Dtos;

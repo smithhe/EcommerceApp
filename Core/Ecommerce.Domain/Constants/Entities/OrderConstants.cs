@@ -1,4 +1,4 @@
-namespace Ecommerce.Domain.Constants
+namespace Ecommerce.Domain.Constants.Entities
 {
     public static class OrderConstants
     {

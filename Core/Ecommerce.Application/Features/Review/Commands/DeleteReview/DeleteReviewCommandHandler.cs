@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Product.Queries.GetProductById;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Entities;
 
 namespace Ecommerce.Application.Features.Review.Commands.DeleteReview
 {

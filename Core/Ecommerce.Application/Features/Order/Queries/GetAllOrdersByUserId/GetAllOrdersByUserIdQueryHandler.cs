@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Shared.Enums;
 
 namespace Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId

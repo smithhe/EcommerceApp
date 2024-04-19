@@ -10,7 +10,7 @@ using Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem;
 using Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems;
 using Ecommerce.Application.Features.Product.Queries.GetProductById;
 using Ecommerce.Application.Profiles;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Dtos;

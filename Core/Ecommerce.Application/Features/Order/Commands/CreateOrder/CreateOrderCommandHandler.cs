@@ -16,7 +16,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Product.Queries.GetProductById;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Shared.Enums;
 using Ecommerce.Shared.Extensions;
 using Ecommerce.Shared.Responses.Product;

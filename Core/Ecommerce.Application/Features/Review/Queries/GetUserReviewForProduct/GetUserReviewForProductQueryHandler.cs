@@ -7,7 +7,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Entities;
 
 namespace Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
 {

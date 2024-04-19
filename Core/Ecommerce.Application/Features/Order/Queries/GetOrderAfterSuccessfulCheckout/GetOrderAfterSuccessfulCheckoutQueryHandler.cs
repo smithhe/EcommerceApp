@@ -2,7 +2,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Order.Commands.UpdateOrder;
 using Ecommerce.Application.Features.Order.Queries.GetOrderById;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Shared.Enums;
 using Ecommerce.Shared.Responses.Order;
 using MediatR;
