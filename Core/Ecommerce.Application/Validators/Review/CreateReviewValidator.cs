@@ -4,18 +4,20 @@ using Ecommerce.Shared.Dtos;
 using FluentValidation;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.Product.Queries.GetProductById;
+using MediatR;
 
 namespace Ecommerce.Application.Validators.Review
 {
 	public class CreateReviewValidator : AbstractValidator<CreateReviewCommand>
 	{
 		private readonly IReviewAsyncRepository _reviewAsyncRepository;
-		private readonly IProductAsyncRepository _productAsyncRepository;
+		private readonly IMediator _mediator;
 
-		public CreateReviewValidator(IReviewAsyncRepository reviewAsyncRepository, IProductAsyncRepository productAsyncRepository)
+		public CreateReviewValidator(IReviewAsyncRepository reviewAsyncRepository, IMediator mediator)
 		{
 			this._reviewAsyncRepository = reviewAsyncRepository;
-			this._productAsyncRepository = productAsyncRepository;
+			this._mediator = mediator;
 
 			RuleFor(c => c.ReviewToCreate!)
 				.MustAsync(ReviewDoesNotExist).WithMessage("Review already exists for this product");
@@ -32,7 +34,7 @@ namespace Ecommerce.Application.Validators.Review
 				.Must(SafeCommentCheck).WithMessage("Comment must not exceed 500 characters");
 		}
 
-		private bool SafeCommentCheck(string? comment)
+		private static bool SafeCommentCheck(string? comment)
 		{
 			if (string.IsNullOrEmpty(comment))
 			{
@@ -49,7 +51,7 @@ namespace Ecommerce.Application.Validators.Review
 		
 		private async Task<bool> ProductExists(CreateReviewCommand command, CancellationToken cancellationToken)
 		{
-			return (await this._productAsyncRepository.GetByIdAsync(command.ReviewToCreate!.ProductId)) != null;
+			return (await this._mediator.Send(new GetProductByIdQuery { Id = command.ReviewToCreate!.ProductId }, cancellationToken)).Product != null;
 		}
 	}
 }

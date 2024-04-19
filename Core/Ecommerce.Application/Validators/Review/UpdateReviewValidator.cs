@@ -4,21 +4,23 @@ using Ecommerce.Shared.Dtos;
 using FluentValidation;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.Product.Queries.GetProductById;
+using MediatR;
 
 namespace Ecommerce.Application.Validators.Review
 {
 	public class UpdateReviewValidator : AbstractValidator<UpdateReviewCommand>
 	{
 		private readonly IReviewAsyncRepository _reviewAsyncRepository;
-		private readonly IProductAsyncRepository _productAsyncRepository;
+		private readonly IMediator _mediator;
 
-		public UpdateReviewValidator(IReviewAsyncRepository reviewAsyncRepository, IProductAsyncRepository productAsyncRepository)
+		public UpdateReviewValidator(IReviewAsyncRepository reviewAsyncRepository, IMediator mediator)
 		{
 			this._reviewAsyncRepository = reviewAsyncRepository;
-			this._productAsyncRepository = productAsyncRepository;
+			this._mediator = mediator;
 			
 			RuleFor(c => c.ReviewToUpdate!)
-				.MustAsync(ReviewExists).WithMessage("Review already exists for this product");
+				.MustAsync(ReviewExists).WithMessage("Review must exist to update");
 			
 			RuleFor(c => c)
 				.MustAsync(ProductExists).WithMessage("Product must exist");
@@ -49,7 +51,7 @@ namespace Ecommerce.Application.Validators.Review
 		
 		private async Task<bool> ProductExists(UpdateReviewCommand command, CancellationToken cancellationToken)
 		{
-			return (await this._productAsyncRepository.GetByIdAsync(command.ReviewToUpdate!.ProductId)) != null;
+			return (await this._mediator.Send(new GetProductByIdQuery { Id = command.ReviewToUpdate!.ProductId }, cancellationToken)).Product != null;
 		}
 	}
 }

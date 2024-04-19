@@ -11,6 +11,8 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.Product.Queries.GetProductById;
+using Ecommerce.Domain.Constants;
 using Ecommerce.Shared.Extensions;
 
 namespace Ecommerce.Application.Features.Review.Commands.CreateReview
@@ -24,7 +26,6 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 		private readonly IMapper _mapper;
 		private readonly IMediator _mediator;
 		private readonly IReviewAsyncRepository _reviewAsyncRepository;
-		private readonly IProductAsyncRepository _productAsyncRepository;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="CreateReviewCommandHandler"/> class.
@@ -33,15 +34,13 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 		/// <param name="mapper">The <see cref="IMapper"/> instance used for mapping objects.</param>
 		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
 		/// <param name="reviewAsyncRepository">The <see cref="IReviewAsyncRepository"/> instance used for data access for <see cref="Review"/> entities.</param>
-		/// <param name="productAsyncRepository">The <see cref="IProductAsyncRepository"/> instance used for data access for <see cref="Product"/> entities.</param>
 		public CreateReviewCommandHandler(ILogger<CreateReviewCommandHandler> logger, IMapper mapper, IMediator mediator,
-			IReviewAsyncRepository reviewAsyncRepository, IProductAsyncRepository productAsyncRepository)
+			IReviewAsyncRepository reviewAsyncRepository)
 		{
 			this._logger = logger;
 			this._mapper = mapper;
 			this._mediator = mediator;
 			this._reviewAsyncRepository = reviewAsyncRepository;
-			this._productAsyncRepository = productAsyncRepository;
 		}
 		
 		/// <summary>
@@ -52,22 +51,24 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 		/// <returns>
 		/// A <see cref="CreateReviewResponse"/> with Success being <c>true</c> if the <see cref="Review"/> was created;
 		/// Success will be <c>false</c> if validation of the command fails or Sql fails to create the <see cref="Review"/>.
-		/// Message will contain the error to display if Success is <c>false</c>;
-		/// Validation Errors will be populated with errors to present if validation fails
-		/// Review will contain the new <see cref="ReviewDto"/> if creation was successful
+		/// Message will contain the message to display to the user.
+		/// Validation Errors will be populated with errors to present if validation fails.
+		/// Review will contain the new <see cref="ReviewDto"/> if creation was successful.
 		/// </returns>
 		public async Task<CreateReviewResponse> Handle(CreateReviewCommand command, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to create a new review");
 
-			CreateReviewResponse response = new CreateReviewResponse { Success = true, Message = "Successfully Created Review" };
+			//Create the response object
+			CreateReviewResponse response = new CreateReviewResponse { Success = true, Message = ReviewConstants._createSuccessMessage };
 			
 			//Check if the dto is null
 			if (command.ReviewToCreate == null)
 			{
 				this._logger.LogWarning("Dto was null in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a Review to create";
+				response.Message = ReviewConstants._createErrorMessage;
 				return response;
 			}
 			
@@ -76,12 +77,12 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 			{
 				this._logger.LogWarning("UserName was null in command, returning failed response");
 				response.Success = false;
-				response.Message = "Must provide a UserName to create";
+				response.Message = ReviewConstants._createErrorMessage;
 				return response;
 			}
 			
 			//Validate the dto that was passed in the command
-			CreateReviewValidator validator = new CreateReviewValidator(this._reviewAsyncRepository, this._productAsyncRepository);
+			CreateReviewValidator validator = new CreateReviewValidator(this._reviewAsyncRepository, this._mediator);
 			ValidationResult validationResult = await validator.ValidateAsync(command, cancellationToken);
 			
 			//Check for validation errors
@@ -90,7 +91,7 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 				this._logger.LogWarning("Command failed validation, returning validation errors");
 				
 				response.Success = false;
-				response.Message = "Command was invalid";
+				response.Message = ReviewConstants._genericValidationErrorMessage;
 				foreach (ValidationFailure validationResultError in validationResult.Errors)
 				{
 					response.ValidationErrors.Add(validationResultError.ErrorMessage);
@@ -104,33 +105,37 @@ namespace Ecommerce.Application.Features.Review.Commands.CreateReview
 			newReview.CreatedBy = command.UserName;
 			newReview.CreatedDate = DateTime.UtcNow.ToEst();
 			
+			//Attempt to add the review
 			int newId = await this._reviewAsyncRepository.AddAsync(newReview);
 			
-			//Sql operation failed
+			//Sql operation failed, return failed response
 			if (newId == -1)
 			{
-				response.Success = false;
-				response.Message = "Failed to add new Review";
-			}
-			else
-			{
-				//Map the return object
-				Domain.Entities.Review? review = await this._reviewAsyncRepository.GetByIdAsync(newId);
-				response.Review = this._mapper.Map<ReviewDto?>(review);
+				this._logger.LogError("Sql operation failed, returning failed response");
 				
-				//Get the average rating for the product
-				Domain.Entities.Product? product = await this._productAsyncRepository.GetByIdAsync(newReview.ProductId);
-				decimal newAverageRating = await this._reviewAsyncRepository.GetAverageRatingForProduct(product!.Id);
-
-				//Send the update command
-				product.AverageRating = newAverageRating;
-				await this._mediator.Send(new UpdateProductCommand
-				{
-					ProductToUpdate = this._mapper.Map<ProductDto>(product), 
-					UserName = "System"
-				}, cancellationToken);
+				response.Success = false;
+				response.Message = ReviewConstants._createErrorMessage;
+				return response;
 			}
 			
+			//Map the return object
+			Domain.Entities.Review? review = await this._reviewAsyncRepository.GetByIdAsync(newId);
+			response.Review = this._mapper.Map<ReviewDto?>(review);
+			
+			//Get the average rating for the product
+			Domain.Entities.Product? product = this._mapper.Map<Domain.Entities.Product>(
+				(await this._mediator.Send(new GetProductByIdQuery { Id = newReview.ProductId }, cancellationToken)).Product);
+			decimal newAverageRating = await this._reviewAsyncRepository.GetAverageRatingForProduct(product!.Id);
+
+			//Send the update command
+			product.AverageRating = newAverageRating;
+			await this._mediator.Send(new UpdateProductCommand
+			{
+				ProductToUpdate = this._mapper.Map<ProductDto>(product), 
+				UserName = "System"
+			}, cancellationToken);
+			
+			//Return the response
 			return response;
 		}
 	}

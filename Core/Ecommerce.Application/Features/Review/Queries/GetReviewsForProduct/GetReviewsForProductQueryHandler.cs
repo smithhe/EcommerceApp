@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 
 namespace Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
 {
@@ -43,24 +44,29 @@ namespace Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
 		/// <returns>
 		/// A <see cref="GetReviewsForProductResponse"/> with Success being <c>true</c> if any <see cref="Review"/> entities were found;
 		/// Success will be <c>false</c> if no <see cref="Review"/> entities were found.
-		/// Message will contain the error to display if Success is <c>false</c>.
-		/// Reviews will contain all <see cref="Review"/> entities or will be empty if none are found
+		/// Message will contain the message to display to the user.
+		/// Reviews will contain all <see cref="Review"/> entities or will be empty if none are found.
 		/// </returns>
 		public async Task<GetReviewsForProductResponse> Handle(GetReviewsForProductQuery query, CancellationToken cancellationToken)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling request to get all existing review entities for a product");
 			
-			GetReviewsForProductResponse response = new GetReviewsForProductResponse { Success = true, Message = "Successfully Got all Reviews" };
+			//Create the response object
+			GetReviewsForProductResponse response = new GetReviewsForProductResponse { Success = true, Message = ReviewConstants._getAllSuccessMessage };
 
+			//Get all reviews for the product
 			IEnumerable<Domain.Entities.Review> reviews = await this._reviewAsyncRepository.ListAllAsync(query.ProductId);
 			response.Reviews = this._mapper.Map<IEnumerable<ReviewDto>>(reviews);
 
+			//Check if any reviews were found
 			if (reviews.Any() == false)
 			{
 				response.Success = false;
-				response.Message = "No Reviews Found";
+				response.Message = ReviewConstants._getAllErrorMessage;
 			}
 
+			//Return the response
 			return response;
 		}
 	}
