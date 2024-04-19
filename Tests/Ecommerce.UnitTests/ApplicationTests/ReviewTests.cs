@@ -26,7 +26,6 @@ namespace Ecommerce.UnitTests.ApplicationTests
     [TestFixture]
     public class ReviewTests
     {
-        private static readonly Guid _userId = new Guid("095a987b-b4da-4eb6-a286-19aa3c75be53");
         private const string _userName = "Test User";
         
         private Review _review = null!;
