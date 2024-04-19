@@ -46,6 +46,13 @@ namespace Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
             //Log the request
             this._logger.LogInformation("Handling request to get an existing Order by Return Key");
             
+            //Check if the Return Key is null or empty
+            if (string.IsNullOrWhiteSpace(request.ReturnKey))
+            {
+                this._logger.LogWarning("The Return Key is null or empty");
+                return null;
+            }
+            
             //Lookup the Order Id by the return key
             OrderKey? orderKey = await this._orderKeyRepository.GetByReturnKeyAsync(request.ReturnKey);
             

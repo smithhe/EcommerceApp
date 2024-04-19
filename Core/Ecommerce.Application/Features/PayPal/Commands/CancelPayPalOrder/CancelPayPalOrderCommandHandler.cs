@@ -68,6 +68,13 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
             //Delete the return key from the database
             bool deleteReturnKeyResponse = await this._mediator.Send(new DeletePayPalReturnKeyCommand { ReturnKey = command.ReturnKey }, cancellationToken);
             
+            //Check if the delete was successful
+            if (deleteReturnKeyResponse == false)
+            {
+                //Log the error
+                this._logger.LogError("Failed to delete the return key from the database");
+            }
+            
             //Return the result of the delete
             return deleteReturnKeyResponse;
         }

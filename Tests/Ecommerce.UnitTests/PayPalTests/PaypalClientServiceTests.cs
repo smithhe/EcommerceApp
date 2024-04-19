@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants.Infrastructure;
 using Ecommerce.PayPal.Contracts;
 using Ecommerce.PayPal.Contracts.Refit;
 using Ecommerce.PayPal.Models;
@@ -69,11 +70,6 @@ namespace Ecommerce.UnitTests.PayPalTests
                 Order = this._order,
                 ReturnKey = "test"
             };
-            CreatePayPalOrderResponse expectedResponse = new CreatePayPalOrderResponse
-            {
-                Success = true,
-                Message = "PayPal Order Created Successfully"
-            };
             
             string testUrl = "testurl";
             PayPalCreateOrderResponse mockPayPalResponse = new PayPalCreateOrderResponse
@@ -109,8 +105,8 @@ namespace Ecommerce.UnitTests.PayPalTests
             //Assert
             Assert.Multiple(() =>
             {
-                Assert.That(result.Success, Is.EqualTo(expectedResponse.Success));
-                Assert.That(result.Message, Is.EqualTo(expectedResponse.Message));
+                Assert.That(result.Success, Is.True);
+                Assert.That(result.Message, Is.EqualTo(PayPalConstants._createOrderSuccessMessage));
                 Assert.That(result.RedirectUrl, Is.Not.Null);
                 Assert.That(result.RedirectUrl, Is.EqualTo(testUrl));
                 Assert.That(result.ValidationErrors, Is.Empty);
@@ -126,11 +122,6 @@ namespace Ecommerce.UnitTests.PayPalTests
                 Order = new OrderDto(),
                 ReturnKey = "test"
             };
-            CreatePayPalOrderResponse expectedResponse = new CreatePayPalOrderResponse
-            {
-                Success = false,
-                Message = "No order provided to create a PayPal Order"
-            };
             
             PaypalClientService paypalClientService = new PaypalClientService(Mock.Of<ILogger<PaypalClientService>>(), 
                 this._tokenServiceMock.Object, this._payPalApiServiceMock.Object, this._configurationMock.Object);
@@ -141,8 +132,8 @@ namespace Ecommerce.UnitTests.PayPalTests
             //Assert
             Assert.Multiple(() =>
             {
-                Assert.That(result.Success, Is.EqualTo(expectedResponse.Success));
-                Assert.That(result.Message, Is.EqualTo(expectedResponse.Message));
+                Assert.That(result.Success, Is.False);
+                Assert.That(result.Message, Is.EqualTo(PayPalConstants._createOrderErrorMessage));
                 Assert.That(result.RedirectUrl, Is.Null);
                 Assert.That(result.ValidationErrors, Is.Empty);
             });
@@ -157,11 +148,6 @@ namespace Ecommerce.UnitTests.PayPalTests
                 Order = this._order,
                 ReturnKey = "test"
             };
-            CreatePayPalOrderResponse expectedResponse = new CreatePayPalOrderResponse
-            {
-                Success = false,
-                Message = "Return Base Url not found in configuration"
-            };
             
             this._configurationMock.Setup(c => c["PayPal:ReturnBaseUrl"]).Returns(string.Empty);
             
@@ -174,8 +160,8 @@ namespace Ecommerce.UnitTests.PayPalTests
             //Assert
             Assert.Multiple(() =>
             {
-                Assert.That(result.Success, Is.EqualTo(expectedResponse.Success));
-                Assert.That(result.Message, Is.EqualTo(expectedResponse.Message));
+                Assert.That(result.Success, Is.False);
+                Assert.That(result.Message, Is.EqualTo(PayPalConstants._createOrderErrorMessage));
                 Assert.That(result.RedirectUrl, Is.Null);
                 Assert.That(result.ValidationErrors, Is.Empty);
             });
@@ -189,11 +175,6 @@ namespace Ecommerce.UnitTests.PayPalTests
             {
                 Order = this._order,
                 ReturnKey = "test"
-            };
-            CreatePayPalOrderResponse expectedResponse = new CreatePayPalOrderResponse
-            {
-                Success = false,
-                Message = "Failed to create PayPal Order"
             };
             
             HttpResponseMessage responseMessage = new HttpResponseMessage(HttpStatusCode.Unauthorized);
@@ -217,8 +198,8 @@ namespace Ecommerce.UnitTests.PayPalTests
             //Assert
             Assert.Multiple(() =>
             {
-                Assert.That(result.Success, Is.EqualTo(expectedResponse.Success));
-                Assert.That(result.Message, Is.EqualTo(expectedResponse.Message));
+                Assert.That(result.Success, Is.False);
+                Assert.That(result.Message, Is.EqualTo(PayPalConstants._createOrderErrorMessage));
                 Assert.That(result.RedirectUrl, Is.Null);
                 Assert.That(result.ValidationErrors, Is.Empty);
             });

@@ -1,4 +1,5 @@
 using System.Net;
+using Ecommerce.Domain.Constants.Infrastructure;
 using Ecommerce.PayPal.Contracts;
 using Ecommerce.PayPal.Contracts.Refit;
 using Ecommerce.PayPal.Models;
@@ -46,21 +47,23 @@ namespace Ecommerce.PayPal.Services
         /// <param name="request">The Ecommerce Api Request to create an order</param>
         /// <returns>
         /// Returns true with the redirect url and the PayPal RequestId if the order was created successfully;
-        /// Returns false with a message if the order creation failed
+        /// Returns false if the order creation failed.
+        /// Message will contain the message to display to the user.
         /// </returns>
         public async Task<CreatePayPalOrderResponse> CreateOrder(CreatePayPalOrderRequest request)
         {
             //Create the response object
             CreatePayPalOrderResponse response = new CreatePayPalOrderResponse
             {
-                Success = false,
-                Message = "Failed to create PayPal Order"
+                Success = true,
+                Message = PayPalConstants._createOrderSuccessMessage
             };
             
             //Verify we have a order to create
             if (request.Order?.OrderItems == null || request.Order.OrderItems.Any() == false)
             {
-                response.Message = "No order provided to create a PayPal Order";
+                response.Success = false;
+                response.Message = PayPalConstants._createOrderErrorMessage;
                 return response;
             }
             
@@ -72,7 +75,8 @@ namespace Ecommerce.PayPal.Services
 
             if (string.IsNullOrEmpty(baseReturnUrl))
             {
-                response.Message = "Return Base Url not found in configuration";
+                response.Success = false;
+                response.Message = PayPalConstants._createOrderErrorMessage;
                 return response;
             }
             
@@ -156,29 +160,28 @@ namespace Ecommerce.PayPal.Services
                 //Send the create order request to PayPal again
                 payPalApiResponse = await this._payPalApiService.CreatePayPalOrder(request.Order.PayPalRequestId.ToString(), payPalCreateOrderRequest);
             }
-
-            //Check if the response is successful
-            if (payPalApiResponse.IsSuccessStatusCode)
-            {
-                //Get the response content
-                PayPalCreateOrderResponse? responseContent = payPalApiResponse.Content;
-
-                //Update the response object
-                response.Success = true;
-                response.Message = "PayPal Order Created Successfully";
-                response.RedirectUrl = responseContent?.Links.FirstOrDefault(x => x.Rel == "payer-action")?.Href;
-
-                //Return the response
-                return response;
-            }
-
+            
             //Check if the response has an error message
-            if (string.IsNullOrEmpty(payPalApiResponse.Error.Content) == false)
+            if (string.IsNullOrEmpty(payPalApiResponse.Error?.Content) == false)
             {
                 this._logger.LogError(payPalApiResponse.Error.Content);
             }
 
-            //Return a failed response
+            //Check if the response is successful
+            if (payPalApiResponse.IsSuccessStatusCode == false)
+            {
+                response.Success = false;
+                response.Message = PayPalConstants._createOrderErrorMessage;
+                return response;
+            }
+            
+            //Get the response content
+            PayPalCreateOrderResponse? responseContent = payPalApiResponse.Content;
+
+            //Update the response object
+            response.RedirectUrl = responseContent?.Links.FirstOrDefault(x => x.Rel == "payer-action")?.Href;
+
+            //Return the response
             return response;
         }
     }

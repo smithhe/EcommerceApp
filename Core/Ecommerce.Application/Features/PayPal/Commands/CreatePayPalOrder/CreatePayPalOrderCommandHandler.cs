@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId;
 using Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey;
+using Ecommerce.Domain.Constants.Infrastructure;
 using Ecommerce.PayPal.Contracts;
 using Ecommerce.Shared.Requests.PayPal;
 using Ecommerce.Shared.Responses.PayPal;
@@ -42,8 +43,8 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
         /// <param name="cancellationToken">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
         /// <returns>
         /// Success will be <c>false</c> if validation of the command fails.
-        /// Message will contain the error to display if Success is <c>false</c>;
-        /// RedirectUrl will contain the url to redirect the user to in the UI to complete the PayPal Order
+        /// Message will contain the message to display to the user.
+        /// RedirectUrl will contain the url to redirect the user to in the UI to complete the PayPal Order.
         /// </returns>
         public async Task<CreatePayPalOrderResponse> Handle(CreatePayPalOrderCommand command, CancellationToken cancellationToken)
         {
@@ -53,14 +54,17 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
             //Create the response
             CreatePayPalOrderResponse response = new CreatePayPalOrderResponse
             {
-                Success = false,
-                Message = "Failed to create PayPal Order"
+                Success = true,
+                Message = PayPalConstants._createOrderSuccessMessage
             };
             
             //Verify the order is not null and has items
             if (command.Order.OrderItems == null || command.Order.OrderItems.Any() == false)
             {
-                response.Message = "Order must have items to create a PayPal Order";
+                this._logger.LogWarning("Order was null or empty in command, returning failed response");
+                
+                response.Success = false;
+                response.Message = PayPalConstants._createOrderErrorMessage;
                 return response;
             }
             
@@ -79,7 +83,9 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
             if (string.IsNullOrEmpty(returnKey))
             {
                 this._logger.LogError("Failed to create PayPal return key for order");
-                response.Message = "Failed to create order with PayPal";
+                
+                response.Success = false;
+                response.Message = PayPalConstants._createOrderErrorMessage;
                 return response;
             }
             
@@ -91,17 +97,22 @@ namespace Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
             });
 
             //Check for success in creating the paypal order
-            if (response.Success)
+            if (response.Success == false)
             {
-                //Add the PayPalRequestId to the order
-                this._logger.LogInformation("Adding PayPalRequestId to order");
-                await this._mediator.Send(new AddPayPalRequestIdCommand
-                {
-                    OrderId = command.Order.Id,
-                    PayPalRequestId = payPalRequestId
-                }, cancellationToken);
+                this._logger.LogError("Failed to create PayPal order");
+                return response;
             }
+            
+            //Add the PayPalRequestId to the order
+            this._logger.LogInformation("Adding PayPalRequestId to order");
+                
+            await this._mediator.Send(new AddPayPalRequestIdCommand
+            {
+                OrderId = command.Order.Id,
+                PayPalRequestId = payPalRequestId
+            }, cancellationToken);
 
+            //Return the response
             return response;
         }
     }
