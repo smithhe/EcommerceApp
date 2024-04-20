@@ -49,6 +49,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.CartItem
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		public override async Task HandleAsync(CreateCartItemApiRequest req, CancellationToken ct)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling Create CartItem Request");
 			
 			//Check if token is valid
@@ -79,15 +80,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.CartItem
 				return;
 			}
 			
-			//Check if the response was successful
-			if (response.Success == false)
-			{
-				//Send the response object with a 400 status code
-				await this.SendAsync(response, 400, ct);
-				return;
-			}
-
-			//Send the response object
+			//Send the response
 			await this.SendOkAsync(response, ct);
 		}
 	}
