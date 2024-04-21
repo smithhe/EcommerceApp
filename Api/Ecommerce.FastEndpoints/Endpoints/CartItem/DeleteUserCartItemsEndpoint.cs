@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems;
+using Ecommerce.Domain.Constants.Identity;
 using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.Shared.Requests.CartItem;
 using Ecommerce.Shared.Responses.CartItem;
@@ -39,7 +40,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.CartItem
 		public override void Configure()
 		{
 			this.Delete("/api/cartitem/user/delete");
-			//TODO: Add roles
+			this.Policies(PolicyNames._generalPolicy);
 		}
 
 		/// <summary>

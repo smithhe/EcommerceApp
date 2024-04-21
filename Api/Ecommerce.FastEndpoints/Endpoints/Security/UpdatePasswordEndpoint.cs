@@ -1,6 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword;
+using Ecommerce.Domain.Constants.Identity;
 using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
@@ -38,7 +39,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
         public override void Configure()
         {
             this.Put("/api/password/update");
-            //TODO: Add roles
+            this.Policies(PolicyNames._generalPolicy);
         }
 
         /// <summary>

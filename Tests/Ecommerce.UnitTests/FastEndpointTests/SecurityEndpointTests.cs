@@ -465,9 +465,8 @@ namespace Ecommerce.UnitTests.FastEndpointTests
 
             this._tokenService.Setup(t => t.ValidateTokenAsync(It.IsAny<string>()))
                 .ReturnsAsync(true);
-
-            this._authenticationService.Setup(a => a.GetUserIdByName(_userName))
-                .ReturnsAsync(_userId);
+            this._tokenService.Setup(t => t.GetUserIdFromToken(It.IsAny<string>()))
+                .Returns(_userId);
 
             this._mediator.Setup(m => m.Send(It.IsAny<UpdateEcommerceUserCommand>(), default(CancellationToken)))
                 .ReturnsAsync(new UpdateEcommerceUserResponse
@@ -478,7 +477,7 @@ namespace Ecommerce.UnitTests.FastEndpointTests
                 });
             
             UpdateEcommerceUserEndpoint endpoint = Factory.Create<UpdateEcommerceUserEndpoint>(Mock.Of<ILogger<UpdateEcommerceUserEndpoint>>(), 
-                this._mediator.Object, this._authenticationService.Object, this._tokenService.Object);
+                this._mediator.Object, this._tokenService.Object);
 
             //Act
             await endpoint.HandleAsync(request, default(CancellationToken));
@@ -510,7 +509,7 @@ namespace Ecommerce.UnitTests.FastEndpointTests
                 .ReturnsAsync(false);
             
             UpdateEcommerceUserEndpoint endpoint = Factory.Create<UpdateEcommerceUserEndpoint>(Mock.Of<ILogger<UpdateEcommerceUserEndpoint>>(), 
-                this._mediator.Object, this._authenticationService.Object, this._tokenService.Object);
+                this._mediator.Object, this._tokenService.Object);
 
             //Act
             await endpoint.HandleAsync(request, default(CancellationToken));
@@ -540,12 +539,11 @@ namespace Ecommerce.UnitTests.FastEndpointTests
 
             this._tokenService.Setup(t => t.ValidateTokenAsync(It.IsAny<string>()))
                 .ReturnsAsync(true);
-
-            this._authenticationService.Setup(a => a.GetUserIdByName(_userName))
-                .ReturnsAsync((Guid?)null);
+            this._tokenService.Setup(t => t.GetUserIdFromToken(It.IsAny<string>()))
+                .Returns((Guid?)null);
             
             UpdateEcommerceUserEndpoint endpoint = Factory.Create<UpdateEcommerceUserEndpoint>(Mock.Of<ILogger<UpdateEcommerceUserEndpoint>>(), 
-                this._mediator.Object, this._authenticationService.Object, this._tokenService.Object);
+                this._mediator.Object, this._tokenService.Object);
 
             //Act
             await endpoint.HandleAsync(request, default(CancellationToken));
@@ -575,15 +573,14 @@ namespace Ecommerce.UnitTests.FastEndpointTests
 
             this._tokenService.Setup(t => t.ValidateTokenAsync(It.IsAny<string>()))
                 .ReturnsAsync(true);
-
-            this._authenticationService.Setup(a => a.GetUserIdByName(_userName))
-                .ReturnsAsync(_userId);
+            this._tokenService.Setup(t => t.GetUserIdFromToken(It.IsAny<string>()))
+                .Returns(_userId);
 
             this._mediator.Setup(m => m.Send(It.IsAny<UpdateEcommerceUserCommand>(), default(CancellationToken)))
                 .Throws(new Exception());
             
             UpdateEcommerceUserEndpoint endpoint = Factory.Create<UpdateEcommerceUserEndpoint>(Mock.Of<ILogger<UpdateEcommerceUserEndpoint>>(), 
-                this._mediator.Object, this._authenticationService.Object, this._tokenService.Object);
+                this._mediator.Object, this._tokenService.Object);
 
             //Act
             await endpoint.HandleAsync(request, default(CancellationToken));

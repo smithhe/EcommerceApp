@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Order.Commands.CreateOrder;
 using Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder;
+using Ecommerce.Domain.Constants.Identity;
 using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.Shared.Enums;
 using Ecommerce.Shared.Exceptions;
@@ -44,7 +45,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 		public override void Configure()
 		{
 			this.Post("/api/order/create");
-			//TODO: Add roles
+			this.Policies(PolicyNames._generalPolicy);
 		}
 
 		/// <summary>

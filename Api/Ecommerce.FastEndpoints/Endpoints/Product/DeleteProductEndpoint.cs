@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Product.Commands.DeleteProduct;
+using Ecommerce.Domain.Constants.Identity;
 using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.Shared.Requests.Product;
 using Ecommerce.Shared.Responses.Product;
@@ -39,7 +40,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Product
 		public override void Configure()
 		{
 			this.Delete("/api/product/delete");
-			//TODO: Add roles
+			this.Policies(PolicyNames._adminPolicy);
 		}
 
 		/// <summary>

@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Category.Commands.DeleteCategory;
+using Ecommerce.Domain.Constants.Identity;
 using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.Shared.Requests.Category;
 using Ecommerce.Shared.Responses.Category;
@@ -39,7 +40,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Category
 		public override void Configure()
 		{
 			this.Delete("/api/category/delete");
-			//TODO: Add roles
+			this.Policies(PolicyNames._adminPolicy);
 		}
 
 		/// <summary>

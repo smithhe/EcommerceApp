@@ -14,8 +14,8 @@ using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using Ecommerce.Domain.Constants;
 using Ecommerce.Domain.Constants.Entities;
+using Ecommerce.Domain.Constants.Identity;
 using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
 

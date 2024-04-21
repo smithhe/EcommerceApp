@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Text;
+using Ecommerce.Domain.Constants.Identity;
 using Ecommerce.Persistence;
 
 namespace Ecommerce.Identity
@@ -53,6 +54,16 @@ namespace Ecommerce.Identity
 						IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Key"]!))
 					};
 				});
+
+			services.AddAuthorization(options =>
+			{
+				//Admin Only Policy
+				options.AddPolicy(PolicyNames._adminPolicy, policy => policy.RequireRole(RoleNames._admin));
+				
+				//General Access Policy
+				options.AddPolicy(PolicyNames._generalPolicy, policy => 
+					policy.RequireAssertion(context => context.User.IsInRole(RoleNames._admin) || context.User.IsInRole(RoleNames._user)));
+			});
 		}
 	}
 }

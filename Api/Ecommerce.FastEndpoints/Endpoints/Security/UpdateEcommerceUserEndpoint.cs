@@ -3,8 +3,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser;
 using Ecommerce.Domain.Constants.Entities;
+using Ecommerce.Domain.Constants.Identity;
 using Ecommerce.FastEndpoints.Contracts;
-using Ecommerce.Identity.Contracts;
 using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
 using FastEndpoints;
@@ -21,22 +21,18 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 		private readonly ILogger<UpdateEcommerceUserEndpoint> _logger;
 		private readonly IMediator _mediator;
 		private readonly ITokenService _tokenService;
-		private readonly IAuthenticationService _authenticationService;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="UpdateEcommerceUserEndpoint"/> class.
 		/// </summary>
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
-		/// <param name="authenticationService">The <see cref="IAuthenticationService"/> instance used for token validation</param>
 		/// <param name="tokenService"> The <see cref="ITokenService"/> instance used for operations on Auth tokens passed in requests </param>
-		public UpdateEcommerceUserEndpoint(ILogger<UpdateEcommerceUserEndpoint> logger, IMediator mediator, IAuthenticationService authenticationService
-			, ITokenService tokenService)
+		public UpdateEcommerceUserEndpoint(ILogger<UpdateEcommerceUserEndpoint> logger, IMediator mediator, ITokenService tokenService)
 		{
 			this._logger = logger;
 			this._mediator = mediator;
 			this._tokenService = tokenService;
-			this._authenticationService = authenticationService;
 		}
 		
 		/// <summary>
@@ -45,7 +41,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 		public override void Configure()
 		{
 			this.Put("/api/user/update");
-			//TODO: Add roles
+			this.Policies(PolicyNames._generalPolicy);
 		}
 
 		/// <summary>
@@ -59,7 +55,8 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 			this._logger.LogInformation("Handling Update User Request");
 			
 			//Check if token is valid
-			if (await this._tokenService.ValidateTokenAsync(this.HttpContext.Request.Headers.Authorization) == false)
+			string? token = this.HttpContext.Request.Headers.Authorization;
+			if (await this._tokenService.ValidateTokenAsync(token) == false)
 			{
 				//Token is Invalid
 				await this.SendUnauthorizedAsync(ct);
@@ -67,7 +64,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 			}
 			
 			//Get the userid of the user if it exists
-			Guid? userId = await this._authenticationService.GetUserIdByName(req.UserName ?? string.Empty);
+			Guid? userId = this._tokenService.GetUserIdFromToken(token);
 
 			//Check if the user was found
 			if (userId == null)

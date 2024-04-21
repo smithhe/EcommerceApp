@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct;
+using Ecommerce.Domain.Constants.Identity;
 using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.Shared.Requests.Review;
 using Ecommerce.Shared.Responses.Review;
@@ -39,7 +40,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Review
 		public override void Configure()
 		{
 			this.Get("/api/review/user");
-			//TODO: Add roles
+			this.Policies(PolicyNames._generalPolicy);
 		}
 
 		/// <summary>

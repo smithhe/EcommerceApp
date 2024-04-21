@@ -1,5 +1,5 @@
 using System;
-using Ecommerce.Domain.Constants;
+using Ecommerce.Domain.Constants.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

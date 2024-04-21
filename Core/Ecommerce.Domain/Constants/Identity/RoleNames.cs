@@ -1,4 +1,4 @@
-namespace Ecommerce.Domain.Constants
+namespace Ecommerce.Domain.Constants.Identity
 {
     public static class RoleNames
     {

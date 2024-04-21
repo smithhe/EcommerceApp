@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Order.Queries.GetOrderById;
+using Ecommerce.Domain.Constants.Identity;
 using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.Shared.Requests.Order;
 using Ecommerce.Shared.Responses.Order;
@@ -39,7 +40,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 		public override void Configure()
 		{
 			this.Get("/api/order");
-			//TODO: Add roles
+			this.Policies(PolicyNames._generalPolicy);
 		}
 
 		/// <summary>
