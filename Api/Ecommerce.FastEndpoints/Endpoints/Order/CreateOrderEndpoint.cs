@@ -54,6 +54,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		public override async Task HandleAsync(CreateOrderApiRequest req, CancellationToken ct)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling Create Order Request");
 			
 			//Check if token is valid
@@ -130,7 +131,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 				return;
 			}
 
-			//Send the response object
+			//Send the response
 			await this.SendOkAsync(response, ct);
 		}
 
@@ -179,6 +180,9 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 			}
 			else
 			{
+				response.Success = false;
+				response.Message = payPalResponse.Message;
+				response.Order = null;
 				this._logger.LogWarning($"Failed to create PayPal Order{Environment.NewLine}{payPalResponse.Message}");
 			}
 		}
