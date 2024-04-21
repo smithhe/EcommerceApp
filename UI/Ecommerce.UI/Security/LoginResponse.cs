@@ -5,5 +5,7 @@ namespace Ecommerce.UI.Security
         public bool IsSuccessful { get; set; }
         
         public string? Message { get; set; }
+        
+        public string? TwoFactorToken { get; set; }
     }
 }

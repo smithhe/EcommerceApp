@@ -26,13 +26,9 @@ namespace Ecommerce.UI.Services
 				return response.Content;
 			}
 
-			if (string.IsNullOrEmpty(response.Error.Content))
-			{
-				return new GetAllCategoriesResponse { Success = false, Message = "Unexpected Error Occurred" };
-			}
-
-			GetAllCategoriesResponse? error = JsonConvert.DeserializeObject<GetAllCategoriesResponse>(response.Error.Content);
-			return error!;
+			return string.IsNullOrEmpty(response.Error.Content) ? 
+				new GetAllCategoriesResponse { Success = false, Message = "Unexpected Error Occurred" } 
+				: JsonConvert.DeserializeObject<GetAllCategoriesResponse>(response.Error.Content)!;
 		}
 	}
 }

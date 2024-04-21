@@ -39,13 +39,9 @@ namespace Ecommerce.UI.Services
 				return response.Content;
 			}
 			
-			if (string.IsNullOrEmpty(response.Error.Content))
-			{
-				return new CreateUserResponse { Success = false, Errors = new []{ "Unexpected Error Occurred" } };
-			}
-
-			CreateUserResponse? error = JsonConvert.DeserializeObject<CreateUserResponse>(response.Error.Content);
-			return error!;
+			return string.IsNullOrEmpty(response.Error.Content) ? 
+				new CreateUserResponse { Success = false, Errors = new []{ "Unexpected Error Occurred" } } 
+				: JsonConvert.DeserializeObject<CreateUserResponse>(response.Error.Content)!;
 		}
 
 		public async Task<LoginResponse> Login(AuthenticationRequest authenticationRequest)
@@ -75,7 +71,7 @@ namespace Ecommerce.UI.Services
 			if (response.SignInResult == SignInResponseResult.TwoFactorRequired)
 			{
 				//TODO: Implement Two Factor Authentication
-				return new LoginResponse { IsSuccessful = true, Message = "Two Factor Authentication Required" };
+				return new LoginResponse { IsSuccessful = false, Message = "Two Factor Authentication Required" };
 			}
 
 			if (response.SignInResult == SignInResponseResult.EmailNotConfirmed)

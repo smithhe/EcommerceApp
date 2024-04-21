@@ -25,14 +25,10 @@ namespace Ecommerce.UI.Services
 			{
 				return response.Content;
 			}
-
-			if (string.IsNullOrEmpty(response.Error.Content))
-			{
-				return new GetAllProductsByCategoryIdResponse { Success = false, Message = "Unexpected Error Occurred" };
-			}
-
-			GetAllProductsByCategoryIdResponse? error = JsonConvert.DeserializeObject<GetAllProductsByCategoryIdResponse>(response.Error.Content);
-			return error!;
+			
+			return string.IsNullOrEmpty(response.Error.Content) ? 
+				new GetAllProductsByCategoryIdResponse { Success = false, Message = "Unexpected Error Occurred" } 
+				: JsonConvert.DeserializeObject<GetAllProductsByCategoryIdResponse>(response.Error.Content)!;
 		}
 
 		public async Task<GetProductByIdResponse> GetProductById(int productId)
@@ -44,13 +40,9 @@ namespace Ecommerce.UI.Services
 				return response.Content;
 			}
 
-			if (string.IsNullOrEmpty(response.Error.Content))
-			{
-				return new GetProductByIdResponse { Success = false, Message = "Unexpected Error Occurred" };
-			}
-
-			GetProductByIdResponse? error = JsonConvert.DeserializeObject<GetProductByIdResponse>(response.Error.Content);
-			return error!;
+			return string.IsNullOrEmpty(response.Error.Content) ? 
+				new GetProductByIdResponse { Success = false, Message = "Unexpected Error Occurred" } 
+				: JsonConvert.DeserializeObject<GetProductByIdResponse>(response.Error.Content)!;
 		}
 	}
 }
