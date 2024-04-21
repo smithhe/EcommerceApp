@@ -76,7 +76,7 @@ namespace Ecommerce.UI.Pages
 
 			if (response.Success)
 			{
-				this.ToastService.ShowSuccess("Added to cart");
+				this.ToastService.ShowSuccess(response.Message!);
 				return;
 			}
 			
@@ -278,7 +278,7 @@ namespace Ecommerce.UI.Pages
 			{
 				await RefreshPageInfo();
 				this.ReviewModel.Comments = string.Empty;
-				this.ToastService.ShowSuccess("Review Submitted Successfully");
+				this.ToastService.ShowSuccess(response.Message!);
 			}
 			else
 			{
@@ -299,7 +299,7 @@ namespace Ecommerce.UI.Pages
 
 			if (response.Success)
 			{
-				this.ToastService.ShowSuccess("Review deleted successfully");
+				this.ToastService.ShowSuccess(response.Message!);
 				this.ExistingUserReview = null;
 				this.UserHasReview = false;
 				this.EditExistingReview = false;
@@ -334,7 +334,7 @@ namespace Ecommerce.UI.Pages
 
 			if (response.Success)
 			{
-				this.ToastService.ShowSuccess("Review successfully updated");
+				this.ToastService.ShowSuccess(response.Message!);
 				this.EditExistingReview = false;
 				
 				await RefreshPageInfo();

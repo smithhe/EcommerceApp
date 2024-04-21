@@ -70,7 +70,7 @@ namespace Ecommerce.UI.Pages
 
 			if (response.Success)
 			{
-				this.ToastService.ShowSuccess("Added to cart");
+				this.ToastService.ShowSuccess(response.Message!);
 				return;
 			}
 			

@@ -57,7 +57,7 @@ namespace Ecommerce.UI.Pages
 			
 			if (response.Success)
 			{
-				this.ToastService.ShowSuccess("Profile Updated Successfully");
+				this.ToastService.ShowSuccess(response.Message!);
 				return;
 			}
 
@@ -98,7 +98,7 @@ namespace Ecommerce.UI.Pages
 			//Check if the password was updated successfully
 			if (response.Success)
 			{
-				this.ToastService.ShowSuccess("Password Updated Successfully");
+				this.ToastService.ShowSuccess(response.Message!);
 				return;
 			}
 			

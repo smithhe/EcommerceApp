@@ -80,9 +80,13 @@ namespace Ecommerce.UI.Pages
             GetAllOrdersByUserIdResponse getUserOrdersResponse = await this.OrderService.GetUserOrders(new Guid(userId));
             
             //Check for success in fetching orders
-            this.UserOrders = getUserOrdersResponse.Success
-                ? getUserOrdersResponse.Orders
-                : new List<OrderDto>();
+            if (getUserOrdersResponse.Success == false)
+            {
+                this.ToastService.ShowError(getUserOrdersResponse.Message!);
+                return;
+            }
+            
+            this.UserOrders = getUserOrdersResponse.Orders;
         }
     }
 }

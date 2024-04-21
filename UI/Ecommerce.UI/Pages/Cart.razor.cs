@@ -49,23 +49,22 @@ namespace Ecommerce.UI.Pages
 			GetUserCartItemsResponse getUserCartItemsResponse = await this.CartService.GetItemsInCart(new Guid(userId));
 
 			//Check for success in fetching cart items
-			this.CartItems = getUserCartItemsResponse.Success
-				? getUserCartItemsResponse.CartItems.ToList()
-				: new List<CartItemDto>();
+			if (getUserCartItemsResponse.Success == false)
+			{
+				this.ToastService.ShowError(getUserCartItemsResponse.Message!);
+				return;
+			}
 
+			this.CartItems = getUserCartItemsResponse.CartItems.OrderBy(c => c.ProductId).ToList();
+			
 			//Check if any items are in the cart
-			IEnumerable<CartItemDto> cartItemDtos = this.CartItems.ToArray();
-			if (cartItemDtos.Any() == false)
+			if (this.CartItems.Count == 0)
 			{
 				return;
 			}
-			else
-			{
-				this.CartItems = this.CartItems.OrderBy(c => c.ProductId).ToList();
-			}
 
 			//Get the unique product ids out of the cart
-			IEnumerable<int> productIds = cartItemDtos.Select(cartItem => cartItem.ProductId).Distinct();
+			IEnumerable<int> productIds = this.CartItems.Select(cartItem => cartItem.ProductId).Distinct();
 
 			foreach (int productId in productIds)
 			{
@@ -132,6 +131,8 @@ namespace Ecommerce.UI.Pages
 			}
 			else if (updateCartItemResponse.ValidationErrors.Any())
 			{
+				this.ToastService.ShowWarning(updateCartItemResponse.Message!);
+				
 				foreach (string validationError in updateCartItemResponse.ValidationErrors)
 				{
 					this.ToastService.ShowError(validationError);
