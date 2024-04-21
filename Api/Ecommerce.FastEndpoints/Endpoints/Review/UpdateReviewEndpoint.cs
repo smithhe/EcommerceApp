@@ -49,6 +49,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Review
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		public override async Task HandleAsync(UpdateReviewApiRequest req, CancellationToken ct)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling Update Review Request");
 			
 			//Check if token is valid
@@ -79,7 +80,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Review
 				return;
 			}
 
-			//Send the response object
+			//Send the response
 			await this.SendOkAsync(response, ct);
 		}
 	}
