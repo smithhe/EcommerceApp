@@ -5,7 +5,8 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Ecommerce.Shared.Extensions;
+using Ecommerce.UI.Extensions;
+using Microsoft.JSInterop;
 
 namespace Ecommerce.UI.Security
 {
@@ -13,12 +14,14 @@ namespace Ecommerce.UI.Security
 	{
 		private readonly ILocalStorageService _localStorageService;
 		private readonly IConfiguration _configuration;
+		private readonly IJSRuntime _jsRuntime;
 		private readonly AuthenticationState _anonymous;
 
-		public AuthStateProvider(ILocalStorageService localStorageService, IConfiguration configuration)
+		public AuthStateProvider(ILocalStorageService localStorageService, IConfiguration configuration, IJSRuntime jsRuntime)
 		{
 			this._localStorageService = localStorageService;
 			this._configuration = configuration;
+			this._jsRuntime = jsRuntime;
 			this._anonymous = new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()));
 		}
 		
@@ -32,7 +35,7 @@ namespace Ecommerce.UI.Security
 				return this._anonymous;
 			}
 
-			if (IsTokenExpired(token))
+			if (await IsTokenExpired(token))
 			{
 				return this._anonymous;
 			}
@@ -40,7 +43,7 @@ namespace Ecommerce.UI.Security
 			return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity(JwtParser.ParseClaimsFromJwt(token), "jwtAuthType")));
 		}
 
-		private bool IsTokenExpired(string token)
+		private async Task<bool> IsTokenExpired(string token)
 		{
 			// Decode the JWT token
 			JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
@@ -52,7 +55,7 @@ namespace Ecommerce.UI.Security
 				return true;
 			}
 
-			if (jwtToken.ValidTo <= DateTime.UtcNow.ToEst())
+			if (jwtToken.ValidTo <= await DateTime.UtcNow.ToEstAsync(this._jsRuntime))
 			{
 				// Token has expired
 				return true;
