@@ -1,7 +1,9 @@
+using System;
 using Ecommerce.FastEndpoints;
 using Ecommerce.Persistence;
 using FastEndpoints;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -27,9 +29,11 @@ WebApplication app = builder.Build();
 using (IServiceScope scope = app.Services.CreateScope())
 {
 	EcommercePersistenceDbContext dbContext = scope.ServiceProvider.GetRequiredService<EcommercePersistenceDbContext>();
+	RoleManager<IdentityRole<Guid>> roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+	
 	dbContext.Database.EnsureCreated();
 	DatabaseInitializer.MigrateDatabase(dbContext);
-	DatabaseInitializer.PostMigrationUpdates(dbContext);
+	DatabaseInitializer.PostMigrationUpdates(dbContext, roleManager);
 }
 
 app.UseHttpsRedirection();

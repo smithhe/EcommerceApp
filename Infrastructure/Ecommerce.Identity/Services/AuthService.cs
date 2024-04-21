@@ -14,6 +14,7 @@ using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Ecommerce.Domain.Constants;
 using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
@@ -229,20 +230,28 @@ namespace Ecommerce.Identity.Services
 			IdentityResult result = await this._userManager.CreateAsync(newUser, createUserRequest.Password);
 
 			//Check for errors
-			if (result.Succeeded)
+			if (result.Succeeded == false)
 			{
-				//Generate a confirmation token for the user and return the response
-				response.Success = true;
-				response.ConfirmationLink = await this._userManager.GenerateEmailConfirmationTokenAsync(newUser); //Temporarily store the token in the confirmation link property
+				//Add errors into the list then return the response
+				response.Success = false;
+				response.Errors = result.Errors.Select(error => error.Description).ToArray();
+				return response;
+			}
+
+			//Add the user to the User role
+			IdentityResult addRoleResult = await this._userManager.AddToRoleAsync(newUser, RoleNames._user);
+			
+			if (addRoleResult.Succeeded == false)
+			{
+				//Add errors into the list then return the response
+				response.Success = false;
+				response.Errors = addRoleResult.Errors.Select(error => error.Description).ToArray();
 				return response;
 			}
 			
-			//TODO: Add default roles
-			
-			
-			//Add errors into the list then return the response
-			response.Success = false;
-			response.Errors = result.Errors.Select(error => error.Description).ToArray();
+			//Generate a confirmation token for the user and return the response
+			response.Success = true;
+			response.ConfirmationLink = await this._userManager.GenerateEmailConfirmationTokenAsync(newUser); //Temporarily store the token in the confirmation link property
 			return response;
 		}
 

@@ -110,7 +110,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5029),
+                            CreatedDate = new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2175),
                             Name = "Laptops",
                             Summary = "Explore our range of laptops."
                         },
@@ -118,7 +118,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 2,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5085),
+                            CreatedDate = new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2299),
                             Name = "Phones",
                             Summary = "Discover the latest smartphones."
                         },
@@ -126,7 +126,7 @@ namespace Ecommerce.Persistence.Migrations
                         {
                             Id = 3,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5088),
+                            CreatedDate = new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2303),
                             Name = "Tablets",
                             Summary = "Browse our collection of tablets."
                         });
@@ -332,7 +332,8 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(500)
+                        .HasColumnType("varchar(500)");
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
@@ -347,8 +348,8 @@ namespace Ecommerce.Persistence.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<double>("Price")
                         .HasColumnType("double");
@@ -376,7 +377,7 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5166),
+                            CreatedDate = new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2379),
                             Description = "This is a killer laptop that can handle all your home needs",
                             ImageUrl = "https://smith-ecommerce-app.s3.amazonaws.com/laptop1.jpg",
                             Name = "Laptop 1",
@@ -389,7 +390,7 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5171),
+                            CreatedDate = new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2385),
                             Description = "This is a killer laptop that can handle all your home needs",
                             ImageUrl = "https://smith-ecommerce-app.s3.amazonaws.com/laptop2.jpg",
                             Name = "Laptop 2",
@@ -402,7 +403,7 @@ namespace Ecommerce.Persistence.Migrations
                             AverageRating = 0m,
                             CategoryId = 1,
                             CreatedBy = "Harold",
-                            CreatedDate = new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5175),
+                            CreatedDate = new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2389),
                             Description = "This is a killer laptop that can handle all your home needs",
                             ImageUrl = "https://smith-ecommerce-app.s3.amazonaws.com/laptop3.jpg",
                             Name = "Laptop 3",

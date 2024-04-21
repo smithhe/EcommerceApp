@@ -1,3 +1,6 @@
+using System;
+using Ecommerce.Domain.Constants;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Persistence
@@ -9,7 +12,7 @@ namespace Ecommerce.Persistence
             dbContext.Database.Migrate();
         }
 
-        public static void PostMigrationUpdates(EcommercePersistenceDbContext dbContext)
+        public static void PostMigrationUpdates(EcommercePersistenceDbContext dbContext, RoleManager<IdentityRole<Guid>> roleManager)
         {
             // Create the event to delete the OrderKey records older than 3 hours
             dbContext.Database.ExecuteSqlRaw(
@@ -19,6 +22,36 @@ namespace Ecommerce.Persistence
                     DO
                     DELETE FROM OrderKey WHERE CreatedAt < (NOW() - INTERVAL 3 HOUR);
                 """);
+            
+            
+            // Add roles to the database
+            if (roleManager.RoleExistsAsync(RoleNames._admin).Result == false)
+            {
+                IdentityRole<Guid> role = new IdentityRole<Guid>
+                {
+                    Name = RoleNames._admin
+                };
+                IdentityResult roleResult = roleManager.CreateAsync(role).Result;
+
+                if (roleResult.Succeeded == false)
+                {
+                    Console.WriteLine("Failed to create the admin role.");
+                }
+            }
+
+            if (roleManager.RoleExistsAsync(RoleNames._user).Result == false)
+            {
+                IdentityRole<Guid> role = new IdentityRole<Guid>
+                {
+                    Name = RoleNames._user
+                };
+                IdentityResult roleResult = roleManager.CreateAsync(role).Result;
+                
+                if (roleResult.Succeeded == false)
+                {
+                    Console.WriteLine("Failed to create the user role.");
+                }
+            }
         }
     }
 }

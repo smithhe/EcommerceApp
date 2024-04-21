@@ -229,8 +229,8 @@ namespace Ecommerce.Persistence.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    Description = table.Column<string>(type: "longtext", nullable: false),
+                    Name = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
+                    Description = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false),
                     Price = table.Column<double>(type: "double", nullable: false),
                     AverageRating = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     QuantityAvailable = table.Column<int>(type: "int", nullable: false),
@@ -381,9 +381,9 @@ namespace Ecommerce.Persistence.Migrations
                 columns: new[] { "Id", "CreatedBy", "CreatedDate", "LastModifiedBy", "LastModifiedDate", "Name", "Summary" },
                 values: new object[,]
                 {
-                    { 1, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5029), null, null, "Laptops", "Explore our range of laptops." },
-                    { 2, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5085), null, null, "Phones", "Discover the latest smartphones." },
-                    { 3, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5088), null, null, "Tablets", "Browse our collection of tablets." }
+                    { 1, "Harold", new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2175), null, null, "Laptops", "Explore our range of laptops." },
+                    { 2, "Harold", new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2299), null, null, "Phones", "Discover the latest smartphones." },
+                    { 3, "Harold", new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2303), null, null, "Tablets", "Browse our collection of tablets." }
                 });
 
             migrationBuilder.InsertData(
@@ -391,9 +391,9 @@ namespace Ecommerce.Persistence.Migrations
                 columns: new[] { "Id", "AverageRating", "CategoryId", "CreatedBy", "CreatedDate", "Description", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Name", "Price", "QuantityAvailable" },
                 values: new object[,]
                 {
-                    { 1, 0m, 1, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5166), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop1.jpg", null, null, "Laptop 1", 299.99000000000001, 5 },
-                    { 2, 0m, 1, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5171), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop2.jpg", null, null, "Laptop 2", 499.99000000000001, 5 },
-                    { 3, 0m, 1, "Harold", new DateTime(2024, 4, 8, 23, 54, 50, 815, DateTimeKind.Local).AddTicks(5175), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop3.jpg", null, null, "Laptop 3", 999.99000000000001, 5 }
+                    { 1, 0m, 1, "Harold", new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2379), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop1.jpg", null, null, "Laptop 1", 299.99000000000001, 5 },
+                    { 2, 0m, 1, "Harold", new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2385), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop2.jpg", null, null, "Laptop 2", 499.99000000000001, 5 },
+                    { 3, 0m, 1, "Harold", new DateTime(2024, 4, 21, 12, 30, 10, 883, DateTimeKind.Unspecified).AddTicks(2389), "This is a killer laptop that can handle all your home needs", "https://smith-ecommerce-app.s3.amazonaws.com/laptop3.jpg", null, null, "Laptop 3", 999.99000000000001, 5 }
                 });
 
             migrationBuilder.CreateIndex(
