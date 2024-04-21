@@ -162,10 +162,11 @@ namespace Ecommerce.Persistence.Repositories
 		/// <returns>
 		/// A <c>IEnumerable</c> of all <see cref="CartItem"/> entities found;
 		/// A empty <c>IEnumerable</c> if none are found.
+		/// <c>null</c> if an error occurs.
 		/// </returns>
-		public async Task<IEnumerable<CartItem>> ListAllAsync(Guid userId)
+		public async Task<IEnumerable<CartItem>?> ListAllAsync(Guid userId)
 		{
-			IEnumerable<CartItem> cartItems = Array.Empty<CartItem>();
+			IEnumerable<CartItem> cartItems;
 			
 			try
 			{
@@ -174,6 +175,7 @@ namespace Ecommerce.Persistence.Repositories
 			catch (Exception e)
 			{
 				this._logger.LogError(e, $"SQL Error when fetching all CartItem rows for User {userId}");
+				return null;
 			}
 
 			return cartItems;

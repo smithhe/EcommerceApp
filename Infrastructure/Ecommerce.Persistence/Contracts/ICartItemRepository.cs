@@ -17,8 +17,9 @@ namespace Ecommerce.Persistence.Contracts
 		/// <returns>
 		/// A <c>IEnumerable</c> of all <see cref="CartItem"/> entities found;
 		/// A empty <c>IEnumerable</c> if none are found.
+		/// <c>null</c> if an error occurs.
 		/// </returns>
-		Task<IEnumerable<CartItem>> ListAllAsync(Guid userId);
+		Task<IEnumerable<CartItem>?> ListAllAsync(Guid userId);
 
 		/// <summary>
 		/// Removes all <see cref="CartItem"/> entities from the database for a <see cref="EcommerceUser"/>.

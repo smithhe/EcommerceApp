@@ -346,11 +346,11 @@ namespace Ecommerce.UnitTests.PersistenceTests
             CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), this._dbContext);
 
             // Act
-            IEnumerable<CartItem> result = await repository.ListAllAsync(_userId);
+            IEnumerable<CartItem>? result = await repository.ListAllAsync(_userId);
 
             // Assert
             Assert.That(result, Is.Not.Null);
-            Assert.That(result.Count, Is.EqualTo(2));
+            Assert.That(result!.Count, Is.EqualTo(2));
         }
 
         [Test]
@@ -362,15 +362,15 @@ namespace Ecommerce.UnitTests.PersistenceTests
             Guid randomUserId = new Guid("f8cdc893-9cd9-40fa-a0a4-5da4003a9b5f");
             
             // Act
-            IEnumerable<CartItem> result = await repository.ListAllAsync(randomUserId);
+            IEnumerable<CartItem>? result = await repository.ListAllAsync(randomUserId);
 
             // Assert
             Assert.That(result, Is.Not.Null);
-            Assert.That(result.Count, Is.EqualTo(0));
+            Assert.That(result!.Count, Is.EqualTo(0));
         }
 
         [Test]
-        public async Task ListAllAsync_WhenExceptionThrown_ShouldReturnEmptyList()
+        public async Task ListAllAsync_WhenExceptionThrown_ShouldReturnNull()
         {
             // Arrange
             DbContextOptions<EcommercePersistenceDbContext> options =
@@ -380,19 +380,17 @@ namespace Ecommerce.UnitTests.PersistenceTests
                     .Options;
 
             Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>(options);
-            Mock<DbSet<CartItem>> mockSet = new Mock<DbSet<CartItem>>();
 
-            mockDbContext.Setup(x => x.CartItems).Returns(mockSet.Object);
+            mockDbContext.Setup(x => x.CartItems).Throws(new Exception());
 
 
             CartItemRepository repository = new CartItemRepository(Mock.Of<ILogger<CartItemRepository>>(), mockDbContext.Object);
 
             // Act
-            IEnumerable<CartItem> result = await repository.ListAllAsync(_userId);
+            IEnumerable<CartItem>? result = await repository.ListAllAsync(_userId);
 
             // Assert
-            Assert.That(result, Is.Not.Null);
-            Assert.That(result.Count, Is.EqualTo(0));
+            Assert.That(result, Is.Null);
         }
 
         #endregion

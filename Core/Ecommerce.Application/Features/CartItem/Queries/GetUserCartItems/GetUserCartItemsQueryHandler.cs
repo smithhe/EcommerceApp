@@ -7,7 +7,6 @@ using Ecommerce.Shared.Responses.CartItem;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Domain.Constants.Entities;
@@ -45,7 +44,7 @@ namespace Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
 		/// A <see cref="GetUserCartItemsResponse"/> with Success being <c>true</c> if any <see cref="CartItem"/> entities were found;
 		/// Success will be <c>false</c> if no <see cref="CartItem"/> entities were found.
 		/// Message will contain the message to display to the user.
-		/// CartItems will contain all <see cref="CartItemDto"/> entities or will be empty if none are found
+		/// CartItems will contain all <see cref="CartItemDto"/> entities or will be empty if none are found or an error occurred.
 		/// </returns>
 		public async Task<GetUserCartItemsResponse> Handle(GetUserCartItemsQuery query, CancellationToken cancellationToken)
 		{
@@ -64,15 +63,17 @@ namespace Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
 			}
 			
 			//Get all the cart items for the user
-			IEnumerable<Domain.Entities.CartItem> cartItems = await this._cartItemRepository.ListAllAsync(query.UserId);
-			response.CartItems = this._mapper.Map<IEnumerable<CartItemDto>>(cartItems);
+			IEnumerable<Domain.Entities.CartItem>? cartItems = await this._cartItemRepository.ListAllAsync(query.UserId);
 
-			//If no cart items were found, update to a failed response
-			if (cartItems.Any() == false)
+			//If cart items were null, update to a failed response
+			if (cartItems == null)
 			{
 				response.Success = false;
 				response.Message = CartItemConstants._getAllItemsErrorMessage;
 			}
+			
+			//Map the cart items to the response
+			response.CartItems = this._mapper.Map<IEnumerable<CartItemDto>>(cartItems);
 
 			//Return the response
 			return response;

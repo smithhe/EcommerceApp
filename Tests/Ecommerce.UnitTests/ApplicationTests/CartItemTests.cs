@@ -849,6 +849,36 @@ namespace Ecommerce.UnitTests.ApplicationTests
         }
 
         [Test]
+        public async Task GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse()
+        {
+            //Arrange
+            GetUserCartItemsQuery query = new GetUserCartItemsQuery
+            {
+                UserId = _userId
+            };
+            
+            GetUserCartItemsQueryHandler handler = new GetUserCartItemsQueryHandler(
+                Mock.Of<ILogger<GetUserCartItemsQueryHandler>>(),
+                this._mapper,
+                this._cartItemRepository.Object
+            );
+
+            this._cartItemRepository.Setup(c => c.ListAllAsync(It.IsAny<Guid>())).ReturnsAsync(new List<CartItem>());
+
+            //Act
+            GetUserCartItemsResponse response = await handler.Handle(query, CancellationToken.None);
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                Assert.That(response, Is.Not.Null);
+                Assert.That(response.Success, Is.True);
+                Assert.That(response.Message, Is.EqualTo(CartItemConstants._getAllItemsSuccessMessage));
+                Assert.That(response.CartItems, Is.Empty);
+            });
+        }
+        
+        [Test]
         public async Task GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse()
         {
             //Arrange
@@ -877,7 +907,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
         }
         
         [Test]
-        public async Task GetUserCartItemsQueryHandler_WhenSqlReturnsAnEmptyList_ReturnsFailedResponse()
+        public async Task GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse()
         {
             //Arrange
             GetUserCartItemsQuery query = new GetUserCartItemsQuery
@@ -891,7 +921,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 this._cartItemRepository.Object
             );
 
-            this._cartItemRepository.Setup(c => c.ListAllAsync(It.IsAny<Guid>())).ReturnsAsync(new List<CartItem>());
+            this._cartItemRepository.Setup(c => c.ListAllAsync(It.IsAny<Guid>())).ReturnsAsync((IEnumerable<CartItem>?)null);
 
             //Act
             GetUserCartItemsResponse response = await handler.Handle(query, CancellationToken.None);
