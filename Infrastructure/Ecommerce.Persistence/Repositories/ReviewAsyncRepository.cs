@@ -164,10 +164,11 @@ namespace Ecommerce.Persistence.Repositories
 		/// <returns>
 		/// A <c>IEnumerable</c> of all <see cref="Review"/> entities found;
 		/// A empty <c>IEnumerable</c> if none are found.
+		/// <c>null</c> if an error occurs.
 		/// </returns>
-		public async Task<IEnumerable<Review>> ListAllAsync(int productId)
+		public async Task<IEnumerable<Review>?> ListAllAsync(int productId)
 		{
-			IEnumerable<Review> reviews = Array.Empty<Review>();
+			IEnumerable<Review> reviews;
 			
 			try
 			{
@@ -176,6 +177,7 @@ namespace Ecommerce.Persistence.Repositories
 			catch (Exception e)
 			{
 				this._logger.LogError(e, $"SQL Error when fetching all Review rows for Product {productId}");
+				return null;
 			}
 
 			return reviews;
@@ -188,11 +190,12 @@ namespace Ecommerce.Persistence.Repositories
 		/// <param name="productId">The unique identifier of the <see cref="Product"/></param>
 		/// <returns>
 		/// The <see cref="Review"/> if found;
-		/// <c>null</c> if no <see cref="Review"/> with the specified UserId and ProductId is found.
+		/// A new <see cref="Review"/> with an ID of -1 if no <see cref="Review"/> with the specified UserId and ProductId is found.
+		/// <c>null</c> if an error occurs.
 		/// </returns>
 		public async Task<Review?> GetUserReviewForProduct(string userName, int productId)
 		{
-			Review? review = null;
+			Review? review;
 			
 			try
 			{
@@ -201,6 +204,12 @@ namespace Ecommerce.Persistence.Repositories
 			catch (Exception e)
 			{
 				this._logger.LogError(e, $"SQL Error when fetching Review row for user {userName} on product {productId}");
+				return null;
+			}
+			
+			if (review == null)
+			{
+				review = new Review { Id = -1 };
 			}
 
 			return review;

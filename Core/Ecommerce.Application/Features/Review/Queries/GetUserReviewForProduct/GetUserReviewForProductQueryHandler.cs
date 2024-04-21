@@ -71,9 +71,14 @@ namespace Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
 				response.Message = ReviewConstants._getUserReviewErrorMessage;
 				return response;
 			}
+			
+			//Check if the review has -1 for the ID
+			if (review.Id != -1)
+			{
+				response.UserReview = this._mapper.Map<ReviewDto>(review);
+			}
 
-			//Return the review
-			response.UserReview = this._mapper.Map<ReviewDto>(review);
+			//Return the response
 			return response;
 		}
 	}

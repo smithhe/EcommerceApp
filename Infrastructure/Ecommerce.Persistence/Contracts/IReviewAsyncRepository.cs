@@ -16,8 +16,9 @@ namespace Ecommerce.Persistence.Contracts
 		/// <returns>
 		/// A <c>IEnumerable</c> of all <see cref="Review"/> entities found;
 		/// A empty <c>IEnumerable</c> if none are found.
+		/// <c>null</c> if an error occurs.
 		/// </returns>
-		Task<IEnumerable<Review>> ListAllAsync(int productId);
+		Task<IEnumerable<Review>?> ListAllAsync(int productId);
 
 		/// <summary>
 		/// Retrieves a <see cref="Review"/> from the database with the specified UserId and ProductId
@@ -26,7 +27,8 @@ namespace Ecommerce.Persistence.Contracts
 		/// <param name="productId">The unique identifier of the <see cref="Product"/></param>
 		/// <returns>
 		/// The <see cref="Review"/> if found;
-		/// <c>null</c> if no <see cref="Review"/> with the specified UserId and ProductId is found.
+		/// A new <see cref="Review"/> with an ID of -1 if no <see cref="Review"/> with the specified UserId and ProductId is found.
+		/// <c>null</c> if an error occurs.
 		/// </returns>
 		Task<Review?> GetUserReviewForProduct(string userName, int productId);
 

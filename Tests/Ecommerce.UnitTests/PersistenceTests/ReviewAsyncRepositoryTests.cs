@@ -336,7 +336,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
 
             // Act
-            IEnumerable<Review> result = await repository.ListAllAsync(1);
+            IEnumerable<Review>? result = await repository.ListAllAsync(1);
 
             // Assert
             Assert.That(result, Is.Not.Empty);
@@ -350,14 +350,14 @@ namespace Ecommerce.UnitTests.PersistenceTests
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
 
             // Act
-            IEnumerable<Review> result = await repository.ListAllAsync(3);
+            IEnumerable<Review>? result = await repository.ListAllAsync(3);
 
             // Assert
             Assert.That(result, Is.Empty);
         }
         
         [Test]
-        public async Task ListAllAsync_WhenExceptionThrown_ReturnsEmpty()
+        public async Task ListAllAsync_WhenExceptionThrown_ReturnsNull()
         {
             // Arrange
             DbContextOptions<EcommercePersistenceDbContext> options =
@@ -367,17 +367,16 @@ namespace Ecommerce.UnitTests.PersistenceTests
                     .Options;
             
             Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>(options);
-            Mock<DbSet<Review>> mockSet = new Mock<DbSet<Review>>();
-            
-            mockDbContext.Setup(x => x.Reviews).Returns(mockSet.Object);
+
+            mockDbContext.Setup(x => x.Reviews).Throws(new Exception());
             
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), mockDbContext.Object);
             
             // Act
-            IEnumerable<Review> result = await repository.ListAllAsync(1);
+            IEnumerable<Review>? result = await repository.ListAllAsync(1);
 
             // Assert
-            Assert.That(result, Is.Empty);
+            Assert.That(result, Is.Null);
         }
 
         #endregion
@@ -398,7 +397,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
         }
         
         [Test]
-        public async Task GetUserReviewForProduct_WhenReviewDoesNotExist_ReturnsNull()
+        public async Task GetUserReviewForProduct_WhenReviewDoesNotExist_ReturnsReviewWithNegativeOneId()
         {
             // Arrange
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), this._dbContext);
@@ -407,7 +406,8 @@ namespace Ecommerce.UnitTests.PersistenceTests
             Review? result = await repository.GetUserReviewForProduct(_userName, 3);
 
             // Assert
-            Assert.That(result, Is.Null);
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result!.Id, Is.EqualTo(-1));
         }
         
         [Test]
@@ -421,9 +421,8 @@ namespace Ecommerce.UnitTests.PersistenceTests
                     .Options;
             
             Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>(options);
-            Mock<DbSet<Review>> mockSet = new Mock<DbSet<Review>>();
             
-            mockDbContext.Setup(x => x.Reviews).Returns(mockSet.Object);
+            mockDbContext.Setup(x => x.Reviews).Throws(new Exception());
             
             ReviewAsyncRepository repository = new ReviewAsyncRepository(Mock.Of<ILogger<ReviewAsyncRepository>>(), mockDbContext.Object);
             

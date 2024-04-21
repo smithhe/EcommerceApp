@@ -798,6 +798,31 @@ namespace Ecommerce.UnitTests.ApplicationTests
             //Assert
             Assert.Multiple(() =>
             {
+                Assert.That(result.Success, Is.True);
+                Assert.That(result.Message, Is.EqualTo(ReviewConstants._getAllSuccessMessage));
+                Assert.That(result.Reviews, Is.Empty);
+            });
+        }
+        
+        [Test]
+        public async Task GetReviewsForProductQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse()
+        {
+            //Arrange
+            GetReviewsForProductQuery query = new GetReviewsForProductQuery
+            {
+                ProductId = 1
+            };
+            
+            this._reviewRepository.Setup(r => r.ListAllAsync(It.IsAny<int>())).ReturnsAsync((IEnumerable<Review>?)null);
+
+            GetReviewsForProductQueryHandler handler = new GetReviewsForProductQueryHandler(Mock.Of<ILogger<GetReviewsForProductQueryHandler>>(),this._mapper, this._reviewRepository.Object);
+            
+            //Act
+            GetReviewsForProductResponse result = await handler.Handle(query, CancellationToken.None);
+            
+            //Assert
+            Assert.Multiple(() =>
+            {
                 Assert.That(result.Success, Is.False);
                 Assert.That(result.Message, Is.EqualTo(ReviewConstants._getAllErrorMessage));
                 Assert.That(result.Reviews, Is.Empty);
@@ -883,7 +908,33 @@ namespace Ecommerce.UnitTests.ApplicationTests
         }
         
         [Test]
-        public async Task GetUserReviewForProductQueryHandler_WithNoReview_ReturnsFailedResponse()
+        public async Task GetUserReviewForProductQueryHandler_WithNoReview_ReturnsSuccessWithNullReviewResponse()
+        {
+            //Arrange
+            GetUserReviewForProductQuery query = new GetUserReviewForProductQuery
+            {
+                UserName = _userName,
+                ProductId = 1
+            };
+            
+            this._reviewRepository.Setup(r => r.GetUserReviewForProduct(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(new Review { Id = -1});
+
+            GetUserReviewForProductQueryHandler handler = new GetUserReviewForProductQueryHandler(Mock.Of<ILogger<GetUserReviewForProductQueryHandler>>(),this._mapper, this._reviewRepository.Object);
+            
+            //Act
+            GetUserReviewForProductResponse result = await handler.Handle(query, CancellationToken.None);
+            
+            //Assert
+            Assert.Multiple(() =>
+            {
+                Assert.That(result.Success, Is.True);
+                Assert.That(result.Message, Is.EqualTo(ReviewConstants._getUserReviewSuccessMessage));
+                Assert.That(result.UserReview, Is.Null);
+            });
+        }
+        
+        [Test]
+        public async Task GetUserReviewForProductQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse()
         {
             //Arrange
             GetUserReviewForProductQuery query = new GetUserReviewForProductQuery
