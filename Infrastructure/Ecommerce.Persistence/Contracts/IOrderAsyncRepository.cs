@@ -17,7 +17,8 @@ namespace Ecommerce.Persistence.Contracts
 		/// <returns>
 		/// A <c>IEnumerable</c> of all <see cref="Order"/> entities found;
 		/// A empty <c>IEnumerable</c> if none are found.
+		/// <c>null</c> if an error occurs.
 		/// </returns>
-		Task<IEnumerable<Order>> ListAllAsync(Guid userId);
+		Task<IEnumerable<Order>?> ListAllAsync(Guid userId);
 	}
 }

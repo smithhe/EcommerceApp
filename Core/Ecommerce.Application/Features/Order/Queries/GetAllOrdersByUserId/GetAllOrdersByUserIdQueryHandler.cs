@@ -47,7 +47,7 @@ namespace Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId
 		/// A <see cref="GetAllOrdersByUserIdResponse"/> with Success being <c>true</c> if any <see cref="Order"/> entities were found;
 		/// Success will be <c>false</c> if no <see cref="Order"/> entities were found.
 		/// Message will contain the message to display to the user.
-		/// Orders will contain all <see cref="Order"/> entities or will be empty if none are found.
+		/// Orders will contain all <see cref="Order"/> entities or will be empty if none are found or an error occurred.
 		/// </returns>
 		public async Task<GetAllOrdersByUserIdResponse> Handle(GetAllOrdersByUserIdQuery query, CancellationToken cancellationToken)
 		{
@@ -66,18 +66,18 @@ namespace Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId
 			}
 			
 			//Get all orders for the user
-			IEnumerable<Domain.Entities.Order> orders = await this._orderAsyncRepository.ListAllAsync(query.UserId);
-			
-			//Filter out orders in a created or pending status
-			orders = orders.Where(o => o.Status != OrderStatus.Created && o.Status != OrderStatus.Pending);
+			IEnumerable<Domain.Entities.Order>? orders = await this._orderAsyncRepository.ListAllAsync(query.UserId);
 
-			//No orders found
-			if (orders.Any() == false)
+			//Sql error occurred
+			if (orders == null)
 			{
 				response.Success = false;
 				response.Message = OrderConstants._getAllOrdersErrorMessage;
 				return response;
 			}
+			
+			//Filter out orders in a created or pending status
+			orders = orders.Where(o => o.Status != OrderStatus.Created && o.Status != OrderStatus.Pending);
 
 			//Map the orders and return the response
 			response.Orders = this._mapper.Map<IEnumerable<OrderDto>>(orders);

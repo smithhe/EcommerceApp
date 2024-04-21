@@ -789,7 +789,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
         }
         
         [Test]
-        public async Task GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsFailedResponse()
+        public async Task GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse()
         {
             //Arrange
             this._orderRepository.Setup(o => o.ListAllAsync(It.IsAny<Guid>())).ReturnsAsync(new List<Order>());
@@ -806,21 +806,46 @@ namespace Ecommerce.UnitTests.ApplicationTests
             //Assert
             Assert.Multiple(() =>
             {
-                Assert.That(result.Success, Is.False);
-                Assert.That(result.Message, Is.EqualTo(OrderConstants._getAllOrdersErrorMessage));
+                Assert.That(result.Success, Is.True);
+                Assert.That(result.Message, Is.EqualTo(OrderConstants._getAllOrdersSuccessMessage));
                 Assert.That(result.Orders, Is.Empty);
                 Assert.That(result.ValidationErrors, Is.Empty);
             });
         }
         
         [Test]
-        public async Task GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsFailedResponse()
+        public async Task GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse()
         {
             //Arrange
             this._orderRepository.Setup(o => o.ListAllAsync(It.IsAny<Guid>())).ReturnsAsync(new List<Order>
             {
                 this._order
             });
+            
+            GetAllOrdersByUserIdQuery query = new GetAllOrdersByUserIdQuery
+            {
+                UserId = _userId
+            };
+            GetAllOrdersByUserIdQueryHandler handler = new GetAllOrdersByUserIdQueryHandler(Mock.Of<ILogger<GetAllOrdersByUserIdQueryHandler>>(), this._mapper, this._orderRepository.Object);
+            
+            //Act
+            GetAllOrdersByUserIdResponse result = await handler.Handle(query, CancellationToken.None);
+            
+            //Assert
+            Assert.Multiple(() =>
+            {
+                Assert.That(result.Success, Is.True);
+                Assert.That(result.Message, Is.EqualTo(OrderConstants._getAllOrdersSuccessMessage));
+                Assert.That(result.Orders, Is.Empty);
+                Assert.That(result.ValidationErrors, Is.Empty);
+            });
+        }
+        
+        [Test]
+        public async Task GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse()
+        {
+            //Arrange
+            this._orderRepository.Setup(o => o.ListAllAsync(It.IsAny<Guid>())).ReturnsAsync((IEnumerable<Order>?) null);
             
             GetAllOrdersByUserIdQuery query = new GetAllOrdersByUserIdQuery
             {

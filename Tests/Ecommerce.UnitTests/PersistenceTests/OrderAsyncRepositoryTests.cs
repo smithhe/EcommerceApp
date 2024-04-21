@@ -348,7 +348,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
             OrderAsyncRepository repository = new OrderAsyncRepository(Mock.Of<ILogger<OrderAsyncRepository>>(), this._dbContext);
 
             // Act
-            IEnumerable<Order> result = await repository.ListAllAsync(_userId);
+            IEnumerable<Order>? result = await repository.ListAllAsync(_userId);
 
             // Assert
             Assert.That(result, Is.Not.Empty);
@@ -364,7 +364,7 @@ namespace Ecommerce.UnitTests.PersistenceTests
             Guid randomUserId = new Guid("f8cdc893-9cd9-40fa-a0a4-5da4003a9b5f");
 
             // Act
-            IEnumerable<Order> result = await repository.ListAllAsync(randomUserId);
+            IEnumerable<Order>? result = await repository.ListAllAsync(randomUserId);
 
             // Assert
             Assert.That(result, Is.Empty);
@@ -381,17 +381,16 @@ namespace Ecommerce.UnitTests.PersistenceTests
                     .Options;
 
             Mock<EcommercePersistenceDbContext> mockDbContext = new Mock<EcommercePersistenceDbContext>(options);
-            Mock<DbSet<Order>> mockSet = new Mock<DbSet<Order>>();
 
-            mockDbContext.Setup(x => x.Orders).Returns(mockSet.Object);
+            mockDbContext.Setup(x => x.Orders).Throws(new Exception());
 
             OrderAsyncRepository repository = new OrderAsyncRepository(Mock.Of<ILogger<OrderAsyncRepository>>(), mockDbContext.Object);
 
             // Act
-            IEnumerable<Order> result = await repository.ListAllAsync(_userId);
+            IEnumerable<Order>? result = await repository.ListAllAsync(_userId);
 
             // Assert
-            Assert.That(result, Is.Empty);
+            Assert.That(result, Is.Null);
         }
 
         #endregion

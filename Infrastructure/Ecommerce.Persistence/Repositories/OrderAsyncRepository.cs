@@ -164,10 +164,11 @@ namespace Ecommerce.Persistence.Repositories
 		/// <returns>
 		/// A <c>IEnumerable</c> of all <see cref="Order"/> entities found;
 		/// A empty <c>IEnumerable</c> if none are found.
+		/// <c>null</c> if an error occurs.
 		/// </returns>
-		public async Task<IEnumerable<Order>> ListAllAsync(Guid userId)
+		public async Task<IEnumerable<Order>?> ListAllAsync(Guid userId)
 		{
-			IEnumerable<Order> orders = Array.Empty<Order>();
+			IEnumerable<Order> orders;
 			
 			try
 			{
@@ -176,6 +177,7 @@ namespace Ecommerce.Persistence.Repositories
 			catch (Exception e)
 			{
 				this._logger.LogError(e, $"SQL Error when fetching all Orders rows for User {userId}");
+				return null;
 			}
 
 			return orders;
