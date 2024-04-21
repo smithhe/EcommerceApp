@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Identity.Contracts;
@@ -44,16 +45,31 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		public override async Task HandleAsync(AuthenticationRequest req, CancellationToken ct)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling Login Request");
 			
 			//Attempt a login
-			AuthenticateResponse response = await this._authenticationService.AuthenticateAsync(req);
+			AuthenticateResponse response;
+			try
+			{
+				response = await this._authenticationService.AuthenticateAsync(req);
+			}
+			catch (Exception e)
+			{
+				//Log the exception
+				this._logger.LogError(e, "An error occurred while attempting to login a User");
+				await this.SendAsync(new AuthenticateResponse { SignInResult = SignInResponseResult.UnexpectedError},
+					500, ct);
+				return;
+			}
 
+			//Check if the login failed
 			if (response.SignInResult == SignInResponseResult.InvalidCredentials)
 			{
 				await this.SendUnauthorizedAsync(ct);
 			}
 			
+			//Check if the account is locked or not allowed
 			if (response.SignInResult == SignInResponseResult.AccountLocked || response.SignInResult == SignInResponseResult.AccountNotAllowed)
 			{
 				await this.SendForbiddenAsync(ct);

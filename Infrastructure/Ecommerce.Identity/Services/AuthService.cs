@@ -263,7 +263,7 @@ namespace Ecommerce.Identity.Services
 			//Check if the user was found
 			if (user == null)
 			{
-				return new ConfirmEmailResponse { Success = false, Message = "User Not Found" };
+				return new ConfirmEmailResponse { Success = false, Message = EcommerceUserConstants._confirmEmailErrorMessage };
 			}
 
 			//Attempt to confirm the email
@@ -271,8 +271,8 @@ namespace Ecommerce.Identity.Services
 
 			//Return the response
 			return result.Succeeded ? 
-				new ConfirmEmailResponse { Success = true, Message = "Email Confirmed" } 
-				: new ConfirmEmailResponse { Success = false, Message = "Email Confirmation Failed" };
+				new ConfirmEmailResponse { Success = true, Message = EcommerceUserConstants._confirmEmailSuccessMessage } 
+				: new ConfirmEmailResponse { Success = false, Message = EcommerceUserConstants._confirmEmailErrorMessage };
 		}
 		
 		/// <summary>

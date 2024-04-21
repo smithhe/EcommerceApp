@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.FastEndpoints.Contracts;
@@ -45,6 +46,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		public override async Task HandleAsync(LogoutUserRequest req, CancellationToken ct)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling Logout Request");
 			
 			//Check if token is valid
@@ -63,7 +65,17 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 			}
 			
 			//Logout the user
-			await this._authenticationService.LogoutAsync(req.UserName);
+			try
+			{
+				await this._authenticationService.LogoutAsync(req.UserName);
+			}
+			catch (Exception e)
+			{
+				//Log the exception
+				this._logger.LogError(e, "An error occurred while registering a new User");
+				await this.SendAsync(500, cancellation: ct);
+				return;
+			}
 
 			//Send success response
 			await this.SendOkAsync(ct);

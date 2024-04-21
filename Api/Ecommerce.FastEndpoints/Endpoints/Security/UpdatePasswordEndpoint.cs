@@ -48,6 +48,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
         /// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
         public override async Task HandleAsync(UpdatePasswordRequest req, CancellationToken ct)
         {
+            //Log the request
             this._logger.LogInformation("Handling Update User Password Request");
             
             //Check if token is valid

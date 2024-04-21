@@ -7,6 +7,7 @@ namespace Ecommerce.Shared.Security
         AccountLocked,
         AccountNotAllowed,
         EmailNotConfirmed,
-        TwoFactorRequired
+        TwoFactorRequired,
+        UnexpectedError
     }
 }

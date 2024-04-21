@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Shared.Security.Requests;
@@ -54,6 +55,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		public override async Task HandleAsync(UpdateEcommerceUserRequest req, CancellationToken ct)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling Update User Request");
 			
 			//Check if token is valid
@@ -71,7 +73,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 			if (userId == null)
 			{
 				await this.SendOkAsync(new UpdateEcommerceUserResponse 
-					{ Success = false, Message = "User to update was not found" }, 
+					{ Success = false, Message = EcommerceUserConstants._updateUserErrorMessage }, 
 					ct);
 				return;
 			}
@@ -92,13 +94,13 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 			catch (Exception e)
 			{
 				//Unexpected error
-				this._logger.LogError(e, "Error when attempting to update review");
+				this._logger.LogError(e, "Error when attempting to update a user");
 				await this.SendAsync(new UpdateEcommerceUserResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
 			}
 
-			//Send the response object
+			//Send the response
 			await this.SendOkAsync(response, ct);
 		}
 	}
