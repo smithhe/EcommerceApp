@@ -45,9 +45,10 @@ namespace Ecommerce.FastEndpoints.Endpoints.Product
 		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
 		public override async Task HandleAsync(GetProductByIdApiRequest req, CancellationToken ct)
 		{
+			//Log the request
 			this._logger.LogInformation("Handling Get Product By Id Request");
-			GetProductByIdResponse response;
 			
+			GetProductByIdResponse response;
 			try
 			{
 				//Send the query
@@ -61,7 +62,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Product
 				return;
 			}
 
-			//Send the response object
+			//Send the response
 			await this.SendOkAsync(response, ct);
 		}
 	}
