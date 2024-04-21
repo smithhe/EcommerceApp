@@ -58,7 +58,8 @@ namespace Ecommerce.UI.Services
 				{
 					return new LoginResponse { IsSuccessful = false, Message = "Invalid Credentials" };
 				}
-				else if (apiResponse.StatusCode == HttpStatusCode.Forbidden)
+
+				if (apiResponse.StatusCode == HttpStatusCode.Forbidden)
 				{
 					return new LoginResponse { IsSuccessful = false, Message = "Account is Locked or Disabled" };
 				}
@@ -74,9 +75,14 @@ namespace Ecommerce.UI.Services
 			if (response.SignInResult == SignInResponseResult.TwoFactorRequired)
 			{
 				//TODO: Implement Two Factor Authentication
-				return new LoginResponse {IsSuccessful = true, Message = "Two Factor Authentication Required"};
+				return new LoginResponse { IsSuccessful = true, Message = "Two Factor Authentication Required" };
 			}
-			
+
+			if (response.SignInResult == SignInResponseResult.EmailNotConfirmed)
+			{
+				return new LoginResponse { IsSuccessful = false, Message = "Email Confirmation Required" };
+			}
+
 			//Store the access token on browser storage
 			await this._localStorageService.SetItemAsync(this._authTokenStorageKey, response.Token);
 				
