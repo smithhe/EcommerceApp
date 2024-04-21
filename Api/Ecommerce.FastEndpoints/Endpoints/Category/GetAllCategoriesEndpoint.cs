@@ -6,6 +6,7 @@ using Ecommerce.Shared.Requests.Category;
 using Ecommerce.Shared.Responses.Category;
 using FastEndpoints;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.Category
@@ -36,6 +37,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Category
 		{
 			this.Get("/api/category/all");
 			this.AllowAnonymous();
+			this.Options(o => o.WithTags("Category"));
 		}
 
 		/// <summary>

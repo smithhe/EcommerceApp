@@ -13,6 +13,7 @@ using Ecommerce.Shared.Responses.Order;
 using Ecommerce.Shared.Responses.PayPal;
 using FastEndpoints;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.Order
@@ -46,6 +47,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 		{
 			this.Post("/api/order/create");
 			this.Policies(PolicyNames._generalPolicy);
+			this.Options(o => o.WithTags("Order"));
 		}
 
 		/// <summary>

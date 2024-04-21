@@ -37,6 +37,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.PayPal
         {
             this.Get("/api/paypal/checkout/cancel/{returnKey}");
             this.AllowAnonymous();
+            this.Tags("PayPal");
         }
 
         /// <summary>

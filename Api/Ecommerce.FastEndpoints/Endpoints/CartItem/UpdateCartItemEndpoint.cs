@@ -8,6 +8,7 @@ using Ecommerce.Shared.Requests.CartItem;
 using Ecommerce.Shared.Responses.CartItem;
 using FastEndpoints;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.CartItem
@@ -41,6 +42,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.CartItem
 		{
 			this.Put("/api/cartitem/update");
 			this.Policies(PolicyNames._generalPolicy);
+			this.Options(o => o.WithTags("Cart Item"));
 		}
 
 		/// <summary>

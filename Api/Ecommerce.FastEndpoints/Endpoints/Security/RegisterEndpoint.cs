@@ -6,6 +6,7 @@ using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
 using FastEndpoints;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
@@ -40,6 +41,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 		{
 			this.Post("/api/register");
 			this.AllowAnonymous();
+			this.Options(o => o.WithTags("Security"));
 		}
 
 		/// <summary>

@@ -6,10 +6,14 @@ using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
 using FastEndpoints;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.Security
 {
+    /// <summary>
+    /// A Fast Endpoint implementation that handles confirming a User's email address
+    /// </summary>
     public class ConfirmEmailEndpoint : Endpoint<ConfirmEmailRequest, ConfirmEmailResponse>
     {
         private readonly ILogger<ConfirmEmailEndpoint> _logger;
@@ -33,6 +37,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
         {
             this.Post("/api/user/confirm-email");
             this.AllowAnonymous();
+            this.Options(o => o.WithTags("Security"));
         }
 
         /// <summary>

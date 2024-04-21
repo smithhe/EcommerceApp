@@ -2,6 +2,7 @@ using System;
 using Ecommerce.FastEndpoints;
 using Ecommerce.Persistence;
 using FastEndpoints;
+using FastEndpoints.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -43,7 +44,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 // Add FastEndpoints
-app.UseFastEndpoints();
+app.UseFastEndpoints().UseSwaggerGen();
 
 app.MapControllers();
 

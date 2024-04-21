@@ -3,6 +3,9 @@
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
+        
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>CS1591</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,17 +17,7 @@
       <ProjectReference Include="..\..\Core\Ecommerce.Application\Ecommerce.Application.csproj" />
       <ProjectReference Include="..\..\Core\Ecommerce.Shared\Ecommerce.Shared.csproj" />
       <ProjectReference Include="..\..\Infrastructure\Ecommerce.Identity\Ecommerce.Identity.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\..\Core\Ecommerce.Shared\Ecommerce.Shared.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Endpoints\" />
-    </ItemGroup>
-
-
-
 
 </Project>

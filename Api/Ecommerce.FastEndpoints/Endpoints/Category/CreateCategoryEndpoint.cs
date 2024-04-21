@@ -8,6 +8,7 @@ using Ecommerce.Shared.Requests.Category;
 using Ecommerce.Shared.Responses.Category;
 using FastEndpoints;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.Category
@@ -41,6 +42,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Category
 		{
 			this.Post("/api/category/create");
 			this.Policies(PolicyNames._adminPolicy);
+			this.Options(o => o.WithTags("Category"));
 		}
 
 		/// <summary>

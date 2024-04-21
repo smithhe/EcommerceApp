@@ -7,6 +7,7 @@ using Ecommerce.Shared.Security.Requests;
 using Ecommerce.Shared.Security.Responses;
 using FastEndpoints;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.Security
@@ -40,6 +41,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
         {
             this.Put("/api/password/update");
             this.Policies(PolicyNames._generalPolicy);
+            this.Options(o => o.WithTags("Security"));
         }
 
         /// <summary>

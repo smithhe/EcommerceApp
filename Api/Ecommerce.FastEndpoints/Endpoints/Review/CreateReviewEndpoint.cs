@@ -8,6 +8,7 @@ using Ecommerce.Shared.Requests.Review;
 using Ecommerce.Shared.Responses.Review;
 using FastEndpoints;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.Review
@@ -41,6 +42,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Review
 		{
 			this.Post("/api/review/create");
 			this.Policies(PolicyNames._generalPolicy);
+			this.Options(o => o.WithTags("Review"));
 		}
 
 		/// <summary>

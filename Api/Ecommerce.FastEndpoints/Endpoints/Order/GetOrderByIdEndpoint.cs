@@ -8,6 +8,7 @@ using Ecommerce.Shared.Requests.Order;
 using Ecommerce.Shared.Responses.Order;
 using FastEndpoints;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.Order
@@ -41,6 +42,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 		{
 			this.Get("/api/order");
 			this.Policies(PolicyNames._generalPolicy);
+			this.Options(o => o.WithTags("Order"));
 		}
 
 		/// <summary>

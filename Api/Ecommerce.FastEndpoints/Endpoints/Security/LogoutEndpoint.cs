@@ -5,6 +5,7 @@ using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.Identity.Contracts;
 using Ecommerce.Shared.Security.Requests;
 using FastEndpoints;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.Security
@@ -37,6 +38,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Security
 		public override void Configure()
 		{
 			this.Post("/api/logout");
+			this.Options(o => o.WithTags("Security"));
 		}
 
 		/// <summary>

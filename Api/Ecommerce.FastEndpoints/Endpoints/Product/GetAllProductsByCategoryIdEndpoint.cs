@@ -6,6 +6,7 @@ using Ecommerce.Shared.Requests.Product;
 using Ecommerce.Shared.Responses.Product;
 using FastEndpoints;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.Product
@@ -36,6 +37,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Product
 		{
 			this.Get("/api/product/all");
 			this.AllowAnonymous();
+			this.Options(o => o.WithTags("Product"));
 		}
 
 		/// <summary>

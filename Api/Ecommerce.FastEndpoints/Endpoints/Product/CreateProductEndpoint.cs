@@ -8,6 +8,7 @@ using Ecommerce.Shared.Requests.Product;
 using Ecommerce.Shared.Responses.Product;
 using FastEndpoints;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.Product
@@ -41,6 +42,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Product
 		{
 			this.Post("/api/product/create");
 			this.Policies(PolicyNames._adminPolicy);
+			this.Options(o => o.WithTags("Product"));
 		}
 
 		/// <summary>
