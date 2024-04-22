@@ -5,7 +5,7 @@ on:
     branches: [ "dev" ]
 
 jobs:
-  deploy:
+  BuildAndPushImages:
     runs-on: ubuntu-latest
 
     steps:
@@ -39,4 +39,15 @@ jobs:
             configuration: Release
             target: Docker Push
             environmentArg: ${{ vars.UI_ENVIRONMENT }}
+            dockerWorkingDirectory: ${{ github.workspace }}
+
+      - name: Build and Push Worker Image
+        uses: cake-build/cake-action@v2
+        with:
+          cake-version: 4.0.0
+          script-path: ./BuildFiles/build.cake
+          arguments: |
+            build: Worker
+            configuration: Release
+            target: Docker Push
             dockerWorkingDirectory: ${{ github.workspace }}

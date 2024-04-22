@@ -5,16 +5,16 @@ using System.IO;
 //====================================================================
 var target = Argument<string>("target", "Clean");
 var configuration = Argument<string>("configuration", "Release");
-var outputDirectory = Argument<string>("apiOutput", "./Api/Ecommerce.Api/bin/artifacts");
+var outputDirectory = Argument<string>("workerOutput", "./Infrastructure/Ecommerce.Worker/bin/artifacts");
 var dockerHubUser = Argument<string>("dockerHubUser", "smithhe95");
 var imageTag = Argument<string>("imageTag", "latest");
-var dockerFilePath = Argument<string>("dockerFilePath", "./Api/Ecommerce.Api/Dockerfile");
+var dockerFilePath = Argument<string>("dockerFilePath", "./Infrastructure/Ecommerce.Worker/Dockerfile");
 var dockerWorkingDirectory = Argument<string>("dockerWorkingDirectory", "../");
 
 //====================================================================
 // Variables
 //====================================================================
-var projectDirectory = "../Api/Ecommerce.Api/";
+var projectDirectory = "../Infrastructure/Ecommerce.Worker/";
 var testDirectory = "../Tests/Ecommerce.UnitTests/";
 
 
@@ -73,7 +73,7 @@ Task("Docker Build")
     .Does(() => {
         Context.Environment.WorkingDirectory = dockerWorkingDirectory;
 
-        var imageName = $"{dockerHubUser}/ecommerce-api:{imageTag}";
+        var imageName = $"{dockerHubUser}/ecommerce-worker:{imageTag}";
 
         var arguments = new ProcessArgumentBuilder()
         .Append("build")
@@ -97,7 +97,7 @@ Task("Docker Push")
     .Does(() => {
         Context.Environment.WorkingDirectory = dockerWorkingDirectory;
 
-        var imageName = $"{dockerHubUser}/ecommerce-api:{imageTag}";
+        var imageName = $"{dockerHubUser}/ecommerce-worker:{imageTag}";
 
         var pushArguments = new ProcessArgumentBuilder()
             .Append("push")

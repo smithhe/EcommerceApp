@@ -6,6 +6,7 @@
         <Nullable>enable</Nullable>
         <UserSecretsId>11e7c595-24e0-4d24-8d3a-1be9e4e30c3e</UserSecretsId>
         <PreserveCompilationContext>true</PreserveCompilationContext>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
@@ -23,6 +24,9 @@
 
     <ItemGroup>
       <None Remove="appsettings.json" />
+      <Content Include="..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
       <Content Include="appsettings.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
