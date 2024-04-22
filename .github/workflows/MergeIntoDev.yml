@@ -26,5 +26,5 @@ jobs:
           arguments: |
             build: API
             configuration: Release
-            target: 'Docker Push'
+            target: Docker Push
             dockerWorkingDirectory: ${{ github.workspace }}
