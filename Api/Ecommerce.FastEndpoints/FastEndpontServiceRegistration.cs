@@ -16,6 +16,12 @@ namespace Ecommerce.FastEndpoints
 			//Add the services for Fast Endpoints
 			services.AddScoped<ITokenService, TokenService>();
 			
+			//Add the application services
+			services.AddApplicationServices(configuration);
+
+			//Add Security
+			services.AddIdentityServices(configuration);
+			
 			//https://fast-endpoints.com/
 			services.AddFastEndpoints()
 				.SwaggerDocument(options =>
@@ -30,12 +36,6 @@ namespace Ecommerce.FastEndpoints
 					options.EndpointFilter = (endpoint) => endpoint.EndpointTags == null;
 					options.AutoTagPathSegmentIndex = 0;
 				});
-			
-			//Add the application services
-			services.AddApplicationServices(configuration);
-
-			//Add Security
-			services.AddIdentityServices(configuration);
 		}
 	}
 }

@@ -4,6 +4,9 @@ using Ecommerce.Persistence;
 using FastEndpoints;
 using FastEndpoints.Swagger;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +22,15 @@ builder.Services.AddCors(policy =>
 		opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()
 	);
 });
+
+// Add Data Protection
+//https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/configuration/overview?view=aspnetcore-8.0#changing-algorithms-with-usecryptographicalgorithms
+builder.Services.AddDataProtection()
+	.UseCryptographicAlgorithms(new AuthenticatedEncryptorConfiguration
+	{
+		EncryptionAlgorithm = EncryptionAlgorithm.AES_256_CBC,
+		ValidationAlgorithm = ValidationAlgorithm.HMACSHA256
+	});
 
 
 builder.Services.AddControllers();
