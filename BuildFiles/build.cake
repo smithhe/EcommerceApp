@@ -3,6 +3,7 @@ string target = Argument<string>("target", "Test");
 string configuration = Argument<string>("configuration", "Debug");
 var dockerWorkingDirectory = Argument<string>("dockerWorkingDirectory", "../");
 var apiOutput = Argument<string>("apiOutput", "../Api/Ecommerce.Api/bin/artifacts");
+var environmentArg = Argument<string>("environmentArg", "Development");
 
 Dictionary<string, string> args = new Dictionary<string, string>();
 
@@ -25,10 +26,15 @@ if (build.Equals("All") || build.Equals("API"))
 //====================================================================
 if (build.Equals("All") || build.Equals("UI")) 
 {
-    target = Argument<string>("target", "Build");
+	if (target.Equals("Test"))
+	{
+    	target = Argument<string>("target", "Build");
+	}
 
 	args.Clear();
 	args.Add("target", target);
 	args.Add("configuration", configuration);
+	args.Add("dockerWorkingDirectory", dockerWorkingDirectory);
+	args.Add("environmentArg", environmentArg);
 	CakeExecuteScript("./UI.cake", new CakeSettings { Arguments = args });
 }

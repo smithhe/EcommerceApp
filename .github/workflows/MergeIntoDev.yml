@@ -28,3 +28,15 @@ jobs:
             configuration: Release
             target: Docker Push
             dockerWorkingDirectory: ${{ github.workspace }}
+      
+      - name: Build and Push UI Image
+        uses: cake-build/cake-action@v2
+        with:
+          cake-version: 4.0.0
+          script-path: ./BuildFiles/build.cake
+          arguments: |
+            build: UI
+            configuration: Release
+            target: Docker Push
+            environmentArg: ${{ vars.UI_ENVIRONMENT }}
+            dockerWorkingDirectory: ${{ github.workspace }}
