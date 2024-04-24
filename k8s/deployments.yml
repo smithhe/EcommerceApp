@@ -1,0 +1,130 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-api-deployment
+  labels:
+    app: ecommerce-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ecommerce-api
+  template:
+    metadata:
+      labels:
+        app: ecommerce-api
+    spec:
+      containers:
+      - name: ecommerce-api
+        image: smithhe95/ecommerce-api
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 250m
+            memory: 256Mi
+        env:
+        - name: Ecommerce_UIUrl
+          value: "https://ecommerce.codesmithing.io"
+        - name: Ecommerce_Paypal__ReturnBaseUrl
+          value: "https://ecommerce-api.codesmithing.io"
+        
+        - name: Ecommerce_JwtSettings__Key
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceJwtSettingsKey
+        
+        - name: Ecommerce_Paypal__ClientId
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommercePaypalClientId
+        
+        - name: Ecommerce_Paypal__Secret
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommercePaypalSecret
+        
+        - name: Ecommerce_RabbitMQ__Uri
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceRabbitMQUri
+        
+        - name: Ecommerce_RabbitMQ__Username
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceRabbitMQUsername
+        
+        - name: Ecommerce_RabbitMQ__Password
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceRabbitMQPassword
+        
+        - name: Ecommerce_ConnectionStrings__datastorage
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceConnectionString
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-ui-deployment
+  labels:
+    app: ecommerce-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ecommerce-ui
+  template:
+    metadata:
+      labels:
+        app: ecommerce-ui
+    spec:
+      containers:
+      - name: ecommerce-ui
+        image: smithhe95/ecommerce-ui
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 250m
+            memory: 256Mi
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-worker-deployment
+  labels:
+    app: ecommerce-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ecommerce-worker
+  template:
+    metadata:
+      labels:
+        app: ecommerce-worker
+    spec:
+      containers:
+      - name: ecommerce-worker
+        image: smithhe95/ecommerce-worker
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 250m
+            memory: 256Mi
