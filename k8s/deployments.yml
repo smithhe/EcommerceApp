@@ -128,3 +128,45 @@ spec:
           requests:
             cpu: 250m
             memory: 256Mi
+        env:
+        - name: Ecommerce_RabbitMQ__Uri
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceRabbitMQUri
+        
+        - name: Ecommerce_RabbitMQ__Username
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceRabbitMQUsername
+        
+        - name: Ecommerce_RabbitMQ__Password
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceRabbitMQPassword
+        
+        - name: Ecommerce_MailSettings__Host
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceMailSettingsHost
+
+        - name: Ecommerce_MailSettings__Port
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceMailSettingsPort
+
+        - name: Ecommerce_MailSettings__UserName
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceMailSettingsUserName
+        
+        - name: Ecommerce_MailSettings__Password
+          valueFrom:
+            secretKeyRef:
+              name: ecommerce-secrets
+              key: EcommerceMailSettingsPassword
