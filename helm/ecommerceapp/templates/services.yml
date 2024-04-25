@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.services.api.name }}
+spec:
+  type: {{ .Values.services.api.type }}
+  selector:
+    app: {{ .Values.api.selector }}
+  ports:
+    {{- range .Values.services.api.ports }}
+    - port: {{ .port }}
+      targetPort: {{ .targetPort }}
+      protocol: {{ .protocol | default "TCP" }}
+    {{- end }}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.services.ui.name }}
+spec:
+  type: {{ .Values.services.ui.type }}
+  selector:
+    app: {{ .Values.ui.selector }}
+  ports:
+    {{- range .Values.services.ui.ports }}
+    - port: {{ .port }}
+      targetPort: {{ .targetPort }}
+      protocol: {{ .protocol | default "TCP" }}
+    {{- end }}

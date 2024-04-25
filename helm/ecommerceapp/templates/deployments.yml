@@ -1,36 +1,40 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ecommerce-api-deployment
+  name: {{ .Values.deployments.api.name }}
   labels:
-    app: ecommerce-api
+    app: {{ .Values.api.selector }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ecommerce-api
+      app: {{ .Values.api.selector }}
   template:
     metadata:
       labels:
-        app: ecommerce-api
+        app: {{ .Values.api.selector }}
     spec:
       containers:
-      - name: ecommerce-api
-        image: smithhe95/ecommerce-api
+      - name: {{ .Values.api.container.name }}
+        image: "{{ .Values.deployments.api.image.repository }}:{{ .Values.deployments.api.image.tag }}"
+        imagePullPolicy: {{ .Values.deployments.api.pullPolicy }}
         ports:
-        - containerPort: 80
+          {{- range .Values.deployments.ui.container.ports }}
+          - containerPort: {{ .port }}
+            protocol: {{ .protocol }}
+          {{- end }}
         resources:
           limits:
-            cpu: 500m
-            memory: 512Mi
+            cpu: {{ .Values.deployments.api.resources.limits.cpu }}
+            memory: {{ .Values.deployments.api.resources.limits.memory }}
           requests:
-            cpu: 250m
-            memory: 256Mi
+            cpu: {{ .Values.deployments.api.resources.requests.cpu }}
+            memory: {{ .Values.deployments.api.resources.requests.memory }}
         env:
         - name: Ecommerce_UIUrl
-          value: "https://ecommerce.codesmithing.io"
+          value: {{ .Values.api.environment.UiUrl }}
         - name: Ecommerce_Paypal__ReturnBaseUrl
-          value: "https://ecommerce-api.codesmithing.io"
+          value: {{ .Values.api.environment.ApiUrl }}
         
         - name: Ecommerce_JwtSettings__Key
           valueFrom:
@@ -78,56 +82,61 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ecommerce-ui-deployment
+  name: {{ .Values.deployments.ui.name }}
   labels:
-    app: ecommerce-ui
+    app: {{ .Values.ui.selector }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ecommerce-ui
+      app: {{ .Values.ui.selector }}
   template:
     metadata:
       labels:
-        app: ecommerce-ui
+        app: {{ .Values.ui.selector }}
     spec:
       containers:
-      - name: ecommerce-ui
-        image: smithhe95/ecommerce-ui
+      - name: {{ .Values.deployments.ui.container.name }}
+        image: "{{ .Values.deployments.ui.image.repository }}:{{ .Values.deployments.ui.image.tag }}"
+        imagePullPolicy: {{ .Values.deployments.ui.pullPolicy }}
         ports:
-        - containerPort: 80
+          {{- range .Values.deployments.ui.container.ports }}
+          - containerPort: {{ .port }}
+            protocol: {{ .protocol }}
+          {{- end }}
         resources:
           limits:
-            cpu: 250m
-            memory: 256Mi
+            cpu: {{ .Values.deployments.ui.resources.limits.cpu }}
+            memory: {{ .Values.deployments.ui.resources.limits.memory }}
 
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ecommerce-worker-deployment
+  name: {{ .Values.deployments.worker.name }}
   labels:
-    app: ecommerce-worker
+    app: {{ .Values.worker.selector }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ecommerce-worker
+      app: {{ .Values.worker.selector }}
   template:
     metadata:
       labels:
-        app: ecommerce-worker
+        app: {{ .Values.worker.selector }}
     spec:
       containers:
-      - name: ecommerce-worker
-        image: smithhe95/ecommerce-worker
+      - name: {{ .Values.deployments.worker.container.name }}
+        image: "{{ .Values.deployments.worker.image.repository }}:{{ .Values.deployments.worker.image.tag }}"
+        imagePullPolicy: {{ .Values.deployments.ui.pullPolicy }}
         resources:
           limits:
-            cpu: 500m
-            memory: 512Mi
+            cpu: {{ .Values.deployments.worker.resources.limits.cpu }}
+            memory: {{ .Values.deployments.worker.resources.limits.memory }}
           requests:
-            cpu: 250m
-            memory: 256Mi
+            cpu: {{ .Values.deployments.worker.resources.requests.cpu }}
+            memory: {{ .Values.deployments.worker.resources.requests.memory }}
         env:
         - name: Ecommerce_RabbitMQ__Uri
           valueFrom:

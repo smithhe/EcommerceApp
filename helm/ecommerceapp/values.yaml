@@ -1,0 +1,198 @@
+#--------------------------------------------------------------------
+# Global values
+#--------------------------------------------------------------------
+tls:
+  apiSecret: ecommerce-api-tls
+  uiSecret: ecommerce-ui-tls
+
+
+
+#--------------------------------------------------------------------
+# Project specific values
+#--------------------------------------------------------------------
+api:
+  selector: ecommerce-api
+
+ui:
+  selector: ecommerce-ui
+
+worker:
+  selector: ecommerce-worker
+
+#--------------------------------------------------------------------
+# Deployment specific values
+#--------------------------------------------------------------------
+deployments:
+
+  #--------------------------------------------------------------------
+  # Api
+  #--------------------------------------------------------------------
+  api:
+    name: ecommerce-api-deployment
+    container:
+      name: ecommerce-api
+      ports:
+        - port: 80
+          protocol: TCP
+        - port: 443
+          protocol: TCP
+    image:
+      repository: smithhe95/ecommerce-api
+      tag: latest
+    pullPolicy: Always
+    resources:
+      limits:
+        cpu: "500m"
+        memory: "512Mi"
+      requests:
+        cpu: "250m"
+        memory: "256Mi"
+    environment:
+      UiUrl: "https://ecommerce.codesmithing.io"
+      ApiUrl: "https://ecommerce-api.codesmithing.io"
+
+  #--------------------------------------------------------------------
+  # UI
+  #--------------------------------------------------------------------
+  ui:
+    name: ecommerce-ui-deployment
+    container:
+      name: ecommerce-ui
+      ports:
+        - port: 80
+          protocol: TCP
+        - port: 443
+          protocol: TCP
+    image:
+      repository: smithhe95/ecommerce-ui
+      tag: latest
+    pullPolicy: Always
+    resources:
+      limits:
+        cpu: "250m"
+        memory: "256Mi"
+
+  #--------------------------------------------------------------------
+  # Worker
+  #--------------------------------------------------------------------
+  worker:
+    name: ecommerce-worker-deployment
+    container:
+      name: ecommerce-worker
+    image:
+      repository: smithhe95/ecommerce-worker
+      tag: latest
+    pullPolicy: Always
+    resources:
+      limits:
+        cpu: "500m"
+        memory: "512Mi"
+      requests:
+        cpu: "250m"
+        memory: "256Mi"
+
+
+
+#--------------------------------------------------------------------
+# Service specific values
+#--------------------------------------------------------------------
+services:
+
+  #--------------------------------------------------------------------
+  # Api
+  #--------------------------------------------------------------------
+  api:
+    name: ecommerce-api-service
+    type: ClusterIP
+    ports:
+      - port: 80
+        targetPort: 80
+        protocol: TCP
+      - port: 443
+        targetPort: 443
+        protocol: TCP
+  
+  #--------------------------------------------------------------------
+  # UI
+  #--------------------------------------------------------------------
+  ui:
+    name: ecommerce-ui-service
+    type: ClusterIP
+    ports:
+      - port: 80
+        targetPort: 80
+        protocol: TCP
+      - port: 443
+        targetPort: 443
+        protocol: TCP
+
+
+
+#--------------------------------------------------------------------
+# HPA specific values
+#--------------------------------------------------------------------
+autoscalers:
+
+  #--------------------------------------------------------------------
+  # Api
+  #--------------------------------------------------------------------
+  api:
+    name: ecommerce-api-hpa
+    replicas:
+      min: 1
+      max: 3
+    averageUtilization: 80
+
+  #--------------------------------------------------------------------
+  # UI
+  #--------------------------------------------------------------------
+  ui:
+    name: ecommerce-ui-hpa
+    replicas:
+      min: 1
+      max: 2
+    averageUtilization: 80
+  
+  #--------------------------------------------------------------------
+  # Worker
+  #--------------------------------------------------------------------
+  worker:
+    name: ecommerce-worker-hpa
+    replicas:
+      min: 1
+      max: 2
+    averageUtilization: 80
+
+
+
+#--------------------------------------------------------------------
+# Ingress specific values
+#--------------------------------------------------------------------
+ingress:
+  enabled: true
+  name: ecommerce-ingress
+  className: "nginx"
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  tls:
+    - secretName: "{{ .Values.tls.apiSecret }}"
+      hosts:
+        - ecommerce-api.codesmithing.io
+    - secretName: "{{ .Values.tls.uiSecret }}"
+      hosts:
+        - ecommerce.codesmithing.io
+  hosts:
+    - host: ecommerce-api.codesmithing.io
+      paths:
+        - path: /api
+          pathType: Prefix
+          service:
+            name: "{{ .Values.services.api.name }}"
+            port: 80
+    - host: ecommerce.codesmithing.io
+      paths:
+        - path: /
+          pathType: Prefix
+          service:
+            name: "{{ .Values.services.ui.name }}"
+            port: 80

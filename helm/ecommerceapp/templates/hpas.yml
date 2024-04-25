@@ -1,0 +1,58 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ .Values.autoscalers.api.name }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ .Values.deployments.api.name }}
+  minReplicas: {{ .Values.autoscalers.api.replicas.min }}
+  maxReplicas: {{ .Values.autoscalers.api.replicas.max }}
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ .Values.autoscalers.api.averageUtilization }}
+
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ .Values.autoscalers.ui.name }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ .Values.deployments.ui.name }}
+  minReplicas: {{ .Values.autoscalers.ui.replicas.min }}
+  maxReplicas: {{ .Values.autoscalers.ui.replicas.max }}
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ .Values.autoscalers.ui.averageUtilization }}
+
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ .Values.autoscalers.worker.name }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ .Values.deployments.worker.name }}
+  minReplicas: {{ .Values.autoscalers.worker.replicas.min }}
+  maxReplicas: {{ .Values.autoscalers.worker.replicas.max }}
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ .Values.autoscalers.worker.averageUtilization }}
