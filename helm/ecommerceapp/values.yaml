@@ -5,6 +5,36 @@ tls:
   apiSecret: ecommerce-api-tls
   uiSecret: ecommerce-ui-tls
 
+secrets:
+  secretName: ecommerce-secrets
+  keys:
+    EcommerceJwtSettingsKey: EcommerceJwtSettingsKey
+    EcommercePaypalClientId: EcommercePaypalClientId
+    EcommercePaypalSecret: EcommercePaypalSecret
+    EcommerceRabbitMQUri: EcommerceRabbitMQUri
+    EcommerceRabbitMQUsername: EcommerceRabbitMQUsername
+    EcommerceRabbitMQPassword: EcommerceRabbitMQPassword
+    EcommerceMailSettingsHost: EcommerceMailSettingsHost
+    EcommerceMailSettingsPort: EcommerceMailSettingsPort
+    EcommerceMailSettingsUserName: EcommerceMailSettingsUserName
+    EcommerceMailSettingsPassword: EcommerceMailSettingsPassword
+  values:
+    EcommerceJwtSettingsKey: ""
+    EcommercePaypalClientId: ""
+    EcommercePaypalSecret: ""
+    EcommerceRabbitMQUri: ""
+    EcommerceRabbitMQUsername: ""
+    EcommerceRabbitMQPassword: ""
+    EcommerceMailSettingsHost: ""
+    EcommerceMailSettingsPort: ""
+    EcommerceMailSettingsUserName: ""
+    EcommerceMailSettingsPassword: ""
+
+# IF you change these values
+# MAKE SURE they match what is put in the kubernetes.tf file
+connectionString:
+  secretName: "ecommerce-database"
+  secretKey: "connection-string"
 
 
 #--------------------------------------------------------------------
@@ -196,3 +226,16 @@ ingress:
           service:
             name: "{{ .Values.services.ui.name }}"
             port: 80
+
+
+
+#--------------------------------------------------------------------
+# RabbitMQ specific values
+#--------------------------------------------------------------------
+rabbitmq:
+  enabled: true
+  auth:
+    username: "{{ .Values.secrets.keys.EcommerceRabbitMQUsername }}"
+    password: "{{ .Values.secrets.keys.EcommerceRabbitMQPassword }}"
+  
+  replicaCount: 1

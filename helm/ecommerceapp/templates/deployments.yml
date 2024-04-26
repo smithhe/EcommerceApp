@@ -39,44 +39,44 @@ spec:
         - name: Ecommerce_JwtSettings__Key
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceJwtSettingsKey
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceJwtSettingsKey }}
         
         - name: Ecommerce_Paypal__ClientId
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommercePaypalClientId
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommercePaypalClientId }}
         
         - name: Ecommerce_Paypal__Secret
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommercePaypalSecret
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommercePaypalSecret }}
         
         - name: Ecommerce_RabbitMQ__Uri
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceRabbitMQUri
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceRabbitMQUri }}
         
         - name: Ecommerce_RabbitMQ__Username
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceRabbitMQUsername
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceRabbitMQUsername }}
         
         - name: Ecommerce_RabbitMQ__Password
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceRabbitMQPassword
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceRabbitMQPassword }}
         
         - name: Ecommerce_ConnectionStrings__datastorage
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceConnectionString
+              name: {{ .Values.connectionString.secretName }}
+              key: {{ .Values.connectionString.secretKey }}
 
 ---
 apiVersion: apps/v1
@@ -141,41 +141,41 @@ spec:
         - name: Ecommerce_RabbitMQ__Uri
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceRabbitMQUri
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceRabbitMQUri }}
         
         - name: Ecommerce_RabbitMQ__Username
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceRabbitMQUsername
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceRabbitMQUsername }}
         
         - name: Ecommerce_RabbitMQ__Password
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceRabbitMQPassword
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceRabbitMQPassword }}
         
         - name: Ecommerce_MailSettings__Host
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceMailSettingsHost
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceMailSettingsHost }}
 
         - name: Ecommerce_MailSettings__Port
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceMailSettingsPort
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceMailSettingsPort }}
 
         - name: Ecommerce_MailSettings__UserName
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceMailSettingsUserName
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceMailSettingsUserName }}
         
         - name: Ecommerce_MailSettings__Password
           valueFrom:
             secretKeyRef:
-              name: ecommerce-secrets
-              key: EcommerceMailSettingsPassword
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceMailSettingsPassword }}
