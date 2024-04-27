@@ -25,17 +25,27 @@ resource "digitalocean_kubernetes_cluster" "cluster_01" {
   }
 }
 
-resource "kubernetes_v1_secret" "ecommerce_app_secret" {
-  depends_on = [digitalocean_database_db.database_01_mysql, digitalocean_database_user.database_01_mysql_user, digitalocean_database_db.database_01_mysql_name]
+resource "kubernetes_namespace_v1" "ecommerce_namespace" {
+  metadata {
+    annotations = {
+      name = "ecommerce"
+    }
+
+    name = "ecommerce"
+  }
+}
+
+resource "kubernetes_secret_v1" "ecommerce_app_secret" {
+  depends_on = [digitalocean_database_cluster.database_01_mysql, digitalocean_database_user.database_01_mysql_user, digitalocean_database_db.database_01_mysql_name, kubernetes_namespace_v1.ecommerce_namespace]
 
   metadata {
     name      = "ecommerce-database"
-    namespace = "ecommerce"
+    namespace = kubernetes_namespace_v1.ecommerce_namespace.metadata[0].name
   }
 
   type = "Opaque"
 
   data = {
-    "connection-string" = base64encode("Server=${digitalocean_database_db.database_01_mysql.private_host};User ID=${var.database_user};Password=${digitalocean_database_user.database_01_mysql_user.password};Database=${var.database_name}")
+    "connection-string" = base64encode("Server=${digitalocean_database_cluster.database_01_mysql.private_host};User ID=${var.database_user};Password=${digitalocean_database_user.database_01_mysql_user.password};Database=${var.database_name}")
   }
 }

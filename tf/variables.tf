@@ -43,7 +43,7 @@ variable "k8s_version" {
 variable "cluster_tags" {
   description = "Tags to apply to the cluster"
   type        = set(string)
-  default     = ["k8s", "qa"]
+  default     = ["ecommerce", "qa"]
 }
 
 variable "cluster_auto_upgrade_verison" {
@@ -90,7 +90,7 @@ variable "node_firewall_tag" {
 variable "node_pool_tags" {
   description = "Tags to apply to the node pool"
   type        = set(string)
-  default     = []
+  default     = ["ecommerce", "qa"]
 }
 
 

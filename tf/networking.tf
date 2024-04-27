@@ -3,7 +3,7 @@ resource "digitalocean_firewall" "cluster_01_firewall" {
 
   tags = local.all_firewall_tags
 
-  depends_on = [digitalocean_kubernetes_cluster.cluster-01]
+  depends_on = [digitalocean_kubernetes_cluster.cluster_01]
 
   inbound_rule {
     protocol         = "tcp"
