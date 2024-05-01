@@ -49,6 +49,9 @@ ui:
 worker:
   selector: ecommerce-worker
 
+rabbitmq:
+  selector: rabbitmq
+
 #--------------------------------------------------------------------
 # Deployment specific values
 #--------------------------------------------------------------------
@@ -113,11 +116,32 @@ deployments:
       repository: smithhe95/ecommerce-worker
       tag: latest
     pullPolicy: Always
+    ports:
+        - port: 15672
+          protocol: TCP
+        - port: 5672
+          protocol: TCP
     resources:
       limits:
         cpu: "500m"
         memory: "512Mi"
       requests:
+        cpu: "250m"
+        memory: "256Mi"
+
+  #--------------------------------------------------------------------
+  # RabbitMQ
+  #--------------------------------------------------------------------
+  rabbitmq:
+    name: rabbitmq-deployment
+    container:
+      name: rabbitmq
+      image: 
+        name: rabbitmq
+        tag: 3-management
+    pullPolicy: Always
+    resources:
+      limits:
         cpu: "250m"
         memory: "256Mi"
 
@@ -154,6 +178,20 @@ services:
         protocol: TCP
       - port: 443
         targetPort: 443
+        protocol: TCP
+
+  #--------------------------------------------------------------------
+  # RabbitMQ
+  #--------------------------------------------------------------------
+  rabbitmq:
+    name: ecommerce-rabbitmq-service
+    type: ClusterIP
+    ports:
+      - port: 15672
+        targetPort: 15672
+        protocol: TCP
+      - port: 5672
+        targetPort: 5672
         protocol: TCP
 
 
@@ -205,9 +243,6 @@ ingress:
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
   tls:
-    - secretName: "{{ .Values.tls.apiSecret }}"
-      hosts:
-        - ecommerce-api.codesmithing.io
     - secretName: "{{ .Values.tls.uiSecret }}"
       hosts:
         - ecommerce.codesmithing.io
@@ -226,16 +261,3 @@ ingress:
           service:
             name: "{{ .Values.services.ui.name }}"
             port: 80
-
-
-
-#--------------------------------------------------------------------
-# RabbitMQ specific values
-#--------------------------------------------------------------------
-rabbitmq:
-  enabled: true
-  auth:
-    username: "{{ .Values.secrets.keys.EcommerceRabbitMQUsername }}"
-    password: "{{ .Values.secrets.keys.EcommerceRabbitMQPassword }}"
-  
-  replicaCount: 1

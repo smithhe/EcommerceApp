@@ -179,3 +179,34 @@ spec:
             secretKeyRef:
               name: {{ .Values.secrets.secretName }}
               key: {{ .Values.secrets.keys.EcommerceMailSettingsPassword }}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.deployments.rabbitmq.name }}
+  labels:
+    app: {{ .Values.rabbitmq.selector }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.rabbitmq.selector }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.rabbitmq.selector }}
+    spec:
+      containers:
+      - name: {{ .Values.deployments.rabbitmq.container.name }}
+        image: "{{ .Values.deployments.rabbitmq.image.repository }}:{{ .Values.deployments.rabbitmq.image.tag }}"
+        imagePullPolicy: {{ .Values.deployments.rabbitmq.pullPolicy }}
+        ports:
+          {{- range .Values.deployments.rabbitmq.container.ports }}
+          - containerPort: {{ .port }}
+            protocol: {{ .protocol }}
+          {{- end }}
+        resources:
+          limits:
+            cpu: {{ .Values.deployments.rabbitmq.resources.limits.cpu }}
+            memory: {{ .Values.deployments.rabbitmq.resources.limits.memory }}

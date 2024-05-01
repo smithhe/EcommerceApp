@@ -28,3 +28,19 @@ spec:
       targetPort: {{ .targetPort }}
       protocol: {{ .protocol | default "TCP" }}
     {{- end }}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.services.rabbitmq.name }}
+spec:
+  type: {{ .Values.services.rabbitmq.type }}
+  selector:
+    app: {{ .Values.rabbitmq.selector }}
+  ports:
+    {{- range .Values.services.rabbitmq.ports }}
+    - port: {{ .port }}
+      targetPort: {{ .targetPort }}
+      protocol: {{ .protocol | default "TCP" }}
+    {{- end }}
