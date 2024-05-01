@@ -28,10 +28,30 @@ resource "digitalocean_kubernetes_cluster" "cluster_01" {
 resource "kubernetes_namespace_v1" "ecommerce_namespace" {
   metadata {
     annotations = {
-      name = "ecommerce"
+      name = var.namespace
     }
 
-    name = "ecommerce"
+    name = var.namespace
+  }
+}
+
+resource "kubernetes_namespace_v1" "cert_manager_namespace" {
+  metadata {
+    annotations = {
+      name = var.certmanager_namespace
+    }
+
+    name = var.certmanager_namespace
+  }
+}
+
+resource "kubernetes_namespace_v1" "ingress_nginx_namespace" {
+  metadata {
+    annotations = {
+      name = var.ingressnginx_namespace
+    }
+
+    name = var.ingressnginx_namespace
   }
 }
 

@@ -210,3 +210,14 @@ spec:
           limits:
             cpu: {{ .Values.deployments.rabbitmq.resources.limits.cpu }}
             memory: {{ .Values.deployments.rabbitmq.resources.limits.memory }}
+        env:
+        - name: RABBITMQ_DEFAULT_USER 
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceRabbitMQUsername }}
+        - name: RABBITMQ_DEFAULT_PASS 
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.secrets.secretName }}
+              key: {{ .Values.secrets.keys.EcommerceRabbitMQPassword }}

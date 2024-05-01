@@ -6,6 +6,25 @@ variable "do_token" {
   sensitive = true
 }
 
+variable "namespace" {
+  description = "The k8s namespace to install resources into"
+  type        = string
+  default     = "ecommerce"
+}
+
+variable "certmanager_namespace" {
+  description = "The k8s namespace to install cert-manager resources into"
+  type        = string
+  default     = "security"
+}
+
+variable "ingressnginx_namespace" {
+  description = "The k8s namespace to install ingress-nginx resources into"
+  type        = string
+  default     = "ingress-nginx"
+}
+
+
 variable "project_name" {
   description = "Name of DigitalOcean Project to group Resources into"
   type        = string
@@ -155,3 +174,8 @@ variable "firewall_tags" {
   type        = set(string)
   default     = []
 }
+
+
+#--------------------------------------------------------------------
+# Helm Secret variables
+#--------------------------------------------------------------------

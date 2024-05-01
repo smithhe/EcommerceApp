@@ -1,4 +1,19 @@
 #--------------------------------------------------------------------
+# Cert-Manager values
+#--------------------------------------------------------------------
+# Tutorial on cert-manager in k8s https://youtu.be/hoLUigg4V18
+cert-manager:
+  namespace: security #Make sure this matches the value in the variables.tf file
+
+#--------------------------------------------------------------------
+# Ingress-Nginx values
+#--------------------------------------------------------------------
+ingress-nginx:
+  namespaceOverride: "ingress-nginx" #Make sure this matches the value in the variables.tf file
+
+
+
+#--------------------------------------------------------------------
 # Global values
 #--------------------------------------------------------------------
 tls:
