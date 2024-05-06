@@ -49,6 +49,7 @@ Task("Docker Build")
         .Append("build")
         .Append($"--file {dockerFilePath}")
         .Append($"")
+        .Append($"--build-arg Environment={environmentArg}")
         .Append("-t")
         .Append(imageName)
         .Append(".");

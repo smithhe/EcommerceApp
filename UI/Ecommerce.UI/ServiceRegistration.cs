@@ -50,6 +50,7 @@ namespace Ecommerce.UI
 		private static void AddRefit(IServiceCollection services, IConfiguration configuration)
 		{
 			string apiEndpoint = configuration["ApiUri"] ?? "https://localhost:7205";
+			Console.WriteLine(apiEndpoint);
 			
 			services.AddRefitClient<ICategoryApiService>()
 				.ConfigureHttpClient(c =>

@@ -44,12 +44,11 @@ using (IServiceScope scope = app.Services.CreateScope())
 	EcommercePersistenceDbContext dbContext = scope.ServiceProvider.GetRequiredService<EcommercePersistenceDbContext>();
 	RoleManager<IdentityRole<Guid>> roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
 	
-	dbContext.Database.EnsureCreated();
 	DatabaseInitializer.MigrateDatabase(dbContext);
 	DatabaseInitializer.PostMigrationUpdates(dbContext, roleManager);
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseCors("OpenCorsPolicy");
 
 app.UseAuthentication();
