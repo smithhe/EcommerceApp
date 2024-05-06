@@ -35,7 +35,7 @@ namespace Ecommerce.UI.Security
 				return this._anonymous;
 			}
 
-			if (await IsTokenExpired(token))
+			if (IsTokenExpired(token))
 			{
 				return this._anonymous;
 			}
@@ -43,7 +43,7 @@ namespace Ecommerce.UI.Security
 			return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity(JwtParser.ParseClaimsFromJwt(token), "jwtAuthType")));
 		}
 
-		private async Task<bool> IsTokenExpired(string token)
+		private bool IsTokenExpired(string token)
 		{
 			// Decode the JWT token
 			JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
@@ -55,7 +55,7 @@ namespace Ecommerce.UI.Security
 				return true;
 			}
 
-			if (jwtToken.ValidTo <= await DateTime.UtcNow.ToEstAsync(this._jsRuntime))
+			if (jwtToken.ValidTo <= DateTime.UtcNow)
 			{
 				// Token has expired
 				return true;

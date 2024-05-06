@@ -323,8 +323,8 @@ namespace Ecommerce.Identity.Services
 				this._jwtSettings.Issuer,
 				this._jwtSettings.Audience,
 				claims,
-				DateTime.UtcNow.ToEst(),
-				DateTime.UtcNow.ToEst().StartOfNextDay(5),
+				DateTime.UtcNow,
+				DateTime.UtcNow.StartOfNextDay(5),
 				signingCredentials);
 
 			//Write the token and return it
