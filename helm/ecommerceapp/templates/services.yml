@@ -8,7 +8,8 @@ spec:
     app: {{ .Values.api.selector }}
   ports:
     {{- range .Values.services.api.ports }}
-    - port: {{ .port }}
+    - name: {{ .name }}
+      port: {{ .port }}
       targetPort: {{ .targetPort }}
       protocol: {{ .protocol | default "TCP" }}
     {{- end }}
@@ -24,7 +25,8 @@ spec:
     app: {{ .Values.ui.selector }}
   ports:
     {{- range .Values.services.ui.ports }}
-    - port: {{ .port }}
+    - name: {{ .name }}
+      port: {{ .port }}
       targetPort: {{ .targetPort }}
       protocol: {{ .protocol | default "TCP" }}
     {{- end }}
@@ -40,7 +42,8 @@ spec:
     app: {{ .Values.rabbitmq.selector }}
   ports:
     {{- range .Values.services.rabbitmq.ports }}
-    - port: {{ .port }}
+    - name: {{ .name }}
+      port: {{ .port }}
       targetPort: {{ .targetPort }}
       protocol: {{ .protocol | default "TCP" }}
     {{- end }}

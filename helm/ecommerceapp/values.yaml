@@ -1,32 +1,12 @@
 #--------------------------------------------------------------------
-# Cert-Manager values
-#--------------------------------------------------------------------
-# Tutorial on cert-manager in k8s https://youtu.be/hoLUigg4V18
-cert-manager:
-  namespace: security #Make sure this matches the value in the variables.tf file
-
-#--------------------------------------------------------------------
-# Ingress-Nginx values
-#--------------------------------------------------------------------
-ingress-nginx:
-  namespaceOverride: "ingress-nginx" #Make sure this matches the value in the variables.tf file
-
-
-
-#--------------------------------------------------------------------
 # Global values
 #--------------------------------------------------------------------
-tls:
-  apiSecret: ecommerce-api-tls
-  uiSecret: ecommerce-ui-tls
-
 secrets:
   secretName: ecommerce-secrets
   keys:
     EcommerceJwtSettingsKey: EcommerceJwtSettingsKey
     EcommercePaypalClientId: EcommercePaypalClientId
     EcommercePaypalSecret: EcommercePaypalSecret
-    EcommerceRabbitMQUri: EcommerceRabbitMQUri
     EcommerceRabbitMQUsername: EcommerceRabbitMQUsername
     EcommerceRabbitMQPassword: EcommerceRabbitMQPassword
     EcommerceMailSettingsHost: EcommerceMailSettingsHost
@@ -37,7 +17,6 @@ secrets:
     EcommerceJwtSettingsKey: ""
     EcommercePaypalClientId: ""
     EcommercePaypalSecret: ""
-    EcommerceRabbitMQUri: ""
     EcommerceRabbitMQUsername: ""
     EcommerceRabbitMQPassword: ""
     EcommerceMailSettingsHost: ""
@@ -90,20 +69,18 @@ deployments:
     pullPolicy: Always
     resources:
       limits:
-        cpu: "500m"
-        memory: "512Mi"
-      requests:
-        cpu: "250m"
-        memory: "256Mi"
+        cpu: "100m"
+        memory: "128Mi"
     environment:
       UiUrl: "https://ecommerce.codesmithing.io"
-      ApiUrl: "https://ecommerce-api.codesmithing.io"
+      ApiUrl: "https://api.ecommerce.codesmithing.io"
 
   #--------------------------------------------------------------------
   # UI
   #--------------------------------------------------------------------
   ui:
     name: ecommerce-ui-deployment
+    environment: QA
     container:
       name: ecommerce-ui
       ports:
@@ -117,8 +94,8 @@ deployments:
     pullPolicy: Always
     resources:
       limits:
-        cpu: "250m"
-        memory: "256Mi"
+        cpu: "50m"
+        memory: "74Mi"
 
   #--------------------------------------------------------------------
   # Worker
@@ -138,11 +115,8 @@ deployments:
           protocol: TCP
     resources:
       limits:
-        cpu: "500m"
-        memory: "512Mi"
-      requests:
-        cpu: "250m"
-        memory: "256Mi"
+        cpu: "100m"
+        memory: "128Mi"
 
   #--------------------------------------------------------------------
   # RabbitMQ
@@ -151,14 +125,11 @@ deployments:
     name: rabbitmq-deployment
     container:
       name: rabbitmq
-      image: 
-        name: rabbitmq
-        tag: 3-management
     pullPolicy: Always
     resources:
       limits:
-        cpu: "250m"
-        memory: "256Mi"
+        cpu: "50m"
+        memory: "128Mi"
 
 
 
@@ -174,10 +145,12 @@ services:
     name: ecommerce-api-service
     type: ClusterIP
     ports:
-      - port: 80
-        targetPort: 80
+      - name: http
+        port: 80
+        targetPort: 8080
         protocol: TCP
-      - port: 443
+      - name: https
+        port: 443
         targetPort: 443
         protocol: TCP
   
@@ -188,10 +161,12 @@ services:
     name: ecommerce-ui-service
     type: ClusterIP
     ports:
-      - port: 80
+      - name: http
+        port: 80
         targetPort: 80
         protocol: TCP
-      - port: 443
+      - name: https
+        port: 443
         targetPort: 443
         protocol: TCP
 
@@ -202,10 +177,12 @@ services:
     name: ecommerce-rabbitmq-service
     type: ClusterIP
     ports:
-      - port: 15672
+      - name: dashboard
+        port: 15672
         targetPort: 15672
         protocol: TCP
-      - port: 5672
+      - name: queues
+        port: 5672
         targetPort: 5672
         protocol: TCP
 
@@ -249,30 +226,35 @@ autoscalers:
 
 
 #--------------------------------------------------------------------
-# Ingress specific values
+# Ingress specific values cert-manager.io/issuer: lets-encrypt-cluster-issuer
 #--------------------------------------------------------------------
 ingress:
   enabled: true
   name: ecommerce-ingress
-  className: "nginx"
+  className: nginx
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    cert-manager.io/issuer: "letsencrypt-issuer-prod"
+    
   tls:
-    - secretName: "{{ .Values.tls.uiSecret }}"
+    - secretName: ecommerce-ui-tls
       hosts:
         - ecommerce.codesmithing.io
+    - secretName: ecommerce-api-tls
+      hosts:
+        - api.ecommerce.codesmithing.io
   hosts:
-    - host: ecommerce-api.codesmithing.io
+    - host: api.ecommerce.codesmithing.io
       paths:
-        - path: /api
+        - path: /
           pathType: Prefix
           service:
-            name: "{{ .Values.services.api.name }}"
+            name: ecommerce-api-service
             port: 80
     - host: ecommerce.codesmithing.io
       paths:
         - path: /
           pathType: Prefix
           service:
-            name: "{{ .Values.services.ui.name }}"
+            name: ecommerce-ui-service
             port: 80
