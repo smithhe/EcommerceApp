@@ -50,6 +50,12 @@ resource "digitalocean_firewall" "cluster_01_firewall" {
     port_range       = "443"
     destination_addresses = ["0.0.0.0/0", "::/0"]
   }
+
+  outbound_rule {
+    protocol         = "tcp"
+    port_range       = "587"
+    destination_addresses = ["0.0.0.0/0", "::/0"]
+  }
 }
 
 resource "digitalocean_database_firewall" "database_01_mysql_firewall" {
