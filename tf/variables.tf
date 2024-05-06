@@ -6,6 +6,18 @@ variable "do_token" {
   sensitive = true
 }
 
+variable "dockerhub_username" {
+  description = "Username to use for DockerHub"
+  type = string
+  default = "smithhe95"
+}
+
+variable "dockerhub_access_token" {
+  description = "Access token for DockerHub to pull images from private repositories"
+  type        = string
+  sensitive   = true
+}
+
 variable "namespace" {
   description = "The k8s namespace to install resources into"
   type        = string

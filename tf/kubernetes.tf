@@ -35,26 +35,6 @@ resource "kubernetes_namespace_v1" "ecommerce_namespace" {
   }
 }
 
-resource "kubernetes_namespace_v1" "cert_manager_namespace" {
-  metadata {
-    annotations = {
-      name = var.certmanager_namespace
-    }
-
-    name = var.certmanager_namespace
-  }
-}
-
-resource "kubernetes_namespace_v1" "ingress_nginx_namespace" {
-  metadata {
-    annotations = {
-      name = var.ingressnginx_namespace
-    }
-
-    name = var.ingressnginx_namespace
-  }
-}
-
 resource "kubernetes_secret_v1" "ecommerce_app_secret" {
   depends_on = [digitalocean_database_cluster.database_01_mysql, digitalocean_database_user.database_01_mysql_user, digitalocean_database_db.database_01_mysql_name, kubernetes_namespace_v1.ecommerce_namespace]
 
@@ -66,6 +46,29 @@ resource "kubernetes_secret_v1" "ecommerce_app_secret" {
   type = "Opaque"
 
   data = {
-    "connection-string" = base64encode("Server=${digitalocean_database_cluster.database_01_mysql.private_host};User ID=${var.database_user};Password=${digitalocean_database_user.database_01_mysql_user.password};Database=${var.database_name}")
+    "connection-string" = "Server=${digitalocean_database_cluster.database_01_mysql.private_host};Port=${digitalocean_database_cluster.database_01_mysql.port};User ID=${var.database_user};Password=${digitalocean_database_user.database_01_mysql_user.password};Database=${var.database_name}"
   }
+}
+
+resource "kubernetes_secret" "dockerhub_cred" {
+  depends_on = [digitalocean_database_cluster.database_01_mysql, digitalocean_database_user.database_01_mysql_user, digitalocean_database_db.database_01_mysql_name, kubernetes_namespace_v1.ecommerce_namespace]
+
+  metadata {
+    name = "docker-registry"
+    namespace = kubernetes_namespace_v1.ecommerce_namespace.metadata[0].name
+  }
+
+  data = {
+    ".dockerconfigjson" = jsonencode({
+      auths = {
+        "https://index.docker.io/v1/" = {
+          username = var.dockerhub_username
+          password = var.dockerhub_access_token
+          auth = base64encode("${var.dockerhub_username}:${var.dockerhub_access_token}")
+        }
+      }
+    })
+  }
+
+  type = "kubernetes.io/dockerconfigjson"
 }
