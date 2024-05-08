@@ -43,6 +43,11 @@ variable "project_name" {
   default     = "EcommerceApp"
 }
 
+variable "local_ip" {
+  description = "Your local IP address to add to the firewall for the database"
+  type = string
+}
+
 # Used to combine the tags provided along with the default tag needed and ensure no duplicates
 locals {
   all_cluster_tags   = toset(concat(tolist(var.cluster_tags), [var.project_name]))

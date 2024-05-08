@@ -38,24 +38,6 @@ resource "digitalocean_firewall" "cluster_01_firewall" {
     protocol              = "icmp"
     destination_addresses = ["0.0.0.0/0", "::/0"]
   }
-
-  outbound_rule {
-    protocol         = "tcp"
-    port_range       = "80"
-    destination_addresses = ["0.0.0.0/0", "::/0"]
-  }
-
-  outbound_rule {
-    protocol         = "tcp"
-    port_range       = "443"
-    destination_addresses = ["0.0.0.0/0", "::/0"]
-  }
-
-  outbound_rule {
-    protocol         = "tcp"
-    port_range       = "587"
-    destination_addresses = ["0.0.0.0/0", "::/0"]
-  }
 }
 
 resource "digitalocean_database_firewall" "database_01_mysql_firewall" {
@@ -66,5 +48,10 @@ resource "digitalocean_database_firewall" "database_01_mysql_firewall" {
   rule {
     type  = "k8s"
     value = digitalocean_kubernetes_cluster.cluster_01.id
+  }
+
+  rule {
+    type  = "ip_addr"
+    value = var.local_ip
   }
 }
