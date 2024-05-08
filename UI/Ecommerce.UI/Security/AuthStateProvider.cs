@@ -5,8 +5,6 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Ecommerce.UI.Extensions;
-using Microsoft.JSInterop;
 
 namespace Ecommerce.UI.Security
 {
@@ -14,14 +12,12 @@ namespace Ecommerce.UI.Security
 	{
 		private readonly ILocalStorageService _localStorageService;
 		private readonly IConfiguration _configuration;
-		private readonly IJSRuntime _jsRuntime;
 		private readonly AuthenticationState _anonymous;
 
-		public AuthStateProvider(ILocalStorageService localStorageService, IConfiguration configuration, IJSRuntime jsRuntime)
+		public AuthStateProvider(ILocalStorageService localStorageService, IConfiguration configuration)
 		{
 			this._localStorageService = localStorageService;
 			this._configuration = configuration;
-			this._jsRuntime = jsRuntime;
 			this._anonymous = new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()));
 		}
 		
