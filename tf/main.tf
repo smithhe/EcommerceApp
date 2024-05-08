@@ -1,4 +1,12 @@
 terraform {
+  cloud {
+    organization = "CodeSmithing"
+
+    workspaces {
+      name = "ecommerce-qa"
+    }
+  }
+
   required_providers {
     digitalocean = {
       source  = "digitalocean/digitalocean"
