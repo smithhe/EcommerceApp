@@ -1,4 +1,5 @@
 using System;
+using Serilog;
 using Ecommerce.FastEndpoints;
 using Ecommerce.Persistence;
 using FastEndpoints;
@@ -14,6 +15,15 @@ using Microsoft.Extensions.DependencyInjection;
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.AddEnvironmentVariables("Ecommerce_");
+
+//Configure Serilog
+builder.Host.UseSerilog((context, configuration) =>
+{
+	configuration
+		.ReadFrom.Configuration(context.Configuration)
+		.Enrich.FromLogContext()
+		.WriteTo.Console();
+});
 
 // Add services to the container.
 builder.Services.AddCors(policy =>
