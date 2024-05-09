@@ -4,8 +4,16 @@ using MassTransit;
 using Microsoft.Extensions.Configuration;
 using System;
 using Ecommerce.Mail;
+using Serilog;
 
-IHostBuilder builder = Host.CreateDefaultBuilder(args);
+IHostBuilder builder = Host.CreateDefaultBuilder(args)
+    .UseSerilog((hostContext, configuration) => 
+    {
+        configuration
+            .ReadFrom.Configuration(hostContext.Configuration)
+            .Enrich.FromLogContext()
+            .WriteTo.Console();
+    });
 
 builder.ConfigureAppConfiguration((_, config) =>
 {
