@@ -73,7 +73,7 @@ variable "cluster_region" {
 variable "k8s_version" {
   description = "The version of kubernetes to use for the cluster"
   type        = string
-  default     = "1.29.1-do.0"
+  default     = "1.29.5-do.0"
 }
 
 variable "cluster_tags" {
