@@ -77,12 +77,6 @@ namespace Ecommerce.Api
                 }
             }
             
-            if (modifiableProperties.ContainsKey("SourceContext"))
-            {
-                modifiableProperties.Remove("SourceContext");
-            }
-            modifiableProperties.Add("source_context", new ScalarValue(logEvent.Properties["SourceContext"].ToString()));
-            
             foreach (var (key, value) in modifiableProperties)
             {
                 string name = GetSanitizedPropertyName(key);
