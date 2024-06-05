@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Mail.Contracts.ITemplateModel
+  commentId: T:Ecommerce.Mail.Contracts.ITemplateModel
+  id: ITemplateModel
+  parent: Ecommerce.Mail.Contracts
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ITemplateModel
+  nameWithType: ITemplateModel
+  fullName: Ecommerce.Mail.Contracts.ITemplateModel
+  type: Interface
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Contracts/ITemplateModel.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ITemplateModel
+    path: ../../Infrastructure/Ecommerce.Mail/Contracts/ITemplateModel.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Contracts
+  summary: Base interface for template models
+  example: []
+  syntax:
+    content: public interface ITemplateModel
+    content.vb: Public Interface ITemplateModel
+references:
+- uid: Ecommerce.Mail.Contracts
+  commentId: N:Ecommerce.Mail.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Mail.Contracts
+  nameWithType: Ecommerce.Mail.Contracts
+  fullName: Ecommerce.Mail.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Contracts
+    name: Contracts
+    href: Ecommerce.Mail.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Contracts
+    name: Contracts
+    href: Ecommerce.Mail.Contracts.html

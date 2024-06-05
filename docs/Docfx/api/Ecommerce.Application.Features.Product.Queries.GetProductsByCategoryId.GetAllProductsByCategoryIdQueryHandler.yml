@@ -1,0 +1,943 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+  commentId: T:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+  id: GetAllProductsByCategoryIdQueryHandler
+  parent: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  children:
+  - Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IProductAsyncRepository)
+  - Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: GetAllProductsByCategoryIdQueryHandler
+  nameWithType: GetAllProductsByCategoryIdQueryHandler
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/Product/Queries/GetProductsByCategoryId/GetAllProductsByCategoryIdQueryHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllProductsByCategoryIdQueryHandler
+    path: ../../Core/Ecommerce.Application/Features/Product/Queries/GetProductsByCategoryId/GetAllProductsByCategoryIdQueryHandler.cs
+    startLine: 18
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  summary: A <xref href="MediatR.Mediator" data-throw-if-not-resolved="false"></xref> request handler for <xref href="Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: 'public class GetAllProductsByCategoryIdQueryHandler : IRequestHandler<GetAllProductsByCategoryIdQuery, GetAllProductsByCategoryIdResponse>'
+    content.vb: Public Class GetAllProductsByCategoryIdQueryHandler Implements IRequestHandler(Of GetAllProductsByCategoryIdQuery, GetAllProductsByCategoryIdResponse)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IProductAsyncRepository)
+  commentId: M:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IProductAsyncRepository)
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IProductAsyncRepository)'
+  parent: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: GetAllProductsByCategoryIdQueryHandler(ILogger<GetAllProductsByCategoryIdQueryHandler>, IMapper, IProductAsyncRepository)
+  nameWithType: GetAllProductsByCategoryIdQueryHandler.GetAllProductsByCategoryIdQueryHandler(ILogger<GetAllProductsByCategoryIdQueryHandler>, IMapper, IProductAsyncRepository)
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.GetAllProductsByCategoryIdQueryHandler(Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler>, AutoMapper.IMapper, Ecommerce.Persistence.Contracts.IProductAsyncRepository)
+  type: Constructor
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/Product/Queries/GetProductsByCategoryId/GetAllProductsByCategoryIdQueryHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: .ctor
+    path: ../../Core/Ecommerce.Application/Features/Product/Queries/GetProductsByCategoryId/GetAllProductsByCategoryIdQueryHandler.cs
+    startLine: 30
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  summary: Initializes a new instance of the <xref href="Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public GetAllProductsByCategoryIdQueryHandler(ILogger<GetAllProductsByCategoryIdQueryHandler> logger, IMapper mapper, IProductAsyncRepository productAsyncRepository)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler}
+      description: The <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref> instance used for logging.
+    - id: mapper
+      type: AutoMapper.IMapper
+      description: The <xref href="AutoMapper.IMapper" data-throw-if-not-resolved="false"></xref> instance used for mapping objects.
+    - id: productAsyncRepository
+      type: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+      description: The <xref href="Ecommerce.Persistence.Contracts.IProductAsyncRepository" data-throw-if-not-resolved="false"></xref> instance used for data access for <xref href="Ecommerce.Application.Features.Product" data-throw-if-not-resolved="false"></xref> entities.
+    content.vb: Public Sub New(logger As ILogger(Of GetAllProductsByCategoryIdQueryHandler), mapper As IMapper, productAsyncRepository As IProductAsyncRepository)
+  overload: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.#ctor*
+  nameWithType.vb: GetAllProductsByCategoryIdQueryHandler.New(ILogger(Of GetAllProductsByCategoryIdQueryHandler), IMapper, IProductAsyncRepository)
+  fullName.vb: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.New(Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler), AutoMapper.IMapper, Ecommerce.Persistence.Contracts.IProductAsyncRepository)
+  name.vb: New(ILogger(Of GetAllProductsByCategoryIdQueryHandler), IMapper, IProductAsyncRepository)
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,System.Threading.CancellationToken)
+  commentId: M:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,System.Threading.CancellationToken)
+  id: Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,System.Threading.CancellationToken)
+  parent: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Handle(GetAllProductsByCategoryIdQuery, CancellationToken)
+  nameWithType: GetAllProductsByCategoryIdQueryHandler.Handle(GetAllProductsByCategoryIdQuery, CancellationToken)
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/Product/Queries/GetProductsByCategoryId/GetAllProductsByCategoryIdQueryHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Handle
+    path: ../../Core/Ecommerce.Application/Features/Product/Queries/GetProductsByCategoryId/GetAllProductsByCategoryIdQueryHandler.cs
+    startLine: 49
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  summary: Handles the <xref href="Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery" data-throw-if-not-resolved="false"></xref> request
+  example: []
+  syntax:
+    content: public Task<GetAllProductsByCategoryIdResponse> Handle(GetAllProductsByCategoryIdQuery query, CancellationToken cancellationToken)
+    parameters:
+    - id: query
+      type: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+      description: The <xref href="Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery" data-throw-if-not-resolved="false"></xref> request to be handled.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> that can be used to request cancellation of the operation.
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}
+      description: >-
+        A <xref href="Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse" data-throw-if-not-resolved="false"></xref> with Success being <code>true</code> if any <xref href="Ecommerce.Application.Features.Product" data-throw-if-not-resolved="false"></xref> entities were found;
+
+        Success will be <code>false</code> if no <xref href="Ecommerce.Application.Features.Product" data-throw-if-not-resolved="false"></xref> entities were found.
+
+        Message will contain the message to display to the user.
+
+        Products will contain all <xref href="Ecommerce.Application.Features.Product" data-throw-if-not-resolved="false"></xref> entities or will be empty if none are found
+    content.vb: Public Function Handle(query As GetAllProductsByCategoryIdQuery, cancellationToken As CancellationToken) As Task(Of GetAllProductsByCategoryIdResponse)
+  overload: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.Handle*
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}.Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,System.Threading.CancellationToken)
+references:
+- uid: MediatR.Mediator
+  commentId: T:MediatR.Mediator
+  isExternal: true
+  name: Mediator
+  nameWithType: Mediator
+  fullName: MediatR.Mediator
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+  commentId: T:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+  parent: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery.html
+  name: GetAllProductsByCategoryIdQuery
+  nameWithType: GetAllProductsByCategoryIdQuery
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  commentId: N:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  nameWithType: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Product.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+    name: GetProductsByCategoryId
+    href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Product.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+    name: GetProductsByCategoryId
+    href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}
+  commentId: T:MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`2
+  href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery.html
+  name: IRequestHandler<GetAllProductsByCategoryIdQuery, GetAllProductsByCategoryIdResponse>
+  nameWithType: IRequestHandler<GetAllProductsByCategoryIdQuery, GetAllProductsByCategoryIdResponse>
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery, Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse>
+  nameWithType.vb: IRequestHandler(Of GetAllProductsByCategoryIdQuery, GetAllProductsByCategoryIdResponse)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery, Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse)
+  name.vb: IRequestHandler(Of GetAllProductsByCategoryIdQuery, GetAllProductsByCategoryIdResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+    name: GetAllProductsByCategoryIdQuery
+    href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+    name: GetAllProductsByCategoryIdResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Product/GetAllProductsByCategoryIdResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+    name: GetAllProductsByCategoryIdQuery
+    href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+    name: GetAllProductsByCategoryIdResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Product/GetAllProductsByCategoryIdResponse.cs
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequestHandler`2
+  commentId: T:MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<TRequest, TResponse>
+  nameWithType: IRequestHandler<TRequest, TResponse>
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse)
+  name.vb: IRequestHandler(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+  commentId: T:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+  href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.html
+  name: GetAllProductsByCategoryIdQueryHandler
+  nameWithType: GetAllProductsByCategoryIdQueryHandler
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: AutoMapper.IMapper
+  commentId: T:AutoMapper.IMapper
+  parent: AutoMapper
+  isExternal: true
+  name: IMapper
+  nameWithType: IMapper
+  fullName: AutoMapper.IMapper
+- uid: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  commentId: T:Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.IProductAsyncRepository.html
+  name: IProductAsyncRepository
+  nameWithType: IProductAsyncRepository
+  fullName: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+- uid: Ecommerce.Application.Features.Product
+  commentId: N:Ecommerce.Application.Features.Product
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Product
+  nameWithType: Ecommerce.Application.Features.Product
+  fullName: Ecommerce.Application.Features.Product
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.#ctor*
+  commentId: Overload:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.#ctor
+  href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.html#Ecommerce_Application_Features_Product_Queries_GetProductsByCategoryId_GetAllProductsByCategoryIdQueryHandler__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_Application_Features_Product_Queries_GetProductsByCategoryId_GetAllProductsByCategoryIdQueryHandler__AutoMapper_IMapper_Ecommerce_Persistence_Contracts_IProductAsyncRepository_
+  name: GetAllProductsByCategoryIdQueryHandler
+  nameWithType: GetAllProductsByCategoryIdQueryHandler.GetAllProductsByCategoryIdQueryHandler
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.GetAllProductsByCategoryIdQueryHandler
+  nameWithType.vb: GetAllProductsByCategoryIdQueryHandler.New
+  fullName.vb: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<GetAllProductsByCategoryIdQueryHandler>
+  nameWithType: ILogger<GetAllProductsByCategoryIdQueryHandler>
+  fullName: Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler>
+  nameWithType.vb: ILogger(Of GetAllProductsByCategoryIdQueryHandler)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler)
+  name.vb: ILogger(Of GetAllProductsByCategoryIdQueryHandler)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+    name: GetAllProductsByCategoryIdQueryHandler
+    href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+    name: GetAllProductsByCategoryIdQueryHandler
+    href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.html
+  - name: )
+- uid: AutoMapper
+  commentId: N:AutoMapper
+  isExternal: true
+  name: AutoMapper
+  nameWithType: AutoMapper
+  fullName: AutoMapper
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+  commentId: T:Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+  href: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse.html
+  name: GetAllProductsByCategoryIdResponse
+  nameWithType: GetAllProductsByCategoryIdResponse
+  fullName: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.Handle*
+  commentId: Overload:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.Handle
+  href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.html#Ecommerce_Application_Features_Product_Queries_GetProductsByCategoryId_GetAllProductsByCategoryIdQueryHandler_Handle_Ecommerce_Application_Features_Product_Queries_GetProductsByCategoryId_GetAllProductsByCategoryIdQuery_System_Threading_CancellationToken_
+  name: Handle
+  nameWithType: GetAllProductsByCategoryIdQueryHandler.Handle
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.Handle
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}.Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}.Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}
+  definition: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery.html
+  name: Handle(GetAllProductsByCategoryIdQuery, CancellationToken)
+  nameWithType: IRequestHandler<GetAllProductsByCategoryIdQuery, GetAllProductsByCategoryIdResponse>.Handle(GetAllProductsByCategoryIdQuery, CancellationToken)
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery, Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse>.Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of GetAllProductsByCategoryIdQuery, GetAllProductsByCategoryIdResponse).Handle(GetAllProductsByCategoryIdQuery, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery, Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse).Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}.Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+    name: GetAllProductsByCategoryIdQuery
+    href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}.Handle(Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+    name: GetAllProductsByCategoryIdQuery
+    href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetAllProductsByCategoryIdResponse>
+  nameWithType: Task<GetAllProductsByCategoryIdResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse>
+  nameWithType.vb: Task(Of GetAllProductsByCategoryIdResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse)
+  name.vb: Task(Of GetAllProductsByCategoryIdResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+    name: GetAllProductsByCategoryIdResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Product/GetAllProductsByCategoryIdResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+    name: GetAllProductsByCategoryIdResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Product/GetAllProductsByCategoryIdResponse.cs
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest, TResponse>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

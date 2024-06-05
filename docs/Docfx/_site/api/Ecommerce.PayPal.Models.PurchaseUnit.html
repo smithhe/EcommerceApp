@@ -1,0 +1,516 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PurchaseUnit </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PurchaseUnit ">
+      
+      <meta name="description" content="Represents a purchase unit in a PayPal order.">
+      <link rel="icon" href=".././images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/smithhe/EcommerceApp/new/dev/apiSpec/new?filename=Ecommerce_PayPal_Models_PurchaseUnit.md&amp;value=---%0Auid%3A%20Ecommerce.PayPal.Models.PurchaseUnit%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt=" Ecommerce App">
+             Ecommerce App
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ecommerce.PayPal.Models.PurchaseUnit">
+
+
+
+  <h1 id="Ecommerce_PayPal_Models_PurchaseUnit" data-uid="Ecommerce.PayPal.Models.PurchaseUnit" class="text-break">
+Class PurchaseUnit  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ecommerce.html">Ecommerce</a>.<a class="xref" href="Ecommerce.PayPal.html">PayPal</a>.<a class="xref" href="Ecommerce.PayPal.Models.html">Models</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Ecommerce.PayPal.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a purchase unit in a PayPal order.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PurchaseUnit</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PurchaseUnit</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Ecommerce_PayPal_Models_PurchaseUnit__ctor_" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.#ctor*"></a>
+
+  <h3 id="Ecommerce_PayPal_Models_PurchaseUnit__ctor" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.#ctor">
+  PurchaseUnit()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PurchaseUnit()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Ecommerce_PayPal_Models_PurchaseUnit_Amount_" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.Amount*"></a>
+
+  <h3 id="Ecommerce_PayPal_Models_PurchaseUnit_Amount" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.Amount">
+  Amount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The total order amount with an optional breakdown that provides details, such as the total item amount, total tax amount, shipping, handling, insurance, and discounts, if any.
+If you specify amount.breakdown, the amount equals item_total plus tax_total plus shipping plus handling plus insurance minus shipping_discount minus discount.
+The amount must be a positive number. The amount.value field supports up to 15 digits preceding the decimal.
+For a list of supported currencies, decimal precision, and maximum charge amount, see the PayPal REST APIs Currency Codes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AliasAs(&quot;amount&quot;)]
+public PurchaseAmount Amount { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ecommerce.PayPal.Models.PurchaseAmount.html">PurchaseAmount</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_PayPal_Models_PurchaseUnit_CustomId_" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.CustomId*"></a>
+
+  <h3 id="Ecommerce_PayPal_Models_PurchaseUnit_CustomId" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.CustomId">
+  CustomId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The API caller-provided external ID.
+Used to reconcile client transactions with PayPal transactions.
+Appears in transaction and settlement reports but is not visible to the payer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AliasAs(&quot;custom_id&quot;)]
+public string? CustomId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_PayPal_Models_PurchaseUnit_Description_" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.Description*"></a>
+
+  <h3 id="Ecommerce_PayPal_Models_PurchaseUnit_Description" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The purchase description.
+The maximum length of the character is dependent on the type of characters used.
+The character length is specified assuming a US ASCII character.
+Depending on type of character; (e.g. accented character, Japanese characters) the number of characters that that can be specified as input might not equal the permissible max length.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AliasAs(&quot;description&quot;)]
+public string Description { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_PayPal_Models_PurchaseUnit_InvoiceId_" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.InvoiceId*"></a>
+
+  <h3 id="Ecommerce_PayPal_Models_PurchaseUnit_InvoiceId" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.InvoiceId">
+  InvoiceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The API caller-provided external invoice number for this order.
+Appears in both the payer's transaction history and the emails that the payer receives.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AliasAs(&quot;invoice_id&quot;)]
+public string? InvoiceId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_PayPal_Models_PurchaseUnit_Items_" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.Items*"></a>
+
+  <h3 id="Ecommerce_PayPal_Models_PurchaseUnit_Items" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.Items">
+  Items
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An array of items that the customer purchases from the merchant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AliasAs(&quot;items&quot;)]
+public IEnumerable&lt;Item&gt; Items { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Ecommerce.PayPal.Models.Item.html">Item</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_PayPal_Models_PurchaseUnit_Payee_" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.Payee*"></a>
+
+  <h3 id="Ecommerce_PayPal_Models_PurchaseUnit_Payee" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.Payee">
+  Payee
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The merchant who receives payment for this transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AliasAs(&quot;payee&quot;)]
+public Payee? Payee { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ecommerce.PayPal.Models.Payee.html">Payee</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_PayPal_Models_PurchaseUnit_ReferenceId_" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.ReferenceId*"></a>
+
+  <h3 id="Ecommerce_PayPal_Models_PurchaseUnit_ReferenceId" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.ReferenceId">
+  ReferenceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The API caller-provided external ID for the purchase unit.
+Required for multiple purchase units when you must update the order through PATCH.
+If you omit this value and the order contains only one purchase unit, PayPal sets this value to default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AliasAs(&quot;reference_id&quot;)]
+public string ReferenceId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_PayPal_Models_PurchaseUnit_Shipping_" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.Shipping*"></a>
+
+  <h3 id="Ecommerce_PayPal_Models_PurchaseUnit_Shipping" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.Shipping">
+  Shipping
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name and address of the person to whom to ship the items.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AliasAs(&quot;shipping&quot;)]
+public Shipping? Shipping { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ecommerce.PayPal.Models.Shipping.html">Shipping</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_PayPal_Models_PurchaseUnit_SoftDescriptor_" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.SoftDescriptor*"></a>
+
+  <h3 id="Ecommerce_PayPal_Models_PurchaseUnit_SoftDescriptor" data-uid="Ecommerce.PayPal.Models.PurchaseUnit.SoftDescriptor">
+  SoftDescriptor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The soft descriptor is the dynamic text used to construct the statement descriptor that appears on a payer's card statement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AliasAs(&quot;soft_descriptor&quot;)]
+public string SoftDescriptor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

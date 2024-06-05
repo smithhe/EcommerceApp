@@ -1,0 +1,955 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  commentId: T:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  id: PayPalCreateOrderResponse
+  parent: Ecommerce.PayPal.Models.Responses
+  children:
+  - Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.#ctor
+  - Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.CreateTime
+  - Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Id
+  - Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Intent
+  - Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Links
+  - Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.ProcessingInstruction
+  - Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.PurchaseUnits
+  - Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Status
+  - Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.UpdateTime
+  langs:
+  - csharp
+  - vb
+  name: PayPalCreateOrderResponse
+  nameWithType: PayPalCreateOrderResponse
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PayPalCreateOrderResponse
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Responses
+  summary: Represents the response from the PayPal API when creating an order.
+  example: []
+  syntax:
+    content: public class PayPalCreateOrderResponse
+    content.vb: Public Class PayPalCreateOrderResponse
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.CreateTime
+  commentId: P:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.CreateTime
+  id: CreateTime
+  parent: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: CreateTime
+  nameWithType: PayPalCreateOrderResponse.CreateTime
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.CreateTime
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateTime
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Responses
+  summary: The date and time when the transaction occurred, in Internet date and time format.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("create_time")]
+
+      public DateTime? CreateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: >-
+      <JsonPropertyName("create_time")>
+
+      Public Property CreateTime As Date?
+  overload: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.CreateTime*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: create_time
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.UpdateTime
+  commentId: P:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.UpdateTime
+  id: UpdateTime
+  parent: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: UpdateTime
+  nameWithType: PayPalCreateOrderResponse.UpdateTime
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.UpdateTime
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateTime
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+    startLine: 18
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Responses
+  summary: The date and time when the transaction was last updated, in Internet date and time format.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("update_time")]
+
+      public DateTime? UpdateTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: >-
+      <JsonPropertyName("update_time")>
+
+      Public Property UpdateTime As Date?
+  overload: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.UpdateTime*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: update_time
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Id
+  commentId: P:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Id
+  id: Id
+  parent: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: PayPalCreateOrderResponse.Id
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Id
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Id
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+    startLine: 24
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Responses
+  summary: The ID of the order.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("id")]
+
+      public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("id")>
+
+      Public Property Id As String
+  overload: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Id*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: id
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.ProcessingInstruction
+  commentId: P:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.ProcessingInstruction
+  id: ProcessingInstruction
+  parent: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: ProcessingInstruction
+  nameWithType: PayPalCreateOrderResponse.ProcessingInstruction
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.ProcessingInstruction
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ProcessingInstruction
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+    startLine: 30
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Responses
+  summary: The instruction to process an order.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("processing_instruction")]
+
+      public string? ProcessingInstruction { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("processing_instruction")>
+
+      Public Property ProcessingInstruction As String
+  overload: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.ProcessingInstruction*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: processing_instruction
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Status
+  commentId: P:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Status
+  id: Status
+  parent: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: PayPalCreateOrderResponse.Status
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Status
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Status
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+    startLine: 36
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Responses
+  summary: The order status.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("status")]
+
+      public string? Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("status")>
+
+      Public Property Status As String
+  overload: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Status*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: status
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Intent
+  commentId: P:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Intent
+  id: Intent
+  parent: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: Intent
+  nameWithType: PayPalCreateOrderResponse.Intent
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Intent
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Intent
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+    startLine: 42
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Responses
+  summary: The intent to either capture payment immediately or authorize a payment for an order after order creation.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("intent")]
+
+      public string Intent { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("intent")>
+
+      Public Property Intent As String
+  overload: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Intent*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: intent
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.PurchaseUnits
+  commentId: P:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.PurchaseUnits
+  id: PurchaseUnits
+  parent: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: PurchaseUnits
+  nameWithType: PayPalCreateOrderResponse.PurchaseUnits
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.PurchaseUnits
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PurchaseUnits
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+    startLine: 50
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Responses
+  summary: >-
+    An array of purchase units.
+
+    Each purchase unit establishes a contract between a customer and merchant.
+
+    Each purchase unit represents either a full or partial order that the customer intends to purchase from the merchant.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("purchase_units")]
+
+      public List<PurchaseUnit>? PurchaseUnits { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{Ecommerce.PayPal.Models.PurchaseUnit}
+    content.vb: >-
+      <JsonPropertyName("purchase_units")>
+
+      Public Property PurchaseUnits As List(Of PurchaseUnit)
+  overload: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.PurchaseUnits*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: purchase_units
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Links
+  commentId: P:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Links
+  id: Links
+  parent: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: Links
+  nameWithType: PayPalCreateOrderResponse.Links
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Links
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Links
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+    startLine: 59
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Responses
+  summary: >-
+    An array of request-related HATEOAS links.
+
+    To complete payer approval, use the approve link to redirect the payer.
+
+    The API caller has 3 hours (default setting, this which can be changed by your account manager to 24/48/72 hours to accommodate your use case) from the time the order is created,
+
+    to redirect your payer. Once redirected, the API caller has 3 hours for the payer to approve the order and either authorize or capture the order.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("links")]
+
+      public List<Link> Links { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{Ecommerce.PayPal.Models.Link}
+    content.vb: >-
+      <JsonPropertyName("links")>
+
+      Public Property Links As List(Of Link)
+  overload: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Links*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: links
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.#ctor
+  commentId: M:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.#ctor
+  id: '#ctor'
+  parent: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: PayPalCreateOrderResponse()
+  nameWithType: PayPalCreateOrderResponse.PayPalCreateOrderResponse()
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.PayPalCreateOrderResponse()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Infrastructure/Ecommerce.PayPal/Models/Responses/PayPalCreateOrderResponse.cs
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Responses
+  syntax:
+    content: public PayPalCreateOrderResponse()
+    content.vb: Public Sub New()
+  overload: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.#ctor*
+  nameWithType.vb: PayPalCreateOrderResponse.New()
+  fullName.vb: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.PayPal.Models.Responses
+  commentId: N:Ecommerce.PayPal.Models.Responses
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Models.Responses
+  nameWithType: Ecommerce.PayPal.Models.Responses
+  fullName: Ecommerce.PayPal.Models.Responses
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models.Responses
+    name: Responses
+    href: Ecommerce.PayPal.Models.Responses.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models.Responses
+    name: Responses
+    href: Ecommerce.PayPal.Models.Responses.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.CreateTime*
+  commentId: Overload:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.CreateTime
+  href: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.html#Ecommerce_PayPal_Models_Responses_PayPalCreateOrderResponse_CreateTime
+  name: CreateTime
+  nameWithType: PayPalCreateOrderResponse.CreateTime
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.CreateTime
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.UpdateTime*
+  commentId: Overload:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.UpdateTime
+  href: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.html#Ecommerce_PayPal_Models_Responses_PayPalCreateOrderResponse_UpdateTime
+  name: UpdateTime
+  nameWithType: PayPalCreateOrderResponse.UpdateTime
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.UpdateTime
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Id*
+  commentId: Overload:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Id
+  href: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.html#Ecommerce_PayPal_Models_Responses_PayPalCreateOrderResponse_Id
+  name: Id
+  nameWithType: PayPalCreateOrderResponse.Id
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.ProcessingInstruction*
+  commentId: Overload:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.ProcessingInstruction
+  href: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.html#Ecommerce_PayPal_Models_Responses_PayPalCreateOrderResponse_ProcessingInstruction
+  name: ProcessingInstruction
+  nameWithType: PayPalCreateOrderResponse.ProcessingInstruction
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.ProcessingInstruction
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Status*
+  commentId: Overload:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Status
+  href: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.html#Ecommerce_PayPal_Models_Responses_PayPalCreateOrderResponse_Status
+  name: Status
+  nameWithType: PayPalCreateOrderResponse.Status
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Status
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Intent*
+  commentId: Overload:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Intent
+  href: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.html#Ecommerce_PayPal_Models_Responses_PayPalCreateOrderResponse_Intent
+  name: Intent
+  nameWithType: PayPalCreateOrderResponse.Intent
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Intent
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.PurchaseUnits*
+  commentId: Overload:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.PurchaseUnits
+  href: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.html#Ecommerce_PayPal_Models_Responses_PayPalCreateOrderResponse_PurchaseUnits
+  name: PurchaseUnits
+  nameWithType: PayPalCreateOrderResponse.PurchaseUnits
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.PurchaseUnits
+- uid: System.Collections.Generic.List{Ecommerce.PayPal.Models.PurchaseUnit}
+  commentId: T:System.Collections.Generic.List{Ecommerce.PayPal.Models.PurchaseUnit}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<PurchaseUnit>
+  nameWithType: List<PurchaseUnit>
+  fullName: System.Collections.Generic.List<Ecommerce.PayPal.Models.PurchaseUnit>
+  nameWithType.vb: List(Of PurchaseUnit)
+  fullName.vb: System.Collections.Generic.List(Of Ecommerce.PayPal.Models.PurchaseUnit)
+  name.vb: List(Of PurchaseUnit)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Ecommerce.PayPal.Models.PurchaseUnit
+    name: PurchaseUnit
+    href: Ecommerce.PayPal.Models.PurchaseUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.PayPal.Models.PurchaseUnit
+    name: PurchaseUnit
+    href: Ecommerce.PayPal.Models.PurchaseUnit.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Links*
+  commentId: Overload:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Links
+  href: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.html#Ecommerce_PayPal_Models_Responses_PayPalCreateOrderResponse_Links
+  name: Links
+  nameWithType: PayPalCreateOrderResponse.Links
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.Links
+- uid: System.Collections.Generic.List{Ecommerce.PayPal.Models.Link}
+  commentId: T:System.Collections.Generic.List{Ecommerce.PayPal.Models.Link}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Link>
+  nameWithType: List<Link>
+  fullName: System.Collections.Generic.List<Ecommerce.PayPal.Models.Link>
+  nameWithType.vb: List(Of Link)
+  fullName.vb: System.Collections.Generic.List(Of Ecommerce.PayPal.Models.Link)
+  name.vb: List(Of Link)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Ecommerce.PayPal.Models.Link
+    name: Link
+    href: Ecommerce.PayPal.Models.Link.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.PayPal.Models.Link
+    name: Link
+    href: Ecommerce.PayPal.Models.Link.html
+  - name: )
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.#ctor*
+  commentId: Overload:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.#ctor
+  isExternal: true
+  href: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.html#Ecommerce_PayPal_Models_Responses_PayPalCreateOrderResponse__ctor
+  name: PayPalCreateOrderResponse
+  nameWithType: PayPalCreateOrderResponse.PayPalCreateOrderResponse
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.PayPalCreateOrderResponse
+  nameWithType.vb: PayPalCreateOrderResponse.New
+  fullName.vb: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.New
+  name.vb: New

@@ -1,0 +1,1709 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  id: CategoryTests
+  parent: Ecommerce.UnitTests.ApplicationTests
+  children:
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.Setup
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  langs:
+  - csharp
+  - vb
+  name: CategoryTests
+  nameWithType: CategoryTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  type: Class
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CategoryTests
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 20
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class CategoryTests
+    content.vb: >-
+      <TestFixture>
+
+      Public Class CategoryTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.Setup
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.Setup
+  id: Setup
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: CategoryTests.Setup()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.Setup()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Setup
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 32
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void Setup()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub Setup()
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.Setup*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  id: CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 60
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  id: CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 89
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  id: CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 114
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  id: CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 139
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  id: CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 168
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  id: CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 198
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  id: CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 229
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  id: CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse()
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 259
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  id: CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse()
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 289
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  id: CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse()
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 320
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse
+  id: CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse()
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 355
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  id: DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  nameWithType: CategoryTests.DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 387
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  id: DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+  nameWithType: CategoryTests.DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 412
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse
+  id: DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse()
+  nameWithType: CategoryTests.DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 435
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  id: UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 464
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  id: UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 491
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  id: UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 515
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  id: UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 539
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  id: UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 567
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  id: UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 596
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  id: UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 626
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  id: UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse()
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 655
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  id: UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse()
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 684
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  id: UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse()
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 714
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse
+  id: UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse()
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 748
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  id: GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  nameWithType: CategoryTests.GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 779
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse
+  id: GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse()
+  nameWithType: CategoryTests.GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 802
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  id: GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  nameWithType: CategoryTests.GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 829
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse
+  id: GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse()
+  nameWithType: CategoryTests.GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CategoryTests.cs
+    startLine: 852
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: Ecommerce.UnitTests.ApplicationTests
+  commentId: N:Ecommerce.UnitTests.ApplicationTests
+  href: Ecommerce.html
+  name: Ecommerce.UnitTests.ApplicationTests
+  nameWithType: Ecommerce.UnitTests.ApplicationTests
+  fullName: Ecommerce.UnitTests.ApplicationTests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.Setup*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.Setup
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_Setup
+  name: Setup
+  nameWithType: CategoryTests.Setup
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.Setup
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  name: CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  name: CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  name: CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  name: CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  name: CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  name: CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  name: CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  name: CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  name: CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  name: CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse
+  name: CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse
+  nameWithType: CategoryTests.CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.CreateCategoryCommandHandler_WhenSqlFailsToCreateCategory_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  name: DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  nameWithType: CategoryTests.DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  name: DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  nameWithType: CategoryTests.DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse
+  name: DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse
+  nameWithType: CategoryTests.DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.DeleteCategoryCommandHandler_WhenSqlFailsToDeleteCategory_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  name: UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  name: UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyDto_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  name: UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  name: UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  name: UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  name: UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  name: UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  name: UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsEmpty_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  name: UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryIsNull_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  name: UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSummaryExceedsMaxLength_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse
+  name: UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse
+  nameWithType: CategoryTests.UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.UpdateCategoryCommandHandler_WhenSqlFailsToUpdateCategory_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  name: GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  nameWithType: CategoryTests.GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse
+  name: GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse
+  nameWithType: CategoryTests.GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetAllCategoriesQueryHandler_WhenNoCategoriesFound_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  name: GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  nameWithType: CategoryTests.GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html#Ecommerce_UnitTests_ApplicationTests_CategoryTests_GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse
+  name: GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse
+  nameWithType: CategoryTests.GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests.GetCategoryByIdQueryHandler_WhenCategoryNotFound_ReturnsFailedResponse

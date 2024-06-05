@@ -1,0 +1,949 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models.PurchaseUnit
+  commentId: T:Ecommerce.PayPal.Models.PurchaseUnit
+  id: PurchaseUnit
+  parent: Ecommerce.PayPal.Models
+  children:
+  - Ecommerce.PayPal.Models.PurchaseUnit.#ctor
+  - Ecommerce.PayPal.Models.PurchaseUnit.Amount
+  - Ecommerce.PayPal.Models.PurchaseUnit.CustomId
+  - Ecommerce.PayPal.Models.PurchaseUnit.Description
+  - Ecommerce.PayPal.Models.PurchaseUnit.InvoiceId
+  - Ecommerce.PayPal.Models.PurchaseUnit.Items
+  - Ecommerce.PayPal.Models.PurchaseUnit.Payee
+  - Ecommerce.PayPal.Models.PurchaseUnit.ReferenceId
+  - Ecommerce.PayPal.Models.PurchaseUnit.Shipping
+  - Ecommerce.PayPal.Models.PurchaseUnit.SoftDescriptor
+  langs:
+  - csharp
+  - vb
+  name: PurchaseUnit
+  nameWithType: PurchaseUnit
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PurchaseUnit
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: Represents a purchase unit in a PayPal order.
+  example: []
+  syntax:
+    content: public class PurchaseUnit
+    content.vb: Public Class PurchaseUnit
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.ReferenceId
+  commentId: P:Ecommerce.PayPal.Models.PurchaseUnit.ReferenceId
+  id: ReferenceId
+  parent: Ecommerce.PayPal.Models.PurchaseUnit
+  langs:
+  - csharp
+  - vb
+  name: ReferenceId
+  nameWithType: PurchaseUnit.ReferenceId
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.ReferenceId
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ReferenceId
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+    startLine: 14
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The API caller-provided external ID for the purchase unit.
+
+    Required for multiple purchase units when you must update the order through PATCH.
+
+    If you omit this value and the order contains only one purchase unit, PayPal sets this value to default.
+  example: []
+  syntax:
+    content: >-
+      [AliasAs("reference_id")]
+
+      public string ReferenceId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <AliasAs("reference_id")>
+
+      Public Property ReferenceId As String
+  overload: Ecommerce.PayPal.Models.PurchaseUnit.ReferenceId*
+  attributes:
+  - type: Refit.AliasAsAttribute
+    ctor: Refit.AliasAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: reference_id
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.Description
+  commentId: P:Ecommerce.PayPal.Models.PurchaseUnit.Description
+  id: Description
+  parent: Ecommerce.PayPal.Models.PurchaseUnit
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: PurchaseUnit.Description
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.Description
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Description
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+    startLine: 23
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The purchase description.
+
+    The maximum length of the character is dependent on the type of characters used.
+
+    The character length is specified assuming a US ASCII character.
+
+    Depending on type of character; (e.g. accented character, Japanese characters) the number of characters that that can be specified as input might not equal the permissible max length.
+  example: []
+  syntax:
+    content: >-
+      [AliasAs("description")]
+
+      public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <AliasAs("description")>
+
+      Public Property Description As String
+  overload: Ecommerce.PayPal.Models.PurchaseUnit.Description*
+  attributes:
+  - type: Refit.AliasAsAttribute
+    ctor: Refit.AliasAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: description
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.CustomId
+  commentId: P:Ecommerce.PayPal.Models.PurchaseUnit.CustomId
+  id: CustomId
+  parent: Ecommerce.PayPal.Models.PurchaseUnit
+  langs:
+  - csharp
+  - vb
+  name: CustomId
+  nameWithType: PurchaseUnit.CustomId
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.CustomId
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CustomId
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+    startLine: 31
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The API caller-provided external ID.
+
+    Used to reconcile client transactions with PayPal transactions.
+
+    Appears in transaction and settlement reports but is not visible to the payer.
+  example: []
+  syntax:
+    content: >-
+      [AliasAs("custom_id")]
+
+      public string? CustomId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <AliasAs("custom_id")>
+
+      Public Property CustomId As String
+  overload: Ecommerce.PayPal.Models.PurchaseUnit.CustomId*
+  attributes:
+  - type: Refit.AliasAsAttribute
+    ctor: Refit.AliasAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: custom_id
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.InvoiceId
+  commentId: P:Ecommerce.PayPal.Models.PurchaseUnit.InvoiceId
+  id: InvoiceId
+  parent: Ecommerce.PayPal.Models.PurchaseUnit
+  langs:
+  - csharp
+  - vb
+  name: InvoiceId
+  nameWithType: PurchaseUnit.InvoiceId
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.InvoiceId
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: InvoiceId
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+    startLine: 38
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The API caller-provided external invoice number for this order.
+
+    Appears in both the payer's transaction history and the emails that the payer receives.
+  example: []
+  syntax:
+    content: >-
+      [AliasAs("invoice_id")]
+
+      public string? InvoiceId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <AliasAs("invoice_id")>
+
+      Public Property InvoiceId As String
+  overload: Ecommerce.PayPal.Models.PurchaseUnit.InvoiceId*
+  attributes:
+  - type: Refit.AliasAsAttribute
+    ctor: Refit.AliasAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: invoice_id
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.SoftDescriptor
+  commentId: P:Ecommerce.PayPal.Models.PurchaseUnit.SoftDescriptor
+  id: SoftDescriptor
+  parent: Ecommerce.PayPal.Models.PurchaseUnit
+  langs:
+  - csharp
+  - vb
+  name: SoftDescriptor
+  nameWithType: PurchaseUnit.SoftDescriptor
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.SoftDescriptor
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: SoftDescriptor
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+    startLine: 44
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The soft descriptor is the dynamic text used to construct the statement descriptor that appears on a payer's card statement.
+  example: []
+  syntax:
+    content: >-
+      [AliasAs("soft_descriptor")]
+
+      public string SoftDescriptor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <AliasAs("soft_descriptor")>
+
+      Public Property SoftDescriptor As String
+  overload: Ecommerce.PayPal.Models.PurchaseUnit.SoftDescriptor*
+  attributes:
+  - type: Refit.AliasAsAttribute
+    ctor: Refit.AliasAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: soft_descriptor
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.Items
+  commentId: P:Ecommerce.PayPal.Models.PurchaseUnit.Items
+  id: Items
+  parent: Ecommerce.PayPal.Models.PurchaseUnit
+  langs:
+  - csharp
+  - vb
+  name: Items
+  nameWithType: PurchaseUnit.Items
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.Items
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Items
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+    startLine: 50
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: An array of items that the customer purchases from the merchant.
+  example: []
+  syntax:
+    content: >-
+      [AliasAs("items")]
+
+      public IEnumerable<Item> Items { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{Ecommerce.PayPal.Models.Item}
+    content.vb: >-
+      <AliasAs("items")>
+
+      Public Property Items As IEnumerable(Of Item)
+  overload: Ecommerce.PayPal.Models.PurchaseUnit.Items*
+  attributes:
+  - type: Refit.AliasAsAttribute
+    ctor: Refit.AliasAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: items
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.Amount
+  commentId: P:Ecommerce.PayPal.Models.PurchaseUnit.Amount
+  id: Amount
+  parent: Ecommerce.PayPal.Models.PurchaseUnit
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: PurchaseUnit.Amount
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.Amount
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Amount
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+    startLine: 59
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The total order amount with an optional breakdown that provides details, such as the total item amount, total tax amount, shipping, handling, insurance, and discounts, if any.
+
+    If you specify amount.breakdown, the amount equals item_total plus tax_total plus shipping plus handling plus insurance minus shipping_discount minus discount.
+
+    The amount must be a positive number. The amount.value field supports up to 15 digits preceding the decimal.
+
+    For a list of supported currencies, decimal precision, and maximum charge amount, see the PayPal REST APIs Currency Codes.
+  example: []
+  syntax:
+    content: >-
+      [AliasAs("amount")]
+
+      public PurchaseAmount Amount { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.PurchaseAmount
+    content.vb: >-
+      <AliasAs("amount")>
+
+      Public Property Amount As PurchaseAmount
+  overload: Ecommerce.PayPal.Models.PurchaseUnit.Amount*
+  attributes:
+  - type: Refit.AliasAsAttribute
+    ctor: Refit.AliasAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: amount
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.Payee
+  commentId: P:Ecommerce.PayPal.Models.PurchaseUnit.Payee
+  id: Payee
+  parent: Ecommerce.PayPal.Models.PurchaseUnit
+  langs:
+  - csharp
+  - vb
+  name: Payee
+  nameWithType: PurchaseUnit.Payee
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.Payee
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Payee
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+    startLine: 65
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The merchant who receives payment for this transaction.
+  example: []
+  syntax:
+    content: >-
+      [AliasAs("payee")]
+
+      public Payee? Payee { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Payee
+    content.vb: >-
+      <AliasAs("payee")>
+
+      Public Property Payee As Payee
+  overload: Ecommerce.PayPal.Models.PurchaseUnit.Payee*
+  attributes:
+  - type: Refit.AliasAsAttribute
+    ctor: Refit.AliasAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: payee
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.Shipping
+  commentId: P:Ecommerce.PayPal.Models.PurchaseUnit.Shipping
+  id: Shipping
+  parent: Ecommerce.PayPal.Models.PurchaseUnit
+  langs:
+  - csharp
+  - vb
+  name: Shipping
+  nameWithType: PurchaseUnit.Shipping
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.Shipping
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Shipping
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+    startLine: 71
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The name and address of the person to whom to ship the items.
+  example: []
+  syntax:
+    content: >-
+      [AliasAs("shipping")]
+
+      public Shipping? Shipping { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Shipping
+    content.vb: >-
+      <AliasAs("shipping")>
+
+      Public Property Shipping As Shipping
+  overload: Ecommerce.PayPal.Models.PurchaseUnit.Shipping*
+  attributes:
+  - type: Refit.AliasAsAttribute
+    ctor: Refit.AliasAsAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: shipping
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.#ctor
+  commentId: M:Ecommerce.PayPal.Models.PurchaseUnit.#ctor
+  id: '#ctor'
+  parent: Ecommerce.PayPal.Models.PurchaseUnit
+  langs:
+  - csharp
+  - vb
+  name: PurchaseUnit()
+  nameWithType: PurchaseUnit.PurchaseUnit()
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.PurchaseUnit()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Infrastructure/Ecommerce.PayPal/Models/PurchaseUnit.cs
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  syntax:
+    content: public PurchaseUnit()
+    content.vb: Public Sub New()
+  overload: Ecommerce.PayPal.Models.PurchaseUnit.#ctor*
+  nameWithType.vb: PurchaseUnit.New()
+  fullName.vb: Ecommerce.PayPal.Models.PurchaseUnit.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.PayPal.Models
+  commentId: N:Ecommerce.PayPal.Models
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Models
+  nameWithType: Ecommerce.PayPal.Models
+  fullName: Ecommerce.PayPal.Models
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.ReferenceId*
+  commentId: Overload:Ecommerce.PayPal.Models.PurchaseUnit.ReferenceId
+  href: Ecommerce.PayPal.Models.PurchaseUnit.html#Ecommerce_PayPal_Models_PurchaseUnit_ReferenceId
+  name: ReferenceId
+  nameWithType: PurchaseUnit.ReferenceId
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.ReferenceId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.Description*
+  commentId: Overload:Ecommerce.PayPal.Models.PurchaseUnit.Description
+  href: Ecommerce.PayPal.Models.PurchaseUnit.html#Ecommerce_PayPal_Models_PurchaseUnit_Description
+  name: Description
+  nameWithType: PurchaseUnit.Description
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.Description
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.CustomId*
+  commentId: Overload:Ecommerce.PayPal.Models.PurchaseUnit.CustomId
+  href: Ecommerce.PayPal.Models.PurchaseUnit.html#Ecommerce_PayPal_Models_PurchaseUnit_CustomId
+  name: CustomId
+  nameWithType: PurchaseUnit.CustomId
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.CustomId
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.InvoiceId*
+  commentId: Overload:Ecommerce.PayPal.Models.PurchaseUnit.InvoiceId
+  href: Ecommerce.PayPal.Models.PurchaseUnit.html#Ecommerce_PayPal_Models_PurchaseUnit_InvoiceId
+  name: InvoiceId
+  nameWithType: PurchaseUnit.InvoiceId
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.InvoiceId
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.SoftDescriptor*
+  commentId: Overload:Ecommerce.PayPal.Models.PurchaseUnit.SoftDescriptor
+  href: Ecommerce.PayPal.Models.PurchaseUnit.html#Ecommerce_PayPal_Models_PurchaseUnit_SoftDescriptor
+  name: SoftDescriptor
+  nameWithType: PurchaseUnit.SoftDescriptor
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.SoftDescriptor
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.Items*
+  commentId: Overload:Ecommerce.PayPal.Models.PurchaseUnit.Items
+  href: Ecommerce.PayPal.Models.PurchaseUnit.html#Ecommerce_PayPal_Models_PurchaseUnit_Items
+  name: Items
+  nameWithType: PurchaseUnit.Items
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.Items
+- uid: System.Collections.Generic.IEnumerable{Ecommerce.PayPal.Models.Item}
+  commentId: T:System.Collections.Generic.IEnumerable{Ecommerce.PayPal.Models.Item}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Item>
+  nameWithType: IEnumerable<Item>
+  fullName: System.Collections.Generic.IEnumerable<Ecommerce.PayPal.Models.Item>
+  nameWithType.vb: IEnumerable(Of Item)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Ecommerce.PayPal.Models.Item)
+  name.vb: IEnumerable(Of Item)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Ecommerce.PayPal.Models.Item
+    name: Item
+    href: Ecommerce.PayPal.Models.Item.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.PayPal.Models.Item
+    name: Item
+    href: Ecommerce.PayPal.Models.Item.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.Amount*
+  commentId: Overload:Ecommerce.PayPal.Models.PurchaseUnit.Amount
+  href: Ecommerce.PayPal.Models.PurchaseUnit.html#Ecommerce_PayPal_Models_PurchaseUnit_Amount
+  name: Amount
+  nameWithType: PurchaseUnit.Amount
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.Amount
+- uid: Ecommerce.PayPal.Models.PurchaseAmount
+  commentId: T:Ecommerce.PayPal.Models.PurchaseAmount
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.PurchaseAmount.html
+  name: PurchaseAmount
+  nameWithType: PurchaseAmount
+  fullName: Ecommerce.PayPal.Models.PurchaseAmount
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.Payee*
+  commentId: Overload:Ecommerce.PayPal.Models.PurchaseUnit.Payee
+  href: Ecommerce.PayPal.Models.PurchaseUnit.html#Ecommerce_PayPal_Models_PurchaseUnit_Payee
+  name: Payee
+  nameWithType: PurchaseUnit.Payee
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.Payee
+- uid: Ecommerce.PayPal.Models.Payee
+  commentId: T:Ecommerce.PayPal.Models.Payee
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Payee.html
+  name: Payee
+  nameWithType: Payee
+  fullName: Ecommerce.PayPal.Models.Payee
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.Shipping*
+  commentId: Overload:Ecommerce.PayPal.Models.PurchaseUnit.Shipping
+  href: Ecommerce.PayPal.Models.PurchaseUnit.html#Ecommerce_PayPal_Models_PurchaseUnit_Shipping
+  name: Shipping
+  nameWithType: PurchaseUnit.Shipping
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.Shipping
+- uid: Ecommerce.PayPal.Models.Shipping
+  commentId: T:Ecommerce.PayPal.Models.Shipping
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Shipping.html
+  name: Shipping
+  nameWithType: Shipping
+  fullName: Ecommerce.PayPal.Models.Shipping
+- uid: Ecommerce.PayPal.Models.PurchaseUnit.#ctor*
+  commentId: Overload:Ecommerce.PayPal.Models.PurchaseUnit.#ctor
+  isExternal: true
+  href: Ecommerce.PayPal.Models.PurchaseUnit.html#Ecommerce_PayPal_Models_PurchaseUnit__ctor
+  name: PurchaseUnit
+  nameWithType: PurchaseUnit.PurchaseUnit
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit.PurchaseUnit
+  nameWithType.vb: PurchaseUnit.New
+  fullName.vb: Ecommerce.PayPal.Models.PurchaseUnit.New
+  name.vb: New

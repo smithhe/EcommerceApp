@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Getting Started </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Getting Started ">
+      
+      
+      <link rel="icon" href="./images/favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/smithhe/EcommerceApp/blob/dev/docs/Docfx/getting-started.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt=" Ecommerce App">
+             Ecommerce App
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="getting-started">Getting Started</h1>
+
+<p>To setup and run the project locally you will need to first install the prequisite software on your machine and then follow the instructions below</p>
+<h3 id="software-requirements">Software Requirements:</h3>
+<ul>
+<li>.Net 8 SDK</li>
+<li>Docker</li>
+</ul>
+<p>Optionally if you would like to have your containers hosted on a separate machine Portainer would be a good option to setup and manage the stack for this application.</p>
+<h3 id="setup-steps">Setup Steps</h3>
+<ol>
+<li><p>Open Powershell and move into the Persistence project directory</p>
+<ul>
+<li>Your shell path should look similar to <code>C:\EcommerceApp\Infrastructure\Ecommerce.Persistence&gt;</code> on windows</li>
+<li>For <code>superior</code> Linux users it should look more like this <code>~/GitRepos/EcommerceAppEcommerce.Persistence$</code>
+<br><br></li>
+</ul>
+</li>
+<li><p>Run the following command to set up a MySQL Docker Container</p>
+<pre><code class="lang-bash">docker run -d --name ecommerce-mailhog -p 1025:1025 -p 8025:8025 mailhog/mailhog
+docker run -d --name ecommerce-rabbit -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+docker run --name ecommerce-mysql -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=ecommerce -e MYSQL_USER=applicationuser -e MYSQL_PASSWORD=password mysql:latest
+</code></pre>
+</li>
+<li><p>Run the following command to install the dotnet tools needed for this repo</p>
+<pre><code class="lang-bash">dotnet tool restore
+</code></pre>
+</li>
+<li><p>Update your <code>appsettings.Development.json</code> file in the API project to have the following connection string <br> (You <em>SHOULD</em> change the values to match your MySQL container setup)</p>
+<pre><code class="lang-json">&quot;ConnectionStrings&quot;: {
+    &quot;DefaultConnection&quot;: &quot;server=localhost;port=3306;database=ecommerce;user=applicationuser;password=password&quot;
+}
+</code></pre>
+</li>
+<li><p>You will need to use a program of your choice or bash into the container to access your MySql database to run the following snippet as a user with admin privileges</p>
+<pre><code class="lang-sql"> SET GLOBAL event_scheduler = ON;
+</code></pre>
+</li>
+<li><p>Add a secrets.json file to the API project and add paste the following into it and then update the value to a random key of your choosing <br> (can be any value you want)</p>
+<pre><code class="lang-json">{
+    &quot;JwtSettings&quot;: {
+        &quot;Key&quot;: &quot;PUTSOMETHINGHERE&quot;
+    }
+}
+</code></pre>
+</li>
+<li><p>Run the UI and API project together in an IDE of your choice</p>
+</li>
+</ol>
+<h3 id="post-setup-instructions">Post Setup Instructions</h3>
+<ol>
+<li><p>You can now run the application, but you will need to go to the register page, you can either append the UI
+path with <code>/Register</code> or click login in the top right and click <code>Register here</code></p>
+</li>
+<li><p>To add more Products with pictures you will need to set up your own S3 bucket and use the urls from that to
+show product pictures</p>
+</li>
+</ol>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

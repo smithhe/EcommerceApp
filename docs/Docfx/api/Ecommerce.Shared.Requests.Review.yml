@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Requests.Review
+  commentId: N:Ecommerce.Shared.Requests.Review
+  id: Ecommerce.Shared.Requests.Review
+  children:
+  - Ecommerce.Shared.Requests.Review.CreateReviewApiRequest
+  - Ecommerce.Shared.Requests.Review.DeleteReviewApiRequest
+  - Ecommerce.Shared.Requests.Review.GetReviewsForProductApiRequest
+  - Ecommerce.Shared.Requests.Review.GetUserReviewForProductApiRequest
+  - Ecommerce.Shared.Requests.Review.UpdateReviewApiRequest
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Requests.Review
+  nameWithType: Ecommerce.Shared.Requests.Review
+  fullName: Ecommerce.Shared.Requests.Review
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Requests.Review.CreateReviewApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Review.CreateReviewApiRequest
+  parent: Ecommerce.Shared.Requests.Review
+  href: Ecommerce.Shared.Requests.Review.CreateReviewApiRequest.html
+  name: CreateReviewApiRequest
+  nameWithType: CreateReviewApiRequest
+  fullName: Ecommerce.Shared.Requests.Review.CreateReviewApiRequest
+- uid: Ecommerce.Shared.Requests.Review.DeleteReviewApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Review.DeleteReviewApiRequest
+  parent: Ecommerce.Shared.Requests.Review
+  href: Ecommerce.Shared.Requests.Review.DeleteReviewApiRequest.html
+  name: DeleteReviewApiRequest
+  nameWithType: DeleteReviewApiRequest
+  fullName: Ecommerce.Shared.Requests.Review.DeleteReviewApiRequest
+- uid: Ecommerce.Shared.Requests.Review.GetReviewsForProductApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Review.GetReviewsForProductApiRequest
+  parent: Ecommerce.Shared.Requests.Review
+  href: Ecommerce.Shared.Requests.Review.GetReviewsForProductApiRequest.html
+  name: GetReviewsForProductApiRequest
+  nameWithType: GetReviewsForProductApiRequest
+  fullName: Ecommerce.Shared.Requests.Review.GetReviewsForProductApiRequest
+- uid: Ecommerce.Shared.Requests.Review.GetUserReviewForProductApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Review.GetUserReviewForProductApiRequest
+  parent: Ecommerce.Shared.Requests.Review
+  href: Ecommerce.Shared.Requests.Review.GetUserReviewForProductApiRequest.html
+  name: GetUserReviewForProductApiRequest
+  nameWithType: GetUserReviewForProductApiRequest
+  fullName: Ecommerce.Shared.Requests.Review.GetUserReviewForProductApiRequest
+- uid: Ecommerce.Shared.Requests.Review.UpdateReviewApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Review.UpdateReviewApiRequest
+  parent: Ecommerce.Shared.Requests.Review
+  href: Ecommerce.Shared.Requests.Review.UpdateReviewApiRequest.html
+  name: UpdateReviewApiRequest
+  nameWithType: UpdateReviewApiRequest
+  fullName: Ecommerce.Shared.Requests.Review.UpdateReviewApiRequest
+- uid: Ecommerce.Shared.Requests.Review
+  commentId: N:Ecommerce.Shared.Requests.Review
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Requests.Review
+  nameWithType: Ecommerce.Shared.Requests.Review
+  fullName: Ecommerce.Shared.Requests.Review
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Review
+    name: Review
+    href: Ecommerce.Shared.Requests.Review.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Review
+    name: Review
+    href: Ecommerce.Shared.Requests.Review.html

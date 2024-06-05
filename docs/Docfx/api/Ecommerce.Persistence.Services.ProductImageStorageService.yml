@@ -1,0 +1,870 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Persistence.Services.ProductImageStorageService
+  commentId: T:Ecommerce.Persistence.Services.ProductImageStorageService
+  id: ProductImageStorageService
+  parent: Ecommerce.Persistence.Services
+  children:
+  - Ecommerce.Persistence.Services.ProductImageStorageService.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Persistence.Services.ProductImageStorageService},Microsoft.Extensions.Configuration.IConfiguration)
+  - Ecommerce.Persistence.Services.ProductImageStorageService.DeleteFileAsync(System.String,System.String)
+  - Ecommerce.Persistence.Services.ProductImageStorageService.UploadFileAsync(System.String,System.String,System.IO.Stream)
+  langs:
+  - csharp
+  - vb
+  name: ProductImageStorageService
+  nameWithType: ProductImageStorageService
+  fullName: Ecommerce.Persistence.Services.ProductImageStorageService
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Services/ProductImageStorageService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ProductImageStorageService
+    path: ../../Infrastructure/Ecommerce.Persistence/Services/ProductImageStorageService.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Services
+  syntax:
+    content: 'public class ProductImageStorageService : IStorageService'
+    content.vb: Public Class ProductImageStorageService Implements IStorageService
+  inheritance:
+  - System.Object
+  implements:
+  - Ecommerce.Persistence.Contracts.IStorageService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Persistence.Services.ProductImageStorageService.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Persistence.Services.ProductImageStorageService},Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:Ecommerce.Persistence.Services.ProductImageStorageService.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Persistence.Services.ProductImageStorageService},Microsoft.Extensions.Configuration.IConfiguration)
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Persistence.Services.ProductImageStorageService},Microsoft.Extensions.Configuration.IConfiguration)'
+  parent: Ecommerce.Persistence.Services.ProductImageStorageService
+  langs:
+  - csharp
+  - vb
+  name: ProductImageStorageService(ILogger<ProductImageStorageService>, IConfiguration)
+  nameWithType: ProductImageStorageService.ProductImageStorageService(ILogger<ProductImageStorageService>, IConfiguration)
+  fullName: Ecommerce.Persistence.Services.ProductImageStorageService.ProductImageStorageService(Microsoft.Extensions.Logging.ILogger<Ecommerce.Persistence.Services.ProductImageStorageService>, Microsoft.Extensions.Configuration.IConfiguration)
+  type: Constructor
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Services/ProductImageStorageService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: .ctor
+    path: ../../Infrastructure/Ecommerce.Persistence/Services/ProductImageStorageService.cs
+    startLine: 18
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Services
+  syntax:
+    content: public ProductImageStorageService(ILogger<ProductImageStorageService> logger, IConfiguration configuration)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Ecommerce.Persistence.Services.ProductImageStorageService}
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    content.vb: Public Sub New(logger As ILogger(Of ProductImageStorageService), configuration As IConfiguration)
+  overload: Ecommerce.Persistence.Services.ProductImageStorageService.#ctor*
+  nameWithType.vb: ProductImageStorageService.New(ILogger(Of ProductImageStorageService), IConfiguration)
+  fullName.vb: Ecommerce.Persistence.Services.ProductImageStorageService.New(Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Persistence.Services.ProductImageStorageService), Microsoft.Extensions.Configuration.IConfiguration)
+  name.vb: New(ILogger(Of ProductImageStorageService), IConfiguration)
+- uid: Ecommerce.Persistence.Services.ProductImageStorageService.UploadFileAsync(System.String,System.String,System.IO.Stream)
+  commentId: M:Ecommerce.Persistence.Services.ProductImageStorageService.UploadFileAsync(System.String,System.String,System.IO.Stream)
+  id: UploadFileAsync(System.String,System.String,System.IO.Stream)
+  parent: Ecommerce.Persistence.Services.ProductImageStorageService
+  langs:
+  - csharp
+  - vb
+  name: UploadFileAsync(string, string, Stream)
+  nameWithType: ProductImageStorageService.UploadFileAsync(string, string, Stream)
+  fullName: Ecommerce.Persistence.Services.ProductImageStorageService.UploadFileAsync(string, string, System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Services/ProductImageStorageService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UploadFileAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Services/ProductImageStorageService.cs
+    startLine: 24
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Services
+  example: []
+  syntax:
+    content: public Task<bool> UploadFileAsync(string remoteStoragePath, string fileName, Stream file)
+    parameters:
+    - id: remoteStoragePath
+      type: System.String
+    - id: fileName
+      type: System.String
+    - id: file
+      type: System.IO.Stream
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function UploadFileAsync(remoteStoragePath As String, fileName As String, file As Stream) As Task(Of Boolean)
+  overload: Ecommerce.Persistence.Services.ProductImageStorageService.UploadFileAsync*
+  implements:
+  - Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(System.String,System.String,System.IO.Stream)
+  nameWithType.vb: ProductImageStorageService.UploadFileAsync(String, String, Stream)
+  fullName.vb: Ecommerce.Persistence.Services.ProductImageStorageService.UploadFileAsync(String, String, System.IO.Stream)
+  name.vb: UploadFileAsync(String, String, Stream)
+- uid: Ecommerce.Persistence.Services.ProductImageStorageService.DeleteFileAsync(System.String,System.String)
+  commentId: M:Ecommerce.Persistence.Services.ProductImageStorageService.DeleteFileAsync(System.String,System.String)
+  id: DeleteFileAsync(System.String,System.String)
+  parent: Ecommerce.Persistence.Services.ProductImageStorageService
+  langs:
+  - csharp
+  - vb
+  name: DeleteFileAsync(string, string)
+  nameWithType: ProductImageStorageService.DeleteFileAsync(string, string)
+  fullName: Ecommerce.Persistence.Services.ProductImageStorageService.DeleteFileAsync(string, string)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Services/ProductImageStorageService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteFileAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Services/ProductImageStorageService.cs
+    startLine: 66
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Services
+  example: []
+  syntax:
+    content: public Task<bool> DeleteFileAsync(string remoteStoragePath, string fileName)
+    parameters:
+    - id: remoteStoragePath
+      type: System.String
+    - id: fileName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function DeleteFileAsync(remoteStoragePath As String, fileName As String) As Task(Of Boolean)
+  overload: Ecommerce.Persistence.Services.ProductImageStorageService.DeleteFileAsync*
+  implements:
+  - Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(System.String,System.String)
+  nameWithType.vb: ProductImageStorageService.DeleteFileAsync(String, String)
+  fullName.vb: Ecommerce.Persistence.Services.ProductImageStorageService.DeleteFileAsync(String, String)
+  name.vb: DeleteFileAsync(String, String)
+references:
+- uid: Ecommerce.Persistence.Services
+  commentId: N:Ecommerce.Persistence.Services
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Services
+  nameWithType: Ecommerce.Persistence.Services
+  fullName: Ecommerce.Persistence.Services
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Services
+    name: Services
+    href: Ecommerce.Persistence.Services.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Services
+    name: Services
+    href: Ecommerce.Persistence.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Ecommerce.Persistence.Contracts.IStorageService
+  commentId: T:Ecommerce.Persistence.Contracts.IStorageService
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.IStorageService.html
+  name: IStorageService
+  nameWithType: IStorageService
+  fullName: Ecommerce.Persistence.Contracts.IStorageService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+- uid: Ecommerce.Persistence.Services.ProductImageStorageService.#ctor*
+  commentId: Overload:Ecommerce.Persistence.Services.ProductImageStorageService.#ctor
+  href: Ecommerce.Persistence.Services.ProductImageStorageService.html#Ecommerce_Persistence_Services_ProductImageStorageService__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_Persistence_Services_ProductImageStorageService__Microsoft_Extensions_Configuration_IConfiguration_
+  name: ProductImageStorageService
+  nameWithType: ProductImageStorageService.ProductImageStorageService
+  fullName: Ecommerce.Persistence.Services.ProductImageStorageService.ProductImageStorageService
+  nameWithType.vb: ProductImageStorageService.New
+  fullName.vb: Ecommerce.Persistence.Services.ProductImageStorageService.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Ecommerce.Persistence.Services.ProductImageStorageService}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Ecommerce.Persistence.Services.ProductImageStorageService}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<ProductImageStorageService>
+  nameWithType: ILogger<ProductImageStorageService>
+  fullName: Microsoft.Extensions.Logging.ILogger<Ecommerce.Persistence.Services.ProductImageStorageService>
+  nameWithType.vb: ILogger(Of ProductImageStorageService)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Persistence.Services.ProductImageStorageService)
+  name.vb: ILogger(Of ProductImageStorageService)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Ecommerce.Persistence.Services.ProductImageStorageService
+    name: ProductImageStorageService
+    href: Ecommerce.Persistence.Services.ProductImageStorageService.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Persistence.Services.ProductImageStorageService
+    name: ProductImageStorageService
+    href: Ecommerce.Persistence.Services.ProductImageStorageService.html
+  - name: )
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+- uid: Ecommerce.Persistence.Services.ProductImageStorageService.UploadFileAsync*
+  commentId: Overload:Ecommerce.Persistence.Services.ProductImageStorageService.UploadFileAsync
+  href: Ecommerce.Persistence.Services.ProductImageStorageService.html#Ecommerce_Persistence_Services_ProductImageStorageService_UploadFileAsync_System_String_System_String_System_IO_Stream_
+  name: UploadFileAsync
+  nameWithType: ProductImageStorageService.UploadFileAsync
+  fullName: Ecommerce.Persistence.Services.ProductImageStorageService.UploadFileAsync
+- uid: Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(System.String,System.String,System.IO.Stream)
+  commentId: M:Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(System.String,System.String,System.IO.Stream)
+  parent: Ecommerce.Persistence.Contracts.IStorageService
+  isExternal: true
+  href: Ecommerce.Persistence.Contracts.IStorageService.html#Ecommerce_Persistence_Contracts_IStorageService_UploadFileAsync_System_String_System_String_System_IO_Stream_
+  name: UploadFileAsync(string, string, Stream)
+  nameWithType: IStorageService.UploadFileAsync(string, string, Stream)
+  fullName: Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(string, string, System.IO.Stream)
+  nameWithType.vb: IStorageService.UploadFileAsync(String, String, Stream)
+  fullName.vb: Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(String, String, System.IO.Stream)
+  name.vb: UploadFileAsync(String, String, Stream)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(System.String,System.String,System.IO.Stream)
+    name: UploadFileAsync
+    href: Ecommerce.Persistence.Contracts.IStorageService.html#Ecommerce_Persistence_Contracts_IStorageService_UploadFileAsync_System_String_System_String_System_IO_Stream_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(System.String,System.String,System.IO.Stream)
+    name: UploadFileAsync
+    href: Ecommerce.Persistence.Contracts.IStorageService.html#Ecommerce_Persistence_Contracts_IStorageService_UploadFileAsync_System_String_System_String_System_IO_Stream_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.Persistence.Services.ProductImageStorageService.DeleteFileAsync*
+  commentId: Overload:Ecommerce.Persistence.Services.ProductImageStorageService.DeleteFileAsync
+  href: Ecommerce.Persistence.Services.ProductImageStorageService.html#Ecommerce_Persistence_Services_ProductImageStorageService_DeleteFileAsync_System_String_System_String_
+  name: DeleteFileAsync
+  nameWithType: ProductImageStorageService.DeleteFileAsync
+  fullName: Ecommerce.Persistence.Services.ProductImageStorageService.DeleteFileAsync
+- uid: Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(System.String,System.String)
+  commentId: M:Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(System.String,System.String)
+  parent: Ecommerce.Persistence.Contracts.IStorageService
+  isExternal: true
+  href: Ecommerce.Persistence.Contracts.IStorageService.html#Ecommerce_Persistence_Contracts_IStorageService_DeleteFileAsync_System_String_System_String_
+  name: DeleteFileAsync(string, string)
+  nameWithType: IStorageService.DeleteFileAsync(string, string)
+  fullName: Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(string, string)
+  nameWithType.vb: IStorageService.DeleteFileAsync(String, String)
+  fullName.vb: Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(String, String)
+  name.vb: DeleteFileAsync(String, String)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(System.String,System.String)
+    name: DeleteFileAsync
+    href: Ecommerce.Persistence.Contracts.IStorageService.html#Ecommerce_Persistence_Contracts_IStorageService_DeleteFileAsync_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(System.String,System.String)
+    name: DeleteFileAsync
+    href: Ecommerce.Persistence.Contracts.IStorageService.html#Ecommerce_Persistence_Contracts_IStorageService_DeleteFileAsync_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )

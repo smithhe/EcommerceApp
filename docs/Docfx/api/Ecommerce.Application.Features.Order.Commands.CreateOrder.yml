@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  commentId: N:Ecommerce.Application.Features.Order.Commands.CreateOrder
+  id: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  children:
+  - Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommand
+  - Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  nameWithType: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  fullName: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommand
+  commentId: T:Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommand
+  parent: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  href: Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommand.html
+  name: CreateOrderCommand
+  nameWithType: CreateOrderCommand
+  fullName: Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommand
+- uid: Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommandHandler
+  commentId: T:Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommandHandler
+  href: Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommandHandler.html
+  name: CreateOrderCommandHandler
+  nameWithType: CreateOrderCommandHandler
+  fullName: Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommandHandler
+- uid: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  commentId: N:Ecommerce.Application.Features.Order.Commands.CreateOrder
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  nameWithType: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  fullName: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Order.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands.CreateOrder
+    name: CreateOrder
+    href: Ecommerce.Application.Features.Order.Commands.CreateOrder.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Order.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands.CreateOrder
+    name: CreateOrder
+    href: Ecommerce.Application.Features.Order.Commands.CreateOrder.html

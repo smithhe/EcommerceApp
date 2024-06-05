@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  commentId: N:Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  id: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  children:
+  - Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommand
+  - Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  nameWithType: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  fullName: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommand
+  commentId: T:Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommand
+  parent: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  href: Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommand.html
+  name: DeleteProductCommand
+  nameWithType: DeleteProductCommand
+  fullName: Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommand
+- uid: Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommandHandler
+  commentId: T:Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommandHandler
+  href: Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommandHandler.html
+  name: DeleteProductCommandHandler
+  nameWithType: DeleteProductCommandHandler
+  fullName: Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommandHandler
+- uid: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  commentId: N:Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  nameWithType: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  fullName: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Product.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+    name: DeleteProduct
+    href: Ecommerce.Application.Features.Product.Commands.DeleteProduct.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Product.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+    name: DeleteProduct
+    href: Ecommerce.Application.Features.Product.Commands.DeleteProduct.html

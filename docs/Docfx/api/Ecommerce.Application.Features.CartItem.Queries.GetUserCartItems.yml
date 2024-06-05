@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  commentId: N:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  id: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  children:
+  - Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+  - Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  nameWithType: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+  commentId: T:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+  parent: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery.html
+  name: GetUserCartItemsQuery
+  nameWithType: GetUserCartItemsQuery
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+  commentId: T:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+  href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.html
+  name: GetUserCartItemsQueryHandler
+  nameWithType: GetUserCartItemsQueryHandler
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  commentId: N:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  nameWithType: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.CartItem.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+    name: GetUserCartItems
+    href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.CartItem.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+    name: GetUserCartItems
+    href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.html

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Persistence.Migrations
+  commentId: N:Ecommerce.Persistence.Migrations
+  id: Ecommerce.Persistence.Migrations
+  children:
+  - Ecommerce.Persistence.Migrations.InitDatabase
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Persistence.Migrations
+  nameWithType: Ecommerce.Persistence.Migrations
+  fullName: Ecommerce.Persistence.Migrations
+  type: Namespace
+  assemblies:
+  - Ecommerce.Persistence
+references:
+- uid: Ecommerce.Persistence.Migrations.InitDatabase
+  commentId: T:Ecommerce.Persistence.Migrations.InitDatabase
+  href: Ecommerce.Persistence.Migrations.InitDatabase.html
+  name: InitDatabase
+  nameWithType: InitDatabase
+  fullName: Ecommerce.Persistence.Migrations.InitDatabase

@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Domain.Entities
+  commentId: N:Ecommerce.Domain.Entities
+  id: Ecommerce.Domain.Entities
+  children:
+  - Ecommerce.Domain.Entities.CartItem
+  - Ecommerce.Domain.Entities.Category
+  - Ecommerce.Domain.Entities.EcommerceUser
+  - Ecommerce.Domain.Entities.Order
+  - Ecommerce.Domain.Entities.OrderItem
+  - Ecommerce.Domain.Entities.Product
+  - Ecommerce.Domain.Entities.Review
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Domain.Entities
+  nameWithType: Ecommerce.Domain.Entities
+  fullName: Ecommerce.Domain.Entities
+  type: Namespace
+  assemblies:
+  - Ecommerce.Domain
+references:
+- uid: Ecommerce.Domain.Entities.CartItem
+  commentId: T:Ecommerce.Domain.Entities.CartItem
+  parent: Ecommerce.Domain.Entities
+  href: Ecommerce.Domain.Entities.CartItem.html
+  name: CartItem
+  nameWithType: CartItem
+  fullName: Ecommerce.Domain.Entities.CartItem
+- uid: Ecommerce.Domain.Entities.Category
+  commentId: T:Ecommerce.Domain.Entities.Category
+  parent: Ecommerce.Domain.Entities
+  href: Ecommerce.Domain.Entities.Category.html
+  name: Category
+  nameWithType: Category
+  fullName: Ecommerce.Domain.Entities.Category
+- uid: Ecommerce.Domain.Entities.EcommerceUser
+  commentId: T:Ecommerce.Domain.Entities.EcommerceUser
+  parent: Ecommerce.Domain.Entities
+  href: Ecommerce.Domain.Entities.EcommerceUser.html
+  name: EcommerceUser
+  nameWithType: EcommerceUser
+  fullName: Ecommerce.Domain.Entities.EcommerceUser
+- uid: Ecommerce.Domain.Entities.Order
+  commentId: T:Ecommerce.Domain.Entities.Order
+  parent: Ecommerce.Domain.Entities
+  href: Ecommerce.Domain.Entities.Order.html
+  name: Order
+  nameWithType: Order
+  fullName: Ecommerce.Domain.Entities.Order
+- uid: Ecommerce.Domain.Entities.OrderItem
+  commentId: T:Ecommerce.Domain.Entities.OrderItem
+  parent: Ecommerce.Domain.Entities
+  href: Ecommerce.Domain.Entities.OrderItem.html
+  name: OrderItem
+  nameWithType: OrderItem
+  fullName: Ecommerce.Domain.Entities.OrderItem
+- uid: Ecommerce.Domain.Entities.Product
+  commentId: T:Ecommerce.Domain.Entities.Product
+  parent: Ecommerce.Domain.Entities
+  href: Ecommerce.Domain.Entities.Product.html
+  name: Product
+  nameWithType: Product
+  fullName: Ecommerce.Domain.Entities.Product
+- uid: Ecommerce.Domain.Entities.Review
+  commentId: T:Ecommerce.Domain.Entities.Review
+  parent: Ecommerce.Domain.Entities
+  href: Ecommerce.Domain.Entities.Review.html
+  name: Review
+  nameWithType: Review
+  fullName: Ecommerce.Domain.Entities.Review
+- uid: Ecommerce.Domain.Entities
+  commentId: N:Ecommerce.Domain.Entities
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Entities
+  nameWithType: Ecommerce.Domain.Entities
+  fullName: Ecommerce.Domain.Entities
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Entities
+    name: Entities
+    href: Ecommerce.Domain.Entities.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Entities
+    name: Entities
+    href: Ecommerce.Domain.Entities.html

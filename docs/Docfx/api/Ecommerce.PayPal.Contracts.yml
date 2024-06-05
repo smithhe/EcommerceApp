@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Contracts
+  commentId: N:Ecommerce.PayPal.Contracts
+  id: Ecommerce.PayPal.Contracts
+  children:
+  - Ecommerce.PayPal.Contracts.IPaypalClientService
+  - Ecommerce.PayPal.Contracts.ITokenCacheService
+  - Ecommerce.PayPal.Contracts.ITokenService
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.PayPal.Contracts
+  nameWithType: Ecommerce.PayPal.Contracts
+  fullName: Ecommerce.PayPal.Contracts
+  type: Namespace
+  assemblies:
+  - Ecommerce.PayPal
+references:
+- uid: Ecommerce.PayPal.Contracts.IPaypalClientService
+  commentId: T:Ecommerce.PayPal.Contracts.IPaypalClientService
+  parent: Ecommerce.PayPal.Contracts
+  href: Ecommerce.PayPal.Contracts.IPaypalClientService.html
+  name: IPaypalClientService
+  nameWithType: IPaypalClientService
+  fullName: Ecommerce.PayPal.Contracts.IPaypalClientService
+- uid: Ecommerce.PayPal.Contracts.ITokenCacheService
+  commentId: T:Ecommerce.PayPal.Contracts.ITokenCacheService
+  parent: Ecommerce.PayPal.Contracts
+  href: Ecommerce.PayPal.Contracts.ITokenCacheService.html
+  name: ITokenCacheService
+  nameWithType: ITokenCacheService
+  fullName: Ecommerce.PayPal.Contracts.ITokenCacheService
+- uid: Ecommerce.PayPal.Contracts.ITokenService
+  commentId: T:Ecommerce.PayPal.Contracts.ITokenService
+  parent: Ecommerce.PayPal.Contracts
+  href: Ecommerce.PayPal.Contracts.ITokenService.html
+  name: ITokenService
+  nameWithType: ITokenService
+  fullName: Ecommerce.PayPal.Contracts.ITokenService
+- uid: Ecommerce.PayPal.Contracts
+  commentId: N:Ecommerce.PayPal.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Contracts
+  nameWithType: Ecommerce.PayPal.Contracts
+  fullName: Ecommerce.PayPal.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts
+    name: Contracts
+    href: Ecommerce.PayPal.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts
+    name: Contracts
+    href: Ecommerce.PayPal.Contracts.html

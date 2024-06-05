@@ -1,0 +1,726 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models.BreakDown
+  commentId: T:Ecommerce.PayPal.Models.BreakDown
+  id: BreakDown
+  parent: Ecommerce.PayPal.Models
+  children:
+  - Ecommerce.PayPal.Models.BreakDown.#ctor
+  - Ecommerce.PayPal.Models.BreakDown.Discount
+  - Ecommerce.PayPal.Models.BreakDown.Handling
+  - Ecommerce.PayPal.Models.BreakDown.Insurance
+  - Ecommerce.PayPal.Models.BreakDown.ItemTotal
+  - Ecommerce.PayPal.Models.BreakDown.Shipping
+  - Ecommerce.PayPal.Models.BreakDown.ShippingDiscount
+  - Ecommerce.PayPal.Models.BreakDown.TaxTotal
+  langs:
+  - csharp
+  - vb
+  name: BreakDown
+  nameWithType: BreakDown
+  fullName: Ecommerce.PayPal.Models.BreakDown
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: BreakDown
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: Represents a breakdown of the total amount in a PayPal purchase unit.
+  example: []
+  syntax:
+    content: public class BreakDown
+    content.vb: Public Class BreakDown
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.PayPal.Models.BreakDown.ItemTotal
+  commentId: P:Ecommerce.PayPal.Models.BreakDown.ItemTotal
+  id: ItemTotal
+  parent: Ecommerce.PayPal.Models.BreakDown
+  langs:
+  - csharp
+  - vb
+  name: ItemTotal
+  nameWithType: BreakDown.ItemTotal
+  fullName: Ecommerce.PayPal.Models.BreakDown.ItemTotal
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ItemTotal
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The subtotal for all items.
+
+    Required if the request includes purchase_units[].items[].unit_amount.
+
+    Must equal the sum of (items[].unit_amount * items[].quantity) for all items.
+
+    item_total.value can not be a negative number.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("item_total")]
+
+      public Currency? ItemTotal { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Currency
+    content.vb: >-
+      <JsonPropertyName("item_total")>
+
+      Public Property ItemTotal As Currency
+  overload: Ecommerce.PayPal.Models.BreakDown.ItemTotal*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: item_total
+- uid: Ecommerce.PayPal.Models.BreakDown.Shipping
+  commentId: P:Ecommerce.PayPal.Models.BreakDown.Shipping
+  id: Shipping
+  parent: Ecommerce.PayPal.Models.BreakDown
+  langs:
+  - csharp
+  - vb
+  name: Shipping
+  nameWithType: BreakDown.Shipping
+  fullName: Ecommerce.PayPal.Models.BreakDown.Shipping
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Shipping
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+    startLine: 22
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The shipping fee for all items within a given purchase_unit.
+
+    shipping.value can not be a negative number.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("shipping")]
+
+      public Currency? Shipping { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Currency
+    content.vb: >-
+      <JsonPropertyName("shipping")>
+
+      Public Property Shipping As Currency
+  overload: Ecommerce.PayPal.Models.BreakDown.Shipping*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: shipping
+- uid: Ecommerce.PayPal.Models.BreakDown.Handling
+  commentId: P:Ecommerce.PayPal.Models.BreakDown.Handling
+  id: Handling
+  parent: Ecommerce.PayPal.Models.BreakDown
+  langs:
+  - csharp
+  - vb
+  name: Handling
+  nameWithType: BreakDown.Handling
+  fullName: Ecommerce.PayPal.Models.BreakDown.Handling
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Handling
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+    startLine: 29
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The handling fee for all items within a given purchase_unit.
+
+    handling.value can not be a negative number.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("handling")]
+
+      public Currency? Handling { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Currency
+    content.vb: >-
+      <JsonPropertyName("handling")>
+
+      Public Property Handling As Currency
+  overload: Ecommerce.PayPal.Models.BreakDown.Handling*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: handling
+- uid: Ecommerce.PayPal.Models.BreakDown.TaxTotal
+  commentId: P:Ecommerce.PayPal.Models.BreakDown.TaxTotal
+  id: TaxTotal
+  parent: Ecommerce.PayPal.Models.BreakDown
+  langs:
+  - csharp
+  - vb
+  name: TaxTotal
+  nameWithType: BreakDown.TaxTotal
+  fullName: Ecommerce.PayPal.Models.BreakDown.TaxTotal
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: TaxTotal
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+    startLine: 37
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The total tax for all items.
+
+    Required if the request includes purchase_units.items.tax. Must equal the sum of (items[].tax * items[].quantity) for all items.
+
+    tax_total.value can not be a negative number.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("tax_total")]
+
+      public Currency? TaxTotal { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Currency
+    content.vb: >-
+      <JsonPropertyName("tax_total")>
+
+      Public Property TaxTotal As Currency
+  overload: Ecommerce.PayPal.Models.BreakDown.TaxTotal*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: tax_total
+- uid: Ecommerce.PayPal.Models.BreakDown.Insurance
+  commentId: P:Ecommerce.PayPal.Models.BreakDown.Insurance
+  id: Insurance
+  parent: Ecommerce.PayPal.Models.BreakDown
+  langs:
+  - csharp
+  - vb
+  name: Insurance
+  nameWithType: BreakDown.Insurance
+  fullName: Ecommerce.PayPal.Models.BreakDown.Insurance
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Insurance
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+    startLine: 44
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The insurance fee for all items within a given purchase_unit.
+
+    insurance.value can not be a negative number.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("insurance")]
+
+      public Currency? Insurance { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Currency
+    content.vb: >-
+      <JsonPropertyName("insurance")>
+
+      Public Property Insurance As Currency
+  overload: Ecommerce.PayPal.Models.BreakDown.Insurance*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: insurance
+- uid: Ecommerce.PayPal.Models.BreakDown.ShippingDiscount
+  commentId: P:Ecommerce.PayPal.Models.BreakDown.ShippingDiscount
+  id: ShippingDiscount
+  parent: Ecommerce.PayPal.Models.BreakDown
+  langs:
+  - csharp
+  - vb
+  name: ShippingDiscount
+  nameWithType: BreakDown.ShippingDiscount
+  fullName: Ecommerce.PayPal.Models.BreakDown.ShippingDiscount
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ShippingDiscount
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+    startLine: 51
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The shipping discount for all items within a given purchase_unit.
+
+    shipping_discount.value can not be a negative number.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("shipping_discount")]
+
+      public Currency? ShippingDiscount { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Currency
+    content.vb: >-
+      <JsonPropertyName("shipping_discount")>
+
+      Public Property ShippingDiscount As Currency
+  overload: Ecommerce.PayPal.Models.BreakDown.ShippingDiscount*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: shipping_discount
+- uid: Ecommerce.PayPal.Models.BreakDown.Discount
+  commentId: P:Ecommerce.PayPal.Models.BreakDown.Discount
+  id: Discount
+  parent: Ecommerce.PayPal.Models.BreakDown
+  langs:
+  - csharp
+  - vb
+  name: Discount
+  nameWithType: BreakDown.Discount
+  fullName: Ecommerce.PayPal.Models.BreakDown.Discount
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Discount
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+    startLine: 58
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The discount for all items within a given purchase_unit.
+
+    discount.value can not be a negative number.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("discount")]
+
+      public Currency? Discount { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Currency
+    content.vb: >-
+      <JsonPropertyName("discount")>
+
+      Public Property Discount As Currency
+  overload: Ecommerce.PayPal.Models.BreakDown.Discount*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: discount
+- uid: Ecommerce.PayPal.Models.BreakDown.#ctor
+  commentId: M:Ecommerce.PayPal.Models.BreakDown.#ctor
+  id: '#ctor'
+  parent: Ecommerce.PayPal.Models.BreakDown
+  langs:
+  - csharp
+  - vb
+  name: BreakDown()
+  nameWithType: BreakDown.BreakDown()
+  fullName: Ecommerce.PayPal.Models.BreakDown.BreakDown()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Infrastructure/Ecommerce.PayPal/Models/BreakDown.cs
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  syntax:
+    content: public BreakDown()
+    content.vb: Public Sub New()
+  overload: Ecommerce.PayPal.Models.BreakDown.#ctor*
+  nameWithType.vb: BreakDown.New()
+  fullName.vb: Ecommerce.PayPal.Models.BreakDown.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.PayPal.Models
+  commentId: N:Ecommerce.PayPal.Models
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Models
+  nameWithType: Ecommerce.PayPal.Models
+  fullName: Ecommerce.PayPal.Models
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.PayPal.Models.BreakDown.ItemTotal*
+  commentId: Overload:Ecommerce.PayPal.Models.BreakDown.ItemTotal
+  href: Ecommerce.PayPal.Models.BreakDown.html#Ecommerce_PayPal_Models_BreakDown_ItemTotal
+  name: ItemTotal
+  nameWithType: BreakDown.ItemTotal
+  fullName: Ecommerce.PayPal.Models.BreakDown.ItemTotal
+- uid: Ecommerce.PayPal.Models.Currency
+  commentId: T:Ecommerce.PayPal.Models.Currency
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Currency.html
+  name: Currency
+  nameWithType: Currency
+  fullName: Ecommerce.PayPal.Models.Currency
+- uid: Ecommerce.PayPal.Models.BreakDown.Shipping*
+  commentId: Overload:Ecommerce.PayPal.Models.BreakDown.Shipping
+  href: Ecommerce.PayPal.Models.BreakDown.html#Ecommerce_PayPal_Models_BreakDown_Shipping
+  name: Shipping
+  nameWithType: BreakDown.Shipping
+  fullName: Ecommerce.PayPal.Models.BreakDown.Shipping
+- uid: Ecommerce.PayPal.Models.BreakDown.Handling*
+  commentId: Overload:Ecommerce.PayPal.Models.BreakDown.Handling
+  href: Ecommerce.PayPal.Models.BreakDown.html#Ecommerce_PayPal_Models_BreakDown_Handling
+  name: Handling
+  nameWithType: BreakDown.Handling
+  fullName: Ecommerce.PayPal.Models.BreakDown.Handling
+- uid: Ecommerce.PayPal.Models.BreakDown.TaxTotal*
+  commentId: Overload:Ecommerce.PayPal.Models.BreakDown.TaxTotal
+  href: Ecommerce.PayPal.Models.BreakDown.html#Ecommerce_PayPal_Models_BreakDown_TaxTotal
+  name: TaxTotal
+  nameWithType: BreakDown.TaxTotal
+  fullName: Ecommerce.PayPal.Models.BreakDown.TaxTotal
+- uid: Ecommerce.PayPal.Models.BreakDown.Insurance*
+  commentId: Overload:Ecommerce.PayPal.Models.BreakDown.Insurance
+  href: Ecommerce.PayPal.Models.BreakDown.html#Ecommerce_PayPal_Models_BreakDown_Insurance
+  name: Insurance
+  nameWithType: BreakDown.Insurance
+  fullName: Ecommerce.PayPal.Models.BreakDown.Insurance
+- uid: Ecommerce.PayPal.Models.BreakDown.ShippingDiscount*
+  commentId: Overload:Ecommerce.PayPal.Models.BreakDown.ShippingDiscount
+  href: Ecommerce.PayPal.Models.BreakDown.html#Ecommerce_PayPal_Models_BreakDown_ShippingDiscount
+  name: ShippingDiscount
+  nameWithType: BreakDown.ShippingDiscount
+  fullName: Ecommerce.PayPal.Models.BreakDown.ShippingDiscount
+- uid: Ecommerce.PayPal.Models.BreakDown.Discount*
+  commentId: Overload:Ecommerce.PayPal.Models.BreakDown.Discount
+  href: Ecommerce.PayPal.Models.BreakDown.html#Ecommerce_PayPal_Models_BreakDown_Discount
+  name: Discount
+  nameWithType: BreakDown.Discount
+  fullName: Ecommerce.PayPal.Models.BreakDown.Discount
+- uid: Ecommerce.PayPal.Models.BreakDown.#ctor*
+  commentId: Overload:Ecommerce.PayPal.Models.BreakDown.#ctor
+  isExternal: true
+  href: Ecommerce.PayPal.Models.BreakDown.html#Ecommerce_PayPal_Models_BreakDown__ctor
+  name: BreakDown
+  nameWithType: BreakDown.BreakDown
+  fullName: Ecommerce.PayPal.Models.BreakDown.BreakDown
+  nameWithType.vb: BreakDown.New
+  fullName.vb: Ecommerce.PayPal.Models.BreakDown.New
+  name.vb: New

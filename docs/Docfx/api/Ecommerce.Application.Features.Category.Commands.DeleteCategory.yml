@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  commentId: N:Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  id: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  children:
+  - Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommand
+  - Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  nameWithType: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  fullName: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommand
+  commentId: T:Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommand
+  parent: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  href: Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommand.html
+  name: DeleteCategoryCommand
+  nameWithType: DeleteCategoryCommand
+  fullName: Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommand
+- uid: Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommandHandler
+  commentId: T:Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommandHandler
+  href: Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommandHandler.html
+  name: DeleteCategoryCommandHandler
+  nameWithType: DeleteCategoryCommandHandler
+  fullName: Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommandHandler
+- uid: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  commentId: N:Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  nameWithType: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  fullName: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category
+    name: Category
+    href: Ecommerce.Application.Features.Category.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Category.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+    name: DeleteCategory
+    href: Ecommerce.Application.Features.Category.Commands.DeleteCategory.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category
+    name: Category
+    href: Ecommerce.Application.Features.Category.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Category.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+    name: DeleteCategory
+    href: Ecommerce.Application.Features.Category.Commands.DeleteCategory.html

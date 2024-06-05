@@ -1,0 +1,471 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models.Enums.ShippingType
+  commentId: T:Ecommerce.PayPal.Models.Enums.ShippingType
+  id: ShippingType
+  parent: Ecommerce.PayPal.Models.Enums
+  children:
+  - Ecommerce.PayPal.Models.Enums.ShippingType.#ctor
+  - Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_FROM_PERSON
+  - Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_IN_PERSON
+  - Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_IN_STORE
+  - Ecommerce.PayPal.Models.Enums.ShippingType.SHIPPING
+  langs:
+  - csharp
+  - vb
+  name: ShippingType
+  nameWithType: ShippingType
+  fullName: Ecommerce.PayPal.Models.Enums.ShippingType
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Enums/ShippingType.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ShippingType
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Enums/ShippingType.cs
+    startLine: 3
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public class ShippingType
+    content.vb: Public Class ShippingType
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.PayPal.Models.Enums.ShippingType.SHIPPING
+  commentId: F:Ecommerce.PayPal.Models.Enums.ShippingType.SHIPPING
+  id: SHIPPING
+  parent: Ecommerce.PayPal.Models.Enums.ShippingType
+  langs:
+  - csharp
+  - vb
+  name: SHIPPING
+  nameWithType: ShippingType.SHIPPING
+  fullName: Ecommerce.PayPal.Models.Enums.ShippingType.SHIPPING
+  type: Field
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Enums/ShippingType.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: SHIPPING
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Enums/ShippingType.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public const string SHIPPING = "SHIPPING"
+    return:
+      type: System.String
+    content.vb: Public Const SHIPPING As String = "SHIPPING"
+- uid: Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_IN_PERSON
+  commentId: F:Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_IN_PERSON
+  id: PICKUP_IN_PERSON
+  parent: Ecommerce.PayPal.Models.Enums.ShippingType
+  langs:
+  - csharp
+  - vb
+  name: PICKUP_IN_PERSON
+  nameWithType: ShippingType.PICKUP_IN_PERSON
+  fullName: Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_IN_PERSON
+  type: Field
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Enums/ShippingType.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PICKUP_IN_PERSON
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Enums/ShippingType.cs
+    startLine: 6
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public const string PICKUP_IN_PERSON = "PICKUP_IN_PERSON"
+    return:
+      type: System.String
+    content.vb: Public Const PICKUP_IN_PERSON As String = "PICKUP_IN_PERSON"
+- uid: Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_IN_STORE
+  commentId: F:Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_IN_STORE
+  id: PICKUP_IN_STORE
+  parent: Ecommerce.PayPal.Models.Enums.ShippingType
+  langs:
+  - csharp
+  - vb
+  name: PICKUP_IN_STORE
+  nameWithType: ShippingType.PICKUP_IN_STORE
+  fullName: Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_IN_STORE
+  type: Field
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Enums/ShippingType.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PICKUP_IN_STORE
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Enums/ShippingType.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public const string PICKUP_IN_STORE = "PICKUP_IN_STORE"
+    return:
+      type: System.String
+    content.vb: Public Const PICKUP_IN_STORE As String = "PICKUP_IN_STORE"
+- uid: Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_FROM_PERSON
+  commentId: F:Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_FROM_PERSON
+  id: PICKUP_FROM_PERSON
+  parent: Ecommerce.PayPal.Models.Enums.ShippingType
+  langs:
+  - csharp
+  - vb
+  name: PICKUP_FROM_PERSON
+  nameWithType: ShippingType.PICKUP_FROM_PERSON
+  fullName: Ecommerce.PayPal.Models.Enums.ShippingType.PICKUP_FROM_PERSON
+  type: Field
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Enums/ShippingType.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PICKUP_FROM_PERSON
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Enums/ShippingType.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public const string PICKUP_FROM_PERSON = "PICKUP_FROM_PERSON"
+    return:
+      type: System.String
+    content.vb: Public Const PICKUP_FROM_PERSON As String = "PICKUP_FROM_PERSON"
+- uid: Ecommerce.PayPal.Models.Enums.ShippingType.#ctor
+  commentId: M:Ecommerce.PayPal.Models.Enums.ShippingType.#ctor
+  id: '#ctor'
+  parent: Ecommerce.PayPal.Models.Enums.ShippingType
+  langs:
+  - csharp
+  - vb
+  name: ShippingType()
+  nameWithType: ShippingType.ShippingType()
+  fullName: Ecommerce.PayPal.Models.Enums.ShippingType.ShippingType()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Infrastructure/Ecommerce.PayPal/Models/Enums/ShippingType.cs
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public ShippingType()
+    content.vb: Public Sub New()
+  overload: Ecommerce.PayPal.Models.Enums.ShippingType.#ctor*
+  nameWithType.vb: ShippingType.New()
+  fullName.vb: Ecommerce.PayPal.Models.Enums.ShippingType.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.PayPal.Models.Enums
+  commentId: N:Ecommerce.PayPal.Models.Enums
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Models.Enums
+  nameWithType: Ecommerce.PayPal.Models.Enums
+  fullName: Ecommerce.PayPal.Models.Enums
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models.Enums
+    name: Enums
+    href: Ecommerce.PayPal.Models.Enums.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models.Enums
+    name: Enums
+    href: Ecommerce.PayPal.Models.Enums.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.PayPal.Models.Enums.ShippingType.#ctor*
+  commentId: Overload:Ecommerce.PayPal.Models.Enums.ShippingType.#ctor
+  isExternal: true
+  href: Ecommerce.PayPal.Models.Enums.ShippingType.html#Ecommerce_PayPal_Models_Enums_ShippingType__ctor
+  name: ShippingType
+  nameWithType: ShippingType.ShippingType
+  fullName: Ecommerce.PayPal.Models.Enums.ShippingType.ShippingType
+  nameWithType.vb: ShippingType.New
+  fullName.vb: Ecommerce.PayPal.Models.Enums.ShippingType.New
+  name.vb: New

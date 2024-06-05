@@ -1,0 +1,5145 @@
+{
+  "source_base_path": "/home/harold/GitRepos/EcommerceApp/docs/Docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Api.EcommerceLogTextFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Api.EcommerceLogTextFormatter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Api.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.ApplicationServiceRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.ApplicationServiceRegistration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Commands.CreateCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Commands.CreateCategory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Commands.DeleteCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Commands.DeleteCategory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Commands.UpdateCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Commands.UpdateCategory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetAllCategories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetAllCategories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetCategoryById.GetCategoryByIdQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetCategoryById.GetCategoryByIdQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetCategoryById.GetCategoryByIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetCategoryById.GetCategoryByIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetCategoryById.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Category.Queries.GetCategoryById.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword.UpdatePasswordCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword.UpdatePasswordCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword.UpdatePasswordCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword.UpdatePasswordCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.CreateOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.CreateOrder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.DeleteOrder.DeleteOrderCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.DeleteOrder.DeleteOrderCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.DeleteOrder.DeleteOrderCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.DeleteOrder.DeleteOrderCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.DeleteOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.DeleteOrder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Commands.UpdateOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Commands.UpdateOrder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId.GetAllOrdersByUserIdQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId.GetAllOrdersByUserIdQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId.GetAllOrdersByUserIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId.GetAllOrdersByUserIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderById.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Order.Queries.GetOrderById.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder.CreatePayPalOrderCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder.CreatePayPalOrderCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder.CreatePayPalOrderCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder.CreatePayPalOrderCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Commands.CreateProduct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Commands.CreateProduct.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Commands.DeleteProduct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Commands.DeleteProduct.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Commands.UpdateProduct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Commands.UpdateProduct.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductById.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductById.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Commands.CreateReview.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Commands.CreateReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Commands.DeleteReview.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Commands.DeleteReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Commands.UpdateReview.UpdateReviewCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Commands.UpdateReview.UpdateReviewCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Commands.UpdateReview.UpdateReviewCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Commands.UpdateReview.UpdateReviewCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Commands.UpdateReview.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Commands.UpdateReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Profiles.MappingProfile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Profiles.MappingProfile.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Profiles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Profiles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.CartItem.CreateCartItemValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.CartItem.CreateCartItemValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.CartItem.UpdateCartItemValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.CartItem.UpdateCartItemValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.CartItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.CartItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Category.CreateCategoryValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Category.CreateCategoryValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Category.UpdateCategoryValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Category.UpdateCategoryValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Category.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Category.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Order.CreateOrderValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Order.CreateOrderValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Order.UpdateOrderValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Order.UpdateOrderValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Order.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.OrderItem.CreateOrderItemValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.OrderItem.CreateOrderItemValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.OrderItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.OrderItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Product.CreateProductValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Product.CreateProductValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Product.UpdateProductValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Product.UpdateProductValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Product.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Product.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Review.CreateReviewValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Review.CreateReviewValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Review.UpdateReviewValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Review.UpdateReviewValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.Validators.Review.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.Validators.Review.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Application.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Common.AuditableEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Common.AuditableEntity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Common.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Entities.CartItemConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Entities.CartItemConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Entities.CategoryConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Entities.CategoryConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Entities.EcommerceUserConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Entities.EcommerceUserConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Entities.OrderConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Entities.OrderConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Entities.OrderItemConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Entities.OrderItemConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Entities.ProductConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Entities.ProductConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Entities.ReviewConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Entities.ReviewConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Entities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Identity.PolicyNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Identity.PolicyNames.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Identity.RoleNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Identity.RoleNames.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Identity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Identity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Infrastructure.PayPalConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Infrastructure.PayPalConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Constants.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Constants.Infrastructure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Entities.CartItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Entities.CartItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Entities.Category.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Entities.Category.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Entities.EcommerceUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Entities.EcommerceUser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Entities.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Entities.Order.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Entities.OrderItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Entities.OrderItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Entities.Product.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Entities.Product.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Entities.Review.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Entities.Review.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Entities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Infrastructure.OrderKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Infrastructure.OrderKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Domain.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Domain.Infrastructure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Contracts.ITokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Contracts.ITokenService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Contracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.CreateCartItemEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.CreateCartItemEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteCartItemEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteCartItemEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteUserCartItemsEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteUserCartItemsEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.GetUserCartItemsEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.GetUserCartItemsEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.UpdateCartItemEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.UpdateCartItemEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.CartItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Category.CreateCategoryEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Category.CreateCategoryEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Category.DeleteCategoryEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Category.DeleteCategoryEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Category.UpdateCategoryEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Category.UpdateCategoryEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Category.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Category.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.CreateOrderEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.CreateOrderEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.GetAllOrdersByUserIdEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.GetAllOrdersByUserIdEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.GetOrderAfterSuccessfulCheckoutEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.GetOrderAfterSuccessfulCheckoutEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.GetOrderByIdEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.GetOrderByIdEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.UpdateOrderEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.UpdateOrderEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Order.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalCancelReturnEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalCancelReturnEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalSuccessReturnEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalSuccessReturnEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.PayPal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.PayPal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.CreateProductEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.CreateProductEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.DeleteProductEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.DeleteProductEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.GetAllProductsByCategoryIdEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.GetAllProductsByCategoryIdEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.UpdateProductEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.UpdateProductEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Product.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.CreateReviewEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.CreateReviewEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.DeleteReviewEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.DeleteReviewEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.GetReviewsForProductEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.GetReviewsForProductEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.GetUserReviewForProductEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.GetUserReviewForProductEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.UpdateReviewEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.UpdateReviewEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Review.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.LoginEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.LoginEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.LogoutEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.LogoutEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.RegisterEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.RegisterEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.UpdateEcommerceUserEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.UpdateEcommerceUserEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.UpdatePasswordEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.UpdatePasswordEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Endpoints.Security.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.FastEndpointServiceRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.FastEndpointServiceRegistration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Services.TokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Services.TokenService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.FastEndpoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.FastEndpoints.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Identity.Contracts.IAuthenticationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Identity.Contracts.IAuthenticationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Identity.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Identity.Contracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Identity.IdentityServiceRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Identity.IdentityServiceRegistration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Identity.Models.JwtSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Identity.Models.JwtSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Identity.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Identity.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Identity.Services.AuthService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Identity.Services.AuthService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Identity.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Identity.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Identity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Identity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Contracts.IEmailService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Contracts.IEmailService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Contracts.ITemplateModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Contracts.ITemplateModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Contracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.MailServiceRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.MailServiceRegistration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Models.Enums.EmailTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Models.Enums.EmailTemplate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Models.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Models.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Models.MailSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Models.MailSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Models.TemplateModels.EmailConfirmationModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Models.TemplateModels.EmailConfirmationModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Models.TemplateModels.OrderReceiptModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Models.TemplateModels.OrderReceiptModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Models.TemplateModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Models.TemplateModels.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Services.EmailService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Services.EmailService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Mail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Mail.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Messages.EcommerceUser.SendEmailConfirmationMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Messages.EcommerceUser.SendEmailConfirmationMessage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Messages.EcommerceUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Messages.EcommerceUser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Messages.Order.SendOrderConfirmationMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Messages.Order.SendOrderConfirmationMessage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Messages.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Messages.Order.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Contracts.IPaypalClientService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Contracts.IPaypalClientService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Contracts.ITokenCacheService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Contracts.ITokenCacheService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Contracts.ITokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Contracts.ITokenService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Contracts.Refit.IPayPalApiService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Contracts.Refit.IPayPalApiService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Contracts.Refit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Contracts.Refit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Contracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Address.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Address.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.BreakDown.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.BreakDown.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Currency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Currency.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.Category.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.Category.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.HttpMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.HttpMethod.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.Intent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.Intent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.LandingPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.LandingPage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.OrderStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.OrderStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.PaymentMethodPreference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.PaymentMethodPreference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.PhoneType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.PhoneType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.ProcessingInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.ProcessingInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.ShippingPreference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.ShippingPreference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.ShippingType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.ShippingType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.UpcType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.UpcType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.UserAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.UserAction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.ExperienceContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.ExperienceContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Item.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Item.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Link.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Link.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Name.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Name.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.PayPal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.PayPal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Payee.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Payee.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.PaymentSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.PaymentSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Phone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Phone.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.PhoneNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.PhoneNumber.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.PurchaseAmount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.PurchaseAmount.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.PurchaseUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.PurchaseUnit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Requests.PayPalCreateOrderRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Requests.PayPalCreateOrderRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Requests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Requests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Responses.PayPalAuthTokenResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Responses.PayPalAuthTokenResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Responses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Responses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Shipping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Shipping.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.ShippingOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.ShippingOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.TaxInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.TaxInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.Upc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.Upc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.PayPalServiceRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.PayPalServiceRegistration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Security.AuthHeaderHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Security.AuthHeaderHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Security.TokenCacheService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Security.TokenCacheService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Security.TokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Security.TokenService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Security.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Services.PaypalClientService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Services.PaypalClientService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.PayPal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.PayPal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Contracts.IAsyncRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Contracts.IAsyncRepository-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Contracts.ICartItemRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Contracts.ICartItemRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Contracts.ICategoryAsyncRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Contracts.ICategoryAsyncRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Contracts.IOrderAsyncRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Contracts.IOrderAsyncRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Contracts.IOrderKeyRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Contracts.IOrderKeyRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Contracts.IProductAsyncRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Contracts.IProductAsyncRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Contracts.IReviewAsyncRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Contracts.IReviewAsyncRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Contracts.IStorageService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Contracts.IStorageService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Contracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.DatabaseInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.DatabaseInitializer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.EcommercePersistenceDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.EcommercePersistenceDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Migrations.InitDatabase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Migrations.InitDatabase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Migrations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.PersistenceServiceRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.PersistenceServiceRegistration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Repositories.CartItemRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Repositories.CartItemRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Repositories.CategoryAsyncRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Repositories.CategoryAsyncRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Repositories.OrderAsyncRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Repositories.OrderAsyncRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Repositories.OrderItemAsyncRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Repositories.OrderItemAsyncRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Repositories.OrderKeyRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Repositories.OrderKeyRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Repositories.ProductAsyncRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Repositories.ProductAsyncRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Repositories.ReviewAsyncRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Repositories.ReviewAsyncRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Repositories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Repositories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Services.ProductImageStorageService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Services.ProductImageStorageService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Persistence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Persistence.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Dtos.CartItemDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Dtos.CartItemDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Dtos.CategoryDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Dtos.CategoryDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Dtos.OrderDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Dtos.OrderDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Dtos.OrderItemDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Dtos.OrderItemDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Dtos.ProductDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Dtos.ProductDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Dtos.ReviewDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Dtos.ReviewDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Dtos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Dtos.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Enums.OrderStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Enums.OrderStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Enums.PaymentSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Enums.PaymentSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Exceptions.BadRequestException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Exceptions.BadRequestException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Exceptions.InvalidPaymentSourceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Exceptions.InvalidPaymentSourceException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Exceptions.NotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Exceptions.NotFoundException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Exceptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Extensions.DateTimeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Extensions.DateTimeExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Extensions.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Extensions.StringExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.CartItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.CartItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Category.CreateCategoryApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Category.CreateCategoryApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Category.DeleteCategoryApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Category.DeleteCategoryApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Category.GetCategoryByIdApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Category.GetCategoryByIdApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Category.UpdateCategoryApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Category.UpdateCategoryApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Category.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Category.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Order.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.PayPal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.PayPal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Product.CreateProductApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Product.CreateProductApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Product.DeleteProductApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Product.DeleteProductApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Product.UpdateProductApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Product.UpdateProductApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Product.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Product.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Review.CreateReviewApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Review.CreateReviewApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Review.DeleteReviewApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Review.DeleteReviewApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Review.GetReviewsForProductApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Review.GetReviewsForProductApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Review.GetUserReviewForProductApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Review.GetUserReviewForProductApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Review.UpdateReviewApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Review.UpdateReviewApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Requests.Review.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Requests.Review.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.BaseResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.BaseResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.CartItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.CartItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Category.CreateCategoryResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Category.CreateCategoryResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Category.DeleteCategoryResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Category.DeleteCategoryResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Category.GetAllCategoriesResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Category.GetAllCategoriesResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Category.GetCategoryByIdResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Category.GetCategoryByIdResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Category.UpdateCategoryResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Category.UpdateCategoryResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Category.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Category.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Order.CreateOrderResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Order.CreateOrderResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Order.DeleteOrderResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Order.DeleteOrderResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Order.GetOrderByIdResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Order.GetOrderByIdResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Order.UpdateOrderResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Order.UpdateOrderResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Order.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.OrderItem.GetAllOrderItemsByOrderIdResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.OrderItem.GetAllOrderItemsByOrderIdResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.OrderItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.OrderItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.PayPal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.PayPal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Product.CreateProductResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Product.CreateProductResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Product.DeleteProductResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Product.DeleteProductResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Product.GetProductByIdResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Product.GetProductByIdResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Product.UpdateProductResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Product.UpdateProductResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Product.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Product.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Review.CreateReviewResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Review.CreateReviewResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Review.DeleteReviewResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Review.DeleteReviewResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Review.UpdateReviewResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Review.UpdateReviewResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.Review.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.Review.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Responses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Responses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.AuthenticatedUserModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.AuthenticatedUserModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.CustomClaims.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.CustomClaims.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Requests.AuthenticationRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Requests.AuthenticationRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Requests.ConfirmEmailRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Requests.ConfirmEmailRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Requests.CreateUserRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Requests.CreateUserRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Requests.LogoutUserRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Requests.LogoutUserRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Requests.UpdatePasswordRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Requests.UpdatePasswordRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Requests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Requests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Responses.AuthenticateResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Responses.AuthenticateResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Responses.ConfirmEmailResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Responses.ConfirmEmailResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Responses.CreateUserResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Responses.CreateUserResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Responses.UpdatePasswordResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Responses.UpdatePasswordResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.Responses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.Responses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.SignInResponseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.SignInResponseResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Shared.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Shared.Security.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.App.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.ICartService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.ICartService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.ICategoryService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.ICategoryService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.IOrderService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.IOrderService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.IProductService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.IProductService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.IReviewService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.IReviewService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.ISecurityService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.ISecurityService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.Refit.ICartApiService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.Refit.ICartApiService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.Refit.ICategoryApiService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.Refit.ICategoryApiService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.Refit.IOrderApiService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.Refit.IOrderApiService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.Refit.IProductApiService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.Refit.IProductApiService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.Refit.IReviewApiService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.Refit.IReviewApiService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.Refit.ISecurityApiService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.Refit.ISecurityApiService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.Refit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.Refit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Contracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Extensions.NavigationManagerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Extensions.NavigationManagerExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Modals.AddToCartModal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Modals.AddToCartModal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Modals.EditCartItemModal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Modals.EditCartItemModal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Modals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Modals.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Cart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Cart.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Categories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Categories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.CheckoutReturn.CancelReturn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.CheckoutReturn.CancelReturn.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.CheckoutReturn.PaymentReturn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.CheckoutReturn.PaymentReturn.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.CheckoutReturn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.CheckoutReturn.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Index.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.OrderDetail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.OrderDetail.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Orders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Orders.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.ProductDetail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.ProductDetail.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Products.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Products.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Profile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Profile.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Security.ConfirmEmail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Security.ConfirmEmail.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Security.Login.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Security.Login.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Security.Logout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Security.Logout.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Security.RedirectToLogin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Security.RedirectToLogin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Security.Register.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Security.Register.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.Security.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Pages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Pages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Security.AuthHeaderHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Security.AuthHeaderHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Security.AuthStateProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Security.AuthStateProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Security.JwtParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Security.JwtParser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Security.LoginResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Security.LoginResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Security.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.ServiceRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.ServiceRegistration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Services.CartService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Services.CartService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Services.CategoryService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Services.CategoryService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Services.OrderService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Services.OrderService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Services.ProductService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Services.ProductService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Services.ReviewService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Services.ReviewService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Services.SecurityService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Services.SecurityService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Shared.MainLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Shared.MainLayout.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Shared.NavMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Shared.NavMenu.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.Shared.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.Shared.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI._Imports.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI._Imports.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.ApplicationTests.CartItemTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.ApplicationTests.CartItemTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.ApplicationTests.CategoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.ApplicationTests.CategoryTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.ApplicationTests.OrderItemTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.ApplicationTests.OrderItemTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.ApplicationTests.OrderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.ApplicationTests.OrderTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.ApplicationTests.PayPalTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.ApplicationTests.PayPalTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.ApplicationTests.ProductTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.ApplicationTests.ProductTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.ApplicationTests.ReviewTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.ApplicationTests.ReviewTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.ApplicationTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.ApplicationTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.EmailTests.EmailServiceTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.EmailTests.EmailServiceTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.EmailTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.EmailTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.CartItemEndpointTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.CartItemEndpointTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.ProductEndpointTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.ProductEndpointTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.ReviewEndpointTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.ReviewEndpointTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.SecurityEndpointTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.SecurityEndpointTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.FastEndpointTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.PayPalTests.PaypalClientServiceTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.PayPalTests.PaypalClientServiceTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.PayPalTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.PayPalTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.PersistenceTests.CartItemRepositoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.PersistenceTests.CartItemRepositoryTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.PersistenceTests.OrderItemAsyncRepositoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.PersistenceTests.OrderItemAsyncRepositoryTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.PersistenceTests.ProductAsyncRepositoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.PersistenceTests.ProductAsyncRepositoryTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.PersistenceTests.ReviewAsyncRepositoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.PersistenceTests.ReviewAsyncRepositoryTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.UnitTests.PersistenceTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.UnitTests.PersistenceTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Worker.Consumers.EcommerceUser.SendEmailConfirmationConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Worker.Consumers.EcommerceUser.SendEmailConfirmationConsumer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Worker.Consumers.EcommerceUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Worker.Consumers.EcommerceUser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Worker.Consumers.Order.SendOrderConfirmationConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Worker.Consumers.Order.SendOrderConfirmationConsumer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Worker.Consumers.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Worker.Consumers.Order.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Worker.EcommerceLogTextFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Worker.EcommerceLogTextFormatter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ecommerce.Worker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ecommerce.Worker.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,429 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Security.AuthenticatedUserModel
+  commentId: T:Ecommerce.Shared.Security.AuthenticatedUserModel
+  id: AuthenticatedUserModel
+  parent: Ecommerce.Shared.Security
+  children:
+  - Ecommerce.Shared.Security.AuthenticatedUserModel.#ctor
+  - Ecommerce.Shared.Security.AuthenticatedUserModel.AccessToken
+  - Ecommerce.Shared.Security.AuthenticatedUserModel.UserName
+  langs:
+  - csharp
+  - vb
+  name: AuthenticatedUserModel
+  nameWithType: AuthenticatedUserModel
+  fullName: Ecommerce.Shared.Security.AuthenticatedUserModel
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Security/AuthenticatedUserModel.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AuthenticatedUserModel
+    path: ../../Core/Ecommerce.Shared/Security/AuthenticatedUserModel.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  summary: Class used to model an authenticated user in the Ecommerce App
+  example: []
+  syntax:
+    content: public class AuthenticatedUserModel
+    content.vb: Public Class AuthenticatedUserModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Shared.Security.AuthenticatedUserModel.AccessToken
+  commentId: P:Ecommerce.Shared.Security.AuthenticatedUserModel.AccessToken
+  id: AccessToken
+  parent: Ecommerce.Shared.Security.AuthenticatedUserModel
+  langs:
+  - csharp
+  - vb
+  name: AccessToken
+  nameWithType: AuthenticatedUserModel.AccessToken
+  fullName: Ecommerce.Shared.Security.AuthenticatedUserModel.AccessToken
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Security/AuthenticatedUserModel.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AccessToken
+    path: ../../Core/Ecommerce.Shared/Security/AuthenticatedUserModel.cs
+    startLine: 10
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  summary: The token used to authenticate requests for the user
+  example: []
+  syntax:
+    content: public string AccessToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AccessToken As String
+  overload: Ecommerce.Shared.Security.AuthenticatedUserModel.AccessToken*
+- uid: Ecommerce.Shared.Security.AuthenticatedUserModel.UserName
+  commentId: P:Ecommerce.Shared.Security.AuthenticatedUserModel.UserName
+  id: UserName
+  parent: Ecommerce.Shared.Security.AuthenticatedUserModel
+  langs:
+  - csharp
+  - vb
+  name: UserName
+  nameWithType: AuthenticatedUserModel.UserName
+  fullName: Ecommerce.Shared.Security.AuthenticatedUserModel.UserName
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Security/AuthenticatedUserModel.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UserName
+    path: ../../Core/Ecommerce.Shared/Security/AuthenticatedUserModel.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  summary: The UserName of the authenticated user
+  example: []
+  syntax:
+    content: public string UserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserName As String
+  overload: Ecommerce.Shared.Security.AuthenticatedUserModel.UserName*
+- uid: Ecommerce.Shared.Security.AuthenticatedUserModel.#ctor
+  commentId: M:Ecommerce.Shared.Security.AuthenticatedUserModel.#ctor
+  id: '#ctor'
+  parent: Ecommerce.Shared.Security.AuthenticatedUserModel
+  langs:
+  - csharp
+  - vb
+  name: AuthenticatedUserModel()
+  nameWithType: AuthenticatedUserModel.AuthenticatedUserModel()
+  fullName: Ecommerce.Shared.Security.AuthenticatedUserModel.AuthenticatedUserModel()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/af529cf6f48068d4977fc4a85e2e73774d61d4b3/Core/Ecommerce.Shared/Security/AuthenticatedUserModel.cs
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  syntax:
+    content: public AuthenticatedUserModel()
+    content.vb: Public Sub New()
+  overload: Ecommerce.Shared.Security.AuthenticatedUserModel.#ctor*
+  nameWithType.vb: AuthenticatedUserModel.New()
+  fullName.vb: Ecommerce.Shared.Security.AuthenticatedUserModel.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.Shared.Security
+  commentId: N:Ecommerce.Shared.Security
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Security
+  nameWithType: Ecommerce.Shared.Security
+  fullName: Ecommerce.Shared.Security
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Shared.Security.AuthenticatedUserModel.AccessToken*
+  commentId: Overload:Ecommerce.Shared.Security.AuthenticatedUserModel.AccessToken
+  href: Ecommerce.Shared.Security.AuthenticatedUserModel.html#Ecommerce_Shared_Security_AuthenticatedUserModel_AccessToken
+  name: AccessToken
+  nameWithType: AuthenticatedUserModel.AccessToken
+  fullName: Ecommerce.Shared.Security.AuthenticatedUserModel.AccessToken
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.Shared.Security.AuthenticatedUserModel.UserName*
+  commentId: Overload:Ecommerce.Shared.Security.AuthenticatedUserModel.UserName
+  href: Ecommerce.Shared.Security.AuthenticatedUserModel.html#Ecommerce_Shared_Security_AuthenticatedUserModel_UserName
+  name: UserName
+  nameWithType: AuthenticatedUserModel.UserName
+  fullName: Ecommerce.Shared.Security.AuthenticatedUserModel.UserName
+- uid: Ecommerce.Shared.Security.AuthenticatedUserModel.#ctor*
+  commentId: Overload:Ecommerce.Shared.Security.AuthenticatedUserModel.#ctor
+  isExternal: true
+  href: Ecommerce.Shared.Security.AuthenticatedUserModel.html#Ecommerce_Shared_Security_AuthenticatedUserModel__ctor
+  name: AuthenticatedUserModel
+  nameWithType: AuthenticatedUserModel.AuthenticatedUserModel
+  fullName: Ecommerce.Shared.Security.AuthenticatedUserModel.AuthenticatedUserModel
+  nameWithType.vb: AuthenticatedUserModel.New
+  fullName.vb: Ecommerce.Shared.Security.AuthenticatedUserModel.New
+  name.vb: New

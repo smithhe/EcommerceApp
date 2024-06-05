@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Responses.CartItem
+  commentId: N:Ecommerce.Shared.Responses.CartItem
+  id: Ecommerce.Shared.Responses.CartItem
+  children:
+  - Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+  - Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+  - Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse
+  - Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+  - Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Responses.CartItem
+  nameWithType: Ecommerce.Shared.Responses.CartItem
+  fullName: Ecommerce.Shared.Responses.CartItem
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+  commentId: T:Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+  href: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.html
+  name: CreateCartItemResponse
+  nameWithType: CreateCartItemResponse
+  fullName: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+- uid: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+  commentId: T:Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+  href: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse.html
+  name: DeleteCartItemResponse
+  nameWithType: DeleteCartItemResponse
+  fullName: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+- uid: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse
+  commentId: T:Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse
+  href: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse.html
+  name: DeleteUserCartItemsResponse
+  nameWithType: DeleteUserCartItemsResponse
+  fullName: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse
+- uid: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+  commentId: T:Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+  href: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse.html
+  name: GetUserCartItemsResponse
+  nameWithType: GetUserCartItemsResponse
+  fullName: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+- uid: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse
+  commentId: T:Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse
+  href: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse.html
+  name: UpdateCartItemResponse
+  nameWithType: UpdateCartItemResponse
+  fullName: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse

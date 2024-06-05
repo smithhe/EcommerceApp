@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Domain.Infrastructure
+  commentId: N:Ecommerce.Domain.Infrastructure
+  id: Ecommerce.Domain.Infrastructure
+  children:
+  - Ecommerce.Domain.Infrastructure.OrderKey
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Domain.Infrastructure
+  nameWithType: Ecommerce.Domain.Infrastructure
+  fullName: Ecommerce.Domain.Infrastructure
+  type: Namespace
+  assemblies:
+  - Ecommerce.Domain
+references:
+- uid: Ecommerce.Domain.Infrastructure.OrderKey
+  commentId: T:Ecommerce.Domain.Infrastructure.OrderKey
+  parent: Ecommerce.Domain.Infrastructure
+  href: Ecommerce.Domain.Infrastructure.OrderKey.html
+  name: OrderKey
+  nameWithType: OrderKey
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey
+- uid: Ecommerce.Domain.Infrastructure
+  commentId: N:Ecommerce.Domain.Infrastructure
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Infrastructure
+  nameWithType: Ecommerce.Domain.Infrastructure
+  fullName: Ecommerce.Domain.Infrastructure
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Infrastructure
+    name: Infrastructure
+    href: Ecommerce.Domain.Infrastructure.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Infrastructure
+    name: Infrastructure
+    href: Ecommerce.Domain.Infrastructure.html

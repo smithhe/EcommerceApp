@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Domain.Common
+  commentId: N:Ecommerce.Domain.Common
+  id: Ecommerce.Domain.Common
+  children:
+  - Ecommerce.Domain.Common.AuditableEntity
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Domain.Common
+  nameWithType: Ecommerce.Domain.Common
+  fullName: Ecommerce.Domain.Common
+  type: Namespace
+  assemblies:
+  - Ecommerce.Domain
+references:
+- uid: Ecommerce.Domain.Common.AuditableEntity
+  commentId: T:Ecommerce.Domain.Common.AuditableEntity
+  parent: Ecommerce.Domain.Common
+  href: Ecommerce.Domain.Common.AuditableEntity.html
+  name: AuditableEntity
+  nameWithType: AuditableEntity
+  fullName: Ecommerce.Domain.Common.AuditableEntity
+- uid: Ecommerce.Domain.Common
+  commentId: N:Ecommerce.Domain.Common
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Common
+  nameWithType: Ecommerce.Domain.Common
+  fullName: Ecommerce.Domain.Common
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Common
+    name: Common
+    href: Ecommerce.Domain.Common.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Common
+    name: Common
+    href: Ecommerce.Domain.Common.html

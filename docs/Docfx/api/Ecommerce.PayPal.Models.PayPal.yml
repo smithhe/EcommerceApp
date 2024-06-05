@@ -1,0 +1,852 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models.PayPal
+  commentId: T:Ecommerce.PayPal.Models.PayPal
+  id: PayPal
+  parent: Ecommerce.PayPal.Models
+  children:
+  - Ecommerce.PayPal.Models.PayPal.#ctor
+  - Ecommerce.PayPal.Models.PayPal.Address
+  - Ecommerce.PayPal.Models.PayPal.BillingAgreementId
+  - Ecommerce.PayPal.Models.PayPal.BirthDate
+  - Ecommerce.PayPal.Models.PayPal.EmailAddress
+  - Ecommerce.PayPal.Models.PayPal.ExperienceContext
+  - Ecommerce.PayPal.Models.PayPal.Name
+  - Ecommerce.PayPal.Models.PayPal.Phone
+  - Ecommerce.PayPal.Models.PayPal.TaxInfo
+  - Ecommerce.PayPal.Models.PayPal.VaultId
+  langs:
+  - csharp
+  - vb
+  name: PayPal
+  nameWithType: PayPal
+  fullName: Ecommerce.PayPal.Models.PayPal
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PayPal
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: Represents the PayPal wallet payment source.
+  example: []
+  syntax:
+    content: public class PayPal
+    content.vb: Public Class PayPal
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.PayPal.Models.PayPal.ExperienceContext
+  commentId: P:Ecommerce.PayPal.Models.PayPal.ExperienceContext
+  id: ExperienceContext
+  parent: Ecommerce.PayPal.Models.PayPal
+  langs:
+  - csharp
+  - vb
+  name: ExperienceContext
+  nameWithType: PayPal.ExperienceContext
+  fullName: Ecommerce.PayPal.Models.PayPal.ExperienceContext
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ExperienceContext
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: Customizes the payer experience during the approval process for payment with PayPal.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("experience_context")]
+
+      public ExperienceContext? ExperienceContext { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.ExperienceContext
+    content.vb: >-
+      <JsonPropertyName("experience_context")>
+
+      Public Property ExperienceContext As ExperienceContext
+  overload: Ecommerce.PayPal.Models.PayPal.ExperienceContext*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: experience_context
+- uid: Ecommerce.PayPal.Models.PayPal.BillingAgreementId
+  commentId: P:Ecommerce.PayPal.Models.PayPal.BillingAgreementId
+  id: BillingAgreementId
+  parent: Ecommerce.PayPal.Models.PayPal
+  langs:
+  - csharp
+  - vb
+  name: BillingAgreementId
+  nameWithType: PayPal.BillingAgreementId
+  fullName: Ecommerce.PayPal.Models.PayPal.BillingAgreementId
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: BillingAgreementId
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+    startLine: 19
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The PayPal billing agreement ID.
+
+    References an approved recurring payment for goods or services.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("billing_agreement_id")]
+
+      public string? BillingAgreementId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("billing_agreement_id")>
+
+      Public Property BillingAgreementId As String
+  overload: Ecommerce.PayPal.Models.PayPal.BillingAgreementId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: billing_agreement_id
+- uid: Ecommerce.PayPal.Models.PayPal.VaultId
+  commentId: P:Ecommerce.PayPal.Models.PayPal.VaultId
+  id: VaultId
+  parent: Ecommerce.PayPal.Models.PayPal
+  langs:
+  - csharp
+  - vb
+  name: VaultId
+  nameWithType: PayPal.VaultId
+  fullName: Ecommerce.PayPal.Models.PayPal.VaultId
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: VaultId
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+    startLine: 25
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The PayPal-generated ID for the payment_source stored within the Vault.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("vault_id")]
+
+      public string? VaultId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("vault_id")>
+
+      Public Property VaultId As String
+  overload: Ecommerce.PayPal.Models.PayPal.VaultId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: vault_id
+- uid: Ecommerce.PayPal.Models.PayPal.EmailAddress
+  commentId: P:Ecommerce.PayPal.Models.PayPal.EmailAddress
+  id: EmailAddress
+  parent: Ecommerce.PayPal.Models.PayPal
+  langs:
+  - csharp
+  - vb
+  name: EmailAddress
+  nameWithType: PayPal.EmailAddress
+  fullName: Ecommerce.PayPal.Models.PayPal.EmailAddress
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: EmailAddress
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+    startLine: 31
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The email address of the PayPal account holder.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("email_address")]
+
+      public string? EmailAddress { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("email_address")>
+
+      Public Property EmailAddress As String
+  overload: Ecommerce.PayPal.Models.PayPal.EmailAddress*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: email_address
+- uid: Ecommerce.PayPal.Models.PayPal.Name
+  commentId: P:Ecommerce.PayPal.Models.PayPal.Name
+  id: Name
+  parent: Ecommerce.PayPal.Models.PayPal
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: PayPal.Name
+  fullName: Ecommerce.PayPal.Models.PayPal.Name
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Name
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+    startLine: 38
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The name of the PayPal account holder.
+
+    Supports only the given_name and surname properties.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("name")]
+
+      public Name? Name { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Name
+    content.vb: >-
+      <JsonPropertyName("name")>
+
+      Public Property Name As Name
+  overload: Ecommerce.PayPal.Models.PayPal.Name*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: Ecommerce.PayPal.Models.PayPal.Phone
+  commentId: P:Ecommerce.PayPal.Models.PayPal.Phone
+  id: Phone
+  parent: Ecommerce.PayPal.Models.PayPal
+  langs:
+  - csharp
+  - vb
+  name: Phone
+  nameWithType: PayPal.Phone
+  fullName: Ecommerce.PayPal.Models.PayPal.Phone
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Phone
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+    startLine: 45
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  syntax:
+    content: >-
+      [JsonPropertyName("phone")]
+
+      public Phone? Phone { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Phone
+    content.vb: >-
+      <JsonPropertyName("phone")>
+
+      Public Property Phone As Phone
+  overload: Ecommerce.PayPal.Models.PayPal.Phone*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: phone
+- uid: Ecommerce.PayPal.Models.PayPal.BirthDate
+  commentId: P:Ecommerce.PayPal.Models.PayPal.BirthDate
+  id: BirthDate
+  parent: Ecommerce.PayPal.Models.PayPal
+  langs:
+  - csharp
+  - vb
+  name: BirthDate
+  nameWithType: PayPal.BirthDate
+  fullName: Ecommerce.PayPal.Models.PayPal.BirthDate
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: BirthDate
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+    startLine: 51
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The birth date of the PayPal account holder in YYYY-MM-DD format.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("birth_date")]
+
+      public string? BirthDate { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("birth_date")>
+
+      Public Property BirthDate As String
+  overload: Ecommerce.PayPal.Models.PayPal.BirthDate*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: birth_date
+- uid: Ecommerce.PayPal.Models.PayPal.TaxInfo
+  commentId: P:Ecommerce.PayPal.Models.PayPal.TaxInfo
+  id: TaxInfo
+  parent: Ecommerce.PayPal.Models.PayPal
+  langs:
+  - csharp
+  - vb
+  name: TaxInfo
+  nameWithType: PayPal.TaxInfo
+  fullName: Ecommerce.PayPal.Models.PayPal.TaxInfo
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: TaxInfo
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+    startLine: 59
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The tax information of the PayPal account holder.
+
+    Required only for Brazilian PayPal account holder's.
+
+    Both tax_id and tax_id_type are required.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("tax_info")]
+
+      public TaxInfo? TaxInfo { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.TaxInfo
+    content.vb: >-
+      <JsonPropertyName("tax_info")>
+
+      Public Property TaxInfo As TaxInfo
+  overload: Ecommerce.PayPal.Models.PayPal.TaxInfo*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: tax_info
+- uid: Ecommerce.PayPal.Models.PayPal.Address
+  commentId: P:Ecommerce.PayPal.Models.PayPal.Address
+  id: Address
+  parent: Ecommerce.PayPal.Models.PayPal
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: PayPal.Address
+  fullName: Ecommerce.PayPal.Models.PayPal.Address
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Address
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+    startLine: 67
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The address of the PayPal account holder.
+
+    Supports only the address_line_1, address_line_2, admin_area_1, admin_area_2, postal_code, and country_code properties.
+
+    Also referred to as the billing address of the customer.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("address")]
+
+      public Address? Address { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Address
+    content.vb: >-
+      <JsonPropertyName("address")>
+
+      Public Property Address As Address
+  overload: Ecommerce.PayPal.Models.PayPal.Address*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: address
+- uid: Ecommerce.PayPal.Models.PayPal.#ctor
+  commentId: M:Ecommerce.PayPal.Models.PayPal.#ctor
+  id: '#ctor'
+  parent: Ecommerce.PayPal.Models.PayPal
+  langs:
+  - csharp
+  - vb
+  name: PayPal()
+  nameWithType: PayPal.PayPal()
+  fullName: Ecommerce.PayPal.Models.PayPal.PayPal()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Infrastructure/Ecommerce.PayPal/Models/PayPal.cs
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  syntax:
+    content: public PayPal()
+    content.vb: Public Sub New()
+  overload: Ecommerce.PayPal.Models.PayPal.#ctor*
+  nameWithType.vb: PayPal.New()
+  fullName.vb: Ecommerce.PayPal.Models.PayPal.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.PayPal.Models
+  commentId: N:Ecommerce.PayPal.Models
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Models
+  nameWithType: Ecommerce.PayPal.Models
+  fullName: Ecommerce.PayPal.Models
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.PayPal.Models.PayPal.ExperienceContext*
+  commentId: Overload:Ecommerce.PayPal.Models.PayPal.ExperienceContext
+  href: Ecommerce.PayPal.Models.PayPal.html#Ecommerce_PayPal_Models_PayPal_ExperienceContext
+  name: ExperienceContext
+  nameWithType: PayPal.ExperienceContext
+  fullName: Ecommerce.PayPal.Models.PayPal.ExperienceContext
+- uid: Ecommerce.PayPal.Models.ExperienceContext
+  commentId: T:Ecommerce.PayPal.Models.ExperienceContext
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.ExperienceContext.html
+  name: ExperienceContext
+  nameWithType: ExperienceContext
+  fullName: Ecommerce.PayPal.Models.ExperienceContext
+- uid: Ecommerce.PayPal.Models.PayPal.BillingAgreementId*
+  commentId: Overload:Ecommerce.PayPal.Models.PayPal.BillingAgreementId
+  href: Ecommerce.PayPal.Models.PayPal.html#Ecommerce_PayPal_Models_PayPal_BillingAgreementId
+  name: BillingAgreementId
+  nameWithType: PayPal.BillingAgreementId
+  fullName: Ecommerce.PayPal.Models.PayPal.BillingAgreementId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.PayPal.Models.PayPal.VaultId*
+  commentId: Overload:Ecommerce.PayPal.Models.PayPal.VaultId
+  href: Ecommerce.PayPal.Models.PayPal.html#Ecommerce_PayPal_Models_PayPal_VaultId
+  name: VaultId
+  nameWithType: PayPal.VaultId
+  fullName: Ecommerce.PayPal.Models.PayPal.VaultId
+- uid: Ecommerce.PayPal.Models.PayPal.EmailAddress*
+  commentId: Overload:Ecommerce.PayPal.Models.PayPal.EmailAddress
+  href: Ecommerce.PayPal.Models.PayPal.html#Ecommerce_PayPal_Models_PayPal_EmailAddress
+  name: EmailAddress
+  nameWithType: PayPal.EmailAddress
+  fullName: Ecommerce.PayPal.Models.PayPal.EmailAddress
+- uid: Ecommerce.PayPal.Models.PayPal.Name*
+  commentId: Overload:Ecommerce.PayPal.Models.PayPal.Name
+  href: Ecommerce.PayPal.Models.PayPal.html#Ecommerce_PayPal_Models_PayPal_Name
+  name: Name
+  nameWithType: PayPal.Name
+  fullName: Ecommerce.PayPal.Models.PayPal.Name
+- uid: Ecommerce.PayPal.Models.Name
+  commentId: T:Ecommerce.PayPal.Models.Name
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Name.html
+  name: Name
+  nameWithType: Name
+  fullName: Ecommerce.PayPal.Models.Name
+- uid: Ecommerce.PayPal.Models.PayPal.Phone*
+  commentId: Overload:Ecommerce.PayPal.Models.PayPal.Phone
+  href: Ecommerce.PayPal.Models.PayPal.html#Ecommerce_PayPal_Models_PayPal_Phone
+  name: Phone
+  nameWithType: PayPal.Phone
+  fullName: Ecommerce.PayPal.Models.PayPal.Phone
+- uid: Ecommerce.PayPal.Models.Phone
+  commentId: T:Ecommerce.PayPal.Models.Phone
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Phone.html
+  name: Phone
+  nameWithType: Phone
+  fullName: Ecommerce.PayPal.Models.Phone
+- uid: Ecommerce.PayPal.Models.PayPal.BirthDate*
+  commentId: Overload:Ecommerce.PayPal.Models.PayPal.BirthDate
+  href: Ecommerce.PayPal.Models.PayPal.html#Ecommerce_PayPal_Models_PayPal_BirthDate
+  name: BirthDate
+  nameWithType: PayPal.BirthDate
+  fullName: Ecommerce.PayPal.Models.PayPal.BirthDate
+- uid: Ecommerce.PayPal.Models.PayPal.TaxInfo*
+  commentId: Overload:Ecommerce.PayPal.Models.PayPal.TaxInfo
+  href: Ecommerce.PayPal.Models.PayPal.html#Ecommerce_PayPal_Models_PayPal_TaxInfo
+  name: TaxInfo
+  nameWithType: PayPal.TaxInfo
+  fullName: Ecommerce.PayPal.Models.PayPal.TaxInfo
+- uid: Ecommerce.PayPal.Models.TaxInfo
+  commentId: T:Ecommerce.PayPal.Models.TaxInfo
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.TaxInfo.html
+  name: TaxInfo
+  nameWithType: TaxInfo
+  fullName: Ecommerce.PayPal.Models.TaxInfo
+- uid: Ecommerce.PayPal.Models.PayPal.Address*
+  commentId: Overload:Ecommerce.PayPal.Models.PayPal.Address
+  href: Ecommerce.PayPal.Models.PayPal.html#Ecommerce_PayPal_Models_PayPal_Address
+  name: Address
+  nameWithType: PayPal.Address
+  fullName: Ecommerce.PayPal.Models.PayPal.Address
+- uid: Ecommerce.PayPal.Models.Address
+  commentId: T:Ecommerce.PayPal.Models.Address
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Address.html
+  name: Address
+  nameWithType: Address
+  fullName: Ecommerce.PayPal.Models.Address
+- uid: Ecommerce.PayPal.Models.PayPal.#ctor*
+  commentId: Overload:Ecommerce.PayPal.Models.PayPal.#ctor
+  isExternal: true
+  href: Ecommerce.PayPal.Models.PayPal.html#Ecommerce_PayPal_Models_PayPal__ctor
+  name: PayPal
+  nameWithType: PayPal.PayPal
+  fullName: Ecommerce.PayPal.Models.PayPal.PayPal
+  nameWithType.vb: PayPal.New
+  fullName.vb: Ecommerce.PayPal.Models.PayPal.New
+  name.vb: New

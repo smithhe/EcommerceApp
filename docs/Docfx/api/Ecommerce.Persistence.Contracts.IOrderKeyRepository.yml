@@ -1,0 +1,518 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Persistence.Contracts.IOrderKeyRepository
+  commentId: T:Ecommerce.Persistence.Contracts.IOrderKeyRepository
+  id: IOrderKeyRepository
+  parent: Ecommerce.Persistence.Contracts
+  children:
+  - Ecommerce.Persistence.Contracts.IOrderKeyRepository.AddAsync(Ecommerce.Domain.Infrastructure.OrderKey)
+  - Ecommerce.Persistence.Contracts.IOrderKeyRepository.DeleteAsync(Ecommerce.Domain.Infrastructure.OrderKey)
+  - Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByOrderIdAsync(System.Int32)
+  - Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByReturnKeyAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IOrderKeyRepository
+  nameWithType: IOrderKeyRepository
+  fullName: Ecommerce.Persistence.Contracts.IOrderKeyRepository
+  type: Interface
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IOrderKeyRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IOrderKeyRepository
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IOrderKeyRepository.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Represents a repository for the <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> entity.
+  example: []
+  syntax:
+    content: public interface IOrderKeyRepository
+    content.vb: Public Interface IOrderKeyRepository
+- uid: Ecommerce.Persistence.Contracts.IOrderKeyRepository.AddAsync(Ecommerce.Domain.Infrastructure.OrderKey)
+  commentId: M:Ecommerce.Persistence.Contracts.IOrderKeyRepository.AddAsync(Ecommerce.Domain.Infrastructure.OrderKey)
+  id: AddAsync(Ecommerce.Domain.Infrastructure.OrderKey)
+  parent: Ecommerce.Persistence.Contracts.IOrderKeyRepository
+  langs:
+  - csharp
+  - vb
+  name: AddAsync(OrderKey)
+  nameWithType: IOrderKeyRepository.AddAsync(OrderKey)
+  fullName: Ecommerce.Persistence.Contracts.IOrderKeyRepository.AddAsync(Ecommerce.Domain.Infrastructure.OrderKey)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IOrderKeyRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IOrderKeyRepository.cs
+    startLine: 19
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Adds a <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> to the table.
+  example: []
+  syntax:
+    content: Task<int> AddAsync(OrderKey entity)
+    parameters:
+    - id: entity
+      type: Ecommerce.Domain.Infrastructure.OrderKey
+      description: The <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> to add
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+      description: >-
+        The ID of the newly added <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> if successful;
+
+        -1 if the INSERT operation fails.
+    content.vb: Function AddAsync(entity As OrderKey) As Task(Of Integer)
+  overload: Ecommerce.Persistence.Contracts.IOrderKeyRepository.AddAsync*
+- uid: Ecommerce.Persistence.Contracts.IOrderKeyRepository.DeleteAsync(Ecommerce.Domain.Infrastructure.OrderKey)
+  commentId: M:Ecommerce.Persistence.Contracts.IOrderKeyRepository.DeleteAsync(Ecommerce.Domain.Infrastructure.OrderKey)
+  id: DeleteAsync(Ecommerce.Domain.Infrastructure.OrderKey)
+  parent: Ecommerce.Persistence.Contracts.IOrderKeyRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(OrderKey)
+  nameWithType: IOrderKeyRepository.DeleteAsync(OrderKey)
+  fullName: Ecommerce.Persistence.Contracts.IOrderKeyRepository.DeleteAsync(Ecommerce.Domain.Infrastructure.OrderKey)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IOrderKeyRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IOrderKeyRepository.cs
+    startLine: 29
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Deletes a row in the database based on the provided <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: Task<bool> DeleteAsync(OrderKey entity)
+    parameters:
+    - id: entity
+      type: Ecommerce.Domain.Infrastructure.OrderKey
+      description: The <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> to delete.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: >-
+        <code>true</code> if the DELETE is successful;
+
+        <code>false</code> if the DELETE fails or the <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> is not found.
+    content.vb: Function DeleteAsync(entity As OrderKey) As Task(Of Boolean)
+  overload: Ecommerce.Persistence.Contracts.IOrderKeyRepository.DeleteAsync*
+- uid: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByOrderIdAsync(System.Int32)
+  commentId: M:Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByOrderIdAsync(System.Int32)
+  id: GetByOrderIdAsync(System.Int32)
+  parent: Ecommerce.Persistence.Contracts.IOrderKeyRepository
+  langs:
+  - csharp
+  - vb
+  name: GetByOrderIdAsync(int)
+  nameWithType: IOrderKeyRepository.GetByOrderIdAsync(int)
+  fullName: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByOrderIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IOrderKeyRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByOrderIdAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IOrderKeyRepository.cs
+    startLine: 39
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Retrieves a <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> from the database with the specified Order ID.
+  example: []
+  syntax:
+    content: Task<OrderKey?> GetByOrderIdAsync(int orderId)
+    parameters:
+    - id: orderId
+      type: System.Int32
+      description: The unique identifier of the <xref href="Ecommerce.Domain.Entities.Order" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Domain.Infrastructure.OrderKey}
+      description: >-
+        The <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> if found;
+
+        <code>null</code> if no <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> with the specified Order ID is found.
+    content.vb: Function GetByOrderIdAsync(orderId As Integer) As Task(Of OrderKey)
+  overload: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByOrderIdAsync*
+  nameWithType.vb: IOrderKeyRepository.GetByOrderIdAsync(Integer)
+  fullName.vb: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByOrderIdAsync(Integer)
+  name.vb: GetByOrderIdAsync(Integer)
+- uid: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByReturnKeyAsync(System.String)
+  commentId: M:Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByReturnKeyAsync(System.String)
+  id: GetByReturnKeyAsync(System.String)
+  parent: Ecommerce.Persistence.Contracts.IOrderKeyRepository
+  langs:
+  - csharp
+  - vb
+  name: GetByReturnKeyAsync(string)
+  nameWithType: IOrderKeyRepository.GetByReturnKeyAsync(string)
+  fullName: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByReturnKeyAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IOrderKeyRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByReturnKeyAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IOrderKeyRepository.cs
+    startLine: 49
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Retrieves a <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> from the database with the specified token.
+  example: []
+  syntax:
+    content: Task<OrderKey?> GetByReturnKeyAsync(string token)
+    parameters:
+    - id: token
+      type: System.String
+      description: The token generated to map back to the order id
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Domain.Infrastructure.OrderKey}
+      description: >-
+        The <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> if found;
+
+        <code>null</code> if no <xref href="Ecommerce.Domain.Infrastructure.OrderKey" data-throw-if-not-resolved="false"></xref> with the specified token is found.
+    content.vb: Function GetByReturnKeyAsync(token As String) As Task(Of OrderKey)
+  overload: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByReturnKeyAsync*
+  nameWithType.vb: IOrderKeyRepository.GetByReturnKeyAsync(String)
+  fullName.vb: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByReturnKeyAsync(String)
+  name.vb: GetByReturnKeyAsync(String)
+references:
+- uid: Ecommerce.Domain.Infrastructure.OrderKey
+  commentId: T:Ecommerce.Domain.Infrastructure.OrderKey
+  parent: Ecommerce.Domain.Infrastructure
+  href: Ecommerce.Domain.Infrastructure.OrderKey.html
+  name: OrderKey
+  nameWithType: OrderKey
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+- uid: Ecommerce.Domain.Infrastructure
+  commentId: N:Ecommerce.Domain.Infrastructure
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Infrastructure
+  nameWithType: Ecommerce.Domain.Infrastructure
+  fullName: Ecommerce.Domain.Infrastructure
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Infrastructure
+    name: Infrastructure
+    href: Ecommerce.Domain.Infrastructure.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Infrastructure
+    name: Infrastructure
+    href: Ecommerce.Domain.Infrastructure.html
+- uid: Ecommerce.Persistence.Contracts.IOrderKeyRepository.AddAsync*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IOrderKeyRepository.AddAsync
+  href: Ecommerce.Persistence.Contracts.IOrderKeyRepository.html#Ecommerce_Persistence_Contracts_IOrderKeyRepository_AddAsync_Ecommerce_Domain_Infrastructure_OrderKey_
+  name: AddAsync
+  nameWithType: IOrderKeyRepository.AddAsync
+  fullName: Ecommerce.Persistence.Contracts.IOrderKeyRepository.AddAsync
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.Persistence.Contracts.IOrderKeyRepository.DeleteAsync*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IOrderKeyRepository.DeleteAsync
+  href: Ecommerce.Persistence.Contracts.IOrderKeyRepository.html#Ecommerce_Persistence_Contracts_IOrderKeyRepository_DeleteAsync_Ecommerce_Domain_Infrastructure_OrderKey_
+  name: DeleteAsync
+  nameWithType: IOrderKeyRepository.DeleteAsync
+  fullName: Ecommerce.Persistence.Contracts.IOrderKeyRepository.DeleteAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Ecommerce.Domain.Entities.Order
+  commentId: T:Ecommerce.Domain.Entities.Order
+  parent: Ecommerce.Domain.Entities
+  href: Ecommerce.Domain.Entities.Order.html
+  name: Order
+  nameWithType: Order
+  fullName: Ecommerce.Domain.Entities.Order
+- uid: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByOrderIdAsync*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByOrderIdAsync
+  href: Ecommerce.Persistence.Contracts.IOrderKeyRepository.html#Ecommerce_Persistence_Contracts_IOrderKeyRepository_GetByOrderIdAsync_System_Int32_
+  name: GetByOrderIdAsync
+  nameWithType: IOrderKeyRepository.GetByOrderIdAsync
+  fullName: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByOrderIdAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{Ecommerce.Domain.Infrastructure.OrderKey}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Domain.Infrastructure.OrderKey}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<OrderKey>
+  nameWithType: Task<OrderKey>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Domain.Infrastructure.OrderKey>
+  nameWithType.vb: Task(Of OrderKey)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Domain.Infrastructure.OrderKey)
+  name.vb: Task(Of OrderKey)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Domain.Infrastructure.OrderKey
+    name: OrderKey
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Domain.Infrastructure.OrderKey
+    name: OrderKey
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+  - name: )
+- uid: Ecommerce.Domain.Entities
+  commentId: N:Ecommerce.Domain.Entities
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Entities
+  nameWithType: Ecommerce.Domain.Entities
+  fullName: Ecommerce.Domain.Entities
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Entities
+    name: Entities
+    href: Ecommerce.Domain.Entities.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Entities
+    name: Entities
+    href: Ecommerce.Domain.Entities.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByReturnKeyAsync*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByReturnKeyAsync
+  href: Ecommerce.Persistence.Contracts.IOrderKeyRepository.html#Ecommerce_Persistence_Contracts_IOrderKeyRepository_GetByReturnKeyAsync_System_String_
+  name: GetByReturnKeyAsync
+  nameWithType: IOrderKeyRepository.GetByReturnKeyAsync
+  fullName: Ecommerce.Persistence.Contracts.IOrderKeyRepository.GetByReturnKeyAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

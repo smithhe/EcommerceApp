@@ -1,0 +1,644 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Contracts.ISecurityService
+  commentId: T:Ecommerce.UI.Contracts.ISecurityService
+  id: ISecurityService
+  parent: Ecommerce.UI.Contracts
+  children:
+  - Ecommerce.UI.Contracts.ISecurityService.ConfirmUserEmail(System.String,System.String)
+  - Ecommerce.UI.Contracts.ISecurityService.Login(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  - Ecommerce.UI.Contracts.ISecurityService.Logout(System.String)
+  - Ecommerce.UI.Contracts.ISecurityService.RegisterUser(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  - Ecommerce.UI.Contracts.ISecurityService.UpdatePassword(System.String,System.String,System.String)
+  - Ecommerce.UI.Contracts.ISecurityService.UpdateUser(Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest)
+  langs:
+  - csharp
+  - vb
+  name: ISecurityService
+  nameWithType: ISecurityService
+  fullName: Ecommerce.UI.Contracts.ISecurityService
+  type: Interface
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ISecurityService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ISecurityService
+    path: ../../UI/Ecommerce.UI/Contracts/ISecurityService.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: public interface ISecurityService
+    content.vb: Public Interface ISecurityService
+- uid: Ecommerce.UI.Contracts.ISecurityService.RegisterUser(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  commentId: M:Ecommerce.UI.Contracts.ISecurityService.RegisterUser(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  id: RegisterUser(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  parent: Ecommerce.UI.Contracts.ISecurityService
+  langs:
+  - csharp
+  - vb
+  name: RegisterUser(CreateUserRequest)
+  nameWithType: ISecurityService.RegisterUser(CreateUserRequest)
+  fullName: Ecommerce.UI.Contracts.ISecurityService.RegisterUser(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ISecurityService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: RegisterUser
+    path: ../../UI/Ecommerce.UI/Contracts/ISecurityService.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<CreateUserResponse> RegisterUser(CreateUserRequest createUserRequest)
+    parameters:
+    - id: createUserRequest
+      type: Ecommerce.Shared.Security.Requests.CreateUserRequest
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.CreateUserResponse}
+    content.vb: Function RegisterUser(createUserRequest As CreateUserRequest) As Task(Of CreateUserResponse)
+  overload: Ecommerce.UI.Contracts.ISecurityService.RegisterUser*
+- uid: Ecommerce.UI.Contracts.ISecurityService.Login(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  commentId: M:Ecommerce.UI.Contracts.ISecurityService.Login(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  id: Login(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  parent: Ecommerce.UI.Contracts.ISecurityService
+  langs:
+  - csharp
+  - vb
+  name: Login(AuthenticationRequest)
+  nameWithType: ISecurityService.Login(AuthenticationRequest)
+  fullName: Ecommerce.UI.Contracts.ISecurityService.Login(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ISecurityService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Login
+    path: ../../UI/Ecommerce.UI/Contracts/ISecurityService.cs
+    startLine: 10
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<LoginResponse> Login(AuthenticationRequest authenticationRequest)
+    parameters:
+    - id: authenticationRequest
+      type: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.UI.Security.LoginResponse}
+    content.vb: Function Login(authenticationRequest As AuthenticationRequest) As Task(Of LoginResponse)
+  overload: Ecommerce.UI.Contracts.ISecurityService.Login*
+- uid: Ecommerce.UI.Contracts.ISecurityService.Logout(System.String)
+  commentId: M:Ecommerce.UI.Contracts.ISecurityService.Logout(System.String)
+  id: Logout(System.String)
+  parent: Ecommerce.UI.Contracts.ISecurityService
+  langs:
+  - csharp
+  - vb
+  name: Logout(string)
+  nameWithType: ISecurityService.Logout(string)
+  fullName: Ecommerce.UI.Contracts.ISecurityService.Logout(string)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ISecurityService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Logout
+    path: ../../UI/Ecommerce.UI/Contracts/ISecurityService.cs
+    startLine: 11
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<bool> Logout(string userName)
+    parameters:
+    - id: userName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function Logout(userName As String) As Task(Of Boolean)
+  overload: Ecommerce.UI.Contracts.ISecurityService.Logout*
+  nameWithType.vb: ISecurityService.Logout(String)
+  fullName.vb: Ecommerce.UI.Contracts.ISecurityService.Logout(String)
+  name.vb: Logout(String)
+- uid: Ecommerce.UI.Contracts.ISecurityService.UpdateUser(Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest)
+  commentId: M:Ecommerce.UI.Contracts.ISecurityService.UpdateUser(Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest)
+  id: UpdateUser(Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest)
+  parent: Ecommerce.UI.Contracts.ISecurityService
+  langs:
+  - csharp
+  - vb
+  name: UpdateUser(UpdateEcommerceUserRequest)
+  nameWithType: ISecurityService.UpdateUser(UpdateEcommerceUserRequest)
+  fullName: Ecommerce.UI.Contracts.ISecurityService.UpdateUser(Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ISecurityService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateUser
+    path: ../../UI/Ecommerce.UI/Contracts/ISecurityService.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<UpdateEcommerceUserResponse> UpdateUser(UpdateEcommerceUserRequest updateUserRequest)
+    parameters:
+    - id: updateUserRequest
+      type: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse}
+    content.vb: Function UpdateUser(updateUserRequest As UpdateEcommerceUserRequest) As Task(Of UpdateEcommerceUserResponse)
+  overload: Ecommerce.UI.Contracts.ISecurityService.UpdateUser*
+- uid: Ecommerce.UI.Contracts.ISecurityService.UpdatePassword(System.String,System.String,System.String)
+  commentId: M:Ecommerce.UI.Contracts.ISecurityService.UpdatePassword(System.String,System.String,System.String)
+  id: UpdatePassword(System.String,System.String,System.String)
+  parent: Ecommerce.UI.Contracts.ISecurityService
+  langs:
+  - csharp
+  - vb
+  name: UpdatePassword(string, string, string)
+  nameWithType: ISecurityService.UpdatePassword(string, string, string)
+  fullName: Ecommerce.UI.Contracts.ISecurityService.UpdatePassword(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ISecurityService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdatePassword
+    path: ../../UI/Ecommerce.UI/Contracts/ISecurityService.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<UpdatePasswordResponse> UpdatePassword(string username, string currentPassword, string newPassword)
+    parameters:
+    - id: username
+      type: System.String
+    - id: currentPassword
+      type: System.String
+    - id: newPassword
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdatePasswordResponse}
+    content.vb: Function UpdatePassword(username As String, currentPassword As String, newPassword As String) As Task(Of UpdatePasswordResponse)
+  overload: Ecommerce.UI.Contracts.ISecurityService.UpdatePassword*
+  nameWithType.vb: ISecurityService.UpdatePassword(String, String, String)
+  fullName.vb: Ecommerce.UI.Contracts.ISecurityService.UpdatePassword(String, String, String)
+  name.vb: UpdatePassword(String, String, String)
+- uid: Ecommerce.UI.Contracts.ISecurityService.ConfirmUserEmail(System.String,System.String)
+  commentId: M:Ecommerce.UI.Contracts.ISecurityService.ConfirmUserEmail(System.String,System.String)
+  id: ConfirmUserEmail(System.String,System.String)
+  parent: Ecommerce.UI.Contracts.ISecurityService
+  langs:
+  - csharp
+  - vb
+  name: ConfirmUserEmail(string?, string?)
+  nameWithType: ISecurityService.ConfirmUserEmail(string?, string?)
+  fullName: Ecommerce.UI.Contracts.ISecurityService.ConfirmUserEmail(string?, string?)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ISecurityService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ConfirmUserEmail
+    path: ../../UI/Ecommerce.UI/Contracts/ISecurityService.cs
+    startLine: 14
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<ConfirmEmailResponse> ConfirmUserEmail(string? userId, string? emailToken)
+    parameters:
+    - id: userId
+      type: System.String
+    - id: emailToken
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.ConfirmEmailResponse}
+    content.vb: Function ConfirmUserEmail(userId As String, emailToken As String) As Task(Of ConfirmEmailResponse)
+  overload: Ecommerce.UI.Contracts.ISecurityService.ConfirmUserEmail*
+  nameWithType.vb: ISecurityService.ConfirmUserEmail(String, String)
+  fullName.vb: Ecommerce.UI.Contracts.ISecurityService.ConfirmUserEmail(String, String)
+  name.vb: ConfirmUserEmail(String, String)
+references:
+- uid: Ecommerce.UI.Contracts
+  commentId: N:Ecommerce.UI.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.UI.Contracts
+  nameWithType: Ecommerce.UI.Contracts
+  fullName: Ecommerce.UI.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+- uid: Ecommerce.UI.Contracts.ISecurityService.RegisterUser*
+  commentId: Overload:Ecommerce.UI.Contracts.ISecurityService.RegisterUser
+  href: Ecommerce.UI.Contracts.ISecurityService.html#Ecommerce_UI_Contracts_ISecurityService_RegisterUser_Ecommerce_Shared_Security_Requests_CreateUserRequest_
+  name: RegisterUser
+  nameWithType: ISecurityService.RegisterUser
+  fullName: Ecommerce.UI.Contracts.ISecurityService.RegisterUser
+- uid: Ecommerce.Shared.Security.Requests.CreateUserRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.CreateUserRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.CreateUserRequest.html
+  name: CreateUserRequest
+  nameWithType: CreateUserRequest
+  fullName: Ecommerce.Shared.Security.Requests.CreateUserRequest
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.CreateUserResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.CreateUserResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CreateUserResponse>
+  nameWithType: Task<CreateUserResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Security.Responses.CreateUserResponse>
+  nameWithType.vb: Task(Of CreateUserResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Security.Responses.CreateUserResponse)
+  name.vb: Task(Of CreateUserResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+    name: CreateUserResponse
+    href: Ecommerce.Shared.Security.Responses.CreateUserResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+    name: CreateUserResponse
+    href: Ecommerce.Shared.Security.Responses.CreateUserResponse.html
+  - name: )
+- uid: Ecommerce.Shared.Security.Requests
+  commentId: N:Ecommerce.Shared.Security.Requests
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Security.Requests
+  nameWithType: Ecommerce.Shared.Security.Requests
+  fullName: Ecommerce.Shared.Security.Requests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  - name: .
+  - uid: Ecommerce.Shared.Security.Requests
+    name: Requests
+    href: Ecommerce.Shared.Security.Requests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  - name: .
+  - uid: Ecommerce.Shared.Security.Requests
+    name: Requests
+    href: Ecommerce.Shared.Security.Requests.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UI.Contracts.ISecurityService.Login*
+  commentId: Overload:Ecommerce.UI.Contracts.ISecurityService.Login
+  href: Ecommerce.UI.Contracts.ISecurityService.html#Ecommerce_UI_Contracts_ISecurityService_Login_Ecommerce_Shared_Security_Requests_AuthenticationRequest_
+  name: Login
+  nameWithType: ISecurityService.Login
+  fullName: Ecommerce.UI.Contracts.ISecurityService.Login
+- uid: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.AuthenticationRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.AuthenticationRequest.html
+  name: AuthenticationRequest
+  nameWithType: AuthenticationRequest
+  fullName: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+- uid: System.Threading.Tasks.Task{Ecommerce.UI.Security.LoginResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.UI.Security.LoginResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<LoginResponse>
+  nameWithType: Task<LoginResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.UI.Security.LoginResponse>
+  nameWithType.vb: Task(Of LoginResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.UI.Security.LoginResponse)
+  name.vb: Task(Of LoginResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.UI.Security.LoginResponse
+    name: LoginResponse
+    href: Ecommerce.UI.Security.LoginResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.UI.Security.LoginResponse
+    name: LoginResponse
+    href: Ecommerce.UI.Security.LoginResponse.html
+  - name: )
+- uid: Ecommerce.UI.Contracts.ISecurityService.Logout*
+  commentId: Overload:Ecommerce.UI.Contracts.ISecurityService.Logout
+  href: Ecommerce.UI.Contracts.ISecurityService.html#Ecommerce_UI_Contracts_ISecurityService_Logout_System_String_
+  name: Logout
+  nameWithType: ISecurityService.Logout
+  fullName: Ecommerce.UI.Contracts.ISecurityService.Logout
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UI.Contracts.ISecurityService.UpdateUser*
+  commentId: Overload:Ecommerce.UI.Contracts.ISecurityService.UpdateUser
+  href: Ecommerce.UI.Contracts.ISecurityService.html#Ecommerce_UI_Contracts_ISecurityService_UpdateUser_Ecommerce_Shared_Security_Requests_UpdateEcommerceUserRequest_
+  name: UpdateUser
+  nameWithType: ISecurityService.UpdateUser
+  fullName: Ecommerce.UI.Contracts.ISecurityService.UpdateUser
+- uid: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest.html
+  name: UpdateEcommerceUserRequest
+  nameWithType: UpdateEcommerceUserRequest
+  fullName: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UpdateEcommerceUserResponse>
+  nameWithType: Task<UpdateEcommerceUserResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse>
+  nameWithType.vb: Task(Of UpdateEcommerceUserResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse)
+  name.vb: Task(Of UpdateEcommerceUserResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+    name: UpdateEcommerceUserResponse
+    href: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+    name: UpdateEcommerceUserResponse
+    href: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse.html
+  - name: )
+- uid: Ecommerce.UI.Contracts.ISecurityService.UpdatePassword*
+  commentId: Overload:Ecommerce.UI.Contracts.ISecurityService.UpdatePassword
+  href: Ecommerce.UI.Contracts.ISecurityService.html#Ecommerce_UI_Contracts_ISecurityService_UpdatePassword_System_String_System_String_System_String_
+  name: UpdatePassword
+  nameWithType: ISecurityService.UpdatePassword
+  fullName: Ecommerce.UI.Contracts.ISecurityService.UpdatePassword
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdatePasswordResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdatePasswordResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UpdatePasswordResponse>
+  nameWithType: Task<UpdatePasswordResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Security.Responses.UpdatePasswordResponse>
+  nameWithType.vb: Task(Of UpdatePasswordResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Security.Responses.UpdatePasswordResponse)
+  name.vb: Task(Of UpdatePasswordResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+    name: UpdatePasswordResponse
+    href: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+    name: UpdatePasswordResponse
+    href: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse.html
+  - name: )
+- uid: Ecommerce.UI.Contracts.ISecurityService.ConfirmUserEmail*
+  commentId: Overload:Ecommerce.UI.Contracts.ISecurityService.ConfirmUserEmail
+  href: Ecommerce.UI.Contracts.ISecurityService.html#Ecommerce_UI_Contracts_ISecurityService_ConfirmUserEmail_System_String_System_String_
+  name: ConfirmUserEmail
+  nameWithType: ISecurityService.ConfirmUserEmail
+  fullName: Ecommerce.UI.Contracts.ISecurityService.ConfirmUserEmail
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.ConfirmEmailResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.ConfirmEmailResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ConfirmEmailResponse>
+  nameWithType: Task<ConfirmEmailResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Security.Responses.ConfirmEmailResponse>
+  nameWithType.vb: Task(Of ConfirmEmailResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Security.Responses.ConfirmEmailResponse)
+  name.vb: Task(Of ConfirmEmailResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse
+    name: ConfirmEmailResponse
+    href: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse
+    name: ConfirmEmailResponse
+    href: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse.html
+  - name: )

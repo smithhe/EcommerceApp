@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  commentId: N:Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  id: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  children:
+  - Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQuery
+  - Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  nameWithType: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  fullName: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQuery
+  commentId: T:Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQuery
+  parent: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  href: Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQuery.html
+  name: GetAllCategoriesQuery
+  nameWithType: GetAllCategoriesQuery
+  fullName: Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQuery
+- uid: Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQueryHandler
+  commentId: T:Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQueryHandler
+  href: Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQueryHandler.html
+  name: GetAllCategoriesQueryHandler
+  nameWithType: GetAllCategoriesQueryHandler
+  fullName: Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQueryHandler
+- uid: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  commentId: N:Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  nameWithType: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  fullName: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category
+    name: Category
+    href: Ecommerce.Application.Features.Category.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Category.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+    name: GetAllCategories
+    href: Ecommerce.Application.Features.Category.Queries.GetAllCategories.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category
+    name: Category
+    href: Ecommerce.Application.Features.Category.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Category.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+    name: GetAllCategories
+    href: Ecommerce.Application.Features.Category.Queries.GetAllCategories.html

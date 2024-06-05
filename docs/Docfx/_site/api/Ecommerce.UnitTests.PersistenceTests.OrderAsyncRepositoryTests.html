@@ -1,0 +1,712 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OrderAsyncRepositoryTests </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OrderAsyncRepositoryTests ">
+      
+      
+      <link rel="icon" href=".././images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/smithhe/EcommerceApp/new/dev/apiSpec/new?filename=Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests.md&amp;value=---%0Auid%3A%20Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt=" Ecommerce App">
+             Ecommerce App
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests">
+
+
+
+  <h1 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests" class="text-break">
+Class OrderAsyncRepositoryTests  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ecommerce.html">Ecommerce</a>.<a class="xref" href="Ecommerce.UnitTests.html">UnitTests</a>.<a class="xref" href="Ecommerce.UnitTests.PersistenceTests.html">PersistenceTests</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Ecommerce.UnitTests.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestFixture]
+public class OrderAsyncRepositoryTests</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">OrderAsyncRepositoryTests</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_AddAsync_WhenExceptionThrown_ReturnsMinusOne_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_AddAsync_WhenExceptionThrown_ReturnsMinusOne" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne">
+  AddAsync_WhenExceptionThrown_ReturnsMinusOne()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task AddAsync_WhenExceptionThrown_ReturnsMinusOne()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_AddAsync_WithExistingOrder_ReturnsMinusOne_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.AddAsync_WithExistingOrder_ReturnsMinusOne*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_AddAsync_WithExistingOrder_ReturnsMinusOne" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.AddAsync_WithExistingOrder_ReturnsMinusOne">
+  AddAsync_WithExistingOrder_ReturnsMinusOne()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task AddAsync_WithExistingOrder_ReturnsMinusOne()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_AddAsync_WithNewOrder_ReturnsId_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.AddAsync_WithNewOrder_ReturnsId*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_AddAsync_WithNewOrder_ReturnsId" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.AddAsync_WithNewOrder_ReturnsId">
+  AddAsync_WithNewOrder_ReturnsId()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task AddAsync_WithNewOrder_ReturnsId()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_DeleteAsync_WhenExceptionThrown_ReturnsFalse_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_DeleteAsync_WhenExceptionThrown_ReturnsFalse" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse">
+  DeleteAsync_WhenExceptionThrown_ReturnsFalse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task DeleteAsync_WhenExceptionThrown_ReturnsFalse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_DeleteAsync_WhenOrderExists_ReturnsTrue_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.DeleteAsync_WhenOrderExists_ReturnsTrue*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_DeleteAsync_WhenOrderExists_ReturnsTrue" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.DeleteAsync_WhenOrderExists_ReturnsTrue">
+  DeleteAsync_WhenOrderExists_ReturnsTrue()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task DeleteAsync_WhenOrderExists_ReturnsTrue()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_DeleteAsync_WithOrderDoesNotExist_ReturnsFalse_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.DeleteAsync_WithOrderDoesNotExist_ReturnsFalse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_DeleteAsync_WithOrderDoesNotExist_ReturnsFalse" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.DeleteAsync_WithOrderDoesNotExist_ReturnsFalse">
+  DeleteAsync_WithOrderDoesNotExist_ReturnsFalse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task DeleteAsync_WithOrderDoesNotExist_ReturnsFalse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_GetByIdAsync_WhenExceptionThrown_ReturnsNull_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_GetByIdAsync_WhenExceptionThrown_ReturnsNull" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull">
+  GetByIdAsync_WhenExceptionThrown_ReturnsNull()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetByIdAsync_WhenExceptionThrown_ReturnsNull()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_GetByIdAsync_WhenOrderDoesNotExist_ReturnsNull_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.GetByIdAsync_WhenOrderDoesNotExist_ReturnsNull*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_GetByIdAsync_WhenOrderDoesNotExist_ReturnsNull" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.GetByIdAsync_WhenOrderDoesNotExist_ReturnsNull">
+  GetByIdAsync_WhenOrderDoesNotExist_ReturnsNull()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetByIdAsync_WhenOrderDoesNotExist_ReturnsNull()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_GetByIdAsync_WhenOrderExists_ReturnsOrder_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.GetByIdAsync_WhenOrderExists_ReturnsOrder*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_GetByIdAsync_WhenOrderExists_ReturnsOrder" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.GetByIdAsync_WhenOrderExists_ReturnsOrder">
+  GetByIdAsync_WhenOrderExists_ReturnsOrder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetByIdAsync_WhenOrderExists_ReturnsOrder()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_ListAllAsync_WhenExceptionThrown_ReturnsEmpty_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmpty*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_ListAllAsync_WhenExceptionThrown_ReturnsEmpty" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmpty">
+  ListAllAsync_WhenExceptionThrown_ReturnsEmpty()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task ListAllAsync_WhenExceptionThrown_ReturnsEmpty()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_ListAllAsync_WhenNoOrdersExist_ReturnsEmpty_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.ListAllAsync_WhenNoOrdersExist_ReturnsEmpty*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_ListAllAsync_WhenNoOrdersExist_ReturnsEmpty" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.ListAllAsync_WhenNoOrdersExist_ReturnsEmpty">
+  ListAllAsync_WhenNoOrdersExist_ReturnsEmpty()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task ListAllAsync_WhenNoOrdersExist_ReturnsEmpty()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_ListAllAsync_WhenOrdersExist_ReturnsOrders_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.ListAllAsync_WhenOrdersExist_ReturnsOrders*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_ListAllAsync_WhenOrdersExist_ReturnsOrders" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.ListAllAsync_WhenOrdersExist_ReturnsOrders">
+  ListAllAsync_WhenOrdersExist_ReturnsOrders()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task ListAllAsync_WhenOrdersExist_ReturnsOrders()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_Setup_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.Setup*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_Setup" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.Setup">
+  Setup()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SetUp]
+public void Setup()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_TearDown_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.TearDown*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_TearDown" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.TearDown">
+  TearDown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TearDown]
+public void TearDown()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_UpdateAsync_WhenExceptionThrown_ReturnsFalse_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_UpdateAsync_WhenExceptionThrown_ReturnsFalse" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse">
+  UpdateAsync_WhenExceptionThrown_ReturnsFalse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task UpdateAsync_WhenExceptionThrown_ReturnsFalse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_UpdateAsync_WithExistingOrder_ReturnsTrue_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.UpdateAsync_WithExistingOrder_ReturnsTrue*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_UpdateAsync_WithExistingOrder_ReturnsTrue" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.UpdateAsync_WithExistingOrder_ReturnsTrue">
+  UpdateAsync_WithExistingOrder_ReturnsTrue()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task UpdateAsync_WithExistingOrder_ReturnsTrue()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_UpdateAsync_WithOrderNonExistentOrder_ReturnsFalse_" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.UpdateAsync_WithOrderNonExistentOrder_ReturnsFalse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_PersistenceTests_OrderAsyncRepositoryTests_UpdateAsync_WithOrderNonExistentOrder_ReturnsFalse" data-uid="Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.UpdateAsync_WithOrderNonExistentOrder_ReturnsFalse">
+  UpdateAsync_WithOrderNonExistentOrder_ReturnsFalse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/PersistenceTests/OrderAsyncRepositoryTests.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task UpdateAsync_WithOrderNonExistentOrder_ReturnsFalse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

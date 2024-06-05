@@ -1,0 +1,1169 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  id: EcommerceUserTests
+  parent: Ecommerce.UnitTests.ApplicationTests
+  children:
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.Setup
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse
+  langs:
+  - csharp
+  - vb
+  name: EcommerceUserTests
+  nameWithType: EcommerceUserTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  type: Class
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: EcommerceUserTests
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 18
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class EcommerceUserTests
+    content.vb: >-
+      <TestFixture>
+
+      Public Class EcommerceUserTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.Setup
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.Setup
+  id: Setup
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: EcommerceUserTests.Setup()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.Setup()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Setup
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 29
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void Setup()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub Setup()
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.Setup*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  id: ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse()
+  nameWithType: EcommerceUserTests.ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 39
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  id: RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse()
+  nameWithType: EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 75
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse
+  id: RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse()
+  nameWithType: EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 123
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse
+  id: RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse()
+  nameWithType: EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 164
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse
+  id: RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse()
+  nameWithType: EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 205
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 250
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse
+  id: UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse()
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 290
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse
+  id: UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse()
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 322
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse
+  id: UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse()
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 354
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse
+  id: UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse()
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 386
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  id: UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse()
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 418
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  id: UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse()
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 452
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: EcommerceUserTests.UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 495
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse
+  id: UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse()
+  nameWithType: EcommerceUserTests.UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 527
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse
+  id: UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse()
+  nameWithType: EcommerceUserTests.UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 557
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse
+  id: UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse()
+  nameWithType: EcommerceUserTests.UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 587
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  id: UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  langs:
+  - csharp
+  - vb
+  name: UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse()
+  nameWithType: EcommerceUserTests.UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/EcommerceUserTests.cs
+    startLine: 617
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: Ecommerce.UnitTests.ApplicationTests
+  commentId: N:Ecommerce.UnitTests.ApplicationTests
+  href: Ecommerce.html
+  name: Ecommerce.UnitTests.ApplicationTests
+  nameWithType: Ecommerce.UnitTests.ApplicationTests
+  fullName: Ecommerce.UnitTests.ApplicationTests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.Setup*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.Setup
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_Setup
+  name: Setup
+  nameWithType: EcommerceUserTests.Setup
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.Setup
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  name: ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  nameWithType: EcommerceUserTests.ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.ConfirmEmailCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  name: RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  nameWithType: EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsResponse_ShouldReturnSameResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse
+  name: RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse
+  nameWithType: EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsFailedResponse_ShouldReturnSameResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse
+  name: RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse
+  nameWithType: EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenServiceReturnsNoToken_ShouldReturnSameResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse
+  name: RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse
+  nameWithType: EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.RegisterEcommerceUserCommandHandler_WhenUserIdNotFound_ShouldReturnFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse
+  name: UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse
+  name: UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutEmail_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse
+  name: UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutFirstName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse
+  name: UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WithoutLastName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  name: UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  name: UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  nameWithType: EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdateEcommerceUserCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: EcommerceUserTests.UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse
+  name: UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse
+  nameWithType: EcommerceUserTests.UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse
+  name: UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse
+  nameWithType: EcommerceUserTests.UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutCurrentPassword_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse
+  name: UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse
+  nameWithType: EcommerceUserTests.UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WithoutNewPassword_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html#Ecommerce_UnitTests_ApplicationTests_EcommerceUserTests_UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  name: UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  nameWithType: EcommerceUserTests.UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.UpdatePasswordCommandHandler_WhenUserNotFound_ReturnsFailedResponse

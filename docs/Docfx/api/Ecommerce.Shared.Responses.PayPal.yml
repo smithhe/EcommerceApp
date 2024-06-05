@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Responses.PayPal
+  commentId: N:Ecommerce.Shared.Responses.PayPal
+  id: Ecommerce.Shared.Responses.PayPal
+  children:
+  - Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Responses.PayPal
+  nameWithType: Ecommerce.Shared.Responses.PayPal
+  fullName: Ecommerce.Shared.Responses.PayPal
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse
+  commentId: T:Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse
+  href: Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse.html
+  name: CreatePayPalOrderResponse
+  nameWithType: CreatePayPalOrderResponse
+  fullName: Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse

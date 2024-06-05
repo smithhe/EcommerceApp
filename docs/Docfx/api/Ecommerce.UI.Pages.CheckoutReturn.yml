@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Pages.CheckoutReturn
+  commentId: N:Ecommerce.UI.Pages.CheckoutReturn
+  id: Ecommerce.UI.Pages.CheckoutReturn
+  children:
+  - Ecommerce.UI.Pages.CheckoutReturn.CancelReturn
+  - Ecommerce.UI.Pages.CheckoutReturn.PaymentReturn
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UI.Pages.CheckoutReturn
+  nameWithType: Ecommerce.UI.Pages.CheckoutReturn
+  fullName: Ecommerce.UI.Pages.CheckoutReturn
+  type: Namespace
+  assemblies:
+  - Ecommerce.UI
+references:
+- uid: Ecommerce.UI.Pages.CheckoutReturn.CancelReturn
+  commentId: T:Ecommerce.UI.Pages.CheckoutReturn.CancelReturn
+  href: Ecommerce.UI.Pages.CheckoutReturn.CancelReturn.html
+  name: CancelReturn
+  nameWithType: CancelReturn
+  fullName: Ecommerce.UI.Pages.CheckoutReturn.CancelReturn
+- uid: Ecommerce.UI.Pages.CheckoutReturn.PaymentReturn
+  commentId: T:Ecommerce.UI.Pages.CheckoutReturn.PaymentReturn
+  href: Ecommerce.UI.Pages.CheckoutReturn.PaymentReturn.html
+  name: PaymentReturn
+  nameWithType: PaymentReturn
+  fullName: Ecommerce.UI.Pages.CheckoutReturn.PaymentReturn

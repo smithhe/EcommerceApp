@@ -1,0 +1,479 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Contracts.IReviewService
+  commentId: T:Ecommerce.UI.Contracts.IReviewService
+  id: IReviewService
+  parent: Ecommerce.UI.Contracts
+  children:
+  - Ecommerce.UI.Contracts.IReviewService.GetUserReview(System.String,System.Int32)
+  - Ecommerce.UI.Contracts.IReviewService.RemoveReview(Ecommerce.Shared.Dtos.ReviewDto)
+  - Ecommerce.UI.Contracts.IReviewService.SubmitReview(Ecommerce.Shared.Dtos.ReviewDto)
+  - Ecommerce.UI.Contracts.IReviewService.UpdateReview(Ecommerce.Shared.Dtos.ReviewDto)
+  langs:
+  - csharp
+  - vb
+  name: IReviewService
+  nameWithType: IReviewService
+  fullName: Ecommerce.UI.Contracts.IReviewService
+  type: Interface
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/IReviewService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IReviewService
+    path: ../../UI/Ecommerce.UI/Contracts/IReviewService.cs
+    startLine: 6
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: public interface IReviewService
+    content.vb: Public Interface IReviewService
+- uid: Ecommerce.UI.Contracts.IReviewService.SubmitReview(Ecommerce.Shared.Dtos.ReviewDto)
+  commentId: M:Ecommerce.UI.Contracts.IReviewService.SubmitReview(Ecommerce.Shared.Dtos.ReviewDto)
+  id: SubmitReview(Ecommerce.Shared.Dtos.ReviewDto)
+  parent: Ecommerce.UI.Contracts.IReviewService
+  langs:
+  - csharp
+  - vb
+  name: SubmitReview(ReviewDto)
+  nameWithType: IReviewService.SubmitReview(ReviewDto)
+  fullName: Ecommerce.UI.Contracts.IReviewService.SubmitReview(Ecommerce.Shared.Dtos.ReviewDto)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/IReviewService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: SubmitReview
+    path: ../../UI/Ecommerce.UI/Contracts/IReviewService.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<CreateReviewResponse> SubmitReview(ReviewDto review)
+    parameters:
+    - id: review
+      type: Ecommerce.Shared.Dtos.ReviewDto
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.CreateReviewResponse}
+    content.vb: Function SubmitReview(review As ReviewDto) As Task(Of CreateReviewResponse)
+  overload: Ecommerce.UI.Contracts.IReviewService.SubmitReview*
+- uid: Ecommerce.UI.Contracts.IReviewService.RemoveReview(Ecommerce.Shared.Dtos.ReviewDto)
+  commentId: M:Ecommerce.UI.Contracts.IReviewService.RemoveReview(Ecommerce.Shared.Dtos.ReviewDto)
+  id: RemoveReview(Ecommerce.Shared.Dtos.ReviewDto)
+  parent: Ecommerce.UI.Contracts.IReviewService
+  langs:
+  - csharp
+  - vb
+  name: RemoveReview(ReviewDto)
+  nameWithType: IReviewService.RemoveReview(ReviewDto)
+  fullName: Ecommerce.UI.Contracts.IReviewService.RemoveReview(Ecommerce.Shared.Dtos.ReviewDto)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/IReviewService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: RemoveReview
+    path: ../../UI/Ecommerce.UI/Contracts/IReviewService.cs
+    startLine: 10
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<DeleteReviewResponse> RemoveReview(ReviewDto review)
+    parameters:
+    - id: review
+      type: Ecommerce.Shared.Dtos.ReviewDto
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.DeleteReviewResponse}
+    content.vb: Function RemoveReview(review As ReviewDto) As Task(Of DeleteReviewResponse)
+  overload: Ecommerce.UI.Contracts.IReviewService.RemoveReview*
+- uid: Ecommerce.UI.Contracts.IReviewService.UpdateReview(Ecommerce.Shared.Dtos.ReviewDto)
+  commentId: M:Ecommerce.UI.Contracts.IReviewService.UpdateReview(Ecommerce.Shared.Dtos.ReviewDto)
+  id: UpdateReview(Ecommerce.Shared.Dtos.ReviewDto)
+  parent: Ecommerce.UI.Contracts.IReviewService
+  langs:
+  - csharp
+  - vb
+  name: UpdateReview(ReviewDto)
+  nameWithType: IReviewService.UpdateReview(ReviewDto)
+  fullName: Ecommerce.UI.Contracts.IReviewService.UpdateReview(Ecommerce.Shared.Dtos.ReviewDto)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/IReviewService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateReview
+    path: ../../UI/Ecommerce.UI/Contracts/IReviewService.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<UpdateReviewResponse> UpdateReview(ReviewDto review)
+    parameters:
+    - id: review
+      type: Ecommerce.Shared.Dtos.ReviewDto
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.UpdateReviewResponse}
+    content.vb: Function UpdateReview(review As ReviewDto) As Task(Of UpdateReviewResponse)
+  overload: Ecommerce.UI.Contracts.IReviewService.UpdateReview*
+- uid: Ecommerce.UI.Contracts.IReviewService.GetUserReview(System.String,System.Int32)
+  commentId: M:Ecommerce.UI.Contracts.IReviewService.GetUserReview(System.String,System.Int32)
+  id: GetUserReview(System.String,System.Int32)
+  parent: Ecommerce.UI.Contracts.IReviewService
+  langs:
+  - csharp
+  - vb
+  name: GetUserReview(string, int)
+  nameWithType: IReviewService.GetUserReview(string, int)
+  fullName: Ecommerce.UI.Contracts.IReviewService.GetUserReview(string, int)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/IReviewService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserReview
+    path: ../../UI/Ecommerce.UI/Contracts/IReviewService.cs
+    startLine: 14
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<GetUserReviewForProductResponse> GetUserReview(string userName, int productId)
+    parameters:
+    - id: userName
+      type: System.String
+    - id: productId
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse}
+    content.vb: Function GetUserReview(userName As String, productId As Integer) As Task(Of GetUserReviewForProductResponse)
+  overload: Ecommerce.UI.Contracts.IReviewService.GetUserReview*
+  nameWithType.vb: IReviewService.GetUserReview(String, Integer)
+  fullName.vb: Ecommerce.UI.Contracts.IReviewService.GetUserReview(String, Integer)
+  name.vb: GetUserReview(String, Integer)
+references:
+- uid: Ecommerce.UI.Contracts
+  commentId: N:Ecommerce.UI.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.UI.Contracts
+  nameWithType: Ecommerce.UI.Contracts
+  fullName: Ecommerce.UI.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+- uid: Ecommerce.UI.Contracts.IReviewService.SubmitReview*
+  commentId: Overload:Ecommerce.UI.Contracts.IReviewService.SubmitReview
+  href: Ecommerce.UI.Contracts.IReviewService.html#Ecommerce_UI_Contracts_IReviewService_SubmitReview_Ecommerce_Shared_Dtos_ReviewDto_
+  name: SubmitReview
+  nameWithType: IReviewService.SubmitReview
+  fullName: Ecommerce.UI.Contracts.IReviewService.SubmitReview
+- uid: Ecommerce.Shared.Dtos.ReviewDto
+  commentId: T:Ecommerce.Shared.Dtos.ReviewDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.ReviewDto.html
+  name: ReviewDto
+  nameWithType: ReviewDto
+  fullName: Ecommerce.Shared.Dtos.ReviewDto
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.CreateReviewResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.CreateReviewResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CreateReviewResponse>
+  nameWithType: Task<CreateReviewResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Review.CreateReviewResponse>
+  nameWithType.vb: Task(Of CreateReviewResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Review.CreateReviewResponse)
+  name.vb: Task(Of CreateReviewResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Review.CreateReviewResponse
+    name: CreateReviewResponse
+    href: Ecommerce.Shared.Responses.Review.CreateReviewResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Review.CreateReviewResponse
+    name: CreateReviewResponse
+    href: Ecommerce.Shared.Responses.Review.CreateReviewResponse.html
+  - name: )
+- uid: Ecommerce.Shared.Dtos
+  commentId: N:Ecommerce.Shared.Dtos
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Dtos
+  nameWithType: Ecommerce.Shared.Dtos
+  fullName: Ecommerce.Shared.Dtos
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UI.Contracts.IReviewService.RemoveReview*
+  commentId: Overload:Ecommerce.UI.Contracts.IReviewService.RemoveReview
+  href: Ecommerce.UI.Contracts.IReviewService.html#Ecommerce_UI_Contracts_IReviewService_RemoveReview_Ecommerce_Shared_Dtos_ReviewDto_
+  name: RemoveReview
+  nameWithType: IReviewService.RemoveReview
+  fullName: Ecommerce.UI.Contracts.IReviewService.RemoveReview
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.DeleteReviewResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.DeleteReviewResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DeleteReviewResponse>
+  nameWithType: Task<DeleteReviewResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Review.DeleteReviewResponse>
+  nameWithType.vb: Task(Of DeleteReviewResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Review.DeleteReviewResponse)
+  name.vb: Task(Of DeleteReviewResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Review.DeleteReviewResponse
+    name: DeleteReviewResponse
+    href: Ecommerce.Shared.Responses.Review.DeleteReviewResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Review.DeleteReviewResponse
+    name: DeleteReviewResponse
+    href: Ecommerce.Shared.Responses.Review.DeleteReviewResponse.html
+  - name: )
+- uid: Ecommerce.UI.Contracts.IReviewService.UpdateReview*
+  commentId: Overload:Ecommerce.UI.Contracts.IReviewService.UpdateReview
+  href: Ecommerce.UI.Contracts.IReviewService.html#Ecommerce_UI_Contracts_IReviewService_UpdateReview_Ecommerce_Shared_Dtos_ReviewDto_
+  name: UpdateReview
+  nameWithType: IReviewService.UpdateReview
+  fullName: Ecommerce.UI.Contracts.IReviewService.UpdateReview
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.UpdateReviewResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.UpdateReviewResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UpdateReviewResponse>
+  nameWithType: Task<UpdateReviewResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Review.UpdateReviewResponse>
+  nameWithType.vb: Task(Of UpdateReviewResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Review.UpdateReviewResponse)
+  name.vb: Task(Of UpdateReviewResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Review.UpdateReviewResponse
+    name: UpdateReviewResponse
+    href: Ecommerce.Shared.Responses.Review.UpdateReviewResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Review.UpdateReviewResponse
+    name: UpdateReviewResponse
+    href: Ecommerce.Shared.Responses.Review.UpdateReviewResponse.html
+  - name: )
+- uid: Ecommerce.UI.Contracts.IReviewService.GetUserReview*
+  commentId: Overload:Ecommerce.UI.Contracts.IReviewService.GetUserReview
+  href: Ecommerce.UI.Contracts.IReviewService.html#Ecommerce_UI_Contracts_IReviewService_GetUserReview_System_String_System_Int32_
+  name: GetUserReview
+  nameWithType: IReviewService.GetUserReview
+  fullName: Ecommerce.UI.Contracts.IReviewService.GetUserReview
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetUserReviewForProductResponse>
+  nameWithType: Task<GetUserReviewForProductResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse>
+  nameWithType.vb: Task(Of GetUserReviewForProductResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse)
+  name.vb: Task(Of GetUserReviewForProductResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse
+    name: GetUserReviewForProductResponse
+    href: Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse
+    name: GetUserReviewForProductResponse
+    href: Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

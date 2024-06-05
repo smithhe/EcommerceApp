@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Validators.CartItem
+  commentId: N:Ecommerce.Application.Validators.CartItem
+  id: Ecommerce.Application.Validators.CartItem
+  children:
+  - Ecommerce.Application.Validators.CartItem.CreateCartItemValidator
+  - Ecommerce.Application.Validators.CartItem.UpdateCartItemValidator
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Validators.CartItem
+  nameWithType: Ecommerce.Application.Validators.CartItem
+  fullName: Ecommerce.Application.Validators.CartItem
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Validators.CartItem.CreateCartItemValidator
+  commentId: T:Ecommerce.Application.Validators.CartItem.CreateCartItemValidator
+  href: Ecommerce.Application.Validators.CartItem.CreateCartItemValidator.html
+  name: CreateCartItemValidator
+  nameWithType: CreateCartItemValidator
+  fullName: Ecommerce.Application.Validators.CartItem.CreateCartItemValidator
+- uid: Ecommerce.Application.Validators.CartItem.UpdateCartItemValidator
+  commentId: T:Ecommerce.Application.Validators.CartItem.UpdateCartItemValidator
+  href: Ecommerce.Application.Validators.CartItem.UpdateCartItemValidator.html
+  name: UpdateCartItemValidator
+  nameWithType: UpdateCartItemValidator
+  fullName: Ecommerce.Application.Validators.CartItem.UpdateCartItemValidator

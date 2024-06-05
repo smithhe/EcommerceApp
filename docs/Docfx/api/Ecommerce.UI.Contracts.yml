@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Contracts
+  commentId: N:Ecommerce.UI.Contracts
+  id: Ecommerce.UI.Contracts
+  children:
+  - Ecommerce.UI.Contracts.ICartService
+  - Ecommerce.UI.Contracts.ICategoryService
+  - Ecommerce.UI.Contracts.IOrderService
+  - Ecommerce.UI.Contracts.IProductService
+  - Ecommerce.UI.Contracts.IReviewService
+  - Ecommerce.UI.Contracts.ISecurityService
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UI.Contracts
+  nameWithType: Ecommerce.UI.Contracts
+  fullName: Ecommerce.UI.Contracts
+  type: Namespace
+  assemblies:
+  - Ecommerce.UI
+references:
+- uid: Ecommerce.UI.Contracts.ICartService
+  commentId: T:Ecommerce.UI.Contracts.ICartService
+  parent: Ecommerce.UI.Contracts
+  href: Ecommerce.UI.Contracts.ICartService.html
+  name: ICartService
+  nameWithType: ICartService
+  fullName: Ecommerce.UI.Contracts.ICartService
+- uid: Ecommerce.UI.Contracts.ICategoryService
+  commentId: T:Ecommerce.UI.Contracts.ICategoryService
+  parent: Ecommerce.UI.Contracts
+  href: Ecommerce.UI.Contracts.ICategoryService.html
+  name: ICategoryService
+  nameWithType: ICategoryService
+  fullName: Ecommerce.UI.Contracts.ICategoryService
+- uid: Ecommerce.UI.Contracts.IOrderService
+  commentId: T:Ecommerce.UI.Contracts.IOrderService
+  parent: Ecommerce.UI.Contracts
+  href: Ecommerce.UI.Contracts.IOrderService.html
+  name: IOrderService
+  nameWithType: IOrderService
+  fullName: Ecommerce.UI.Contracts.IOrderService
+- uid: Ecommerce.UI.Contracts.IProductService
+  commentId: T:Ecommerce.UI.Contracts.IProductService
+  parent: Ecommerce.UI.Contracts
+  href: Ecommerce.UI.Contracts.IProductService.html
+  name: IProductService
+  nameWithType: IProductService
+  fullName: Ecommerce.UI.Contracts.IProductService
+- uid: Ecommerce.UI.Contracts.IReviewService
+  commentId: T:Ecommerce.UI.Contracts.IReviewService
+  parent: Ecommerce.UI.Contracts
+  href: Ecommerce.UI.Contracts.IReviewService.html
+  name: IReviewService
+  nameWithType: IReviewService
+  fullName: Ecommerce.UI.Contracts.IReviewService
+- uid: Ecommerce.UI.Contracts.ISecurityService
+  commentId: T:Ecommerce.UI.Contracts.ISecurityService
+  parent: Ecommerce.UI.Contracts
+  href: Ecommerce.UI.Contracts.ISecurityService.html
+  name: ISecurityService
+  nameWithType: ISecurityService
+  fullName: Ecommerce.UI.Contracts.ISecurityService
+- uid: Ecommerce.UI.Contracts
+  commentId: N:Ecommerce.UI.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.UI.Contracts
+  nameWithType: Ecommerce.UI.Contracts
+  fullName: Ecommerce.UI.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html

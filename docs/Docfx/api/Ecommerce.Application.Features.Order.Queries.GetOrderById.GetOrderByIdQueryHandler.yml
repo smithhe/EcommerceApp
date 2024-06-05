@@ -1,0 +1,943 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+  commentId: T:Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+  id: GetOrderByIdQueryHandler
+  parent: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  children:
+  - Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler},AutoMapper.IMapper,MediatR.IMediator,Ecommerce.Persistence.Contracts.IOrderAsyncRepository)
+  - Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByIdQueryHandler
+  nameWithType: GetOrderByIdQueryHandler
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/Order/Queries/GetOrderById/GetOrderByIdQueryHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByIdQueryHandler
+    path: ../../Core/Ecommerce.Application/Features/Order/Queries/GetOrderById/GetOrderByIdQueryHandler.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  syntax:
+    content: 'public class GetOrderByIdQueryHandler : IRequestHandler<GetOrderByIdQuery, GetOrderByIdResponse>'
+    content.vb: Public Class GetOrderByIdQueryHandler Implements IRequestHandler(Of GetOrderByIdQuery, GetOrderByIdResponse)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler},AutoMapper.IMapper,MediatR.IMediator,Ecommerce.Persistence.Contracts.IOrderAsyncRepository)
+  commentId: M:Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler},AutoMapper.IMapper,MediatR.IMediator,Ecommerce.Persistence.Contracts.IOrderAsyncRepository)
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler},AutoMapper.IMapper,MediatR.IMediator,Ecommerce.Persistence.Contracts.IOrderAsyncRepository)'
+  parent: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByIdQueryHandler(ILogger<GetOrderByIdQueryHandler>, IMapper, IMediator, IOrderAsyncRepository)
+  nameWithType: GetOrderByIdQueryHandler.GetOrderByIdQueryHandler(ILogger<GetOrderByIdQueryHandler>, IMapper, IMediator, IOrderAsyncRepository)
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.GetOrderByIdQueryHandler(Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler>, AutoMapper.IMapper, MediatR.IMediator, Ecommerce.Persistence.Contracts.IOrderAsyncRepository)
+  type: Constructor
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/Order/Queries/GetOrderById/GetOrderByIdQueryHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: .ctor
+    path: ../../Core/Ecommerce.Application/Features/Order/Queries/GetOrderById/GetOrderByIdQueryHandler.cs
+    startLine: 29
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  summary: Initializes a new instance of the <xref href="Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public GetOrderByIdQueryHandler(ILogger<GetOrderByIdQueryHandler> logger, IMapper mapper, IMediator mediator, IOrderAsyncRepository orderAsyncRepository)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler}
+      description: The <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref> instance used for logging.
+    - id: mapper
+      type: AutoMapper.IMapper
+      description: The <xref href="AutoMapper.IMapper" data-throw-if-not-resolved="false"></xref> instance used for mapping objects.
+    - id: mediator
+      type: MediatR.IMediator
+      description: The <xref href="MediatR.IMediator" data-throw-if-not-resolved="false"></xref> instance used for sending Mediator requests.
+    - id: orderAsyncRepository
+      type: Ecommerce.Persistence.Contracts.IOrderAsyncRepository
+      description: The <xref href="Ecommerce.Persistence.Contracts.IOrderAsyncRepository" data-throw-if-not-resolved="false"></xref> instance used for data access for <xref href="Ecommerce.Application.Features.Order" data-throw-if-not-resolved="false"></xref> entities.
+    content.vb: Public Sub New(logger As ILogger(Of GetOrderByIdQueryHandler), mapper As IMapper, mediator As IMediator, orderAsyncRepository As IOrderAsyncRepository)
+  overload: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.#ctor*
+  nameWithType.vb: GetOrderByIdQueryHandler.New(ILogger(Of GetOrderByIdQueryHandler), IMapper, IMediator, IOrderAsyncRepository)
+  fullName.vb: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.New(Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler), AutoMapper.IMapper, MediatR.IMediator, Ecommerce.Persistence.Contracts.IOrderAsyncRepository)
+  name.vb: New(ILogger(Of GetOrderByIdQueryHandler), IMapper, IMediator, IOrderAsyncRepository)
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,System.Threading.CancellationToken)
+  commentId: M:Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,System.Threading.CancellationToken)
+  id: Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,System.Threading.CancellationToken)
+  parent: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Handle(GetOrderByIdQuery, CancellationToken)
+  nameWithType: GetOrderByIdQueryHandler.Handle(GetOrderByIdQuery, CancellationToken)
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/Order/Queries/GetOrderById/GetOrderByIdQueryHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Handle
+    path: ../../Core/Ecommerce.Application/Features/Order/Queries/GetOrderById/GetOrderByIdQueryHandler.cs
+    startLine: 48
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  summary: Handles the <xref href="Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery" data-throw-if-not-resolved="false"></xref> request
+  example: []
+  syntax:
+    content: public Task<GetOrderByIdResponse> Handle(GetOrderByIdQuery query, CancellationToken cancellationToken)
+    parameters:
+    - id: query
+      type: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+      description: The <xref href="Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery" data-throw-if-not-resolved="false"></xref> request to be handled.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> that can be used to request cancellation of the operation.
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}
+      description: >-
+        A <xref href="Ecommerce.Shared.Responses.Order.GetOrderByIdResponse" data-throw-if-not-resolved="false"></xref> with Success being <code>true</code> if the <xref href="Ecommerce.Application.Features.Order" data-throw-if-not-resolved="false"></xref> was found;
+
+        Success will be <code>false</code> if no <xref href="Ecommerce.Application.Features.Order" data-throw-if-not-resolved="false"></xref> with the specified ID is found.
+
+        Message will contain the message to display to the user.
+    content.vb: Public Function Handle(query As GetOrderByIdQuery, cancellationToken As CancellationToken) As Task(Of GetOrderByIdResponse)
+  overload: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.Handle*
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}.Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,System.Threading.CancellationToken)
+references:
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  commentId: N:Ecommerce.Application.Features.Order.Queries.GetOrderById
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  nameWithType: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Order.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById
+    name: GetOrderById
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderById.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Order.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById
+    name: GetOrderById
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderById.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}
+  commentId: T:MediatR.IRequestHandler{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`2
+  href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery.html
+  name: IRequestHandler<GetOrderByIdQuery, GetOrderByIdResponse>
+  nameWithType: IRequestHandler<GetOrderByIdQuery, GetOrderByIdResponse>
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery, Ecommerce.Shared.Responses.Order.GetOrderByIdResponse>
+  nameWithType.vb: IRequestHandler(Of GetOrderByIdQuery, GetOrderByIdResponse)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery, Ecommerce.Shared.Responses.Order.GetOrderByIdResponse)
+  name.vb: IRequestHandler(Of GetOrderByIdQuery, GetOrderByIdResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+    name: GetOrderByIdQuery
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+    name: GetOrderByIdResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Order/GetOrderByIdResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+    name: GetOrderByIdQuery
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+    name: GetOrderByIdResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Order/GetOrderByIdResponse.cs
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequestHandler`2
+  commentId: T:MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<TRequest, TResponse>
+  nameWithType: IRequestHandler<TRequest, TResponse>
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse)
+  name.vb: IRequestHandler(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+  commentId: T:Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+  href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.html
+  name: GetOrderByIdQueryHandler
+  nameWithType: GetOrderByIdQueryHandler
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: AutoMapper.IMapper
+  commentId: T:AutoMapper.IMapper
+  parent: AutoMapper
+  isExternal: true
+  name: IMapper
+  nameWithType: IMapper
+  fullName: AutoMapper.IMapper
+- uid: MediatR.IMediator
+  commentId: T:MediatR.IMediator
+  parent: MediatR
+  isExternal: true
+  name: IMediator
+  nameWithType: IMediator
+  fullName: MediatR.IMediator
+- uid: Ecommerce.Persistence.Contracts.IOrderAsyncRepository
+  commentId: T:Ecommerce.Persistence.Contracts.IOrderAsyncRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.IOrderAsyncRepository.html
+  name: IOrderAsyncRepository
+  nameWithType: IOrderAsyncRepository
+  fullName: Ecommerce.Persistence.Contracts.IOrderAsyncRepository
+- uid: Ecommerce.Application.Features.Order
+  commentId: N:Ecommerce.Application.Features.Order
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Order
+  nameWithType: Ecommerce.Application.Features.Order
+  fullName: Ecommerce.Application.Features.Order
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.#ctor*
+  commentId: Overload:Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.#ctor
+  href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.html#Ecommerce_Application_Features_Order_Queries_GetOrderById_GetOrderByIdQueryHandler__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_Application_Features_Order_Queries_GetOrderById_GetOrderByIdQueryHandler__AutoMapper_IMapper_MediatR_IMediator_Ecommerce_Persistence_Contracts_IOrderAsyncRepository_
+  name: GetOrderByIdQueryHandler
+  nameWithType: GetOrderByIdQueryHandler.GetOrderByIdQueryHandler
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.GetOrderByIdQueryHandler
+  nameWithType.vb: GetOrderByIdQueryHandler.New
+  fullName.vb: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<GetOrderByIdQueryHandler>
+  nameWithType: ILogger<GetOrderByIdQueryHandler>
+  fullName: Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler>
+  nameWithType.vb: ILogger(Of GetOrderByIdQueryHandler)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler)
+  name.vb: ILogger(Of GetOrderByIdQueryHandler)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+    name: GetOrderByIdQueryHandler
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+    name: GetOrderByIdQueryHandler
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.html
+  - name: )
+- uid: AutoMapper
+  commentId: N:AutoMapper
+  isExternal: true
+  name: AutoMapper
+  nameWithType: AutoMapper
+  fullName: AutoMapper
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+  commentId: T:Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+  parent: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery.html
+  name: GetOrderByIdQuery
+  nameWithType: GetOrderByIdQuery
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+  commentId: T:Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+  href: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse.html
+  name: GetOrderByIdResponse
+  nameWithType: GetOrderByIdResponse
+  fullName: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.Handle*
+  commentId: Overload:Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.Handle
+  href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.html#Ecommerce_Application_Features_Order_Queries_GetOrderById_GetOrderByIdQueryHandler_Handle_Ecommerce_Application_Features_Order_Queries_GetOrderById_GetOrderByIdQuery_System_Threading_CancellationToken_
+  name: Handle
+  nameWithType: GetOrderByIdQueryHandler.Handle
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.Handle
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}.Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}.Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}
+  definition: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery.html
+  name: Handle(GetOrderByIdQuery, CancellationToken)
+  nameWithType: IRequestHandler<GetOrderByIdQuery, GetOrderByIdResponse>.Handle(GetOrderByIdQuery, CancellationToken)
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery, Ecommerce.Shared.Responses.Order.GetOrderByIdResponse>.Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of GetOrderByIdQuery, GetOrderByIdResponse).Handle(GetOrderByIdQuery, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery, Ecommerce.Shared.Responses.Order.GetOrderByIdResponse).Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}.Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+    name: GetOrderByIdQuery
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}.Handle(Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+    name: GetOrderByIdQuery
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetOrderByIdResponse>
+  nameWithType: Task<GetOrderByIdResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Order.GetOrderByIdResponse>
+  nameWithType.vb: Task(Of GetOrderByIdResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Order.GetOrderByIdResponse)
+  name.vb: Task(Of GetOrderByIdResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+    name: GetOrderByIdResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Order/GetOrderByIdResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+    name: GetOrderByIdResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Order/GetOrderByIdResponse.cs
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest, TResponse>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

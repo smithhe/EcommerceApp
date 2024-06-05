@@ -1,0 +1,194 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Contracts.ITokenService
+  commentId: T:Ecommerce.PayPal.Contracts.ITokenService
+  id: ITokenService
+  parent: Ecommerce.PayPal.Contracts
+  children:
+  - Ecommerce.PayPal.Contracts.ITokenService.GetNewToken
+  langs:
+  - csharp
+  - vb
+  name: ITokenService
+  nameWithType: ITokenService
+  fullName: Ecommerce.PayPal.Contracts.ITokenService
+  type: Interface
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Contracts/ITokenService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ITokenService
+    path: ../../Infrastructure/Ecommerce.PayPal/Contracts/ITokenService.cs
+    startLine: 2
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Contracts
+  syntax:
+    content: public interface ITokenService
+    content.vb: Public Interface ITokenService
+- uid: Ecommerce.PayPal.Contracts.ITokenService.GetNewToken
+  commentId: M:Ecommerce.PayPal.Contracts.ITokenService.GetNewToken
+  id: GetNewToken
+  parent: Ecommerce.PayPal.Contracts.ITokenService
+  langs:
+  - csharp
+  - vb
+  name: GetNewToken()
+  nameWithType: ITokenService.GetNewToken()
+  fullName: Ecommerce.PayPal.Contracts.ITokenService.GetNewToken()
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Contracts/ITokenService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetNewToken
+    path: ../../Infrastructure/Ecommerce.PayPal/Contracts/ITokenService.cs
+    startLine: 4
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Contracts
+  syntax:
+    content: Task<string> GetNewToken()
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+    content.vb: Function GetNewToken() As Task(Of String)
+  overload: Ecommerce.PayPal.Contracts.ITokenService.GetNewToken*
+references:
+- uid: Ecommerce.PayPal.Contracts
+  commentId: N:Ecommerce.PayPal.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Contracts
+  nameWithType: Ecommerce.PayPal.Contracts
+  fullName: Ecommerce.PayPal.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts
+    name: Contracts
+    href: Ecommerce.PayPal.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts
+    name: Contracts
+    href: Ecommerce.PayPal.Contracts.html
+- uid: Ecommerce.PayPal.Contracts.ITokenService.GetNewToken*
+  commentId: Overload:Ecommerce.PayPal.Contracts.ITokenService.GetNewToken
+  href: Ecommerce.PayPal.Contracts.ITokenService.html#Ecommerce_PayPal_Contracts_ITokenService_GetNewToken
+  name: GetNewToken
+  nameWithType: ITokenService.GetNewToken
+  fullName: Ecommerce.PayPal.Contracts.ITokenService.GetNewToken
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<string>
+  nameWithType: Task<string>
+  fullName: System.Threading.Tasks.Task<string>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

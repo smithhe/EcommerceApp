@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Requests.PayPal
+  commentId: N:Ecommerce.Shared.Requests.PayPal
+  id: Ecommerce.Shared.Requests.PayPal
+  children:
+  - Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Requests.PayPal
+  nameWithType: Ecommerce.Shared.Requests.PayPal
+  fullName: Ecommerce.Shared.Requests.PayPal
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest
+  commentId: T:Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest
+  parent: Ecommerce.Shared.Requests.PayPal
+  href: Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest.html
+  name: CreatePayPalOrderRequest
+  nameWithType: CreatePayPalOrderRequest
+  fullName: Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest
+- uid: Ecommerce.Shared.Requests.PayPal
+  commentId: N:Ecommerce.Shared.Requests.PayPal
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Requests.PayPal
+  nameWithType: Ecommerce.Shared.Requests.PayPal
+  fullName: Ecommerce.Shared.Requests.PayPal
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.PayPal
+    name: PayPal
+    href: Ecommerce.Shared.Requests.PayPal.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.PayPal
+    name: PayPal
+    href: Ecommerce.Shared.Requests.PayPal.html

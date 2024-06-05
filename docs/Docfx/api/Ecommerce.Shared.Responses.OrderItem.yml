@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Responses.OrderItem
+  commentId: N:Ecommerce.Shared.Responses.OrderItem
+  id: Ecommerce.Shared.Responses.OrderItem
+  children:
+  - Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+  - Ecommerce.Shared.Responses.OrderItem.GetAllOrderItemsByOrderIdResponse
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Responses.OrderItem
+  nameWithType: Ecommerce.Shared.Responses.OrderItem
+  fullName: Ecommerce.Shared.Responses.OrderItem
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+  commentId: T:Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+  href: Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse.html
+  name: CreateOrderItemResponse
+  nameWithType: CreateOrderItemResponse
+  fullName: Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+- uid: Ecommerce.Shared.Responses.OrderItem.GetAllOrderItemsByOrderIdResponse
+  commentId: T:Ecommerce.Shared.Responses.OrderItem.GetAllOrderItemsByOrderIdResponse
+  href: Ecommerce.Shared.Responses.OrderItem.GetAllOrderItemsByOrderIdResponse.html
+  name: GetAllOrderItemsByOrderIdResponse
+  nameWithType: GetAllOrderItemsByOrderIdResponse
+  fullName: Ecommerce.Shared.Responses.OrderItem.GetAllOrderItemsByOrderIdResponse

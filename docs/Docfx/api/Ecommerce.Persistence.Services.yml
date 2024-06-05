@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Persistence.Services
+  commentId: N:Ecommerce.Persistence.Services
+  id: Ecommerce.Persistence.Services
+  children:
+  - Ecommerce.Persistence.Services.ProductImageStorageService
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Persistence.Services
+  nameWithType: Ecommerce.Persistence.Services
+  fullName: Ecommerce.Persistence.Services
+  type: Namespace
+  assemblies:
+  - Ecommerce.Persistence
+references:
+- uid: Ecommerce.Persistence.Services.ProductImageStorageService
+  commentId: T:Ecommerce.Persistence.Services.ProductImageStorageService
+  href: Ecommerce.Persistence.Services.ProductImageStorageService.html
+  name: ProductImageStorageService
+  nameWithType: ProductImageStorageService
+  fullName: Ecommerce.Persistence.Services.ProductImageStorageService

@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  commentId: N:Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  id: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  children:
+  - Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommand
+  - Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  nameWithType: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  fullName: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommand
+  commentId: T:Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommand
+  parent: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  href: Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommand.html
+  name: UpdateCategoryCommand
+  nameWithType: UpdateCategoryCommand
+  fullName: Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommand
+- uid: Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommandHandler
+  commentId: T:Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommandHandler
+  href: Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommandHandler.html
+  name: UpdateCategoryCommandHandler
+  nameWithType: UpdateCategoryCommandHandler
+  fullName: Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommandHandler
+- uid: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  commentId: N:Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  nameWithType: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  fullName: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category
+    name: Category
+    href: Ecommerce.Application.Features.Category.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Category.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+    name: UpdateCategory
+    href: Ecommerce.Application.Features.Category.Commands.UpdateCategory.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category
+    name: Category
+    href: Ecommerce.Application.Features.Category.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Category.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+    name: UpdateCategory
+    href: Ecommerce.Application.Features.Category.Commands.UpdateCategory.html

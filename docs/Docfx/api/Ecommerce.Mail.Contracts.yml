@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Mail.Contracts
+  commentId: N:Ecommerce.Mail.Contracts
+  id: Ecommerce.Mail.Contracts
+  children:
+  - Ecommerce.Mail.Contracts.IEmailService
+  - Ecommerce.Mail.Contracts.ITemplateModel
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Mail.Contracts
+  nameWithType: Ecommerce.Mail.Contracts
+  fullName: Ecommerce.Mail.Contracts
+  type: Namespace
+  assemblies:
+  - Ecommerce.Mail
+references:
+- uid: Ecommerce.Mail.Contracts.IEmailService
+  commentId: T:Ecommerce.Mail.Contracts.IEmailService
+  parent: Ecommerce.Mail.Contracts
+  href: Ecommerce.Mail.Contracts.IEmailService.html
+  name: IEmailService
+  nameWithType: IEmailService
+  fullName: Ecommerce.Mail.Contracts.IEmailService
+- uid: Ecommerce.Mail.Contracts.ITemplateModel
+  commentId: T:Ecommerce.Mail.Contracts.ITemplateModel
+  parent: Ecommerce.Mail.Contracts
+  href: Ecommerce.Mail.Contracts.ITemplateModel.html
+  name: ITemplateModel
+  nameWithType: ITemplateModel
+  fullName: Ecommerce.Mail.Contracts.ITemplateModel
+- uid: Ecommerce.Mail.Contracts
+  commentId: N:Ecommerce.Mail.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Mail.Contracts
+  nameWithType: Ecommerce.Mail.Contracts
+  fullName: Ecommerce.Mail.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Contracts
+    name: Contracts
+    href: Ecommerce.Mail.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Contracts
+    name: Contracts
+    href: Ecommerce.Mail.Contracts.html

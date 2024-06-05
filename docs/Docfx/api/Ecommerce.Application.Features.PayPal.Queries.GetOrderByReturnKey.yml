@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  commentId: N:Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  id: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  children:
+  - Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQuery
+  - Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  nameWithType: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  fullName: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQuery
+  commentId: T:Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQuery
+  parent: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  href: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQuery.html
+  name: GetOrderByReturnKeyQuery
+  nameWithType: GetOrderByReturnKeyQuery
+  fullName: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQuery
+- uid: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQueryHandler
+  commentId: T:Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQueryHandler
+  href: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQueryHandler.html
+  name: GetOrderByReturnKeyQueryHandler
+  nameWithType: GetOrderByReturnKeyQueryHandler
+  fullName: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQueryHandler
+- uid: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  commentId: N:Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  nameWithType: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  fullName: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.PayPal.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+    name: GetOrderByReturnKey
+    href: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.PayPal.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+    name: GetOrderByReturnKey
+    href: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.html

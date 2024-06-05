@@ -1,0 +1,130 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Mail.Models.Enums.EmailTemplate
+  commentId: T:Ecommerce.Mail.Models.Enums.EmailTemplate
+  id: EmailTemplate
+  parent: Ecommerce.Mail.Models.Enums
+  children:
+  - Ecommerce.Mail.Models.Enums.EmailTemplate.EmailConfirmation
+  - Ecommerce.Mail.Models.Enums.EmailTemplate.OrderReceipt
+  langs:
+  - csharp
+  - vb
+  name: EmailTemplate
+  nameWithType: EmailTemplate
+  fullName: Ecommerce.Mail.Models.Enums.EmailTemplate
+  type: Enum
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Models/Enums/EmailTemplate.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: EmailTemplate
+    path: ../../Infrastructure/Ecommerce.Mail/Models/Enums/EmailTemplate.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Models.Enums
+  summary: The email templates available
+  example: []
+  syntax:
+    content: public enum EmailTemplate
+    content.vb: Public Enum EmailTemplate
+- uid: Ecommerce.Mail.Models.Enums.EmailTemplate.EmailConfirmation
+  commentId: F:Ecommerce.Mail.Models.Enums.EmailTemplate.EmailConfirmation
+  id: EmailConfirmation
+  parent: Ecommerce.Mail.Models.Enums.EmailTemplate
+  langs:
+  - csharp
+  - vb
+  name: EmailConfirmation
+  nameWithType: EmailTemplate.EmailConfirmation
+  fullName: Ecommerce.Mail.Models.Enums.EmailTemplate.EmailConfirmation
+  type: Field
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Models/Enums/EmailTemplate.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: EmailConfirmation
+    path: ../../Infrastructure/Ecommerce.Mail/Models/Enums/EmailTemplate.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Models.Enums
+  syntax:
+    content: EmailConfirmation = 0
+    return:
+      type: Ecommerce.Mail.Models.Enums.EmailTemplate
+- uid: Ecommerce.Mail.Models.Enums.EmailTemplate.OrderReceipt
+  commentId: F:Ecommerce.Mail.Models.Enums.EmailTemplate.OrderReceipt
+  id: OrderReceipt
+  parent: Ecommerce.Mail.Models.Enums.EmailTemplate
+  langs:
+  - csharp
+  - vb
+  name: OrderReceipt
+  nameWithType: EmailTemplate.OrderReceipt
+  fullName: Ecommerce.Mail.Models.Enums.EmailTemplate.OrderReceipt
+  type: Field
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Models/Enums/EmailTemplate.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: OrderReceipt
+    path: ../../Infrastructure/Ecommerce.Mail/Models/Enums/EmailTemplate.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Models.Enums
+  syntax:
+    content: OrderReceipt = 1
+    return:
+      type: Ecommerce.Mail.Models.Enums.EmailTemplate
+references:
+- uid: Ecommerce.Mail.Models.Enums
+  commentId: N:Ecommerce.Mail.Models.Enums
+  href: Ecommerce.html
+  name: Ecommerce.Mail.Models.Enums
+  nameWithType: Ecommerce.Mail.Models.Enums
+  fullName: Ecommerce.Mail.Models.Enums
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Models
+    name: Models
+    href: Ecommerce.Mail.Models.html
+  - name: .
+  - uid: Ecommerce.Mail.Models.Enums
+    name: Enums
+    href: Ecommerce.Mail.Models.Enums.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Models
+    name: Models
+    href: Ecommerce.Mail.Models.html
+  - name: .
+  - uid: Ecommerce.Mail.Models.Enums
+    name: Enums
+    href: Ecommerce.Mail.Models.Enums.html
+- uid: Ecommerce.Mail.Models.Enums.EmailTemplate
+  commentId: T:Ecommerce.Mail.Models.Enums.EmailTemplate
+  parent: Ecommerce.Mail.Models.Enums
+  href: Ecommerce.Mail.Models.Enums.EmailTemplate.html
+  name: EmailTemplate
+  nameWithType: EmailTemplate
+  fullName: Ecommerce.Mail.Models.Enums.EmailTemplate

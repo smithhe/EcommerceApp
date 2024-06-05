@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  commentId: N:Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  id: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  children:
+  - Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery
+  - Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  nameWithType: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  fullName: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery
+  commentId: T:Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery
+  parent: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  href: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.html
+  name: GetReviewsForProductQuery
+  nameWithType: GetReviewsForProductQuery
+  fullName: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery
+- uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQueryHandler
+  commentId: T:Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQueryHandler
+  href: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQueryHandler.html
+  name: GetReviewsForProductQueryHandler
+  nameWithType: GetReviewsForProductQueryHandler
+  fullName: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQueryHandler
+- uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  commentId: N:Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  nameWithType: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  fullName: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Review.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+    name: GetReviewsForProduct
+    href: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Review.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+    name: GetReviewsForProduct
+    href: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.html

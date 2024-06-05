@@ -1,0 +1,761 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models.ExperienceContext
+  commentId: T:Ecommerce.PayPal.Models.ExperienceContext
+  id: ExperienceContext
+  parent: Ecommerce.PayPal.Models
+  children:
+  - Ecommerce.PayPal.Models.ExperienceContext.#ctor
+  - Ecommerce.PayPal.Models.ExperienceContext.BrandName
+  - Ecommerce.PayPal.Models.ExperienceContext.CancelUrl
+  - Ecommerce.PayPal.Models.ExperienceContext.LandingPage
+  - Ecommerce.PayPal.Models.ExperienceContext.Locale
+  - Ecommerce.PayPal.Models.ExperienceContext.PaymentMethodPreference
+  - Ecommerce.PayPal.Models.ExperienceContext.ReturnUrl
+  - Ecommerce.PayPal.Models.ExperienceContext.ShippingPreference
+  - Ecommerce.PayPal.Models.ExperienceContext.UserAction
+  langs:
+  - csharp
+  - vb
+  name: ExperienceContext
+  nameWithType: ExperienceContext
+  fullName: Ecommerce.PayPal.Models.ExperienceContext
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ExperienceContext
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: Represents the experience context for a PayPal wallet payment source.
+  example: []
+  syntax:
+    content: public class ExperienceContext
+    content.vb: Public Class ExperienceContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.PayPal.Models.ExperienceContext.BrandName
+  commentId: P:Ecommerce.PayPal.Models.ExperienceContext.BrandName
+  id: BrandName
+  parent: Ecommerce.PayPal.Models.ExperienceContext
+  langs:
+  - csharp
+  - vb
+  name: BrandName
+  nameWithType: ExperienceContext.BrandName
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.BrandName
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: BrandName
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The label that overrides the business name in the PayPal account on the PayPal site.
+
+    The pattern is defined by an external party and supports Unicode.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("brand_name")]
+
+      public string? BrandName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("brand_name")>
+
+      Public Property BrandName As String
+  overload: Ecommerce.PayPal.Models.ExperienceContext.BrandName*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: brand_name
+- uid: Ecommerce.PayPal.Models.ExperienceContext.ShippingPreference
+  commentId: P:Ecommerce.PayPal.Models.ExperienceContext.ShippingPreference
+  id: ShippingPreference
+  parent: Ecommerce.PayPal.Models.ExperienceContext
+  langs:
+  - csharp
+  - vb
+  name: ShippingPreference
+  nameWithType: ExperienceContext.ShippingPreference
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.ShippingPreference
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ShippingPreference
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+    startLine: 19
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The location from which the shipping address is derived.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("shipping_preference")]
+
+      public string? ShippingPreference { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("shipping_preference")>
+
+      Public Property ShippingPreference As String
+  overload: Ecommerce.PayPal.Models.ExperienceContext.ShippingPreference*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: shipping_preference
+- uid: Ecommerce.PayPal.Models.ExperienceContext.LandingPage
+  commentId: P:Ecommerce.PayPal.Models.ExperienceContext.LandingPage
+  id: LandingPage
+  parent: Ecommerce.PayPal.Models.ExperienceContext
+  langs:
+  - csharp
+  - vb
+  name: LandingPage
+  nameWithType: ExperienceContext.LandingPage
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.LandingPage
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: LandingPage
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+    startLine: 25
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The type of landing page to show on the PayPal site for customer checkout.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("landing_page")]
+
+      public string? LandingPage { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("landing_page")>
+
+      Public Property LandingPage As String
+  overload: Ecommerce.PayPal.Models.ExperienceContext.LandingPage*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: landing_page
+- uid: Ecommerce.PayPal.Models.ExperienceContext.UserAction
+  commentId: P:Ecommerce.PayPal.Models.ExperienceContext.UserAction
+  id: UserAction
+  parent: Ecommerce.PayPal.Models.ExperienceContext
+  langs:
+  - csharp
+  - vb
+  name: UserAction
+  nameWithType: ExperienceContext.UserAction
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.UserAction
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UserAction
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+    startLine: 31
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: Configures a Continue or Pay Now checkout flow.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("user_action")]
+
+      public string? UserAction { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("user_action")>
+
+      Public Property UserAction As String
+  overload: Ecommerce.PayPal.Models.ExperienceContext.UserAction*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: user_action
+- uid: Ecommerce.PayPal.Models.ExperienceContext.PaymentMethodPreference
+  commentId: P:Ecommerce.PayPal.Models.ExperienceContext.PaymentMethodPreference
+  id: PaymentMethodPreference
+  parent: Ecommerce.PayPal.Models.ExperienceContext
+  langs:
+  - csharp
+  - vb
+  name: PaymentMethodPreference
+  nameWithType: ExperienceContext.PaymentMethodPreference
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.PaymentMethodPreference
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PaymentMethodPreference
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+    startLine: 37
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The merchant-preferred payment methods.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("payment_method_preference")]
+
+      public string? PaymentMethodPreference { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("payment_method_preference")>
+
+      Public Property PaymentMethodPreference As String
+  overload: Ecommerce.PayPal.Models.ExperienceContext.PaymentMethodPreference*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: payment_method_preference
+- uid: Ecommerce.PayPal.Models.ExperienceContext.Locale
+  commentId: P:Ecommerce.PayPal.Models.ExperienceContext.Locale
+  id: Locale
+  parent: Ecommerce.PayPal.Models.ExperienceContext
+  langs:
+  - csharp
+  - vb
+  name: Locale
+  nameWithType: ExperienceContext.Locale
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.Locale
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Locale
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+    startLine: 45
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The BCP 47-formatted locale of pages that the PayPal payment experience shows.
+
+    PayPal supports a five-character code.
+
+    For example, da-DK, he-IL, id-ID, ja-JP, no-NO, pt-BR, ru-RU, sv-SE, th-TH, zh-CN, zh-HK, or zh-TW.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("locale")]
+
+      public string? Locale { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("locale")>
+
+      Public Property Locale As String
+  overload: Ecommerce.PayPal.Models.ExperienceContext.Locale*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: locale
+- uid: Ecommerce.PayPal.Models.ExperienceContext.ReturnUrl
+  commentId: P:Ecommerce.PayPal.Models.ExperienceContext.ReturnUrl
+  id: ReturnUrl
+  parent: Ecommerce.PayPal.Models.ExperienceContext
+  langs:
+  - csharp
+  - vb
+  name: ReturnUrl
+  nameWithType: ExperienceContext.ReturnUrl
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.ReturnUrl
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ReturnUrl
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+    startLine: 51
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The URL where the customer will be redirected upon approving a payment.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("return_url")]
+
+      public string? ReturnUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("return_url")>
+
+      Public Property ReturnUrl As String
+  overload: Ecommerce.PayPal.Models.ExperienceContext.ReturnUrl*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: return_url
+- uid: Ecommerce.PayPal.Models.ExperienceContext.CancelUrl
+  commentId: P:Ecommerce.PayPal.Models.ExperienceContext.CancelUrl
+  id: CancelUrl
+  parent: Ecommerce.PayPal.Models.ExperienceContext
+  langs:
+  - csharp
+  - vb
+  name: CancelUrl
+  nameWithType: ExperienceContext.CancelUrl
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.CancelUrl
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CancelUrl
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+    startLine: 57
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The URL where the customer will be redirected upon cancelling the payment approval.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("cancel_url")]
+
+      public string? CancelUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("cancel_url")>
+
+      Public Property CancelUrl As String
+  overload: Ecommerce.PayPal.Models.ExperienceContext.CancelUrl*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cancel_url
+- uid: Ecommerce.PayPal.Models.ExperienceContext.#ctor
+  commentId: M:Ecommerce.PayPal.Models.ExperienceContext.#ctor
+  id: '#ctor'
+  parent: Ecommerce.PayPal.Models.ExperienceContext
+  langs:
+  - csharp
+  - vb
+  name: ExperienceContext()
+  nameWithType: ExperienceContext.ExperienceContext()
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.ExperienceContext()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Infrastructure/Ecommerce.PayPal/Models/ExperienceContext.cs
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  syntax:
+    content: public ExperienceContext()
+    content.vb: Public Sub New()
+  overload: Ecommerce.PayPal.Models.ExperienceContext.#ctor*
+  nameWithType.vb: ExperienceContext.New()
+  fullName.vb: Ecommerce.PayPal.Models.ExperienceContext.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.PayPal.Models
+  commentId: N:Ecommerce.PayPal.Models
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Models
+  nameWithType: Ecommerce.PayPal.Models
+  fullName: Ecommerce.PayPal.Models
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.PayPal.Models.ExperienceContext.BrandName*
+  commentId: Overload:Ecommerce.PayPal.Models.ExperienceContext.BrandName
+  href: Ecommerce.PayPal.Models.ExperienceContext.html#Ecommerce_PayPal_Models_ExperienceContext_BrandName
+  name: BrandName
+  nameWithType: ExperienceContext.BrandName
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.BrandName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.PayPal.Models.ExperienceContext.ShippingPreference*
+  commentId: Overload:Ecommerce.PayPal.Models.ExperienceContext.ShippingPreference
+  href: Ecommerce.PayPal.Models.ExperienceContext.html#Ecommerce_PayPal_Models_ExperienceContext_ShippingPreference
+  name: ShippingPreference
+  nameWithType: ExperienceContext.ShippingPreference
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.ShippingPreference
+- uid: Ecommerce.PayPal.Models.ExperienceContext.LandingPage*
+  commentId: Overload:Ecommerce.PayPal.Models.ExperienceContext.LandingPage
+  href: Ecommerce.PayPal.Models.ExperienceContext.html#Ecommerce_PayPal_Models_ExperienceContext_LandingPage
+  name: LandingPage
+  nameWithType: ExperienceContext.LandingPage
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.LandingPage
+- uid: Ecommerce.PayPal.Models.ExperienceContext.UserAction*
+  commentId: Overload:Ecommerce.PayPal.Models.ExperienceContext.UserAction
+  href: Ecommerce.PayPal.Models.ExperienceContext.html#Ecommerce_PayPal_Models_ExperienceContext_UserAction
+  name: UserAction
+  nameWithType: ExperienceContext.UserAction
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.UserAction
+- uid: Ecommerce.PayPal.Models.ExperienceContext.PaymentMethodPreference*
+  commentId: Overload:Ecommerce.PayPal.Models.ExperienceContext.PaymentMethodPreference
+  href: Ecommerce.PayPal.Models.ExperienceContext.html#Ecommerce_PayPal_Models_ExperienceContext_PaymentMethodPreference
+  name: PaymentMethodPreference
+  nameWithType: ExperienceContext.PaymentMethodPreference
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.PaymentMethodPreference
+- uid: Ecommerce.PayPal.Models.ExperienceContext.Locale*
+  commentId: Overload:Ecommerce.PayPal.Models.ExperienceContext.Locale
+  href: Ecommerce.PayPal.Models.ExperienceContext.html#Ecommerce_PayPal_Models_ExperienceContext_Locale
+  name: Locale
+  nameWithType: ExperienceContext.Locale
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.Locale
+- uid: Ecommerce.PayPal.Models.ExperienceContext.ReturnUrl*
+  commentId: Overload:Ecommerce.PayPal.Models.ExperienceContext.ReturnUrl
+  href: Ecommerce.PayPal.Models.ExperienceContext.html#Ecommerce_PayPal_Models_ExperienceContext_ReturnUrl
+  name: ReturnUrl
+  nameWithType: ExperienceContext.ReturnUrl
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.ReturnUrl
+- uid: Ecommerce.PayPal.Models.ExperienceContext.CancelUrl*
+  commentId: Overload:Ecommerce.PayPal.Models.ExperienceContext.CancelUrl
+  href: Ecommerce.PayPal.Models.ExperienceContext.html#Ecommerce_PayPal_Models_ExperienceContext_CancelUrl
+  name: CancelUrl
+  nameWithType: ExperienceContext.CancelUrl
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.CancelUrl
+- uid: Ecommerce.PayPal.Models.ExperienceContext.#ctor*
+  commentId: Overload:Ecommerce.PayPal.Models.ExperienceContext.#ctor
+  isExternal: true
+  href: Ecommerce.PayPal.Models.ExperienceContext.html#Ecommerce_PayPal_Models_ExperienceContext__ctor
+  name: ExperienceContext
+  nameWithType: ExperienceContext.ExperienceContext
+  fullName: Ecommerce.PayPal.Models.ExperienceContext.ExperienceContext
+  nameWithType.vb: ExperienceContext.New
+  fullName.vb: Ecommerce.PayPal.Models.ExperienceContext.New
+  name.vb: New

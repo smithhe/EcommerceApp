@@ -1,0 +1,228 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Enums.OrderStatus
+  commentId: T:Ecommerce.Shared.Enums.OrderStatus
+  id: OrderStatus
+  parent: Ecommerce.Shared.Enums
+  children:
+  - Ecommerce.Shared.Enums.OrderStatus.Cancelled
+  - Ecommerce.Shared.Enums.OrderStatus.Completed
+  - Ecommerce.Shared.Enums.OrderStatus.Created
+  - Ecommerce.Shared.Enums.OrderStatus.Failed
+  - Ecommerce.Shared.Enums.OrderStatus.Pending
+  - Ecommerce.Shared.Enums.OrderStatus.Processing
+  langs:
+  - csharp
+  - vb
+  name: OrderStatus
+  nameWithType: OrderStatus
+  fullName: Ecommerce.Shared.Enums.OrderStatus
+  type: Enum
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Enums/OrderStatus.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: OrderStatus
+    path: ../../Core/Ecommerce.Shared/Enums/OrderStatus.cs
+    startLine: 2
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Enums
+  syntax:
+    content: public enum OrderStatus
+    content.vb: Public Enum OrderStatus
+- uid: Ecommerce.Shared.Enums.OrderStatus.Created
+  commentId: F:Ecommerce.Shared.Enums.OrderStatus.Created
+  id: Created
+  parent: Ecommerce.Shared.Enums.OrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Created
+  nameWithType: OrderStatus.Created
+  fullName: Ecommerce.Shared.Enums.OrderStatus.Created
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Enums/OrderStatus.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Created
+    path: ../../Core/Ecommerce.Shared/Enums/OrderStatus.cs
+    startLine: 4
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Enums
+  syntax:
+    content: Created = 0
+    return:
+      type: Ecommerce.Shared.Enums.OrderStatus
+- uid: Ecommerce.Shared.Enums.OrderStatus.Pending
+  commentId: F:Ecommerce.Shared.Enums.OrderStatus.Pending
+  id: Pending
+  parent: Ecommerce.Shared.Enums.OrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Pending
+  nameWithType: OrderStatus.Pending
+  fullName: Ecommerce.Shared.Enums.OrderStatus.Pending
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Enums/OrderStatus.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Pending
+    path: ../../Core/Ecommerce.Shared/Enums/OrderStatus.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Enums
+  syntax:
+    content: Pending = 1
+    return:
+      type: Ecommerce.Shared.Enums.OrderStatus
+- uid: Ecommerce.Shared.Enums.OrderStatus.Processing
+  commentId: F:Ecommerce.Shared.Enums.OrderStatus.Processing
+  id: Processing
+  parent: Ecommerce.Shared.Enums.OrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Processing
+  nameWithType: OrderStatus.Processing
+  fullName: Ecommerce.Shared.Enums.OrderStatus.Processing
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Enums/OrderStatus.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Processing
+    path: ../../Core/Ecommerce.Shared/Enums/OrderStatus.cs
+    startLine: 6
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Enums
+  syntax:
+    content: Processing = 2
+    return:
+      type: Ecommerce.Shared.Enums.OrderStatus
+- uid: Ecommerce.Shared.Enums.OrderStatus.Cancelled
+  commentId: F:Ecommerce.Shared.Enums.OrderStatus.Cancelled
+  id: Cancelled
+  parent: Ecommerce.Shared.Enums.OrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Cancelled
+  nameWithType: OrderStatus.Cancelled
+  fullName: Ecommerce.Shared.Enums.OrderStatus.Cancelled
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Enums/OrderStatus.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Cancelled
+    path: ../../Core/Ecommerce.Shared/Enums/OrderStatus.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Enums
+  syntax:
+    content: Cancelled = 3
+    return:
+      type: Ecommerce.Shared.Enums.OrderStatus
+- uid: Ecommerce.Shared.Enums.OrderStatus.Completed
+  commentId: F:Ecommerce.Shared.Enums.OrderStatus.Completed
+  id: Completed
+  parent: Ecommerce.Shared.Enums.OrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Completed
+  nameWithType: OrderStatus.Completed
+  fullName: Ecommerce.Shared.Enums.OrderStatus.Completed
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Enums/OrderStatus.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Completed
+    path: ../../Core/Ecommerce.Shared/Enums/OrderStatus.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Enums
+  syntax:
+    content: Completed = 4
+    return:
+      type: Ecommerce.Shared.Enums.OrderStatus
+- uid: Ecommerce.Shared.Enums.OrderStatus.Failed
+  commentId: F:Ecommerce.Shared.Enums.OrderStatus.Failed
+  id: Failed
+  parent: Ecommerce.Shared.Enums.OrderStatus
+  langs:
+  - csharp
+  - vb
+  name: Failed
+  nameWithType: OrderStatus.Failed
+  fullName: Ecommerce.Shared.Enums.OrderStatus.Failed
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Enums/OrderStatus.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Failed
+    path: ../../Core/Ecommerce.Shared/Enums/OrderStatus.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Enums
+  syntax:
+    content: Failed = 5
+    return:
+      type: Ecommerce.Shared.Enums.OrderStatus
+references:
+- uid: Ecommerce.Shared.Enums
+  commentId: N:Ecommerce.Shared.Enums
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Enums
+  nameWithType: Ecommerce.Shared.Enums
+  fullName: Ecommerce.Shared.Enums
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Enums
+    name: Enums
+    href: Ecommerce.Shared.Enums.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Enums
+    name: Enums
+    href: Ecommerce.Shared.Enums.html
+- uid: Ecommerce.Shared.Enums.OrderStatus
+  commentId: T:Ecommerce.Shared.Enums.OrderStatus
+  parent: Ecommerce.Shared.Enums
+  href: Ecommerce.Shared.Enums.OrderStatus.html
+  name: OrderStatus
+  nameWithType: OrderStatus
+  fullName: Ecommerce.Shared.Enums.OrderStatus

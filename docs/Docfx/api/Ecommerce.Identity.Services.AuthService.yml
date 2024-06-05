@@ -1,0 +1,1917 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Identity.Services.AuthService
+  commentId: T:Ecommerce.Identity.Services.AuthService
+  id: AuthService
+  parent: Ecommerce.Identity.Services
+  children:
+  - Ecommerce.Identity.Services.AuthService.#ctor(Microsoft.AspNetCore.Identity.UserManager{Ecommerce.Domain.Entities.EcommerceUser},Microsoft.AspNetCore.Identity.SignInManager{Ecommerce.Domain.Entities.EcommerceUser},Microsoft.Extensions.Options.IOptions{Ecommerce.Identity.Models.JwtSettings})
+  - Ecommerce.Identity.Services.AuthService.AuthenticateAsync(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  - Ecommerce.Identity.Services.AuthService.ConfirmEmailAsync(System.String,System.String)
+  - Ecommerce.Identity.Services.AuthService.CreateUserAsync(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  - Ecommerce.Identity.Services.AuthService.GetUserById(System.Guid)
+  - Ecommerce.Identity.Services.AuthService.GetUserIdByName(System.String)
+  - Ecommerce.Identity.Services.AuthService.IsValidToken(System.String)
+  - Ecommerce.Identity.Services.AuthService.LogoutAsync(System.String)
+  - Ecommerce.Identity.Services.AuthService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser,System.String,System.String)
+  - Ecommerce.Identity.Services.AuthService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser,System.String)
+  langs:
+  - csharp
+  - vb
+  name: AuthService
+  nameWithType: AuthService
+  fullName: Ecommerce.Identity.Services.AuthService
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AuthService
+    path: ../../Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+    startLine: 23
+  assemblies:
+  - Ecommerce.Identity
+  namespace: Ecommerce.Identity.Services
+  syntax:
+    content: 'public class AuthService : IAuthenticationService'
+    content.vb: Public Class AuthService Implements IAuthenticationService
+  inheritance:
+  - System.Object
+  implements:
+  - Ecommerce.Identity.Contracts.IAuthenticationService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Identity.Services.AuthService.#ctor(Microsoft.AspNetCore.Identity.UserManager{Ecommerce.Domain.Entities.EcommerceUser},Microsoft.AspNetCore.Identity.SignInManager{Ecommerce.Domain.Entities.EcommerceUser},Microsoft.Extensions.Options.IOptions{Ecommerce.Identity.Models.JwtSettings})
+  commentId: M:Ecommerce.Identity.Services.AuthService.#ctor(Microsoft.AspNetCore.Identity.UserManager{Ecommerce.Domain.Entities.EcommerceUser},Microsoft.AspNetCore.Identity.SignInManager{Ecommerce.Domain.Entities.EcommerceUser},Microsoft.Extensions.Options.IOptions{Ecommerce.Identity.Models.JwtSettings})
+  id: '#ctor(Microsoft.AspNetCore.Identity.UserManager{Ecommerce.Domain.Entities.EcommerceUser},Microsoft.AspNetCore.Identity.SignInManager{Ecommerce.Domain.Entities.EcommerceUser},Microsoft.Extensions.Options.IOptions{Ecommerce.Identity.Models.JwtSettings})'
+  parent: Ecommerce.Identity.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: AuthService(UserManager<EcommerceUser>, SignInManager<EcommerceUser>, IOptions<JwtSettings>)
+  nameWithType: AuthService.AuthService(UserManager<EcommerceUser>, SignInManager<EcommerceUser>, IOptions<JwtSettings>)
+  fullName: Ecommerce.Identity.Services.AuthService.AuthService(Microsoft.AspNetCore.Identity.UserManager<Ecommerce.Domain.Entities.EcommerceUser>, Microsoft.AspNetCore.Identity.SignInManager<Ecommerce.Domain.Entities.EcommerceUser>, Microsoft.Extensions.Options.IOptions<Ecommerce.Identity.Models.JwtSettings>)
+  type: Constructor
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: .ctor
+    path: ../../Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+    startLine: 29
+  assemblies:
+  - Ecommerce.Identity
+  namespace: Ecommerce.Identity.Services
+  syntax:
+    content: public AuthService(UserManager<EcommerceUser> userManager, SignInManager<EcommerceUser> signInManager, IOptions<JwtSettings> jwtSettings)
+    parameters:
+    - id: userManager
+      type: Microsoft.AspNetCore.Identity.UserManager{Ecommerce.Domain.Entities.EcommerceUser}
+    - id: signInManager
+      type: Microsoft.AspNetCore.Identity.SignInManager{Ecommerce.Domain.Entities.EcommerceUser}
+    - id: jwtSettings
+      type: Microsoft.Extensions.Options.IOptions{Ecommerce.Identity.Models.JwtSettings}
+    content.vb: Public Sub New(userManager As UserManager(Of EcommerceUser), signInManager As SignInManager(Of EcommerceUser), jwtSettings As IOptions(Of JwtSettings))
+  overload: Ecommerce.Identity.Services.AuthService.#ctor*
+  nameWithType.vb: AuthService.New(UserManager(Of EcommerceUser), SignInManager(Of EcommerceUser), IOptions(Of JwtSettings))
+  fullName.vb: Ecommerce.Identity.Services.AuthService.New(Microsoft.AspNetCore.Identity.UserManager(Of Ecommerce.Domain.Entities.EcommerceUser), Microsoft.AspNetCore.Identity.SignInManager(Of Ecommerce.Domain.Entities.EcommerceUser), Microsoft.Extensions.Options.IOptions(Of Ecommerce.Identity.Models.JwtSettings))
+  name.vb: New(UserManager(Of EcommerceUser), SignInManager(Of EcommerceUser), IOptions(Of JwtSettings))
+- uid: Ecommerce.Identity.Services.AuthService.AuthenticateAsync(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  commentId: M:Ecommerce.Identity.Services.AuthService.AuthenticateAsync(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  id: AuthenticateAsync(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  parent: Ecommerce.Identity.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: AuthenticateAsync(AuthenticationRequest)
+  nameWithType: AuthService.AuthenticateAsync(AuthenticationRequest)
+  fullName: Ecommerce.Identity.Services.AuthService.AuthenticateAsync(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AuthenticateAsync
+    path: ../../Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+    startLine: 45
+  assemblies:
+  - Ecommerce.Identity
+  namespace: Ecommerce.Identity.Services
+  summary: Authenticates the user requesting to be authenticated
+  example: []
+  syntax:
+    content: public Task<AuthenticateResponse> AuthenticateAsync(AuthenticationRequest request)
+    parameters:
+    - id: request
+      type: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+      description: The information of the user attempting to authenticate
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.AuthenticateResponse}
+      description: >-
+        A <xref href="Ecommerce.Shared.Security.Responses.AuthenticateResponse" data-throw-if-not-resolved="false"></xref> if the user is found and the information matches correctly
+
+        A <xref href="Ecommerce.Shared.Security.SignInResponseResult" data-throw-if-not-resolved="false"></xref> will be set appropriately based on the result of authentication
+    content.vb: Public Function AuthenticateAsync(request As AuthenticationRequest) As Task(Of AuthenticateResponse)
+  overload: Ecommerce.Identity.Services.AuthService.AuthenticateAsync*
+  implements:
+  - Ecommerce.Identity.Contracts.IAuthenticationService.AuthenticateAsync(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+- uid: Ecommerce.Identity.Services.AuthService.LogoutAsync(System.String)
+  commentId: M:Ecommerce.Identity.Services.AuthService.LogoutAsync(System.String)
+  id: LogoutAsync(System.String)
+  parent: Ecommerce.Identity.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: LogoutAsync(string)
+  nameWithType: AuthService.LogoutAsync(string)
+  fullName: Ecommerce.Identity.Services.AuthService.LogoutAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: LogoutAsync
+    path: ../../Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+    startLine: 100
+  assemblies:
+  - Ecommerce.Identity
+  namespace: Ecommerce.Identity.Services
+  summary: Logs the user out on the server
+  example: []
+  syntax:
+    content: public Task LogoutAsync(string userName)
+    parameters:
+    - id: userName
+      type: System.String
+      description: The User to log out
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function LogoutAsync(userName As String) As Task
+  overload: Ecommerce.Identity.Services.AuthService.LogoutAsync*
+  implements:
+  - Ecommerce.Identity.Contracts.IAuthenticationService.LogoutAsync(System.String)
+  nameWithType.vb: AuthService.LogoutAsync(String)
+  fullName.vb: Ecommerce.Identity.Services.AuthService.LogoutAsync(String)
+  name.vb: LogoutAsync(String)
+- uid: Ecommerce.Identity.Services.AuthService.IsValidToken(System.String)
+  commentId: M:Ecommerce.Identity.Services.AuthService.IsValidToken(System.String)
+  id: IsValidToken(System.String)
+  parent: Ecommerce.Identity.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: IsValidToken(string)
+  nameWithType: AuthService.IsValidToken(string)
+  fullName: Ecommerce.Identity.Services.AuthService.IsValidToken(string)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IsValidToken
+    path: ../../Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+    startLine: 119
+  assemblies:
+  - Ecommerce.Identity
+  namespace: Ecommerce.Identity.Services
+  summary: Validates the Jwt token provided in the request can still be used
+  example: []
+  syntax:
+    content: public Task<bool> IsValidToken(string token)
+    parameters:
+    - id: token
+      type: System.String
+      description: The Jwt token send in the request
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: >-
+        <code>True</code> if the token is still valid
+
+        <code>False</code> if the token is no longer valid
+    content.vb: Public Function IsValidToken(token As String) As Task(Of Boolean)
+  overload: Ecommerce.Identity.Services.AuthService.IsValidToken*
+  implements:
+  - Ecommerce.Identity.Contracts.IAuthenticationService.IsValidToken(System.String)
+  nameWithType.vb: AuthService.IsValidToken(String)
+  fullName.vb: Ecommerce.Identity.Services.AuthService.IsValidToken(String)
+  name.vb: IsValidToken(String)
+- uid: Ecommerce.Identity.Services.AuthService.CreateUserAsync(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  commentId: M:Ecommerce.Identity.Services.AuthService.CreateUserAsync(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  id: CreateUserAsync(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  parent: Ecommerce.Identity.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: CreateUserAsync(CreateUserRequest)
+  nameWithType: AuthService.CreateUserAsync(CreateUserRequest)
+  fullName: Ecommerce.Identity.Services.AuthService.CreateUserAsync(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateUserAsync
+    path: ../../Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+    startLine: 183
+  assemblies:
+  - Ecommerce.Identity
+  namespace: Ecommerce.Identity.Services
+  summary: Creates a new user from the info provided in the request
+  example: []
+  syntax:
+    content: public Task<CreateUserResponse> CreateUserAsync(CreateUserRequest createUserRequest)
+    parameters:
+    - id: createUserRequest
+      type: Ecommerce.Shared.Security.Requests.CreateUserRequest
+      description: The information of the new User to register
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.CreateUserResponse}
+      description: >-
+        A <xref href="Ecommerce.Shared.Security.Responses.CreateUserResponse" data-throw-if-not-resolved="false"></xref> with success <code>true</code> if the user was created;
+
+        false if the user failed to create with Errors populated with the errors that caused failure
+    content.vb: Public Function CreateUserAsync(createUserRequest As CreateUserRequest) As Task(Of CreateUserResponse)
+  overload: Ecommerce.Identity.Services.AuthService.CreateUserAsync*
+  implements:
+  - Ecommerce.Identity.Contracts.IAuthenticationService.CreateUserAsync(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+- uid: Ecommerce.Identity.Services.AuthService.ConfirmEmailAsync(System.String,System.String)
+  commentId: M:Ecommerce.Identity.Services.AuthService.ConfirmEmailAsync(System.String,System.String)
+  id: ConfirmEmailAsync(System.String,System.String)
+  parent: Ecommerce.Identity.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: ConfirmEmailAsync(string, string)
+  nameWithType: AuthService.ConfirmEmailAsync(string, string)
+  fullName: Ecommerce.Identity.Services.AuthService.ConfirmEmailAsync(string, string)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ConfirmEmailAsync
+    path: ../../Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+    startLine: 266
+  assemblies:
+  - Ecommerce.Identity
+  namespace: Ecommerce.Identity.Services
+  summary: Attempts to confirm the email of the user with the provided token
+  example: []
+  syntax:
+    content: public Task<ConfirmEmailResponse> ConfirmEmailAsync(string userId, string token)
+    parameters:
+    - id: userId
+      type: System.String
+      description: The unique identifier of the user
+    - id: token
+      type: System.String
+      description: The token used to confirm the email address
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.ConfirmEmailResponse}
+      description: >-
+        Returns <code>true</code> if the email was confirmed;
+
+        Returns <code>false</code> if the user was not found or the token was invalid
+    content.vb: Public Function ConfirmEmailAsync(userId As String, token As String) As Task(Of ConfirmEmailResponse)
+  overload: Ecommerce.Identity.Services.AuthService.ConfirmEmailAsync*
+  implements:
+  - Ecommerce.Identity.Contracts.IAuthenticationService.ConfirmEmailAsync(System.String,System.String)
+  nameWithType.vb: AuthService.ConfirmEmailAsync(String, String)
+  fullName.vb: Ecommerce.Identity.Services.AuthService.ConfirmEmailAsync(String, String)
+  name.vb: ConfirmEmailAsync(String, String)
+- uid: Ecommerce.Identity.Services.AuthService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser,System.String)
+  commentId: M:Ecommerce.Identity.Services.AuthService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser,System.String)
+  id: UpdateUser(Ecommerce.Domain.Entities.EcommerceUser,System.String)
+  parent: Ecommerce.Identity.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: UpdateUser(EcommerceUser?, string)
+  nameWithType: AuthService.UpdateUser(EcommerceUser?, string)
+  fullName: Ecommerce.Identity.Services.AuthService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser?, string)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateUser
+    path: ../../Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+    startLine: 342
+  assemblies:
+  - Ecommerce.Identity
+  namespace: Ecommerce.Identity.Services
+  summary: Updates the information for an existing <xref href="Ecommerce.Domain.Entities.EcommerceUser" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public Task<UpdateEcommerceUserResponse> UpdateUser(EcommerceUser? user, string username)
+    parameters:
+    - id: user
+      type: Ecommerce.Domain.Entities.EcommerceUser
+      description: The <xref href="Ecommerce.Domain.Entities.EcommerceUser" data-throw-if-not-resolved="false"></xref> to update with
+    - id: username
+      type: System.String
+      description: The username to update the <xref href="Ecommerce.Domain.Entities.EcommerceUser" data-throw-if-not-resolved="false"></xref> with
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse}
+      description: >-
+        A <xref href="Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse" data-throw-if-not-resolved="false"></xref> with success <code>true</code> if the user was updated and has a new access token;
+
+        false if the user failed to update with ValidationErrors populated with the errors that caused failure
+    content.vb: Public Function UpdateUser(user As EcommerceUser, username As String) As Task(Of UpdateEcommerceUserResponse)
+  overload: Ecommerce.Identity.Services.AuthService.UpdateUser*
+  implements:
+  - Ecommerce.Identity.Contracts.IAuthenticationService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser,System.String)
+  nameWithType.vb: AuthService.UpdateUser(EcommerceUser, String)
+  fullName.vb: Ecommerce.Identity.Services.AuthService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser, String)
+  name.vb: UpdateUser(EcommerceUser, String)
+- uid: Ecommerce.Identity.Services.AuthService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser,System.String,System.String)
+  commentId: M:Ecommerce.Identity.Services.AuthService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser,System.String,System.String)
+  id: UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser,System.String,System.String)
+  parent: Ecommerce.Identity.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: UpdatePassword(EcommerceUser?, string, string)
+  nameWithType: AuthService.UpdatePassword(EcommerceUser?, string, string)
+  fullName: Ecommerce.Identity.Services.AuthService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser?, string, string)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdatePassword
+    path: ../../Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+    startLine: 430
+  assemblies:
+  - Ecommerce.Identity
+  namespace: Ecommerce.Identity.Services
+  summary: Updates the password for an existing <xref href="Ecommerce.Domain.Entities.EcommerceUser" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public Task<UpdatePasswordResponse> UpdatePassword(EcommerceUser? user, string currentPassword, string newPassword)
+    parameters:
+    - id: user
+      type: Ecommerce.Domain.Entities.EcommerceUser
+      description: The <xref href="Ecommerce.Domain.Entities.EcommerceUser" data-throw-if-not-resolved="false"></xref> to update the password for
+    - id: currentPassword
+      type: System.String
+      description: The current password of the User
+    - id: newPassword
+      type: System.String
+      description: The new password to update to
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdatePasswordResponse}
+      description: >-
+        A <xref href="Ecommerce.Shared.Security.Responses.UpdatePasswordResponse" data-throw-if-not-resolved="false"></xref> with success <code>true</code> if the password was updated;
+
+        false if the password failed to update with ValidationErrors populated with the errors that caused failure
+    content.vb: Public Function UpdatePassword(user As EcommerceUser, currentPassword As String, newPassword As String) As Task(Of UpdatePasswordResponse)
+  overload: Ecommerce.Identity.Services.AuthService.UpdatePassword*
+  implements:
+  - Ecommerce.Identity.Contracts.IAuthenticationService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser,System.String,System.String)
+  nameWithType.vb: AuthService.UpdatePassword(EcommerceUser, String, String)
+  fullName.vb: Ecommerce.Identity.Services.AuthService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser, String, String)
+  name.vb: UpdatePassword(EcommerceUser, String, String)
+- uid: Ecommerce.Identity.Services.AuthService.GetUserById(System.Guid)
+  commentId: M:Ecommerce.Identity.Services.AuthService.GetUserById(System.Guid)
+  id: GetUserById(System.Guid)
+  parent: Ecommerce.Identity.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: GetUserById(Guid)
+  nameWithType: AuthService.GetUserById(Guid)
+  fullName: Ecommerce.Identity.Services.AuthService.GetUserById(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserById
+    path: ../../Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+    startLine: 489
+  assemblies:
+  - Ecommerce.Identity
+  namespace: Ecommerce.Identity.Services
+  summary: Retrieves a <xref href="Ecommerce.Domain.Entities.EcommerceUser" data-throw-if-not-resolved="false"></xref> if any exist
+  example: []
+  syntax:
+    content: public Task<EcommerceUser?> GetUserById(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+      description: The unique identifier of the User to find
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Domain.Entities.EcommerceUser}
+      description: >-
+        A <xref href="Ecommerce.Domain.Entities.EcommerceUser" data-throw-if-not-resolved="false"></xref>;
+
+        <code>null</code> if no User is found
+    content.vb: Public Function GetUserById(id As Guid) As Task(Of EcommerceUser)
+  overload: Ecommerce.Identity.Services.AuthService.GetUserById*
+  implements:
+  - Ecommerce.Identity.Contracts.IAuthenticationService.GetUserById(System.Guid)
+- uid: Ecommerce.Identity.Services.AuthService.GetUserIdByName(System.String)
+  commentId: M:Ecommerce.Identity.Services.AuthService.GetUserIdByName(System.String)
+  id: GetUserIdByName(System.String)
+  parent: Ecommerce.Identity.Services.AuthService
+  langs:
+  - csharp
+  - vb
+  name: GetUserIdByName(string)
+  nameWithType: AuthService.GetUserIdByName(string)
+  fullName: Ecommerce.Identity.Services.AuthService.GetUserIdByName(string)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserIdByName
+    path: ../../Infrastructure/Ecommerce.Identity/Services/AuthService.cs
+    startLine: 502
+  assemblies:
+  - Ecommerce.Identity
+  namespace: Ecommerce.Identity.Services
+  summary: Retrieves the unique identifier of the <xref href="Ecommerce.Domain.Entities.EcommerceUser" data-throw-if-not-resolved="false"></xref> if it exists
+  example: []
+  syntax:
+    content: public Task<Guid?> GetUserIdByName(string userName)
+    parameters:
+    - id: userName
+      type: System.String
+      description: The username of the User
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Guid}}
+      description: >-
+        The unique identifier of the <xref href="Ecommerce.Domain.Entities.EcommerceUser" data-throw-if-not-resolved="false"></xref>;
+
+        null if no User exists with the provided username
+    content.vb: Public Function GetUserIdByName(userName As String) As Task(Of Guid?)
+  overload: Ecommerce.Identity.Services.AuthService.GetUserIdByName*
+  implements:
+  - Ecommerce.Identity.Contracts.IAuthenticationService.GetUserIdByName(System.String)
+  nameWithType.vb: AuthService.GetUserIdByName(String)
+  fullName.vb: Ecommerce.Identity.Services.AuthService.GetUserIdByName(String)
+  name.vb: GetUserIdByName(String)
+references:
+- uid: Ecommerce.Identity.Services
+  commentId: N:Ecommerce.Identity.Services
+  href: Ecommerce.html
+  name: Ecommerce.Identity.Services
+  nameWithType: Ecommerce.Identity.Services
+  fullName: Ecommerce.Identity.Services
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Identity
+    name: Identity
+    href: Ecommerce.Identity.html
+  - name: .
+  - uid: Ecommerce.Identity.Services
+    name: Services
+    href: Ecommerce.Identity.Services.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Identity
+    name: Identity
+    href: Ecommerce.Identity.html
+  - name: .
+  - uid: Ecommerce.Identity.Services
+    name: Services
+    href: Ecommerce.Identity.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService
+  commentId: T:Ecommerce.Identity.Contracts.IAuthenticationService
+  parent: Ecommerce.Identity.Contracts
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html
+  name: IAuthenticationService
+  nameWithType: IAuthenticationService
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Identity.Contracts
+  commentId: N:Ecommerce.Identity.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Identity.Contracts
+  nameWithType: Ecommerce.Identity.Contracts
+  fullName: Ecommerce.Identity.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Identity
+    name: Identity
+    href: Ecommerce.Identity.html
+  - name: .
+  - uid: Ecommerce.Identity.Contracts
+    name: Contracts
+    href: Ecommerce.Identity.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Identity
+    name: Identity
+    href: Ecommerce.Identity.html
+  - name: .
+  - uid: Ecommerce.Identity.Contracts
+    name: Contracts
+    href: Ecommerce.Identity.Contracts.html
+- uid: Ecommerce.Identity.Services.AuthService.#ctor*
+  commentId: Overload:Ecommerce.Identity.Services.AuthService.#ctor
+  href: Ecommerce.Identity.Services.AuthService.html#Ecommerce_Identity_Services_AuthService__ctor_Microsoft_AspNetCore_Identity_UserManager_Ecommerce_Domain_Entities_EcommerceUser__Microsoft_AspNetCore_Identity_SignInManager_Ecommerce_Domain_Entities_EcommerceUser__Microsoft_Extensions_Options_IOptions_Ecommerce_Identity_Models_JwtSettings__
+  name: AuthService
+  nameWithType: AuthService.AuthService
+  fullName: Ecommerce.Identity.Services.AuthService.AuthService
+  nameWithType.vb: AuthService.New
+  fullName.vb: Ecommerce.Identity.Services.AuthService.New
+  name.vb: New
+- uid: Microsoft.AspNetCore.Identity.UserManager{Ecommerce.Domain.Entities.EcommerceUser}
+  commentId: T:Microsoft.AspNetCore.Identity.UserManager{Ecommerce.Domain.Entities.EcommerceUser}
+  parent: Microsoft.AspNetCore.Identity
+  definition: Microsoft.AspNetCore.Identity.UserManager`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  name: UserManager<EcommerceUser>
+  nameWithType: UserManager<EcommerceUser>
+  fullName: Microsoft.AspNetCore.Identity.UserManager<Ecommerce.Domain.Entities.EcommerceUser>
+  nameWithType.vb: UserManager(Of EcommerceUser)
+  fullName.vb: Microsoft.AspNetCore.Identity.UserManager(Of Ecommerce.Domain.Entities.EcommerceUser)
+  name.vb: UserManager(Of EcommerceUser)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Identity.UserManager`1
+    name: UserManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  - name: <
+  - uid: Ecommerce.Domain.Entities.EcommerceUser
+    name: EcommerceUser
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/EcommerceUser.cs
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Identity.UserManager`1
+    name: UserManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Domain.Entities.EcommerceUser
+    name: EcommerceUser
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/EcommerceUser.cs
+  - name: )
+- uid: Microsoft.AspNetCore.Identity.SignInManager{Ecommerce.Domain.Entities.EcommerceUser}
+  commentId: T:Microsoft.AspNetCore.Identity.SignInManager{Ecommerce.Domain.Entities.EcommerceUser}
+  parent: Microsoft.AspNetCore.Identity
+  definition: Microsoft.AspNetCore.Identity.SignInManager`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.signinmanager-1
+  name: SignInManager<EcommerceUser>
+  nameWithType: SignInManager<EcommerceUser>
+  fullName: Microsoft.AspNetCore.Identity.SignInManager<Ecommerce.Domain.Entities.EcommerceUser>
+  nameWithType.vb: SignInManager(Of EcommerceUser)
+  fullName.vb: Microsoft.AspNetCore.Identity.SignInManager(Of Ecommerce.Domain.Entities.EcommerceUser)
+  name.vb: SignInManager(Of EcommerceUser)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Identity.SignInManager`1
+    name: SignInManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.signinmanager-1
+  - name: <
+  - uid: Ecommerce.Domain.Entities.EcommerceUser
+    name: EcommerceUser
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/EcommerceUser.cs
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Identity.SignInManager`1
+    name: SignInManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.signinmanager-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Domain.Entities.EcommerceUser
+    name: EcommerceUser
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/EcommerceUser.cs
+  - name: )
+- uid: Microsoft.Extensions.Options.IOptions{Ecommerce.Identity.Models.JwtSettings}
+  commentId: T:Microsoft.Extensions.Options.IOptions{Ecommerce.Identity.Models.JwtSettings}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<JwtSettings>
+  nameWithType: IOptions<JwtSettings>
+  fullName: Microsoft.Extensions.Options.IOptions<Ecommerce.Identity.Models.JwtSettings>
+  nameWithType.vb: IOptions(Of JwtSettings)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of Ecommerce.Identity.Models.JwtSettings)
+  name.vb: IOptions(Of JwtSettings)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - uid: Ecommerce.Identity.Models.JwtSettings
+    name: JwtSettings
+    href: Ecommerce.Identity.Models.JwtSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Identity.Models.JwtSettings
+    name: JwtSettings
+    href: Ecommerce.Identity.Models.JwtSettings.html
+  - name: )
+- uid: Microsoft.AspNetCore.Identity.UserManager`1
+  commentId: T:Microsoft.AspNetCore.Identity.UserManager`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  name: UserManager<TUser>
+  nameWithType: UserManager<TUser>
+  fullName: Microsoft.AspNetCore.Identity.UserManager<TUser>
+  nameWithType.vb: UserManager(Of TUser)
+  fullName.vb: Microsoft.AspNetCore.Identity.UserManager(Of TUser)
+  name.vb: UserManager(Of TUser)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Identity.UserManager`1
+    name: UserManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  - name: <
+  - name: TUser
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Identity.UserManager`1
+    name: UserManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUser
+  - name: )
+- uid: Microsoft.AspNetCore.Identity
+  commentId: N:Microsoft.AspNetCore.Identity
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Identity
+  nameWithType: Microsoft.AspNetCore.Identity
+  fullName: Microsoft.AspNetCore.Identity
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Identity
+    name: Identity
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Identity
+    name: Identity
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity
+- uid: Microsoft.AspNetCore.Identity.SignInManager`1
+  commentId: T:Microsoft.AspNetCore.Identity.SignInManager`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.signinmanager-1
+  name: SignInManager<TUser>
+  nameWithType: SignInManager<TUser>
+  fullName: Microsoft.AspNetCore.Identity.SignInManager<TUser>
+  nameWithType.vb: SignInManager(Of TUser)
+  fullName.vb: Microsoft.AspNetCore.Identity.SignInManager(Of TUser)
+  name.vb: SignInManager(Of TUser)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Identity.SignInManager`1
+    name: SignInManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.signinmanager-1
+  - name: <
+  - name: TUser
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Identity.SignInManager`1
+    name: SignInManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.signinmanager-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUser
+  - name: )
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - name: TOptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOptions
+  - name: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+- uid: Ecommerce.Shared.Security.Responses.AuthenticateResponse
+  commentId: T:Ecommerce.Shared.Security.Responses.AuthenticateResponse
+  href: Ecommerce.Shared.Security.Responses.AuthenticateResponse.html
+  name: AuthenticateResponse
+  nameWithType: AuthenticateResponse
+  fullName: Ecommerce.Shared.Security.Responses.AuthenticateResponse
+- uid: Ecommerce.Shared.Security.SignInResponseResult
+  commentId: T:Ecommerce.Shared.Security.SignInResponseResult
+  parent: Ecommerce.Shared.Security
+  href: Ecommerce.Shared.Security.SignInResponseResult.html
+  name: SignInResponseResult
+  nameWithType: SignInResponseResult
+  fullName: Ecommerce.Shared.Security.SignInResponseResult
+- uid: Ecommerce.Identity.Services.AuthService.AuthenticateAsync*
+  commentId: Overload:Ecommerce.Identity.Services.AuthService.AuthenticateAsync
+  href: Ecommerce.Identity.Services.AuthService.html#Ecommerce_Identity_Services_AuthService_AuthenticateAsync_Ecommerce_Shared_Security_Requests_AuthenticationRequest_
+  name: AuthenticateAsync
+  nameWithType: AuthService.AuthenticateAsync
+  fullName: Ecommerce.Identity.Services.AuthService.AuthenticateAsync
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService.AuthenticateAsync(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  commentId: M:Ecommerce.Identity.Contracts.IAuthenticationService.AuthenticateAsync(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  parent: Ecommerce.Identity.Contracts.IAuthenticationService
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_AuthenticateAsync_Ecommerce_Shared_Security_Requests_AuthenticationRequest_
+  name: AuthenticateAsync(AuthenticationRequest)
+  nameWithType: IAuthenticationService.AuthenticateAsync(AuthenticationRequest)
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService.AuthenticateAsync(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  spec.csharp:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.AuthenticateAsync(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+    name: AuthenticateAsync
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_AuthenticateAsync_Ecommerce_Shared_Security_Requests_AuthenticationRequest_
+  - name: (
+  - uid: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+    name: AuthenticationRequest
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Requests/AuthenticationRequest.cs
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.AuthenticateAsync(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+    name: AuthenticateAsync
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_AuthenticateAsync_Ecommerce_Shared_Security_Requests_AuthenticationRequest_
+  - name: (
+  - uid: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+    name: AuthenticationRequest
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Requests/AuthenticationRequest.cs
+  - name: )
+- uid: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.AuthenticationRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.AuthenticationRequest.html
+  name: AuthenticationRequest
+  nameWithType: AuthenticationRequest
+  fullName: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.AuthenticateResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.AuthenticateResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AuthenticateResponse>
+  nameWithType: Task<AuthenticateResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Security.Responses.AuthenticateResponse>
+  nameWithType.vb: Task(Of AuthenticateResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Security.Responses.AuthenticateResponse)
+  name.vb: Task(Of AuthenticateResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.AuthenticateResponse
+    name: AuthenticateResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/AuthenticateResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.AuthenticateResponse
+    name: AuthenticateResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/AuthenticateResponse.cs
+  - name: )
+- uid: Ecommerce.Shared.Security
+  commentId: N:Ecommerce.Shared.Security
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Security
+  nameWithType: Ecommerce.Shared.Security
+  fullName: Ecommerce.Shared.Security
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+- uid: Ecommerce.Shared.Security.Requests
+  commentId: N:Ecommerce.Shared.Security.Requests
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Security.Requests
+  nameWithType: Ecommerce.Shared.Security.Requests
+  fullName: Ecommerce.Shared.Security.Requests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  - name: .
+  - uid: Ecommerce.Shared.Security.Requests
+    name: Requests
+    href: Ecommerce.Shared.Security.Requests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  - name: .
+  - uid: Ecommerce.Shared.Security.Requests
+    name: Requests
+    href: Ecommerce.Shared.Security.Requests.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.Identity.Services.AuthService.LogoutAsync*
+  commentId: Overload:Ecommerce.Identity.Services.AuthService.LogoutAsync
+  href: Ecommerce.Identity.Services.AuthService.html#Ecommerce_Identity_Services_AuthService_LogoutAsync_System_String_
+  name: LogoutAsync
+  nameWithType: AuthService.LogoutAsync
+  fullName: Ecommerce.Identity.Services.AuthService.LogoutAsync
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService.LogoutAsync(System.String)
+  commentId: M:Ecommerce.Identity.Contracts.IAuthenticationService.LogoutAsync(System.String)
+  parent: Ecommerce.Identity.Contracts.IAuthenticationService
+  isExternal: true
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_LogoutAsync_System_String_
+  name: LogoutAsync(string)
+  nameWithType: IAuthenticationService.LogoutAsync(string)
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService.LogoutAsync(string)
+  nameWithType.vb: IAuthenticationService.LogoutAsync(String)
+  fullName.vb: Ecommerce.Identity.Contracts.IAuthenticationService.LogoutAsync(String)
+  name.vb: LogoutAsync(String)
+  spec.csharp:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.LogoutAsync(System.String)
+    name: LogoutAsync
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_LogoutAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.LogoutAsync(System.String)
+    name: LogoutAsync
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_LogoutAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Ecommerce.Identity.Services.AuthService.IsValidToken*
+  commentId: Overload:Ecommerce.Identity.Services.AuthService.IsValidToken
+  href: Ecommerce.Identity.Services.AuthService.html#Ecommerce_Identity_Services_AuthService_IsValidToken_System_String_
+  name: IsValidToken
+  nameWithType: AuthService.IsValidToken
+  fullName: Ecommerce.Identity.Services.AuthService.IsValidToken
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService.IsValidToken(System.String)
+  commentId: M:Ecommerce.Identity.Contracts.IAuthenticationService.IsValidToken(System.String)
+  parent: Ecommerce.Identity.Contracts.IAuthenticationService
+  isExternal: true
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_IsValidToken_System_String_
+  name: IsValidToken(string)
+  nameWithType: IAuthenticationService.IsValidToken(string)
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService.IsValidToken(string)
+  nameWithType.vb: IAuthenticationService.IsValidToken(String)
+  fullName.vb: Ecommerce.Identity.Contracts.IAuthenticationService.IsValidToken(String)
+  name.vb: IsValidToken(String)
+  spec.csharp:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.IsValidToken(System.String)
+    name: IsValidToken
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_IsValidToken_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.IsValidToken(System.String)
+    name: IsValidToken
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_IsValidToken_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+  commentId: T:Ecommerce.Shared.Security.Responses.CreateUserResponse
+  href: Ecommerce.Shared.Security.Responses.CreateUserResponse.html
+  name: CreateUserResponse
+  nameWithType: CreateUserResponse
+  fullName: Ecommerce.Shared.Security.Responses.CreateUserResponse
+- uid: Ecommerce.Identity.Services.AuthService.CreateUserAsync*
+  commentId: Overload:Ecommerce.Identity.Services.AuthService.CreateUserAsync
+  href: Ecommerce.Identity.Services.AuthService.html#Ecommerce_Identity_Services_AuthService_CreateUserAsync_Ecommerce_Shared_Security_Requests_CreateUserRequest_
+  name: CreateUserAsync
+  nameWithType: AuthService.CreateUserAsync
+  fullName: Ecommerce.Identity.Services.AuthService.CreateUserAsync
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService.CreateUserAsync(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  commentId: M:Ecommerce.Identity.Contracts.IAuthenticationService.CreateUserAsync(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  parent: Ecommerce.Identity.Contracts.IAuthenticationService
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_CreateUserAsync_Ecommerce_Shared_Security_Requests_CreateUserRequest_
+  name: CreateUserAsync(CreateUserRequest)
+  nameWithType: IAuthenticationService.CreateUserAsync(CreateUserRequest)
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService.CreateUserAsync(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  spec.csharp:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.CreateUserAsync(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+    name: CreateUserAsync
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_CreateUserAsync_Ecommerce_Shared_Security_Requests_CreateUserRequest_
+  - name: (
+  - uid: Ecommerce.Shared.Security.Requests.CreateUserRequest
+    name: CreateUserRequest
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Requests/CreateUserRequest.cs
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.CreateUserAsync(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+    name: CreateUserAsync
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_CreateUserAsync_Ecommerce_Shared_Security_Requests_CreateUserRequest_
+  - name: (
+  - uid: Ecommerce.Shared.Security.Requests.CreateUserRequest
+    name: CreateUserRequest
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Requests/CreateUserRequest.cs
+  - name: )
+- uid: Ecommerce.Shared.Security.Requests.CreateUserRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.CreateUserRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.CreateUserRequest.html
+  name: CreateUserRequest
+  nameWithType: CreateUserRequest
+  fullName: Ecommerce.Shared.Security.Requests.CreateUserRequest
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.CreateUserResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.CreateUserResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CreateUserResponse>
+  nameWithType: Task<CreateUserResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Security.Responses.CreateUserResponse>
+  nameWithType.vb: Task(Of CreateUserResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Security.Responses.CreateUserResponse)
+  name.vb: Task(Of CreateUserResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+    name: CreateUserResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/CreateUserResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+    name: CreateUserResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/CreateUserResponse.cs
+  - name: )
+- uid: Ecommerce.Identity.Services.AuthService.ConfirmEmailAsync*
+  commentId: Overload:Ecommerce.Identity.Services.AuthService.ConfirmEmailAsync
+  href: Ecommerce.Identity.Services.AuthService.html#Ecommerce_Identity_Services_AuthService_ConfirmEmailAsync_System_String_System_String_
+  name: ConfirmEmailAsync
+  nameWithType: AuthService.ConfirmEmailAsync
+  fullName: Ecommerce.Identity.Services.AuthService.ConfirmEmailAsync
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService.ConfirmEmailAsync(System.String,System.String)
+  commentId: M:Ecommerce.Identity.Contracts.IAuthenticationService.ConfirmEmailAsync(System.String,System.String)
+  parent: Ecommerce.Identity.Contracts.IAuthenticationService
+  isExternal: true
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_ConfirmEmailAsync_System_String_System_String_
+  name: ConfirmEmailAsync(string, string)
+  nameWithType: IAuthenticationService.ConfirmEmailAsync(string, string)
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService.ConfirmEmailAsync(string, string)
+  nameWithType.vb: IAuthenticationService.ConfirmEmailAsync(String, String)
+  fullName.vb: Ecommerce.Identity.Contracts.IAuthenticationService.ConfirmEmailAsync(String, String)
+  name.vb: ConfirmEmailAsync(String, String)
+  spec.csharp:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.ConfirmEmailAsync(System.String,System.String)
+    name: ConfirmEmailAsync
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_ConfirmEmailAsync_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.ConfirmEmailAsync(System.String,System.String)
+    name: ConfirmEmailAsync
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_ConfirmEmailAsync_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.ConfirmEmailResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.ConfirmEmailResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ConfirmEmailResponse>
+  nameWithType: Task<ConfirmEmailResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Security.Responses.ConfirmEmailResponse>
+  nameWithType.vb: Task(Of ConfirmEmailResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Security.Responses.ConfirmEmailResponse)
+  name.vb: Task(Of ConfirmEmailResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse
+    name: ConfirmEmailResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/ConfirmEmailResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse
+    name: ConfirmEmailResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/ConfirmEmailResponse.cs
+  - name: )
+- uid: Ecommerce.Domain.Entities.EcommerceUser
+  commentId: T:Ecommerce.Domain.Entities.EcommerceUser
+  parent: Ecommerce.Domain.Entities
+  href: Ecommerce.Domain.Entities.EcommerceUser.html
+  name: EcommerceUser
+  nameWithType: EcommerceUser
+  fullName: Ecommerce.Domain.Entities.EcommerceUser
+- uid: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+  commentId: T:Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+  href: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse.html
+  name: UpdateEcommerceUserResponse
+  nameWithType: UpdateEcommerceUserResponse
+  fullName: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+- uid: Ecommerce.Identity.Services.AuthService.UpdateUser*
+  commentId: Overload:Ecommerce.Identity.Services.AuthService.UpdateUser
+  href: Ecommerce.Identity.Services.AuthService.html#Ecommerce_Identity_Services_AuthService_UpdateUser_Ecommerce_Domain_Entities_EcommerceUser_System_String_
+  name: UpdateUser
+  nameWithType: AuthService.UpdateUser
+  fullName: Ecommerce.Identity.Services.AuthService.UpdateUser
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser,System.String)
+  commentId: M:Ecommerce.Identity.Contracts.IAuthenticationService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser,System.String)
+  parent: Ecommerce.Identity.Contracts.IAuthenticationService
+  isExternal: true
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_UpdateUser_Ecommerce_Domain_Entities_EcommerceUser_System_String_
+  name: UpdateUser(EcommerceUser, string)
+  nameWithType: IAuthenticationService.UpdateUser(EcommerceUser, string)
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser, string)
+  nameWithType.vb: IAuthenticationService.UpdateUser(EcommerceUser, String)
+  fullName.vb: Ecommerce.Identity.Contracts.IAuthenticationService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser, String)
+  name.vb: UpdateUser(EcommerceUser, String)
+  spec.csharp:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser,System.String)
+    name: UpdateUser
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_UpdateUser_Ecommerce_Domain_Entities_EcommerceUser_System_String_
+  - name: (
+  - uid: Ecommerce.Domain.Entities.EcommerceUser
+    name: EcommerceUser
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/EcommerceUser.cs
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.UpdateUser(Ecommerce.Domain.Entities.EcommerceUser,System.String)
+    name: UpdateUser
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_UpdateUser_Ecommerce_Domain_Entities_EcommerceUser_System_String_
+  - name: (
+  - uid: Ecommerce.Domain.Entities.EcommerceUser
+    name: EcommerceUser
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/EcommerceUser.cs
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UpdateEcommerceUserResponse>
+  nameWithType: Task<UpdateEcommerceUserResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse>
+  nameWithType.vb: Task(Of UpdateEcommerceUserResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse)
+  name.vb: Task(Of UpdateEcommerceUserResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+    name: UpdateEcommerceUserResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/UpdateEcommerceUserResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+    name: UpdateEcommerceUserResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/UpdateEcommerceUserResponse.cs
+  - name: )
+- uid: Ecommerce.Domain.Entities
+  commentId: N:Ecommerce.Domain.Entities
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Entities
+  nameWithType: Ecommerce.Domain.Entities
+  fullName: Ecommerce.Domain.Entities
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Entities
+    name: Entities
+    href: Ecommerce.Domain.Entities.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Entities
+    name: Entities
+    href: Ecommerce.Domain.Entities.html
+- uid: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+  commentId: T:Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+  href: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse.html
+  name: UpdatePasswordResponse
+  nameWithType: UpdatePasswordResponse
+  fullName: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+- uid: Ecommerce.Identity.Services.AuthService.UpdatePassword*
+  commentId: Overload:Ecommerce.Identity.Services.AuthService.UpdatePassword
+  href: Ecommerce.Identity.Services.AuthService.html#Ecommerce_Identity_Services_AuthService_UpdatePassword_Ecommerce_Domain_Entities_EcommerceUser_System_String_System_String_
+  name: UpdatePassword
+  nameWithType: AuthService.UpdatePassword
+  fullName: Ecommerce.Identity.Services.AuthService.UpdatePassword
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser,System.String,System.String)
+  commentId: M:Ecommerce.Identity.Contracts.IAuthenticationService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser,System.String,System.String)
+  parent: Ecommerce.Identity.Contracts.IAuthenticationService
+  isExternal: true
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_UpdatePassword_Ecommerce_Domain_Entities_EcommerceUser_System_String_System_String_
+  name: UpdatePassword(EcommerceUser, string, string)
+  nameWithType: IAuthenticationService.UpdatePassword(EcommerceUser, string, string)
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser, string, string)
+  nameWithType.vb: IAuthenticationService.UpdatePassword(EcommerceUser, String, String)
+  fullName.vb: Ecommerce.Identity.Contracts.IAuthenticationService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser, String, String)
+  name.vb: UpdatePassword(EcommerceUser, String, String)
+  spec.csharp:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser,System.String,System.String)
+    name: UpdatePassword
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_UpdatePassword_Ecommerce_Domain_Entities_EcommerceUser_System_String_System_String_
+  - name: (
+  - uid: Ecommerce.Domain.Entities.EcommerceUser
+    name: EcommerceUser
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/EcommerceUser.cs
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.UpdatePassword(Ecommerce.Domain.Entities.EcommerceUser,System.String,System.String)
+    name: UpdatePassword
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_UpdatePassword_Ecommerce_Domain_Entities_EcommerceUser_System_String_System_String_
+  - name: (
+  - uid: Ecommerce.Domain.Entities.EcommerceUser
+    name: EcommerceUser
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/EcommerceUser.cs
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdatePasswordResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.UpdatePasswordResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UpdatePasswordResponse>
+  nameWithType: Task<UpdatePasswordResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Security.Responses.UpdatePasswordResponse>
+  nameWithType.vb: Task(Of UpdatePasswordResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Security.Responses.UpdatePasswordResponse)
+  name.vb: Task(Of UpdatePasswordResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+    name: UpdatePasswordResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/UpdatePasswordResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+    name: UpdatePasswordResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/UpdatePasswordResponse.cs
+  - name: )
+- uid: Ecommerce.Identity.Services.AuthService.GetUserById*
+  commentId: Overload:Ecommerce.Identity.Services.AuthService.GetUserById
+  href: Ecommerce.Identity.Services.AuthService.html#Ecommerce_Identity_Services_AuthService_GetUserById_System_Guid_
+  name: GetUserById
+  nameWithType: AuthService.GetUserById
+  fullName: Ecommerce.Identity.Services.AuthService.GetUserById
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService.GetUserById(System.Guid)
+  commentId: M:Ecommerce.Identity.Contracts.IAuthenticationService.GetUserById(System.Guid)
+  parent: Ecommerce.Identity.Contracts.IAuthenticationService
+  isExternal: true
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_GetUserById_System_Guid_
+  name: GetUserById(Guid)
+  nameWithType: IAuthenticationService.GetUserById(Guid)
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService.GetUserById(System.Guid)
+  spec.csharp:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.GetUserById(System.Guid)
+    name: GetUserById
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_GetUserById_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.GetUserById(System.Guid)
+    name: GetUserById
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_GetUserById_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Threading.Tasks.Task{Ecommerce.Domain.Entities.EcommerceUser}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Domain.Entities.EcommerceUser}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EcommerceUser>
+  nameWithType: Task<EcommerceUser>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Domain.Entities.EcommerceUser>
+  nameWithType.vb: Task(Of EcommerceUser)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Domain.Entities.EcommerceUser)
+  name.vb: Task(Of EcommerceUser)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Domain.Entities.EcommerceUser
+    name: EcommerceUser
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/EcommerceUser.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Domain.Entities.EcommerceUser
+    name: EcommerceUser
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/EcommerceUser.cs
+  - name: )
+- uid: Ecommerce.Identity.Services.AuthService.GetUserIdByName*
+  commentId: Overload:Ecommerce.Identity.Services.AuthService.GetUserIdByName
+  href: Ecommerce.Identity.Services.AuthService.html#Ecommerce_Identity_Services_AuthService_GetUserIdByName_System_String_
+  name: GetUserIdByName
+  nameWithType: AuthService.GetUserIdByName
+  fullName: Ecommerce.Identity.Services.AuthService.GetUserIdByName
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService.GetUserIdByName(System.String)
+  commentId: M:Ecommerce.Identity.Contracts.IAuthenticationService.GetUserIdByName(System.String)
+  parent: Ecommerce.Identity.Contracts.IAuthenticationService
+  isExternal: true
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_GetUserIdByName_System_String_
+  name: GetUserIdByName(string)
+  nameWithType: IAuthenticationService.GetUserIdByName(string)
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService.GetUserIdByName(string)
+  nameWithType.vb: IAuthenticationService.GetUserIdByName(String)
+  fullName.vb: Ecommerce.Identity.Contracts.IAuthenticationService.GetUserIdByName(String)
+  name.vb: GetUserIdByName(String)
+  spec.csharp:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.GetUserIdByName(System.String)
+    name: GetUserIdByName
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_GetUserIdByName_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService.GetUserIdByName(System.String)
+    name: GetUserIdByName
+    href: Ecommerce.Identity.Contracts.IAuthenticationService.html#Ecommerce_Identity_Contracts_IAuthenticationService_GetUserIdByName_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Nullable{System.Guid}}
+  commentId: T:System.Threading.Tasks.Task{System.Nullable{System.Guid}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Guid?>
+  nameWithType: Task<Guid?>
+  fullName: System.Threading.Tasks.Task<System.Guid?>
+  nameWithType.vb: Task(Of Guid?)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Guid?)
+  name.vb: Task(Of Guid?)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '?'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '?'
+  - name: )

@@ -1,0 +1,1030 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler
+  commentId: T:Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler
+  id: CreateOrderItemCommandHandler
+  parent: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  children:
+  - Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository,MediatR.IMediator)
+  - Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderItemCommandHandler
+  nameWithType: CreateOrderItemCommandHandler
+  fullName: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/OrderItem/Commands/CreateOrderItem/CreateOrderItemCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderItemCommandHandler
+    path: ../../Core/Ecommerce.Application/Features/OrderItem/Commands/CreateOrderItem/CreateOrderItemCommandHandler.cs
+    startLine: 20
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  summary: A <xref href="MediatR.Mediator" data-throw-if-not-resolved="false"></xref> request handler for <xref href="Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: 'public class CreateOrderItemCommandHandler : IRequestHandler<CreateOrderItemCommand, CreateOrderItemResponse>'
+    content.vb: Public Class CreateOrderItemCommandHandler Implements IRequestHandler(Of CreateOrderItemCommand, CreateOrderItemResponse)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository,MediatR.IMediator)
+  commentId: M:Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository,MediatR.IMediator)
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository,MediatR.IMediator)'
+  parent: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderItemCommandHandler(ILogger<CreateOrderItemCommandHandler>, IMapper, IOrderItemAsyncRepository, IMediator)
+  nameWithType: CreateOrderItemCommandHandler.CreateOrderItemCommandHandler(ILogger<CreateOrderItemCommandHandler>, IMapper, IOrderItemAsyncRepository, IMediator)
+  fullName: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.CreateOrderItemCommandHandler(Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler>, AutoMapper.IMapper, Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository, MediatR.IMediator)
+  type: Constructor
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/OrderItem/Commands/CreateOrderItem/CreateOrderItemCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: .ctor
+    path: ../../Core/Ecommerce.Application/Features/OrderItem/Commands/CreateOrderItem/CreateOrderItemCommandHandler.cs
+    startLine: 34
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  summary: Initializes a new instance of the <xref href="Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public CreateOrderItemCommandHandler(ILogger<CreateOrderItemCommandHandler> logger, IMapper mapper, IOrderItemAsyncRepository orderItemAsyncRepository, IMediator mediator)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler}
+      description: The <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref> instance used for logging.
+    - id: mapper
+      type: AutoMapper.IMapper
+      description: The <xref href="AutoMapper.IMapper" data-throw-if-not-resolved="false"></xref> instance used for mapping objects.
+    - id: orderItemAsyncRepository
+      type: Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository
+      description: The <xref href="Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository" data-throw-if-not-resolved="false"></xref> instance used for data access for <xref href="Ecommerce.Application.Features.OrderItem" data-throw-if-not-resolved="false"></xref> entities.
+    - id: mediator
+      type: MediatR.IMediator
+      description: The <xref href="MediatR.IMediator" data-throw-if-not-resolved="false"></xref> instance used for sending Mediator requests.
+    content.vb: Public Sub New(logger As ILogger(Of CreateOrderItemCommandHandler), mapper As IMapper, orderItemAsyncRepository As IOrderItemAsyncRepository, mediator As IMediator)
+  overload: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.#ctor*
+  nameWithType.vb: CreateOrderItemCommandHandler.New(ILogger(Of CreateOrderItemCommandHandler), IMapper, IOrderItemAsyncRepository, IMediator)
+  fullName.vb: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.New(Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler), AutoMapper.IMapper, Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository, MediatR.IMediator)
+  name.vb: New(ILogger(Of CreateOrderItemCommandHandler), IMapper, IOrderItemAsyncRepository, IMediator)
+- uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,System.Threading.CancellationToken)
+  commentId: M:Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,System.Threading.CancellationToken)
+  id: Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,System.Threading.CancellationToken)
+  parent: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Handle(CreateOrderItemCommand, CancellationToken)
+  nameWithType: CreateOrderItemCommandHandler.Handle(CreateOrderItemCommand, CancellationToken)
+  fullName: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/OrderItem/Commands/CreateOrderItem/CreateOrderItemCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Handle
+    path: ../../Core/Ecommerce.Application/Features/OrderItem/Commands/CreateOrderItem/CreateOrderItemCommandHandler.cs
+    startLine: 55
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  summary: Handles the <xref href="Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand" data-throw-if-not-resolved="false"></xref> request
+  example: []
+  syntax:
+    content: public Task<CreateOrderItemResponse> Handle(CreateOrderItemCommand command, CancellationToken cancellationToken)
+    parameters:
+    - id: command
+      type: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand
+      description: The <xref href="Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand" data-throw-if-not-resolved="false"></xref> request to be handled.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> that can be used to request cancellation of the operation.
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}
+      description: >-
+        A <xref href="Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse" data-throw-if-not-resolved="false"></xref> with Success being <code>true</code> if the <xref href="Ecommerce.Application.Features.Order" data-throw-if-not-resolved="false"></xref> was created;
+
+        Success will be <code>false</code> if validation of the command fails or Sql fails to create the <xref href="Ecommerce.Application.Features.Order" data-throw-if-not-resolved="false"></xref>.
+
+        Message will contain an error message if Success is <code>false</code>.
+
+        Validation Errors will be populated with errors to present if validation fails.
+
+        OrderItem will contain the new <xref href="Ecommerce.Shared.Dtos.OrderItemDto" data-throw-if-not-resolved="false"></xref> if creation was successful.
+    content.vb: Public Function Handle(command As CreateOrderItemCommand, cancellationToken As CancellationToken) As Task(Of CreateOrderItemResponse)
+  overload: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.Handle*
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}.Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,System.Threading.CancellationToken)
+references:
+- uid: MediatR.Mediator
+  commentId: T:MediatR.Mediator
+  isExternal: true
+  name: Mediator
+  nameWithType: Mediator
+  fullName: MediatR.Mediator
+- uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand
+  commentId: T:Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand
+  parent: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand.html
+  name: CreateOrderItemCommand
+  nameWithType: CreateOrderItemCommand
+  fullName: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand
+- uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  commentId: N:Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  nameWithType: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  fullName: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem
+    name: OrderItem
+    href: Ecommerce.Application.Features.OrderItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.OrderItem.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+    name: CreateOrderItem
+    href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem
+    name: OrderItem
+    href: Ecommerce.Application.Features.OrderItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.OrderItem.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+    name: CreateOrderItem
+    href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}
+  commentId: T:MediatR.IRequestHandler{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`2
+  href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand.html
+  name: IRequestHandler<CreateOrderItemCommand, CreateOrderItemResponse>
+  nameWithType: IRequestHandler<CreateOrderItemCommand, CreateOrderItemResponse>
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand, Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse>
+  nameWithType.vb: IRequestHandler(Of CreateOrderItemCommand, CreateOrderItemResponse)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand, Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse)
+  name.vb: IRequestHandler(Of CreateOrderItemCommand, CreateOrderItemResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand
+    name: CreateOrderItemCommand
+    href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+    name: CreateOrderItemResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/OrderItem/CreateOrderItemResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand
+    name: CreateOrderItemCommand
+    href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+    name: CreateOrderItemResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/OrderItem/CreateOrderItemResponse.cs
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequestHandler`2
+  commentId: T:MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<TRequest, TResponse>
+  nameWithType: IRequestHandler<TRequest, TResponse>
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse)
+  name.vb: IRequestHandler(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler
+  commentId: T:Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler
+  href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.html
+  name: CreateOrderItemCommandHandler
+  nameWithType: CreateOrderItemCommandHandler
+  fullName: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: AutoMapper.IMapper
+  commentId: T:AutoMapper.IMapper
+  parent: AutoMapper
+  isExternal: true
+  name: IMapper
+  nameWithType: IMapper
+  fullName: AutoMapper.IMapper
+- uid: Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository
+  commentId: T:Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository.html
+  name: IOrderItemAsyncRepository
+  nameWithType: IOrderItemAsyncRepository
+  fullName: Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository
+- uid: Ecommerce.Application.Features.OrderItem
+  commentId: N:Ecommerce.Application.Features.OrderItem
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.OrderItem
+  nameWithType: Ecommerce.Application.Features.OrderItem
+  fullName: Ecommerce.Application.Features.OrderItem
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem
+    name: OrderItem
+    href: Ecommerce.Application.Features.OrderItem.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem
+    name: OrderItem
+    href: Ecommerce.Application.Features.OrderItem.html
+- uid: MediatR.IMediator
+  commentId: T:MediatR.IMediator
+  parent: MediatR
+  isExternal: true
+  name: IMediator
+  nameWithType: IMediator
+  fullName: MediatR.IMediator
+- uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.#ctor*
+  commentId: Overload:Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.#ctor
+  href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.html#Ecommerce_Application_Features_OrderItem_Commands_CreateOrderItem_CreateOrderItemCommandHandler__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_Application_Features_OrderItem_Commands_CreateOrderItem_CreateOrderItemCommandHandler__AutoMapper_IMapper_Ecommerce_Persistence_Contracts_IOrderItemAsyncRepository_MediatR_IMediator_
+  name: CreateOrderItemCommandHandler
+  nameWithType: CreateOrderItemCommandHandler.CreateOrderItemCommandHandler
+  fullName: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.CreateOrderItemCommandHandler
+  nameWithType.vb: CreateOrderItemCommandHandler.New
+  fullName.vb: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<CreateOrderItemCommandHandler>
+  nameWithType: ILogger<CreateOrderItemCommandHandler>
+  fullName: Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler>
+  nameWithType.vb: ILogger(Of CreateOrderItemCommandHandler)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler)
+  name.vb: ILogger(Of CreateOrderItemCommandHandler)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler
+    name: CreateOrderItemCommandHandler
+    href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler
+    name: CreateOrderItemCommandHandler
+    href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.html
+  - name: )
+- uid: AutoMapper
+  commentId: N:AutoMapper
+  isExternal: true
+  name: AutoMapper
+  nameWithType: AutoMapper
+  fullName: AutoMapper
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+  commentId: T:Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+  href: Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse.html
+  name: CreateOrderItemResponse
+  nameWithType: CreateOrderItemResponse
+  fullName: Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+- uid: Ecommerce.Application.Features.Order
+  commentId: N:Ecommerce.Application.Features.Order
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Order
+  nameWithType: Ecommerce.Application.Features.Order
+  fullName: Ecommerce.Application.Features.Order
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+- uid: Ecommerce.Shared.Dtos.OrderItemDto
+  commentId: T:Ecommerce.Shared.Dtos.OrderItemDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.OrderItemDto.html
+  name: OrderItemDto
+  nameWithType: OrderItemDto
+  fullName: Ecommerce.Shared.Dtos.OrderItemDto
+- uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.Handle*
+  commentId: Overload:Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.Handle
+  href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.html#Ecommerce_Application_Features_OrderItem_Commands_CreateOrderItem_CreateOrderItemCommandHandler_Handle_Ecommerce_Application_Features_OrderItem_Commands_CreateOrderItem_CreateOrderItemCommand_System_Threading_CancellationToken_
+  name: Handle
+  nameWithType: CreateOrderItemCommandHandler.Handle
+  fullName: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler.Handle
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}.Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}.Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}
+  definition: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand.html
+  name: Handle(CreateOrderItemCommand, CancellationToken)
+  nameWithType: IRequestHandler<CreateOrderItemCommand, CreateOrderItemResponse>.Handle(CreateOrderItemCommand, CancellationToken)
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand, Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse>.Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of CreateOrderItemCommand, CreateOrderItemResponse).Handle(CreateOrderItemCommand, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand, Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse).Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}.Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand
+    name: CreateOrderItemCommand
+    href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}.Handle(Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand
+    name: CreateOrderItemCommand
+    href: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CreateOrderItemResponse>
+  nameWithType: Task<CreateOrderItemResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse>
+  nameWithType.vb: Task(Of CreateOrderItemResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse)
+  name.vb: Task(Of CreateOrderItemResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+    name: CreateOrderItemResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/OrderItem/CreateOrderItemResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+    name: CreateOrderItemResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/OrderItem/CreateOrderItemResponse.cs
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Ecommerce.Shared.Dtos
+  commentId: N:Ecommerce.Shared.Dtos
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Dtos
+  nameWithType: Ecommerce.Shared.Dtos
+  fullName: Ecommerce.Shared.Dtos
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+- uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest, TResponse>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

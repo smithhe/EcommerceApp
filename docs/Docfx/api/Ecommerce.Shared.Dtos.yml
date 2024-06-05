@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Dtos
+  commentId: N:Ecommerce.Shared.Dtos
+  id: Ecommerce.Shared.Dtos
+  children:
+  - Ecommerce.Shared.Dtos.CartItemDto
+  - Ecommerce.Shared.Dtos.CategoryDto
+  - Ecommerce.Shared.Dtos.OrderDto
+  - Ecommerce.Shared.Dtos.OrderItemDto
+  - Ecommerce.Shared.Dtos.ProductDto
+  - Ecommerce.Shared.Dtos.ReviewDto
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Dtos
+  nameWithType: Ecommerce.Shared.Dtos
+  fullName: Ecommerce.Shared.Dtos
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Dtos.CartItemDto
+  commentId: T:Ecommerce.Shared.Dtos.CartItemDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.CartItemDto.html
+  name: CartItemDto
+  nameWithType: CartItemDto
+  fullName: Ecommerce.Shared.Dtos.CartItemDto
+- uid: Ecommerce.Shared.Dtos.CategoryDto
+  commentId: T:Ecommerce.Shared.Dtos.CategoryDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.CategoryDto.html
+  name: CategoryDto
+  nameWithType: CategoryDto
+  fullName: Ecommerce.Shared.Dtos.CategoryDto
+- uid: Ecommerce.Shared.Dtos.OrderDto
+  commentId: T:Ecommerce.Shared.Dtos.OrderDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.OrderDto.html
+  name: OrderDto
+  nameWithType: OrderDto
+  fullName: Ecommerce.Shared.Dtos.OrderDto
+- uid: Ecommerce.Shared.Dtos.OrderItemDto
+  commentId: T:Ecommerce.Shared.Dtos.OrderItemDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.OrderItemDto.html
+  name: OrderItemDto
+  nameWithType: OrderItemDto
+  fullName: Ecommerce.Shared.Dtos.OrderItemDto
+- uid: Ecommerce.Shared.Dtos.ProductDto
+  commentId: T:Ecommerce.Shared.Dtos.ProductDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.ProductDto.html
+  name: ProductDto
+  nameWithType: ProductDto
+  fullName: Ecommerce.Shared.Dtos.ProductDto
+- uid: Ecommerce.Shared.Dtos.ReviewDto
+  commentId: T:Ecommerce.Shared.Dtos.ReviewDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.ReviewDto.html
+  name: ReviewDto
+  nameWithType: ReviewDto
+  fullName: Ecommerce.Shared.Dtos.ReviewDto
+- uid: Ecommerce.Shared.Dtos
+  commentId: N:Ecommerce.Shared.Dtos
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Dtos
+  nameWithType: Ecommerce.Shared.Dtos
+  fullName: Ecommerce.Shared.Dtos
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html

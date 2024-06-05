@@ -1,0 +1,60 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Persistence
+  commentId: N:Ecommerce.Persistence
+  id: Ecommerce.Persistence
+  children:
+  - Ecommerce.Persistence.DatabaseInitializer
+  - Ecommerce.Persistence.EcommercePersistenceDbContext
+  - Ecommerce.Persistence.PersistenceServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Persistence
+  nameWithType: Ecommerce.Persistence
+  fullName: Ecommerce.Persistence
+  type: Namespace
+  assemblies:
+  - Ecommerce.Persistence
+references:
+- uid: Ecommerce.Persistence.DatabaseInitializer
+  commentId: T:Ecommerce.Persistence.DatabaseInitializer
+  href: Ecommerce.Persistence.DatabaseInitializer.html
+  name: DatabaseInitializer
+  nameWithType: DatabaseInitializer
+  fullName: Ecommerce.Persistence.DatabaseInitializer
+- uid: Ecommerce.Persistence.EcommercePersistenceDbContext
+  commentId: T:Ecommerce.Persistence.EcommercePersistenceDbContext
+  parent: Ecommerce.Persistence
+  href: Ecommerce.Persistence.EcommercePersistenceDbContext.html
+  name: EcommercePersistenceDbContext
+  nameWithType: EcommercePersistenceDbContext
+  fullName: Ecommerce.Persistence.EcommercePersistenceDbContext
+- uid: Ecommerce.Persistence.PersistenceServiceRegistration
+  commentId: T:Ecommerce.Persistence.PersistenceServiceRegistration
+  href: Ecommerce.Persistence.PersistenceServiceRegistration.html
+  name: PersistenceServiceRegistration
+  nameWithType: PersistenceServiceRegistration
+  fullName: Ecommerce.Persistence.PersistenceServiceRegistration
+- uid: Ecommerce.Persistence
+  commentId: N:Ecommerce.Persistence
+  href: Ecommerce.html
+  name: Ecommerce.Persistence
+  nameWithType: Ecommerce.Persistence
+  fullName: Ecommerce.Persistence
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html

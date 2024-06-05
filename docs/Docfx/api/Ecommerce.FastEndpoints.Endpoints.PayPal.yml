@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.FastEndpoints.Endpoints.PayPal
+  commentId: N:Ecommerce.FastEndpoints.Endpoints.PayPal
+  id: Ecommerce.FastEndpoints.Endpoints.PayPal
+  children:
+  - Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalCancelReturnEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalSuccessReturnEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.FastEndpoints.Endpoints.PayPal
+  nameWithType: Ecommerce.FastEndpoints.Endpoints.PayPal
+  fullName: Ecommerce.FastEndpoints.Endpoints.PayPal
+  type: Namespace
+  assemblies:
+  - Ecommerce.FastEndpoints
+references:
+- uid: Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalCancelReturnEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalCancelReturnEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalCancelReturnEndpoint.html
+  name: PayPalCancelReturnEndpoint
+  nameWithType: PayPalCancelReturnEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalCancelReturnEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalSuccessReturnEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalSuccessReturnEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalSuccessReturnEndpoint.html
+  name: PayPalSuccessReturnEndpoint
+  nameWithType: PayPalSuccessReturnEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalSuccessReturnEndpoint

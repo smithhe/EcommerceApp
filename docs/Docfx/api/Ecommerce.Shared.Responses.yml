@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Responses
+  commentId: N:Ecommerce.Shared.Responses
+  id: Ecommerce.Shared.Responses
+  children:
+  - Ecommerce.Shared.Responses.BaseResponse
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Responses
+  nameWithType: Ecommerce.Shared.Responses
+  fullName: Ecommerce.Shared.Responses
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Responses.BaseResponse
+  commentId: T:Ecommerce.Shared.Responses.BaseResponse
+  parent: Ecommerce.Shared.Responses
+  href: Ecommerce.Shared.Responses.BaseResponse.html
+  name: BaseResponse
+  nameWithType: BaseResponse
+  fullName: Ecommerce.Shared.Responses.BaseResponse
+- uid: Ecommerce.Shared.Responses
+  commentId: N:Ecommerce.Shared.Responses
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Responses
+  nameWithType: Ecommerce.Shared.Responses
+  fullName: Ecommerce.Shared.Responses
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Responses
+    name: Responses
+    href: Ecommerce.Shared.Responses.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Responses
+    name: Responses
+    href: Ecommerce.Shared.Responses.html

@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Enums
+  commentId: N:Ecommerce.Shared.Enums
+  id: Ecommerce.Shared.Enums
+  children:
+  - Ecommerce.Shared.Enums.OrderStatus
+  - Ecommerce.Shared.Enums.PaymentSource
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Enums
+  nameWithType: Ecommerce.Shared.Enums
+  fullName: Ecommerce.Shared.Enums
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Enums.OrderStatus
+  commentId: T:Ecommerce.Shared.Enums.OrderStatus
+  parent: Ecommerce.Shared.Enums
+  href: Ecommerce.Shared.Enums.OrderStatus.html
+  name: OrderStatus
+  nameWithType: OrderStatus
+  fullName: Ecommerce.Shared.Enums.OrderStatus
+- uid: Ecommerce.Shared.Enums.PaymentSource
+  commentId: T:Ecommerce.Shared.Enums.PaymentSource
+  parent: Ecommerce.Shared.Enums
+  href: Ecommerce.Shared.Enums.PaymentSource.html
+  name: PaymentSource
+  nameWithType: PaymentSource
+  fullName: Ecommerce.Shared.Enums.PaymentSource
+- uid: Ecommerce.Shared.Enums
+  commentId: N:Ecommerce.Shared.Enums
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Enums
+  nameWithType: Ecommerce.Shared.Enums
+  fullName: Ecommerce.Shared.Enums
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Enums
+    name: Enums
+    href: Ecommerce.Shared.Enums.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Enums
+    name: Enums
+    href: Ecommerce.Shared.Enums.html

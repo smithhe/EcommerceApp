@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  id: Ecommerce.Persistence.Contracts
+  children:
+  - Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  - Ecommerce.Persistence.Contracts.ICartItemRepository
+  - Ecommerce.Persistence.Contracts.ICategoryAsyncRepository
+  - Ecommerce.Persistence.Contracts.IOrderAsyncRepository
+  - Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository
+  - Ecommerce.Persistence.Contracts.IOrderKeyRepository
+  - Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  - Ecommerce.Persistence.Contracts.IReviewAsyncRepository
+  - Ecommerce.Persistence.Contracts.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  type: Namespace
+  assemblies:
+  - Ecommerce.Persistence
+references:
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  commentId: T:Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html
+  name: IAsyncRepository<T>
+  nameWithType: IAsyncRepository<T>
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>
+  nameWithType.vb: IAsyncRepository(Of T)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T)
+  name.vb: IAsyncRepository(Of T)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+    name: IAsyncRepository
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+    name: IAsyncRepository
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Ecommerce.Persistence.Contracts.ICartItemRepository
+  commentId: T:Ecommerce.Persistence.Contracts.ICartItemRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.ICartItemRepository.html
+  name: ICartItemRepository
+  nameWithType: ICartItemRepository
+  fullName: Ecommerce.Persistence.Contracts.ICartItemRepository
+- uid: Ecommerce.Persistence.Contracts.ICategoryAsyncRepository
+  commentId: T:Ecommerce.Persistence.Contracts.ICategoryAsyncRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.ICategoryAsyncRepository.html
+  name: ICategoryAsyncRepository
+  nameWithType: ICategoryAsyncRepository
+  fullName: Ecommerce.Persistence.Contracts.ICategoryAsyncRepository
+- uid: Ecommerce.Persistence.Contracts.IOrderAsyncRepository
+  commentId: T:Ecommerce.Persistence.Contracts.IOrderAsyncRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.IOrderAsyncRepository.html
+  name: IOrderAsyncRepository
+  nameWithType: IOrderAsyncRepository
+  fullName: Ecommerce.Persistence.Contracts.IOrderAsyncRepository
+- uid: Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository
+  commentId: T:Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository.html
+  name: IOrderItemAsyncRepository
+  nameWithType: IOrderItemAsyncRepository
+  fullName: Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository
+- uid: Ecommerce.Persistence.Contracts.IOrderKeyRepository
+  commentId: T:Ecommerce.Persistence.Contracts.IOrderKeyRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.IOrderKeyRepository.html
+  name: IOrderKeyRepository
+  nameWithType: IOrderKeyRepository
+  fullName: Ecommerce.Persistence.Contracts.IOrderKeyRepository
+- uid: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  commentId: T:Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.IProductAsyncRepository.html
+  name: IProductAsyncRepository
+  nameWithType: IProductAsyncRepository
+  fullName: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+- uid: Ecommerce.Persistence.Contracts.IReviewAsyncRepository
+  commentId: T:Ecommerce.Persistence.Contracts.IReviewAsyncRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.IReviewAsyncRepository.html
+  name: IReviewAsyncRepository
+  nameWithType: IReviewAsyncRepository
+  fullName: Ecommerce.Persistence.Contracts.IReviewAsyncRepository
+- uid: Ecommerce.Persistence.Contracts.IStorageService
+  commentId: T:Ecommerce.Persistence.Contracts.IStorageService
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.IStorageService.html
+  name: IStorageService
+  nameWithType: IStorageService
+  fullName: Ecommerce.Persistence.Contracts.IStorageService
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html

@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.FastEndpoints.Endpoints.Review
+  commentId: N:Ecommerce.FastEndpoints.Endpoints.Review
+  id: Ecommerce.FastEndpoints.Endpoints.Review
+  children:
+  - Ecommerce.FastEndpoints.Endpoints.Review.CreateReviewEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Review.DeleteReviewEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Review.GetReviewsForProductEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Review.GetUserReviewForProductEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Review.UpdateReviewEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.FastEndpoints.Endpoints.Review
+  nameWithType: Ecommerce.FastEndpoints.Endpoints.Review
+  fullName: Ecommerce.FastEndpoints.Endpoints.Review
+  type: Namespace
+  assemblies:
+  - Ecommerce.FastEndpoints
+references:
+- uid: Ecommerce.FastEndpoints.Endpoints.Review.CreateReviewEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Review.CreateReviewEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Review.CreateReviewEndpoint.html
+  name: CreateReviewEndpoint
+  nameWithType: CreateReviewEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Review.CreateReviewEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Review.DeleteReviewEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Review.DeleteReviewEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Review.DeleteReviewEndpoint.html
+  name: DeleteReviewEndpoint
+  nameWithType: DeleteReviewEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Review.DeleteReviewEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Review.GetReviewsForProductEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Review.GetReviewsForProductEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Review.GetReviewsForProductEndpoint.html
+  name: GetReviewsForProductEndpoint
+  nameWithType: GetReviewsForProductEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Review.GetReviewsForProductEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Review.GetUserReviewForProductEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Review.GetUserReviewForProductEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Review.GetUserReviewForProductEndpoint.html
+  name: GetUserReviewForProductEndpoint
+  nameWithType: GetUserReviewForProductEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Review.GetUserReviewForProductEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Review.UpdateReviewEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Review.UpdateReviewEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Review.UpdateReviewEndpoint.html
+  name: UpdateReviewEndpoint
+  nameWithType: UpdateReviewEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Review.UpdateReviewEndpoint

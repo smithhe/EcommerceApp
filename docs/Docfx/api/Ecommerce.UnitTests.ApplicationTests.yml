@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.ApplicationTests
+  commentId: N:Ecommerce.UnitTests.ApplicationTests
+  id: Ecommerce.UnitTests.ApplicationTests
+  children:
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  - Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  - Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  - Ecommerce.UnitTests.ApplicationTests.OrderItemTests
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests
+  - Ecommerce.UnitTests.ApplicationTests.ReviewTests
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UnitTests.ApplicationTests
+  nameWithType: Ecommerce.UnitTests.ApplicationTests
+  fullName: Ecommerce.UnitTests.ApplicationTests
+  type: Namespace
+  assemblies:
+  - Ecommerce.UnitTests
+references:
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html
+  name: CartItemTests
+  nameWithType: CartItemTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+- uid: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.CategoryTests
+  href: Ecommerce.UnitTests.ApplicationTests.CategoryTests.html
+  name: CategoryTests
+  nameWithType: CategoryTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.CategoryTests
+- uid: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+  href: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests.html
+  name: EcommerceUserTests
+  nameWithType: EcommerceUserTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.EcommerceUserTests
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderItemTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.OrderItemTests
+  href: Ecommerce.UnitTests.ApplicationTests.OrderItemTests.html
+  name: OrderItemTests
+  nameWithType: OrderItemTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderItemTests
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.OrderTests
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html
+  name: OrderTests
+  nameWithType: OrderTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html
+  name: PayPalTests
+  nameWithType: PayPalTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.ProductTests
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html
+  name: ProductTests
+  nameWithType: ProductTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests
+- uid: Ecommerce.UnitTests.ApplicationTests.ReviewTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.ReviewTests
+  href: Ecommerce.UnitTests.ApplicationTests.ReviewTests.html
+  name: ReviewTests
+  nameWithType: ReviewTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.ReviewTests

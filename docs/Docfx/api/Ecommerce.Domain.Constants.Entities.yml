@@ -1,0 +1,65 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Domain.Constants.Entities
+  commentId: N:Ecommerce.Domain.Constants.Entities
+  id: Ecommerce.Domain.Constants.Entities
+  children:
+  - Ecommerce.Domain.Constants.Entities.CartItemConstants
+  - Ecommerce.Domain.Constants.Entities.CategoryConstants
+  - Ecommerce.Domain.Constants.Entities.EcommerceUserConstants
+  - Ecommerce.Domain.Constants.Entities.OrderConstants
+  - Ecommerce.Domain.Constants.Entities.OrderItemConstants
+  - Ecommerce.Domain.Constants.Entities.ProductConstants
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Domain.Constants.Entities
+  nameWithType: Ecommerce.Domain.Constants.Entities
+  fullName: Ecommerce.Domain.Constants.Entities
+  type: Namespace
+  assemblies:
+  - Ecommerce.Domain
+references:
+- uid: Ecommerce.Domain.Constants.Entities.CartItemConstants
+  commentId: T:Ecommerce.Domain.Constants.Entities.CartItemConstants
+  href: Ecommerce.Domain.Constants.Entities.CartItemConstants.html
+  name: CartItemConstants
+  nameWithType: CartItemConstants
+  fullName: Ecommerce.Domain.Constants.Entities.CartItemConstants
+- uid: Ecommerce.Domain.Constants.Entities.CategoryConstants
+  commentId: T:Ecommerce.Domain.Constants.Entities.CategoryConstants
+  href: Ecommerce.Domain.Constants.Entities.CategoryConstants.html
+  name: CategoryConstants
+  nameWithType: CategoryConstants
+  fullName: Ecommerce.Domain.Constants.Entities.CategoryConstants
+- uid: Ecommerce.Domain.Constants.Entities.EcommerceUserConstants
+  commentId: T:Ecommerce.Domain.Constants.Entities.EcommerceUserConstants
+  href: Ecommerce.Domain.Constants.Entities.EcommerceUserConstants.html
+  name: EcommerceUserConstants
+  nameWithType: EcommerceUserConstants
+  fullName: Ecommerce.Domain.Constants.Entities.EcommerceUserConstants
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants
+  commentId: T:Ecommerce.Domain.Constants.Entities.OrderConstants
+  href: Ecommerce.Domain.Constants.Entities.OrderConstants.html
+  name: OrderConstants
+  nameWithType: OrderConstants
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants
+- uid: Ecommerce.Domain.Constants.Entities.OrderItemConstants
+  commentId: T:Ecommerce.Domain.Constants.Entities.OrderItemConstants
+  href: Ecommerce.Domain.Constants.Entities.OrderItemConstants.html
+  name: OrderItemConstants
+  nameWithType: OrderItemConstants
+  fullName: Ecommerce.Domain.Constants.Entities.OrderItemConstants
+- uid: Ecommerce.Domain.Constants.Entities.ProductConstants
+  commentId: T:Ecommerce.Domain.Constants.Entities.ProductConstants
+  href: Ecommerce.Domain.Constants.Entities.ProductConstants.html
+  name: ProductConstants
+  nameWithType: ProductConstants
+  fullName: Ecommerce.Domain.Constants.Entities.ProductConstants
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  commentId: T:Ecommerce.Domain.Constants.Entities.ReviewConstants
+  href: Ecommerce.Domain.Constants.Entities.ReviewConstants.html
+  name: ReviewConstants
+  nameWithType: ReviewConstants
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants

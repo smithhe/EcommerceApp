@@ -1,0 +1,761 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Mail.Services.EmailService
+  commentId: T:Ecommerce.Mail.Services.EmailService
+  id: EmailService
+  parent: Ecommerce.Mail.Services
+  children:
+  - Ecommerce.Mail.Services.EmailService.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Mail.Services.EmailService},FluentEmail.Core.IFluentEmail)
+  - Ecommerce.Mail.Services.EmailService.SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+  langs:
+  - csharp
+  - vb
+  name: EmailService
+  nameWithType: EmailService
+  fullName: Ecommerce.Mail.Services.EmailService
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Services/EmailService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: EmailService
+    path: ../../Infrastructure/Ecommerce.Mail/Services/EmailService.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Services
+  summary: Service to send emails
+  example: []
+  syntax:
+    content: 'public class EmailService : IEmailService'
+    content.vb: Public Class EmailService Implements IEmailService
+  inheritance:
+  - System.Object
+  implements:
+  - Ecommerce.Mail.Contracts.IEmailService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Mail.Services.EmailService.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Mail.Services.EmailService},FluentEmail.Core.IFluentEmail)
+  commentId: M:Ecommerce.Mail.Services.EmailService.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Mail.Services.EmailService},FluentEmail.Core.IFluentEmail)
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Mail.Services.EmailService},FluentEmail.Core.IFluentEmail)'
+  parent: Ecommerce.Mail.Services.EmailService
+  langs:
+  - csharp
+  - vb
+  name: EmailService(ILogger<EmailService>, IFluentEmail)
+  nameWithType: EmailService.EmailService(ILogger<EmailService>, IFluentEmail)
+  fullName: Ecommerce.Mail.Services.EmailService.EmailService(Microsoft.Extensions.Logging.ILogger<Ecommerce.Mail.Services.EmailService>, FluentEmail.Core.IFluentEmail)
+  type: Constructor
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Services/EmailService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: .ctor
+    path: ../../Infrastructure/Ecommerce.Mail/Services/EmailService.cs
+    startLine: 23
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Services
+  summary: Initializes a new instance of the <xref href="Ecommerce.Mail.Services.EmailService" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public EmailService(ILogger<EmailService> logger, IFluentEmail fluentEmail)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Ecommerce.Mail.Services.EmailService}
+      description: The <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref> instance used for logging.
+    - id: fluentEmail
+      type: FluentEmail.Core.IFluentEmail
+      description: The <xref href="FluentEmail.Core.IFluentEmail" data-throw-if-not-resolved="false"></xref> instance used for sending a single email
+    content.vb: Public Sub New(logger As ILogger(Of EmailService), fluentEmail As IFluentEmail)
+  overload: Ecommerce.Mail.Services.EmailService.#ctor*
+  nameWithType.vb: EmailService.New(ILogger(Of EmailService), IFluentEmail)
+  fullName.vb: Ecommerce.Mail.Services.EmailService.New(Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Mail.Services.EmailService), FluentEmail.Core.IFluentEmail)
+  name.vb: New(ILogger(Of EmailService), IFluentEmail)
+- uid: Ecommerce.Mail.Services.EmailService.SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+  commentId: M:Ecommerce.Mail.Services.EmailService.SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+  id: SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+  parent: Ecommerce.Mail.Services.EmailService
+  langs:
+  - csharp
+  - vb
+  name: SendEmailAsync(string, string, EmailTemplate, ITemplateModel)
+  nameWithType: EmailService.SendEmailAsync(string, string, EmailTemplate, ITemplateModel)
+  fullName: Ecommerce.Mail.Services.EmailService.SendEmailAsync(string, string, Ecommerce.Mail.Models.Enums.EmailTemplate, Ecommerce.Mail.Contracts.ITemplateModel)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Services/EmailService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: SendEmailAsync
+    path: ../../Infrastructure/Ecommerce.Mail/Services/EmailService.cs
+    startLine: 36
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Services
+  summary: Sends an email asynchronously
+  example: []
+  syntax:
+    content: public Task SendEmailAsync(string sendTo, string subject, EmailTemplate templateToUse, ITemplateModel templateModel)
+    parameters:
+    - id: sendTo
+      type: System.String
+      description: The email address to send to
+    - id: subject
+      type: System.String
+      description: The subject of the email
+    - id: templateToUse
+      type: Ecommerce.Mail.Models.Enums.EmailTemplate
+      description: The email template to use
+    - id: templateModel
+      type: Ecommerce.Mail.Contracts.ITemplateModel
+      description: The model with the information to fill into the template
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function SendEmailAsync(sendTo As String, subject As String, templateToUse As EmailTemplate, templateModel As ITemplateModel) As Task
+  overload: Ecommerce.Mail.Services.EmailService.SendEmailAsync*
+  implements:
+  - Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+  nameWithType.vb: EmailService.SendEmailAsync(String, String, EmailTemplate, ITemplateModel)
+  fullName.vb: Ecommerce.Mail.Services.EmailService.SendEmailAsync(String, String, Ecommerce.Mail.Models.Enums.EmailTemplate, Ecommerce.Mail.Contracts.ITemplateModel)
+  name.vb: SendEmailAsync(String, String, EmailTemplate, ITemplateModel)
+references:
+- uid: Ecommerce.Mail.Services
+  commentId: N:Ecommerce.Mail.Services
+  href: Ecommerce.html
+  name: Ecommerce.Mail.Services
+  nameWithType: Ecommerce.Mail.Services
+  fullName: Ecommerce.Mail.Services
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Services
+    name: Services
+    href: Ecommerce.Mail.Services.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Services
+    name: Services
+    href: Ecommerce.Mail.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Ecommerce.Mail.Contracts.IEmailService
+  commentId: T:Ecommerce.Mail.Contracts.IEmailService
+  parent: Ecommerce.Mail.Contracts
+  href: Ecommerce.Mail.Contracts.IEmailService.html
+  name: IEmailService
+  nameWithType: IEmailService
+  fullName: Ecommerce.Mail.Contracts.IEmailService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Mail.Contracts
+  commentId: N:Ecommerce.Mail.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Mail.Contracts
+  nameWithType: Ecommerce.Mail.Contracts
+  fullName: Ecommerce.Mail.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Contracts
+    name: Contracts
+    href: Ecommerce.Mail.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Contracts
+    name: Contracts
+    href: Ecommerce.Mail.Contracts.html
+- uid: Ecommerce.Mail.Services.EmailService
+  commentId: T:Ecommerce.Mail.Services.EmailService
+  href: Ecommerce.Mail.Services.EmailService.html
+  name: EmailService
+  nameWithType: EmailService
+  fullName: Ecommerce.Mail.Services.EmailService
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: FluentEmail.Core.IFluentEmail
+  commentId: T:FluentEmail.Core.IFluentEmail
+  parent: FluentEmail.Core
+  isExternal: true
+  name: IFluentEmail
+  nameWithType: IFluentEmail
+  fullName: FluentEmail.Core.IFluentEmail
+- uid: Ecommerce.Mail.Services.EmailService.#ctor*
+  commentId: Overload:Ecommerce.Mail.Services.EmailService.#ctor
+  href: Ecommerce.Mail.Services.EmailService.html#Ecommerce_Mail_Services_EmailService__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_Mail_Services_EmailService__FluentEmail_Core_IFluentEmail_
+  name: EmailService
+  nameWithType: EmailService.EmailService
+  fullName: Ecommerce.Mail.Services.EmailService.EmailService
+  nameWithType.vb: EmailService.New
+  fullName.vb: Ecommerce.Mail.Services.EmailService.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Ecommerce.Mail.Services.EmailService}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Ecommerce.Mail.Services.EmailService}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<EmailService>
+  nameWithType: ILogger<EmailService>
+  fullName: Microsoft.Extensions.Logging.ILogger<Ecommerce.Mail.Services.EmailService>
+  nameWithType.vb: ILogger(Of EmailService)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Mail.Services.EmailService)
+  name.vb: ILogger(Of EmailService)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Ecommerce.Mail.Services.EmailService
+    name: EmailService
+    href: Ecommerce.Mail.Services.EmailService.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Mail.Services.EmailService
+    name: EmailService
+    href: Ecommerce.Mail.Services.EmailService.html
+  - name: )
+- uid: FluentEmail.Core
+  commentId: N:FluentEmail.Core
+  isExternal: true
+  name: FluentEmail.Core
+  nameWithType: FluentEmail.Core
+  fullName: FluentEmail.Core
+  spec.csharp:
+  - uid: FluentEmail
+    name: FluentEmail
+    isExternal: true
+  - name: .
+  - uid: FluentEmail.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: FluentEmail
+    name: FluentEmail
+    isExternal: true
+  - name: .
+  - uid: FluentEmail.Core
+    name: Core
+    isExternal: true
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Ecommerce.Mail.Services.EmailService.SendEmailAsync*
+  commentId: Overload:Ecommerce.Mail.Services.EmailService.SendEmailAsync
+  href: Ecommerce.Mail.Services.EmailService.html#Ecommerce_Mail_Services_EmailService_SendEmailAsync_System_String_System_String_Ecommerce_Mail_Models_Enums_EmailTemplate_Ecommerce_Mail_Contracts_ITemplateModel_
+  name: SendEmailAsync
+  nameWithType: EmailService.SendEmailAsync
+  fullName: Ecommerce.Mail.Services.EmailService.SendEmailAsync
+- uid: Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+  commentId: M:Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+  parent: Ecommerce.Mail.Contracts.IEmailService
+  isExternal: true
+  href: Ecommerce.Mail.Contracts.IEmailService.html#Ecommerce_Mail_Contracts_IEmailService_SendEmailAsync_System_String_System_String_Ecommerce_Mail_Models_Enums_EmailTemplate_Ecommerce_Mail_Contracts_ITemplateModel_
+  name: SendEmailAsync(string, string, EmailTemplate, ITemplateModel)
+  nameWithType: IEmailService.SendEmailAsync(string, string, EmailTemplate, ITemplateModel)
+  fullName: Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(string, string, Ecommerce.Mail.Models.Enums.EmailTemplate, Ecommerce.Mail.Contracts.ITemplateModel)
+  nameWithType.vb: IEmailService.SendEmailAsync(String, String, EmailTemplate, ITemplateModel)
+  fullName.vb: Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(String, String, Ecommerce.Mail.Models.Enums.EmailTemplate, Ecommerce.Mail.Contracts.ITemplateModel)
+  name.vb: SendEmailAsync(String, String, EmailTemplate, ITemplateModel)
+  spec.csharp:
+  - uid: Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+    name: SendEmailAsync
+    href: Ecommerce.Mail.Contracts.IEmailService.html#Ecommerce_Mail_Contracts_IEmailService_SendEmailAsync_System_String_System_String_Ecommerce_Mail_Models_Enums_EmailTemplate_Ecommerce_Mail_Contracts_ITemplateModel_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Mail.Models.Enums.EmailTemplate
+    name: EmailTemplate
+    href: Ecommerce.Mail.Models.Enums.EmailTemplate.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Mail.Contracts.ITemplateModel
+    name: ITemplateModel
+    href: Ecommerce.Mail.Contracts.ITemplateModel.html
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+    name: SendEmailAsync
+    href: Ecommerce.Mail.Contracts.IEmailService.html#Ecommerce_Mail_Contracts_IEmailService_SendEmailAsync_System_String_System_String_Ecommerce_Mail_Models_Enums_EmailTemplate_Ecommerce_Mail_Contracts_ITemplateModel_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Mail.Models.Enums.EmailTemplate
+    name: EmailTemplate
+    href: Ecommerce.Mail.Models.Enums.EmailTemplate.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Mail.Contracts.ITemplateModel
+    name: ITemplateModel
+    href: Ecommerce.Mail.Contracts.ITemplateModel.html
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.Mail.Models.Enums.EmailTemplate
+  commentId: T:Ecommerce.Mail.Models.Enums.EmailTemplate
+  parent: Ecommerce.Mail.Models.Enums
+  href: Ecommerce.Mail.Models.Enums.EmailTemplate.html
+  name: EmailTemplate
+  nameWithType: EmailTemplate
+  fullName: Ecommerce.Mail.Models.Enums.EmailTemplate
+- uid: Ecommerce.Mail.Contracts.ITemplateModel
+  commentId: T:Ecommerce.Mail.Contracts.ITemplateModel
+  parent: Ecommerce.Mail.Contracts
+  href: Ecommerce.Mail.Contracts.ITemplateModel.html
+  name: ITemplateModel
+  nameWithType: ITemplateModel
+  fullName: Ecommerce.Mail.Contracts.ITemplateModel
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Ecommerce.Mail.Models.Enums
+  commentId: N:Ecommerce.Mail.Models.Enums
+  href: Ecommerce.html
+  name: Ecommerce.Mail.Models.Enums
+  nameWithType: Ecommerce.Mail.Models.Enums
+  fullName: Ecommerce.Mail.Models.Enums
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Models
+    name: Models
+    href: Ecommerce.Mail.Models.html
+  - name: .
+  - uid: Ecommerce.Mail.Models.Enums
+    name: Enums
+    href: Ecommerce.Mail.Models.Enums.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Models
+    name: Models
+    href: Ecommerce.Mail.Models.html
+  - name: .
+  - uid: Ecommerce.Mail.Models.Enums
+    name: Enums
+    href: Ecommerce.Mail.Models.Enums.html
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

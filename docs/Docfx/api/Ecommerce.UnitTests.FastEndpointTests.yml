@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.FastEndpointTests
+  commentId: N:Ecommerce.UnitTests.FastEndpointTests
+  id: Ecommerce.UnitTests.FastEndpointTests
+  children:
+  - Ecommerce.UnitTests.FastEndpointTests.CartItemEndpointTests
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  - Ecommerce.UnitTests.FastEndpointTests.ProductEndpointTests
+  - Ecommerce.UnitTests.FastEndpointTests.ReviewEndpointTests
+  - Ecommerce.UnitTests.FastEndpointTests.SecurityEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UnitTests.FastEndpointTests
+  nameWithType: Ecommerce.UnitTests.FastEndpointTests
+  fullName: Ecommerce.UnitTests.FastEndpointTests
+  type: Namespace
+  assemblies:
+  - Ecommerce.UnitTests
+references:
+- uid: Ecommerce.UnitTests.FastEndpointTests.CartItemEndpointTests
+  commentId: T:Ecommerce.UnitTests.FastEndpointTests.CartItemEndpointTests
+  href: Ecommerce.UnitTests.FastEndpointTests.CartItemEndpointTests.html
+  name: CartItemEndpointTests
+  nameWithType: CartItemEndpointTests
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CartItemEndpointTests
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  commentId: T:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html
+  name: CategoryEndpointTests
+  nameWithType: CategoryEndpointTests
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  commentId: T:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html
+  name: OrderEndpointTests
+  nameWithType: OrderEndpointTests
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+- uid: Ecommerce.UnitTests.FastEndpointTests.ProductEndpointTests
+  commentId: T:Ecommerce.UnitTests.FastEndpointTests.ProductEndpointTests
+  href: Ecommerce.UnitTests.FastEndpointTests.ProductEndpointTests.html
+  name: ProductEndpointTests
+  nameWithType: ProductEndpointTests
+  fullName: Ecommerce.UnitTests.FastEndpointTests.ProductEndpointTests
+- uid: Ecommerce.UnitTests.FastEndpointTests.ReviewEndpointTests
+  commentId: T:Ecommerce.UnitTests.FastEndpointTests.ReviewEndpointTests
+  href: Ecommerce.UnitTests.FastEndpointTests.ReviewEndpointTests.html
+  name: ReviewEndpointTests
+  nameWithType: ReviewEndpointTests
+  fullName: Ecommerce.UnitTests.FastEndpointTests.ReviewEndpointTests
+- uid: Ecommerce.UnitTests.FastEndpointTests.SecurityEndpointTests
+  commentId: T:Ecommerce.UnitTests.FastEndpointTests.SecurityEndpointTests
+  href: Ecommerce.UnitTests.FastEndpointTests.SecurityEndpointTests.html
+  name: SecurityEndpointTests
+  nameWithType: SecurityEndpointTests
+  fullName: Ecommerce.UnitTests.FastEndpointTests.SecurityEndpointTests

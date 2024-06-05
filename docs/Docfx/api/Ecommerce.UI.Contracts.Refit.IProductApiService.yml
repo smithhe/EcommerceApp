@@ -1,0 +1,374 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Contracts.Refit.IProductApiService
+  commentId: T:Ecommerce.UI.Contracts.Refit.IProductApiService
+  id: IProductApiService
+  parent: Ecommerce.UI.Contracts.Refit
+  children:
+  - Ecommerce.UI.Contracts.Refit.IProductApiService.GetAllProductsByCategory(Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest)
+  - Ecommerce.UI.Contracts.Refit.IProductApiService.GetProductById(Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest)
+  langs:
+  - csharp
+  - vb
+  name: IProductApiService
+  nameWithType: IProductApiService
+  fullName: Ecommerce.UI.Contracts.Refit.IProductApiService
+  type: Interface
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/IProductApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IProductApiService
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/IProductApiService.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: public interface IProductApiService
+    content.vb: Public Interface IProductApiService
+- uid: Ecommerce.UI.Contracts.Refit.IProductApiService.GetAllProductsByCategory(Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.IProductApiService.GetAllProductsByCategory(Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest)
+  id: GetAllProductsByCategory(Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.IProductApiService
+  langs:
+  - csharp
+  - vb
+  name: GetAllProductsByCategory(GetAllProductsByCategoryIdApiRequest)
+  nameWithType: IProductApiService.GetAllProductsByCategory(GetAllProductsByCategoryIdApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.IProductApiService.GetAllProductsByCategory(Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/IProductApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllProductsByCategory
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/IProductApiService.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Get("/api/product/all")]
+
+      Task<ApiResponse<GetAllProductsByCategoryIdResponse>> GetAllProductsByCategory(GetAllProductsByCategoryIdApiRequest getAllProductsRequest)
+    parameters:
+    - id: getAllProductsRequest
+      type: Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}}
+    content.vb: >-
+      <Get("/api/product/all")>
+
+      Function GetAllProductsByCategory(getAllProductsRequest As GetAllProductsByCategoryIdApiRequest) As Task(Of ApiResponse(Of GetAllProductsByCategoryIdResponse))
+  overload: Ecommerce.UI.Contracts.Refit.IProductApiService.GetAllProductsByCategory*
+  attributes:
+  - type: Refit.GetAttribute
+    ctor: Refit.GetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/product/all
+- uid: Ecommerce.UI.Contracts.Refit.IProductApiService.GetProductById(Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.IProductApiService.GetProductById(Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest)
+  id: GetProductById(Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.IProductApiService
+  langs:
+  - csharp
+  - vb
+  name: GetProductById(GetProductByIdApiRequest)
+  nameWithType: IProductApiService.GetProductById(GetProductByIdApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.IProductApiService.GetProductById(Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/IProductApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetProductById
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/IProductApiService.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Get("/api/product/get")]
+
+      Task<ApiResponse<GetProductByIdResponse>> GetProductById(GetProductByIdApiRequest getProductByIdApiRequest)
+    parameters:
+    - id: getProductByIdApiRequest
+      type: Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Product.GetProductByIdResponse}}
+    content.vb: >-
+      <Get("/api/product/get")>
+
+      Function GetProductById(getProductByIdApiRequest As GetProductByIdApiRequest) As Task(Of ApiResponse(Of GetProductByIdResponse))
+  overload: Ecommerce.UI.Contracts.Refit.IProductApiService.GetProductById*
+  attributes:
+  - type: Refit.GetAttribute
+    ctor: Refit.GetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/product/get
+references:
+- uid: Ecommerce.UI.Contracts.Refit
+  commentId: N:Ecommerce.UI.Contracts.Refit
+  href: Ecommerce.html
+  name: Ecommerce.UI.Contracts.Refit
+  nameWithType: Ecommerce.UI.Contracts.Refit
+  fullName: Ecommerce.UI.Contracts.Refit
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts.Refit
+    name: Refit
+    href: Ecommerce.UI.Contracts.Refit.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts.Refit
+    name: Refit
+    href: Ecommerce.UI.Contracts.Refit.html
+- uid: Ecommerce.UI.Contracts.Refit.IProductApiService.GetAllProductsByCategory*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.IProductApiService.GetAllProductsByCategory
+  href: Ecommerce.UI.Contracts.Refit.IProductApiService.html#Ecommerce_UI_Contracts_Refit_IProductApiService_GetAllProductsByCategory_Ecommerce_Shared_Requests_Product_GetAllProductsByCategoryIdApiRequest_
+  name: GetAllProductsByCategory
+  nameWithType: IProductApiService.GetAllProductsByCategory
+  fullName: Ecommerce.UI.Contracts.Refit.IProductApiService.GetAllProductsByCategory
+- uid: Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest
+  parent: Ecommerce.Shared.Requests.Product
+  href: Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest.html
+  name: GetAllProductsByCategoryIdApiRequest
+  nameWithType: GetAllProductsByCategoryIdApiRequest
+  fullName: Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<GetAllProductsByCategoryIdResponse>>
+  nameWithType: Task<ApiResponse<GetAllProductsByCategoryIdResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of GetAllProductsByCategoryIdResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse))
+  name.vb: Task(Of ApiResponse(Of GetAllProductsByCategoryIdResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+    name: GetAllProductsByCategoryIdResponse
+    href: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+    name: GetAllProductsByCategoryIdResponse
+    href: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.Shared.Requests.Product
+  commentId: N:Ecommerce.Shared.Requests.Product
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Requests.Product
+  nameWithType: Ecommerce.Shared.Requests.Product
+  fullName: Ecommerce.Shared.Requests.Product
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Product
+    name: Product
+    href: Ecommerce.Shared.Requests.Product.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Product
+    name: Product
+    href: Ecommerce.Shared.Requests.Product.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UI.Contracts.Refit.IProductApiService.GetProductById*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.IProductApiService.GetProductById
+  href: Ecommerce.UI.Contracts.Refit.IProductApiService.html#Ecommerce_UI_Contracts_Refit_IProductApiService_GetProductById_Ecommerce_Shared_Requests_Product_GetProductByIdApiRequest_
+  name: GetProductById
+  nameWithType: IProductApiService.GetProductById
+  fullName: Ecommerce.UI.Contracts.Refit.IProductApiService.GetProductById
+- uid: Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest
+  parent: Ecommerce.Shared.Requests.Product
+  href: Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest.html
+  name: GetProductByIdApiRequest
+  nameWithType: GetProductByIdApiRequest
+  fullName: Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Product.GetProductByIdResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Product.GetProductByIdResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<GetProductByIdResponse>>
+  nameWithType: Task<ApiResponse<GetProductByIdResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.Product.GetProductByIdResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of GetProductByIdResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.Product.GetProductByIdResponse))
+  name.vb: Task(Of ApiResponse(Of GetProductByIdResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Product.GetProductByIdResponse
+    name: GetProductByIdResponse
+    href: Ecommerce.Shared.Responses.Product.GetProductByIdResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Product.GetProductByIdResponse
+    name: GetProductByIdResponse
+    href: Ecommerce.Shared.Responses.Product.GetProductByIdResponse.html
+  - name: )
+  - name: )

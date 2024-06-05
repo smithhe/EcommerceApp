@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  commentId: N:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  id: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  children:
+  - Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+  - Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  nameWithType: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+  commentId: T:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+  parent: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand.html
+  name: HandlePayPalSuccessCommand
+  nameWithType: HandlePayPalSuccessCommand
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+  commentId: T:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+  href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.html
+  name: HandlePayPalSuccessCommandHandler
+  nameWithType: HandlePayPalSuccessCommandHandler
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  commentId: N:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  nameWithType: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.PayPal.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+    name: HandlePayPalSuccess
+    href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.PayPal.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+    name: HandlePayPalSuccess
+    href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.html

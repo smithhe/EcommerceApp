@@ -1,0 +1,414 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Extensions.DateTimeExtensions
+  commentId: T:Ecommerce.Shared.Extensions.DateTimeExtensions
+  id: DateTimeExtensions
+  parent: Ecommerce.Shared.Extensions
+  children:
+  - Ecommerce.Shared.Extensions.DateTimeExtensions.StartOfNextDay(System.DateTime,System.Int32)
+  - Ecommerce.Shared.Extensions.DateTimeExtensions.ToEst(System.DateTime)
+  langs:
+  - csharp
+  - vb
+  name: DateTimeExtensions
+  nameWithType: DateTimeExtensions
+  fullName: Ecommerce.Shared.Extensions.DateTimeExtensions
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Extensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DateTimeExtensions
+    path: ../../Core/Ecommerce.Shared/Extensions/DateTimeExtensions.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Extensions
+  syntax:
+    content: public static class DateTimeExtensions
+    content.vb: Public Module DateTimeExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Shared.Extensions.DateTimeExtensions.StartOfNextDay(System.DateTime,System.Int32)
+  commentId: M:Ecommerce.Shared.Extensions.DateTimeExtensions.StartOfNextDay(System.DateTime,System.Int32)
+  id: StartOfNextDay(System.DateTime,System.Int32)
+  isExtensionMethod: true
+  parent: Ecommerce.Shared.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: StartOfNextDay(DateTime, int)
+  nameWithType: DateTimeExtensions.StartOfNextDay(DateTime, int)
+  fullName: Ecommerce.Shared.Extensions.DateTimeExtensions.StartOfNextDay(System.DateTime, int)
+  type: Method
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Extensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: StartOfNextDay
+    path: ../../Core/Ecommerce.Shared/Extensions/DateTimeExtensions.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Extensions
+  syntax:
+    content: public static DateTime StartOfNextDay(this DateTime date, int startHour = 0)
+    parameters:
+    - id: date
+      type: System.DateTime
+    - id: startHour
+      type: System.Int32
+    return:
+      type: System.DateTime
+    content.vb: Public Shared Function StartOfNextDay([date] As Date, startHour As Integer = 0) As Date
+  overload: Ecommerce.Shared.Extensions.DateTimeExtensions.StartOfNextDay*
+  nameWithType.vb: DateTimeExtensions.StartOfNextDay(Date, Integer)
+  fullName.vb: Ecommerce.Shared.Extensions.DateTimeExtensions.StartOfNextDay(Date, Integer)
+  name.vb: StartOfNextDay(Date, Integer)
+- uid: Ecommerce.Shared.Extensions.DateTimeExtensions.ToEst(System.DateTime)
+  commentId: M:Ecommerce.Shared.Extensions.DateTimeExtensions.ToEst(System.DateTime)
+  id: ToEst(System.DateTime)
+  isExtensionMethod: true
+  parent: Ecommerce.Shared.Extensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToEst(DateTime)
+  nameWithType: DateTimeExtensions.ToEst(DateTime)
+  fullName: Ecommerce.Shared.Extensions.DateTimeExtensions.ToEst(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Extensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ToEst
+    path: ../../Core/Ecommerce.Shared/Extensions/DateTimeExtensions.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Extensions
+  syntax:
+    content: public static DateTime ToEst(this DateTime date)
+    parameters:
+    - id: date
+      type: System.DateTime
+    return:
+      type: System.DateTime
+    content.vb: Public Shared Function ToEst([date] As Date) As Date
+  overload: Ecommerce.Shared.Extensions.DateTimeExtensions.ToEst*
+  nameWithType.vb: DateTimeExtensions.ToEst(Date)
+  fullName.vb: Ecommerce.Shared.Extensions.DateTimeExtensions.ToEst(Date)
+  name.vb: ToEst(Date)
+references:
+- uid: Ecommerce.Shared.Extensions
+  commentId: N:Ecommerce.Shared.Extensions
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Extensions
+  nameWithType: Ecommerce.Shared.Extensions
+  fullName: Ecommerce.Shared.Extensions
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Extensions
+    name: Extensions
+    href: Ecommerce.Shared.Extensions.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Extensions
+    name: Extensions
+    href: Ecommerce.Shared.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Shared.Extensions.DateTimeExtensions.StartOfNextDay*
+  commentId: Overload:Ecommerce.Shared.Extensions.DateTimeExtensions.StartOfNextDay
+  href: Ecommerce.Shared.Extensions.DateTimeExtensions.html#Ecommerce_Shared_Extensions_DateTimeExtensions_StartOfNextDay_System_DateTime_System_Int32_
+  name: StartOfNextDay
+  nameWithType: DateTimeExtensions.StartOfNextDay
+  fullName: Ecommerce.Shared.Extensions.DateTimeExtensions.StartOfNextDay
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Ecommerce.Shared.Extensions.DateTimeExtensions.ToEst*
+  commentId: Overload:Ecommerce.Shared.Extensions.DateTimeExtensions.ToEst
+  href: Ecommerce.Shared.Extensions.DateTimeExtensions.html#Ecommerce_Shared_Extensions_DateTimeExtensions_ToEst_System_DateTime_
+  name: ToEst
+  nameWithType: DateTimeExtensions.ToEst
+  fullName: Ecommerce.Shared.Extensions.DateTimeExtensions.ToEst

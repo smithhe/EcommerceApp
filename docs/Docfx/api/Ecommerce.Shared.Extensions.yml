@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Extensions
+  commentId: N:Ecommerce.Shared.Extensions
+  id: Ecommerce.Shared.Extensions
+  children:
+  - Ecommerce.Shared.Extensions.DateTimeExtensions
+  - Ecommerce.Shared.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Extensions
+  nameWithType: Ecommerce.Shared.Extensions
+  fullName: Ecommerce.Shared.Extensions
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Extensions.DateTimeExtensions
+  commentId: T:Ecommerce.Shared.Extensions.DateTimeExtensions
+  href: Ecommerce.Shared.Extensions.DateTimeExtensions.html
+  name: DateTimeExtensions
+  nameWithType: DateTimeExtensions
+  fullName: Ecommerce.Shared.Extensions.DateTimeExtensions
+- uid: Ecommerce.Shared.Extensions.StringExtensions
+  commentId: T:Ecommerce.Shared.Extensions.StringExtensions
+  href: Ecommerce.Shared.Extensions.StringExtensions.html
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: Ecommerce.Shared.Extensions.StringExtensions

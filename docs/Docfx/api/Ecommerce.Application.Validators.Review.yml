@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Validators.Review
+  commentId: N:Ecommerce.Application.Validators.Review
+  id: Ecommerce.Application.Validators.Review
+  children:
+  - Ecommerce.Application.Validators.Review.CreateReviewValidator
+  - Ecommerce.Application.Validators.Review.UpdateReviewValidator
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Validators.Review
+  nameWithType: Ecommerce.Application.Validators.Review
+  fullName: Ecommerce.Application.Validators.Review
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Validators.Review.CreateReviewValidator
+  commentId: T:Ecommerce.Application.Validators.Review.CreateReviewValidator
+  href: Ecommerce.Application.Validators.Review.CreateReviewValidator.html
+  name: CreateReviewValidator
+  nameWithType: CreateReviewValidator
+  fullName: Ecommerce.Application.Validators.Review.CreateReviewValidator
+- uid: Ecommerce.Application.Validators.Review.UpdateReviewValidator
+  commentId: T:Ecommerce.Application.Validators.Review.UpdateReviewValidator
+  href: Ecommerce.Application.Validators.Review.UpdateReviewValidator.html
+  name: UpdateReviewValidator
+  nameWithType: UpdateReviewValidator
+  fullName: Ecommerce.Application.Validators.Review.UpdateReviewValidator

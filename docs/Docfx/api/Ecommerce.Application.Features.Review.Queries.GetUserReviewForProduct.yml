@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  commentId: N:Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  id: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  children:
+  - Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQuery
+  - Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  nameWithType: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  fullName: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQuery
+  commentId: T:Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQuery
+  parent: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  href: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQuery.html
+  name: GetUserReviewForProductQuery
+  nameWithType: GetUserReviewForProductQuery
+  fullName: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQuery
+- uid: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQueryHandler
+  commentId: T:Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQueryHandler
+  href: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQueryHandler.html
+  name: GetUserReviewForProductQueryHandler
+  nameWithType: GetUserReviewForProductQueryHandler
+  fullName: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQueryHandler
+- uid: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  commentId: N:Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  nameWithType: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  fullName: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Review.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+    name: GetUserReviewForProduct
+    href: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Review.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+    name: GetUserReviewForProduct
+    href: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.html

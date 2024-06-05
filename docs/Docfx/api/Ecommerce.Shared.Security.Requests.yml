@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Security.Requests
+  commentId: N:Ecommerce.Shared.Security.Requests
+  id: Ecommerce.Shared.Security.Requests
+  children:
+  - Ecommerce.Shared.Security.Requests.AuthenticationRequest
+  - Ecommerce.Shared.Security.Requests.ConfirmEmailRequest
+  - Ecommerce.Shared.Security.Requests.CreateUserRequest
+  - Ecommerce.Shared.Security.Requests.LogoutUserRequest
+  - Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+  - Ecommerce.Shared.Security.Requests.UpdatePasswordRequest
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Security.Requests
+  nameWithType: Ecommerce.Shared.Security.Requests
+  fullName: Ecommerce.Shared.Security.Requests
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.AuthenticationRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.AuthenticationRequest.html
+  name: AuthenticationRequest
+  nameWithType: AuthenticationRequest
+  fullName: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+- uid: Ecommerce.Shared.Security.Requests.ConfirmEmailRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.ConfirmEmailRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.ConfirmEmailRequest.html
+  name: ConfirmEmailRequest
+  nameWithType: ConfirmEmailRequest
+  fullName: Ecommerce.Shared.Security.Requests.ConfirmEmailRequest
+- uid: Ecommerce.Shared.Security.Requests.CreateUserRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.CreateUserRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.CreateUserRequest.html
+  name: CreateUserRequest
+  nameWithType: CreateUserRequest
+  fullName: Ecommerce.Shared.Security.Requests.CreateUserRequest
+- uid: Ecommerce.Shared.Security.Requests.LogoutUserRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.LogoutUserRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.LogoutUserRequest.html
+  name: LogoutUserRequest
+  nameWithType: LogoutUserRequest
+  fullName: Ecommerce.Shared.Security.Requests.LogoutUserRequest
+- uid: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest.html
+  name: UpdateEcommerceUserRequest
+  nameWithType: UpdateEcommerceUserRequest
+  fullName: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+- uid: Ecommerce.Shared.Security.Requests.UpdatePasswordRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.UpdatePasswordRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.UpdatePasswordRequest.html
+  name: UpdatePasswordRequest
+  nameWithType: UpdatePasswordRequest
+  fullName: Ecommerce.Shared.Security.Requests.UpdatePasswordRequest
+- uid: Ecommerce.Shared.Security.Requests
+  commentId: N:Ecommerce.Shared.Security.Requests
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Security.Requests
+  nameWithType: Ecommerce.Shared.Security.Requests
+  fullName: Ecommerce.Shared.Security.Requests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  - name: .
+  - uid: Ecommerce.Shared.Security.Requests
+    name: Requests
+    href: Ecommerce.Shared.Security.Requests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  - name: .
+  - uid: Ecommerce.Shared.Security.Requests
+    name: Requests
+    href: Ecommerce.Shared.Security.Requests.html

@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models
+  commentId: N:Ecommerce.PayPal.Models
+  id: Ecommerce.PayPal.Models
+  children:
+  - Ecommerce.PayPal.Models.Address
+  - Ecommerce.PayPal.Models.BreakDown
+  - Ecommerce.PayPal.Models.Currency
+  - Ecommerce.PayPal.Models.ExperienceContext
+  - Ecommerce.PayPal.Models.Item
+  - Ecommerce.PayPal.Models.Link
+  - Ecommerce.PayPal.Models.Name
+  - Ecommerce.PayPal.Models.PayPal
+  - Ecommerce.PayPal.Models.Payee
+  - Ecommerce.PayPal.Models.PaymentSource
+  - Ecommerce.PayPal.Models.Phone
+  - Ecommerce.PayPal.Models.PhoneNumber
+  - Ecommerce.PayPal.Models.PurchaseAmount
+  - Ecommerce.PayPal.Models.PurchaseUnit
+  - Ecommerce.PayPal.Models.Shipping
+  - Ecommerce.PayPal.Models.ShippingOptions
+  - Ecommerce.PayPal.Models.TaxInfo
+  - Ecommerce.PayPal.Models.Upc
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.PayPal.Models
+  nameWithType: Ecommerce.PayPal.Models
+  fullName: Ecommerce.PayPal.Models
+  type: Namespace
+  assemblies:
+  - Ecommerce.PayPal
+references:
+- uid: Ecommerce.PayPal.Models.Address
+  commentId: T:Ecommerce.PayPal.Models.Address
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Address.html
+  name: Address
+  nameWithType: Address
+  fullName: Ecommerce.PayPal.Models.Address
+- uid: Ecommerce.PayPal.Models.BreakDown
+  commentId: T:Ecommerce.PayPal.Models.BreakDown
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.BreakDown.html
+  name: BreakDown
+  nameWithType: BreakDown
+  fullName: Ecommerce.PayPal.Models.BreakDown
+- uid: Ecommerce.PayPal.Models.Currency
+  commentId: T:Ecommerce.PayPal.Models.Currency
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Currency.html
+  name: Currency
+  nameWithType: Currency
+  fullName: Ecommerce.PayPal.Models.Currency
+- uid: Ecommerce.PayPal.Models.ExperienceContext
+  commentId: T:Ecommerce.PayPal.Models.ExperienceContext
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.ExperienceContext.html
+  name: ExperienceContext
+  nameWithType: ExperienceContext
+  fullName: Ecommerce.PayPal.Models.ExperienceContext
+- uid: Ecommerce.PayPal.Models.Item
+  commentId: T:Ecommerce.PayPal.Models.Item
+  href: Ecommerce.PayPal.Models.Item.html
+  name: Item
+  nameWithType: Item
+  fullName: Ecommerce.PayPal.Models.Item
+- uid: Ecommerce.PayPal.Models.Link
+  commentId: T:Ecommerce.PayPal.Models.Link
+  href: Ecommerce.PayPal.Models.Link.html
+  name: Link
+  nameWithType: Link
+  fullName: Ecommerce.PayPal.Models.Link
+- uid: Ecommerce.PayPal.Models.Name
+  commentId: T:Ecommerce.PayPal.Models.Name
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Name.html
+  name: Name
+  nameWithType: Name
+  fullName: Ecommerce.PayPal.Models.Name
+- uid: Ecommerce.PayPal.Models.Payee
+  commentId: T:Ecommerce.PayPal.Models.Payee
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Payee.html
+  name: Payee
+  nameWithType: Payee
+  fullName: Ecommerce.PayPal.Models.Payee
+- uid: Ecommerce.PayPal.Models.PaymentSource
+  commentId: T:Ecommerce.PayPal.Models.PaymentSource
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.PaymentSource.html
+  name: PaymentSource
+  nameWithType: PaymentSource
+  fullName: Ecommerce.PayPal.Models.PaymentSource
+- uid: Ecommerce.PayPal.Models.PayPal
+  commentId: T:Ecommerce.PayPal.Models.PayPal
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.PayPal.html
+  name: PayPal
+  nameWithType: PayPal
+  fullName: Ecommerce.PayPal.Models.PayPal
+- uid: Ecommerce.PayPal.Models.Phone
+  commentId: T:Ecommerce.PayPal.Models.Phone
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Phone.html
+  name: Phone
+  nameWithType: Phone
+  fullName: Ecommerce.PayPal.Models.Phone
+- uid: Ecommerce.PayPal.Models.PhoneNumber
+  commentId: T:Ecommerce.PayPal.Models.PhoneNumber
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.PhoneNumber.html
+  name: PhoneNumber
+  nameWithType: PhoneNumber
+  fullName: Ecommerce.PayPal.Models.PhoneNumber
+- uid: Ecommerce.PayPal.Models.PurchaseAmount
+  commentId: T:Ecommerce.PayPal.Models.PurchaseAmount
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.PurchaseAmount.html
+  name: PurchaseAmount
+  nameWithType: PurchaseAmount
+  fullName: Ecommerce.PayPal.Models.PurchaseAmount
+- uid: Ecommerce.PayPal.Models.PurchaseUnit
+  commentId: T:Ecommerce.PayPal.Models.PurchaseUnit
+  href: Ecommerce.PayPal.Models.PurchaseUnit.html
+  name: PurchaseUnit
+  nameWithType: PurchaseUnit
+  fullName: Ecommerce.PayPal.Models.PurchaseUnit
+- uid: Ecommerce.PayPal.Models.Shipping
+  commentId: T:Ecommerce.PayPal.Models.Shipping
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Shipping.html
+  name: Shipping
+  nameWithType: Shipping
+  fullName: Ecommerce.PayPal.Models.Shipping
+- uid: Ecommerce.PayPal.Models.ShippingOptions
+  commentId: T:Ecommerce.PayPal.Models.ShippingOptions
+  href: Ecommerce.PayPal.Models.ShippingOptions.html
+  name: ShippingOptions
+  nameWithType: ShippingOptions
+  fullName: Ecommerce.PayPal.Models.ShippingOptions
+- uid: Ecommerce.PayPal.Models.TaxInfo
+  commentId: T:Ecommerce.PayPal.Models.TaxInfo
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.TaxInfo.html
+  name: TaxInfo
+  nameWithType: TaxInfo
+  fullName: Ecommerce.PayPal.Models.TaxInfo
+- uid: Ecommerce.PayPal.Models.Upc
+  commentId: T:Ecommerce.PayPal.Models.Upc
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Upc.html
+  name: Upc
+  nameWithType: Upc
+  fullName: Ecommerce.PayPal.Models.Upc
+- uid: Ecommerce.PayPal.Models
+  commentId: N:Ecommerce.PayPal.Models
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Models
+  nameWithType: Ecommerce.PayPal.Models
+  fullName: Ecommerce.PayPal.Models
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html

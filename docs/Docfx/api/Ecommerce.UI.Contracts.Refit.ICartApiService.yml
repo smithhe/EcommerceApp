@@ -1,0 +1,688 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService
+  commentId: T:Ecommerce.UI.Contracts.Refit.ICartApiService
+  id: ICartApiService
+  parent: Ecommerce.UI.Contracts.Refit
+  children:
+  - Ecommerce.UI.Contracts.Refit.ICartApiService.CreateCartItem(Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest)
+  - Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteAllCartItems(Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest)
+  - Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteCartItem(Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest)
+  - Ecommerce.UI.Contracts.Refit.ICartApiService.GetUserCartItems(Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest)
+  - Ecommerce.UI.Contracts.Refit.ICartApiService.UpdateCartItem(Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest)
+  langs:
+  - csharp
+  - vb
+  name: ICartApiService
+  nameWithType: ICartApiService
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService
+  type: Interface
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ICartApiService
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: public interface ICartApiService
+    content.vb: Public Interface ICartApiService
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService.CreateCartItem(Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.ICartApiService.CreateCartItem(Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest)
+  id: CreateCartItem(Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.ICartApiService
+  langs:
+  - csharp
+  - vb
+  name: CreateCartItem(CreateCartItemApiRequest)
+  nameWithType: ICartApiService.CreateCartItem(CreateCartItemApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService.CreateCartItem(Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCartItem
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Post("/api/cartitem/create")]
+
+      Task<ApiResponse<CreateCartItemResponse>> CreateCartItem(CreateCartItemApiRequest createCartItemApiRequest)
+    parameters:
+    - id: createCartItemApiRequest
+      type: Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse}}
+    content.vb: >-
+      <Post("/api/cartitem/create")>
+
+      Function CreateCartItem(createCartItemApiRequest As CreateCartItemApiRequest) As Task(Of ApiResponse(Of CreateCartItemResponse))
+  overload: Ecommerce.UI.Contracts.Refit.ICartApiService.CreateCartItem*
+  attributes:
+  - type: Refit.PostAttribute
+    ctor: Refit.PostAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/cartitem/create
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteCartItem(Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteCartItem(Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest)
+  id: DeleteCartItem(Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.ICartApiService
+  langs:
+  - csharp
+  - vb
+  name: DeleteCartItem(DeleteCartItemApiRequest)
+  nameWithType: ICartApiService.DeleteCartItem(DeleteCartItemApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteCartItem(Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteCartItem
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Delete("/api/cartitem/delete")]
+
+      Task<ApiResponse<DeleteCartItemResponse>> DeleteCartItem(DeleteCartItemApiRequest deleteCartItemApiRequest)
+    parameters:
+    - id: deleteCartItemApiRequest
+      type: Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest
+      attributes:
+      - type: Refit.BodyAttribute
+        ctor: Refit.BodyAttribute.#ctor
+        arguments: []
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}}
+    content.vb: >-
+      <Delete("/api/cartitem/delete")>
+
+      Function DeleteCartItem(deleteCartItemApiRequest As DeleteCartItemApiRequest) As Task(Of ApiResponse(Of DeleteCartItemResponse))
+  overload: Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteCartItem*
+  attributes:
+  - type: Refit.DeleteAttribute
+    ctor: Refit.DeleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/cartitem/delete
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteAllCartItems(Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteAllCartItems(Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest)
+  id: DeleteAllCartItems(Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.ICartApiService
+  langs:
+  - csharp
+  - vb
+  name: DeleteAllCartItems(DeleteUserCartItemsApiRequest)
+  nameWithType: ICartApiService.DeleteAllCartItems(DeleteUserCartItemsApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteAllCartItems(Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteAllCartItems
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Delete("/api/cartitem/user/delete")]
+
+      Task<ApiResponse<DeleteUserCartItemsResponse>> DeleteAllCartItems(DeleteUserCartItemsApiRequest deleteUserCartItemsApiRequest)
+    parameters:
+    - id: deleteUserCartItemsApiRequest
+      type: Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest
+      attributes:
+      - type: Refit.BodyAttribute
+        ctor: Refit.BodyAttribute.#ctor
+        arguments: []
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse}}
+    content.vb: >-
+      <Delete("/api/cartitem/user/delete")>
+
+      Function DeleteAllCartItems(deleteUserCartItemsApiRequest As DeleteUserCartItemsApiRequest) As Task(Of ApiResponse(Of DeleteUserCartItemsResponse))
+  overload: Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteAllCartItems*
+  attributes:
+  - type: Refit.DeleteAttribute
+    ctor: Refit.DeleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/cartitem/user/delete
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService.UpdateCartItem(Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.ICartApiService.UpdateCartItem(Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest)
+  id: UpdateCartItem(Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.ICartApiService
+  langs:
+  - csharp
+  - vb
+  name: UpdateCartItem(UpdateCartItemApiRequest)
+  nameWithType: ICartApiService.UpdateCartItem(UpdateCartItemApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService.UpdateCartItem(Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCartItem
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+    startLine: 18
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Put("/api/cartitem/update")]
+
+      Task<ApiResponse<UpdateCartItemResponse>> UpdateCartItem(UpdateCartItemApiRequest updateCartItemApiRequest)
+    parameters:
+    - id: updateCartItemApiRequest
+      type: Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse}}
+    content.vb: >-
+      <Put("/api/cartitem/update")>
+
+      Function UpdateCartItem(updateCartItemApiRequest As UpdateCartItemApiRequest) As Task(Of ApiResponse(Of UpdateCartItemResponse))
+  overload: Ecommerce.UI.Contracts.Refit.ICartApiService.UpdateCartItem*
+  attributes:
+  - type: Refit.PutAttribute
+    ctor: Refit.PutAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/cartitem/update
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService.GetUserCartItems(Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.ICartApiService.GetUserCartItems(Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest)
+  id: GetUserCartItems(Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.ICartApiService
+  langs:
+  - csharp
+  - vb
+  name: GetUserCartItems(GetUserCartItemsApiRequest)
+  nameWithType: ICartApiService.GetUserCartItems(GetUserCartItemsApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService.GetUserCartItems(Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserCartItems
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ICartApiService.cs
+    startLine: 21
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Get("/api/cartitem/all")]
+
+      Task<ApiResponse<GetUserCartItemsResponse>> GetUserCartItems(GetUserCartItemsApiRequest getUserCartItemsApiRequest)
+    parameters:
+    - id: getUserCartItemsApiRequest
+      type: Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}}
+    content.vb: >-
+      <Get("/api/cartitem/all")>
+
+      Function GetUserCartItems(getUserCartItemsApiRequest As GetUserCartItemsApiRequest) As Task(Of ApiResponse(Of GetUserCartItemsResponse))
+  overload: Ecommerce.UI.Contracts.Refit.ICartApiService.GetUserCartItems*
+  attributes:
+  - type: Refit.GetAttribute
+    ctor: Refit.GetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/cartitem/all
+references:
+- uid: Ecommerce.UI.Contracts.Refit
+  commentId: N:Ecommerce.UI.Contracts.Refit
+  href: Ecommerce.html
+  name: Ecommerce.UI.Contracts.Refit
+  nameWithType: Ecommerce.UI.Contracts.Refit
+  fullName: Ecommerce.UI.Contracts.Refit
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts.Refit
+    name: Refit
+    href: Ecommerce.UI.Contracts.Refit.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts.Refit
+    name: Refit
+    href: Ecommerce.UI.Contracts.Refit.html
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService.CreateCartItem*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.ICartApiService.CreateCartItem
+  href: Ecommerce.UI.Contracts.Refit.ICartApiService.html#Ecommerce_UI_Contracts_Refit_ICartApiService_CreateCartItem_Ecommerce_Shared_Requests_CartItem_CreateCartItemApiRequest_
+  name: CreateCartItem
+  nameWithType: ICartApiService.CreateCartItem
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService.CreateCartItem
+- uid: Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest
+  commentId: T:Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest
+  parent: Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest.html
+  name: CreateCartItemApiRequest
+  nameWithType: CreateCartItemApiRequest
+  fullName: Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<CreateCartItemResponse>>
+  nameWithType: Task<ApiResponse<CreateCartItemResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of CreateCartItemResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse))
+  name.vb: Task(Of ApiResponse(Of CreateCartItemResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+    name: CreateCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+    name: CreateCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.Shared.Requests.CartItem
+  commentId: N:Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Requests.CartItem
+  nameWithType: Ecommerce.Shared.Requests.CartItem
+  fullName: Ecommerce.Shared.Requests.CartItem
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.CartItem
+    name: CartItem
+    href: Ecommerce.Shared.Requests.CartItem.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.CartItem
+    name: CartItem
+    href: Ecommerce.Shared.Requests.CartItem.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteCartItem*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteCartItem
+  href: Ecommerce.UI.Contracts.Refit.ICartApiService.html#Ecommerce_UI_Contracts_Refit_ICartApiService_DeleteCartItem_Ecommerce_Shared_Requests_CartItem_DeleteCartItemApiRequest_
+  name: DeleteCartItem
+  nameWithType: ICartApiService.DeleteCartItem
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteCartItem
+- uid: Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest
+  commentId: T:Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest
+  parent: Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest.html
+  name: DeleteCartItemApiRequest
+  nameWithType: DeleteCartItemApiRequest
+  fullName: Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<DeleteCartItemResponse>>
+  nameWithType: Task<ApiResponse<DeleteCartItemResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of DeleteCartItemResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse))
+  name.vb: Task(Of ApiResponse(Of DeleteCartItemResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+    name: DeleteCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+    name: DeleteCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteAllCartItems*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteAllCartItems
+  href: Ecommerce.UI.Contracts.Refit.ICartApiService.html#Ecommerce_UI_Contracts_Refit_ICartApiService_DeleteAllCartItems_Ecommerce_Shared_Requests_CartItem_DeleteUserCartItemsApiRequest_
+  name: DeleteAllCartItems
+  nameWithType: ICartApiService.DeleteAllCartItems
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService.DeleteAllCartItems
+- uid: Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest
+  commentId: T:Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest
+  parent: Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest.html
+  name: DeleteUserCartItemsApiRequest
+  nameWithType: DeleteUserCartItemsApiRequest
+  fullName: Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<DeleteUserCartItemsResponse>>
+  nameWithType: Task<ApiResponse<DeleteUserCartItemsResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of DeleteUserCartItemsResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse))
+  name.vb: Task(Of ApiResponse(Of DeleteUserCartItemsResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse
+    name: DeleteUserCartItemsResponse
+    href: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse
+    name: DeleteUserCartItemsResponse
+    href: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService.UpdateCartItem*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.ICartApiService.UpdateCartItem
+  href: Ecommerce.UI.Contracts.Refit.ICartApiService.html#Ecommerce_UI_Contracts_Refit_ICartApiService_UpdateCartItem_Ecommerce_Shared_Requests_CartItem_UpdateCartItemApiRequest_
+  name: UpdateCartItem
+  nameWithType: ICartApiService.UpdateCartItem
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService.UpdateCartItem
+- uid: Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest
+  commentId: T:Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest
+  parent: Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest.html
+  name: UpdateCartItemApiRequest
+  nameWithType: UpdateCartItemApiRequest
+  fullName: Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<UpdateCartItemResponse>>
+  nameWithType: Task<ApiResponse<UpdateCartItemResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of UpdateCartItemResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse))
+  name.vb: Task(Of ApiResponse(Of UpdateCartItemResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse
+    name: UpdateCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse
+    name: UpdateCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService.GetUserCartItems*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.ICartApiService.GetUserCartItems
+  href: Ecommerce.UI.Contracts.Refit.ICartApiService.html#Ecommerce_UI_Contracts_Refit_ICartApiService_GetUserCartItems_Ecommerce_Shared_Requests_CartItem_GetUserCartItemsApiRequest_
+  name: GetUserCartItems
+  nameWithType: ICartApiService.GetUserCartItems
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService.GetUserCartItems
+- uid: Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest
+  commentId: T:Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest
+  parent: Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest.html
+  name: GetUserCartItemsApiRequest
+  nameWithType: GetUserCartItemsApiRequest
+  fullName: Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<GetUserCartItemsResponse>>
+  nameWithType: Task<ApiResponse<GetUserCartItemsResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of GetUserCartItemsResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse))
+  name.vb: Task(Of ApiResponse(Of GetUserCartItemsResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+    name: GetUserCartItemsResponse
+    href: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+    name: GetUserCartItemsResponse
+    href: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse.html
+  - name: )
+  - name: )

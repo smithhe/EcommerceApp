@@ -1,0 +1,1484 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  id: CartItemTests
+  parent: Ecommerce.UnitTests.ApplicationTests
+  children:
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.Setup
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  langs:
+  - csharp
+  - vb
+  name: CartItemTests
+  nameWithType: CartItemTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  type: Class
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CartItemTests
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 24
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class CartItemTests
+    content.vb: >-
+      <TestFixture>
+
+      Public Class CartItemTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.Setup
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.Setup
+  id: Setup
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: CartItemTests.Setup()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.Setup()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Setup
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 37
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void Setup()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub Setup()
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.Setup*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  id: CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 68
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  id: CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 112
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  id: CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse()
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 142
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse
+  id: CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse()
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 172
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  id: CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse()
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 218
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  id: CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse()
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 258
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse
+  id: CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse()
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 310
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  id: DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  nameWithType: CartItemTests.DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 357
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  id: DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+  nameWithType: CartItemTests.DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 386
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  id: DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse()
+  nameWithType: CartItemTests.DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 413
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  id: DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  nameWithType: CartItemTests.DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 446
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse
+  id: DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse()
+  nameWithType: CartItemTests.DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 474
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  id: DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse()
+  nameWithType: CartItemTests.DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 500
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  id: UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 532
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  id: UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 575
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  id: UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse()
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 604
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse
+  id: UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse()
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 633
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  id: UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse()
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 678
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  id: UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse()
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 719
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse
+  id: UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse()
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 770
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  id: GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  nameWithType: CartItemTests.GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 817
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse
+  id: GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse()
+  nameWithType: CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 850
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse
+  id: GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse()
+  nameWithType: CartItemTests.GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 880
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse
+  id: GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.CartItemTests
+  langs:
+  - csharp
+  - vb
+  name: GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse()
+  nameWithType: CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/CartItemTests.cs
+    startLine: 908
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: Ecommerce.UnitTests.ApplicationTests
+  commentId: N:Ecommerce.UnitTests.ApplicationTests
+  href: Ecommerce.html
+  name: Ecommerce.UnitTests.ApplicationTests
+  nameWithType: Ecommerce.UnitTests.ApplicationTests
+  fullName: Ecommerce.UnitTests.ApplicationTests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.Setup*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.Setup
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_Setup
+  name: Setup
+  nameWithType: CartItemTests.Setup
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.Setup
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  name: CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  name: CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  name: CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse
+  name: CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithCartItemAlreadyExists_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  name: CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  name: CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse
+  name: CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse
+  nameWithType: CartItemTests.CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.CreateCartItemCommandHandler_WhenSqlFailsToCreate_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  name: DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  nameWithType: CartItemTests.DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  name: DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  nameWithType: CartItemTests.DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  name: DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  nameWithType: CartItemTests.DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteCartItemCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  name: DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  nameWithType: CartItemTests.DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse
+  name: DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse
+  nameWithType: CartItemTests.DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WithEmptyUserId_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  name: DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  nameWithType: CartItemTests.DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.DeleteUserCartItemsCommandHandler_WhenSqlFailsToDelete_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  name: UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  name: UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullCartItemDto_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  name: UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithNullOrEmptyUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse
+  name: UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithCartItemNotFound_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  name: UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithProductNotFound_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  name: UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WithQuantityLessThanOne_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse
+  name: UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse
+  nameWithType: CartItemTests.UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.UpdateCartItemCommandHandler_WhenSqlFailsToUpdate_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  name: GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  nameWithType: CartItemTests.GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccessResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse
+  name: GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse
+  nameWithType: CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsEmptyList_ReturnsSuccessResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse
+  name: GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse
+  nameWithType: CartItemTests.GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WithEmptyUserId_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.CartItemTests.html#Ecommerce_UnitTests_ApplicationTests_CartItemTests_GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse
+  name: GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse
+  nameWithType: CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.CartItemTests.GetUserCartItemsQueryHandler_WhenSqlReturnsNull_ReturnsFailedResponse

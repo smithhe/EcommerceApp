@@ -1,0 +1,941 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler
+  commentId: T:Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler
+  id: DeleteCartItemCommandHandler
+  parent: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  children:
+  - Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.ICartItemRepository)
+  - Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: DeleteCartItemCommandHandler
+  nameWithType: DeleteCartItemCommandHandler
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/CartItem/Commands/DeleteCartItem/DeleteCartItemCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteCartItemCommandHandler
+    path: ../../Core/Ecommerce.Application/Features/CartItem/Commands/DeleteCartItem/DeleteCartItemCommandHandler.cs
+    startLine: 14
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  summary: A <xref href="MediatR.Mediator" data-throw-if-not-resolved="false"></xref> request handler for <xref href="Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: 'public class DeleteCartItemCommandHandler : IRequestHandler<DeleteCartItemCommand, DeleteCartItemResponse>'
+    content.vb: Public Class DeleteCartItemCommandHandler Implements IRequestHandler(Of DeleteCartItemCommand, DeleteCartItemResponse)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.ICartItemRepository)
+  commentId: M:Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.ICartItemRepository)
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.ICartItemRepository)'
+  parent: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: DeleteCartItemCommandHandler(ILogger<DeleteCartItemCommandHandler>, IMapper, ICartItemRepository)
+  nameWithType: DeleteCartItemCommandHandler.DeleteCartItemCommandHandler(ILogger<DeleteCartItemCommandHandler>, IMapper, ICartItemRepository)
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.DeleteCartItemCommandHandler(Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler>, AutoMapper.IMapper, Ecommerce.Persistence.Contracts.ICartItemRepository)
+  type: Constructor
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/CartItem/Commands/DeleteCartItem/DeleteCartItemCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: .ctor
+    path: ../../Core/Ecommerce.Application/Features/CartItem/Commands/DeleteCartItem/DeleteCartItemCommandHandler.cs
+    startLine: 26
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  summary: Initializes a new instance of the <xref href="Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public DeleteCartItemCommandHandler(ILogger<DeleteCartItemCommandHandler> logger, IMapper mapper, ICartItemRepository cartItemRepository)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler}
+      description: The <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref> instance used for logging.
+    - id: mapper
+      type: AutoMapper.IMapper
+      description: The <xref href="AutoMapper.IMapper" data-throw-if-not-resolved="false"></xref> instance used for mapping objects.
+    - id: cartItemRepository
+      type: Ecommerce.Persistence.Contracts.ICartItemRepository
+      description: The <xref href="Ecommerce.Persistence.Contracts.ICartItemRepository" data-throw-if-not-resolved="false"></xref> instance used for data access for <xref href="Ecommerce.Application.Features.CartItem" data-throw-if-not-resolved="false"></xref> entities.
+    content.vb: Public Sub New(logger As ILogger(Of DeleteCartItemCommandHandler), mapper As IMapper, cartItemRepository As ICartItemRepository)
+  overload: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.#ctor*
+  nameWithType.vb: DeleteCartItemCommandHandler.New(ILogger(Of DeleteCartItemCommandHandler), IMapper, ICartItemRepository)
+  fullName.vb: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.New(Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler), AutoMapper.IMapper, Ecommerce.Persistence.Contracts.ICartItemRepository)
+  name.vb: New(ILogger(Of DeleteCartItemCommandHandler), IMapper, ICartItemRepository)
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,System.Threading.CancellationToken)
+  commentId: M:Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,System.Threading.CancellationToken)
+  id: Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,System.Threading.CancellationToken)
+  parent: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Handle(DeleteCartItemCommand, CancellationToken)
+  nameWithType: DeleteCartItemCommandHandler.Handle(DeleteCartItemCommand, CancellationToken)
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/CartItem/Commands/DeleteCartItem/DeleteCartItemCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Handle
+    path: ../../Core/Ecommerce.Application/Features/CartItem/Commands/DeleteCartItem/DeleteCartItemCommandHandler.cs
+    startLine: 43
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  summary: Handles the <xref href="Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand" data-throw-if-not-resolved="false"></xref> request
+  example: []
+  syntax:
+    content: public Task<DeleteCartItemResponse> Handle(DeleteCartItemCommand command, CancellationToken cancellationToken)
+    parameters:
+    - id: command
+      type: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand
+      description: The <xref href="Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand" data-throw-if-not-resolved="false"></xref> request to be handled.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> that can be used to request cancellation of the operation.
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}
+      description: >-
+        A <xref href="Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse" data-throw-if-not-resolved="false"></xref> with Success being <code>true</code> if the <xref href="Ecommerce.Application.Features.CartItem" data-throw-if-not-resolved="false"></xref> was deleted;
+
+        Success will be <code>false</code> if no <xref href="Ecommerce.Application.Features.CartItem" data-throw-if-not-resolved="false"></xref> is found or validation of the command fails.
+
+        Message will contain the message to display to the user.
+    content.vb: Public Function Handle(command As DeleteCartItemCommand, cancellationToken As CancellationToken) As Task(Of DeleteCartItemResponse)
+  overload: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.Handle*
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}.Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,System.Threading.CancellationToken)
+references:
+- uid: MediatR.Mediator
+  commentId: T:MediatR.Mediator
+  isExternal: true
+  name: Mediator
+  nameWithType: Mediator
+  fullName: MediatR.Mediator
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand
+  commentId: T:Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand
+  parent: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand.html
+  name: DeleteCartItemCommand
+  nameWithType: DeleteCartItemCommand
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  commentId: N:Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  nameWithType: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.CartItem.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+    name: DeleteCartItem
+    href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.CartItem.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+    name: DeleteCartItem
+    href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}
+  commentId: T:MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`2
+  href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand.html
+  name: IRequestHandler<DeleteCartItemCommand, DeleteCartItemResponse>
+  nameWithType: IRequestHandler<DeleteCartItemCommand, DeleteCartItemResponse>
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand, Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse>
+  nameWithType.vb: IRequestHandler(Of DeleteCartItemCommand, DeleteCartItemResponse)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand, Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse)
+  name.vb: IRequestHandler(Of DeleteCartItemCommand, DeleteCartItemResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand
+    name: DeleteCartItemCommand
+    href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+    name: DeleteCartItemResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/CartItem/DeleteCartItemResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand
+    name: DeleteCartItemCommand
+    href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+    name: DeleteCartItemResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/CartItem/DeleteCartItemResponse.cs
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequestHandler`2
+  commentId: T:MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<TRequest, TResponse>
+  nameWithType: IRequestHandler<TRequest, TResponse>
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse)
+  name.vb: IRequestHandler(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler
+  commentId: T:Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler
+  href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.html
+  name: DeleteCartItemCommandHandler
+  nameWithType: DeleteCartItemCommandHandler
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: AutoMapper.IMapper
+  commentId: T:AutoMapper.IMapper
+  parent: AutoMapper
+  isExternal: true
+  name: IMapper
+  nameWithType: IMapper
+  fullName: AutoMapper.IMapper
+- uid: Ecommerce.Persistence.Contracts.ICartItemRepository
+  commentId: T:Ecommerce.Persistence.Contracts.ICartItemRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.ICartItemRepository.html
+  name: ICartItemRepository
+  nameWithType: ICartItemRepository
+  fullName: Ecommerce.Persistence.Contracts.ICartItemRepository
+- uid: Ecommerce.Application.Features.CartItem
+  commentId: N:Ecommerce.Application.Features.CartItem
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.CartItem
+  nameWithType: Ecommerce.Application.Features.CartItem
+  fullName: Ecommerce.Application.Features.CartItem
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.#ctor*
+  commentId: Overload:Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.#ctor
+  href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.html#Ecommerce_Application_Features_CartItem_Commands_DeleteCartItem_DeleteCartItemCommandHandler__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_Application_Features_CartItem_Commands_DeleteCartItem_DeleteCartItemCommandHandler__AutoMapper_IMapper_Ecommerce_Persistence_Contracts_ICartItemRepository_
+  name: DeleteCartItemCommandHandler
+  nameWithType: DeleteCartItemCommandHandler.DeleteCartItemCommandHandler
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.DeleteCartItemCommandHandler
+  nameWithType.vb: DeleteCartItemCommandHandler.New
+  fullName.vb: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<DeleteCartItemCommandHandler>
+  nameWithType: ILogger<DeleteCartItemCommandHandler>
+  fullName: Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler>
+  nameWithType.vb: ILogger(Of DeleteCartItemCommandHandler)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler)
+  name.vb: ILogger(Of DeleteCartItemCommandHandler)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler
+    name: DeleteCartItemCommandHandler
+    href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler
+    name: DeleteCartItemCommandHandler
+    href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.html
+  - name: )
+- uid: AutoMapper
+  commentId: N:AutoMapper
+  isExternal: true
+  name: AutoMapper
+  nameWithType: AutoMapper
+  fullName: AutoMapper
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+  commentId: T:Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+  href: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse.html
+  name: DeleteCartItemResponse
+  nameWithType: DeleteCartItemResponse
+  fullName: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.Handle*
+  commentId: Overload:Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.Handle
+  href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.html#Ecommerce_Application_Features_CartItem_Commands_DeleteCartItem_DeleteCartItemCommandHandler_Handle_Ecommerce_Application_Features_CartItem_Commands_DeleteCartItem_DeleteCartItemCommand_System_Threading_CancellationToken_
+  name: Handle
+  nameWithType: DeleteCartItemCommandHandler.Handle
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler.Handle
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}.Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}.Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}
+  definition: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand.html
+  name: Handle(DeleteCartItemCommand, CancellationToken)
+  nameWithType: IRequestHandler<DeleteCartItemCommand, DeleteCartItemResponse>.Handle(DeleteCartItemCommand, CancellationToken)
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand, Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse>.Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of DeleteCartItemCommand, DeleteCartItemResponse).Handle(DeleteCartItemCommand, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand, Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse).Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}.Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand
+    name: DeleteCartItemCommand
+    href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}.Handle(Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand
+    name: DeleteCartItemCommand
+    href: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DeleteCartItemResponse>
+  nameWithType: Task<DeleteCartItemResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse>
+  nameWithType.vb: Task(Of DeleteCartItemResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse)
+  name.vb: Task(Of DeleteCartItemResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+    name: DeleteCartItemResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/CartItem/DeleteCartItemResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+    name: DeleteCartItemResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/CartItem/DeleteCartItemResponse.cs
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest, TResponse>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

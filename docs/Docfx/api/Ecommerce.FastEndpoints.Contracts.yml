@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.FastEndpoints.Contracts
+  commentId: N:Ecommerce.FastEndpoints.Contracts
+  id: Ecommerce.FastEndpoints.Contracts
+  children:
+  - Ecommerce.FastEndpoints.Contracts.ITokenService
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.FastEndpoints.Contracts
+  nameWithType: Ecommerce.FastEndpoints.Contracts
+  fullName: Ecommerce.FastEndpoints.Contracts
+  type: Namespace
+  assemblies:
+  - Ecommerce.FastEndpoints
+references:
+- uid: Ecommerce.FastEndpoints.Contracts.ITokenService
+  commentId: T:Ecommerce.FastEndpoints.Contracts.ITokenService
+  parent: Ecommerce.FastEndpoints.Contracts
+  href: Ecommerce.FastEndpoints.Contracts.ITokenService.html
+  name: ITokenService
+  nameWithType: ITokenService
+  fullName: Ecommerce.FastEndpoints.Contracts.ITokenService
+- uid: Ecommerce.FastEndpoints.Contracts
+  commentId: N:Ecommerce.FastEndpoints.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.FastEndpoints.Contracts
+  nameWithType: Ecommerce.FastEndpoints.Contracts
+  fullName: Ecommerce.FastEndpoints.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.FastEndpoints
+    name: FastEndpoints
+    href: Ecommerce.FastEndpoints.html
+  - name: .
+  - uid: Ecommerce.FastEndpoints.Contracts
+    name: Contracts
+    href: Ecommerce.FastEndpoints.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.FastEndpoints
+    name: FastEndpoints
+    href: Ecommerce.FastEndpoints.html
+  - name: .
+  - uid: Ecommerce.FastEndpoints.Contracts
+    name: Contracts
+    href: Ecommerce.FastEndpoints.Contracts.html

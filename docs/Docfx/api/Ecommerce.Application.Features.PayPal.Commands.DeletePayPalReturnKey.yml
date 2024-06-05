@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  commentId: N:Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  id: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  children:
+  - Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommand
+  - Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  nameWithType: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  fullName: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommand
+  commentId: T:Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommand
+  parent: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  href: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommand.html
+  name: DeletePayPalReturnKeyCommand
+  nameWithType: DeletePayPalReturnKeyCommand
+  fullName: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommand
+- uid: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommandHandler
+  commentId: T:Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommandHandler
+  href: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommandHandler.html
+  name: DeletePayPalReturnKeyCommandHandler
+  nameWithType: DeletePayPalReturnKeyCommandHandler
+  fullName: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommandHandler
+- uid: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  commentId: N:Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  nameWithType: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  fullName: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.PayPal.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+    name: DeletePayPalReturnKey
+    href: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.PayPal.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+    name: DeletePayPalReturnKey
+    href: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.html

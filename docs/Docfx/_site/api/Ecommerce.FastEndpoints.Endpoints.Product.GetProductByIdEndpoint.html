@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GetProductByIdEndpoint </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GetProductByIdEndpoint ">
+      
+      <meta name="description" content="A Fast Endpoint implementation that handles getting a Product based on a Id">
+      <link rel="icon" href=".././images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/smithhe/EcommerceApp/new/dev/apiSpec/new?filename=Ecommerce_FastEndpoints_Endpoints_Product_GetProductByIdEndpoint.md&amp;value=---%0Auid%3A%20Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt=" Ecommerce App">
+             Ecommerce App
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint">
+
+
+
+  <h1 id="Ecommerce_FastEndpoints_Endpoints_Product_GetProductByIdEndpoint" data-uid="Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint" class="text-break">
+Class GetProductByIdEndpoint  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Product/GetProductByIdEndpoint.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ecommerce.html">Ecommerce</a>.<a class="xref" href="Ecommerce.FastEndpoints.html">FastEndpoints</a>.<a class="xref" href="Ecommerce.FastEndpoints.Endpoints.html">Endpoints</a>.<a class="xref" href="Ecommerce.FastEndpoints.Endpoints.Product.html">Product</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Ecommerce.FastEndpoints.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A Fast Endpoint implementation that handles getting a Product based on a Id</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GetProductByIdEndpoint : Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;, IEndpoint, IEventBus, IServiceResolverBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">BaseEndpoint</span></div>
+      <div><span class="xref">Endpoint</span>&lt;<a class="xref" href="https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Requests/Product/GetProductByIdApiRequest.cs">GetProductByIdApiRequest</a>, <a class="xref" href="https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Product/GetProductByIdResponse.cs">GetProductByIdResponse</a>&gt;</div>
+      <div><span class="xref">GetProductByIdEndpoint</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IEndpoint</span></div>
+      <div><span class="xref">IEventBus</span></div>
+      <div><span class="xref">IServiceResolverBase</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.HandleAsync(GetProductByIdApiRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.ExecuteAsync(GetProductByIdApiRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.TryResolve&lt;TService&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.TryResolve(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Resolve&lt;TService&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Resolve(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.CreateScope()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.TryResolve&lt;TService&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.TryResolve(Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Resolve&lt;TService&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Resolve(Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Route&lt;T&gt;(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Query&lt;T&gt;(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.FormFileSectionsAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.PublishAsync&lt;TEvent&gt;(TEvent, Mode, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.CreateTokenWith&lt;TService&gt;(string, Action&lt;UserPrivileges&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.ProcessorState&lt;TState&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.OnBeforeValidate(GetProductByIdApiRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.OnBeforeValidateAsync(GetProductByIdApiRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.OnAfterValidate(GetProductByIdApiRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.OnAfterValidateAsync(GetProductByIdApiRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.OnBeforeHandle(GetProductByIdApiRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.OnBeforeHandleAsync(GetProductByIdApiRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.OnAfterHandle(GetProductByIdApiRequest, GetProductByIdResponse)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.OnAfterHandleAsync(GetProductByIdApiRequest, GetProductByIdResponse, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.OnValidationFailed()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.OnValidationFailedAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendAsync(GetProductByIdResponse, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.iresult">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendResultAsync(IResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendInterceptedAsync(object, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendCreatedAtAsync&lt;TEndpoint&gt;(object, GetProductByIdResponse, Http?, int?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendCreatedAtAsync(string, object, GetProductByIdResponse, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendStringAsync(string, int, string, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendOkAsync(GetProductByIdResponse, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendOkAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendErrorsAsync(int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendNoContentAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendNotFoundAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendUnauthorizedAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendForbiddenAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendRedirectAsync(string, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendHeadersAsync(Action&lt;IHeaderDictionary&gt;, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendBytesAsync(byte[], string, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendFileAsync(FileInfo, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendStreamAsync(Stream, string, long?, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendEventStreamAsync&lt;T&gt;(string, IAsyncEnumerable&lt;T&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SendEmptyJsonObject(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.AccessControl(string, Apply?, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.AccessControl(string, params string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.AllowAnonymous(params Http[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.AllowAnonymous(string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.AllowFileUploads(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.AllowFormData(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.AuthSchemes(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Claims(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.ClaimsAll(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Delete(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Delete(string, Expression&lt;Func&lt;GetProductByIdApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Description(Action&lt;RouteHandlerBuilder&gt;, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.DontAutoSendResponse()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.DontAutoTag()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.DontCatchExceptions()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.DontThrowIfValidationFails()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.EnableAntiforgery()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Get(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Get(string, Expression&lt;Func&lt;GetProductByIdApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Group&lt;TEndpointGroup&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Head(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Head(string, Expression&lt;Func&lt;GetProductByIdApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Options(Action&lt;RouteHandlerBuilder&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Patch(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Patch(string, Expression&lt;Func&lt;GetProductByIdApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Permissions(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.PermissionsAll(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Policy(Action&lt;AuthorizationPolicyBuilder&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Policies(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Post(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Post(string, Expression&lt;Func&lt;GetProductByIdApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.PostProcessor&lt;TPostProcessor&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.PostProcessors(params IPostProcessor&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;[])</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.PreProcessor&lt;TPreProcessor&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.PreProcessors(params IPreProcessor&lt;GetProductByIdApiRequest&gt;[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Put(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Put(string, Expression&lt;Func&lt;GetProductByIdApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.RequestBinder(IRequestBinder&lt;GetProductByIdApiRequest&gt;)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.ResponseCache(int, ResponseCacheLocation, bool, string, string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.ResponseInterceptor(IResponseInterceptor)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Roles(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.RoutePrefixOverride(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Routes(params string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SerializerContext&lt;TContext&gt;(TContext)</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.SerializerContext&lt;TContext&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Summary(Action&lt;EndpointSummary&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Summary(Action&lt;EndpointSummary&lt;GetProductByIdApiRequest&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Summary(EndpointSummary)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Tags(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Throttle(int, double, string)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Validator&lt;TValidator&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Verbs(params Http[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Verbs(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Version(int, int?)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.AddError(ValidationFailure)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.AddError(string, string, Severity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.AddError(Expression&lt;Func&lt;GetProductByIdApiRequest, object&gt;&gt;, string, string, Severity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.ThrowError(ValidationFailure, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.ThrowError(string, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.ThrowError(Expression&lt;Func&lt;GetProductByIdApiRequest, object&gt;&gt;, string, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.ThrowIfAnyErrors(int?)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.User</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Response</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Config</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Env</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Logger</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.BaseURL</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.HttpMethod</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Form</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.Files</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.ResponseStarted</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetProductByIdApiRequest, GetProductByIdResponse&gt;.ValidationFailed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BaseEndpoint.Verbs(params string[])</a>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.Group&lt;TEndpointGroup&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BaseEndpoint.GetAclHash(string)</a>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.Definition</span>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.HttpContext</span>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.ValidationFailures</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Ecommerce_FastEndpoints_Endpoints_Product_GetProductByIdEndpoint__ctor_" data-uid="Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint.#ctor*"></a>
+
+  <h3 id="Ecommerce_FastEndpoints_Endpoints_Product_GetProductByIdEndpoint__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_FastEndpoints_Endpoints_Product_GetProductByIdEndpoint__MediatR_IMediator_" data-uid="Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint},MediatR.IMediator)">
+  GetProductByIdEndpoint(ILogger&lt;GetProductByIdEndpoint&gt;, IMediator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Product/GetProductByIdEndpoint.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint.html">GetProductByIdEndpoint</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GetProductByIdEndpoint(ILogger&lt;GetProductByIdEndpoint&gt; logger, IMediator mediator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint.html">GetProductByIdEndpoint</a>&gt;</dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a> instance used for logging.</p>
+</dd>
+    <dt><code>mediator</code> <span class="xref">IMediator</span></dt>
+    <dd><p>The <span class="xref">MediatR.IMediator</span> instance used for sending Mediator requests.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ecommerce_FastEndpoints_Endpoints_Product_GetProductByIdEndpoint_Configure_" data-uid="Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint.Configure*"></a>
+
+  <h3 id="Ecommerce_FastEndpoints_Endpoints_Product_GetProductByIdEndpoint_Configure" data-uid="Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint.Configure">
+  Configure()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Product/GetProductByIdEndpoint.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the route for the Endpoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Configure()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_FastEndpoints_Endpoints_Product_GetProductByIdEndpoint_HandleAsync_" data-uid="Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint.HandleAsync*"></a>
+
+  <h3 id="Ecommerce_FastEndpoints_Endpoints_Product_GetProductByIdEndpoint_HandleAsync_Ecommerce_Shared_Requests_Product_GetProductByIdApiRequest_System_Threading_CancellationToken_" data-uid="Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint.HandleAsync(Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest,System.Threading.CancellationToken)">
+  HandleAsync(GetProductByIdApiRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Product/GetProductByIdEndpoint.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles the <a class="xref" href="Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest.html">GetProductByIdApiRequest</a> and generates a <a class="xref" href="Ecommerce.Shared.Responses.Product.GetProductByIdResponse.html">GetProductByIdResponse</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task HandleAsync(GetProductByIdApiRequest req, CancellationToken ct)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>req</code> <a class="xref" href="Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest.html">GetProductByIdApiRequest</a></dt>
+    <dd><p>The <a class="xref" href="Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest.html">GetProductByIdApiRequest</a> object sent in the HTTP request</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> that can be used to request cancellation of the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

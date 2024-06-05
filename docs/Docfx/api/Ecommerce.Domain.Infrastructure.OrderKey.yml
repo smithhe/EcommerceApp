@@ -1,0 +1,529 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Domain.Infrastructure.OrderKey
+  commentId: T:Ecommerce.Domain.Infrastructure.OrderKey
+  id: OrderKey
+  parent: Ecommerce.Domain.Infrastructure
+  children:
+  - Ecommerce.Domain.Infrastructure.OrderKey.#ctor
+  - Ecommerce.Domain.Infrastructure.OrderKey.CreatedAt
+  - Ecommerce.Domain.Infrastructure.OrderKey.Id
+  - Ecommerce.Domain.Infrastructure.OrderKey.OrderId
+  - Ecommerce.Domain.Infrastructure.OrderKey.OrderToken
+  langs:
+  - csharp
+  - vb
+  name: OrderKey
+  nameWithType: OrderKey
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: OrderKey
+    path: ../../Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Infrastructure
+  syntax:
+    content: public class OrderKey
+    content.vb: Public Class OrderKey
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Domain.Infrastructure.OrderKey.Id
+  commentId: P:Ecommerce.Domain.Infrastructure.OrderKey.Id
+  id: Id
+  parent: Ecommerce.Domain.Infrastructure.OrderKey
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: OrderKey.Id
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey.Id
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Id
+    path: ../../Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Infrastructure
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Ecommerce.Domain.Infrastructure.OrderKey.Id*
+- uid: Ecommerce.Domain.Infrastructure.OrderKey.OrderId
+  commentId: P:Ecommerce.Domain.Infrastructure.OrderKey.OrderId
+  id: OrderId
+  parent: Ecommerce.Domain.Infrastructure.OrderKey
+  langs:
+  - csharp
+  - vb
+  name: OrderId
+  nameWithType: OrderKey.OrderId
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey.OrderId
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: OrderId
+    path: ../../Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Infrastructure
+  syntax:
+    content: public int OrderId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property OrderId As Integer
+  overload: Ecommerce.Domain.Infrastructure.OrderKey.OrderId*
+- uid: Ecommerce.Domain.Infrastructure.OrderKey.OrderToken
+  commentId: P:Ecommerce.Domain.Infrastructure.OrderKey.OrderToken
+  id: OrderToken
+  parent: Ecommerce.Domain.Infrastructure.OrderKey
+  langs:
+  - csharp
+  - vb
+  name: OrderToken
+  nameWithType: OrderKey.OrderToken
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey.OrderToken
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: OrderToken
+    path: ../../Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+    startLine: 10
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Infrastructure
+  syntax:
+    content: >-
+      [MaxLength(50)]
+
+      public string OrderToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <MaxLength(50)>
+
+      Public Property OrderToken As String
+  overload: Ecommerce.Domain.Infrastructure.OrderKey.OrderToken*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.MaxLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.MaxLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 50
+- uid: Ecommerce.Domain.Infrastructure.OrderKey.CreatedAt
+  commentId: P:Ecommerce.Domain.Infrastructure.OrderKey.CreatedAt
+  id: CreatedAt
+  parent: Ecommerce.Domain.Infrastructure.OrderKey
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: OrderKey.CreatedAt
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreatedAt
+    path: ../../Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Infrastructure
+  syntax:
+    content: public DateTime CreatedAt { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property CreatedAt As Date
+  overload: Ecommerce.Domain.Infrastructure.OrderKey.CreatedAt*
+- uid: Ecommerce.Domain.Infrastructure.OrderKey.#ctor
+  commentId: M:Ecommerce.Domain.Infrastructure.OrderKey.#ctor
+  id: '#ctor'
+  parent: Ecommerce.Domain.Infrastructure.OrderKey
+  langs:
+  - csharp
+  - vb
+  name: OrderKey()
+  nameWithType: OrderKey.OrderKey()
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey.OrderKey()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Infrastructure/OrderKey.cs
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Infrastructure
+  syntax:
+    content: public OrderKey()
+    content.vb: Public Sub New()
+  overload: Ecommerce.Domain.Infrastructure.OrderKey.#ctor*
+  nameWithType.vb: OrderKey.New()
+  fullName.vb: Ecommerce.Domain.Infrastructure.OrderKey.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.Domain.Infrastructure
+  commentId: N:Ecommerce.Domain.Infrastructure
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Infrastructure
+  nameWithType: Ecommerce.Domain.Infrastructure
+  fullName: Ecommerce.Domain.Infrastructure
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Infrastructure
+    name: Infrastructure
+    href: Ecommerce.Domain.Infrastructure.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Infrastructure
+    name: Infrastructure
+    href: Ecommerce.Domain.Infrastructure.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Domain.Infrastructure.OrderKey.Id*
+  commentId: Overload:Ecommerce.Domain.Infrastructure.OrderKey.Id
+  href: Ecommerce.Domain.Infrastructure.OrderKey.html#Ecommerce_Domain_Infrastructure_OrderKey_Id
+  name: Id
+  nameWithType: OrderKey.Id
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Ecommerce.Domain.Infrastructure.OrderKey.OrderId*
+  commentId: Overload:Ecommerce.Domain.Infrastructure.OrderKey.OrderId
+  href: Ecommerce.Domain.Infrastructure.OrderKey.html#Ecommerce_Domain_Infrastructure_OrderKey_OrderId
+  name: OrderId
+  nameWithType: OrderKey.OrderId
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey.OrderId
+- uid: Ecommerce.Domain.Infrastructure.OrderKey.OrderToken*
+  commentId: Overload:Ecommerce.Domain.Infrastructure.OrderKey.OrderToken
+  href: Ecommerce.Domain.Infrastructure.OrderKey.html#Ecommerce_Domain_Infrastructure_OrderKey_OrderToken
+  name: OrderToken
+  nameWithType: OrderKey.OrderToken
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey.OrderToken
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.Domain.Infrastructure.OrderKey.CreatedAt*
+  commentId: Overload:Ecommerce.Domain.Infrastructure.OrderKey.CreatedAt
+  href: Ecommerce.Domain.Infrastructure.OrderKey.html#Ecommerce_Domain_Infrastructure_OrderKey_CreatedAt
+  name: CreatedAt
+  nameWithType: OrderKey.CreatedAt
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey.CreatedAt
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Ecommerce.Domain.Infrastructure.OrderKey.#ctor*
+  commentId: Overload:Ecommerce.Domain.Infrastructure.OrderKey.#ctor
+  isExternal: true
+  href: Ecommerce.Domain.Infrastructure.OrderKey.html#Ecommerce_Domain_Infrastructure_OrderKey__ctor
+  name: OrderKey
+  nameWithType: OrderKey.OrderKey
+  fullName: Ecommerce.Domain.Infrastructure.OrderKey.OrderKey
+  nameWithType.vb: OrderKey.New
+  fullName.vb: Ecommerce.Domain.Infrastructure.OrderKey.New
+  name.vb: New

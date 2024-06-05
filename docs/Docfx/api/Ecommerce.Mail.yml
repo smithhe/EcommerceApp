@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Mail
+  commentId: N:Ecommerce.Mail
+  id: Ecommerce.Mail
+  children:
+  - Ecommerce.Mail.MailServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Mail
+  nameWithType: Ecommerce.Mail
+  fullName: Ecommerce.Mail
+  type: Namespace
+  assemblies:
+  - Ecommerce.Mail
+references:
+- uid: Ecommerce.Mail.MailServiceRegistration
+  commentId: T:Ecommerce.Mail.MailServiceRegistration
+  href: Ecommerce.Mail.MailServiceRegistration.html
+  name: MailServiceRegistration
+  nameWithType: MailServiceRegistration
+  fullName: Ecommerce.Mail.MailServiceRegistration

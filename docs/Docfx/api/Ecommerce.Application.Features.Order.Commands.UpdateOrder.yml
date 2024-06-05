@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  commentId: N:Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  id: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  children:
+  - Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommand
+  - Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  nameWithType: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  fullName: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommand
+  commentId: T:Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommand
+  parent: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  href: Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommand.html
+  name: UpdateOrderCommand
+  nameWithType: UpdateOrderCommand
+  fullName: Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommand
+- uid: Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommandHandler
+  commentId: T:Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommandHandler
+  href: Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommandHandler.html
+  name: UpdateOrderCommandHandler
+  nameWithType: UpdateOrderCommandHandler
+  fullName: Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommandHandler
+- uid: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  commentId: N:Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  nameWithType: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  fullName: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Order.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+    name: UpdateOrder
+    href: Ecommerce.Application.Features.Order.Commands.UpdateOrder.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Order.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+    name: UpdateOrder
+    href: Ecommerce.Application.Features.Order.Commands.UpdateOrder.html

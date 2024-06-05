@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  commentId: N:Ecommerce.Application.Features.Review.Commands.DeleteReview
+  id: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  children:
+  - Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommand
+  - Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  nameWithType: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  fullName: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommand
+  commentId: T:Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommand
+  parent: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  href: Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommand.html
+  name: DeleteReviewCommand
+  nameWithType: DeleteReviewCommand
+  fullName: Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommand
+- uid: Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommandHandler
+  commentId: T:Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommandHandler
+  href: Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommandHandler.html
+  name: DeleteReviewCommandHandler
+  nameWithType: DeleteReviewCommandHandler
+  fullName: Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommandHandler
+- uid: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  commentId: N:Ecommerce.Application.Features.Review.Commands.DeleteReview
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  nameWithType: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  fullName: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Review.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Commands.DeleteReview
+    name: DeleteReview
+    href: Ecommerce.Application.Features.Review.Commands.DeleteReview.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Review.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Commands.DeleteReview
+    name: DeleteReview
+    href: Ecommerce.Application.Features.Review.Commands.DeleteReview.html

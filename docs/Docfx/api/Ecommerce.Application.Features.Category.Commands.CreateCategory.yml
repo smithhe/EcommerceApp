@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  commentId: N:Ecommerce.Application.Features.Category.Commands.CreateCategory
+  id: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  children:
+  - Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommand
+  - Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  nameWithType: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  fullName: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommand
+  commentId: T:Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommand
+  parent: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  href: Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommand.html
+  name: CreateCategoryCommand
+  nameWithType: CreateCategoryCommand
+  fullName: Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommand
+- uid: Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommandHandler
+  commentId: T:Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommandHandler
+  href: Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommandHandler.html
+  name: CreateCategoryCommandHandler
+  nameWithType: CreateCategoryCommandHandler
+  fullName: Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommandHandler
+- uid: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  commentId: N:Ecommerce.Application.Features.Category.Commands.CreateCategory
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  nameWithType: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  fullName: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category
+    name: Category
+    href: Ecommerce.Application.Features.Category.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Category.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands.CreateCategory
+    name: CreateCategory
+    href: Ecommerce.Application.Features.Category.Commands.CreateCategory.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category
+    name: Category
+    href: Ecommerce.Application.Features.Category.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Category.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Category.Commands.CreateCategory
+    name: CreateCategory
+    href: Ecommerce.Application.Features.Category.Commands.CreateCategory.html

@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  commentId: N:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  id: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  children:
+  - Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+  - Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  nameWithType: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+  commentId: T:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+  parent: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery.html
+  name: GetAllProductsByCategoryIdQuery
+  nameWithType: GetAllProductsByCategoryIdQuery
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+  commentId: T:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+  href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler.html
+  name: GetAllProductsByCategoryIdQueryHandler
+  nameWithType: GetAllProductsByCategoryIdQueryHandler
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  commentId: N:Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  nameWithType: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Product.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+    name: GetProductsByCategoryId
+    href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Product.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+    name: GetProductsByCategoryId
+    href: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.html

@@ -1,0 +1,633 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  commentId: T:Ecommerce.Domain.Constants.Entities.ReviewConstants
+  id: ReviewConstants
+  parent: Ecommerce.Domain.Constants.Entities
+  children:
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants._createErrorMessage
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants._createSuccessMessage
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants._deleteErrorMessage
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants._deleteSuccessMessage
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants._genericValidationErrorMessage
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants._getAllErrorMessage
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants._getAllSuccessMessage
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants._getUserReviewErrorMessage
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants._getUserReviewSuccessMessage
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants._updateErrorMessage
+  - Ecommerce.Domain.Constants.Entities.ReviewConstants._updateSuccessMessage
+  langs:
+  - csharp
+  - vb
+  name: ReviewConstants
+  nameWithType: ReviewConstants
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ReviewConstants
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 2
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public static class ReviewConstants
+    content.vb: Public Module ReviewConstants
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants._createSuccessMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.ReviewConstants._createSuccessMessage
+  id: _createSuccessMessage
+  parent: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: _createSuccessMessage
+  nameWithType: ReviewConstants._createSuccessMessage
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants._createSuccessMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _createSuccessMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 4
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _createSuccessMessage = "Created your Review Successfully"
+    return:
+      type: System.String
+    content.vb: Public Const _createSuccessMessage As String = "Created your Review Successfully"
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants._createErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.ReviewConstants._createErrorMessage
+  id: _createErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: _createErrorMessage
+  nameWithType: ReviewConstants._createErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants._createErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _createErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _createErrorMessage = "Error creating your Review, please try again later."
+    return:
+      type: System.String
+    content.vb: Public Const _createErrorMessage As String = "Error creating your Review, please try again later."
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants._deleteSuccessMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.ReviewConstants._deleteSuccessMessage
+  id: _deleteSuccessMessage
+  parent: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: _deleteSuccessMessage
+  nameWithType: ReviewConstants._deleteSuccessMessage
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants._deleteSuccessMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _deleteSuccessMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _deleteSuccessMessage = "Deleted your Review Successfully"
+    return:
+      type: System.String
+    content.vb: Public Const _deleteSuccessMessage As String = "Deleted your Review Successfully"
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants._deleteErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.ReviewConstants._deleteErrorMessage
+  id: _deleteErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: _deleteErrorMessage
+  nameWithType: ReviewConstants._deleteErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants._deleteErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _deleteErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _deleteErrorMessage = "Error deleting your Review, please try again later."
+    return:
+      type: System.String
+    content.vb: Public Const _deleteErrorMessage As String = "Error deleting your Review, please try again later."
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants._updateSuccessMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.ReviewConstants._updateSuccessMessage
+  id: _updateSuccessMessage
+  parent: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: _updateSuccessMessage
+  nameWithType: ReviewConstants._updateSuccessMessage
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants._updateSuccessMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _updateSuccessMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 10
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _updateSuccessMessage = "Updated your Review Successfully"
+    return:
+      type: System.String
+    content.vb: Public Const _updateSuccessMessage As String = "Updated your Review Successfully"
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants._updateErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.ReviewConstants._updateErrorMessage
+  id: _updateErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: _updateErrorMessage
+  nameWithType: ReviewConstants._updateErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants._updateErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _updateErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 11
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _updateErrorMessage = "Error updating your Review, please try again later."
+    return:
+      type: System.String
+    content.vb: Public Const _updateErrorMessage As String = "Error updating your Review, please try again later."
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants._getUserReviewSuccessMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.ReviewConstants._getUserReviewSuccessMessage
+  id: _getUserReviewSuccessMessage
+  parent: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: _getUserReviewSuccessMessage
+  nameWithType: ReviewConstants._getUserReviewSuccessMessage
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants._getUserReviewSuccessMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _getUserReviewSuccessMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _getUserReviewSuccessMessage = "Retrieved your Review Successfully"
+    return:
+      type: System.String
+    content.vb: Public Const _getUserReviewSuccessMessage As String = "Retrieved your Review Successfully"
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants._getUserReviewErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.ReviewConstants._getUserReviewErrorMessage
+  id: _getUserReviewErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: _getUserReviewErrorMessage
+  nameWithType: ReviewConstants._getUserReviewErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants._getUserReviewErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _getUserReviewErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 14
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _getUserReviewErrorMessage = "Failed to get your Review, please try again later."
+    return:
+      type: System.String
+    content.vb: Public Const _getUserReviewErrorMessage As String = "Failed to get your Review, please try again later."
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants._getAllSuccessMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.ReviewConstants._getAllSuccessMessage
+  id: _getAllSuccessMessage
+  parent: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: _getAllSuccessMessage
+  nameWithType: ReviewConstants._getAllSuccessMessage
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants._getAllSuccessMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _getAllSuccessMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 16
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _getAllSuccessMessage = "Retrieved all Reviews Successfully"
+    return:
+      type: System.String
+    content.vb: Public Const _getAllSuccessMessage As String = "Retrieved all Reviews Successfully"
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants._getAllErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.ReviewConstants._getAllErrorMessage
+  id: _getAllErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: _getAllErrorMessage
+  nameWithType: ReviewConstants._getAllErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants._getAllErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _getAllErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 17
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _getAllErrorMessage = "Failed to load all Reviews, please try again later."
+    return:
+      type: System.String
+    content.vb: Public Const _getAllErrorMessage As String = "Failed to load all Reviews, please try again later."
+- uid: Ecommerce.Domain.Constants.Entities.ReviewConstants._genericValidationErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.ReviewConstants._genericValidationErrorMessage
+  id: _genericValidationErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.ReviewConstants
+  langs:
+  - csharp
+  - vb
+  name: _genericValidationErrorMessage
+  nameWithType: ReviewConstants._genericValidationErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.ReviewConstants._genericValidationErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _genericValidationErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/ReviewConstants.cs
+    startLine: 19
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _genericValidationErrorMessage = "Please fix the listed errors and try again."
+    return:
+      type: System.String
+    content.vb: Public Const _genericValidationErrorMessage As String = "Please fix the listed errors and try again."
+references:
+- uid: Ecommerce.Domain.Constants.Entities
+  commentId: N:Ecommerce.Domain.Constants.Entities
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Constants.Entities
+  nameWithType: Ecommerce.Domain.Constants.Entities
+  fullName: Ecommerce.Domain.Constants.Entities
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Constants
+    name: Constants
+    href: Ecommerce.Domain.Constants.html
+  - name: .
+  - uid: Ecommerce.Domain.Constants.Entities
+    name: Entities
+    href: Ecommerce.Domain.Constants.Entities.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Constants
+    name: Constants
+    href: Ecommerce.Domain.Constants.html
+  - name: .
+  - uid: Ecommerce.Domain.Constants.Entities
+    name: Entities
+    href: Ecommerce.Domain.Constants.Entities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

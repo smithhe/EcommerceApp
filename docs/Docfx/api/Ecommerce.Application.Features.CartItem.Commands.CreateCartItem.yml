@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  commentId: N:Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  id: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  children:
+  - Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommand
+  - Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  nameWithType: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  fullName: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommand
+  commentId: T:Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommand
+  parent: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  href: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommand.html
+  name: CreateCartItemCommand
+  nameWithType: CreateCartItemCommand
+  fullName: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommand
+- uid: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommandHandler
+  commentId: T:Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommandHandler
+  href: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommandHandler.html
+  name: CreateCartItemCommandHandler
+  nameWithType: CreateCartItemCommandHandler
+  fullName: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommandHandler
+- uid: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  commentId: N:Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  nameWithType: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  fullName: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.CartItem.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+    name: CreateCartItem
+    href: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.CartItem.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+    name: CreateCartItem
+    href: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.html

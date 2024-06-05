@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Mail.Models.Enums
+  commentId: N:Ecommerce.Mail.Models.Enums
+  id: Ecommerce.Mail.Models.Enums
+  children:
+  - Ecommerce.Mail.Models.Enums.EmailTemplate
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Mail.Models.Enums
+  nameWithType: Ecommerce.Mail.Models.Enums
+  fullName: Ecommerce.Mail.Models.Enums
+  type: Namespace
+  assemblies:
+  - Ecommerce.Mail
+references:
+- uid: Ecommerce.Mail.Models.Enums.EmailTemplate
+  commentId: T:Ecommerce.Mail.Models.Enums.EmailTemplate
+  parent: Ecommerce.Mail.Models.Enums
+  href: Ecommerce.Mail.Models.Enums.EmailTemplate.html
+  name: EmailTemplate
+  nameWithType: EmailTemplate
+  fullName: Ecommerce.Mail.Models.Enums.EmailTemplate
+- uid: Ecommerce.Mail.Models.Enums
+  commentId: N:Ecommerce.Mail.Models.Enums
+  href: Ecommerce.html
+  name: Ecommerce.Mail.Models.Enums
+  nameWithType: Ecommerce.Mail.Models.Enums
+  fullName: Ecommerce.Mail.Models.Enums
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Models
+    name: Models
+    href: Ecommerce.Mail.Models.html
+  - name: .
+  - uid: Ecommerce.Mail.Models.Enums
+    name: Enums
+    href: Ecommerce.Mail.Models.Enums.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Models
+    name: Models
+    href: Ecommerce.Mail.Models.html
+  - name: .
+  - uid: Ecommerce.Mail.Models.Enums
+    name: Enums
+    href: Ecommerce.Mail.Models.Enums.html

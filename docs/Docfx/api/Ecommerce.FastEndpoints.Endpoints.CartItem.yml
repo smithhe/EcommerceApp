@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.FastEndpoints.Endpoints.CartItem
+  commentId: N:Ecommerce.FastEndpoints.Endpoints.CartItem
+  id: Ecommerce.FastEndpoints.Endpoints.CartItem
+  children:
+  - Ecommerce.FastEndpoints.Endpoints.CartItem.CreateCartItemEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteCartItemEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteUserCartItemsEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.CartItem.GetUserCartItemsEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.CartItem.UpdateCartItemEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.FastEndpoints.Endpoints.CartItem
+  nameWithType: Ecommerce.FastEndpoints.Endpoints.CartItem
+  fullName: Ecommerce.FastEndpoints.Endpoints.CartItem
+  type: Namespace
+  assemblies:
+  - Ecommerce.FastEndpoints
+references:
+- uid: Ecommerce.FastEndpoints.Endpoints.CartItem.CreateCartItemEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.CartItem.CreateCartItemEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.CartItem.CreateCartItemEndpoint.html
+  name: CreateCartItemEndpoint
+  nameWithType: CreateCartItemEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.CartItem.CreateCartItemEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteCartItemEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteCartItemEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteCartItemEndpoint.html
+  name: DeleteCartItemEndpoint
+  nameWithType: DeleteCartItemEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteCartItemEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteUserCartItemsEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteUserCartItemsEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteUserCartItemsEndpoint.html
+  name: DeleteUserCartItemsEndpoint
+  nameWithType: DeleteUserCartItemsEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteUserCartItemsEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.CartItem.GetUserCartItemsEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.CartItem.GetUserCartItemsEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.CartItem.GetUserCartItemsEndpoint.html
+  name: GetUserCartItemsEndpoint
+  nameWithType: GetUserCartItemsEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.CartItem.GetUserCartItemsEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.CartItem.UpdateCartItemEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.CartItem.UpdateCartItemEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.CartItem.UpdateCartItemEndpoint.html
+  name: UpdateCartItemEndpoint
+  nameWithType: UpdateCartItemEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.CartItem.UpdateCartItemEndpoint

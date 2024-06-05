@@ -1,0 +1,169 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Contracts.ITokenCacheService
+  commentId: T:Ecommerce.PayPal.Contracts.ITokenCacheService
+  id: ITokenCacheService
+  parent: Ecommerce.PayPal.Contracts
+  children:
+  - Ecommerce.PayPal.Contracts.ITokenCacheService.GetToken(System.String)
+  - Ecommerce.PayPal.Contracts.ITokenCacheService.SetToken(System.String,System.String,System.TimeSpan)
+  langs:
+  - csharp
+  - vb
+  name: ITokenCacheService
+  nameWithType: ITokenCacheService
+  fullName: Ecommerce.PayPal.Contracts.ITokenCacheService
+  type: Interface
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Contracts/ITokenCacheService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ITokenCacheService
+    path: ../../Infrastructure/Ecommerce.PayPal/Contracts/ITokenCacheService.cs
+    startLine: 2
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Contracts
+  syntax:
+    content: public interface ITokenCacheService
+    content.vb: Public Interface ITokenCacheService
+- uid: Ecommerce.PayPal.Contracts.ITokenCacheService.SetToken(System.String,System.String,System.TimeSpan)
+  commentId: M:Ecommerce.PayPal.Contracts.ITokenCacheService.SetToken(System.String,System.String,System.TimeSpan)
+  id: SetToken(System.String,System.String,System.TimeSpan)
+  parent: Ecommerce.PayPal.Contracts.ITokenCacheService
+  langs:
+  - csharp
+  - vb
+  name: SetToken(string, string, TimeSpan)
+  nameWithType: ITokenCacheService.SetToken(string, string, TimeSpan)
+  fullName: Ecommerce.PayPal.Contracts.ITokenCacheService.SetToken(string, string, System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Contracts/ITokenCacheService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: SetToken
+    path: ../../Infrastructure/Ecommerce.PayPal/Contracts/ITokenCacheService.cs
+    startLine: 4
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Contracts
+  syntax:
+    content: void SetToken(string key, string token, TimeSpan expiresIn)
+    parameters:
+    - id: key
+      type: System.String
+    - id: token
+      type: System.String
+    - id: expiresIn
+      type: System.TimeSpan
+    content.vb: Sub SetToken(key As String, token As String, expiresIn As TimeSpan)
+  overload: Ecommerce.PayPal.Contracts.ITokenCacheService.SetToken*
+  nameWithType.vb: ITokenCacheService.SetToken(String, String, TimeSpan)
+  fullName.vb: Ecommerce.PayPal.Contracts.ITokenCacheService.SetToken(String, String, System.TimeSpan)
+  name.vb: SetToken(String, String, TimeSpan)
+- uid: Ecommerce.PayPal.Contracts.ITokenCacheService.GetToken(System.String)
+  commentId: M:Ecommerce.PayPal.Contracts.ITokenCacheService.GetToken(System.String)
+  id: GetToken(System.String)
+  parent: Ecommerce.PayPal.Contracts.ITokenCacheService
+  langs:
+  - csharp
+  - vb
+  name: GetToken(string)
+  nameWithType: ITokenCacheService.GetToken(string)
+  fullName: Ecommerce.PayPal.Contracts.ITokenCacheService.GetToken(string)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Contracts/ITokenCacheService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetToken
+    path: ../../Infrastructure/Ecommerce.PayPal/Contracts/ITokenCacheService.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Contracts
+  syntax:
+    content: string? GetToken(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Function GetToken(key As String) As String
+  overload: Ecommerce.PayPal.Contracts.ITokenCacheService.GetToken*
+  nameWithType.vb: ITokenCacheService.GetToken(String)
+  fullName.vb: Ecommerce.PayPal.Contracts.ITokenCacheService.GetToken(String)
+  name.vb: GetToken(String)
+references:
+- uid: Ecommerce.PayPal.Contracts
+  commentId: N:Ecommerce.PayPal.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Contracts
+  nameWithType: Ecommerce.PayPal.Contracts
+  fullName: Ecommerce.PayPal.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts
+    name: Contracts
+    href: Ecommerce.PayPal.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts
+    name: Contracts
+    href: Ecommerce.PayPal.Contracts.html
+- uid: Ecommerce.PayPal.Contracts.ITokenCacheService.SetToken*
+  commentId: Overload:Ecommerce.PayPal.Contracts.ITokenCacheService.SetToken
+  href: Ecommerce.PayPal.Contracts.ITokenCacheService.html#Ecommerce_PayPal_Contracts_ITokenCacheService_SetToken_System_String_System_String_System_TimeSpan_
+  name: SetToken
+  nameWithType: ITokenCacheService.SetToken
+  fullName: Ecommerce.PayPal.Contracts.ITokenCacheService.SetToken
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.PayPal.Contracts.ITokenCacheService.GetToken*
+  commentId: Overload:Ecommerce.PayPal.Contracts.ITokenCacheService.GetToken
+  href: Ecommerce.PayPal.Contracts.ITokenCacheService.html#Ecommerce_PayPal_Contracts_ITokenCacheService_GetToken_System_String_
+  name: GetToken
+  nameWithType: ITokenCacheService.GetToken
+  fullName: Ecommerce.PayPal.Contracts.ITokenCacheService.GetToken

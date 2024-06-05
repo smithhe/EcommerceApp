@@ -1,0 +1,669 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ConfirmEmailEndpoint </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ConfirmEmailEndpoint ">
+      
+      <meta name="description" content="A Fast Endpoint implementation that handles confirming a User&#39;s email address">
+      <link rel="icon" href=".././images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/smithhe/EcommerceApp/new/dev/apiSpec/new?filename=Ecommerce_FastEndpoints_Endpoints_Security_ConfirmEmailEndpoint.md&amp;value=---%0Auid%3A%20Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt=" Ecommerce App">
+             Ecommerce App
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint">
+
+
+
+  <h1 id="Ecommerce_FastEndpoints_Endpoints_Security_ConfirmEmailEndpoint" data-uid="Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint" class="text-break">
+Class ConfirmEmailEndpoint  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Security/ConfirmEmailEndpoint.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ecommerce.html">Ecommerce</a>.<a class="xref" href="Ecommerce.FastEndpoints.html">FastEndpoints</a>.<a class="xref" href="Ecommerce.FastEndpoints.Endpoints.html">Endpoints</a>.<a class="xref" href="Ecommerce.FastEndpoints.Endpoints.Security.html">Security</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Ecommerce.FastEndpoints.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A Fast Endpoint implementation that handles confirming a User's email address</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ConfirmEmailEndpoint : Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;, IEndpoint, IEventBus, IServiceResolverBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">BaseEndpoint</span></div>
+      <div><span class="xref">Endpoint</span>&lt;<a class="xref" href="https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Requests/ConfirmEmailRequest.cs">ConfirmEmailRequest</a>, <a class="xref" href="https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/ConfirmEmailResponse.cs">ConfirmEmailResponse</a>&gt;</div>
+      <div><span class="xref">ConfirmEmailEndpoint</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IEndpoint</span></div>
+      <div><span class="xref">IEventBus</span></div>
+      <div><span class="xref">IServiceResolverBase</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.HandleAsync(ConfirmEmailRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.ExecuteAsync(ConfirmEmailRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.TryResolve&lt;TService&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.TryResolve(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Resolve&lt;TService&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Resolve(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.CreateScope()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.TryResolve&lt;TService&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.TryResolve(Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Resolve&lt;TService&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Resolve(Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Route&lt;T&gt;(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Query&lt;T&gt;(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.FormFileSectionsAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.PublishAsync&lt;TEvent&gt;(TEvent, Mode, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.CreateTokenWith&lt;TService&gt;(string, Action&lt;UserPrivileges&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.ProcessorState&lt;TState&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.OnBeforeValidate(ConfirmEmailRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.OnBeforeValidateAsync(ConfirmEmailRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.OnAfterValidate(ConfirmEmailRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.OnAfterValidateAsync(ConfirmEmailRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.OnBeforeHandle(ConfirmEmailRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.OnBeforeHandleAsync(ConfirmEmailRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.OnAfterHandle(ConfirmEmailRequest, ConfirmEmailResponse)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.OnAfterHandleAsync(ConfirmEmailRequest, ConfirmEmailResponse, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.OnValidationFailed()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.OnValidationFailedAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendAsync(ConfirmEmailResponse, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.iresult">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendResultAsync(IResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendInterceptedAsync(object, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendCreatedAtAsync&lt;TEndpoint&gt;(object, ConfirmEmailResponse, Http?, int?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendCreatedAtAsync(string, object, ConfirmEmailResponse, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendStringAsync(string, int, string, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendOkAsync(ConfirmEmailResponse, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendOkAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendErrorsAsync(int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendNoContentAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendNotFoundAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendUnauthorizedAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendForbiddenAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendRedirectAsync(string, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendHeadersAsync(Action&lt;IHeaderDictionary&gt;, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendBytesAsync(byte[], string, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendFileAsync(FileInfo, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendStreamAsync(Stream, string, long?, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendEventStreamAsync&lt;T&gt;(string, IAsyncEnumerable&lt;T&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SendEmptyJsonObject(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.AccessControl(string, Apply?, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.AccessControl(string, params string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.AllowAnonymous(params Http[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.AllowAnonymous(string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.AllowFileUploads(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.AllowFormData(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.AuthSchemes(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Claims(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.ClaimsAll(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Delete(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Delete(string, Expression&lt;Func&lt;ConfirmEmailRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Description(Action&lt;RouteHandlerBuilder&gt;, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.DontAutoSendResponse()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.DontAutoTag()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.DontCatchExceptions()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.DontThrowIfValidationFails()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.EnableAntiforgery()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Get(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Get(string, Expression&lt;Func&lt;ConfirmEmailRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Group&lt;TEndpointGroup&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Head(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Head(string, Expression&lt;Func&lt;ConfirmEmailRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Options(Action&lt;RouteHandlerBuilder&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Patch(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Patch(string, Expression&lt;Func&lt;ConfirmEmailRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Permissions(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.PermissionsAll(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Policy(Action&lt;AuthorizationPolicyBuilder&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Policies(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Post(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Post(string, Expression&lt;Func&lt;ConfirmEmailRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.PostProcessor&lt;TPostProcessor&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.PostProcessors(params IPostProcessor&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;[])</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.PreProcessor&lt;TPreProcessor&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.PreProcessors(params IPreProcessor&lt;ConfirmEmailRequest&gt;[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Put(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Put(string, Expression&lt;Func&lt;ConfirmEmailRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.RequestBinder(IRequestBinder&lt;ConfirmEmailRequest&gt;)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.ResponseCache(int, ResponseCacheLocation, bool, string, string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.ResponseInterceptor(IResponseInterceptor)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Roles(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.RoutePrefixOverride(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Routes(params string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SerializerContext&lt;TContext&gt;(TContext)</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.SerializerContext&lt;TContext&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Summary(Action&lt;EndpointSummary&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Summary(Action&lt;EndpointSummary&lt;ConfirmEmailRequest&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Summary(EndpointSummary)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Tags(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Throttle(int, double, string)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Validator&lt;TValidator&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Verbs(params Http[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Verbs(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Version(int, int?)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.AddError(ValidationFailure)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.AddError(string, string, Severity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.AddError(Expression&lt;Func&lt;ConfirmEmailRequest, object&gt;&gt;, string, string, Severity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.ThrowError(ValidationFailure, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.ThrowError(string, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.ThrowError(Expression&lt;Func&lt;ConfirmEmailRequest, object&gt;&gt;, string, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.ThrowIfAnyErrors(int?)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.User</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Response</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Config</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Env</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Logger</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.BaseURL</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.HttpMethod</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Form</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.Files</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.ResponseStarted</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;ConfirmEmailRequest, ConfirmEmailResponse&gt;.ValidationFailed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BaseEndpoint.Verbs(params string[])</a>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.Group&lt;TEndpointGroup&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BaseEndpoint.GetAclHash(string)</a>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.Definition</span>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.HttpContext</span>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.ValidationFailures</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Ecommerce_FastEndpoints_Endpoints_Security_ConfirmEmailEndpoint__ctor_" data-uid="Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint.#ctor*"></a>
+
+  <h3 id="Ecommerce_FastEndpoints_Endpoints_Security_ConfirmEmailEndpoint__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_FastEndpoints_Endpoints_Security_ConfirmEmailEndpoint__MediatR_IMediator_" data-uid="Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint},MediatR.IMediator)">
+  ConfirmEmailEndpoint(ILogger&lt;ConfirmEmailEndpoint&gt;, IMediator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Security/ConfirmEmailEndpoint.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint.html">ConfirmEmailEndpoint</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConfirmEmailEndpoint(ILogger&lt;ConfirmEmailEndpoint&gt; logger, IMediator mediator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint.html">ConfirmEmailEndpoint</a>&gt;</dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a> instance used for logging.</p>
+</dd>
+    <dt><code>mediator</code> <span class="xref">IMediator</span></dt>
+    <dd><p>The <span class="xref">MediatR.IMediator</span> instance used for sending Mediator requests.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ecommerce_FastEndpoints_Endpoints_Security_ConfirmEmailEndpoint_Configure_" data-uid="Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint.Configure*"></a>
+
+  <h3 id="Ecommerce_FastEndpoints_Endpoints_Security_ConfirmEmailEndpoint_Configure" data-uid="Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint.Configure">
+  Configure()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Security/ConfirmEmailEndpoint.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the route for the Endpoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Configure()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_FastEndpoints_Endpoints_Security_ConfirmEmailEndpoint_HandleAsync_" data-uid="Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint.HandleAsync*"></a>
+
+  <h3 id="Ecommerce_FastEndpoints_Endpoints_Security_ConfirmEmailEndpoint_HandleAsync_Ecommerce_Shared_Security_Requests_ConfirmEmailRequest_System_Threading_CancellationToken_" data-uid="Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint.HandleAsync(Ecommerce.Shared.Security.Requests.ConfirmEmailRequest,System.Threading.CancellationToken)">
+  HandleAsync(ConfirmEmailRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Security/ConfirmEmailEndpoint.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles the <a class="xref" href="Ecommerce.Shared.Security.Requests.ConfirmEmailRequest.html">ConfirmEmailRequest</a> and generates a <a class="xref" href="Ecommerce.Shared.Security.Responses.ConfirmEmailResponse.html">ConfirmEmailResponse</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task HandleAsync(ConfirmEmailRequest req, CancellationToken ct)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>req</code> <a class="xref" href="Ecommerce.Shared.Security.Requests.ConfirmEmailRequest.html">ConfirmEmailRequest</a></dt>
+    <dd></dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

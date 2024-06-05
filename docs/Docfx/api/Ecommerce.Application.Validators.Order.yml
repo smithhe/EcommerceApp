@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Validators.Order
+  commentId: N:Ecommerce.Application.Validators.Order
+  id: Ecommerce.Application.Validators.Order
+  children:
+  - Ecommerce.Application.Validators.Order.CreateOrderValidator
+  - Ecommerce.Application.Validators.Order.UpdateOrderValidator
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Validators.Order
+  nameWithType: Ecommerce.Application.Validators.Order
+  fullName: Ecommerce.Application.Validators.Order
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Validators.Order.CreateOrderValidator
+  commentId: T:Ecommerce.Application.Validators.Order.CreateOrderValidator
+  href: Ecommerce.Application.Validators.Order.CreateOrderValidator.html
+  name: CreateOrderValidator
+  nameWithType: CreateOrderValidator
+  fullName: Ecommerce.Application.Validators.Order.CreateOrderValidator
+- uid: Ecommerce.Application.Validators.Order.UpdateOrderValidator
+  commentId: T:Ecommerce.Application.Validators.Order.UpdateOrderValidator
+  href: Ecommerce.Application.Validators.Order.UpdateOrderValidator.html
+  name: UpdateOrderValidator
+  nameWithType: UpdateOrderValidator
+  fullName: Ecommerce.Application.Validators.Order.UpdateOrderValidator

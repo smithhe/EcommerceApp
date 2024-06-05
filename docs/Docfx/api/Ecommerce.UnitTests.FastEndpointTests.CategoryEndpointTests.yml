@@ -1,0 +1,899 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  commentId: T:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  id: CategoryEndpointTests
+  parent: Ecommerce.UnitTests.FastEndpointTests
+  children:
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithException_ReturnsInternalServerError
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithException_ReturnsInternalServerError
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.Setup
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithException_ReturnsInternalServerError
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  - Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  langs:
+  - csharp
+  - vb
+  name: CategoryEndpointTests
+  nameWithType: CategoryEndpointTests
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  type: Class
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CategoryEndpointTests
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 21
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class CategoryEndpointTests
+    content.vb: >-
+      <TestFixture>
+
+      Public Class CategoryEndpointTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.Setup
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.Setup
+  id: Setup
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: CategoryEndpointTests.Setup()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.Setup()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Setup
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 31
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void Setup()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub Setup()
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.Setup*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: CategoryEndpointTests.CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 46
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  id: CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+  nameWithType: CategoryEndpointTests.CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 82
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithException_ReturnsInternalServerError
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithException_ReturnsInternalServerError
+  id: CreateCategoryEndpoint_WithException_ReturnsInternalServerError
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: CreateCategoryEndpoint_WithException_ReturnsInternalServerError()
+  nameWithType: CategoryEndpointTests.CreateCategoryEndpoint_WithException_ReturnsInternalServerError()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithException_ReturnsInternalServerError()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCategoryEndpoint_WithException_ReturnsInternalServerError
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 108
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateCategoryEndpoint_WithException_ReturnsInternalServerError()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateCategoryEndpoint_WithException_ReturnsInternalServerError() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithException_ReturnsInternalServerError*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: CategoryEndpointTests.DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 142
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  id: DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+  nameWithType: CategoryEndpointTests.DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 177
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithException_ReturnsInternalServerError
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithException_ReturnsInternalServerError
+  id: DeleteCategoryEndpoint_WithException_ReturnsInternalServerError
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteCategoryEndpoint_WithException_ReturnsInternalServerError()
+  nameWithType: CategoryEndpointTests.DeleteCategoryEndpoint_WithException_ReturnsInternalServerError()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithException_ReturnsInternalServerError()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteCategoryEndpoint_WithException_ReturnsInternalServerError
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 202
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteCategoryEndpoint_WithException_ReturnsInternalServerError()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteCategoryEndpoint_WithException_ReturnsInternalServerError() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithException_ReturnsInternalServerError*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: CategoryEndpointTests.GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 235
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError
+  id: GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError()
+  nameWithType: CategoryEndpointTests.GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 269
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: CategoryEndpointTests.UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 297
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  id: UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+  nameWithType: CategoryEndpointTests.UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 332
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithException_ReturnsInternalServerError
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithException_ReturnsInternalServerError
+  id: UpdateCategoryEndpoint_WithException_ReturnsInternalServerError
+  parent: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateCategoryEndpoint_WithException_ReturnsInternalServerError()
+  nameWithType: CategoryEndpointTests.UpdateCategoryEndpoint_WithException_ReturnsInternalServerError()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithException_ReturnsInternalServerError()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateCategoryEndpoint_WithException_ReturnsInternalServerError
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/CategoryEndpointTests.cs
+    startLine: 357
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateCategoryEndpoint_WithException_ReturnsInternalServerError()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateCategoryEndpoint_WithException_ReturnsInternalServerError() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithException_ReturnsInternalServerError*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: Ecommerce.UnitTests.FastEndpointTests
+  commentId: N:Ecommerce.UnitTests.FastEndpointTests
+  href: Ecommerce.html
+  name: Ecommerce.UnitTests.FastEndpointTests
+  nameWithType: Ecommerce.UnitTests.FastEndpointTests
+  fullName: Ecommerce.UnitTests.FastEndpointTests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.FastEndpointTests
+    name: FastEndpointTests
+    href: Ecommerce.UnitTests.FastEndpointTests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.FastEndpointTests
+    name: FastEndpointTests
+    href: Ecommerce.UnitTests.FastEndpointTests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.Setup*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.Setup
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_Setup
+  name: Setup
+  nameWithType: CategoryEndpointTests.Setup
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.Setup
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: CategoryEndpointTests.CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  name: CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  nameWithType: CategoryEndpointTests.CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithException_ReturnsInternalServerError*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithException_ReturnsInternalServerError
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_CreateCategoryEndpoint_WithException_ReturnsInternalServerError
+  name: CreateCategoryEndpoint_WithException_ReturnsInternalServerError
+  nameWithType: CategoryEndpointTests.CreateCategoryEndpoint_WithException_ReturnsInternalServerError
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.CreateCategoryEndpoint_WithException_ReturnsInternalServerError
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: CategoryEndpointTests.DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  name: DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  nameWithType: CategoryEndpointTests.DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithException_ReturnsInternalServerError*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithException_ReturnsInternalServerError
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_DeleteCategoryEndpoint_WithException_ReturnsInternalServerError
+  name: DeleteCategoryEndpoint_WithException_ReturnsInternalServerError
+  nameWithType: CategoryEndpointTests.DeleteCategoryEndpoint_WithException_ReturnsInternalServerError
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.DeleteCategoryEndpoint_WithException_ReturnsInternalServerError
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: CategoryEndpointTests.GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError
+  name: GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError
+  nameWithType: CategoryEndpointTests.GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.GetAllCategoriesEndpoint_WithException_ReturnsInternalServerError
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: CategoryEndpointTests.UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  name: UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  nameWithType: CategoryEndpointTests.UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithInvalidToken_ReturnsUnauthorized
+- uid: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithException_ReturnsInternalServerError*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithException_ReturnsInternalServerError
+  href: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_CategoryEndpointTests_UpdateCategoryEndpoint_WithException_ReturnsInternalServerError
+  name: UpdateCategoryEndpoint_WithException_ReturnsInternalServerError
+  nameWithType: CategoryEndpointTests.UpdateCategoryEndpoint_WithException_ReturnsInternalServerError
+  fullName: Ecommerce.UnitTests.FastEndpointTests.CategoryEndpointTests.UpdateCategoryEndpoint_WithException_ReturnsInternalServerError

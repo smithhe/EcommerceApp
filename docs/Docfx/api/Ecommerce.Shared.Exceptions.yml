@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Exceptions
+  commentId: N:Ecommerce.Shared.Exceptions
+  id: Ecommerce.Shared.Exceptions
+  children:
+  - Ecommerce.Shared.Exceptions.BadRequestException
+  - Ecommerce.Shared.Exceptions.InvalidPaymentSourceException
+  - Ecommerce.Shared.Exceptions.NotFoundException
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Exceptions
+  nameWithType: Ecommerce.Shared.Exceptions
+  fullName: Ecommerce.Shared.Exceptions
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Exceptions.BadRequestException
+  commentId: T:Ecommerce.Shared.Exceptions.BadRequestException
+  href: Ecommerce.Shared.Exceptions.BadRequestException.html
+  name: BadRequestException
+  nameWithType: BadRequestException
+  fullName: Ecommerce.Shared.Exceptions.BadRequestException
+- uid: Ecommerce.Shared.Exceptions.InvalidPaymentSourceException
+  commentId: T:Ecommerce.Shared.Exceptions.InvalidPaymentSourceException
+  href: Ecommerce.Shared.Exceptions.InvalidPaymentSourceException.html
+  name: InvalidPaymentSourceException
+  nameWithType: InvalidPaymentSourceException
+  fullName: Ecommerce.Shared.Exceptions.InvalidPaymentSourceException
+- uid: Ecommerce.Shared.Exceptions.NotFoundException
+  commentId: T:Ecommerce.Shared.Exceptions.NotFoundException
+  href: Ecommerce.Shared.Exceptions.NotFoundException.html
+  name: NotFoundException
+  nameWithType: NotFoundException
+  fullName: Ecommerce.Shared.Exceptions.NotFoundException

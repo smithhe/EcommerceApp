@@ -1,0 +1,680 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService
+  commentId: T:Ecommerce.UI.Contracts.Refit.IOrderApiService
+  id: IOrderApiService
+  parent: Ecommerce.UI.Contracts.Refit
+  children:
+  - Ecommerce.UI.Contracts.Refit.IOrderApiService.CreateOrder(Ecommerce.Shared.Requests.Order.CreateOrderApiRequest)
+  - Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderAfterSuccessfulCheckout(Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest)
+  - Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderById(Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest)
+  - Ecommerce.UI.Contracts.Refit.IOrderApiService.GetUserOrders(Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest)
+  - Ecommerce.UI.Contracts.Refit.IOrderApiService.UpdateOrder(Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest)
+  langs:
+  - csharp
+  - vb
+  name: IOrderApiService
+  nameWithType: IOrderApiService
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService
+  type: Interface
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IOrderApiService
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: public interface IOrderApiService
+    content.vb: Public Interface IOrderApiService
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetUserOrders(Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.IOrderApiService.GetUserOrders(Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest)
+  id: GetUserOrders(Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.IOrderApiService
+  langs:
+  - csharp
+  - vb
+  name: GetUserOrders(GetAllOrdersByUserIdApiRequest)
+  nameWithType: IOrderApiService.GetUserOrders(GetAllOrdersByUserIdApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetUserOrders(Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserOrders
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Get("/api/order/user/all")]
+
+      Task<ApiResponse<GetAllOrdersByUserIdResponse>> GetUserOrders(GetAllOrdersByUserIdApiRequest getAllOrdersByUserIdApiRequest)
+    parameters:
+    - id: getAllOrdersByUserIdApiRequest
+      type: Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse}}
+    content.vb: >-
+      <Get("/api/order/user/all")>
+
+      Function GetUserOrders(getAllOrdersByUserIdApiRequest As GetAllOrdersByUserIdApiRequest) As Task(Of ApiResponse(Of GetAllOrdersByUserIdResponse))
+  overload: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetUserOrders*
+  attributes:
+  - type: Refit.GetAttribute
+    ctor: Refit.GetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/order/user/all
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService.UpdateOrder(Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.IOrderApiService.UpdateOrder(Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest)
+  id: UpdateOrder(Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.IOrderApiService
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrder(UpdateOrderApiRequest)
+  nameWithType: IOrderApiService.UpdateOrder(UpdateOrderApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService.UpdateOrder(Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateOrder
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Put("/api/order/update")]
+
+      Task<ApiResponse<UpdateOrderResponse>> UpdateOrder(UpdateOrderApiRequest updateOrderApiRequest)
+    parameters:
+    - id: updateOrderApiRequest
+      type: Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.UpdateOrderResponse}}
+    content.vb: >-
+      <Put("/api/order/update")>
+
+      Function UpdateOrder(updateOrderApiRequest As UpdateOrderApiRequest) As Task(Of ApiResponse(Of UpdateOrderResponse))
+  overload: Ecommerce.UI.Contracts.Refit.IOrderApiService.UpdateOrder*
+  attributes:
+  - type: Refit.PutAttribute
+    ctor: Refit.PutAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/order/update
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderById(Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderById(Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest)
+  id: GetOrderById(Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.IOrderApiService
+  langs:
+  - csharp
+  - vb
+  name: GetOrderById(GetOrderByIdApiRequest)
+  nameWithType: IOrderApiService.GetOrderById(GetOrderByIdApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderById(Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderById
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Get("/api/order")]
+
+      Task<ApiResponse<GetOrderByIdResponse>> GetOrderById(GetOrderByIdApiRequest getOrderByIdApiRequest)
+    parameters:
+    - id: getOrderByIdApiRequest
+      type: Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}}
+    content.vb: >-
+      <Get("/api/order")>
+
+      Function GetOrderById(getOrderByIdApiRequest As GetOrderByIdApiRequest) As Task(Of ApiResponse(Of GetOrderByIdResponse))
+  overload: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderById*
+  attributes:
+  - type: Refit.GetAttribute
+    ctor: Refit.GetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/order
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderAfterSuccessfulCheckout(Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderAfterSuccessfulCheckout(Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest)
+  id: GetOrderAfterSuccessfulCheckout(Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.IOrderApiService
+  langs:
+  - csharp
+  - vb
+  name: GetOrderAfterSuccessfulCheckout(GetOrderAfterSuccessfulCheckoutApiRequest)
+  nameWithType: IOrderApiService.GetOrderAfterSuccessfulCheckout(GetOrderAfterSuccessfulCheckoutApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderAfterSuccessfulCheckout(Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderAfterSuccessfulCheckout
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+    startLine: 18
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Get("/api/checkout/order")]
+
+      Task<ApiResponse<GetOrderAfterSuccessfulCheckoutResponse>> GetOrderAfterSuccessfulCheckout(GetOrderAfterSuccessfulCheckoutApiRequest getOrderAfterSuccessfulCheckoutApiRequest)
+    parameters:
+    - id: getOrderAfterSuccessfulCheckoutApiRequest
+      type: Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse}}
+    content.vb: >-
+      <Get("/api/checkout/order")>
+
+      Function GetOrderAfterSuccessfulCheckout(getOrderAfterSuccessfulCheckoutApiRequest As GetOrderAfterSuccessfulCheckoutApiRequest) As Task(Of ApiResponse(Of GetOrderAfterSuccessfulCheckoutResponse))
+  overload: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderAfterSuccessfulCheckout*
+  attributes:
+  - type: Refit.GetAttribute
+    ctor: Refit.GetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/checkout/order
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService.CreateOrder(Ecommerce.Shared.Requests.Order.CreateOrderApiRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.IOrderApiService.CreateOrder(Ecommerce.Shared.Requests.Order.CreateOrderApiRequest)
+  id: CreateOrder(Ecommerce.Shared.Requests.Order.CreateOrderApiRequest)
+  parent: Ecommerce.UI.Contracts.Refit.IOrderApiService
+  langs:
+  - csharp
+  - vb
+  name: CreateOrder(CreateOrderApiRequest)
+  nameWithType: IOrderApiService.CreateOrder(CreateOrderApiRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService.CreateOrder(Ecommerce.Shared.Requests.Order.CreateOrderApiRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrder
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/IOrderApiService.cs
+    startLine: 21
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Post("/api/order/create")]
+
+      Task<ApiResponse<CreateOrderResponse>> CreateOrder(CreateOrderApiRequest createOrderApiRequest)
+    parameters:
+    - id: createOrderApiRequest
+      type: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.CreateOrderResponse}}
+    content.vb: >-
+      <Post("/api/order/create")>
+
+      Function CreateOrder(createOrderApiRequest As CreateOrderApiRequest) As Task(Of ApiResponse(Of CreateOrderResponse))
+  overload: Ecommerce.UI.Contracts.Refit.IOrderApiService.CreateOrder*
+  attributes:
+  - type: Refit.PostAttribute
+    ctor: Refit.PostAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/order/create
+references:
+- uid: Ecommerce.UI.Contracts.Refit
+  commentId: N:Ecommerce.UI.Contracts.Refit
+  href: Ecommerce.html
+  name: Ecommerce.UI.Contracts.Refit
+  nameWithType: Ecommerce.UI.Contracts.Refit
+  fullName: Ecommerce.UI.Contracts.Refit
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts.Refit
+    name: Refit
+    href: Ecommerce.UI.Contracts.Refit.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts.Refit
+    name: Refit
+    href: Ecommerce.UI.Contracts.Refit.html
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetUserOrders*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.IOrderApiService.GetUserOrders
+  href: Ecommerce.UI.Contracts.Refit.IOrderApiService.html#Ecommerce_UI_Contracts_Refit_IOrderApiService_GetUserOrders_Ecommerce_Shared_Requests_Order_GetAllOrdersByUserIdApiRequest_
+  name: GetUserOrders
+  nameWithType: IOrderApiService.GetUserOrders
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetUserOrders
+- uid: Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest
+  parent: Ecommerce.Shared.Requests.Order
+  href: Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest.html
+  name: GetAllOrdersByUserIdApiRequest
+  nameWithType: GetAllOrdersByUserIdApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<GetAllOrdersByUserIdResponse>>
+  nameWithType: Task<ApiResponse<GetAllOrdersByUserIdResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of GetAllOrdersByUserIdResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse))
+  name.vb: Task(Of ApiResponse(Of GetAllOrdersByUserIdResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse
+    name: GetAllOrdersByUserIdResponse
+    href: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse
+    name: GetAllOrdersByUserIdResponse
+    href: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.Shared.Requests.Order
+  commentId: N:Ecommerce.Shared.Requests.Order
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Requests.Order
+  nameWithType: Ecommerce.Shared.Requests.Order
+  fullName: Ecommerce.Shared.Requests.Order
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Order
+    name: Order
+    href: Ecommerce.Shared.Requests.Order.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Order
+    name: Order
+    href: Ecommerce.Shared.Requests.Order.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService.UpdateOrder*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.IOrderApiService.UpdateOrder
+  href: Ecommerce.UI.Contracts.Refit.IOrderApiService.html#Ecommerce_UI_Contracts_Refit_IOrderApiService_UpdateOrder_Ecommerce_Shared_Requests_Order_UpdateOrderApiRequest_
+  name: UpdateOrder
+  nameWithType: IOrderApiService.UpdateOrder
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService.UpdateOrder
+- uid: Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest
+  parent: Ecommerce.Shared.Requests.Order
+  href: Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest.html
+  name: UpdateOrderApiRequest
+  nameWithType: UpdateOrderApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.UpdateOrderResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.UpdateOrderResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<UpdateOrderResponse>>
+  nameWithType: Task<ApiResponse<UpdateOrderResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.Order.UpdateOrderResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of UpdateOrderResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.Order.UpdateOrderResponse))
+  name.vb: Task(Of ApiResponse(Of UpdateOrderResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Order.UpdateOrderResponse
+    name: UpdateOrderResponse
+    href: Ecommerce.Shared.Responses.Order.UpdateOrderResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.UpdateOrderResponse
+    name: UpdateOrderResponse
+    href: Ecommerce.Shared.Responses.Order.UpdateOrderResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderById*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderById
+  href: Ecommerce.UI.Contracts.Refit.IOrderApiService.html#Ecommerce_UI_Contracts_Refit_IOrderApiService_GetOrderById_Ecommerce_Shared_Requests_Order_GetOrderByIdApiRequest_
+  name: GetOrderById
+  nameWithType: IOrderApiService.GetOrderById
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderById
+- uid: Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest
+  parent: Ecommerce.Shared.Requests.Order
+  href: Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest.html
+  name: GetOrderByIdApiRequest
+  nameWithType: GetOrderByIdApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<GetOrderByIdResponse>>
+  nameWithType: Task<ApiResponse<GetOrderByIdResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.Order.GetOrderByIdResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of GetOrderByIdResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.Order.GetOrderByIdResponse))
+  name.vb: Task(Of ApiResponse(Of GetOrderByIdResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+    name: GetOrderByIdResponse
+    href: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+    name: GetOrderByIdResponse
+    href: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderAfterSuccessfulCheckout*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderAfterSuccessfulCheckout
+  href: Ecommerce.UI.Contracts.Refit.IOrderApiService.html#Ecommerce_UI_Contracts_Refit_IOrderApiService_GetOrderAfterSuccessfulCheckout_Ecommerce_Shared_Requests_Order_GetOrderAfterSuccessfulCheckoutApiRequest_
+  name: GetOrderAfterSuccessfulCheckout
+  nameWithType: IOrderApiService.GetOrderAfterSuccessfulCheckout
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService.GetOrderAfterSuccessfulCheckout
+- uid: Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest
+  parent: Ecommerce.Shared.Requests.Order
+  href: Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest.html
+  name: GetOrderAfterSuccessfulCheckoutApiRequest
+  nameWithType: GetOrderAfterSuccessfulCheckoutApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<GetOrderAfterSuccessfulCheckoutResponse>>
+  nameWithType: Task<ApiResponse<GetOrderAfterSuccessfulCheckoutResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of GetOrderAfterSuccessfulCheckoutResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse))
+  name.vb: Task(Of ApiResponse(Of GetOrderAfterSuccessfulCheckoutResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse
+    name: GetOrderAfterSuccessfulCheckoutResponse
+    href: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse
+    name: GetOrderAfterSuccessfulCheckoutResponse
+    href: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService.CreateOrder*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.IOrderApiService.CreateOrder
+  href: Ecommerce.UI.Contracts.Refit.IOrderApiService.html#Ecommerce_UI_Contracts_Refit_IOrderApiService_CreateOrder_Ecommerce_Shared_Requests_Order_CreateOrderApiRequest_
+  name: CreateOrder
+  nameWithType: IOrderApiService.CreateOrder
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService.CreateOrder
+- uid: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+  parent: Ecommerce.Shared.Requests.Order
+  href: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.html
+  name: CreateOrderApiRequest
+  nameWithType: CreateOrderApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.CreateOrderResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Responses.Order.CreateOrderResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<CreateOrderResponse>>
+  nameWithType: Task<ApiResponse<CreateOrderResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Responses.Order.CreateOrderResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of CreateOrderResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Responses.Order.CreateOrderResponse))
+  name.vb: Task(Of ApiResponse(Of CreateOrderResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Order.CreateOrderResponse
+    name: CreateOrderResponse
+    href: Ecommerce.Shared.Responses.Order.CreateOrderResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.CreateOrderResponse
+    name: CreateOrderResponse
+    href: Ecommerce.Shared.Responses.Order.CreateOrderResponse.html
+  - name: )
+  - name: )

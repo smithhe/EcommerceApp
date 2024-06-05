@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  commentId: N:Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  id: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  children:
+  - Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommand
+  - Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  nameWithType: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommand
+  commentId: T:Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommand
+  parent: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommand.html
+  name: UpdateEcommerceUserCommand
+  nameWithType: UpdateEcommerceUserCommand
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommand
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommandHandler
+  commentId: T:Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommandHandler
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommandHandler.html
+  name: UpdateEcommerceUserCommandHandler
+  nameWithType: UpdateEcommerceUserCommandHandler
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommandHandler
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  commentId: N:Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  nameWithType: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser
+    name: EcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+    name: UpdateEcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser
+    name: EcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+    name: UpdateEcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.html

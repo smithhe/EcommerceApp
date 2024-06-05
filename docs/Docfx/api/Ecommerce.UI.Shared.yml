@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Shared
+  commentId: N:Ecommerce.UI.Shared
+  id: Ecommerce.UI.Shared
+  children:
+  - Ecommerce.UI.Shared.MainLayout
+  - Ecommerce.UI.Shared.NavMenu
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UI.Shared
+  nameWithType: Ecommerce.UI.Shared
+  fullName: Ecommerce.UI.Shared
+  type: Namespace
+  assemblies:
+  - Ecommerce.UI
+references:
+- uid: Ecommerce.UI.Shared.MainLayout
+  commentId: T:Ecommerce.UI.Shared.MainLayout
+  href: Ecommerce.UI.Shared.MainLayout.html
+  name: MainLayout
+  nameWithType: MainLayout
+  fullName: Ecommerce.UI.Shared.MainLayout
+- uid: Ecommerce.UI.Shared.NavMenu
+  commentId: T:Ecommerce.UI.Shared.NavMenu
+  href: Ecommerce.UI.Shared.NavMenu.html
+  name: NavMenu
+  nameWithType: NavMenu
+  fullName: Ecommerce.UI.Shared.NavMenu

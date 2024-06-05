@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Requests.Category
+  commentId: N:Ecommerce.Shared.Requests.Category
+  id: Ecommerce.Shared.Requests.Category
+  children:
+  - Ecommerce.Shared.Requests.Category.CreateCategoryApiRequest
+  - Ecommerce.Shared.Requests.Category.DeleteCategoryApiRequest
+  - Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest
+  - Ecommerce.Shared.Requests.Category.GetCategoryByIdApiRequest
+  - Ecommerce.Shared.Requests.Category.UpdateCategoryApiRequest
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Requests.Category
+  nameWithType: Ecommerce.Shared.Requests.Category
+  fullName: Ecommerce.Shared.Requests.Category
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Requests.Category.CreateCategoryApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Category.CreateCategoryApiRequest
+  parent: Ecommerce.Shared.Requests.Category
+  href: Ecommerce.Shared.Requests.Category.CreateCategoryApiRequest.html
+  name: CreateCategoryApiRequest
+  nameWithType: CreateCategoryApiRequest
+  fullName: Ecommerce.Shared.Requests.Category.CreateCategoryApiRequest
+- uid: Ecommerce.Shared.Requests.Category.DeleteCategoryApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Category.DeleteCategoryApiRequest
+  parent: Ecommerce.Shared.Requests.Category
+  href: Ecommerce.Shared.Requests.Category.DeleteCategoryApiRequest.html
+  name: DeleteCategoryApiRequest
+  nameWithType: DeleteCategoryApiRequest
+  fullName: Ecommerce.Shared.Requests.Category.DeleteCategoryApiRequest
+- uid: Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest
+  parent: Ecommerce.Shared.Requests.Category
+  href: Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest.html
+  name: GetAllCategoriesApiRequest
+  nameWithType: GetAllCategoriesApiRequest
+  fullName: Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest
+- uid: Ecommerce.Shared.Requests.Category.GetCategoryByIdApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Category.GetCategoryByIdApiRequest
+  href: Ecommerce.Shared.Requests.Category.GetCategoryByIdApiRequest.html
+  name: GetCategoryByIdApiRequest
+  nameWithType: GetCategoryByIdApiRequest
+  fullName: Ecommerce.Shared.Requests.Category.GetCategoryByIdApiRequest
+- uid: Ecommerce.Shared.Requests.Category.UpdateCategoryApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Category.UpdateCategoryApiRequest
+  parent: Ecommerce.Shared.Requests.Category
+  href: Ecommerce.Shared.Requests.Category.UpdateCategoryApiRequest.html
+  name: UpdateCategoryApiRequest
+  nameWithType: UpdateCategoryApiRequest
+  fullName: Ecommerce.Shared.Requests.Category.UpdateCategoryApiRequest
+- uid: Ecommerce.Shared.Requests.Category
+  commentId: N:Ecommerce.Shared.Requests.Category
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Requests.Category
+  nameWithType: Ecommerce.Shared.Requests.Category
+  fullName: Ecommerce.Shared.Requests.Category
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Category
+    name: Category
+    href: Ecommerce.Shared.Requests.Category.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Category
+    name: Category
+    href: Ecommerce.Shared.Requests.Category.html

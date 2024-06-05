@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Responses.Order
+  commentId: N:Ecommerce.Shared.Responses.Order
+  id: Ecommerce.Shared.Responses.Order
+  children:
+  - Ecommerce.Shared.Responses.Order.CreateOrderResponse
+  - Ecommerce.Shared.Responses.Order.DeleteOrderResponse
+  - Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse
+  - Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse
+  - Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+  - Ecommerce.Shared.Responses.Order.UpdateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Responses.Order
+  nameWithType: Ecommerce.Shared.Responses.Order
+  fullName: Ecommerce.Shared.Responses.Order
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Responses.Order.CreateOrderResponse
+  commentId: T:Ecommerce.Shared.Responses.Order.CreateOrderResponse
+  href: Ecommerce.Shared.Responses.Order.CreateOrderResponse.html
+  name: CreateOrderResponse
+  nameWithType: CreateOrderResponse
+  fullName: Ecommerce.Shared.Responses.Order.CreateOrderResponse
+- uid: Ecommerce.Shared.Responses.Order.DeleteOrderResponse
+  commentId: T:Ecommerce.Shared.Responses.Order.DeleteOrderResponse
+  href: Ecommerce.Shared.Responses.Order.DeleteOrderResponse.html
+  name: DeleteOrderResponse
+  nameWithType: DeleteOrderResponse
+  fullName: Ecommerce.Shared.Responses.Order.DeleteOrderResponse
+- uid: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse
+  commentId: T:Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse
+  href: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse.html
+  name: GetAllOrdersByUserIdResponse
+  nameWithType: GetAllOrdersByUserIdResponse
+  fullName: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse
+- uid: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse
+  commentId: T:Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse
+  href: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse.html
+  name: GetOrderAfterSuccessfulCheckoutResponse
+  nameWithType: GetOrderAfterSuccessfulCheckoutResponse
+  fullName: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse
+- uid: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+  commentId: T:Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+  href: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse.html
+  name: GetOrderByIdResponse
+  nameWithType: GetOrderByIdResponse
+  fullName: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+- uid: Ecommerce.Shared.Responses.Order.UpdateOrderResponse
+  commentId: T:Ecommerce.Shared.Responses.Order.UpdateOrderResponse
+  href: Ecommerce.Shared.Responses.Order.UpdateOrderResponse.html
+  name: UpdateOrderResponse
+  nameWithType: UpdateOrderResponse
+  fullName: Ecommerce.Shared.Responses.Order.UpdateOrderResponse

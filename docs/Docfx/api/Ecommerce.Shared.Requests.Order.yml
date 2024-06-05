@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Requests.Order
+  commentId: N:Ecommerce.Shared.Requests.Order
+  id: Ecommerce.Shared.Requests.Order
+  children:
+  - Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+  - Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest
+  - Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest
+  - Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest
+  - Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Requests.Order
+  nameWithType: Ecommerce.Shared.Requests.Order
+  fullName: Ecommerce.Shared.Requests.Order
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+  parent: Ecommerce.Shared.Requests.Order
+  href: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.html
+  name: CreateOrderApiRequest
+  nameWithType: CreateOrderApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+- uid: Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest
+  parent: Ecommerce.Shared.Requests.Order
+  href: Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest.html
+  name: GetAllOrdersByUserIdApiRequest
+  nameWithType: GetAllOrdersByUserIdApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest
+- uid: Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest
+  parent: Ecommerce.Shared.Requests.Order
+  href: Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest.html
+  name: GetOrderAfterSuccessfulCheckoutApiRequest
+  nameWithType: GetOrderAfterSuccessfulCheckoutApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest
+- uid: Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest
+  parent: Ecommerce.Shared.Requests.Order
+  href: Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest.html
+  name: GetOrderByIdApiRequest
+  nameWithType: GetOrderByIdApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest
+- uid: Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest
+  parent: Ecommerce.Shared.Requests.Order
+  href: Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest.html
+  name: UpdateOrderApiRequest
+  nameWithType: UpdateOrderApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest
+- uid: Ecommerce.Shared.Requests.Order
+  commentId: N:Ecommerce.Shared.Requests.Order
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Requests.Order
+  nameWithType: Ecommerce.Shared.Requests.Order
+  fullName: Ecommerce.Shared.Requests.Order
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Order
+    name: Order
+    href: Ecommerce.Shared.Requests.Order.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Order
+    name: Order
+    href: Ecommerce.Shared.Requests.Order.html

@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  commentId: N:Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  id: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  children:
+  - Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+  - Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  nameWithType: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+  commentId: T:Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+  parent: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand.html
+  name: UpdateProductCommand
+  nameWithType: UpdateProductCommand
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+  commentId: T:Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+  href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.html
+  name: UpdateProductCommandHandler
+  nameWithType: UpdateProductCommandHandler
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  commentId: N:Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  nameWithType: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Product.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+    name: UpdateProduct
+    href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Product.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+    name: UpdateProduct
+    href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.html

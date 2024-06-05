@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models.Requests
+  commentId: N:Ecommerce.PayPal.Models.Requests
+  id: Ecommerce.PayPal.Models.Requests
+  children:
+  - Ecommerce.PayPal.Models.Requests.PayPalCreateOrderRequest
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.PayPal.Models.Requests
+  nameWithType: Ecommerce.PayPal.Models.Requests
+  fullName: Ecommerce.PayPal.Models.Requests
+  type: Namespace
+  assemblies:
+  - Ecommerce.PayPal
+references:
+- uid: Ecommerce.PayPal.Models.Requests.PayPalCreateOrderRequest
+  commentId: T:Ecommerce.PayPal.Models.Requests.PayPalCreateOrderRequest
+  parent: Ecommerce.PayPal.Models.Requests
+  href: Ecommerce.PayPal.Models.Requests.PayPalCreateOrderRequest.html
+  name: PayPalCreateOrderRequest
+  nameWithType: PayPalCreateOrderRequest
+  fullName: Ecommerce.PayPal.Models.Requests.PayPalCreateOrderRequest
+- uid: Ecommerce.PayPal.Models.Requests
+  commentId: N:Ecommerce.PayPal.Models.Requests
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Models.Requests
+  nameWithType: Ecommerce.PayPal.Models.Requests
+  fullName: Ecommerce.PayPal.Models.Requests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models.Requests
+    name: Requests
+    href: Ecommerce.PayPal.Models.Requests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models.Requests
+    name: Requests
+    href: Ecommerce.PayPal.Models.Requests.html

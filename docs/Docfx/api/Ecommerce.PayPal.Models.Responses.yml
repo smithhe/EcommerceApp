@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models.Responses
+  commentId: N:Ecommerce.PayPal.Models.Responses
+  id: Ecommerce.PayPal.Models.Responses
+  children:
+  - Ecommerce.PayPal.Models.Responses.PayPalAuthTokenResponse
+  - Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.PayPal.Models.Responses
+  nameWithType: Ecommerce.PayPal.Models.Responses
+  fullName: Ecommerce.PayPal.Models.Responses
+  type: Namespace
+  assemblies:
+  - Ecommerce.PayPal
+references:
+- uid: Ecommerce.PayPal.Models.Responses.PayPalAuthTokenResponse
+  commentId: T:Ecommerce.PayPal.Models.Responses.PayPalAuthTokenResponse
+  href: Ecommerce.PayPal.Models.Responses.PayPalAuthTokenResponse.html
+  name: PayPalAuthTokenResponse
+  nameWithType: PayPalAuthTokenResponse
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalAuthTokenResponse
+- uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  commentId: T:Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+  href: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse.html
+  name: PayPalCreateOrderResponse
+  nameWithType: PayPalCreateOrderResponse
+  fullName: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse

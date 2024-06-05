@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Pages
+  commentId: N:Ecommerce.UI.Pages
+  id: Ecommerce.UI.Pages
+  children:
+  - Ecommerce.UI.Pages.Cart
+  - Ecommerce.UI.Pages.Categories
+  - Ecommerce.UI.Pages.Index
+  - Ecommerce.UI.Pages.OrderDetail
+  - Ecommerce.UI.Pages.Orders
+  - Ecommerce.UI.Pages.ProductDetail
+  - Ecommerce.UI.Pages.Products
+  - Ecommerce.UI.Pages.Profile
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UI.Pages
+  nameWithType: Ecommerce.UI.Pages
+  fullName: Ecommerce.UI.Pages
+  type: Namespace
+  assemblies:
+  - Ecommerce.UI
+references:
+- uid: Ecommerce.UI.Pages.Cart
+  commentId: T:Ecommerce.UI.Pages.Cart
+  href: Ecommerce.UI.Pages.Cart.html
+  name: Cart
+  nameWithType: Cart
+  fullName: Ecommerce.UI.Pages.Cart
+- uid: Ecommerce.UI.Pages.Categories
+  commentId: T:Ecommerce.UI.Pages.Categories
+  href: Ecommerce.UI.Pages.Categories.html
+  name: Categories
+  nameWithType: Categories
+  fullName: Ecommerce.UI.Pages.Categories
+- uid: Ecommerce.UI.Pages.OrderDetail
+  commentId: T:Ecommerce.UI.Pages.OrderDetail
+  href: Ecommerce.UI.Pages.OrderDetail.html
+  name: OrderDetail
+  nameWithType: OrderDetail
+  fullName: Ecommerce.UI.Pages.OrderDetail
+- uid: Ecommerce.UI.Pages.Orders
+  commentId: T:Ecommerce.UI.Pages.Orders
+  href: Ecommerce.UI.Pages.Orders.html
+  name: Orders
+  nameWithType: Orders
+  fullName: Ecommerce.UI.Pages.Orders
+- uid: Ecommerce.UI.Pages.ProductDetail
+  commentId: T:Ecommerce.UI.Pages.ProductDetail
+  href: Ecommerce.UI.Pages.ProductDetail.html
+  name: ProductDetail
+  nameWithType: ProductDetail
+  fullName: Ecommerce.UI.Pages.ProductDetail
+- uid: Ecommerce.UI.Pages.Products
+  commentId: T:Ecommerce.UI.Pages.Products
+  href: Ecommerce.UI.Pages.Products.html
+  name: Products
+  nameWithType: Products
+  fullName: Ecommerce.UI.Pages.Products
+- uid: Ecommerce.UI.Pages.Profile
+  commentId: T:Ecommerce.UI.Pages.Profile
+  href: Ecommerce.UI.Pages.Profile.html
+  name: Profile
+  nameWithType: Profile
+  fullName: Ecommerce.UI.Pages.Profile
+- uid: Ecommerce.UI.Pages.Index
+  commentId: T:Ecommerce.UI.Pages.Index
+  href: Ecommerce.UI.Pages.Index.html
+  name: Index
+  nameWithType: Index
+  fullName: Ecommerce.UI.Pages.Index

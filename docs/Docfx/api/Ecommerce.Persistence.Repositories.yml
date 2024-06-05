@@ -1,0 +1,65 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Persistence.Repositories
+  commentId: N:Ecommerce.Persistence.Repositories
+  id: Ecommerce.Persistence.Repositories
+  children:
+  - Ecommerce.Persistence.Repositories.CartItemRepository
+  - Ecommerce.Persistence.Repositories.CategoryAsyncRepository
+  - Ecommerce.Persistence.Repositories.OrderAsyncRepository
+  - Ecommerce.Persistence.Repositories.OrderItemAsyncRepository
+  - Ecommerce.Persistence.Repositories.OrderKeyRepository
+  - Ecommerce.Persistence.Repositories.ProductAsyncRepository
+  - Ecommerce.Persistence.Repositories.ReviewAsyncRepository
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Persistence.Repositories
+  nameWithType: Ecommerce.Persistence.Repositories
+  fullName: Ecommerce.Persistence.Repositories
+  type: Namespace
+  assemblies:
+  - Ecommerce.Persistence
+references:
+- uid: Ecommerce.Persistence.Repositories.CartItemRepository
+  commentId: T:Ecommerce.Persistence.Repositories.CartItemRepository
+  href: Ecommerce.Persistence.Repositories.CartItemRepository.html
+  name: CartItemRepository
+  nameWithType: CartItemRepository
+  fullName: Ecommerce.Persistence.Repositories.CartItemRepository
+- uid: Ecommerce.Persistence.Repositories.CategoryAsyncRepository
+  commentId: T:Ecommerce.Persistence.Repositories.CategoryAsyncRepository
+  href: Ecommerce.Persistence.Repositories.CategoryAsyncRepository.html
+  name: CategoryAsyncRepository
+  nameWithType: CategoryAsyncRepository
+  fullName: Ecommerce.Persistence.Repositories.CategoryAsyncRepository
+- uid: Ecommerce.Persistence.Repositories.OrderAsyncRepository
+  commentId: T:Ecommerce.Persistence.Repositories.OrderAsyncRepository
+  href: Ecommerce.Persistence.Repositories.OrderAsyncRepository.html
+  name: OrderAsyncRepository
+  nameWithType: OrderAsyncRepository
+  fullName: Ecommerce.Persistence.Repositories.OrderAsyncRepository
+- uid: Ecommerce.Persistence.Repositories.OrderItemAsyncRepository
+  commentId: T:Ecommerce.Persistence.Repositories.OrderItemAsyncRepository
+  href: Ecommerce.Persistence.Repositories.OrderItemAsyncRepository.html
+  name: OrderItemAsyncRepository
+  nameWithType: OrderItemAsyncRepository
+  fullName: Ecommerce.Persistence.Repositories.OrderItemAsyncRepository
+- uid: Ecommerce.Persistence.Repositories.OrderKeyRepository
+  commentId: T:Ecommerce.Persistence.Repositories.OrderKeyRepository
+  href: Ecommerce.Persistence.Repositories.OrderKeyRepository.html
+  name: OrderKeyRepository
+  nameWithType: OrderKeyRepository
+  fullName: Ecommerce.Persistence.Repositories.OrderKeyRepository
+- uid: Ecommerce.Persistence.Repositories.ProductAsyncRepository
+  commentId: T:Ecommerce.Persistence.Repositories.ProductAsyncRepository
+  href: Ecommerce.Persistence.Repositories.ProductAsyncRepository.html
+  name: ProductAsyncRepository
+  nameWithType: ProductAsyncRepository
+  fullName: Ecommerce.Persistence.Repositories.ProductAsyncRepository
+- uid: Ecommerce.Persistence.Repositories.ReviewAsyncRepository
+  commentId: T:Ecommerce.Persistence.Repositories.ReviewAsyncRepository
+  href: Ecommerce.Persistence.Repositories.ReviewAsyncRepository.html
+  name: ReviewAsyncRepository
+  nameWithType: ReviewAsyncRepository
+  fullName: Ecommerce.Persistence.Repositories.ReviewAsyncRepository

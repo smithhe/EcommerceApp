@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  commentId: N:Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  id: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  children:
+  - Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommand
+  - Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  nameWithType: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  fullName: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommand
+  commentId: T:Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommand
+  parent: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  href: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommand.html
+  name: AddPayPalRequestIdCommand
+  nameWithType: AddPayPalRequestIdCommand
+  fullName: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommand
+- uid: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommandHandler
+  commentId: T:Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommandHandler
+  href: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommandHandler.html
+  name: AddPayPalRequestIdCommandHandler
+  nameWithType: AddPayPalRequestIdCommandHandler
+  fullName: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommandHandler
+- uid: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  commentId: N:Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  nameWithType: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  fullName: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Order.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+    name: AddPayPalRequestId
+    href: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Order.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+    name: AddPayPalRequestId
+    href: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.html

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application
+  commentId: N:Ecommerce.Application
+  id: Ecommerce.Application
+  children:
+  - Ecommerce.Application.ApplicationServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application
+  nameWithType: Ecommerce.Application
+  fullName: Ecommerce.Application
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.ApplicationServiceRegistration
+  commentId: T:Ecommerce.Application.ApplicationServiceRegistration
+  href: Ecommerce.Application.ApplicationServiceRegistration.html
+  name: ApplicationServiceRegistration
+  nameWithType: ApplicationServiceRegistration
+  fullName: Ecommerce.Application.ApplicationServiceRegistration

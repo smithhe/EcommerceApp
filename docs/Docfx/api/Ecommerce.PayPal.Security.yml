@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Security
+  commentId: N:Ecommerce.PayPal.Security
+  id: Ecommerce.PayPal.Security
+  children:
+  - Ecommerce.PayPal.Security.AuthHeaderHandler
+  - Ecommerce.PayPal.Security.TokenCacheService
+  - Ecommerce.PayPal.Security.TokenService
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.PayPal.Security
+  nameWithType: Ecommerce.PayPal.Security
+  fullName: Ecommerce.PayPal.Security
+  type: Namespace
+  assemblies:
+  - Ecommerce.PayPal
+references:
+- uid: Ecommerce.PayPal.Security.AuthHeaderHandler
+  commentId: T:Ecommerce.PayPal.Security.AuthHeaderHandler
+  href: Ecommerce.PayPal.Security.AuthHeaderHandler.html
+  name: AuthHeaderHandler
+  nameWithType: AuthHeaderHandler
+  fullName: Ecommerce.PayPal.Security.AuthHeaderHandler
+- uid: Ecommerce.PayPal.Security.TokenCacheService
+  commentId: T:Ecommerce.PayPal.Security.TokenCacheService
+  href: Ecommerce.PayPal.Security.TokenCacheService.html
+  name: TokenCacheService
+  nameWithType: TokenCacheService
+  fullName: Ecommerce.PayPal.Security.TokenCacheService
+- uid: Ecommerce.PayPal.Security.TokenService
+  commentId: T:Ecommerce.PayPal.Security.TokenService
+  href: Ecommerce.PayPal.Security.TokenService.html
+  name: TokenService
+  nameWithType: TokenService
+  fullName: Ecommerce.PayPal.Security.TokenService

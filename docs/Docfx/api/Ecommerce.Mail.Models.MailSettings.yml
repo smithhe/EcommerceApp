@@ -1,0 +1,516 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Mail.Models.MailSettings
+  commentId: T:Ecommerce.Mail.Models.MailSettings
+  id: MailSettings
+  parent: Ecommerce.Mail.Models
+  children:
+  - Ecommerce.Mail.Models.MailSettings.#ctor
+  - Ecommerce.Mail.Models.MailSettings.Host
+  - Ecommerce.Mail.Models.MailSettings.Password
+  - Ecommerce.Mail.Models.MailSettings.Port
+  - Ecommerce.Mail.Models.MailSettings.UserName
+  langs:
+  - csharp
+  - vb
+  name: MailSettings
+  nameWithType: MailSettings
+  fullName: Ecommerce.Mail.Models.MailSettings
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Models/MailSettings.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: MailSettings
+    path: ../../Infrastructure/Ecommerce.Mail/Models/MailSettings.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Models
+  summary: Model for mail settings
+  example: []
+  syntax:
+    content: public class MailSettings
+    content.vb: Public Class MailSettings
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Mail.Models.MailSettings.Host
+  commentId: P:Ecommerce.Mail.Models.MailSettings.Host
+  id: Host
+  parent: Ecommerce.Mail.Models.MailSettings
+  langs:
+  - csharp
+  - vb
+  name: Host
+  nameWithType: MailSettings.Host
+  fullName: Ecommerce.Mail.Models.MailSettings.Host
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Models/MailSettings.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Host
+    path: ../../Infrastructure/Ecommerce.Mail/Models/MailSettings.cs
+    startLine: 10
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Models
+  summary: The host address of the mail server
+  example: []
+  syntax:
+    content: public string? Host { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Host As String
+  overload: Ecommerce.Mail.Models.MailSettings.Host*
+- uid: Ecommerce.Mail.Models.MailSettings.Port
+  commentId: P:Ecommerce.Mail.Models.MailSettings.Port
+  id: Port
+  parent: Ecommerce.Mail.Models.MailSettings
+  langs:
+  - csharp
+  - vb
+  name: Port
+  nameWithType: MailSettings.Port
+  fullName: Ecommerce.Mail.Models.MailSettings.Port
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Models/MailSettings.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Port
+    path: ../../Infrastructure/Ecommerce.Mail/Models/MailSettings.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Models
+  summary: The port to use on the mail server
+  example: []
+  syntax:
+    content: public int Port { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Port As Integer
+  overload: Ecommerce.Mail.Models.MailSettings.Port*
+- uid: Ecommerce.Mail.Models.MailSettings.UserName
+  commentId: P:Ecommerce.Mail.Models.MailSettings.UserName
+  id: UserName
+  parent: Ecommerce.Mail.Models.MailSettings
+  langs:
+  - csharp
+  - vb
+  name: UserName
+  nameWithType: MailSettings.UserName
+  fullName: Ecommerce.Mail.Models.MailSettings.UserName
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Models/MailSettings.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UserName
+    path: ../../Infrastructure/Ecommerce.Mail/Models/MailSettings.cs
+    startLine: 20
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Models
+  summary: The email address to send mail from
+  example: []
+  syntax:
+    content: public string? UserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserName As String
+  overload: Ecommerce.Mail.Models.MailSettings.UserName*
+- uid: Ecommerce.Mail.Models.MailSettings.Password
+  commentId: P:Ecommerce.Mail.Models.MailSettings.Password
+  id: Password
+  parent: Ecommerce.Mail.Models.MailSettings
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: MailSettings.Password
+  fullName: Ecommerce.Mail.Models.MailSettings.Password
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Models/MailSettings.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Password
+    path: ../../Infrastructure/Ecommerce.Mail/Models/MailSettings.cs
+    startLine: 25
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Models
+  summary: The password to use to authenticate with the mail server
+  example: []
+  syntax:
+    content: public string? Password { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: Ecommerce.Mail.Models.MailSettings.Password*
+- uid: Ecommerce.Mail.Models.MailSettings.#ctor
+  commentId: M:Ecommerce.Mail.Models.MailSettings.#ctor
+  id: '#ctor'
+  parent: Ecommerce.Mail.Models.MailSettings
+  langs:
+  - csharp
+  - vb
+  name: MailSettings()
+  nameWithType: MailSettings.MailSettings()
+  fullName: Ecommerce.Mail.Models.MailSettings.MailSettings()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Infrastructure/Ecommerce.Mail/Models/MailSettings.cs
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Models
+  syntax:
+    content: public MailSettings()
+    content.vb: Public Sub New()
+  overload: Ecommerce.Mail.Models.MailSettings.#ctor*
+  nameWithType.vb: MailSettings.New()
+  fullName.vb: Ecommerce.Mail.Models.MailSettings.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.Mail.Models
+  commentId: N:Ecommerce.Mail.Models
+  href: Ecommerce.html
+  name: Ecommerce.Mail.Models
+  nameWithType: Ecommerce.Mail.Models
+  fullName: Ecommerce.Mail.Models
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Models
+    name: Models
+    href: Ecommerce.Mail.Models.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Models
+    name: Models
+    href: Ecommerce.Mail.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Mail.Models.MailSettings.Host*
+  commentId: Overload:Ecommerce.Mail.Models.MailSettings.Host
+  href: Ecommerce.Mail.Models.MailSettings.html#Ecommerce_Mail_Models_MailSettings_Host
+  name: Host
+  nameWithType: MailSettings.Host
+  fullName: Ecommerce.Mail.Models.MailSettings.Host
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.Mail.Models.MailSettings.Port*
+  commentId: Overload:Ecommerce.Mail.Models.MailSettings.Port
+  href: Ecommerce.Mail.Models.MailSettings.html#Ecommerce_Mail_Models_MailSettings_Port
+  name: Port
+  nameWithType: MailSettings.Port
+  fullName: Ecommerce.Mail.Models.MailSettings.Port
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Ecommerce.Mail.Models.MailSettings.UserName*
+  commentId: Overload:Ecommerce.Mail.Models.MailSettings.UserName
+  href: Ecommerce.Mail.Models.MailSettings.html#Ecommerce_Mail_Models_MailSettings_UserName
+  name: UserName
+  nameWithType: MailSettings.UserName
+  fullName: Ecommerce.Mail.Models.MailSettings.UserName
+- uid: Ecommerce.Mail.Models.MailSettings.Password*
+  commentId: Overload:Ecommerce.Mail.Models.MailSettings.Password
+  href: Ecommerce.Mail.Models.MailSettings.html#Ecommerce_Mail_Models_MailSettings_Password
+  name: Password
+  nameWithType: MailSettings.Password
+  fullName: Ecommerce.Mail.Models.MailSettings.Password
+- uid: Ecommerce.Mail.Models.MailSettings.#ctor*
+  commentId: Overload:Ecommerce.Mail.Models.MailSettings.#ctor
+  isExternal: true
+  href: Ecommerce.Mail.Models.MailSettings.html#Ecommerce_Mail_Models_MailSettings__ctor
+  name: MailSettings
+  nameWithType: MailSettings.MailSettings
+  fullName: Ecommerce.Mail.Models.MailSettings.MailSettings
+  nameWithType.vb: MailSettings.New
+  fullName.vb: Ecommerce.Mail.Models.MailSettings.New
+  name.vb: New

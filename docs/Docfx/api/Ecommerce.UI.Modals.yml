@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Modals
+  commentId: N:Ecommerce.UI.Modals
+  id: Ecommerce.UI.Modals
+  children:
+  - Ecommerce.UI.Modals.AddToCartModal
+  - Ecommerce.UI.Modals.EditCartItemModal
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UI.Modals
+  nameWithType: Ecommerce.UI.Modals
+  fullName: Ecommerce.UI.Modals
+  type: Namespace
+  assemblies:
+  - Ecommerce.UI
+references:
+- uid: Ecommerce.UI.Modals.AddToCartModal
+  commentId: T:Ecommerce.UI.Modals.AddToCartModal
+  href: Ecommerce.UI.Modals.AddToCartModal.html
+  name: AddToCartModal
+  nameWithType: AddToCartModal
+  fullName: Ecommerce.UI.Modals.AddToCartModal
+- uid: Ecommerce.UI.Modals.EditCartItemModal
+  commentId: T:Ecommerce.UI.Modals.EditCartItemModal
+  href: Ecommerce.UI.Modals.EditCartItemModal.html
+  name: EditCartItemModal
+  nameWithType: EditCartItemModal
+  fullName: Ecommerce.UI.Modals.EditCartItemModal

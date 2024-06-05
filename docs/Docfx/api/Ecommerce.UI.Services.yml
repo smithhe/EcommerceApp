@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Services
+  commentId: N:Ecommerce.UI.Services
+  id: Ecommerce.UI.Services
+  children:
+  - Ecommerce.UI.Services.CartService
+  - Ecommerce.UI.Services.CategoryService
+  - Ecommerce.UI.Services.OrderService
+  - Ecommerce.UI.Services.ProductService
+  - Ecommerce.UI.Services.ReviewService
+  - Ecommerce.UI.Services.SecurityService
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UI.Services
+  nameWithType: Ecommerce.UI.Services
+  fullName: Ecommerce.UI.Services
+  type: Namespace
+  assemblies:
+  - Ecommerce.UI
+references:
+- uid: Ecommerce.UI.Services.CartService
+  commentId: T:Ecommerce.UI.Services.CartService
+  href: Ecommerce.UI.Services.CartService.html
+  name: CartService
+  nameWithType: CartService
+  fullName: Ecommerce.UI.Services.CartService
+- uid: Ecommerce.UI.Services.CategoryService
+  commentId: T:Ecommerce.UI.Services.CategoryService
+  href: Ecommerce.UI.Services.CategoryService.html
+  name: CategoryService
+  nameWithType: CategoryService
+  fullName: Ecommerce.UI.Services.CategoryService
+- uid: Ecommerce.UI.Services.OrderService
+  commentId: T:Ecommerce.UI.Services.OrderService
+  href: Ecommerce.UI.Services.OrderService.html
+  name: OrderService
+  nameWithType: OrderService
+  fullName: Ecommerce.UI.Services.OrderService
+- uid: Ecommerce.UI.Services.ProductService
+  commentId: T:Ecommerce.UI.Services.ProductService
+  href: Ecommerce.UI.Services.ProductService.html
+  name: ProductService
+  nameWithType: ProductService
+  fullName: Ecommerce.UI.Services.ProductService
+- uid: Ecommerce.UI.Services.ReviewService
+  commentId: T:Ecommerce.UI.Services.ReviewService
+  href: Ecommerce.UI.Services.ReviewService.html
+  name: ReviewService
+  nameWithType: ReviewService
+  fullName: Ecommerce.UI.Services.ReviewService
+- uid: Ecommerce.UI.Services.SecurityService
+  commentId: T:Ecommerce.UI.Services.SecurityService
+  href: Ecommerce.UI.Services.SecurityService.html
+  name: SecurityService
+  nameWithType: SecurityService
+  fullName: Ecommerce.UI.Services.SecurityService

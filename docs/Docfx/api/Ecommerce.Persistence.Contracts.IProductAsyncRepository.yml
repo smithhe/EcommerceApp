@@ -1,0 +1,649 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  commentId: T:Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  id: IProductAsyncRepository
+  parent: Ecommerce.Persistence.Contracts
+  children:
+  - Ecommerce.Persistence.Contracts.IProductAsyncRepository.IsNameUnique(System.String)
+  - Ecommerce.Persistence.Contracts.IProductAsyncRepository.ListAllAsync(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: IProductAsyncRepository
+  nameWithType: IProductAsyncRepository
+  fullName: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  type: Interface
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IProductAsyncRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IProductAsyncRepository
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IProductAsyncRepository.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Extends the <xref href="Ecommerce.Persistence.Contracts.IAsyncRepository%601" data-throw-if-not-resolved="false"></xref> interface with an additional method for <xref href="Ecommerce.Domain.Entities.Product" data-throw-if-not-resolved="false"></xref> entities
+  example: []
+  syntax:
+    content: 'public interface IProductAsyncRepository : IAsyncRepository<Product>'
+    content.vb: Public Interface IProductAsyncRepository Inherits IAsyncRepository(Of Product)
+  inheritedMembers:
+  - Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.GetByIdAsync(System.Int32)
+  - Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.AddAsync(Ecommerce.Domain.Entities.Product)
+  - Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.UpdateAsync(Ecommerce.Domain.Entities.Product)
+  - Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.DeleteAsync(Ecommerce.Domain.Entities.Product)
+- uid: Ecommerce.Persistence.Contracts.IProductAsyncRepository.ListAllAsync(System.Int32)
+  commentId: M:Ecommerce.Persistence.Contracts.IProductAsyncRepository.ListAllAsync(System.Int32)
+  id: ListAllAsync(System.Int32)
+  parent: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  langs:
+  - csharp
+  - vb
+  name: ListAllAsync(int)
+  nameWithType: IProductAsyncRepository.ListAllAsync(int)
+  fullName: Ecommerce.Persistence.Contracts.IProductAsyncRepository.ListAllAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IProductAsyncRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ListAllAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IProductAsyncRepository.cs
+    startLine: 19
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Retrieves all <xref href="Ecommerce.Domain.Entities.Product" data-throw-if-not-resolved="false"></xref> entities from the database with the specified <xref href="Ecommerce.Domain.Entities.Category" data-throw-if-not-resolved="false"></xref> ID.
+  example: []
+  syntax:
+    content: Task<IEnumerable<Product>> ListAllAsync(int categoryId)
+    parameters:
+    - id: categoryId
+      type: System.Int32
+      description: The ID of the <xref href="Ecommerce.Domain.Entities.Category" data-throw-if-not-resolved="false"></xref> to find all corresponding <xref href="Ecommerce.Domain.Entities.Product" data-throw-if-not-resolved="false"></xref> entities
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Ecommerce.Domain.Entities.Product}}
+      description: >-
+        A <code>IEnumerable</code> of all <xref href="Ecommerce.Domain.Entities.Product" data-throw-if-not-resolved="false"></xref> entities found;
+
+        A empty <code>IEnumerable</code> if none are found.
+    content.vb: Function ListAllAsync(categoryId As Integer) As Task(Of IEnumerable(Of Product))
+  overload: Ecommerce.Persistence.Contracts.IProductAsyncRepository.ListAllAsync*
+  nameWithType.vb: IProductAsyncRepository.ListAllAsync(Integer)
+  fullName.vb: Ecommerce.Persistence.Contracts.IProductAsyncRepository.ListAllAsync(Integer)
+  name.vb: ListAllAsync(Integer)
+- uid: Ecommerce.Persistence.Contracts.IProductAsyncRepository.IsNameUnique(System.String)
+  commentId: M:Ecommerce.Persistence.Contracts.IProductAsyncRepository.IsNameUnique(System.String)
+  id: IsNameUnique(System.String)
+  parent: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  langs:
+  - csharp
+  - vb
+  name: IsNameUnique(string)
+  nameWithType: IProductAsyncRepository.IsNameUnique(string)
+  fullName: Ecommerce.Persistence.Contracts.IProductAsyncRepository.IsNameUnique(string)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IProductAsyncRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IsNameUnique
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IProductAsyncRepository.cs
+    startLine: 29
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Checks the table to see if the Name of a <xref href="Ecommerce.Domain.Entities.Product" data-throw-if-not-resolved="false"></xref> already exists
+  example: []
+  syntax:
+    content: Task<bool> IsNameUnique(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to check for
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: >-
+        <code>false</code> if found;
+
+        <code>true</code> if not found
+    content.vb: Function IsNameUnique(name As String) As Task(Of Boolean)
+  overload: Ecommerce.Persistence.Contracts.IProductAsyncRepository.IsNameUnique*
+  nameWithType.vb: IProductAsyncRepository.IsNameUnique(String)
+  fullName.vb: Ecommerce.Persistence.Contracts.IProductAsyncRepository.IsNameUnique(String)
+  name.vb: IsNameUnique(String)
+references:
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  commentId: T:Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html
+  name: IAsyncRepository<T>
+  nameWithType: IAsyncRepository<T>
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>
+  nameWithType.vb: IAsyncRepository(Of T)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T)
+  name.vb: IAsyncRepository(Of T)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+    name: IAsyncRepository
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+    name: IAsyncRepository
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Ecommerce.Domain.Entities.Product
+  commentId: T:Ecommerce.Domain.Entities.Product
+  parent: Ecommerce.Domain.Entities
+  href: Ecommerce.Domain.Entities.Product.html
+  name: Product
+  nameWithType: Product
+  fullName: Ecommerce.Domain.Entities.Product
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.GetByIdAsync(System.Int32)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.GetByIdAsync(System.Int32)
+  parent: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}
+  definition: Ecommerce.Persistence.Contracts.IAsyncRepository`1.GetByIdAsync(System.Int32)
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_GetByIdAsync_System_Int32_
+  name: GetByIdAsync(int)
+  nameWithType: IAsyncRepository<Product>.GetByIdAsync(int)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<Ecommerce.Domain.Entities.Product>.GetByIdAsync(int)
+  nameWithType.vb: IAsyncRepository(Of Product).GetByIdAsync(Integer)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of Ecommerce.Domain.Entities.Product).GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.AddAsync(Ecommerce.Domain.Entities.Product)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.AddAsync(Ecommerce.Domain.Entities.Product)
+  parent: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}
+  definition: Ecommerce.Persistence.Contracts.IAsyncRepository`1.AddAsync(`0)
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_AddAsync__0_
+  name: AddAsync(Product)
+  nameWithType: IAsyncRepository<Product>.AddAsync(Product)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<Ecommerce.Domain.Entities.Product>.AddAsync(Ecommerce.Domain.Entities.Product)
+  nameWithType.vb: IAsyncRepository(Of Product).AddAsync(Product)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of Ecommerce.Domain.Entities.Product).AddAsync(Ecommerce.Domain.Entities.Product)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.AddAsync(Ecommerce.Domain.Entities.Product)
+    name: AddAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_AddAsync__0_
+  - name: (
+  - uid: Ecommerce.Domain.Entities.Product
+    name: Product
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/Product.cs
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.AddAsync(Ecommerce.Domain.Entities.Product)
+    name: AddAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_AddAsync__0_
+  - name: (
+  - uid: Ecommerce.Domain.Entities.Product
+    name: Product
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/Product.cs
+  - name: )
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.UpdateAsync(Ecommerce.Domain.Entities.Product)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.UpdateAsync(Ecommerce.Domain.Entities.Product)
+  parent: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}
+  definition: Ecommerce.Persistence.Contracts.IAsyncRepository`1.UpdateAsync(`0)
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_UpdateAsync__0_
+  name: UpdateAsync(Product)
+  nameWithType: IAsyncRepository<Product>.UpdateAsync(Product)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<Ecommerce.Domain.Entities.Product>.UpdateAsync(Ecommerce.Domain.Entities.Product)
+  nameWithType.vb: IAsyncRepository(Of Product).UpdateAsync(Product)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of Ecommerce.Domain.Entities.Product).UpdateAsync(Ecommerce.Domain.Entities.Product)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.UpdateAsync(Ecommerce.Domain.Entities.Product)
+    name: UpdateAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_UpdateAsync__0_
+  - name: (
+  - uid: Ecommerce.Domain.Entities.Product
+    name: Product
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/Product.cs
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.UpdateAsync(Ecommerce.Domain.Entities.Product)
+    name: UpdateAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_UpdateAsync__0_
+  - name: (
+  - uid: Ecommerce.Domain.Entities.Product
+    name: Product
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/Product.cs
+  - name: )
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.DeleteAsync(Ecommerce.Domain.Entities.Product)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.DeleteAsync(Ecommerce.Domain.Entities.Product)
+  parent: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}
+  definition: Ecommerce.Persistence.Contracts.IAsyncRepository`1.DeleteAsync(`0)
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_DeleteAsync__0_
+  name: DeleteAsync(Product)
+  nameWithType: IAsyncRepository<Product>.DeleteAsync(Product)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<Ecommerce.Domain.Entities.Product>.DeleteAsync(Ecommerce.Domain.Entities.Product)
+  nameWithType.vb: IAsyncRepository(Of Product).DeleteAsync(Product)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of Ecommerce.Domain.Entities.Product).DeleteAsync(Ecommerce.Domain.Entities.Product)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.DeleteAsync(Ecommerce.Domain.Entities.Product)
+    name: DeleteAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_DeleteAsync__0_
+  - name: (
+  - uid: Ecommerce.Domain.Entities.Product
+    name: Product
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/Product.cs
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}.DeleteAsync(Ecommerce.Domain.Entities.Product)
+    name: DeleteAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_DeleteAsync__0_
+  - name: (
+  - uid: Ecommerce.Domain.Entities.Product
+    name: Product
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/Product.cs
+  - name: )
+- uid: Ecommerce.Domain.Entities
+  commentId: N:Ecommerce.Domain.Entities
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Entities
+  nameWithType: Ecommerce.Domain.Entities
+  fullName: Ecommerce.Domain.Entities
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Entities
+    name: Entities
+    href: Ecommerce.Domain.Entities.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Entities
+    name: Entities
+    href: Ecommerce.Domain.Entities.html
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.GetByIdAsync(System.Int32)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository`1.GetByIdAsync(System.Int32)
+  isExternal: true
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_GetByIdAsync_System_Int32_
+  name: GetByIdAsync(int)
+  nameWithType: IAsyncRepository<T>.GetByIdAsync(int)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.GetByIdAsync(int)
+  nameWithType.vb: IAsyncRepository(Of T).GetByIdAsync(Integer)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}
+  commentId: T:Ecommerce.Persistence.Contracts.IAsyncRepository{Ecommerce.Domain.Entities.Product}
+  parent: Ecommerce.Persistence.Contracts
+  definition: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html
+  name: IAsyncRepository<Product>
+  nameWithType: IAsyncRepository<Product>
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<Ecommerce.Domain.Entities.Product>
+  nameWithType.vb: IAsyncRepository(Of Product)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of Ecommerce.Domain.Entities.Product)
+  name.vb: IAsyncRepository(Of Product)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+    name: IAsyncRepository
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html
+  - name: <
+  - uid: Ecommerce.Domain.Entities.Product
+    name: Product
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/Product.cs
+  - name: '>'
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+    name: IAsyncRepository
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Domain.Entities.Product
+    name: Product
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/Product.cs
+  - name: )
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.AddAsync(`0)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository`1.AddAsync(`0)
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_AddAsync__0_
+  name: AddAsync(T)
+  nameWithType: IAsyncRepository<T>.AddAsync(T)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.AddAsync(T)
+  nameWithType.vb: IAsyncRepository(Of T).AddAsync(T)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).AddAsync(T)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.AddAsync(`0)
+    name: AddAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_AddAsync__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.AddAsync(`0)
+    name: AddAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_AddAsync__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.UpdateAsync(`0)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository`1.UpdateAsync(`0)
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_UpdateAsync__0_
+  name: UpdateAsync(T)
+  nameWithType: IAsyncRepository<T>.UpdateAsync(T)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.UpdateAsync(T)
+  nameWithType.vb: IAsyncRepository(Of T).UpdateAsync(T)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).UpdateAsync(T)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.UpdateAsync(`0)
+    name: UpdateAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_UpdateAsync__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.UpdateAsync(`0)
+    name: UpdateAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_UpdateAsync__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.DeleteAsync(`0)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository`1.DeleteAsync(`0)
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_DeleteAsync__0_
+  name: DeleteAsync(T)
+  nameWithType: IAsyncRepository<T>.DeleteAsync(T)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.DeleteAsync(T)
+  nameWithType.vb: IAsyncRepository(Of T).DeleteAsync(T)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).DeleteAsync(T)
+  spec.csharp:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.DeleteAsync(`0)
+    name: DeleteAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_DeleteAsync__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.DeleteAsync(`0)
+    name: DeleteAsync
+    href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_DeleteAsync__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: Ecommerce.Domain.Entities.Category
+  commentId: T:Ecommerce.Domain.Entities.Category
+  parent: Ecommerce.Domain.Entities
+  href: Ecommerce.Domain.Entities.Category.html
+  name: Category
+  nameWithType: Category
+  fullName: Ecommerce.Domain.Entities.Category
+- uid: Ecommerce.Persistence.Contracts.IProductAsyncRepository.ListAllAsync*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IProductAsyncRepository.ListAllAsync
+  href: Ecommerce.Persistence.Contracts.IProductAsyncRepository.html#Ecommerce_Persistence_Contracts_IProductAsyncRepository_ListAllAsync_System_Int32_
+  name: ListAllAsync
+  nameWithType: IProductAsyncRepository.ListAllAsync
+  fullName: Ecommerce.Persistence.Contracts.IProductAsyncRepository.ListAllAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Ecommerce.Domain.Entities.Product}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Ecommerce.Domain.Entities.Product}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<Product>>
+  nameWithType: Task<IEnumerable<Product>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Ecommerce.Domain.Entities.Product>>
+  nameWithType.vb: Task(Of IEnumerable(Of Product))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of Ecommerce.Domain.Entities.Product))
+  name.vb: Task(Of IEnumerable(Of Product))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Ecommerce.Domain.Entities.Product
+    name: Product
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/Product.cs
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Domain.Entities.Product
+    name: Product
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/Product.cs
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.Persistence.Contracts.IProductAsyncRepository.IsNameUnique*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IProductAsyncRepository.IsNameUnique
+  href: Ecommerce.Persistence.Contracts.IProductAsyncRepository.html#Ecommerce_Persistence_Contracts_IProductAsyncRepository_IsNameUnique_System_String_
+  name: IsNameUnique
+  nameWithType: IProductAsyncRepository.IsNameUnique
+  fullName: Ecommerce.Persistence.Contracts.IProductAsyncRepository.IsNameUnique
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Messages.Order
+  commentId: N:Ecommerce.Messages.Order
+  id: Ecommerce.Messages.Order
+  children:
+  - Ecommerce.Messages.Order.SendOrderConfirmationMessage
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Messages.Order
+  nameWithType: Ecommerce.Messages.Order
+  fullName: Ecommerce.Messages.Order
+  type: Namespace
+  assemblies:
+  - Ecommerce.Messages
+references:
+- uid: Ecommerce.Messages.Order.SendOrderConfirmationMessage
+  commentId: T:Ecommerce.Messages.Order.SendOrderConfirmationMessage
+  href: Ecommerce.Messages.Order.SendOrderConfirmationMessage.html
+  name: SendOrderConfirmationMessage
+  nameWithType: SendOrderConfirmationMessage
+  fullName: Ecommerce.Messages.Order.SendOrderConfirmationMessage

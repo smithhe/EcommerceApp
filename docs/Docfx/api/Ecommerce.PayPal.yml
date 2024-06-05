@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal
+  commentId: N:Ecommerce.PayPal
+  id: Ecommerce.PayPal
+  children:
+  - Ecommerce.PayPal.PayPalServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.PayPal
+  nameWithType: Ecommerce.PayPal
+  fullName: Ecommerce.PayPal
+  type: Namespace
+  assemblies:
+  - Ecommerce.PayPal
+references:
+- uid: Ecommerce.PayPal.PayPalServiceRegistration
+  commentId: T:Ecommerce.PayPal.PayPalServiceRegistration
+  href: Ecommerce.PayPal.PayPalServiceRegistration.html
+  name: PayPalServiceRegistration
+  nameWithType: PayPalServiceRegistration
+  fullName: Ecommerce.PayPal.PayPalServiceRegistration

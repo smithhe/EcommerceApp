@@ -1,0 +1,791 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Domain.Entities.Order
+  commentId: T:Ecommerce.Domain.Entities.Order
+  id: Order
+  parent: Ecommerce.Domain.Entities
+  children:
+  - Ecommerce.Domain.Entities.Order.#ctor
+  - Ecommerce.Domain.Entities.Order.Id
+  - Ecommerce.Domain.Entities.Order.OrderItems
+  - Ecommerce.Domain.Entities.Order.PayPalRequestId
+  - Ecommerce.Domain.Entities.Order.Status
+  - Ecommerce.Domain.Entities.Order.Total
+  - Ecommerce.Domain.Entities.Order.UserId
+  langs:
+  - csharp
+  - vb
+  name: Order
+  nameWithType: Order
+  fullName: Ecommerce.Domain.Entities.Order
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Entities/Order.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Order
+    path: ../../Core/Ecommerce.Domain/Entities/Order.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Entities
+  syntax:
+    content: 'public class Order : AuditableEntity'
+    content.vb: Public Class Order Inherits AuditableEntity
+  inheritance:
+  - System.Object
+  - Ecommerce.Domain.Common.AuditableEntity
+  inheritedMembers:
+  - Ecommerce.Domain.Common.AuditableEntity.CreatedBy
+  - Ecommerce.Domain.Common.AuditableEntity.CreatedDate
+  - Ecommerce.Domain.Common.AuditableEntity.LastModifiedBy
+  - Ecommerce.Domain.Common.AuditableEntity.LastModifiedDate
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Domain.Entities.Order.Id
+  commentId: P:Ecommerce.Domain.Entities.Order.Id
+  id: Id
+  parent: Ecommerce.Domain.Entities.Order
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Order.Id
+  fullName: Ecommerce.Domain.Entities.Order.Id
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Entities/Order.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Id
+    path: ../../Core/Ecommerce.Domain/Entities/Order.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Entities
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Ecommerce.Domain.Entities.Order.Id*
+- uid: Ecommerce.Domain.Entities.Order.UserId
+  commentId: P:Ecommerce.Domain.Entities.Order.UserId
+  id: UserId
+  parent: Ecommerce.Domain.Entities.Order
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: Order.UserId
+  fullName: Ecommerce.Domain.Entities.Order.UserId
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Entities/Order.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UserId
+    path: ../../Core/Ecommerce.Domain/Entities/Order.cs
+    startLine: 11
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Entities
+  syntax:
+    content: public Guid UserId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property UserId As Guid
+  overload: Ecommerce.Domain.Entities.Order.UserId*
+- uid: Ecommerce.Domain.Entities.Order.Status
+  commentId: P:Ecommerce.Domain.Entities.Order.Status
+  id: Status
+  parent: Ecommerce.Domain.Entities.Order
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: Order.Status
+  fullName: Ecommerce.Domain.Entities.Order.Status
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Entities/Order.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Status
+    path: ../../Core/Ecommerce.Domain/Entities/Order.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Entities
+  syntax:
+    content: public OrderStatus Status { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.Shared.Enums.OrderStatus
+    content.vb: Public Property Status As OrderStatus
+  overload: Ecommerce.Domain.Entities.Order.Status*
+- uid: Ecommerce.Domain.Entities.Order.Total
+  commentId: P:Ecommerce.Domain.Entities.Order.Total
+  id: Total
+  parent: Ecommerce.Domain.Entities.Order
+  langs:
+  - csharp
+  - vb
+  name: Total
+  nameWithType: Order.Total
+  fullName: Ecommerce.Domain.Entities.Order.Total
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Entities/Order.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Total
+    path: ../../Core/Ecommerce.Domain/Entities/Order.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Entities
+  syntax:
+    content: public double Total { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Total As Double
+  overload: Ecommerce.Domain.Entities.Order.Total*
+- uid: Ecommerce.Domain.Entities.Order.PayPalRequestId
+  commentId: P:Ecommerce.Domain.Entities.Order.PayPalRequestId
+  id: PayPalRequestId
+  parent: Ecommerce.Domain.Entities.Order
+  langs:
+  - csharp
+  - vb
+  name: PayPalRequestId
+  nameWithType: Order.PayPalRequestId
+  fullName: Ecommerce.Domain.Entities.Order.PayPalRequestId
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Entities/Order.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PayPalRequestId
+    path: ../../Core/Ecommerce.Domain/Entities/Order.cs
+    startLine: 17
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Entities
+  syntax:
+    content: public Guid PayPalRequestId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property PayPalRequestId As Guid
+  overload: Ecommerce.Domain.Entities.Order.PayPalRequestId*
+- uid: Ecommerce.Domain.Entities.Order.OrderItems
+  commentId: P:Ecommerce.Domain.Entities.Order.OrderItems
+  id: OrderItems
+  parent: Ecommerce.Domain.Entities.Order
+  langs:
+  - csharp
+  - vb
+  name: OrderItems
+  nameWithType: Order.OrderItems
+  fullName: Ecommerce.Domain.Entities.Order.OrderItems
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Entities/Order.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: OrderItems
+    path: ../../Core/Ecommerce.Domain/Entities/Order.cs
+    startLine: 19
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Entities
+  syntax:
+    content: public IEnumerable<OrderItem> OrderItems { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{Ecommerce.Domain.Entities.OrderItem}
+    content.vb: Public Property OrderItems As IEnumerable(Of OrderItem)
+  overload: Ecommerce.Domain.Entities.Order.OrderItems*
+- uid: Ecommerce.Domain.Entities.Order.#ctor
+  commentId: M:Ecommerce.Domain.Entities.Order.#ctor
+  id: '#ctor'
+  parent: Ecommerce.Domain.Entities.Order
+  langs:
+  - csharp
+  - vb
+  name: Order()
+  nameWithType: Order.Order()
+  fullName: Ecommerce.Domain.Entities.Order.Order()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Domain/Entities/Order.cs
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Entities
+  syntax:
+    content: public Order()
+    content.vb: Public Sub New()
+  overload: Ecommerce.Domain.Entities.Order.#ctor*
+  nameWithType.vb: Order.New()
+  fullName.vb: Ecommerce.Domain.Entities.Order.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.Domain.Entities
+  commentId: N:Ecommerce.Domain.Entities
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Entities
+  nameWithType: Ecommerce.Domain.Entities
+  fullName: Ecommerce.Domain.Entities
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Entities
+    name: Entities
+    href: Ecommerce.Domain.Entities.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Entities
+    name: Entities
+    href: Ecommerce.Domain.Entities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Ecommerce.Domain.Common.AuditableEntity
+  commentId: T:Ecommerce.Domain.Common.AuditableEntity
+  parent: Ecommerce.Domain.Common
+  href: Ecommerce.Domain.Common.AuditableEntity.html
+  name: AuditableEntity
+  nameWithType: AuditableEntity
+  fullName: Ecommerce.Domain.Common.AuditableEntity
+- uid: Ecommerce.Domain.Common.AuditableEntity.CreatedBy
+  commentId: P:Ecommerce.Domain.Common.AuditableEntity.CreatedBy
+  parent: Ecommerce.Domain.Common.AuditableEntity
+  href: Ecommerce.Domain.Common.AuditableEntity.html#Ecommerce_Domain_Common_AuditableEntity_CreatedBy
+  name: CreatedBy
+  nameWithType: AuditableEntity.CreatedBy
+  fullName: Ecommerce.Domain.Common.AuditableEntity.CreatedBy
+- uid: Ecommerce.Domain.Common.AuditableEntity.CreatedDate
+  commentId: P:Ecommerce.Domain.Common.AuditableEntity.CreatedDate
+  parent: Ecommerce.Domain.Common.AuditableEntity
+  href: Ecommerce.Domain.Common.AuditableEntity.html#Ecommerce_Domain_Common_AuditableEntity_CreatedDate
+  name: CreatedDate
+  nameWithType: AuditableEntity.CreatedDate
+  fullName: Ecommerce.Domain.Common.AuditableEntity.CreatedDate
+- uid: Ecommerce.Domain.Common.AuditableEntity.LastModifiedBy
+  commentId: P:Ecommerce.Domain.Common.AuditableEntity.LastModifiedBy
+  parent: Ecommerce.Domain.Common.AuditableEntity
+  href: Ecommerce.Domain.Common.AuditableEntity.html#Ecommerce_Domain_Common_AuditableEntity_LastModifiedBy
+  name: LastModifiedBy
+  nameWithType: AuditableEntity.LastModifiedBy
+  fullName: Ecommerce.Domain.Common.AuditableEntity.LastModifiedBy
+- uid: Ecommerce.Domain.Common.AuditableEntity.LastModifiedDate
+  commentId: P:Ecommerce.Domain.Common.AuditableEntity.LastModifiedDate
+  parent: Ecommerce.Domain.Common.AuditableEntity
+  href: Ecommerce.Domain.Common.AuditableEntity.html#Ecommerce_Domain_Common_AuditableEntity_LastModifiedDate
+  name: LastModifiedDate
+  nameWithType: AuditableEntity.LastModifiedDate
+  fullName: Ecommerce.Domain.Common.AuditableEntity.LastModifiedDate
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Domain.Common
+  commentId: N:Ecommerce.Domain.Common
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Common
+  nameWithType: Ecommerce.Domain.Common
+  fullName: Ecommerce.Domain.Common
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Common
+    name: Common
+    href: Ecommerce.Domain.Common.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Common
+    name: Common
+    href: Ecommerce.Domain.Common.html
+- uid: Ecommerce.Domain.Entities.Order.Id*
+  commentId: Overload:Ecommerce.Domain.Entities.Order.Id
+  href: Ecommerce.Domain.Entities.Order.html#Ecommerce_Domain_Entities_Order_Id
+  name: Id
+  nameWithType: Order.Id
+  fullName: Ecommerce.Domain.Entities.Order.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Ecommerce.Domain.Entities.Order.UserId*
+  commentId: Overload:Ecommerce.Domain.Entities.Order.UserId
+  href: Ecommerce.Domain.Entities.Order.html#Ecommerce_Domain_Entities_Order_UserId
+  name: UserId
+  nameWithType: Order.UserId
+  fullName: Ecommerce.Domain.Entities.Order.UserId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Ecommerce.Domain.Entities.Order.Status*
+  commentId: Overload:Ecommerce.Domain.Entities.Order.Status
+  href: Ecommerce.Domain.Entities.Order.html#Ecommerce_Domain_Entities_Order_Status
+  name: Status
+  nameWithType: Order.Status
+  fullName: Ecommerce.Domain.Entities.Order.Status
+- uid: Ecommerce.Shared.Enums.OrderStatus
+  commentId: T:Ecommerce.Shared.Enums.OrderStatus
+  parent: Ecommerce.Shared.Enums
+  href: Ecommerce.Shared.Enums.OrderStatus.html
+  name: OrderStatus
+  nameWithType: OrderStatus
+  fullName: Ecommerce.Shared.Enums.OrderStatus
+- uid: Ecommerce.Shared.Enums
+  commentId: N:Ecommerce.Shared.Enums
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Enums
+  nameWithType: Ecommerce.Shared.Enums
+  fullName: Ecommerce.Shared.Enums
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Enums
+    name: Enums
+    href: Ecommerce.Shared.Enums.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Enums
+    name: Enums
+    href: Ecommerce.Shared.Enums.html
+- uid: Ecommerce.Domain.Entities.Order.Total*
+  commentId: Overload:Ecommerce.Domain.Entities.Order.Total
+  href: Ecommerce.Domain.Entities.Order.html#Ecommerce_Domain_Entities_Order_Total
+  name: Total
+  nameWithType: Order.Total
+  fullName: Ecommerce.Domain.Entities.Order.Total
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Ecommerce.Domain.Entities.Order.PayPalRequestId*
+  commentId: Overload:Ecommerce.Domain.Entities.Order.PayPalRequestId
+  href: Ecommerce.Domain.Entities.Order.html#Ecommerce_Domain_Entities_Order_PayPalRequestId
+  name: PayPalRequestId
+  nameWithType: Order.PayPalRequestId
+  fullName: Ecommerce.Domain.Entities.Order.PayPalRequestId
+- uid: Ecommerce.Domain.Entities.Order.OrderItems*
+  commentId: Overload:Ecommerce.Domain.Entities.Order.OrderItems
+  href: Ecommerce.Domain.Entities.Order.html#Ecommerce_Domain_Entities_Order_OrderItems
+  name: OrderItems
+  nameWithType: Order.OrderItems
+  fullName: Ecommerce.Domain.Entities.Order.OrderItems
+- uid: System.Collections.Generic.IEnumerable{Ecommerce.Domain.Entities.OrderItem}
+  commentId: T:System.Collections.Generic.IEnumerable{Ecommerce.Domain.Entities.OrderItem}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<OrderItem>
+  nameWithType: IEnumerable<OrderItem>
+  fullName: System.Collections.Generic.IEnumerable<Ecommerce.Domain.Entities.OrderItem>
+  nameWithType.vb: IEnumerable(Of OrderItem)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Ecommerce.Domain.Entities.OrderItem)
+  name.vb: IEnumerable(Of OrderItem)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Ecommerce.Domain.Entities.OrderItem
+    name: OrderItem
+    href: Ecommerce.Domain.Entities.OrderItem.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Domain.Entities.OrderItem
+    name: OrderItem
+    href: Ecommerce.Domain.Entities.OrderItem.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Ecommerce.Domain.Entities.Order.#ctor*
+  commentId: Overload:Ecommerce.Domain.Entities.Order.#ctor
+  isExternal: true
+  href: Ecommerce.Domain.Entities.Order.html#Ecommerce_Domain_Entities_Order__ctor
+  name: Order
+  nameWithType: Order.Order
+  fullName: Ecommerce.Domain.Entities.Order.Order
+  nameWithType.vb: Order.New
+  fullName.vb: Ecommerce.Domain.Entities.Order.New
+  name.vb: New

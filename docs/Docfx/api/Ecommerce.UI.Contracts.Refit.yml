@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Contracts.Refit
+  commentId: N:Ecommerce.UI.Contracts.Refit
+  id: Ecommerce.UI.Contracts.Refit
+  children:
+  - Ecommerce.UI.Contracts.Refit.ICartApiService
+  - Ecommerce.UI.Contracts.Refit.ICategoryApiService
+  - Ecommerce.UI.Contracts.Refit.IOrderApiService
+  - Ecommerce.UI.Contracts.Refit.IProductApiService
+  - Ecommerce.UI.Contracts.Refit.IReviewApiService
+  - Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UI.Contracts.Refit
+  nameWithType: Ecommerce.UI.Contracts.Refit
+  fullName: Ecommerce.UI.Contracts.Refit
+  type: Namespace
+  assemblies:
+  - Ecommerce.UI
+references:
+- uid: Ecommerce.UI.Contracts.Refit.ICartApiService
+  commentId: T:Ecommerce.UI.Contracts.Refit.ICartApiService
+  parent: Ecommerce.UI.Contracts.Refit
+  href: Ecommerce.UI.Contracts.Refit.ICartApiService.html
+  name: ICartApiService
+  nameWithType: ICartApiService
+  fullName: Ecommerce.UI.Contracts.Refit.ICartApiService
+- uid: Ecommerce.UI.Contracts.Refit.ICategoryApiService
+  commentId: T:Ecommerce.UI.Contracts.Refit.ICategoryApiService
+  parent: Ecommerce.UI.Contracts.Refit
+  href: Ecommerce.UI.Contracts.Refit.ICategoryApiService.html
+  name: ICategoryApiService
+  nameWithType: ICategoryApiService
+  fullName: Ecommerce.UI.Contracts.Refit.ICategoryApiService
+- uid: Ecommerce.UI.Contracts.Refit.IOrderApiService
+  commentId: T:Ecommerce.UI.Contracts.Refit.IOrderApiService
+  parent: Ecommerce.UI.Contracts.Refit
+  href: Ecommerce.UI.Contracts.Refit.IOrderApiService.html
+  name: IOrderApiService
+  nameWithType: IOrderApiService
+  fullName: Ecommerce.UI.Contracts.Refit.IOrderApiService
+- uid: Ecommerce.UI.Contracts.Refit.IProductApiService
+  commentId: T:Ecommerce.UI.Contracts.Refit.IProductApiService
+  parent: Ecommerce.UI.Contracts.Refit
+  href: Ecommerce.UI.Contracts.Refit.IProductApiService.html
+  name: IProductApiService
+  nameWithType: IProductApiService
+  fullName: Ecommerce.UI.Contracts.Refit.IProductApiService
+- uid: Ecommerce.UI.Contracts.Refit.IReviewApiService
+  commentId: T:Ecommerce.UI.Contracts.Refit.IReviewApiService
+  parent: Ecommerce.UI.Contracts.Refit
+  href: Ecommerce.UI.Contracts.Refit.IReviewApiService.html
+  name: IReviewApiService
+  nameWithType: IReviewApiService
+  fullName: Ecommerce.UI.Contracts.Refit.IReviewApiService
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  commentId: T:Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  parent: Ecommerce.UI.Contracts.Refit
+  href: Ecommerce.UI.Contracts.Refit.ISecurityApiService.html
+  name: ISecurityApiService
+  nameWithType: ISecurityApiService
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService
+- uid: Ecommerce.UI.Contracts.Refit
+  commentId: N:Ecommerce.UI.Contracts.Refit
+  href: Ecommerce.html
+  name: Ecommerce.UI.Contracts.Refit
+  nameWithType: Ecommerce.UI.Contracts.Refit
+  fullName: Ecommerce.UI.Contracts.Refit
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts.Refit
+    name: Refit
+    href: Ecommerce.UI.Contracts.Refit.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts.Refit
+    name: Refit
+    href: Ecommerce.UI.Contracts.Refit.html

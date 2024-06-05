@@ -1,0 +1,255 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Security.SignInResponseResult
+  commentId: T:Ecommerce.Shared.Security.SignInResponseResult
+  id: SignInResponseResult
+  parent: Ecommerce.Shared.Security
+  children:
+  - Ecommerce.Shared.Security.SignInResponseResult.AccountLocked
+  - Ecommerce.Shared.Security.SignInResponseResult.AccountNotAllowed
+  - Ecommerce.Shared.Security.SignInResponseResult.EmailNotConfirmed
+  - Ecommerce.Shared.Security.SignInResponseResult.InvalidCredentials
+  - Ecommerce.Shared.Security.SignInResponseResult.Success
+  - Ecommerce.Shared.Security.SignInResponseResult.TwoFactorRequired
+  - Ecommerce.Shared.Security.SignInResponseResult.UnexpectedError
+  langs:
+  - csharp
+  - vb
+  name: SignInResponseResult
+  nameWithType: SignInResponseResult
+  fullName: Ecommerce.Shared.Security.SignInResponseResult
+  type: Enum
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: SignInResponseResult
+    path: ../../Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+    startLine: 2
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  syntax:
+    content: public enum SignInResponseResult
+    content.vb: Public Enum SignInResponseResult
+- uid: Ecommerce.Shared.Security.SignInResponseResult.Success
+  commentId: F:Ecommerce.Shared.Security.SignInResponseResult.Success
+  id: Success
+  parent: Ecommerce.Shared.Security.SignInResponseResult
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: SignInResponseResult.Success
+  fullName: Ecommerce.Shared.Security.SignInResponseResult.Success
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Success
+    path: ../../Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+    startLine: 4
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  syntax:
+    content: Success = 0
+    return:
+      type: Ecommerce.Shared.Security.SignInResponseResult
+- uid: Ecommerce.Shared.Security.SignInResponseResult.InvalidCredentials
+  commentId: F:Ecommerce.Shared.Security.SignInResponseResult.InvalidCredentials
+  id: InvalidCredentials
+  parent: Ecommerce.Shared.Security.SignInResponseResult
+  langs:
+  - csharp
+  - vb
+  name: InvalidCredentials
+  nameWithType: SignInResponseResult.InvalidCredentials
+  fullName: Ecommerce.Shared.Security.SignInResponseResult.InvalidCredentials
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: InvalidCredentials
+    path: ../../Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  syntax:
+    content: InvalidCredentials = 1
+    return:
+      type: Ecommerce.Shared.Security.SignInResponseResult
+- uid: Ecommerce.Shared.Security.SignInResponseResult.AccountLocked
+  commentId: F:Ecommerce.Shared.Security.SignInResponseResult.AccountLocked
+  id: AccountLocked
+  parent: Ecommerce.Shared.Security.SignInResponseResult
+  langs:
+  - csharp
+  - vb
+  name: AccountLocked
+  nameWithType: SignInResponseResult.AccountLocked
+  fullName: Ecommerce.Shared.Security.SignInResponseResult.AccountLocked
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AccountLocked
+    path: ../../Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+    startLine: 6
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  syntax:
+    content: AccountLocked = 2
+    return:
+      type: Ecommerce.Shared.Security.SignInResponseResult
+- uid: Ecommerce.Shared.Security.SignInResponseResult.AccountNotAllowed
+  commentId: F:Ecommerce.Shared.Security.SignInResponseResult.AccountNotAllowed
+  id: AccountNotAllowed
+  parent: Ecommerce.Shared.Security.SignInResponseResult
+  langs:
+  - csharp
+  - vb
+  name: AccountNotAllowed
+  nameWithType: SignInResponseResult.AccountNotAllowed
+  fullName: Ecommerce.Shared.Security.SignInResponseResult.AccountNotAllowed
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AccountNotAllowed
+    path: ../../Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  syntax:
+    content: AccountNotAllowed = 3
+    return:
+      type: Ecommerce.Shared.Security.SignInResponseResult
+- uid: Ecommerce.Shared.Security.SignInResponseResult.EmailNotConfirmed
+  commentId: F:Ecommerce.Shared.Security.SignInResponseResult.EmailNotConfirmed
+  id: EmailNotConfirmed
+  parent: Ecommerce.Shared.Security.SignInResponseResult
+  langs:
+  - csharp
+  - vb
+  name: EmailNotConfirmed
+  nameWithType: SignInResponseResult.EmailNotConfirmed
+  fullName: Ecommerce.Shared.Security.SignInResponseResult.EmailNotConfirmed
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: EmailNotConfirmed
+    path: ../../Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  syntax:
+    content: EmailNotConfirmed = 4
+    return:
+      type: Ecommerce.Shared.Security.SignInResponseResult
+- uid: Ecommerce.Shared.Security.SignInResponseResult.TwoFactorRequired
+  commentId: F:Ecommerce.Shared.Security.SignInResponseResult.TwoFactorRequired
+  id: TwoFactorRequired
+  parent: Ecommerce.Shared.Security.SignInResponseResult
+  langs:
+  - csharp
+  - vb
+  name: TwoFactorRequired
+  nameWithType: SignInResponseResult.TwoFactorRequired
+  fullName: Ecommerce.Shared.Security.SignInResponseResult.TwoFactorRequired
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: TwoFactorRequired
+    path: ../../Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  syntax:
+    content: TwoFactorRequired = 5
+    return:
+      type: Ecommerce.Shared.Security.SignInResponseResult
+- uid: Ecommerce.Shared.Security.SignInResponseResult.UnexpectedError
+  commentId: F:Ecommerce.Shared.Security.SignInResponseResult.UnexpectedError
+  id: UnexpectedError
+  parent: Ecommerce.Shared.Security.SignInResponseResult
+  langs:
+  - csharp
+  - vb
+  name: UnexpectedError
+  nameWithType: SignInResponseResult.UnexpectedError
+  fullName: Ecommerce.Shared.Security.SignInResponseResult.UnexpectedError
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UnexpectedError
+    path: ../../Core/Ecommerce.Shared/Security/SignInResponseResult.cs
+    startLine: 10
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Security
+  syntax:
+    content: UnexpectedError = 6
+    return:
+      type: Ecommerce.Shared.Security.SignInResponseResult
+references:
+- uid: Ecommerce.Shared.Security
+  commentId: N:Ecommerce.Shared.Security
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Security
+  nameWithType: Ecommerce.Shared.Security
+  fullName: Ecommerce.Shared.Security
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+- uid: Ecommerce.Shared.Security.SignInResponseResult
+  commentId: T:Ecommerce.Shared.Security.SignInResponseResult
+  parent: Ecommerce.Shared.Security
+  href: Ecommerce.Shared.Security.SignInResponseResult.html
+  name: SignInResponseResult
+  nameWithType: SignInResponseResult
+  fullName: Ecommerce.Shared.Security.SignInResponseResult

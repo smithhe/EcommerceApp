@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Worker.Consumers.EcommerceUser
+  commentId: N:Ecommerce.Worker.Consumers.EcommerceUser
+  id: Ecommerce.Worker.Consumers.EcommerceUser
+  children:
+  - Ecommerce.Worker.Consumers.EcommerceUser.SendEmailConfirmationConsumer
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Worker.Consumers.EcommerceUser
+  nameWithType: Ecommerce.Worker.Consumers.EcommerceUser
+  fullName: Ecommerce.Worker.Consumers.EcommerceUser
+  type: Namespace
+  assemblies:
+  - Ecommerce.Worker
+references:
+- uid: Ecommerce.Worker.Consumers.EcommerceUser.SendEmailConfirmationConsumer
+  commentId: T:Ecommerce.Worker.Consumers.EcommerceUser.SendEmailConfirmationConsumer
+  href: Ecommerce.Worker.Consumers.EcommerceUser.SendEmailConfirmationConsumer.html
+  name: SendEmailConfirmationConsumer
+  nameWithType: SendEmailConfirmationConsumer
+  fullName: Ecommerce.Worker.Consumers.EcommerceUser.SendEmailConfirmationConsumer

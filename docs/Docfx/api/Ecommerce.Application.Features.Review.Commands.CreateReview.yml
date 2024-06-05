@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Review.Commands.CreateReview
+  commentId: N:Ecommerce.Application.Features.Review.Commands.CreateReview
+  id: Ecommerce.Application.Features.Review.Commands.CreateReview
+  children:
+  - Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommand
+  - Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Review.Commands.CreateReview
+  nameWithType: Ecommerce.Application.Features.Review.Commands.CreateReview
+  fullName: Ecommerce.Application.Features.Review.Commands.CreateReview
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommand
+  commentId: T:Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommand
+  parent: Ecommerce.Application.Features.Review.Commands.CreateReview
+  href: Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommand.html
+  name: CreateReviewCommand
+  nameWithType: CreateReviewCommand
+  fullName: Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommand
+- uid: Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommandHandler
+  commentId: T:Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommandHandler
+  href: Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommandHandler.html
+  name: CreateReviewCommandHandler
+  nameWithType: CreateReviewCommandHandler
+  fullName: Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommandHandler
+- uid: Ecommerce.Application.Features.Review.Commands.CreateReview
+  commentId: N:Ecommerce.Application.Features.Review.Commands.CreateReview
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Review.Commands.CreateReview
+  nameWithType: Ecommerce.Application.Features.Review.Commands.CreateReview
+  fullName: Ecommerce.Application.Features.Review.Commands.CreateReview
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Review.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Commands.CreateReview
+    name: CreateReview
+    href: Ecommerce.Application.Features.Review.Commands.CreateReview.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Review.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Commands.CreateReview
+    name: CreateReview
+    href: Ecommerce.Application.Features.Review.Commands.CreateReview.html

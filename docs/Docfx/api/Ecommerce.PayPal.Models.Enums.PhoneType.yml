@@ -1,0 +1,499 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models.Enums.PhoneType
+  commentId: T:Ecommerce.PayPal.Models.Enums.PhoneType
+  id: PhoneType
+  parent: Ecommerce.PayPal.Models.Enums
+  children:
+  - Ecommerce.PayPal.Models.Enums.PhoneType.#ctor
+  - Ecommerce.PayPal.Models.Enums.PhoneType.FAX
+  - Ecommerce.PayPal.Models.Enums.PhoneType.HOME
+  - Ecommerce.PayPal.Models.Enums.PhoneType.MOBILE
+  - Ecommerce.PayPal.Models.Enums.PhoneType.OTHER
+  - Ecommerce.PayPal.Models.Enums.PhoneType.PAGER
+  langs:
+  - csharp
+  - vb
+  name: PhoneType
+  nameWithType: PhoneType
+  fullName: Ecommerce.PayPal.Models.Enums.PhoneType
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PhoneType
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+    startLine: 3
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public class PhoneType
+    content.vb: Public Class PhoneType
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.PayPal.Models.Enums.PhoneType.FAX
+  commentId: F:Ecommerce.PayPal.Models.Enums.PhoneType.FAX
+  id: FAX
+  parent: Ecommerce.PayPal.Models.Enums.PhoneType
+  langs:
+  - csharp
+  - vb
+  name: FAX
+  nameWithType: PhoneType.FAX
+  fullName: Ecommerce.PayPal.Models.Enums.PhoneType.FAX
+  type: Field
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: FAX
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public const string FAX = "FAX"
+    return:
+      type: System.String
+    content.vb: Public Const FAX As String = "FAX"
+- uid: Ecommerce.PayPal.Models.Enums.PhoneType.HOME
+  commentId: F:Ecommerce.PayPal.Models.Enums.PhoneType.HOME
+  id: HOME
+  parent: Ecommerce.PayPal.Models.Enums.PhoneType
+  langs:
+  - csharp
+  - vb
+  name: HOME
+  nameWithType: PhoneType.HOME
+  fullName: Ecommerce.PayPal.Models.Enums.PhoneType.HOME
+  type: Field
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: HOME
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+    startLine: 6
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public const string HOME = "HOME"
+    return:
+      type: System.String
+    content.vb: Public Const HOME As String = "HOME"
+- uid: Ecommerce.PayPal.Models.Enums.PhoneType.MOBILE
+  commentId: F:Ecommerce.PayPal.Models.Enums.PhoneType.MOBILE
+  id: MOBILE
+  parent: Ecommerce.PayPal.Models.Enums.PhoneType
+  langs:
+  - csharp
+  - vb
+  name: MOBILE
+  nameWithType: PhoneType.MOBILE
+  fullName: Ecommerce.PayPal.Models.Enums.PhoneType.MOBILE
+  type: Field
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: MOBILE
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public const string MOBILE = "MOBILE"
+    return:
+      type: System.String
+    content.vb: Public Const MOBILE As String = "MOBILE"
+- uid: Ecommerce.PayPal.Models.Enums.PhoneType.OTHER
+  commentId: F:Ecommerce.PayPal.Models.Enums.PhoneType.OTHER
+  id: OTHER
+  parent: Ecommerce.PayPal.Models.Enums.PhoneType
+  langs:
+  - csharp
+  - vb
+  name: OTHER
+  nameWithType: PhoneType.OTHER
+  fullName: Ecommerce.PayPal.Models.Enums.PhoneType.OTHER
+  type: Field
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: OTHER
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public const string OTHER = "OTHER"
+    return:
+      type: System.String
+    content.vb: Public Const OTHER As String = "OTHER"
+- uid: Ecommerce.PayPal.Models.Enums.PhoneType.PAGER
+  commentId: F:Ecommerce.PayPal.Models.Enums.PhoneType.PAGER
+  id: PAGER
+  parent: Ecommerce.PayPal.Models.Enums.PhoneType
+  langs:
+  - csharp
+  - vb
+  name: PAGER
+  nameWithType: PhoneType.PAGER
+  fullName: Ecommerce.PayPal.Models.Enums.PhoneType.PAGER
+  type: Field
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PAGER
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public const string PAGER = "PAGER"
+    return:
+      type: System.String
+    content.vb: Public Const PAGER As String = "PAGER"
+- uid: Ecommerce.PayPal.Models.Enums.PhoneType.#ctor
+  commentId: M:Ecommerce.PayPal.Models.Enums.PhoneType.#ctor
+  id: '#ctor'
+  parent: Ecommerce.PayPal.Models.Enums.PhoneType
+  langs:
+  - csharp
+  - vb
+  name: PhoneType()
+  nameWithType: PhoneType.PhoneType()
+  fullName: Ecommerce.PayPal.Models.Enums.PhoneType.PhoneType()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Infrastructure/Ecommerce.PayPal/Models/Enums/PhoneType.cs
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models.Enums
+  syntax:
+    content: public PhoneType()
+    content.vb: Public Sub New()
+  overload: Ecommerce.PayPal.Models.Enums.PhoneType.#ctor*
+  nameWithType.vb: PhoneType.New()
+  fullName.vb: Ecommerce.PayPal.Models.Enums.PhoneType.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.PayPal.Models.Enums
+  commentId: N:Ecommerce.PayPal.Models.Enums
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Models.Enums
+  nameWithType: Ecommerce.PayPal.Models.Enums
+  fullName: Ecommerce.PayPal.Models.Enums
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models.Enums
+    name: Enums
+    href: Ecommerce.PayPal.Models.Enums.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models.Enums
+    name: Enums
+    href: Ecommerce.PayPal.Models.Enums.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.PayPal.Models.Enums.PhoneType.#ctor*
+  commentId: Overload:Ecommerce.PayPal.Models.Enums.PhoneType.#ctor
+  isExternal: true
+  href: Ecommerce.PayPal.Models.Enums.PhoneType.html#Ecommerce_PayPal_Models_Enums_PhoneType__ctor
+  name: PhoneType
+  nameWithType: PhoneType.PhoneType
+  fullName: Ecommerce.PayPal.Models.Enums.PhoneType.PhoneType
+  nameWithType.vb: PhoneType.New
+  fullName.vb: Ecommerce.PayPal.Models.Enums.PhoneType.New
+  name.vb: New

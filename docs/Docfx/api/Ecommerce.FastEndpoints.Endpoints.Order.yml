@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.FastEndpoints.Endpoints.Order
+  commentId: N:Ecommerce.FastEndpoints.Endpoints.Order
+  id: Ecommerce.FastEndpoints.Endpoints.Order
+  children:
+  - Ecommerce.FastEndpoints.Endpoints.Order.CreateOrderEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Order.GetAllOrdersByUserIdEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Order.GetOrderAfterSuccessfulCheckoutEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Order.GetOrderByIdEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Order.UpdateOrderEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.FastEndpoints.Endpoints.Order
+  nameWithType: Ecommerce.FastEndpoints.Endpoints.Order
+  fullName: Ecommerce.FastEndpoints.Endpoints.Order
+  type: Namespace
+  assemblies:
+  - Ecommerce.FastEndpoints
+references:
+- uid: Ecommerce.FastEndpoints.Endpoints.Order.CreateOrderEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Order.CreateOrderEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Order.CreateOrderEndpoint.html
+  name: CreateOrderEndpoint
+  nameWithType: CreateOrderEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Order.CreateOrderEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Order.GetAllOrdersByUserIdEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Order.GetAllOrdersByUserIdEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Order.GetAllOrdersByUserIdEndpoint.html
+  name: GetAllOrdersByUserIdEndpoint
+  nameWithType: GetAllOrdersByUserIdEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Order.GetAllOrdersByUserIdEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Order.GetOrderAfterSuccessfulCheckoutEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Order.GetOrderAfterSuccessfulCheckoutEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Order.GetOrderAfterSuccessfulCheckoutEndpoint.html
+  name: GetOrderAfterSuccessfulCheckoutEndpoint
+  nameWithType: GetOrderAfterSuccessfulCheckoutEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Order.GetOrderAfterSuccessfulCheckoutEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Order.GetOrderByIdEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Order.GetOrderByIdEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Order.GetOrderByIdEndpoint.html
+  name: GetOrderByIdEndpoint
+  nameWithType: GetOrderByIdEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Order.GetOrderByIdEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Order.UpdateOrderEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Order.UpdateOrderEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Order.UpdateOrderEndpoint.html
+  name: UpdateOrderEndpoint
+  nameWithType: UpdateOrderEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Order.UpdateOrderEndpoint

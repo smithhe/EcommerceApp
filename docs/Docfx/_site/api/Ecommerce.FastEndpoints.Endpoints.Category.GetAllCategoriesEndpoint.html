@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GetAllCategoriesEndpoint </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GetAllCategoriesEndpoint ">
+      
+      <meta name="description" content="A Fast Endpoint implementation that handles getting all Categories">
+      <link rel="icon" href=".././images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/smithhe/EcommerceApp/new/dev/apiSpec/new?filename=Ecommerce_FastEndpoints_Endpoints_Category_GetAllCategoriesEndpoint.md&amp;value=---%0Auid%3A%20Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt=" Ecommerce App">
+             Ecommerce App
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint">
+
+
+
+  <h1 id="Ecommerce_FastEndpoints_Endpoints_Category_GetAllCategoriesEndpoint" data-uid="Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint" class="text-break">
+Class GetAllCategoriesEndpoint  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Category/GetAllCategoriesEndpoint.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ecommerce.html">Ecommerce</a>.<a class="xref" href="Ecommerce.FastEndpoints.html">FastEndpoints</a>.<a class="xref" href="Ecommerce.FastEndpoints.Endpoints.html">Endpoints</a>.<a class="xref" href="Ecommerce.FastEndpoints.Endpoints.Category.html">Category</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Ecommerce.FastEndpoints.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A Fast Endpoint implementation that handles getting all Categories</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GetAllCategoriesEndpoint : Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;, IEndpoint, IEventBus, IServiceResolverBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">BaseEndpoint</span></div>
+      <div><span class="xref">Endpoint</span>&lt;<a class="xref" href="https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Requests/Category/GetAllCategoriesApiRequest.cs">GetAllCategoriesApiRequest</a>, <a class="xref" href="https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Category/GetAllCategoriesResponse.cs">GetAllCategoriesResponse</a>&gt;</div>
+      <div><span class="xref">GetAllCategoriesEndpoint</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IEndpoint</span></div>
+      <div><span class="xref">IEventBus</span></div>
+      <div><span class="xref">IServiceResolverBase</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.HandleAsync(GetAllCategoriesApiRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.ExecuteAsync(GetAllCategoriesApiRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.TryResolve&lt;TService&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.TryResolve(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Resolve&lt;TService&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Resolve(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.CreateScope()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.TryResolve&lt;TService&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.TryResolve(Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Resolve&lt;TService&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Resolve(Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Route&lt;T&gt;(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Query&lt;T&gt;(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.FormFileSectionsAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.PublishAsync&lt;TEvent&gt;(TEvent, Mode, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.CreateTokenWith&lt;TService&gt;(string, Action&lt;UserPrivileges&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.ProcessorState&lt;TState&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.OnBeforeValidate(GetAllCategoriesApiRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.OnBeforeValidateAsync(GetAllCategoriesApiRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.OnAfterValidate(GetAllCategoriesApiRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.OnAfterValidateAsync(GetAllCategoriesApiRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.OnBeforeHandle(GetAllCategoriesApiRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.OnBeforeHandleAsync(GetAllCategoriesApiRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.OnAfterHandle(GetAllCategoriesApiRequest, GetAllCategoriesResponse)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.OnAfterHandleAsync(GetAllCategoriesApiRequest, GetAllCategoriesResponse, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.OnValidationFailed()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.OnValidationFailedAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendAsync(GetAllCategoriesResponse, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.iresult">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendResultAsync(IResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendInterceptedAsync(object, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendCreatedAtAsync&lt;TEndpoint&gt;(object, GetAllCategoriesResponse, Http?, int?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendCreatedAtAsync(string, object, GetAllCategoriesResponse, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendStringAsync(string, int, string, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendOkAsync(GetAllCategoriesResponse, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendOkAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendErrorsAsync(int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendNoContentAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendNotFoundAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendUnauthorizedAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendForbiddenAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendRedirectAsync(string, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendHeadersAsync(Action&lt;IHeaderDictionary&gt;, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendBytesAsync(byte[], string, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendFileAsync(FileInfo, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendStreamAsync(Stream, string, long?, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendEventStreamAsync&lt;T&gt;(string, IAsyncEnumerable&lt;T&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SendEmptyJsonObject(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.AccessControl(string, Apply?, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.AccessControl(string, params string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.AllowAnonymous(params Http[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.AllowAnonymous(string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.AllowFileUploads(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.AllowFormData(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.AuthSchemes(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Claims(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.ClaimsAll(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Delete(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Delete(string, Expression&lt;Func&lt;GetAllCategoriesApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Description(Action&lt;RouteHandlerBuilder&gt;, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.DontAutoSendResponse()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.DontAutoTag()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.DontCatchExceptions()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.DontThrowIfValidationFails()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.EnableAntiforgery()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Get(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Get(string, Expression&lt;Func&lt;GetAllCategoriesApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Group&lt;TEndpointGroup&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Head(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Head(string, Expression&lt;Func&lt;GetAllCategoriesApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Options(Action&lt;RouteHandlerBuilder&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Patch(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Patch(string, Expression&lt;Func&lt;GetAllCategoriesApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Permissions(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.PermissionsAll(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Policy(Action&lt;AuthorizationPolicyBuilder&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Policies(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Post(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Post(string, Expression&lt;Func&lt;GetAllCategoriesApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.PostProcessor&lt;TPostProcessor&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.PostProcessors(params IPostProcessor&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;[])</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.PreProcessor&lt;TPreProcessor&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.PreProcessors(params IPreProcessor&lt;GetAllCategoriesApiRequest&gt;[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Put(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Put(string, Expression&lt;Func&lt;GetAllCategoriesApiRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.RequestBinder(IRequestBinder&lt;GetAllCategoriesApiRequest&gt;)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.ResponseCache(int, ResponseCacheLocation, bool, string, string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.ResponseInterceptor(IResponseInterceptor)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Roles(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.RoutePrefixOverride(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Routes(params string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SerializerContext&lt;TContext&gt;(TContext)</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.SerializerContext&lt;TContext&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Summary(Action&lt;EndpointSummary&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Summary(Action&lt;EndpointSummary&lt;GetAllCategoriesApiRequest&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Summary(EndpointSummary)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Tags(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Throttle(int, double, string)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Validator&lt;TValidator&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Verbs(params Http[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Verbs(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Version(int, int?)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.AddError(ValidationFailure)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.AddError(string, string, Severity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.AddError(Expression&lt;Func&lt;GetAllCategoriesApiRequest, object&gt;&gt;, string, string, Severity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.ThrowError(ValidationFailure, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.ThrowError(string, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.ThrowError(Expression&lt;Func&lt;GetAllCategoriesApiRequest, object&gt;&gt;, string, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.ThrowIfAnyErrors(int?)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.User</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Response</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Config</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Env</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Logger</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.BaseURL</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.HttpMethod</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Form</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.Files</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.ResponseStarted</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;GetAllCategoriesApiRequest, GetAllCategoriesResponse&gt;.ValidationFailed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BaseEndpoint.Verbs(params string[])</a>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.Group&lt;TEndpointGroup&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BaseEndpoint.GetAclHash(string)</a>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.Definition</span>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.HttpContext</span>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.ValidationFailures</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Ecommerce_FastEndpoints_Endpoints_Category_GetAllCategoriesEndpoint__ctor_" data-uid="Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint.#ctor*"></a>
+
+  <h3 id="Ecommerce_FastEndpoints_Endpoints_Category_GetAllCategoriesEndpoint__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_FastEndpoints_Endpoints_Category_GetAllCategoriesEndpoint__MediatR_IMediator_" data-uid="Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint},MediatR.IMediator)">
+  GetAllCategoriesEndpoint(ILogger&lt;GetAllCategoriesEndpoint&gt;, IMediator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Category/GetAllCategoriesEndpoint.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint.html">GetAllCategoriesEndpoint</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GetAllCategoriesEndpoint(ILogger&lt;GetAllCategoriesEndpoint&gt; logger, IMediator mediator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint.html">GetAllCategoriesEndpoint</a>&gt;</dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a> instance used for logging.</p>
+</dd>
+    <dt><code>mediator</code> <span class="xref">IMediator</span></dt>
+    <dd><p>The <span class="xref">MediatR.IMediator</span> instance used for sending Mediator requests.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ecommerce_FastEndpoints_Endpoints_Category_GetAllCategoriesEndpoint_Configure_" data-uid="Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint.Configure*"></a>
+
+  <h3 id="Ecommerce_FastEndpoints_Endpoints_Category_GetAllCategoriesEndpoint_Configure" data-uid="Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint.Configure">
+  Configure()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Category/GetAllCategoriesEndpoint.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the route for the Endpoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Configure()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_FastEndpoints_Endpoints_Category_GetAllCategoriesEndpoint_HandleAsync_" data-uid="Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint.HandleAsync*"></a>
+
+  <h3 id="Ecommerce_FastEndpoints_Endpoints_Category_GetAllCategoriesEndpoint_HandleAsync_Ecommerce_Shared_Requests_Category_GetAllCategoriesApiRequest_System_Threading_CancellationToken_" data-uid="Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint.HandleAsync(Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest,System.Threading.CancellationToken)">
+  HandleAsync(GetAllCategoriesApiRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Api/Ecommerce.FastEndpoints/Endpoints/Category/GetAllCategoriesEndpoint.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles the <a class="xref" href="Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest.html">GetAllCategoriesApiRequest</a> and generates a <a class="xref" href="Ecommerce.Shared.Responses.Category.GetAllCategoriesResponse.html">GetAllCategoriesResponse</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task HandleAsync(GetAllCategoriesApiRequest req, CancellationToken ct)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>req</code> <a class="xref" href="Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest.html">GetAllCategoriesApiRequest</a></dt>
+    <dd><p>The <a class="xref" href="Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest.html">GetAllCategoriesApiRequest</a> object sent in the HTTP request</p>
+</dd>
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> that can be used to request cancellation of the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

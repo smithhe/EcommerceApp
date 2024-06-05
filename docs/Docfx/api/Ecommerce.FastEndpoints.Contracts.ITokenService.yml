@@ -1,0 +1,368 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.FastEndpoints.Contracts.ITokenService
+  commentId: T:Ecommerce.FastEndpoints.Contracts.ITokenService
+  id: ITokenService
+  parent: Ecommerce.FastEndpoints.Contracts
+  children:
+  - Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserIdFromToken(System.String)
+  - Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserNameFromToken(System.String)
+  - Ecommerce.FastEndpoints.Contracts.ITokenService.ValidateTokenAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ITokenService
+  nameWithType: ITokenService
+  fullName: Ecommerce.FastEndpoints.Contracts.ITokenService
+  type: Interface
+  source:
+    remote:
+      path: Api/Ecommerce.FastEndpoints/Contracts/ITokenService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ITokenService
+    path: ../../Api/Ecommerce.FastEndpoints/Contracts/ITokenService.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.FastEndpoints
+  namespace: Ecommerce.FastEndpoints.Contracts
+  summary: A service that handles operations on the JWT token passed in HTTP requests
+  example: []
+  syntax:
+    content: public interface ITokenService
+    content.vb: Public Interface ITokenService
+- uid: Ecommerce.FastEndpoints.Contracts.ITokenService.ValidateTokenAsync(System.String)
+  commentId: M:Ecommerce.FastEndpoints.Contracts.ITokenService.ValidateTokenAsync(System.String)
+  id: ValidateTokenAsync(System.String)
+  parent: Ecommerce.FastEndpoints.Contracts.ITokenService
+  langs:
+  - csharp
+  - vb
+  name: ValidateTokenAsync(string?)
+  nameWithType: ITokenService.ValidateTokenAsync(string?)
+  fullName: Ecommerce.FastEndpoints.Contracts.ITokenService.ValidateTokenAsync(string?)
+  type: Method
+  source:
+    remote:
+      path: Api/Ecommerce.FastEndpoints/Contracts/ITokenService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ValidateTokenAsync
+    path: ../../Api/Ecommerce.FastEndpoints/Contracts/ITokenService.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.FastEndpoints
+  namespace: Ecommerce.FastEndpoints.Contracts
+  summary: Validates if the JWT token passed in the HTTP request is still valid for use
+  example: []
+  syntax:
+    content: Task<bool> ValidateTokenAsync(string? token)
+    parameters:
+    - id: token
+      type: System.String
+      description: The JWT token passed in the HTTP request
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: ''
+    content.vb: Function ValidateTokenAsync(token As String) As Task(Of Boolean)
+  overload: Ecommerce.FastEndpoints.Contracts.ITokenService.ValidateTokenAsync*
+  nameWithType.vb: ITokenService.ValidateTokenAsync(String)
+  fullName.vb: Ecommerce.FastEndpoints.Contracts.ITokenService.ValidateTokenAsync(String)
+  name.vb: ValidateTokenAsync(String)
+- uid: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserNameFromToken(System.String)
+  commentId: M:Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserNameFromToken(System.String)
+  id: GetUserNameFromToken(System.String)
+  parent: Ecommerce.FastEndpoints.Contracts.ITokenService
+  langs:
+  - csharp
+  - vb
+  name: GetUserNameFromToken(string?)
+  nameWithType: ITokenService.GetUserNameFromToken(string?)
+  fullName: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserNameFromToken(string?)
+  type: Method
+  source:
+    remote:
+      path: Api/Ecommerce.FastEndpoints/Contracts/ITokenService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserNameFromToken
+    path: ../../Api/Ecommerce.FastEndpoints/Contracts/ITokenService.cs
+    startLine: 25
+  assemblies:
+  - Ecommerce.FastEndpoints
+  namespace: Ecommerce.FastEndpoints.Contracts
+  summary: Retrieves the username from the token
+  example: []
+  syntax:
+    content: string? GetUserNameFromToken(string? token)
+    parameters:
+    - id: token
+      type: System.String
+      description: The JWT token passed in the HTTP request
+    return:
+      type: System.String
+      description: >-
+        A string containing the username if found;
+
+        <code>null</code> if token is null or no claim is found for Name
+    content.vb: Function GetUserNameFromToken(token As String) As String
+  overload: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserNameFromToken*
+  nameWithType.vb: ITokenService.GetUserNameFromToken(String)
+  fullName.vb: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserNameFromToken(String)
+  name.vb: GetUserNameFromToken(String)
+- uid: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserIdFromToken(System.String)
+  commentId: M:Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserIdFromToken(System.String)
+  id: GetUserIdFromToken(System.String)
+  parent: Ecommerce.FastEndpoints.Contracts.ITokenService
+  langs:
+  - csharp
+  - vb
+  name: GetUserIdFromToken(string?)
+  nameWithType: ITokenService.GetUserIdFromToken(string?)
+  fullName: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserIdFromToken(string?)
+  type: Method
+  source:
+    remote:
+      path: Api/Ecommerce.FastEndpoints/Contracts/ITokenService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserIdFromToken
+    path: ../../Api/Ecommerce.FastEndpoints/Contracts/ITokenService.cs
+    startLine: 35
+  assemblies:
+  - Ecommerce.FastEndpoints
+  namespace: Ecommerce.FastEndpoints.Contracts
+  summary: Retrieves the user id from the auth token
+  example: []
+  syntax:
+    content: Guid? GetUserIdFromToken(string? token)
+    parameters:
+    - id: token
+      type: System.String
+      description: The auth token to parse
+    return:
+      type: System.Nullable{System.Guid}
+      description: >-
+        The user id if found;
+
+        <code>null</code> if token is null or no claim is found for NameIdentifier
+    content.vb: Function GetUserIdFromToken(token As String) As Guid?
+  overload: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserIdFromToken*
+  nameWithType.vb: ITokenService.GetUserIdFromToken(String)
+  fullName.vb: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserIdFromToken(String)
+  name.vb: GetUserIdFromToken(String)
+references:
+- uid: Ecommerce.FastEndpoints.Contracts
+  commentId: N:Ecommerce.FastEndpoints.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.FastEndpoints.Contracts
+  nameWithType: Ecommerce.FastEndpoints.Contracts
+  fullName: Ecommerce.FastEndpoints.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.FastEndpoints
+    name: FastEndpoints
+    href: Ecommerce.FastEndpoints.html
+  - name: .
+  - uid: Ecommerce.FastEndpoints.Contracts
+    name: Contracts
+    href: Ecommerce.FastEndpoints.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.FastEndpoints
+    name: FastEndpoints
+    href: Ecommerce.FastEndpoints.html
+  - name: .
+  - uid: Ecommerce.FastEndpoints.Contracts
+    name: Contracts
+    href: Ecommerce.FastEndpoints.Contracts.html
+- uid: Ecommerce.FastEndpoints.Contracts.ITokenService.ValidateTokenAsync*
+  commentId: Overload:Ecommerce.FastEndpoints.Contracts.ITokenService.ValidateTokenAsync
+  href: Ecommerce.FastEndpoints.Contracts.ITokenService.html#Ecommerce_FastEndpoints_Contracts_ITokenService_ValidateTokenAsync_System_String_
+  name: ValidateTokenAsync
+  nameWithType: ITokenService.ValidateTokenAsync
+  fullName: Ecommerce.FastEndpoints.Contracts.ITokenService.ValidateTokenAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserNameFromToken*
+  commentId: Overload:Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserNameFromToken
+  href: Ecommerce.FastEndpoints.Contracts.ITokenService.html#Ecommerce_FastEndpoints_Contracts_ITokenService_GetUserNameFromToken_System_String_
+  name: GetUserNameFromToken
+  nameWithType: ITokenService.GetUserNameFromToken
+  fullName: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserNameFromToken
+- uid: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserIdFromToken*
+  commentId: Overload:Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserIdFromToken
+  href: Ecommerce.FastEndpoints.Contracts.ITokenService.html#Ecommerce_FastEndpoints_Contracts_ITokenService_GetUserIdFromToken_System_String_
+  name: GetUserIdFromToken
+  nameWithType: ITokenService.GetUserIdFromToken
+  fullName: Ecommerce.FastEndpoints.Contracts.ITokenService.GetUserIdFromToken
+- uid: System.Nullable{System.Guid}
+  commentId: T:System.Nullable{System.Guid}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid?
+  nameWithType: Guid?
+  fullName: System.Guid?
+  spec.csharp:
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '?'
+  spec.vb:
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

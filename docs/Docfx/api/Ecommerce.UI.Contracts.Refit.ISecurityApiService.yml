@@ -1,0 +1,770 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  commentId: T:Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  id: ISecurityApiService
+  parent: Ecommerce.UI.Contracts.Refit
+  children:
+  - Ecommerce.UI.Contracts.Refit.ISecurityApiService.ConfirmEmail(Ecommerce.Shared.Security.Requests.ConfirmEmailRequest)
+  - Ecommerce.UI.Contracts.Refit.ISecurityApiService.CreateUser(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  - Ecommerce.UI.Contracts.Refit.ISecurityApiService.Login(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  - Ecommerce.UI.Contracts.Refit.ISecurityApiService.Logout(Ecommerce.Shared.Security.Requests.LogoutUserRequest)
+  - Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdatePassword(Ecommerce.Shared.Security.Requests.UpdatePasswordRequest)
+  - Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdateUser(Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest)
+  langs:
+  - csharp
+  - vb
+  name: ISecurityApiService
+  nameWithType: ISecurityApiService
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  type: Interface
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ISecurityApiService
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: public interface ISecurityApiService
+    content.vb: Public Interface ISecurityApiService
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.CreateUser(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.ISecurityApiService.CreateUser(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  id: CreateUser(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  parent: Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  langs:
+  - csharp
+  - vb
+  name: CreateUser(CreateUserRequest)
+  nameWithType: ISecurityApiService.CreateUser(CreateUserRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.CreateUser(Ecommerce.Shared.Security.Requests.CreateUserRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateUser
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Post("/api/register")]
+
+      Task<ApiResponse<CreateUserResponse>> CreateUser(CreateUserRequest createUserRequest)
+    parameters:
+    - id: createUserRequest
+      type: Ecommerce.Shared.Security.Requests.CreateUserRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.CreateUserResponse}}
+    content.vb: >-
+      <Post("/api/register")>
+
+      Function CreateUser(createUserRequest As CreateUserRequest) As Task(Of ApiResponse(Of CreateUserResponse))
+  overload: Ecommerce.UI.Contracts.Refit.ISecurityApiService.CreateUser*
+  attributes:
+  - type: Refit.PostAttribute
+    ctor: Refit.PostAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/register
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.Login(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.ISecurityApiService.Login(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  id: Login(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  parent: Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  langs:
+  - csharp
+  - vb
+  name: Login(AuthenticationRequest)
+  nameWithType: ISecurityApiService.Login(AuthenticationRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.Login(Ecommerce.Shared.Security.Requests.AuthenticationRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Login
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Post("/api/login")]
+
+      Task<ApiResponse<AuthenticateResponse>> Login(AuthenticationRequest authenticationRequest)
+    parameters:
+    - id: authenticationRequest
+      type: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.AuthenticateResponse}}
+    content.vb: >-
+      <Post("/api/login")>
+
+      Function Login(authenticationRequest As AuthenticationRequest) As Task(Of ApiResponse(Of AuthenticateResponse))
+  overload: Ecommerce.UI.Contracts.Refit.ISecurityApiService.Login*
+  attributes:
+  - type: Refit.PostAttribute
+    ctor: Refit.PostAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/login
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.Logout(Ecommerce.Shared.Security.Requests.LogoutUserRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.ISecurityApiService.Logout(Ecommerce.Shared.Security.Requests.LogoutUserRequest)
+  id: Logout(Ecommerce.Shared.Security.Requests.LogoutUserRequest)
+  parent: Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  langs:
+  - csharp
+  - vb
+  name: Logout(LogoutUserRequest)
+  nameWithType: ISecurityApiService.Logout(LogoutUserRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.Logout(Ecommerce.Shared.Security.Requests.LogoutUserRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Logout
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Post("/api/logout")]
+
+      Task<IApiResponse> Logout(LogoutUserRequest logoutRequest)
+    parameters:
+    - id: logoutRequest
+      type: Ecommerce.Shared.Security.Requests.LogoutUserRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.IApiResponse}
+    content.vb: >-
+      <Post("/api/logout")>
+
+      Function Logout(logoutRequest As LogoutUserRequest) As Task(Of IApiResponse)
+  overload: Ecommerce.UI.Contracts.Refit.ISecurityApiService.Logout*
+  attributes:
+  - type: Refit.PostAttribute
+    ctor: Refit.PostAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/logout
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdateUser(Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdateUser(Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest)
+  id: UpdateUser(Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest)
+  parent: Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  langs:
+  - csharp
+  - vb
+  name: UpdateUser(UpdateEcommerceUserRequest)
+  nameWithType: ISecurityApiService.UpdateUser(UpdateEcommerceUserRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdateUser(Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateUser
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+    startLine: 18
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Put("/api/user/update")]
+
+      Task<ApiResponse<UpdateEcommerceUserResponse>> UpdateUser(UpdateEcommerceUserRequest updateUserRequest)
+    parameters:
+    - id: updateUserRequest
+      type: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse}}
+    content.vb: >-
+      <Put("/api/user/update")>
+
+      Function UpdateUser(updateUserRequest As UpdateEcommerceUserRequest) As Task(Of ApiResponse(Of UpdateEcommerceUserResponse))
+  overload: Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdateUser*
+  attributes:
+  - type: Refit.PutAttribute
+    ctor: Refit.PutAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/user/update
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdatePassword(Ecommerce.Shared.Security.Requests.UpdatePasswordRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdatePassword(Ecommerce.Shared.Security.Requests.UpdatePasswordRequest)
+  id: UpdatePassword(Ecommerce.Shared.Security.Requests.UpdatePasswordRequest)
+  parent: Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  langs:
+  - csharp
+  - vb
+  name: UpdatePassword(UpdatePasswordRequest)
+  nameWithType: ISecurityApiService.UpdatePassword(UpdatePasswordRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdatePassword(Ecommerce.Shared.Security.Requests.UpdatePasswordRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdatePassword
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+    startLine: 21
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Put("/api/password/update")]
+
+      Task<ApiResponse<UpdatePasswordResponse>> UpdatePassword(UpdatePasswordRequest updatePasswordRequest)
+    parameters:
+    - id: updatePasswordRequest
+      type: Ecommerce.Shared.Security.Requests.UpdatePasswordRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.UpdatePasswordResponse}}
+    content.vb: >-
+      <Put("/api/password/update")>
+
+      Function UpdatePassword(updatePasswordRequest As UpdatePasswordRequest) As Task(Of ApiResponse(Of UpdatePasswordResponse))
+  overload: Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdatePassword*
+  attributes:
+  - type: Refit.PutAttribute
+    ctor: Refit.PutAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/password/update
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.ConfirmEmail(Ecommerce.Shared.Security.Requests.ConfirmEmailRequest)
+  commentId: M:Ecommerce.UI.Contracts.Refit.ISecurityApiService.ConfirmEmail(Ecommerce.Shared.Security.Requests.ConfirmEmailRequest)
+  id: ConfirmEmail(Ecommerce.Shared.Security.Requests.ConfirmEmailRequest)
+  parent: Ecommerce.UI.Contracts.Refit.ISecurityApiService
+  langs:
+  - csharp
+  - vb
+  name: ConfirmEmail(ConfirmEmailRequest)
+  nameWithType: ISecurityApiService.ConfirmEmail(ConfirmEmailRequest)
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.ConfirmEmail(Ecommerce.Shared.Security.Requests.ConfirmEmailRequest)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ConfirmEmail
+    path: ../../UI/Ecommerce.UI/Contracts/Refit/ISecurityApiService.cs
+    startLine: 24
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts.Refit
+  syntax:
+    content: >-
+      [Post("/api/user/confirm-email")]
+
+      Task<ApiResponse<ConfirmEmailResponse?>> ConfirmEmail(ConfirmEmailRequest confirmEmailRequest)
+    parameters:
+    - id: confirmEmailRequest
+      type: Ecommerce.Shared.Security.Requests.ConfirmEmailRequest
+    return:
+      type: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.ConfirmEmailResponse}}
+    content.vb: >-
+      <Post("/api/user/confirm-email")>
+
+      Function ConfirmEmail(confirmEmailRequest As ConfirmEmailRequest) As Task(Of ApiResponse(Of ConfirmEmailResponse))
+  overload: Ecommerce.UI.Contracts.Refit.ISecurityApiService.ConfirmEmail*
+  attributes:
+  - type: Refit.PostAttribute
+    ctor: Refit.PostAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/user/confirm-email
+references:
+- uid: Ecommerce.UI.Contracts.Refit
+  commentId: N:Ecommerce.UI.Contracts.Refit
+  href: Ecommerce.html
+  name: Ecommerce.UI.Contracts.Refit
+  nameWithType: Ecommerce.UI.Contracts.Refit
+  fullName: Ecommerce.UI.Contracts.Refit
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts.Refit
+    name: Refit
+    href: Ecommerce.UI.Contracts.Refit.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts.Refit
+    name: Refit
+    href: Ecommerce.UI.Contracts.Refit.html
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.CreateUser*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.ISecurityApiService.CreateUser
+  href: Ecommerce.UI.Contracts.Refit.ISecurityApiService.html#Ecommerce_UI_Contracts_Refit_ISecurityApiService_CreateUser_Ecommerce_Shared_Security_Requests_CreateUserRequest_
+  name: CreateUser
+  nameWithType: ISecurityApiService.CreateUser
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.CreateUser
+- uid: Ecommerce.Shared.Security.Requests.CreateUserRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.CreateUserRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.CreateUserRequest.html
+  name: CreateUserRequest
+  nameWithType: CreateUserRequest
+  fullName: Ecommerce.Shared.Security.Requests.CreateUserRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.CreateUserResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.CreateUserResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<CreateUserResponse>>
+  nameWithType: Task<ApiResponse<CreateUserResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Security.Responses.CreateUserResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of CreateUserResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Security.Responses.CreateUserResponse))
+  name.vb: Task(Of ApiResponse(Of CreateUserResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+    name: CreateUserResponse
+    href: Ecommerce.Shared.Security.Responses.CreateUserResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+    name: CreateUserResponse
+    href: Ecommerce.Shared.Security.Responses.CreateUserResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.Shared.Security.Requests
+  commentId: N:Ecommerce.Shared.Security.Requests
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Security.Requests
+  nameWithType: Ecommerce.Shared.Security.Requests
+  fullName: Ecommerce.Shared.Security.Requests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  - name: .
+  - uid: Ecommerce.Shared.Security.Requests
+    name: Requests
+    href: Ecommerce.Shared.Security.Requests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  - name: .
+  - uid: Ecommerce.Shared.Security.Requests
+    name: Requests
+    href: Ecommerce.Shared.Security.Requests.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.Login*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.ISecurityApiService.Login
+  href: Ecommerce.UI.Contracts.Refit.ISecurityApiService.html#Ecommerce_UI_Contracts_Refit_ISecurityApiService_Login_Ecommerce_Shared_Security_Requests_AuthenticationRequest_
+  name: Login
+  nameWithType: ISecurityApiService.Login
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.Login
+- uid: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.AuthenticationRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.AuthenticationRequest.html
+  name: AuthenticationRequest
+  nameWithType: AuthenticationRequest
+  fullName: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.AuthenticateResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.AuthenticateResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<AuthenticateResponse>>
+  nameWithType: Task<ApiResponse<AuthenticateResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Security.Responses.AuthenticateResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of AuthenticateResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Security.Responses.AuthenticateResponse))
+  name.vb: Task(Of ApiResponse(Of AuthenticateResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.AuthenticateResponse
+    name: AuthenticateResponse
+    href: Ecommerce.Shared.Security.Responses.AuthenticateResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.AuthenticateResponse
+    name: AuthenticateResponse
+    href: Ecommerce.Shared.Security.Responses.AuthenticateResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.Logout*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.ISecurityApiService.Logout
+  href: Ecommerce.UI.Contracts.Refit.ISecurityApiService.html#Ecommerce_UI_Contracts_Refit_ISecurityApiService_Logout_Ecommerce_Shared_Security_Requests_LogoutUserRequest_
+  name: Logout
+  nameWithType: ISecurityApiService.Logout
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.Logout
+- uid: Ecommerce.Shared.Security.Requests.LogoutUserRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.LogoutUserRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.LogoutUserRequest.html
+  name: LogoutUserRequest
+  nameWithType: LogoutUserRequest
+  fullName: Ecommerce.Shared.Security.Requests.LogoutUserRequest
+- uid: System.Threading.Tasks.Task{Refit.IApiResponse}
+  commentId: T:System.Threading.Tasks.Task{Refit.IApiResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IApiResponse>
+  nameWithType: Task<IApiResponse>
+  fullName: System.Threading.Tasks.Task<Refit.IApiResponse>
+  nameWithType.vb: Task(Of IApiResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.IApiResponse)
+  name.vb: Task(Of IApiResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.IApiResponse
+    name: IApiResponse
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.IApiResponse
+    name: IApiResponse
+    isExternal: true
+  - name: )
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdateUser*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdateUser
+  href: Ecommerce.UI.Contracts.Refit.ISecurityApiService.html#Ecommerce_UI_Contracts_Refit_ISecurityApiService_UpdateUser_Ecommerce_Shared_Security_Requests_UpdateEcommerceUserRequest_
+  name: UpdateUser
+  nameWithType: ISecurityApiService.UpdateUser
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdateUser
+- uid: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest.html
+  name: UpdateEcommerceUserRequest
+  nameWithType: UpdateEcommerceUserRequest
+  fullName: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<UpdateEcommerceUserResponse>>
+  nameWithType: Task<ApiResponse<UpdateEcommerceUserResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of UpdateEcommerceUserResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse))
+  name.vb: Task(Of ApiResponse(Of UpdateEcommerceUserResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+    name: UpdateEcommerceUserResponse
+    href: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+    name: UpdateEcommerceUserResponse
+    href: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdatePassword*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdatePassword
+  href: Ecommerce.UI.Contracts.Refit.ISecurityApiService.html#Ecommerce_UI_Contracts_Refit_ISecurityApiService_UpdatePassword_Ecommerce_Shared_Security_Requests_UpdatePasswordRequest_
+  name: UpdatePassword
+  nameWithType: ISecurityApiService.UpdatePassword
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.UpdatePassword
+- uid: Ecommerce.Shared.Security.Requests.UpdatePasswordRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.UpdatePasswordRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.UpdatePasswordRequest.html
+  name: UpdatePasswordRequest
+  nameWithType: UpdatePasswordRequest
+  fullName: Ecommerce.Shared.Security.Requests.UpdatePasswordRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.UpdatePasswordResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.UpdatePasswordResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<UpdatePasswordResponse>>
+  nameWithType: Task<ApiResponse<UpdatePasswordResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Security.Responses.UpdatePasswordResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of UpdatePasswordResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Security.Responses.UpdatePasswordResponse))
+  name.vb: Task(Of ApiResponse(Of UpdatePasswordResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+    name: UpdatePasswordResponse
+    href: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+    name: UpdatePasswordResponse
+    href: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse.html
+  - name: )
+  - name: )
+- uid: Ecommerce.UI.Contracts.Refit.ISecurityApiService.ConfirmEmail*
+  commentId: Overload:Ecommerce.UI.Contracts.Refit.ISecurityApiService.ConfirmEmail
+  href: Ecommerce.UI.Contracts.Refit.ISecurityApiService.html#Ecommerce_UI_Contracts_Refit_ISecurityApiService_ConfirmEmail_Ecommerce_Shared_Security_Requests_ConfirmEmailRequest_
+  name: ConfirmEmail
+  nameWithType: ISecurityApiService.ConfirmEmail
+  fullName: Ecommerce.UI.Contracts.Refit.ISecurityApiService.ConfirmEmail
+- uid: Ecommerce.Shared.Security.Requests.ConfirmEmailRequest
+  commentId: T:Ecommerce.Shared.Security.Requests.ConfirmEmailRequest
+  parent: Ecommerce.Shared.Security.Requests
+  href: Ecommerce.Shared.Security.Requests.ConfirmEmailRequest.html
+  name: ConfirmEmailRequest
+  nameWithType: ConfirmEmailRequest
+  fullName: Ecommerce.Shared.Security.Requests.ConfirmEmailRequest
+- uid: System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.ConfirmEmailResponse}}
+  commentId: T:System.Threading.Tasks.Task{Refit.ApiResponse{Ecommerce.Shared.Security.Responses.ConfirmEmailResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<ConfirmEmailResponse>>
+  nameWithType: Task<ApiResponse<ConfirmEmailResponse>>
+  fullName: System.Threading.Tasks.Task<Refit.ApiResponse<Ecommerce.Shared.Security.Responses.ConfirmEmailResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of ConfirmEmailResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Refit.ApiResponse(Of Ecommerce.Shared.Security.Responses.ConfirmEmailResponse))
+  name.vb: Task(Of ApiResponse(Of ConfirmEmailResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse
+    name: ConfirmEmailResponse
+    href: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Refit.ApiResponse`1
+    name: ApiResponse
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse
+    name: ConfirmEmailResponse
+    href: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse.html
+  - name: )
+  - name: )

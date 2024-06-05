@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Messages.EcommerceUser
+  commentId: N:Ecommerce.Messages.EcommerceUser
+  id: Ecommerce.Messages.EcommerceUser
+  children:
+  - Ecommerce.Messages.EcommerceUser.SendEmailConfirmationMessage
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Messages.EcommerceUser
+  nameWithType: Ecommerce.Messages.EcommerceUser
+  fullName: Ecommerce.Messages.EcommerceUser
+  type: Namespace
+  assemblies:
+  - Ecommerce.Messages
+references:
+- uid: Ecommerce.Messages.EcommerceUser.SendEmailConfirmationMessage
+  commentId: T:Ecommerce.Messages.EcommerceUser.SendEmailConfirmationMessage
+  parent: Ecommerce.Messages.EcommerceUser
+  href: Ecommerce.Messages.EcommerceUser.SendEmailConfirmationMessage.html
+  name: SendEmailConfirmationMessage
+  nameWithType: SendEmailConfirmationMessage
+  fullName: Ecommerce.Messages.EcommerceUser.SendEmailConfirmationMessage
+- uid: Ecommerce.Messages.EcommerceUser
+  commentId: N:Ecommerce.Messages.EcommerceUser
+  href: Ecommerce.html
+  name: Ecommerce.Messages.EcommerceUser
+  nameWithType: Ecommerce.Messages.EcommerceUser
+  fullName: Ecommerce.Messages.EcommerceUser
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Messages
+    name: Messages
+    href: Ecommerce.Messages.html
+  - name: .
+  - uid: Ecommerce.Messages.EcommerceUser
+    name: EcommerceUser
+    href: Ecommerce.Messages.EcommerceUser.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Messages
+    name: Messages
+    href: Ecommerce.Messages.html
+  - name: .
+  - uid: Ecommerce.Messages.EcommerceUser
+    name: EcommerceUser
+    href: Ecommerce.Messages.EcommerceUser.html

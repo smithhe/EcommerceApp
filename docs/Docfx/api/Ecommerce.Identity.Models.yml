@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Identity.Models
+  commentId: N:Ecommerce.Identity.Models
+  id: Ecommerce.Identity.Models
+  children:
+  - Ecommerce.Identity.Models.JwtSettings
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Identity.Models
+  nameWithType: Ecommerce.Identity.Models
+  fullName: Ecommerce.Identity.Models
+  type: Namespace
+  assemblies:
+  - Ecommerce.Identity
+references:
+- uid: Ecommerce.Identity.Models.JwtSettings
+  commentId: T:Ecommerce.Identity.Models.JwtSettings
+  href: Ecommerce.Identity.Models.JwtSettings.html
+  name: JwtSettings
+  nameWithType: JwtSettings
+  fullName: Ecommerce.Identity.Models.JwtSettings

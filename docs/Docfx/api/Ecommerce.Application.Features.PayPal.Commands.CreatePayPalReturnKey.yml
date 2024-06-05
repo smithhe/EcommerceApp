@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  commentId: N:Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  id: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  children:
+  - Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommand
+  - Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  nameWithType: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  fullName: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommand
+  commentId: T:Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommand
+  parent: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  href: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommand.html
+  name: CreatePayPalReturnKeyCommand
+  nameWithType: CreatePayPalReturnKeyCommand
+  fullName: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommand
+- uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommandHandler
+  commentId: T:Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommandHandler
+  href: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommandHandler.html
+  name: CreatePayPalReturnKeyCommandHandler
+  nameWithType: CreatePayPalReturnKeyCommandHandler
+  fullName: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommandHandler
+- uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  commentId: N:Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  nameWithType: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  fullName: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.PayPal.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+    name: CreatePayPalReturnKey
+    href: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.PayPal.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+    name: CreatePayPalReturnKey
+    href: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.html

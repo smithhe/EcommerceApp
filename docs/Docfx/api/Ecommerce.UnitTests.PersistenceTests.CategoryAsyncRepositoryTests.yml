@@ -1,0 +1,1212 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  commentId: T:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  id: CategoryAsyncRepositoryTests
+  parent: Ecommerce.UnitTests.PersistenceTests
+  children:
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithExistingCategory_ReturnsMinusOne
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithNewCategory_ReturnsId
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryExists_ReturnsTrue
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryExists_ReturnsCategory
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithExistingName_ReturnsFalse
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithUniqueName_ReturnsTrue
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenCategoriesExist_ReturnsAllCategories
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmptyList
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.Setup
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.TearDown
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WithExistingCategory_ReturnsTrue
+  langs:
+  - csharp
+  - vb
+  name: CategoryAsyncRepositoryTests
+  nameWithType: CategoryAsyncRepositoryTests
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  type: Class
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CategoryAsyncRepositoryTests
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 18
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class CategoryAsyncRepositoryTests
+    content.vb: >-
+      <TestFixture>
+
+      Public Class CategoryAsyncRepositoryTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.Setup
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.Setup
+  id: Setup
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: CategoryAsyncRepositoryTests.Setup()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.Setup()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Setup
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 52
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void Setup()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub Setup()
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.Setup*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.TearDown
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.TearDown
+  id: TearDown
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: TearDown()
+  nameWithType: CategoryAsyncRepositoryTests.TearDown()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.TearDown()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: TearDown
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 71
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [TearDown]
+
+      public void TearDown()
+    content.vb: >-
+      <TearDown>
+
+      Public Sub TearDown()
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.TearDown*
+  attributes:
+  - type: NUnit.Framework.TearDownAttribute
+    ctor: NUnit.Framework.TearDownAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryExists_ReturnsCategory
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryExists_ReturnsCategory
+  id: GetByIdAsync_WhenCategoryExists_ReturnsCategory
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetByIdAsync_WhenCategoryExists_ReturnsCategory()
+  nameWithType: CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryExists_ReturnsCategory()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryExists_ReturnsCategory()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByIdAsync_WhenCategoryExists_ReturnsCategory
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 80
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetByIdAsync_WhenCategoryExists_ReturnsCategory()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetByIdAsync_WhenCategoryExists_ReturnsCategory() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryExists_ReturnsCategory*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull
+  id: GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull()
+  nameWithType: CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 102
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull
+  id: GetByIdAsync_WhenExceptionThrown_ReturnsNull
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetByIdAsync_WhenExceptionThrown_ReturnsNull()
+  nameWithType: CategoryAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByIdAsync_WhenExceptionThrown_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 115
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetByIdAsync_WhenExceptionThrown_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetByIdAsync_WhenExceptionThrown_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithNewCategory_ReturnsId
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithNewCategory_ReturnsId
+  id: AddAsync_WithNewCategory_ReturnsId
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: AddAsync_WithNewCategory_ReturnsId()
+  nameWithType: CategoryAsyncRepositoryTests.AddAsync_WithNewCategory_ReturnsId()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithNewCategory_ReturnsId()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddAsync_WithNewCategory_ReturnsId
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 143
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task AddAsync_WithNewCategory_ReturnsId()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function AddAsync_WithNewCategory_ReturnsId() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithNewCategory_ReturnsId*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithExistingCategory_ReturnsMinusOne
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithExistingCategory_ReturnsMinusOne
+  id: AddAsync_WithExistingCategory_ReturnsMinusOne
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: AddAsync_WithExistingCategory_ReturnsMinusOne()
+  nameWithType: CategoryAsyncRepositoryTests.AddAsync_WithExistingCategory_ReturnsMinusOne()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithExistingCategory_ReturnsMinusOne()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddAsync_WithExistingCategory_ReturnsMinusOne
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 156
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task AddAsync_WithExistingCategory_ReturnsMinusOne()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function AddAsync_WithExistingCategory_ReturnsMinusOne() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithExistingCategory_ReturnsMinusOne*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  id: AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: AddAsync_WhenExceptionThrown_ReturnsMinusOne()
+  nameWithType: CategoryAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddAsync_WhenExceptionThrown_ReturnsMinusOne
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 169
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task AddAsync_WhenExceptionThrown_ReturnsMinusOne()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function AddAsync_WhenExceptionThrown_ReturnsMinusOne() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WithExistingCategory_ReturnsTrue
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WithExistingCategory_ReturnsTrue
+  id: UpdateAsync_WithExistingCategory_ReturnsTrue
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync_WithExistingCategory_ReturnsTrue()
+  nameWithType: CategoryAsyncRepositoryTests.UpdateAsync_WithExistingCategory_ReturnsTrue()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WithExistingCategory_ReturnsTrue()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateAsync_WithExistingCategory_ReturnsTrue
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 204
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateAsync_WithExistingCategory_ReturnsTrue()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateAsync_WithExistingCategory_ReturnsTrue() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WithExistingCategory_ReturnsTrue*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  id: UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse()
+  nameWithType: CategoryAsyncRepositoryTests.UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 218
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse
+  id: UpdateAsync_WhenExceptionThrown_ReturnsFalse
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync_WhenExceptionThrown_ReturnsFalse()
+  nameWithType: CategoryAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateAsync_WhenExceptionThrown_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 231
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateAsync_WhenExceptionThrown_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateAsync_WhenExceptionThrown_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryExists_ReturnsTrue
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryExists_ReturnsTrue
+  id: DeleteAsync_WhenCategoryExists_ReturnsTrue
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync_WhenCategoryExists_ReturnsTrue()
+  nameWithType: CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryExists_ReturnsTrue()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryExists_ReturnsTrue()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteAsync_WhenCategoryExists_ReturnsTrue
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 264
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteAsync_WhenCategoryExists_ReturnsTrue()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteAsync_WhenCategoryExists_ReturnsTrue() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryExists_ReturnsTrue*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  id: DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse()
+  nameWithType: CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 277
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  id: DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync_WhenExceptionThrown_ReturnsFalse()
+  nameWithType: CategoryAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteAsync_WhenExceptionThrown_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 290
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteAsync_WhenExceptionThrown_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteAsync_WhenExceptionThrown_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenCategoriesExist_ReturnsAllCategories
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenCategoriesExist_ReturnsAllCategories
+  id: ListAllAsync_WhenCategoriesExist_ReturnsAllCategories
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: ListAllAsync_WhenCategoriesExist_ReturnsAllCategories()
+  nameWithType: CategoryAsyncRepositoryTests.ListAllAsync_WhenCategoriesExist_ReturnsAllCategories()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenCategoriesExist_ReturnsAllCategories()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ListAllAsync_WhenCategoriesExist_ReturnsAllCategories
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 324
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task ListAllAsync_WhenCategoriesExist_ReturnsAllCategories()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function ListAllAsync_WhenCategoriesExist_ReturnsAllCategories() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenCategoriesExist_ReturnsAllCategories*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList
+  id: ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList()
+  nameWithType: CategoryAsyncRepositoryTests.ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 338
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmptyList
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmptyList
+  id: ListAllAsync_WhenExceptionThrown_ReturnsEmptyList
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: ListAllAsync_WhenExceptionThrown_ReturnsEmptyList()
+  nameWithType: CategoryAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmptyList()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmptyList()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ListAllAsync_WhenExceptionThrown_ReturnsEmptyList
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 359
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task ListAllAsync_WhenExceptionThrown_ReturnsEmptyList()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function ListAllAsync_WhenExceptionThrown_ReturnsEmptyList() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmptyList*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithUniqueName_ReturnsTrue
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithUniqueName_ReturnsTrue
+  id: IsNameUnique_WithUniqueName_ReturnsTrue
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: IsNameUnique_WithUniqueName_ReturnsTrue()
+  nameWithType: CategoryAsyncRepositoryTests.IsNameUnique_WithUniqueName_ReturnsTrue()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithUniqueName_ReturnsTrue()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IsNameUnique_WithUniqueName_ReturnsTrue
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 388
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task IsNameUnique_WithUniqueName_ReturnsTrue()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function IsNameUnique_WithUniqueName_ReturnsTrue() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithUniqueName_ReturnsTrue*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithExistingName_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithExistingName_ReturnsFalse
+  id: IsNameUnique_WithExistingName_ReturnsFalse
+  parent: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: IsNameUnique_WithExistingName_ReturnsFalse()
+  nameWithType: CategoryAsyncRepositoryTests.IsNameUnique_WithExistingName_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithExistingName_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IsNameUnique_WithExistingName_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/CategoryAsyncRepositoryTests.cs
+    startLine: 401
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task IsNameUnique_WithExistingName_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function IsNameUnique_WithExistingName_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithExistingName_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: Ecommerce.UnitTests.PersistenceTests
+  commentId: N:Ecommerce.UnitTests.PersistenceTests
+  href: Ecommerce.html
+  name: Ecommerce.UnitTests.PersistenceTests
+  nameWithType: Ecommerce.UnitTests.PersistenceTests
+  fullName: Ecommerce.UnitTests.PersistenceTests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.PersistenceTests
+    name: PersistenceTests
+    href: Ecommerce.UnitTests.PersistenceTests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.PersistenceTests
+    name: PersistenceTests
+    href: Ecommerce.UnitTests.PersistenceTests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.Setup*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.Setup
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_Setup
+  name: Setup
+  nameWithType: CategoryAsyncRepositoryTests.Setup
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.Setup
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.TearDown*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.TearDown
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_TearDown
+  name: TearDown
+  nameWithType: CategoryAsyncRepositoryTests.TearDown
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.TearDown
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryExists_ReturnsCategory*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryExists_ReturnsCategory
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_GetByIdAsync_WhenCategoryExists_ReturnsCategory
+  name: GetByIdAsync_WhenCategoryExists_ReturnsCategory
+  nameWithType: CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryExists_ReturnsCategory
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryExists_ReturnsCategory
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull
+  name: GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull
+  nameWithType: CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenCategoryDoesNotExist_ReturnsNull
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_GetByIdAsync_WhenExceptionThrown_ReturnsNull
+  name: GetByIdAsync_WhenExceptionThrown_ReturnsNull
+  nameWithType: CategoryAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.GetByIdAsync_WhenExceptionThrown_ReturnsNull
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithNewCategory_ReturnsId*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithNewCategory_ReturnsId
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_AddAsync_WithNewCategory_ReturnsId
+  name: AddAsync_WithNewCategory_ReturnsId
+  nameWithType: CategoryAsyncRepositoryTests.AddAsync_WithNewCategory_ReturnsId
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithNewCategory_ReturnsId
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithExistingCategory_ReturnsMinusOne*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithExistingCategory_ReturnsMinusOne
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_AddAsync_WithExistingCategory_ReturnsMinusOne
+  name: AddAsync_WithExistingCategory_ReturnsMinusOne
+  nameWithType: CategoryAsyncRepositoryTests.AddAsync_WithExistingCategory_ReturnsMinusOne
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WithExistingCategory_ReturnsMinusOne
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  name: AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  nameWithType: CategoryAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WithExistingCategory_ReturnsTrue*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WithExistingCategory_ReturnsTrue
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_UpdateAsync_WithExistingCategory_ReturnsTrue
+  name: UpdateAsync_WithExistingCategory_ReturnsTrue
+  nameWithType: CategoryAsyncRepositoryTests.UpdateAsync_WithExistingCategory_ReturnsTrue
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WithExistingCategory_ReturnsTrue
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  name: UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  nameWithType: CategoryAsyncRepositoryTests.UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenCategoryDoesNotExist_ReturnsFalse
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_UpdateAsync_WhenExceptionThrown_ReturnsFalse
+  name: UpdateAsync_WhenExceptionThrown_ReturnsFalse
+  nameWithType: CategoryAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.UpdateAsync_WhenExceptionThrown_ReturnsFalse
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryExists_ReturnsTrue*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryExists_ReturnsTrue
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_DeleteAsync_WhenCategoryExists_ReturnsTrue
+  name: DeleteAsync_WhenCategoryExists_ReturnsTrue
+  nameWithType: CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryExists_ReturnsTrue
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryExists_ReturnsTrue
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  name: DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  nameWithType: CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenCategoryDoesNotExist_ReturnsFalse
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  name: DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  nameWithType: CategoryAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenCategoriesExist_ReturnsAllCategories*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenCategoriesExist_ReturnsAllCategories
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_ListAllAsync_WhenCategoriesExist_ReturnsAllCategories
+  name: ListAllAsync_WhenCategoriesExist_ReturnsAllCategories
+  nameWithType: CategoryAsyncRepositoryTests.ListAllAsync_WhenCategoriesExist_ReturnsAllCategories
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenCategoriesExist_ReturnsAllCategories
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList
+  name: ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList
+  nameWithType: CategoryAsyncRepositoryTests.ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenNoCategoriesExist_ReturnsEmptyList
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmptyList*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmptyList
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_ListAllAsync_WhenExceptionThrown_ReturnsEmptyList
+  name: ListAllAsync_WhenExceptionThrown_ReturnsEmptyList
+  nameWithType: CategoryAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmptyList
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.ListAllAsync_WhenExceptionThrown_ReturnsEmptyList
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithUniqueName_ReturnsTrue*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithUniqueName_ReturnsTrue
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_IsNameUnique_WithUniqueName_ReturnsTrue
+  name: IsNameUnique_WithUniqueName_ReturnsTrue
+  nameWithType: CategoryAsyncRepositoryTests.IsNameUnique_WithUniqueName_ReturnsTrue
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithUniqueName_ReturnsTrue
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithExistingName_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithExistingName_ReturnsFalse
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_CategoryAsyncRepositoryTests_IsNameUnique_WithExistingName_ReturnsFalse
+  name: IsNameUnique_WithExistingName_ReturnsFalse
+  nameWithType: CategoryAsyncRepositoryTests.IsNameUnique_WithExistingName_ReturnsFalse
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.IsNameUnique_WithExistingName_ReturnsFalse

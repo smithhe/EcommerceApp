@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.FastEndpoints
+  commentId: N:Ecommerce.FastEndpoints
+  id: Ecommerce.FastEndpoints
+  children:
+  - Ecommerce.FastEndpoints.FastEndpointServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.FastEndpoints
+  nameWithType: Ecommerce.FastEndpoints
+  fullName: Ecommerce.FastEndpoints
+  type: Namespace
+  assemblies:
+  - Ecommerce.FastEndpoints
+references:
+- uid: Ecommerce.FastEndpoints.FastEndpointServiceRegistration
+  commentId: T:Ecommerce.FastEndpoints.FastEndpointServiceRegistration
+  href: Ecommerce.FastEndpoints.FastEndpointServiceRegistration.html
+  name: FastEndpointServiceRegistration
+  nameWithType: FastEndpointServiceRegistration
+  fullName: Ecommerce.FastEndpoints.FastEndpointServiceRegistration

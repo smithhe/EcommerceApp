@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Identity.Contracts
+  commentId: N:Ecommerce.Identity.Contracts
+  id: Ecommerce.Identity.Contracts
+  children:
+  - Ecommerce.Identity.Contracts.IAuthenticationService
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Identity.Contracts
+  nameWithType: Ecommerce.Identity.Contracts
+  fullName: Ecommerce.Identity.Contracts
+  type: Namespace
+  assemblies:
+  - Ecommerce.Identity
+references:
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService
+  commentId: T:Ecommerce.Identity.Contracts.IAuthenticationService
+  parent: Ecommerce.Identity.Contracts
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html
+  name: IAuthenticationService
+  nameWithType: IAuthenticationService
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService
+- uid: Ecommerce.Identity.Contracts
+  commentId: N:Ecommerce.Identity.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Identity.Contracts
+  nameWithType: Ecommerce.Identity.Contracts
+  fullName: Ecommerce.Identity.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Identity
+    name: Identity
+    href: Ecommerce.Identity.html
+  - name: .
+  - uid: Ecommerce.Identity.Contracts
+    name: Contracts
+    href: Ecommerce.Identity.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Identity
+    name: Identity
+    href: Ecommerce.Identity.html
+  - name: .
+  - uid: Ecommerce.Identity.Contracts
+    name: Contracts
+    href: Ecommerce.Identity.Contracts.html

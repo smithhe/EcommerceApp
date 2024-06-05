@@ -1,0 +1,689 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants
+  commentId: T:Ecommerce.Domain.Constants.Entities.OrderConstants
+  id: OrderConstants
+  parent: Ecommerce.Domain.Constants.Entities
+  children:
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._createErrorMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._createSuccessMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._deleteErrorMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._deleteSuccessMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._genericValidationErrorMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._getAllOrdersErrorMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._getAllOrdersSuccessMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderAfterSuccessfulCheckoutErrorMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderAfterSuccessfulCheckoutSuccessMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderByIdErrorMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderByIdSuccessMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._updateErrorMessage
+  - Ecommerce.Domain.Constants.Entities.OrderConstants._updateSuccessMessage
+  langs:
+  - csharp
+  - vb
+  name: OrderConstants
+  nameWithType: OrderConstants
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: OrderConstants
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 2
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public static class OrderConstants
+    content.vb: Public Module OrderConstants
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._createSuccessMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._createSuccessMessage
+  id: _createSuccessMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _createSuccessMessage
+  nameWithType: OrderConstants._createSuccessMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._createSuccessMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _createSuccessMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 4
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _createSuccessMessage = "Order created successfully"
+    return:
+      type: System.String
+    content.vb: Public Const _createSuccessMessage As String = "Order created successfully"
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._createErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._createErrorMessage
+  id: _createErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _createErrorMessage
+  nameWithType: OrderConstants._createErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._createErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _createErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _createErrorMessage = "Error creating your order, please try again later."
+    return:
+      type: System.String
+    content.vb: Public Const _createErrorMessage As String = "Error creating your order, please try again later."
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._deleteSuccessMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._deleteSuccessMessage
+  id: _deleteSuccessMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _deleteSuccessMessage
+  nameWithType: OrderConstants._deleteSuccessMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._deleteSuccessMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _deleteSuccessMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _deleteSuccessMessage = "Order deleted successfully"
+    return:
+      type: System.String
+    content.vb: Public Const _deleteSuccessMessage As String = "Order deleted successfully"
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._deleteErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._deleteErrorMessage
+  id: _deleteErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _deleteErrorMessage
+  nameWithType: OrderConstants._deleteErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._deleteErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _deleteErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _deleteErrorMessage = "Error deleting your order, please try again later."
+    return:
+      type: System.String
+    content.vb: Public Const _deleteErrorMessage As String = "Error deleting your order, please try again later."
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._updateSuccessMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._updateSuccessMessage
+  id: _updateSuccessMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _updateSuccessMessage
+  nameWithType: OrderConstants._updateSuccessMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._updateSuccessMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _updateSuccessMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 10
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _updateSuccessMessage = "Order updated successfully"
+    return:
+      type: System.String
+    content.vb: Public Const _updateSuccessMessage As String = "Order updated successfully"
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._updateErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._updateErrorMessage
+  id: _updateErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _updateErrorMessage
+  nameWithType: OrderConstants._updateErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._updateErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _updateErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 11
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _updateErrorMessage = "Error updating your order, please try again later."
+    return:
+      type: System.String
+    content.vb: Public Const _updateErrorMessage As String = "Error updating your order, please try again later."
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._getAllOrdersSuccessMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._getAllOrdersSuccessMessage
+  id: _getAllOrdersSuccessMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _getAllOrdersSuccessMessage
+  nameWithType: OrderConstants._getAllOrdersSuccessMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._getAllOrdersSuccessMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _getAllOrdersSuccessMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _getAllOrdersSuccessMessage = "Successfully Got all Orders"
+    return:
+      type: System.String
+    content.vb: Public Const _getAllOrdersSuccessMessage As String = "Successfully Got all Orders"
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._getAllOrdersErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._getAllOrdersErrorMessage
+  id: _getAllOrdersErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _getAllOrdersErrorMessage
+  nameWithType: OrderConstants._getAllOrdersErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._getAllOrdersErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _getAllOrdersErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 14
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _getAllOrdersErrorMessage = "Error getting all of your Orders, please try again later."
+    return:
+      type: System.String
+    content.vb: Public Const _getAllOrdersErrorMessage As String = "Error getting all of your Orders, please try again later."
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderByIdSuccessMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderByIdSuccessMessage
+  id: _getOrderByIdSuccessMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _getOrderByIdSuccessMessage
+  nameWithType: OrderConstants._getOrderByIdSuccessMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderByIdSuccessMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _getOrderByIdSuccessMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 16
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _getOrderByIdSuccessMessage = "Successfully Got Your Order"
+    return:
+      type: System.String
+    content.vb: Public Const _getOrderByIdSuccessMessage As String = "Successfully Got Your Order"
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderByIdErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderByIdErrorMessage
+  id: _getOrderByIdErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _getOrderByIdErrorMessage
+  nameWithType: OrderConstants._getOrderByIdErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderByIdErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _getOrderByIdErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 17
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _getOrderByIdErrorMessage = "Error getting your Order, please try again later."
+    return:
+      type: System.String
+    content.vb: Public Const _getOrderByIdErrorMessage As String = "Error getting your Order, please try again later."
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderAfterSuccessfulCheckoutSuccessMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderAfterSuccessfulCheckoutSuccessMessage
+  id: _getOrderAfterSuccessfulCheckoutSuccessMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _getOrderAfterSuccessfulCheckoutSuccessMessage
+  nameWithType: OrderConstants._getOrderAfterSuccessfulCheckoutSuccessMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderAfterSuccessfulCheckoutSuccessMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _getOrderAfterSuccessfulCheckoutSuccessMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 19
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _getOrderAfterSuccessfulCheckoutSuccessMessage = "Order processed successfully"
+    return:
+      type: System.String
+    content.vb: Public Const _getOrderAfterSuccessfulCheckoutSuccessMessage As String = "Order processed successfully"
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderAfterSuccessfulCheckoutErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderAfterSuccessfulCheckoutErrorMessage
+  id: _getOrderAfterSuccessfulCheckoutErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _getOrderAfterSuccessfulCheckoutErrorMessage
+  nameWithType: OrderConstants._getOrderAfterSuccessfulCheckoutErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._getOrderAfterSuccessfulCheckoutErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _getOrderAfterSuccessfulCheckoutErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 20
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _getOrderAfterSuccessfulCheckoutErrorMessage = "Error Processing Order"
+    return:
+      type: System.String
+    content.vb: Public Const _getOrderAfterSuccessfulCheckoutErrorMessage As String = "Error Processing Order"
+- uid: Ecommerce.Domain.Constants.Entities.OrderConstants._genericValidationErrorMessage
+  commentId: F:Ecommerce.Domain.Constants.Entities.OrderConstants._genericValidationErrorMessage
+  id: _genericValidationErrorMessage
+  parent: Ecommerce.Domain.Constants.Entities.OrderConstants
+  langs:
+  - csharp
+  - vb
+  name: _genericValidationErrorMessage
+  nameWithType: OrderConstants._genericValidationErrorMessage
+  fullName: Ecommerce.Domain.Constants.Entities.OrderConstants._genericValidationErrorMessage
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: _genericValidationErrorMessage
+    path: ../../Core/Ecommerce.Domain/Constants/Entities/OrderConstants.cs
+    startLine: 22
+  assemblies:
+  - Ecommerce.Domain
+  namespace: Ecommerce.Domain.Constants.Entities
+  syntax:
+    content: public const string _genericValidationErrorMessage = "Please fix the listed errors and try again."
+    return:
+      type: System.String
+    content.vb: Public Const _genericValidationErrorMessage As String = "Please fix the listed errors and try again."
+references:
+- uid: Ecommerce.Domain.Constants.Entities
+  commentId: N:Ecommerce.Domain.Constants.Entities
+  href: Ecommerce.html
+  name: Ecommerce.Domain.Constants.Entities
+  nameWithType: Ecommerce.Domain.Constants.Entities
+  fullName: Ecommerce.Domain.Constants.Entities
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Constants
+    name: Constants
+    href: Ecommerce.Domain.Constants.html
+  - name: .
+  - uid: Ecommerce.Domain.Constants.Entities
+    name: Entities
+    href: Ecommerce.Domain.Constants.Entities.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Domain
+    name: Domain
+    href: Ecommerce.Domain.html
+  - name: .
+  - uid: Ecommerce.Domain.Constants
+    name: Constants
+    href: Ecommerce.Domain.Constants.html
+  - name: .
+  - uid: Ecommerce.Domain.Constants.Entities
+    name: Entities
+    href: Ecommerce.Domain.Constants.Entities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

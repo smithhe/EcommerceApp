@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  commentId: N:Ecommerce.Application.Features.Product.Commands.CreateProduct
+  id: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  children:
+  - Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommand
+  - Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  nameWithType: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  fullName: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommand
+  commentId: T:Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommand
+  parent: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  href: Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommand.html
+  name: CreateProductCommand
+  nameWithType: CreateProductCommand
+  fullName: Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommand
+- uid: Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommandHandler
+  commentId: T:Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommandHandler
+  href: Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommandHandler.html
+  name: CreateProductCommandHandler
+  nameWithType: CreateProductCommandHandler
+  fullName: Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommandHandler
+- uid: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  commentId: N:Ecommerce.Application.Features.Product.Commands.CreateProduct
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  nameWithType: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  fullName: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Product.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands.CreateProduct
+    name: CreateProduct
+    href: Ecommerce.Application.Features.Product.Commands.CreateProduct.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Product.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands.CreateProduct
+    name: CreateProduct
+    href: Ecommerce.Application.Features.Product.Commands.CreateProduct.html

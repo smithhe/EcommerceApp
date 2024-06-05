@@ -1,0 +1,2114 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.ProductTests
+  id: ProductTests
+  parent: Ecommerce.UnitTests.ApplicationTests
+  children:
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.Setup
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  langs:
+  - csharp
+  - vb
+  name: ProductTests
+  nameWithType: ProductTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  type: Class
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ProductTests
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 25
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class ProductTests
+    content.vb: >-
+      <TestFixture>
+
+      Public Class ProductTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.Setup
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.Setup
+  id: Setup
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: ProductTests.Setup()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.Setup()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Setup
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 37
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void Setup()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub Setup()
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.Setup*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: ProductTests.CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 72
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 111
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 136
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 161
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 186
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 225
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 263
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 301
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 338
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 377
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 415
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 453
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 491
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 529
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  id: CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 562
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: ProductTests.DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 603
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  id: DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+  nameWithType: ProductTests.DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 627
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  id: DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+  nameWithType: ProductTests.DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 649
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 677
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 715
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 739
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 763
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 787
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 827
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 866
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 905
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 943
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 983
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 1022
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 1061
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 1100
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 1139
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  id: UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 1173
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: ProductTests.GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 1215
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse
+  id: GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse()
+  nameWithType: ProductTests.GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 1247
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews
+  id: GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews()
+  nameWithType: ProductTests.GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 1272
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: ProductTests.GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 1309
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse
+  id: GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.ProductTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse()
+  nameWithType: ProductTests.GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/ProductTests.cs
+    startLine: 1334
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: Ecommerce.UnitTests.ApplicationTests
+  commentId: N:Ecommerce.UnitTests.ApplicationTests
+  href: Ecommerce.html
+  name: Ecommerce.UnitTests.ApplicationTests
+  nameWithType: Ecommerce.UnitTests.ApplicationTests
+  fullName: Ecommerce.UnitTests.ApplicationTests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.Setup*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.Setup
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_Setup
+  name: Setup
+  nameWithType: ProductTests.Setup
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.Setup
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: ProductTests.CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  name: CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  nameWithType: ProductTests.CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.CreateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: ProductTests.DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  name: DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  nameWithType: ProductTests.DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  name: DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  nameWithType: ProductTests.DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.DeleteProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: ProductTests.UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullProduct_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WithNullUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNull_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsEmpty_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameExceedsMaxLength_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenNameIsNotUnique_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsNull_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionIsEmpty_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenDescriptionExceedsMaxLength_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenAverageRatingIsLessThanZero_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenQuantityAvailableIsLessThanZero_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenCategoryDoesNotExist_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  name: UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  nameWithType: ProductTests.UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.UpdateProductCommandHandler_WhenSqlOperationFails_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: ProductTests.GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse
+  name: GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse
+  nameWithType: ProductTests.GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenProductDoesNotExist_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews
+  name: GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews
+  nameWithType: ProductTests.GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetProductByIdQueryHandler_WhenRetrievingReviewsFails_ReturnsSuccessWithoutReviews
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: ProductTests.GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.ProductTests.html#Ecommerce_UnitTests_ApplicationTests_ProductTests_GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse
+  name: GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse
+  nameWithType: ProductTests.GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.ProductTests.GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse

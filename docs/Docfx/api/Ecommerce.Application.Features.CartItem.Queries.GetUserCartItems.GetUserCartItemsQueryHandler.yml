@@ -1,0 +1,980 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+  commentId: T:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+  id: GetUserCartItemsQueryHandler
+  parent: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  children:
+  - Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.ICartItemRepository)
+  - Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: GetUserCartItemsQueryHandler
+  nameWithType: GetUserCartItemsQueryHandler
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/CartItem/Queries/GetUserCartItems/GetUserCartItemsQueryHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserCartItemsQueryHandler
+    path: ../../Core/Ecommerce.Application/Features/CartItem/Queries/GetUserCartItems/GetUserCartItemsQueryHandler.cs
+    startLine: 18
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  summary: A <xref href="MediatR.Mediator" data-throw-if-not-resolved="false"></xref> request handler for <xref href="Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: 'public class GetUserCartItemsQueryHandler : IRequestHandler<GetUserCartItemsQuery, GetUserCartItemsResponse>'
+    content.vb: Public Class GetUserCartItemsQueryHandler Implements IRequestHandler(Of GetUserCartItemsQuery, GetUserCartItemsResponse)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.ICartItemRepository)
+  commentId: M:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.ICartItemRepository)
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.ICartItemRepository)'
+  parent: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: GetUserCartItemsQueryHandler(ILogger<GetUserCartItemsQueryHandler>, IMapper, ICartItemRepository)
+  nameWithType: GetUserCartItemsQueryHandler.GetUserCartItemsQueryHandler(ILogger<GetUserCartItemsQueryHandler>, IMapper, ICartItemRepository)
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.GetUserCartItemsQueryHandler(Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler>, AutoMapper.IMapper, Ecommerce.Persistence.Contracts.ICartItemRepository)
+  type: Constructor
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/CartItem/Queries/GetUserCartItems/GetUserCartItemsQueryHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: .ctor
+    path: ../../Core/Ecommerce.Application/Features/CartItem/Queries/GetUserCartItems/GetUserCartItemsQueryHandler.cs
+    startLine: 30
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  summary: Initializes a new instance of the <xref href="Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public GetUserCartItemsQueryHandler(ILogger<GetUserCartItemsQueryHandler> logger, IMapper mapper, ICartItemRepository cartItemRepository)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler}
+      description: The <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref> instance used for logging.
+    - id: mapper
+      type: AutoMapper.IMapper
+      description: The <xref href="AutoMapper.IMapper" data-throw-if-not-resolved="false"></xref> instance used for mapping objects.
+    - id: cartItemRepository
+      type: Ecommerce.Persistence.Contracts.ICartItemRepository
+      description: The <xref href="Ecommerce.Persistence.Contracts.ICartItemRepository" data-throw-if-not-resolved="false"></xref> instance used for data access for <xref href="Ecommerce.Application.Features.CartItem" data-throw-if-not-resolved="false"></xref> entities.
+    content.vb: Public Sub New(logger As ILogger(Of GetUserCartItemsQueryHandler), mapper As IMapper, cartItemRepository As ICartItemRepository)
+  overload: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.#ctor*
+  nameWithType.vb: GetUserCartItemsQueryHandler.New(ILogger(Of GetUserCartItemsQueryHandler), IMapper, ICartItemRepository)
+  fullName.vb: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.New(Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler), AutoMapper.IMapper, Ecommerce.Persistence.Contracts.ICartItemRepository)
+  name.vb: New(ILogger(Of GetUserCartItemsQueryHandler), IMapper, ICartItemRepository)
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,System.Threading.CancellationToken)
+  commentId: M:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,System.Threading.CancellationToken)
+  id: Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,System.Threading.CancellationToken)
+  parent: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Handle(GetUserCartItemsQuery, CancellationToken)
+  nameWithType: GetUserCartItemsQueryHandler.Handle(GetUserCartItemsQuery, CancellationToken)
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/CartItem/Queries/GetUserCartItems/GetUserCartItemsQueryHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Handle
+    path: ../../Core/Ecommerce.Application/Features/CartItem/Queries/GetUserCartItems/GetUserCartItemsQueryHandler.cs
+    startLine: 48
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  summary: Handles the <xref href="Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery" data-throw-if-not-resolved="false"></xref> request
+  example: []
+  syntax:
+    content: public Task<GetUserCartItemsResponse> Handle(GetUserCartItemsQuery query, CancellationToken cancellationToken)
+    parameters:
+    - id: query
+      type: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+      description: The <xref href="Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery" data-throw-if-not-resolved="false"></xref> request to be handled.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> that can be used to request cancellation of the operation.
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}
+      description: >-
+        A <xref href="Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse" data-throw-if-not-resolved="false"></xref> with Success being <code>true</code> if any <xref href="Ecommerce.Application.Features.CartItem" data-throw-if-not-resolved="false"></xref> entities were found;
+
+        Success will be <code>false</code> if no <xref href="Ecommerce.Application.Features.CartItem" data-throw-if-not-resolved="false"></xref> entities were found.
+
+        Message will contain the message to display to the user.
+
+        CartItems will contain all <xref href="Ecommerce.Shared.Dtos.CartItemDto" data-throw-if-not-resolved="false"></xref> entities or will be empty if none are found or an error occurred.
+    content.vb: Public Function Handle(query As GetUserCartItemsQuery, cancellationToken As CancellationToken) As Task(Of GetUserCartItemsResponse)
+  overload: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.Handle*
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}.Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,System.Threading.CancellationToken)
+references:
+- uid: MediatR.Mediator
+  commentId: T:MediatR.Mediator
+  isExternal: true
+  name: Mediator
+  nameWithType: Mediator
+  fullName: MediatR.Mediator
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+  commentId: T:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+  parent: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery.html
+  name: GetUserCartItemsQuery
+  nameWithType: GetUserCartItemsQuery
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  commentId: N:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  nameWithType: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.CartItem.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+    name: GetUserCartItems
+    href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.CartItem.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+    name: GetUserCartItems
+    href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}
+  commentId: T:MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`2
+  href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery.html
+  name: IRequestHandler<GetUserCartItemsQuery, GetUserCartItemsResponse>
+  nameWithType: IRequestHandler<GetUserCartItemsQuery, GetUserCartItemsResponse>
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery, Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse>
+  nameWithType.vb: IRequestHandler(Of GetUserCartItemsQuery, GetUserCartItemsResponse)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery, Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse)
+  name.vb: IRequestHandler(Of GetUserCartItemsQuery, GetUserCartItemsResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+    name: GetUserCartItemsQuery
+    href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+    name: GetUserCartItemsResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/CartItem/GetUserCartItemsResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+    name: GetUserCartItemsQuery
+    href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+    name: GetUserCartItemsResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/CartItem/GetUserCartItemsResponse.cs
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequestHandler`2
+  commentId: T:MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<TRequest, TResponse>
+  nameWithType: IRequestHandler<TRequest, TResponse>
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse)
+  name.vb: IRequestHandler(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+  commentId: T:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+  href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.html
+  name: GetUserCartItemsQueryHandler
+  nameWithType: GetUserCartItemsQueryHandler
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: AutoMapper.IMapper
+  commentId: T:AutoMapper.IMapper
+  parent: AutoMapper
+  isExternal: true
+  name: IMapper
+  nameWithType: IMapper
+  fullName: AutoMapper.IMapper
+- uid: Ecommerce.Persistence.Contracts.ICartItemRepository
+  commentId: T:Ecommerce.Persistence.Contracts.ICartItemRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.ICartItemRepository.html
+  name: ICartItemRepository
+  nameWithType: ICartItemRepository
+  fullName: Ecommerce.Persistence.Contracts.ICartItemRepository
+- uid: Ecommerce.Application.Features.CartItem
+  commentId: N:Ecommerce.Application.Features.CartItem
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.CartItem
+  nameWithType: Ecommerce.Application.Features.CartItem
+  fullName: Ecommerce.Application.Features.CartItem
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.#ctor*
+  commentId: Overload:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.#ctor
+  href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.html#Ecommerce_Application_Features_CartItem_Queries_GetUserCartItems_GetUserCartItemsQueryHandler__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_Application_Features_CartItem_Queries_GetUserCartItems_GetUserCartItemsQueryHandler__AutoMapper_IMapper_Ecommerce_Persistence_Contracts_ICartItemRepository_
+  name: GetUserCartItemsQueryHandler
+  nameWithType: GetUserCartItemsQueryHandler.GetUserCartItemsQueryHandler
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.GetUserCartItemsQueryHandler
+  nameWithType.vb: GetUserCartItemsQueryHandler.New
+  fullName.vb: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<GetUserCartItemsQueryHandler>
+  nameWithType: ILogger<GetUserCartItemsQueryHandler>
+  fullName: Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler>
+  nameWithType.vb: ILogger(Of GetUserCartItemsQueryHandler)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler)
+  name.vb: ILogger(Of GetUserCartItemsQueryHandler)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+    name: GetUserCartItemsQueryHandler
+    href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+    name: GetUserCartItemsQueryHandler
+    href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.html
+  - name: )
+- uid: AutoMapper
+  commentId: N:AutoMapper
+  isExternal: true
+  name: AutoMapper
+  nameWithType: AutoMapper
+  fullName: AutoMapper
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+  commentId: T:Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+  href: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse.html
+  name: GetUserCartItemsResponse
+  nameWithType: GetUserCartItemsResponse
+  fullName: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+- uid: Ecommerce.Shared.Dtos.CartItemDto
+  commentId: T:Ecommerce.Shared.Dtos.CartItemDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.CartItemDto.html
+  name: CartItemDto
+  nameWithType: CartItemDto
+  fullName: Ecommerce.Shared.Dtos.CartItemDto
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.Handle*
+  commentId: Overload:Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.Handle
+  href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.html#Ecommerce_Application_Features_CartItem_Queries_GetUserCartItems_GetUserCartItemsQueryHandler_Handle_Ecommerce_Application_Features_CartItem_Queries_GetUserCartItems_GetUserCartItemsQuery_System_Threading_CancellationToken_
+  name: Handle
+  nameWithType: GetUserCartItemsQueryHandler.Handle
+  fullName: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler.Handle
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}.Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}.Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}
+  definition: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery.html
+  name: Handle(GetUserCartItemsQuery, CancellationToken)
+  nameWithType: IRequestHandler<GetUserCartItemsQuery, GetUserCartItemsResponse>.Handle(GetUserCartItemsQuery, CancellationToken)
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery, Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse>.Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of GetUserCartItemsQuery, GetUserCartItemsResponse).Handle(GetUserCartItemsQuery, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery, Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse).Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}.Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+    name: GetUserCartItemsQuery
+    href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}.Handle(Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+    name: GetUserCartItemsQuery
+    href: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetUserCartItemsResponse>
+  nameWithType: Task<GetUserCartItemsResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse>
+  nameWithType.vb: Task(Of GetUserCartItemsResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse)
+  name.vb: Task(Of GetUserCartItemsResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+    name: GetUserCartItemsResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/CartItem/GetUserCartItemsResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+    name: GetUserCartItemsResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/CartItem/GetUserCartItemsResponse.cs
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Ecommerce.Shared.Dtos
+  commentId: N:Ecommerce.Shared.Dtos
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Dtos
+  nameWithType: Ecommerce.Shared.Dtos
+  fullName: Ecommerce.Shared.Dtos
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+- uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest, TResponse>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

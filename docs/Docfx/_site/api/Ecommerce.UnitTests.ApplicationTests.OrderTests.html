@@ -1,0 +1,1229 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OrderTests </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OrderTests ">
+      
+      
+      <link rel="icon" href=".././images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/smithhe/EcommerceApp/new/dev/apiSpec/new?filename=Ecommerce_UnitTests_ApplicationTests_OrderTests.md&amp;value=---%0Auid%3A%20Ecommerce.UnitTests.ApplicationTests.OrderTests%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt=" Ecommerce App">
+             Ecommerce App
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests">
+
+
+
+  <h1 id="Ecommerce_UnitTests_ApplicationTests_OrderTests" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests" class="text-break">
+Class OrderTests  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ecommerce.html">Ecommerce</a>.<a class="xref" href="Ecommerce.UnitTests.html">UnitTests</a>.<a class="xref" href="Ecommerce.UnitTests.ApplicationTests.html">ApplicationTests</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Ecommerce.UnitTests.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TestFixture]
+public class OrderTests</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">OrderTests</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse">
+  AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse">
+  AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue">
+  AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess">
+  CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse">
+  CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse">
+  CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L450"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse">
+  CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse">
+  CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse">
+  CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse">
+  CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse">
+  CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse">
+  DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L557"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse">
+  DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L535"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess">
+  DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L511"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse">
+  GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L844"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse">
+  GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L768"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse">
+  GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L791"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse">
+  GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L816"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess">
+  GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L739"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse">
+  GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L966"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse">
+  GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L909"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse">
+  GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L937"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess">
+  GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L873"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse">
+  GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L1064"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse">
+  GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L1039"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess">
+  GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L1006"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_Setup_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.Setup*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_Setup" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.Setup">
+  Setup()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SetUp]
+public void Setup()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse">
+  UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L683"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse">
+  UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L656"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse">
+  UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L710"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse">
+  UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L633"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse">
+  UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L610"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess_" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*"></a>
+
+  <h3 id="Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess" data-uid="Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess">
+  UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/smithhe/EcommerceApp/blob/dev/Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs/#L585"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Test]
+public Task UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

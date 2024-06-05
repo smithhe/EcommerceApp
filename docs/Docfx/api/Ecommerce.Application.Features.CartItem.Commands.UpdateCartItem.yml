@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  commentId: N:Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  id: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  children:
+  - Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommand
+  - Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  nameWithType: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  fullName: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommand
+  commentId: T:Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommand
+  parent: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  href: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommand.html
+  name: UpdateCartItemCommand
+  nameWithType: UpdateCartItemCommand
+  fullName: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommand
+- uid: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommandHandler
+  commentId: T:Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommandHandler
+  href: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommandHandler.html
+  name: UpdateCartItemCommandHandler
+  nameWithType: UpdateCartItemCommandHandler
+  fullName: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommandHandler
+- uid: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  commentId: N:Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  nameWithType: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  fullName: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.CartItem.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+    name: UpdateCartItem
+    href: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.CartItem.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+    name: UpdateCartItem
+    href: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.html

@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Responses.Review
+  commentId: N:Ecommerce.Shared.Responses.Review
+  id: Ecommerce.Shared.Responses.Review
+  children:
+  - Ecommerce.Shared.Responses.Review.CreateReviewResponse
+  - Ecommerce.Shared.Responses.Review.DeleteReviewResponse
+  - Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse
+  - Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse
+  - Ecommerce.Shared.Responses.Review.UpdateReviewResponse
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Responses.Review
+  nameWithType: Ecommerce.Shared.Responses.Review
+  fullName: Ecommerce.Shared.Responses.Review
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Responses.Review.CreateReviewResponse
+  commentId: T:Ecommerce.Shared.Responses.Review.CreateReviewResponse
+  href: Ecommerce.Shared.Responses.Review.CreateReviewResponse.html
+  name: CreateReviewResponse
+  nameWithType: CreateReviewResponse
+  fullName: Ecommerce.Shared.Responses.Review.CreateReviewResponse
+- uid: Ecommerce.Shared.Responses.Review.DeleteReviewResponse
+  commentId: T:Ecommerce.Shared.Responses.Review.DeleteReviewResponse
+  href: Ecommerce.Shared.Responses.Review.DeleteReviewResponse.html
+  name: DeleteReviewResponse
+  nameWithType: DeleteReviewResponse
+  fullName: Ecommerce.Shared.Responses.Review.DeleteReviewResponse
+- uid: Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse
+  commentId: T:Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse
+  href: Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse.html
+  name: GetReviewsForProductResponse
+  nameWithType: GetReviewsForProductResponse
+  fullName: Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse
+- uid: Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse
+  commentId: T:Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse
+  href: Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse.html
+  name: GetUserReviewForProductResponse
+  nameWithType: GetUserReviewForProductResponse
+  fullName: Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse
+- uid: Ecommerce.Shared.Responses.Review.UpdateReviewResponse
+  commentId: T:Ecommerce.Shared.Responses.Review.UpdateReviewResponse
+  href: Ecommerce.Shared.Responses.Review.UpdateReviewResponse.html
+  name: UpdateReviewResponse
+  nameWithType: UpdateReviewResponse
+  fullName: Ecommerce.Shared.Responses.Review.UpdateReviewResponse

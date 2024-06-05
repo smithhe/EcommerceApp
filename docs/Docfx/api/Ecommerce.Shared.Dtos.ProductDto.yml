@@ -1,0 +1,806 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Dtos.ProductDto
+  commentId: T:Ecommerce.Shared.Dtos.ProductDto
+  id: ProductDto
+  parent: Ecommerce.Shared.Dtos
+  children:
+  - Ecommerce.Shared.Dtos.ProductDto.#ctor
+  - Ecommerce.Shared.Dtos.ProductDto.AverageRating
+  - Ecommerce.Shared.Dtos.ProductDto.CategoryId
+  - Ecommerce.Shared.Dtos.ProductDto.CustomerReviews
+  - Ecommerce.Shared.Dtos.ProductDto.Description
+  - Ecommerce.Shared.Dtos.ProductDto.Id
+  - Ecommerce.Shared.Dtos.ProductDto.ImageUrl
+  - Ecommerce.Shared.Dtos.ProductDto.Name
+  - Ecommerce.Shared.Dtos.ProductDto.Price
+  - Ecommerce.Shared.Dtos.ProductDto.QuantityAvailable
+  langs:
+  - csharp
+  - vb
+  name: ProductDto
+  nameWithType: ProductDto
+  fullName: Ecommerce.Shared.Dtos.ProductDto
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Dtos/ProductDto.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ProductDto
+    path: ../../Core/Ecommerce.Shared/Dtos/ProductDto.cs
+    startLine: 4
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Dtos
+  syntax:
+    content: public class ProductDto
+    content.vb: Public Class ProductDto
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Shared.Dtos.ProductDto.Id
+  commentId: P:Ecommerce.Shared.Dtos.ProductDto.Id
+  id: Id
+  parent: Ecommerce.Shared.Dtos.ProductDto
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ProductDto.Id
+  fullName: Ecommerce.Shared.Dtos.ProductDto.Id
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Dtos/ProductDto.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Id
+    path: ../../Core/Ecommerce.Shared/Dtos/ProductDto.cs
+    startLine: 6
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Dtos
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Ecommerce.Shared.Dtos.ProductDto.Id*
+- uid: Ecommerce.Shared.Dtos.ProductDto.CategoryId
+  commentId: P:Ecommerce.Shared.Dtos.ProductDto.CategoryId
+  id: CategoryId
+  parent: Ecommerce.Shared.Dtos.ProductDto
+  langs:
+  - csharp
+  - vb
+  name: CategoryId
+  nameWithType: ProductDto.CategoryId
+  fullName: Ecommerce.Shared.Dtos.ProductDto.CategoryId
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Dtos/ProductDto.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CategoryId
+    path: ../../Core/Ecommerce.Shared/Dtos/ProductDto.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Dtos
+  syntax:
+    content: public int CategoryId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CategoryId As Integer
+  overload: Ecommerce.Shared.Dtos.ProductDto.CategoryId*
+- uid: Ecommerce.Shared.Dtos.ProductDto.Name
+  commentId: P:Ecommerce.Shared.Dtos.ProductDto.Name
+  id: Name
+  parent: Ecommerce.Shared.Dtos.ProductDto
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ProductDto.Name
+  fullName: Ecommerce.Shared.Dtos.ProductDto.Name
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Dtos/ProductDto.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Name
+    path: ../../Core/Ecommerce.Shared/Dtos/ProductDto.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Dtos
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Ecommerce.Shared.Dtos.ProductDto.Name*
+- uid: Ecommerce.Shared.Dtos.ProductDto.Description
+  commentId: P:Ecommerce.Shared.Dtos.ProductDto.Description
+  id: Description
+  parent: Ecommerce.Shared.Dtos.ProductDto
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: ProductDto.Description
+  fullName: Ecommerce.Shared.Dtos.ProductDto.Description
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Dtos/ProductDto.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Description
+    path: ../../Core/Ecommerce.Shared/Dtos/ProductDto.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Dtos
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Ecommerce.Shared.Dtos.ProductDto.Description*
+- uid: Ecommerce.Shared.Dtos.ProductDto.Price
+  commentId: P:Ecommerce.Shared.Dtos.ProductDto.Price
+  id: Price
+  parent: Ecommerce.Shared.Dtos.ProductDto
+  langs:
+  - csharp
+  - vb
+  name: Price
+  nameWithType: ProductDto.Price
+  fullName: Ecommerce.Shared.Dtos.ProductDto.Price
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Dtos/ProductDto.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Price
+    path: ../../Core/Ecommerce.Shared/Dtos/ProductDto.cs
+    startLine: 10
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Dtos
+  syntax:
+    content: public double Price { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Price As Double
+  overload: Ecommerce.Shared.Dtos.ProductDto.Price*
+- uid: Ecommerce.Shared.Dtos.ProductDto.AverageRating
+  commentId: P:Ecommerce.Shared.Dtos.ProductDto.AverageRating
+  id: AverageRating
+  parent: Ecommerce.Shared.Dtos.ProductDto
+  langs:
+  - csharp
+  - vb
+  name: AverageRating
+  nameWithType: ProductDto.AverageRating
+  fullName: Ecommerce.Shared.Dtos.ProductDto.AverageRating
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Dtos/ProductDto.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AverageRating
+    path: ../../Core/Ecommerce.Shared/Dtos/ProductDto.cs
+    startLine: 11
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Dtos
+  syntax:
+    content: public decimal AverageRating { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property AverageRating As Decimal
+  overload: Ecommerce.Shared.Dtos.ProductDto.AverageRating*
+- uid: Ecommerce.Shared.Dtos.ProductDto.QuantityAvailable
+  commentId: P:Ecommerce.Shared.Dtos.ProductDto.QuantityAvailable
+  id: QuantityAvailable
+  parent: Ecommerce.Shared.Dtos.ProductDto
+  langs:
+  - csharp
+  - vb
+  name: QuantityAvailable
+  nameWithType: ProductDto.QuantityAvailable
+  fullName: Ecommerce.Shared.Dtos.ProductDto.QuantityAvailable
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Dtos/ProductDto.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: QuantityAvailable
+    path: ../../Core/Ecommerce.Shared/Dtos/ProductDto.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Dtos
+  syntax:
+    content: public int QuantityAvailable { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property QuantityAvailable As Integer
+  overload: Ecommerce.Shared.Dtos.ProductDto.QuantityAvailable*
+- uid: Ecommerce.Shared.Dtos.ProductDto.ImageUrl
+  commentId: P:Ecommerce.Shared.Dtos.ProductDto.ImageUrl
+  id: ImageUrl
+  parent: Ecommerce.Shared.Dtos.ProductDto
+  langs:
+  - csharp
+  - vb
+  name: ImageUrl
+  nameWithType: ProductDto.ImageUrl
+  fullName: Ecommerce.Shared.Dtos.ProductDto.ImageUrl
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Dtos/ProductDto.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ImageUrl
+    path: ../../Core/Ecommerce.Shared/Dtos/ProductDto.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Dtos
+  syntax:
+    content: public string ImageUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImageUrl As String
+  overload: Ecommerce.Shared.Dtos.ProductDto.ImageUrl*
+- uid: Ecommerce.Shared.Dtos.ProductDto.CustomerReviews
+  commentId: P:Ecommerce.Shared.Dtos.ProductDto.CustomerReviews
+  id: CustomerReviews
+  parent: Ecommerce.Shared.Dtos.ProductDto
+  langs:
+  - csharp
+  - vb
+  name: CustomerReviews
+  nameWithType: ProductDto.CustomerReviews
+  fullName: Ecommerce.Shared.Dtos.ProductDto.CustomerReviews
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Dtos/ProductDto.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CustomerReviews
+    path: ../../Core/Ecommerce.Shared/Dtos/ProductDto.cs
+    startLine: 14
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Dtos
+  syntax:
+    content: public IEnumerable<ReviewDto> CustomerReviews { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.ReviewDto}
+    content.vb: Public Property CustomerReviews As IEnumerable(Of ReviewDto)
+  overload: Ecommerce.Shared.Dtos.ProductDto.CustomerReviews*
+- uid: Ecommerce.Shared.Dtos.ProductDto.#ctor
+  commentId: M:Ecommerce.Shared.Dtos.ProductDto.#ctor
+  id: '#ctor'
+  parent: Ecommerce.Shared.Dtos.ProductDto
+  langs:
+  - csharp
+  - vb
+  name: ProductDto()
+  nameWithType: ProductDto.ProductDto()
+  fullName: Ecommerce.Shared.Dtos.ProductDto.ProductDto()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/af529cf6f48068d4977fc4a85e2e73774d61d4b3/Core/Ecommerce.Shared/Dtos/ProductDto.cs
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Dtos
+  syntax:
+    content: public ProductDto()
+    content.vb: Public Sub New()
+  overload: Ecommerce.Shared.Dtos.ProductDto.#ctor*
+  nameWithType.vb: ProductDto.New()
+  fullName.vb: Ecommerce.Shared.Dtos.ProductDto.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.Shared.Dtos
+  commentId: N:Ecommerce.Shared.Dtos
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Dtos
+  nameWithType: Ecommerce.Shared.Dtos
+  fullName: Ecommerce.Shared.Dtos
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Shared.Dtos.ProductDto.Id*
+  commentId: Overload:Ecommerce.Shared.Dtos.ProductDto.Id
+  href: Ecommerce.Shared.Dtos.ProductDto.html#Ecommerce_Shared_Dtos_ProductDto_Id
+  name: Id
+  nameWithType: ProductDto.Id
+  fullName: Ecommerce.Shared.Dtos.ProductDto.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Ecommerce.Shared.Dtos.ProductDto.CategoryId*
+  commentId: Overload:Ecommerce.Shared.Dtos.ProductDto.CategoryId
+  href: Ecommerce.Shared.Dtos.ProductDto.html#Ecommerce_Shared_Dtos_ProductDto_CategoryId
+  name: CategoryId
+  nameWithType: ProductDto.CategoryId
+  fullName: Ecommerce.Shared.Dtos.ProductDto.CategoryId
+- uid: Ecommerce.Shared.Dtos.ProductDto.Name*
+  commentId: Overload:Ecommerce.Shared.Dtos.ProductDto.Name
+  href: Ecommerce.Shared.Dtos.ProductDto.html#Ecommerce_Shared_Dtos_ProductDto_Name
+  name: Name
+  nameWithType: ProductDto.Name
+  fullName: Ecommerce.Shared.Dtos.ProductDto.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.Shared.Dtos.ProductDto.Description*
+  commentId: Overload:Ecommerce.Shared.Dtos.ProductDto.Description
+  href: Ecommerce.Shared.Dtos.ProductDto.html#Ecommerce_Shared_Dtos_ProductDto_Description
+  name: Description
+  nameWithType: ProductDto.Description
+  fullName: Ecommerce.Shared.Dtos.ProductDto.Description
+- uid: Ecommerce.Shared.Dtos.ProductDto.Price*
+  commentId: Overload:Ecommerce.Shared.Dtos.ProductDto.Price
+  href: Ecommerce.Shared.Dtos.ProductDto.html#Ecommerce_Shared_Dtos_ProductDto_Price
+  name: Price
+  nameWithType: ProductDto.Price
+  fullName: Ecommerce.Shared.Dtos.ProductDto.Price
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Ecommerce.Shared.Dtos.ProductDto.AverageRating*
+  commentId: Overload:Ecommerce.Shared.Dtos.ProductDto.AverageRating
+  href: Ecommerce.Shared.Dtos.ProductDto.html#Ecommerce_Shared_Dtos_ProductDto_AverageRating
+  name: AverageRating
+  nameWithType: ProductDto.AverageRating
+  fullName: Ecommerce.Shared.Dtos.ProductDto.AverageRating
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: Ecommerce.Shared.Dtos.ProductDto.QuantityAvailable*
+  commentId: Overload:Ecommerce.Shared.Dtos.ProductDto.QuantityAvailable
+  href: Ecommerce.Shared.Dtos.ProductDto.html#Ecommerce_Shared_Dtos_ProductDto_QuantityAvailable
+  name: QuantityAvailable
+  nameWithType: ProductDto.QuantityAvailable
+  fullName: Ecommerce.Shared.Dtos.ProductDto.QuantityAvailable
+- uid: Ecommerce.Shared.Dtos.ProductDto.ImageUrl*
+  commentId: Overload:Ecommerce.Shared.Dtos.ProductDto.ImageUrl
+  href: Ecommerce.Shared.Dtos.ProductDto.html#Ecommerce_Shared_Dtos_ProductDto_ImageUrl
+  name: ImageUrl
+  nameWithType: ProductDto.ImageUrl
+  fullName: Ecommerce.Shared.Dtos.ProductDto.ImageUrl
+- uid: Ecommerce.Shared.Dtos.ProductDto.CustomerReviews*
+  commentId: Overload:Ecommerce.Shared.Dtos.ProductDto.CustomerReviews
+  href: Ecommerce.Shared.Dtos.ProductDto.html#Ecommerce_Shared_Dtos_ProductDto_CustomerReviews
+  name: CustomerReviews
+  nameWithType: ProductDto.CustomerReviews
+  fullName: Ecommerce.Shared.Dtos.ProductDto.CustomerReviews
+- uid: System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.ReviewDto}
+  commentId: T:System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.ReviewDto}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ReviewDto>
+  nameWithType: IEnumerable<ReviewDto>
+  fullName: System.Collections.Generic.IEnumerable<Ecommerce.Shared.Dtos.ReviewDto>
+  nameWithType.vb: IEnumerable(Of ReviewDto)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Ecommerce.Shared.Dtos.ReviewDto)
+  name.vb: IEnumerable(Of ReviewDto)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Ecommerce.Shared.Dtos.ReviewDto
+    name: ReviewDto
+    href: Ecommerce.Shared.Dtos.ReviewDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Dtos.ReviewDto
+    name: ReviewDto
+    href: Ecommerce.Shared.Dtos.ReviewDto.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Ecommerce.Shared.Dtos.ProductDto.#ctor*
+  commentId: Overload:Ecommerce.Shared.Dtos.ProductDto.#ctor
+  isExternal: true
+  href: Ecommerce.Shared.Dtos.ProductDto.html#Ecommerce_Shared_Dtos_ProductDto__ctor
+  name: ProductDto
+  nameWithType: ProductDto.ProductDto
+  fullName: Ecommerce.Shared.Dtos.ProductDto.ProductDto
+  nameWithType.vb: ProductDto.New
+  fullName.vb: Ecommerce.Shared.Dtos.ProductDto.New
+  name.vb: New

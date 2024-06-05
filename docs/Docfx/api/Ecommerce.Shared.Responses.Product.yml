@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Responses.Product
+  commentId: N:Ecommerce.Shared.Responses.Product
+  id: Ecommerce.Shared.Responses.Product
+  children:
+  - Ecommerce.Shared.Responses.Product.CreateProductResponse
+  - Ecommerce.Shared.Responses.Product.DeleteProductResponse
+  - Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+  - Ecommerce.Shared.Responses.Product.GetProductByIdResponse
+  - Ecommerce.Shared.Responses.Product.UpdateProductResponse
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Responses.Product
+  nameWithType: Ecommerce.Shared.Responses.Product
+  fullName: Ecommerce.Shared.Responses.Product
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Responses.Product.CreateProductResponse
+  commentId: T:Ecommerce.Shared.Responses.Product.CreateProductResponse
+  href: Ecommerce.Shared.Responses.Product.CreateProductResponse.html
+  name: CreateProductResponse
+  nameWithType: CreateProductResponse
+  fullName: Ecommerce.Shared.Responses.Product.CreateProductResponse
+- uid: Ecommerce.Shared.Responses.Product.DeleteProductResponse
+  commentId: T:Ecommerce.Shared.Responses.Product.DeleteProductResponse
+  href: Ecommerce.Shared.Responses.Product.DeleteProductResponse.html
+  name: DeleteProductResponse
+  nameWithType: DeleteProductResponse
+  fullName: Ecommerce.Shared.Responses.Product.DeleteProductResponse
+- uid: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+  commentId: T:Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+  href: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse.html
+  name: GetAllProductsByCategoryIdResponse
+  nameWithType: GetAllProductsByCategoryIdResponse
+  fullName: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+- uid: Ecommerce.Shared.Responses.Product.GetProductByIdResponse
+  commentId: T:Ecommerce.Shared.Responses.Product.GetProductByIdResponse
+  href: Ecommerce.Shared.Responses.Product.GetProductByIdResponse.html
+  name: GetProductByIdResponse
+  nameWithType: GetProductByIdResponse
+  fullName: Ecommerce.Shared.Responses.Product.GetProductByIdResponse
+- uid: Ecommerce.Shared.Responses.Product.UpdateProductResponse
+  commentId: T:Ecommerce.Shared.Responses.Product.UpdateProductResponse
+  href: Ecommerce.Shared.Responses.Product.UpdateProductResponse.html
+  name: UpdateProductResponse
+  nameWithType: UpdateProductResponse
+  fullName: Ecommerce.Shared.Responses.Product.UpdateProductResponse

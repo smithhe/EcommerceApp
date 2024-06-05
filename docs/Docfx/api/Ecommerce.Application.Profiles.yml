@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Profiles
+  commentId: N:Ecommerce.Application.Profiles
+  id: Ecommerce.Application.Profiles
+  children:
+  - Ecommerce.Application.Profiles.MappingProfile
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Profiles
+  nameWithType: Ecommerce.Application.Profiles
+  fullName: Ecommerce.Application.Profiles
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Profiles.MappingProfile
+  commentId: T:Ecommerce.Application.Profiles.MappingProfile
+  href: Ecommerce.Application.Profiles.MappingProfile.html
+  name: MappingProfile
+  nameWithType: MappingProfile
+  fullName: Ecommerce.Application.Profiles.MappingProfile

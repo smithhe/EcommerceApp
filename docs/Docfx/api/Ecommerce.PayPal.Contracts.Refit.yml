@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Contracts.Refit
+  commentId: N:Ecommerce.PayPal.Contracts.Refit
+  id: Ecommerce.PayPal.Contracts.Refit
+  children:
+  - Ecommerce.PayPal.Contracts.Refit.IPayPalApiService
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.PayPal.Contracts.Refit
+  nameWithType: Ecommerce.PayPal.Contracts.Refit
+  fullName: Ecommerce.PayPal.Contracts.Refit
+  type: Namespace
+  assemblies:
+  - Ecommerce.PayPal
+references:
+- uid: Ecommerce.PayPal.Contracts.Refit.IPayPalApiService
+  commentId: T:Ecommerce.PayPal.Contracts.Refit.IPayPalApiService
+  parent: Ecommerce.PayPal.Contracts.Refit
+  href: Ecommerce.PayPal.Contracts.Refit.IPayPalApiService.html
+  name: IPayPalApiService
+  nameWithType: IPayPalApiService
+  fullName: Ecommerce.PayPal.Contracts.Refit.IPayPalApiService
+- uid: Ecommerce.PayPal.Contracts.Refit
+  commentId: N:Ecommerce.PayPal.Contracts.Refit
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Contracts.Refit
+  nameWithType: Ecommerce.PayPal.Contracts.Refit
+  fullName: Ecommerce.PayPal.Contracts.Refit
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts
+    name: Contracts
+    href: Ecommerce.PayPal.Contracts.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts.Refit
+    name: Refit
+    href: Ecommerce.PayPal.Contracts.Refit.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts
+    name: Contracts
+    href: Ecommerce.PayPal.Contracts.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts.Refit
+    name: Refit
+    href: Ecommerce.PayPal.Contracts.Refit.html

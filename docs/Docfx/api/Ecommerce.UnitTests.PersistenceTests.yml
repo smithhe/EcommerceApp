@@ -1,0 +1,65 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.PersistenceTests
+  commentId: N:Ecommerce.UnitTests.PersistenceTests
+  id: Ecommerce.UnitTests.PersistenceTests
+  children:
+  - Ecommerce.UnitTests.PersistenceTests.CartItemRepositoryTests
+  - Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  - Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests
+  - Ecommerce.UnitTests.PersistenceTests.OrderItemAsyncRepositoryTests
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  - Ecommerce.UnitTests.PersistenceTests.ProductAsyncRepositoryTests
+  - Ecommerce.UnitTests.PersistenceTests.ReviewAsyncRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UnitTests.PersistenceTests
+  nameWithType: Ecommerce.UnitTests.PersistenceTests
+  fullName: Ecommerce.UnitTests.PersistenceTests
+  type: Namespace
+  assemblies:
+  - Ecommerce.UnitTests
+references:
+- uid: Ecommerce.UnitTests.PersistenceTests.CartItemRepositoryTests
+  commentId: T:Ecommerce.UnitTests.PersistenceTests.CartItemRepositoryTests
+  href: Ecommerce.UnitTests.PersistenceTests.CartItemRepositoryTests.html
+  name: CartItemRepositoryTests
+  nameWithType: CartItemRepositoryTests
+  fullName: Ecommerce.UnitTests.PersistenceTests.CartItemRepositoryTests
+- uid: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  commentId: T:Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+  href: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests.html
+  name: CategoryAsyncRepositoryTests
+  nameWithType: CategoryAsyncRepositoryTests
+  fullName: Ecommerce.UnitTests.PersistenceTests.CategoryAsyncRepositoryTests
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests
+  commentId: T:Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests
+  href: Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests.html
+  name: OrderAsyncRepositoryTests
+  nameWithType: OrderAsyncRepositoryTests
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderAsyncRepositoryTests
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderItemAsyncRepositoryTests
+  commentId: T:Ecommerce.UnitTests.PersistenceTests.OrderItemAsyncRepositoryTests
+  href: Ecommerce.UnitTests.PersistenceTests.OrderItemAsyncRepositoryTests.html
+  name: OrderItemAsyncRepositoryTests
+  nameWithType: OrderItemAsyncRepositoryTests
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderItemAsyncRepositoryTests
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  commentId: T:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html
+  name: OrderKeyRepositoryTests
+  nameWithType: OrderKeyRepositoryTests
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+- uid: Ecommerce.UnitTests.PersistenceTests.ProductAsyncRepositoryTests
+  commentId: T:Ecommerce.UnitTests.PersistenceTests.ProductAsyncRepositoryTests
+  href: Ecommerce.UnitTests.PersistenceTests.ProductAsyncRepositoryTests.html
+  name: ProductAsyncRepositoryTests
+  nameWithType: ProductAsyncRepositoryTests
+  fullName: Ecommerce.UnitTests.PersistenceTests.ProductAsyncRepositoryTests
+- uid: Ecommerce.UnitTests.PersistenceTests.ReviewAsyncRepositoryTests
+  commentId: T:Ecommerce.UnitTests.PersistenceTests.ReviewAsyncRepositoryTests
+  href: Ecommerce.UnitTests.PersistenceTests.ReviewAsyncRepositoryTests.html
+  name: ReviewAsyncRepositoryTests
+  nameWithType: ReviewAsyncRepositoryTests
+  fullName: Ecommerce.UnitTests.PersistenceTests.ReviewAsyncRepositoryTests

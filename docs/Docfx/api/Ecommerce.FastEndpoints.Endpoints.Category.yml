@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.FastEndpoints.Endpoints.Category
+  commentId: N:Ecommerce.FastEndpoints.Endpoints.Category
+  id: Ecommerce.FastEndpoints.Endpoints.Category
+  children:
+  - Ecommerce.FastEndpoints.Endpoints.Category.CreateCategoryEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Category.DeleteCategoryEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Category.UpdateCategoryEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.FastEndpoints.Endpoints.Category
+  nameWithType: Ecommerce.FastEndpoints.Endpoints.Category
+  fullName: Ecommerce.FastEndpoints.Endpoints.Category
+  type: Namespace
+  assemblies:
+  - Ecommerce.FastEndpoints
+references:
+- uid: Ecommerce.FastEndpoints.Endpoints.Category.CreateCategoryEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Category.CreateCategoryEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Category.CreateCategoryEndpoint.html
+  name: CreateCategoryEndpoint
+  nameWithType: CreateCategoryEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Category.CreateCategoryEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Category.DeleteCategoryEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Category.DeleteCategoryEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Category.DeleteCategoryEndpoint.html
+  name: DeleteCategoryEndpoint
+  nameWithType: DeleteCategoryEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Category.DeleteCategoryEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint.html
+  name: GetAllCategoriesEndpoint
+  nameWithType: GetAllCategoriesEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Category.UpdateCategoryEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Category.UpdateCategoryEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Category.UpdateCategoryEndpoint.html
+  name: UpdateCategoryEndpoint
+  nameWithType: UpdateCategoryEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Category.UpdateCategoryEndpoint

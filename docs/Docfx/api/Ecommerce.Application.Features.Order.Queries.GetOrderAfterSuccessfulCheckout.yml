@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  commentId: N:Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  id: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  children:
+  - Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQuery
+  - Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  nameWithType: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQuery
+  commentId: T:Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQuery
+  parent: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  href: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQuery.html
+  name: GetOrderAfterSuccessfulCheckoutQuery
+  nameWithType: GetOrderAfterSuccessfulCheckoutQuery
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQuery
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQueryHandler
+  commentId: T:Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQueryHandler
+  href: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQueryHandler.html
+  name: GetOrderAfterSuccessfulCheckoutQueryHandler
+  nameWithType: GetOrderAfterSuccessfulCheckoutQueryHandler
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQueryHandler
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  commentId: N:Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  nameWithType: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Order.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+    name: GetOrderAfterSuccessfulCheckout
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Order.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+    name: GetOrderAfterSuccessfulCheckout
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.html

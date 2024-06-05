@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Enums.PaymentSource
+  commentId: T:Ecommerce.Shared.Enums.PaymentSource
+  id: PaymentSource
+  parent: Ecommerce.Shared.Enums
+  children:
+  - Ecommerce.Shared.Enums.PaymentSource.PayPal
+  langs:
+  - csharp
+  - vb
+  name: PaymentSource
+  nameWithType: PaymentSource
+  fullName: Ecommerce.Shared.Enums.PaymentSource
+  type: Enum
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Enums/PaymentSource.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PaymentSource
+    path: ../../Core/Ecommerce.Shared/Enums/PaymentSource.cs
+    startLine: 2
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Enums
+  syntax:
+    content: public enum PaymentSource
+    content.vb: Public Enum PaymentSource
+- uid: Ecommerce.Shared.Enums.PaymentSource.PayPal
+  commentId: F:Ecommerce.Shared.Enums.PaymentSource.PayPal
+  id: PayPal
+  parent: Ecommerce.Shared.Enums.PaymentSource
+  langs:
+  - csharp
+  - vb
+  name: PayPal
+  nameWithType: PaymentSource.PayPal
+  fullName: Ecommerce.Shared.Enums.PaymentSource.PayPal
+  type: Field
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Enums/PaymentSource.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PayPal
+    path: ../../Core/Ecommerce.Shared/Enums/PaymentSource.cs
+    startLine: 4
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Enums
+  syntax:
+    content: PayPal = 0
+    return:
+      type: Ecommerce.Shared.Enums.PaymentSource
+references:
+- uid: Ecommerce.Shared.Enums
+  commentId: N:Ecommerce.Shared.Enums
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Enums
+  nameWithType: Ecommerce.Shared.Enums
+  fullName: Ecommerce.Shared.Enums
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Enums
+    name: Enums
+    href: Ecommerce.Shared.Enums.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Enums
+    name: Enums
+    href: Ecommerce.Shared.Enums.html
+- uid: Ecommerce.Shared.Enums.PaymentSource
+  commentId: T:Ecommerce.Shared.Enums.PaymentSource
+  parent: Ecommerce.Shared.Enums
+  href: Ecommerce.Shared.Enums.PaymentSource.html
+  name: PaymentSource
+  nameWithType: PaymentSource
+  fullName: Ecommerce.Shared.Enums.PaymentSource

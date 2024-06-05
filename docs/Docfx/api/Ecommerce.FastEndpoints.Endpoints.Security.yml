@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.FastEndpoints.Endpoints.Security
+  commentId: N:Ecommerce.FastEndpoints.Endpoints.Security
+  id: Ecommerce.FastEndpoints.Endpoints.Security
+  children:
+  - Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Security.LoginEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Security.LogoutEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Security.RegisterEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Security.UpdateEcommerceUserEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Security.UpdatePasswordEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.FastEndpoints.Endpoints.Security
+  nameWithType: Ecommerce.FastEndpoints.Endpoints.Security
+  fullName: Ecommerce.FastEndpoints.Endpoints.Security
+  type: Namespace
+  assemblies:
+  - Ecommerce.FastEndpoints
+references:
+- uid: Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint.html
+  name: ConfirmEmailEndpoint
+  nameWithType: ConfirmEmailEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Security.LoginEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Security.LoginEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Security.LoginEndpoint.html
+  name: LoginEndpoint
+  nameWithType: LoginEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Security.LoginEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Security.LogoutEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Security.LogoutEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Security.LogoutEndpoint.html
+  name: LogoutEndpoint
+  nameWithType: LogoutEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Security.LogoutEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Security.RegisterEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Security.RegisterEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Security.RegisterEndpoint.html
+  name: RegisterEndpoint
+  nameWithType: RegisterEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Security.RegisterEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Security.UpdateEcommerceUserEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Security.UpdateEcommerceUserEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Security.UpdateEcommerceUserEndpoint.html
+  name: UpdateEcommerceUserEndpoint
+  nameWithType: UpdateEcommerceUserEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Security.UpdateEcommerceUserEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Security.UpdatePasswordEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Security.UpdatePasswordEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Security.UpdatePasswordEndpoint.html
+  name: UpdatePasswordEndpoint
+  nameWithType: UpdatePasswordEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Security.UpdatePasswordEndpoint

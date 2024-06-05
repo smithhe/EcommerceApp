@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  commentId: N:Ecommerce.Application.Features.Order.Queries.GetOrderById
+  id: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  children:
+  - Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+  - Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  nameWithType: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+  commentId: T:Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+  parent: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery.html
+  name: GetOrderByIdQuery
+  nameWithType: GetOrderByIdQuery
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+  commentId: T:Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+  href: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler.html
+  name: GetOrderByIdQueryHandler
+  nameWithType: GetOrderByIdQueryHandler
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  commentId: N:Ecommerce.Application.Features.Order.Queries.GetOrderById
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  nameWithType: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  fullName: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Order.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById
+    name: GetOrderById
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderById.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order
+    name: Order
+    href: Ecommerce.Application.Features.Order.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Order.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById
+    name: GetOrderById
+    href: Ecommerce.Application.Features.Order.Queries.GetOrderById.html

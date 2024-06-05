@@ -1,0 +1,487 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+  commentId: T:Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+  id: CreateCartItemResponse
+  parent: Ecommerce.Shared.Responses.CartItem
+  children:
+  - Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.#ctor
+  - Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.CartItem
+  langs:
+  - csharp
+  - vb
+  name: CreateCartItemResponse
+  nameWithType: CreateCartItemResponse
+  fullName: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Responses/CartItem/CreateCartItemResponse.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateCartItemResponse
+    path: ../../Core/Ecommerce.Shared/Responses/CartItem/CreateCartItemResponse.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Responses.CartItem
+  summary: A implementation of <xref href="Ecommerce.Shared.Responses.BaseResponse" data-throw-if-not-resolved="false"></xref> for a request to create a new CartItem
+  example: []
+  syntax:
+    content: 'public class CreateCartItemResponse : BaseResponse'
+    content.vb: Public Class CreateCartItemResponse Inherits BaseResponse
+  inheritance:
+  - System.Object
+  - Ecommerce.Shared.Responses.BaseResponse
+  inheritedMembers:
+  - Ecommerce.Shared.Responses.BaseResponse.Success
+  - Ecommerce.Shared.Responses.BaseResponse.Message
+  - Ecommerce.Shared.Responses.BaseResponse.ValidationErrors
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.CartItem
+  commentId: P:Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.CartItem
+  id: CartItem
+  parent: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+  langs:
+  - csharp
+  - vb
+  name: CartItem
+  nameWithType: CreateCartItemResponse.CartItem
+  fullName: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.CartItem
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Responses/CartItem/CreateCartItemResponse.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CartItem
+    path: ../../Core/Ecommerce.Shared/Responses/CartItem/CreateCartItemResponse.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Responses.CartItem
+  summary: The newly created CartItem if request was successful
+  example: []
+  syntax:
+    content: public CartItemDto? CartItem { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.Shared.Dtos.CartItemDto
+    content.vb: Public Property CartItem As CartItemDto
+  overload: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.CartItem*
+- uid: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.#ctor
+  commentId: M:Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.#ctor
+  id: '#ctor'
+  parent: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+  langs:
+  - csharp
+  - vb
+  name: CreateCartItemResponse()
+  nameWithType: CreateCartItemResponse.CreateCartItemResponse()
+  fullName: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.CreateCartItemResponse()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/af529cf6f48068d4977fc4a85e2e73774d61d4b3/Core/Ecommerce.Shared/Responses/CartItem/CreateCartItemResponse.cs
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Responses.CartItem
+  syntax:
+    content: public CreateCartItemResponse()
+    content.vb: Public Sub New()
+  overload: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.#ctor*
+  nameWithType.vb: CreateCartItemResponse.New()
+  fullName.vb: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.Shared.Responses.BaseResponse
+  commentId: T:Ecommerce.Shared.Responses.BaseResponse
+  parent: Ecommerce.Shared.Responses
+  href: Ecommerce.Shared.Responses.BaseResponse.html
+  name: BaseResponse
+  nameWithType: BaseResponse
+  fullName: Ecommerce.Shared.Responses.BaseResponse
+- uid: Ecommerce.Shared.Responses.CartItem
+  commentId: N:Ecommerce.Shared.Responses.CartItem
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Responses.CartItem
+  nameWithType: Ecommerce.Shared.Responses.CartItem
+  fullName: Ecommerce.Shared.Responses.CartItem
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Responses
+    name: Responses
+    href: Ecommerce.Shared.Responses.html
+  - name: .
+  - uid: Ecommerce.Shared.Responses.CartItem
+    name: CartItem
+    href: Ecommerce.Shared.Responses.CartItem.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Responses
+    name: Responses
+    href: Ecommerce.Shared.Responses.html
+  - name: .
+  - uid: Ecommerce.Shared.Responses.CartItem
+    name: CartItem
+    href: Ecommerce.Shared.Responses.CartItem.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Ecommerce.Shared.Responses.BaseResponse.Success
+  commentId: P:Ecommerce.Shared.Responses.BaseResponse.Success
+  parent: Ecommerce.Shared.Responses.BaseResponse
+  href: Ecommerce.Shared.Responses.BaseResponse.html#Ecommerce_Shared_Responses_BaseResponse_Success
+  name: Success
+  nameWithType: BaseResponse.Success
+  fullName: Ecommerce.Shared.Responses.BaseResponse.Success
+- uid: Ecommerce.Shared.Responses.BaseResponse.Message
+  commentId: P:Ecommerce.Shared.Responses.BaseResponse.Message
+  parent: Ecommerce.Shared.Responses.BaseResponse
+  href: Ecommerce.Shared.Responses.BaseResponse.html#Ecommerce_Shared_Responses_BaseResponse_Message
+  name: Message
+  nameWithType: BaseResponse.Message
+  fullName: Ecommerce.Shared.Responses.BaseResponse.Message
+- uid: Ecommerce.Shared.Responses.BaseResponse.ValidationErrors
+  commentId: P:Ecommerce.Shared.Responses.BaseResponse.ValidationErrors
+  parent: Ecommerce.Shared.Responses.BaseResponse
+  href: Ecommerce.Shared.Responses.BaseResponse.html#Ecommerce_Shared_Responses_BaseResponse_ValidationErrors
+  name: ValidationErrors
+  nameWithType: BaseResponse.ValidationErrors
+  fullName: Ecommerce.Shared.Responses.BaseResponse.ValidationErrors
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Ecommerce.Shared.Responses
+  commentId: N:Ecommerce.Shared.Responses
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Responses
+  nameWithType: Ecommerce.Shared.Responses
+  fullName: Ecommerce.Shared.Responses
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Responses
+    name: Responses
+    href: Ecommerce.Shared.Responses.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Responses
+    name: Responses
+    href: Ecommerce.Shared.Responses.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.CartItem*
+  commentId: Overload:Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.CartItem
+  href: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.html#Ecommerce_Shared_Responses_CartItem_CreateCartItemResponse_CartItem
+  name: CartItem
+  nameWithType: CreateCartItemResponse.CartItem
+  fullName: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.CartItem
+- uid: Ecommerce.Shared.Dtos.CartItemDto
+  commentId: T:Ecommerce.Shared.Dtos.CartItemDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.CartItemDto.html
+  name: CartItemDto
+  nameWithType: CartItemDto
+  fullName: Ecommerce.Shared.Dtos.CartItemDto
+- uid: Ecommerce.Shared.Dtos
+  commentId: N:Ecommerce.Shared.Dtos
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Dtos
+  nameWithType: Ecommerce.Shared.Dtos
+  fullName: Ecommerce.Shared.Dtos
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+- uid: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.#ctor*
+  commentId: Overload:Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.#ctor
+  isExternal: true
+  href: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.html#Ecommerce_Shared_Responses_CartItem_CreateCartItemResponse__ctor
+  name: CreateCartItemResponse
+  nameWithType: CreateCartItemResponse.CreateCartItemResponse
+  fullName: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.CreateCartItemResponse
+  nameWithType.vb: CreateCartItemResponse.New
+  fullName.vb: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.New
+  name.vb: New

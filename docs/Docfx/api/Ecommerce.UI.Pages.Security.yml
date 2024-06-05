@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Pages.Security
+  commentId: N:Ecommerce.UI.Pages.Security
+  id: Ecommerce.UI.Pages.Security
+  children:
+  - Ecommerce.UI.Pages.Security.ConfirmEmail
+  - Ecommerce.UI.Pages.Security.Login
+  - Ecommerce.UI.Pages.Security.Logout
+  - Ecommerce.UI.Pages.Security.RedirectToLogin
+  - Ecommerce.UI.Pages.Security.Register
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UI.Pages.Security
+  nameWithType: Ecommerce.UI.Pages.Security
+  fullName: Ecommerce.UI.Pages.Security
+  type: Namespace
+  assemblies:
+  - Ecommerce.UI
+references:
+- uid: Ecommerce.UI.Pages.Security.ConfirmEmail
+  commentId: T:Ecommerce.UI.Pages.Security.ConfirmEmail
+  href: Ecommerce.UI.Pages.Security.ConfirmEmail.html
+  name: ConfirmEmail
+  nameWithType: ConfirmEmail
+  fullName: Ecommerce.UI.Pages.Security.ConfirmEmail
+- uid: Ecommerce.UI.Pages.Security.Login
+  commentId: T:Ecommerce.UI.Pages.Security.Login
+  href: Ecommerce.UI.Pages.Security.Login.html
+  name: Login
+  nameWithType: Login
+  fullName: Ecommerce.UI.Pages.Security.Login
+- uid: Ecommerce.UI.Pages.Security.Logout
+  commentId: T:Ecommerce.UI.Pages.Security.Logout
+  href: Ecommerce.UI.Pages.Security.Logout.html
+  name: Logout
+  nameWithType: Logout
+  fullName: Ecommerce.UI.Pages.Security.Logout
+- uid: Ecommerce.UI.Pages.Security.RedirectToLogin
+  commentId: T:Ecommerce.UI.Pages.Security.RedirectToLogin
+  href: Ecommerce.UI.Pages.Security.RedirectToLogin.html
+  name: RedirectToLogin
+  nameWithType: RedirectToLogin
+  fullName: Ecommerce.UI.Pages.Security.RedirectToLogin
+- uid: Ecommerce.UI.Pages.Security.Register
+  commentId: T:Ecommerce.UI.Pages.Security.Register
+  href: Ecommerce.UI.Pages.Security.Register.html
+  name: Register
+  nameWithType: Register
+  fullName: Ecommerce.UI.Pages.Security.Register

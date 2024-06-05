@@ -1,0 +1,569 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery
+  commentId: T:Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery
+  id: GetReviewsForProductQuery
+  parent: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  children:
+  - Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.#ctor
+  - Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.ProductId
+  langs:
+  - csharp
+  - vb
+  name: GetReviewsForProductQuery
+  nameWithType: GetReviewsForProductQuery
+  fullName: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/Review/Queries/GetReviewsForProduct/GetReviewsForProductQuery.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetReviewsForProductQuery
+    path: ../../Core/Ecommerce.Application/Features/Review/Queries/GetReviewsForProduct/GetReviewsForProductQuery.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  summary: A <xref href="MediatR.Mediator" data-throw-if-not-resolved="false"></xref> request for retrieving all existing <xref href="Ecommerce.Application.Features.Review" data-throw-if-not-resolved="false"></xref> entities for an <xref href="Ecommerce.Application.Features.Product" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: 'public class GetReviewsForProductQuery : IRequest<GetReviewsForProductResponse>, IBaseRequest'
+    content.vb: Public Class GetReviewsForProductQuery Implements IRequest(Of GetReviewsForProductResponse), IBaseRequest
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequest{Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse}
+  - MediatR.IBaseRequest
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.ProductId
+  commentId: P:Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.ProductId
+  id: ProductId
+  parent: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery
+  langs:
+  - csharp
+  - vb
+  name: ProductId
+  nameWithType: GetReviewsForProductQuery.ProductId
+  fullName: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.ProductId
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/Review/Queries/GetReviewsForProduct/GetReviewsForProductQuery.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ProductId
+    path: ../../Core/Ecommerce.Application/Features/Review/Queries/GetReviewsForProduct/GetReviewsForProductQuery.cs
+    startLine: 14
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  summary: Id of the <xref href="Ecommerce.Application.Features.Product" data-throw-if-not-resolved="false"></xref> to find all <xref href="Ecommerce.Application.Features.Review" data-throw-if-not-resolved="false"></xref> entities for
+  example: []
+  syntax:
+    content: public int ProductId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ProductId As Integer
+  overload: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.ProductId*
+- uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.#ctor
+  commentId: M:Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.#ctor
+  id: '#ctor'
+  parent: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery
+  langs:
+  - csharp
+  - vb
+  name: GetReviewsForProductQuery()
+  nameWithType: GetReviewsForProductQuery.GetReviewsForProductQuery()
+  fullName: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.GetReviewsForProductQuery()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Application/Features/Review/Queries/GetReviewsForProduct/GetReviewsForProductQuery.cs
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  syntax:
+    content: public GetReviewsForProductQuery()
+    content.vb: Public Sub New()
+  overload: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.#ctor*
+  nameWithType.vb: GetReviewsForProductQuery.New()
+  fullName.vb: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.New()
+  name.vb: New()
+references:
+- uid: MediatR.Mediator
+  commentId: T:MediatR.Mediator
+  isExternal: true
+  name: Mediator
+  nameWithType: Mediator
+  fullName: MediatR.Mediator
+- uid: Ecommerce.Application.Features.Review
+  commentId: N:Ecommerce.Application.Features.Review
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Review
+  nameWithType: Ecommerce.Application.Features.Review
+  fullName: Ecommerce.Application.Features.Review
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+- uid: Ecommerce.Application.Features.Product
+  commentId: N:Ecommerce.Application.Features.Product
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Product
+  nameWithType: Ecommerce.Application.Features.Product
+  fullName: Ecommerce.Application.Features.Product
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+- uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  commentId: N:Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  nameWithType: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  fullName: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Review.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+    name: GetReviewsForProduct
+    href: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review
+    name: Review
+    href: Ecommerce.Application.Features.Review.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Review.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+    name: GetReviewsForProduct
+    href: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequest{Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse}
+  commentId: T:MediatR.IRequest{Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse}
+  parent: MediatR
+  definition: MediatR.IRequest`1
+  href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Review/GetReviewsForProductResponse.cs
+  name: IRequest<GetReviewsForProductResponse>
+  nameWithType: IRequest<GetReviewsForProductResponse>
+  fullName: MediatR.IRequest<Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse>
+  nameWithType.vb: IRequest(Of GetReviewsForProductResponse)
+  fullName.vb: MediatR.IRequest(Of Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse)
+  name.vb: IRequest(Of GetReviewsForProductResponse)
+  spec.csharp:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse
+    name: GetReviewsForProductResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Review/GetReviewsForProductResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse
+    name: GetReviewsForProductResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Review/GetReviewsForProductResponse.cs
+  - name: )
+- uid: MediatR.IBaseRequest
+  commentId: T:MediatR.IBaseRequest
+  parent: MediatR
+  isExternal: true
+  name: IBaseRequest
+  nameWithType: IBaseRequest
+  fullName: MediatR.IBaseRequest
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequest`1
+  commentId: T:MediatR.IRequest`1
+  isExternal: true
+  name: IRequest<TResponse>
+  nameWithType: IRequest<TResponse>
+  fullName: MediatR.IRequest<TResponse>
+  nameWithType.vb: IRequest(Of TResponse)
+  fullName.vb: MediatR.IRequest(Of TResponse)
+  name.vb: IRequest(Of TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: <
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.ProductId*
+  commentId: Overload:Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.ProductId
+  href: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.html#Ecommerce_Application_Features_Review_Queries_GetReviewsForProduct_GetReviewsForProductQuery_ProductId
+  name: ProductId
+  nameWithType: GetReviewsForProductQuery.ProductId
+  fullName: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.ProductId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.#ctor*
+  commentId: Overload:Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.#ctor
+  isExternal: true
+  href: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.html#Ecommerce_Application_Features_Review_Queries_GetReviewsForProduct_GetReviewsForProductQuery__ctor
+  name: GetReviewsForProductQuery
+  nameWithType: GetReviewsForProductQuery.GetReviewsForProductQuery
+  fullName: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.GetReviewsForProductQuery
+  nameWithType.vb: GetReviewsForProductQuery.New
+  fullName.vb: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery.New
+  name.vb: New

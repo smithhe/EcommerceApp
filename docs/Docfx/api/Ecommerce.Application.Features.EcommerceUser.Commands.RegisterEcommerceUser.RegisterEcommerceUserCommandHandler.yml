@@ -1,0 +1,946 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+  commentId: T:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+  id: RegisterEcommerceUserCommandHandler
+  parent: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  children:
+  - Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler},Ecommerce.Identity.Contracts.IAuthenticationService,Microsoft.Extensions.Configuration.IConfiguration,MassTransit.IBus)
+  - Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: RegisterEcommerceUserCommandHandler
+  nameWithType: RegisterEcommerceUserCommandHandler
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/EcommerceUser/Commands/RegisterEcommerceUser/RegisterEcommerceUserCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: RegisterEcommerceUserCommandHandler
+    path: ../../Core/Ecommerce.Application/Features/EcommerceUser/Commands/RegisterEcommerceUser/RegisterEcommerceUserCommandHandler.cs
+    startLine: 16
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  summary: A <xref href="MediatR.Mediator" data-throw-if-not-resolved="false"></xref> request handler for a <xref href="Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: 'public class RegisterEcommerceUserCommandHandler : IRequestHandler<RegisterEcommerceUserCommand, CreateUserResponse>'
+    content.vb: Public Class RegisterEcommerceUserCommandHandler Implements IRequestHandler(Of RegisterEcommerceUserCommand, CreateUserResponse)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,Ecommerce.Shared.Security.Responses.CreateUserResponse}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler},Ecommerce.Identity.Contracts.IAuthenticationService,Microsoft.Extensions.Configuration.IConfiguration,MassTransit.IBus)
+  commentId: M:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler},Ecommerce.Identity.Contracts.IAuthenticationService,Microsoft.Extensions.Configuration.IConfiguration,MassTransit.IBus)
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler},Ecommerce.Identity.Contracts.IAuthenticationService,Microsoft.Extensions.Configuration.IConfiguration,MassTransit.IBus)'
+  parent: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: RegisterEcommerceUserCommandHandler(ILogger<RegisterEcommerceUserCommandHandler>, IAuthenticationService, IConfiguration, IBus)
+  nameWithType: RegisterEcommerceUserCommandHandler.RegisterEcommerceUserCommandHandler(ILogger<RegisterEcommerceUserCommandHandler>, IAuthenticationService, IConfiguration, IBus)
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.RegisterEcommerceUserCommandHandler(Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler>, Ecommerce.Identity.Contracts.IAuthenticationService, Microsoft.Extensions.Configuration.IConfiguration, MassTransit.IBus)
+  type: Constructor
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/EcommerceUser/Commands/RegisterEcommerceUser/RegisterEcommerceUserCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: .ctor
+    path: ../../Core/Ecommerce.Application/Features/EcommerceUser/Commands/RegisterEcommerceUser/RegisterEcommerceUserCommandHandler.cs
+    startLine: 30
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  summary: Initializes a new instance of the <xref href="Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public RegisterEcommerceUserCommandHandler(ILogger<RegisterEcommerceUserCommandHandler> logger, IAuthenticationService authenticationService, IConfiguration configuration, IBus bus)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler}
+      description: The <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref> instance used for logging.
+    - id: authenticationService
+      type: Ecommerce.Identity.Contracts.IAuthenticationService
+      description: The <xref href="Ecommerce.Identity.Contracts.IAuthenticationService" data-throw-if-not-resolved="false"></xref> instance used for registering the User
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The <xref href="Microsoft.Extensions.Configuration.IConfiguration" data-throw-if-not-resolved="false"></xref> instance used for configuration settings.
+    - id: bus
+      type: MassTransit.IBus
+      description: The <xref href="MassTransit.IBus" data-throw-if-not-resolved="false"></xref> instance used for publishing messages
+    content.vb: Public Sub New(logger As ILogger(Of RegisterEcommerceUserCommandHandler), authenticationService As IAuthenticationService, configuration As IConfiguration, bus As IBus)
+  overload: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.#ctor*
+  nameWithType.vb: RegisterEcommerceUserCommandHandler.New(ILogger(Of RegisterEcommerceUserCommandHandler), IAuthenticationService, IConfiguration, IBus)
+  fullName.vb: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.New(Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler), Ecommerce.Identity.Contracts.IAuthenticationService, Microsoft.Extensions.Configuration.IConfiguration, MassTransit.IBus)
+  name.vb: New(ILogger(Of RegisterEcommerceUserCommandHandler), IAuthenticationService, IConfiguration, IBus)
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,System.Threading.CancellationToken)
+  commentId: M:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,System.Threading.CancellationToken)
+  id: Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,System.Threading.CancellationToken)
+  parent: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Handle(RegisterEcommerceUserCommand, CancellationToken)
+  nameWithType: RegisterEcommerceUserCommandHandler.Handle(RegisterEcommerceUserCommand, CancellationToken)
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/EcommerceUser/Commands/RegisterEcommerceUser/RegisterEcommerceUserCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Handle
+    path: ../../Core/Ecommerce.Application/Features/EcommerceUser/Commands/RegisterEcommerceUser/RegisterEcommerceUserCommandHandler.cs
+    startLine: 47
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  summary: Handles the <xref href="Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand" data-throw-if-not-resolved="false"></xref> command
+  example: []
+  syntax:
+    content: public Task<CreateUserResponse> Handle(RegisterEcommerceUserCommand command, CancellationToken cancellationToken)
+    parameters:
+    - id: command
+      type: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+      description: The <xref href="Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand" data-throw-if-not-resolved="false"></xref> request to be handled.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> that can be used to request cancellation of the operation.
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.CreateUserResponse}
+      description: Returns the <xref href="Ecommerce.Shared.Security.Responses.CreateUserResponse" data-throw-if-not-resolved="false"></xref> generated from the <xref href="Ecommerce.Identity.Contracts.IAuthenticationService" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function Handle(command As RegisterEcommerceUserCommand, cancellationToken As CancellationToken) As Task(Of CreateUserResponse)
+  overload: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.Handle*
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,Ecommerce.Shared.Security.Responses.CreateUserResponse}.Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,System.Threading.CancellationToken)
+references:
+- uid: MediatR.Mediator
+  commentId: T:MediatR.Mediator
+  isExternal: true
+  name: Mediator
+  nameWithType: Mediator
+  fullName: MediatR.Mediator
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+  commentId: T:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+  parent: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand.html
+  name: RegisterEcommerceUserCommand
+  nameWithType: RegisterEcommerceUserCommand
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  commentId: N:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  nameWithType: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser
+    name: EcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+    name: RegisterEcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser
+    name: EcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+    name: RegisterEcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,Ecommerce.Shared.Security.Responses.CreateUserResponse}
+  commentId: T:MediatR.IRequestHandler{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,Ecommerce.Shared.Security.Responses.CreateUserResponse}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`2
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand.html
+  name: IRequestHandler<RegisterEcommerceUserCommand, CreateUserResponse>
+  nameWithType: IRequestHandler<RegisterEcommerceUserCommand, CreateUserResponse>
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand, Ecommerce.Shared.Security.Responses.CreateUserResponse>
+  nameWithType.vb: IRequestHandler(Of RegisterEcommerceUserCommand, CreateUserResponse)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand, Ecommerce.Shared.Security.Responses.CreateUserResponse)
+  name.vb: IRequestHandler(Of RegisterEcommerceUserCommand, CreateUserResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+    name: RegisterEcommerceUserCommand
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+    name: CreateUserResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/CreateUserResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+    name: RegisterEcommerceUserCommand
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+    name: CreateUserResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/CreateUserResponse.cs
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequestHandler`2
+  commentId: T:MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<TRequest, TResponse>
+  nameWithType: IRequestHandler<TRequest, TResponse>
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse)
+  name.vb: IRequestHandler(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+  commentId: T:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.html
+  name: RegisterEcommerceUserCommandHandler
+  nameWithType: RegisterEcommerceUserCommandHandler
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: Ecommerce.Identity.Contracts.IAuthenticationService
+  commentId: T:Ecommerce.Identity.Contracts.IAuthenticationService
+  parent: Ecommerce.Identity.Contracts
+  href: Ecommerce.Identity.Contracts.IAuthenticationService.html
+  name: IAuthenticationService
+  nameWithType: IAuthenticationService
+  fullName: Ecommerce.Identity.Contracts.IAuthenticationService
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: MassTransit.IBus
+  commentId: T:MassTransit.IBus
+  parent: MassTransit
+  isExternal: true
+  name: IBus
+  nameWithType: IBus
+  fullName: MassTransit.IBus
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.#ctor*
+  commentId: Overload:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.#ctor
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.html#Ecommerce_Application_Features_EcommerceUser_Commands_RegisterEcommerceUser_RegisterEcommerceUserCommandHandler__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_Application_Features_EcommerceUser_Commands_RegisterEcommerceUser_RegisterEcommerceUserCommandHandler__Ecommerce_Identity_Contracts_IAuthenticationService_Microsoft_Extensions_Configuration_IConfiguration_MassTransit_IBus_
+  name: RegisterEcommerceUserCommandHandler
+  nameWithType: RegisterEcommerceUserCommandHandler.RegisterEcommerceUserCommandHandler
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.RegisterEcommerceUserCommandHandler
+  nameWithType.vb: RegisterEcommerceUserCommandHandler.New
+  fullName.vb: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<RegisterEcommerceUserCommandHandler>
+  nameWithType: ILogger<RegisterEcommerceUserCommandHandler>
+  fullName: Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler>
+  nameWithType.vb: ILogger(Of RegisterEcommerceUserCommandHandler)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler)
+  name.vb: ILogger(Of RegisterEcommerceUserCommandHandler)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+    name: RegisterEcommerceUserCommandHandler
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+    name: RegisterEcommerceUserCommandHandler
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.html
+  - name: )
+- uid: Ecommerce.Identity.Contracts
+  commentId: N:Ecommerce.Identity.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Identity.Contracts
+  nameWithType: Ecommerce.Identity.Contracts
+  fullName: Ecommerce.Identity.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Identity
+    name: Identity
+    href: Ecommerce.Identity.html
+  - name: .
+  - uid: Ecommerce.Identity.Contracts
+    name: Contracts
+    href: Ecommerce.Identity.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Identity
+    name: Identity
+    href: Ecommerce.Identity.html
+  - name: .
+  - uid: Ecommerce.Identity.Contracts
+    name: Contracts
+    href: Ecommerce.Identity.Contracts.html
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+- uid: MassTransit
+  commentId: N:MassTransit
+  isExternal: true
+  name: MassTransit
+  nameWithType: MassTransit
+  fullName: MassTransit
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+  commentId: T:Ecommerce.Shared.Security.Responses.CreateUserResponse
+  href: Ecommerce.Shared.Security.Responses.CreateUserResponse.html
+  name: CreateUserResponse
+  nameWithType: CreateUserResponse
+  fullName: Ecommerce.Shared.Security.Responses.CreateUserResponse
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.Handle*
+  commentId: Overload:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.Handle
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.html#Ecommerce_Application_Features_EcommerceUser_Commands_RegisterEcommerceUser_RegisterEcommerceUserCommandHandler_Handle_Ecommerce_Application_Features_EcommerceUser_Commands_RegisterEcommerceUser_RegisterEcommerceUserCommand_System_Threading_CancellationToken_
+  name: Handle
+  nameWithType: RegisterEcommerceUserCommandHandler.Handle
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.Handle
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,Ecommerce.Shared.Security.Responses.CreateUserResponse}.Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,Ecommerce.Shared.Security.Responses.CreateUserResponse}.Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,Ecommerce.Shared.Security.Responses.CreateUserResponse}
+  definition: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand.html
+  name: Handle(RegisterEcommerceUserCommand, CancellationToken)
+  nameWithType: IRequestHandler<RegisterEcommerceUserCommand, CreateUserResponse>.Handle(RegisterEcommerceUserCommand, CancellationToken)
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand, Ecommerce.Shared.Security.Responses.CreateUserResponse>.Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of RegisterEcommerceUserCommand, CreateUserResponse).Handle(RegisterEcommerceUserCommand, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand, Ecommerce.Shared.Security.Responses.CreateUserResponse).Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,Ecommerce.Shared.Security.Responses.CreateUserResponse}.Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+    name: RegisterEcommerceUserCommand
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,Ecommerce.Shared.Security.Responses.CreateUserResponse}.Handle(Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+    name: RegisterEcommerceUserCommand
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.CreateUserResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Security.Responses.CreateUserResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CreateUserResponse>
+  nameWithType: Task<CreateUserResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Security.Responses.CreateUserResponse>
+  nameWithType.vb: Task(Of CreateUserResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Security.Responses.CreateUserResponse)
+  name.vb: Task(Of CreateUserResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+    name: CreateUserResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/CreateUserResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+    name: CreateUserResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Security/Responses/CreateUserResponse.cs
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest, TResponse>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  commentId: N:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  id: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  children:
+  - Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+  - Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  nameWithType: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+  commentId: T:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+  parent: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand.html
+  name: RegisterEcommerceUserCommand
+  nameWithType: RegisterEcommerceUserCommand
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+  commentId: T:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler.html
+  name: RegisterEcommerceUserCommandHandler
+  nameWithType: RegisterEcommerceUserCommandHandler
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  commentId: N:Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  nameWithType: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser
+    name: EcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+    name: RegisterEcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser
+    name: EcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+    name: RegisterEcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.html

@@ -1,0 +1,987 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  commentId: T:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  id: OrderKeyRepositoryTests
+  parent: Ecommerce.UnitTests.PersistenceTests
+  children:
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithExistingOrderKey_ReturnsMinusOne
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithNewOrderKey_ReturnsId
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyExists_ReturnsTrue
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.Setup
+  - Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.TearDown
+  langs:
+  - csharp
+  - vb
+  name: OrderKeyRepositoryTests
+  nameWithType: OrderKeyRepositoryTests
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  type: Class
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: OrderKeyRepositoryTests
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class OrderKeyRepositoryTests
+    content.vb: >-
+      <TestFixture>
+
+      Public Class OrderKeyRepositoryTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.Setup
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.Setup
+  id: Setup
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: OrderKeyRepositoryTests.Setup()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.Setup()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Setup
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 44
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void Setup()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub Setup()
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.Setup*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.TearDown
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.TearDown
+  id: TearDown
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: TearDown()
+  nameWithType: OrderKeyRepositoryTests.TearDown()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.TearDown()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: TearDown
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 63
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [TearDown]
+
+      public void TearDown()
+    content.vb: >-
+      <TearDown>
+
+      Public Sub TearDown()
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.TearDown*
+  attributes:
+  - type: NUnit.Framework.TearDownAttribute
+    ctor: NUnit.Framework.TearDownAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithNewOrderKey_ReturnsId
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithNewOrderKey_ReturnsId
+  id: AddAsync_WithNewOrderKey_ReturnsId
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: AddAsync_WithNewOrderKey_ReturnsId()
+  nameWithType: OrderKeyRepositoryTests.AddAsync_WithNewOrderKey_ReturnsId()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithNewOrderKey_ReturnsId()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddAsync_WithNewOrderKey_ReturnsId
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 72
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task AddAsync_WithNewOrderKey_ReturnsId()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function AddAsync_WithNewOrderKey_ReturnsId() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithNewOrderKey_ReturnsId*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithExistingOrderKey_ReturnsMinusOne
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithExistingOrderKey_ReturnsMinusOne
+  id: AddAsync_WithExistingOrderKey_ReturnsMinusOne
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: AddAsync_WithExistingOrderKey_ReturnsMinusOne()
+  nameWithType: OrderKeyRepositoryTests.AddAsync_WithExistingOrderKey_ReturnsMinusOne()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithExistingOrderKey_ReturnsMinusOne()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddAsync_WithExistingOrderKey_ReturnsMinusOne
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 85
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task AddAsync_WithExistingOrderKey_ReturnsMinusOne()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function AddAsync_WithExistingOrderKey_ReturnsMinusOne() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithExistingOrderKey_ReturnsMinusOne*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  id: AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: AddAsync_WhenExceptionThrown_ReturnsMinusOne()
+  nameWithType: OrderKeyRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddAsync_WhenExceptionThrown_ReturnsMinusOne
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 98
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task AddAsync_WhenExceptionThrown_ReturnsMinusOne()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function AddAsync_WhenExceptionThrown_ReturnsMinusOne() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyExists_ReturnsTrue
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyExists_ReturnsTrue
+  id: DeleteAsync_WhenOrderKeyExists_ReturnsTrue
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync_WhenOrderKeyExists_ReturnsTrue()
+  nameWithType: OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyExists_ReturnsTrue()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyExists_ReturnsTrue()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteAsync_WhenOrderKeyExists_ReturnsTrue
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 133
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteAsync_WhenOrderKeyExists_ReturnsTrue()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteAsync_WhenOrderKeyExists_ReturnsTrue() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyExists_ReturnsTrue*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse
+  id: DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse()
+  nameWithType: OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 146
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  id: DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync_WhenExceptionThrown_ReturnsFalse()
+  nameWithType: OrderKeyRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteAsync_WhenExceptionThrown_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 159
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteAsync_WhenExceptionThrown_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteAsync_WhenExceptionThrown_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey
+  id: GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey()
+  nameWithType: OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 192
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  id: GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull()
+  nameWithType: OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 205
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull
+  id: GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull()
+  nameWithType: OrderKeyRepositoryTests.GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 218
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey
+  id: GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey()
+  nameWithType: OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 246
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  id: GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull()
+  nameWithType: OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 259
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull
+  id: GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull
+  parent: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests
+  langs:
+  - csharp
+  - vb
+  name: GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull()
+  nameWithType: OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull()
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/PersistenceTests/OrderKeyRepositoryTests.cs
+    startLine: 272
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.PersistenceTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: Ecommerce.UnitTests.PersistenceTests
+  commentId: N:Ecommerce.UnitTests.PersistenceTests
+  href: Ecommerce.html
+  name: Ecommerce.UnitTests.PersistenceTests
+  nameWithType: Ecommerce.UnitTests.PersistenceTests
+  fullName: Ecommerce.UnitTests.PersistenceTests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.PersistenceTests
+    name: PersistenceTests
+    href: Ecommerce.UnitTests.PersistenceTests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.PersistenceTests
+    name: PersistenceTests
+    href: Ecommerce.UnitTests.PersistenceTests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.Setup*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.Setup
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_Setup
+  name: Setup
+  nameWithType: OrderKeyRepositoryTests.Setup
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.Setup
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.TearDown*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.TearDown
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_TearDown
+  name: TearDown
+  nameWithType: OrderKeyRepositoryTests.TearDown
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.TearDown
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithNewOrderKey_ReturnsId*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithNewOrderKey_ReturnsId
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_AddAsync_WithNewOrderKey_ReturnsId
+  name: AddAsync_WithNewOrderKey_ReturnsId
+  nameWithType: OrderKeyRepositoryTests.AddAsync_WithNewOrderKey_ReturnsId
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithNewOrderKey_ReturnsId
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithExistingOrderKey_ReturnsMinusOne*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithExistingOrderKey_ReturnsMinusOne
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_AddAsync_WithExistingOrderKey_ReturnsMinusOne
+  name: AddAsync_WithExistingOrderKey_ReturnsMinusOne
+  nameWithType: OrderKeyRepositoryTests.AddAsync_WithExistingOrderKey_ReturnsMinusOne
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WithExistingOrderKey_ReturnsMinusOne
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  name: AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  nameWithType: OrderKeyRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.AddAsync_WhenExceptionThrown_ReturnsMinusOne
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyExists_ReturnsTrue*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyExists_ReturnsTrue
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_DeleteAsync_WhenOrderKeyExists_ReturnsTrue
+  name: DeleteAsync_WhenOrderKeyExists_ReturnsTrue
+  nameWithType: OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyExists_ReturnsTrue
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyExists_ReturnsTrue
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse
+  name: DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse
+  nameWithType: OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenOrderKeyDoesNotExist_ReturnsFalse
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  name: DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  nameWithType: OrderKeyRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.DeleteAsync_WhenExceptionThrown_ReturnsFalse
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey
+  name: GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey
+  nameWithType: OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyExists_ReturnsOrderKey
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  name: GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  nameWithType: OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull
+  name: GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull
+  nameWithType: OrderKeyRepositoryTests.GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByOrderIdAsync_WhenExceptionThrown_ReturnsNull
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey
+  name: GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey
+  nameWithType: OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyExists_ReturnsOrderKey
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  name: GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  nameWithType: OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenOrderKeyDoesNotExist_ReturnsNull
+- uid: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull
+  href: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.html#Ecommerce_UnitTests_PersistenceTests_OrderKeyRepositoryTests_GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull
+  name: GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull
+  nameWithType: OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull
+  fullName: Ecommerce.UnitTests.PersistenceTests.OrderKeyRepositoryTests.GetByReturnKeyAsync_WhenExceptionThrown_ReturnsNull

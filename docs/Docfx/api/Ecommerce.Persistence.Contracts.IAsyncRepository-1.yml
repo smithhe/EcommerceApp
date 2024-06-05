@@ -1,0 +1,456 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  commentId: T:Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  id: IAsyncRepository`1
+  parent: Ecommerce.Persistence.Contracts
+  children:
+  - Ecommerce.Persistence.Contracts.IAsyncRepository`1.AddAsync(`0)
+  - Ecommerce.Persistence.Contracts.IAsyncRepository`1.DeleteAsync(`0)
+  - Ecommerce.Persistence.Contracts.IAsyncRepository`1.GetByIdAsync(System.Int32)
+  - Ecommerce.Persistence.Contracts.IAsyncRepository`1.UpdateAsync(`0)
+  langs:
+  - csharp
+  - vb
+  name: IAsyncRepository<T>
+  nameWithType: IAsyncRepository<T>
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>
+  type: Interface
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IAsyncRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IAsyncRepository
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IAsyncRepository.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Represents a CRUD repository for entities of type <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: 'public interface IAsyncRepository<T> where T : class'
+    typeParameters:
+    - id: T
+      description: The entity type.
+    content.vb: Public Interface IAsyncRepository(Of T As Class)
+  nameWithType.vb: IAsyncRepository(Of T)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T)
+  name.vb: IAsyncRepository(Of T)
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.GetByIdAsync(System.Int32)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository`1.GetByIdAsync(System.Int32)
+  id: GetByIdAsync(System.Int32)
+  parent: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetByIdAsync(int)
+  nameWithType: IAsyncRepository<T>.GetByIdAsync(int)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.GetByIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IAsyncRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetByIdAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IAsyncRepository.cs
+    startLine: 18
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Retrieves a <code class="typeparamref">T</code> from the database with the specified ID.
+  example: []
+  syntax:
+    content: Task<T?> GetByIdAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The unique identifier of the <code class="typeparamref">T</code>
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+      description: >-
+        The <code class="typeparamref">T</code> if found;
+
+        <code>null</code> if no <code class="typeparamref">T</code> with the specified ID is found.
+    content.vb: Function GetByIdAsync(id As Integer) As Task(Of T)
+  overload: Ecommerce.Persistence.Contracts.IAsyncRepository`1.GetByIdAsync*
+  nameWithType.vb: IAsyncRepository(Of T).GetByIdAsync(Integer)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.AddAsync(`0)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository`1.AddAsync(`0)
+  id: AddAsync(`0)
+  parent: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  langs:
+  - csharp
+  - vb
+  name: AddAsync(T)
+  nameWithType: IAsyncRepository<T>.AddAsync(T)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.AddAsync(T)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IAsyncRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IAsyncRepository.cs
+    startLine: 28
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Adds a <code class="typeparamref">T</code> to the table.
+  example: []
+  syntax:
+    content: Task<int> AddAsync(T entity)
+    parameters:
+    - id: entity
+      type: '{T}'
+      description: The <code class="typeparamref">T</code> to add
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+      description: >-
+        The ID of the newly added <code class="typeparamref">T</code> if successful;
+
+        -1 if the INSERT operation fails.
+    content.vb: Function AddAsync(entity As T) As Task(Of Integer)
+  overload: Ecommerce.Persistence.Contracts.IAsyncRepository`1.AddAsync*
+  nameWithType.vb: IAsyncRepository(Of T).AddAsync(T)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).AddAsync(T)
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.UpdateAsync(`0)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository`1.UpdateAsync(`0)
+  id: UpdateAsync(`0)
+  parent: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(T)
+  nameWithType: IAsyncRepository<T>.UpdateAsync(T)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.UpdateAsync(T)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IAsyncRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IAsyncRepository.cs
+    startLine: 38
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Updates a row in the database based on the provided <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: Task<bool> UpdateAsync(T entity)
+    parameters:
+    - id: entity
+      type: '{T}'
+      description: The <code class="typeparamref">T</code> with updated data.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: >-
+        <code>true</code> if the UPDATE is successful;
+
+        <code>false</code> if the UPDATE fails or the entity is not found.
+    content.vb: Function UpdateAsync(entity As T) As Task(Of Boolean)
+  overload: Ecommerce.Persistence.Contracts.IAsyncRepository`1.UpdateAsync*
+  nameWithType.vb: IAsyncRepository(Of T).UpdateAsync(T)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).UpdateAsync(T)
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.DeleteAsync(`0)
+  commentId: M:Ecommerce.Persistence.Contracts.IAsyncRepository`1.DeleteAsync(`0)
+  id: DeleteAsync(`0)
+  parent: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(T)
+  nameWithType: IAsyncRepository<T>.DeleteAsync(T)
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.DeleteAsync(T)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IAsyncRepository.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IAsyncRepository.cs
+    startLine: 48
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  summary: Deletes a row in the database based on the provided <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: Task<bool> DeleteAsync(T entity)
+    parameters:
+    - id: entity
+      type: '{T}'
+      description: The <code class="typeparamref">T</code> to delete.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: >-
+        <code>true</code> if the DELETE is successful;
+
+        <code>false</code> if the DELETE fails or the <code class="typeparamref">T</code> is not found.
+    content.vb: Function DeleteAsync(entity As T) As Task(Of Boolean)
+  overload: Ecommerce.Persistence.Contracts.IAsyncRepository`1.DeleteAsync*
+  nameWithType.vb: IAsyncRepository(Of T).DeleteAsync(T)
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).DeleteAsync(T)
+references:
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.GetByIdAsync*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IAsyncRepository`1.GetByIdAsync
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_GetByIdAsync_System_Int32_
+  name: GetByIdAsync
+  nameWithType: IAsyncRepository<T>.GetByIdAsync
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.GetByIdAsync
+  nameWithType.vb: IAsyncRepository(Of T).GetByIdAsync
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).GetByIdAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{`0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<T>
+  nameWithType: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
+  nameWithType.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
+  name.vb: Task(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.AddAsync*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IAsyncRepository`1.AddAsync
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_AddAsync__0_
+  name: AddAsync
+  nameWithType: IAsyncRepository<T>.AddAsync
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.AddAsync
+  nameWithType.vb: IAsyncRepository(Of T).AddAsync
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).AddAsync
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.UpdateAsync*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IAsyncRepository`1.UpdateAsync
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_UpdateAsync__0_
+  name: UpdateAsync
+  nameWithType: IAsyncRepository<T>.UpdateAsync
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.UpdateAsync
+  nameWithType.vb: IAsyncRepository(Of T).UpdateAsync
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).UpdateAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1.DeleteAsync*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IAsyncRepository`1.DeleteAsync
+  href: Ecommerce.Persistence.Contracts.IAsyncRepository-1.html#Ecommerce_Persistence_Contracts_IAsyncRepository_1_DeleteAsync__0_
+  name: DeleteAsync
+  nameWithType: IAsyncRepository<T>.DeleteAsync
+  fullName: Ecommerce.Persistence.Contracts.IAsyncRepository<T>.DeleteAsync
+  nameWithType.vb: IAsyncRepository(Of T).DeleteAsync
+  fullName.vb: Ecommerce.Persistence.Contracts.IAsyncRepository(Of T).DeleteAsync

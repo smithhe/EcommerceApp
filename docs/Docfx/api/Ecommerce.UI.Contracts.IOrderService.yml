@@ -1,0 +1,649 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Contracts.IOrderService
+  commentId: T:Ecommerce.UI.Contracts.IOrderService
+  id: IOrderService
+  parent: Ecommerce.UI.Contracts
+  children:
+  - Ecommerce.UI.Contracts.IOrderService.CreateOrder(System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.CartItemDto})
+  - Ecommerce.UI.Contracts.IOrderService.GetOrderAfterSuccessfulCheckout(System.Int32)
+  - Ecommerce.UI.Contracts.IOrderService.GetOrderById(System.Int32)
+  - Ecommerce.UI.Contracts.IOrderService.GetUserOrders(System.Guid)
+  - Ecommerce.UI.Contracts.IOrderService.UpdateOrder(Ecommerce.Shared.Dtos.OrderDto)
+  langs:
+  - csharp
+  - vb
+  name: IOrderService
+  nameWithType: IOrderService
+  fullName: Ecommerce.UI.Contracts.IOrderService
+  type: Interface
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/IOrderService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IOrderService
+    path: ../../UI/Ecommerce.UI/Contracts/IOrderService.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: public interface IOrderService
+    content.vb: Public Interface IOrderService
+- uid: Ecommerce.UI.Contracts.IOrderService.GetUserOrders(System.Guid)
+  commentId: M:Ecommerce.UI.Contracts.IOrderService.GetUserOrders(System.Guid)
+  id: GetUserOrders(System.Guid)
+  parent: Ecommerce.UI.Contracts.IOrderService
+  langs:
+  - csharp
+  - vb
+  name: GetUserOrders(Guid)
+  nameWithType: IOrderService.GetUserOrders(Guid)
+  fullName: Ecommerce.UI.Contracts.IOrderService.GetUserOrders(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/IOrderService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetUserOrders
+    path: ../../UI/Ecommerce.UI/Contracts/IOrderService.cs
+    startLine: 10
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<GetAllOrdersByUserIdResponse> GetUserOrders(Guid userId)
+    parameters:
+    - id: userId
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse}
+    content.vb: Function GetUserOrders(userId As Guid) As Task(Of GetAllOrdersByUserIdResponse)
+  overload: Ecommerce.UI.Contracts.IOrderService.GetUserOrders*
+- uid: Ecommerce.UI.Contracts.IOrderService.UpdateOrder(Ecommerce.Shared.Dtos.OrderDto)
+  commentId: M:Ecommerce.UI.Contracts.IOrderService.UpdateOrder(Ecommerce.Shared.Dtos.OrderDto)
+  id: UpdateOrder(Ecommerce.Shared.Dtos.OrderDto)
+  parent: Ecommerce.UI.Contracts.IOrderService
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrder(OrderDto)
+  nameWithType: IOrderService.UpdateOrder(OrderDto)
+  fullName: Ecommerce.UI.Contracts.IOrderService.UpdateOrder(Ecommerce.Shared.Dtos.OrderDto)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/IOrderService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateOrder
+    path: ../../UI/Ecommerce.UI/Contracts/IOrderService.cs
+    startLine: 11
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<UpdateOrderResponse> UpdateOrder(OrderDto orderDto)
+    parameters:
+    - id: orderDto
+      type: Ecommerce.Shared.Dtos.OrderDto
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.UpdateOrderResponse}
+    content.vb: Function UpdateOrder(orderDto As OrderDto) As Task(Of UpdateOrderResponse)
+  overload: Ecommerce.UI.Contracts.IOrderService.UpdateOrder*
+- uid: Ecommerce.UI.Contracts.IOrderService.GetOrderById(System.Int32)
+  commentId: M:Ecommerce.UI.Contracts.IOrderService.GetOrderById(System.Int32)
+  id: GetOrderById(System.Int32)
+  parent: Ecommerce.UI.Contracts.IOrderService
+  langs:
+  - csharp
+  - vb
+  name: GetOrderById(int)
+  nameWithType: IOrderService.GetOrderById(int)
+  fullName: Ecommerce.UI.Contracts.IOrderService.GetOrderById(int)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/IOrderService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderById
+    path: ../../UI/Ecommerce.UI/Contracts/IOrderService.cs
+    startLine: 12
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<GetOrderByIdResponse> GetOrderById(int orderId)
+    parameters:
+    - id: orderId
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}
+    content.vb: Function GetOrderById(orderId As Integer) As Task(Of GetOrderByIdResponse)
+  overload: Ecommerce.UI.Contracts.IOrderService.GetOrderById*
+  nameWithType.vb: IOrderService.GetOrderById(Integer)
+  fullName.vb: Ecommerce.UI.Contracts.IOrderService.GetOrderById(Integer)
+  name.vb: GetOrderById(Integer)
+- uid: Ecommerce.UI.Contracts.IOrderService.GetOrderAfterSuccessfulCheckout(System.Int32)
+  commentId: M:Ecommerce.UI.Contracts.IOrderService.GetOrderAfterSuccessfulCheckout(System.Int32)
+  id: GetOrderAfterSuccessfulCheckout(System.Int32)
+  parent: Ecommerce.UI.Contracts.IOrderService
+  langs:
+  - csharp
+  - vb
+  name: GetOrderAfterSuccessfulCheckout(int)
+  nameWithType: IOrderService.GetOrderAfterSuccessfulCheckout(int)
+  fullName: Ecommerce.UI.Contracts.IOrderService.GetOrderAfterSuccessfulCheckout(int)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/IOrderService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderAfterSuccessfulCheckout
+    path: ../../UI/Ecommerce.UI/Contracts/IOrderService.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<GetOrderAfterSuccessfulCheckoutResponse> GetOrderAfterSuccessfulCheckout(int orderId)
+    parameters:
+    - id: orderId
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse}
+    content.vb: Function GetOrderAfterSuccessfulCheckout(orderId As Integer) As Task(Of GetOrderAfterSuccessfulCheckoutResponse)
+  overload: Ecommerce.UI.Contracts.IOrderService.GetOrderAfterSuccessfulCheckout*
+  nameWithType.vb: IOrderService.GetOrderAfterSuccessfulCheckout(Integer)
+  fullName.vb: Ecommerce.UI.Contracts.IOrderService.GetOrderAfterSuccessfulCheckout(Integer)
+  name.vb: GetOrderAfterSuccessfulCheckout(Integer)
+- uid: Ecommerce.UI.Contracts.IOrderService.CreateOrder(System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.CartItemDto})
+  commentId: M:Ecommerce.UI.Contracts.IOrderService.CreateOrder(System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.CartItemDto})
+  id: CreateOrder(System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.CartItemDto})
+  parent: Ecommerce.UI.Contracts.IOrderService
+  langs:
+  - csharp
+  - vb
+  name: CreateOrder(IEnumerable<CartItemDto>)
+  nameWithType: IOrderService.CreateOrder(IEnumerable<CartItemDto>)
+  fullName: Ecommerce.UI.Contracts.IOrderService.CreateOrder(System.Collections.Generic.IEnumerable<Ecommerce.Shared.Dtos.CartItemDto>)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/IOrderService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrder
+    path: ../../UI/Ecommerce.UI/Contracts/IOrderService.cs
+    startLine: 14
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<CreateOrderResponse> CreateOrder(IEnumerable<CartItemDto> cartItems)
+    parameters:
+    - id: cartItems
+      type: System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.CartItemDto}
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.CreateOrderResponse}
+    content.vb: Function CreateOrder(cartItems As IEnumerable(Of CartItemDto)) As Task(Of CreateOrderResponse)
+  overload: Ecommerce.UI.Contracts.IOrderService.CreateOrder*
+  nameWithType.vb: IOrderService.CreateOrder(IEnumerable(Of CartItemDto))
+  fullName.vb: Ecommerce.UI.Contracts.IOrderService.CreateOrder(System.Collections.Generic.IEnumerable(Of Ecommerce.Shared.Dtos.CartItemDto))
+  name.vb: CreateOrder(IEnumerable(Of CartItemDto))
+references:
+- uid: Ecommerce.UI.Contracts
+  commentId: N:Ecommerce.UI.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.UI.Contracts
+  nameWithType: Ecommerce.UI.Contracts
+  fullName: Ecommerce.UI.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+- uid: Ecommerce.UI.Contracts.IOrderService.GetUserOrders*
+  commentId: Overload:Ecommerce.UI.Contracts.IOrderService.GetUserOrders
+  href: Ecommerce.UI.Contracts.IOrderService.html#Ecommerce_UI_Contracts_IOrderService_GetUserOrders_System_Guid_
+  name: GetUserOrders
+  nameWithType: IOrderService.GetUserOrders
+  fullName: Ecommerce.UI.Contracts.IOrderService.GetUserOrders
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetAllOrdersByUserIdResponse>
+  nameWithType: Task<GetAllOrdersByUserIdResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse>
+  nameWithType.vb: Task(Of GetAllOrdersByUserIdResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse)
+  name.vb: Task(Of GetAllOrdersByUserIdResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse
+    name: GetAllOrdersByUserIdResponse
+    href: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse
+    name: GetAllOrdersByUserIdResponse
+    href: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UI.Contracts.IOrderService.UpdateOrder*
+  commentId: Overload:Ecommerce.UI.Contracts.IOrderService.UpdateOrder
+  href: Ecommerce.UI.Contracts.IOrderService.html#Ecommerce_UI_Contracts_IOrderService_UpdateOrder_Ecommerce_Shared_Dtos_OrderDto_
+  name: UpdateOrder
+  nameWithType: IOrderService.UpdateOrder
+  fullName: Ecommerce.UI.Contracts.IOrderService.UpdateOrder
+- uid: Ecommerce.Shared.Dtos.OrderDto
+  commentId: T:Ecommerce.Shared.Dtos.OrderDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.OrderDto.html
+  name: OrderDto
+  nameWithType: OrderDto
+  fullName: Ecommerce.Shared.Dtos.OrderDto
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.UpdateOrderResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.UpdateOrderResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UpdateOrderResponse>
+  nameWithType: Task<UpdateOrderResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Order.UpdateOrderResponse>
+  nameWithType.vb: Task(Of UpdateOrderResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Order.UpdateOrderResponse)
+  name.vb: Task(Of UpdateOrderResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Order.UpdateOrderResponse
+    name: UpdateOrderResponse
+    href: Ecommerce.Shared.Responses.Order.UpdateOrderResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.UpdateOrderResponse
+    name: UpdateOrderResponse
+    href: Ecommerce.Shared.Responses.Order.UpdateOrderResponse.html
+  - name: )
+- uid: Ecommerce.Shared.Dtos
+  commentId: N:Ecommerce.Shared.Dtos
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Dtos
+  nameWithType: Ecommerce.Shared.Dtos
+  fullName: Ecommerce.Shared.Dtos
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+- uid: Ecommerce.UI.Contracts.IOrderService.GetOrderById*
+  commentId: Overload:Ecommerce.UI.Contracts.IOrderService.GetOrderById
+  href: Ecommerce.UI.Contracts.IOrderService.html#Ecommerce_UI_Contracts_IOrderService_GetOrderById_System_Int32_
+  name: GetOrderById
+  nameWithType: IOrderService.GetOrderById
+  fullName: Ecommerce.UI.Contracts.IOrderService.GetOrderById
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetOrderByIdResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetOrderByIdResponse>
+  nameWithType: Task<GetOrderByIdResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Order.GetOrderByIdResponse>
+  nameWithType.vb: Task(Of GetOrderByIdResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Order.GetOrderByIdResponse)
+  name.vb: Task(Of GetOrderByIdResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+    name: GetOrderByIdResponse
+    href: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+    name: GetOrderByIdResponse
+    href: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse.html
+  - name: )
+- uid: Ecommerce.UI.Contracts.IOrderService.GetOrderAfterSuccessfulCheckout*
+  commentId: Overload:Ecommerce.UI.Contracts.IOrderService.GetOrderAfterSuccessfulCheckout
+  href: Ecommerce.UI.Contracts.IOrderService.html#Ecommerce_UI_Contracts_IOrderService_GetOrderAfterSuccessfulCheckout_System_Int32_
+  name: GetOrderAfterSuccessfulCheckout
+  nameWithType: IOrderService.GetOrderAfterSuccessfulCheckout
+  fullName: Ecommerce.UI.Contracts.IOrderService.GetOrderAfterSuccessfulCheckout
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetOrderAfterSuccessfulCheckoutResponse>
+  nameWithType: Task<GetOrderAfterSuccessfulCheckoutResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse>
+  nameWithType.vb: Task(Of GetOrderAfterSuccessfulCheckoutResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse)
+  name.vb: Task(Of GetOrderAfterSuccessfulCheckoutResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse
+    name: GetOrderAfterSuccessfulCheckoutResponse
+    href: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse
+    name: GetOrderAfterSuccessfulCheckoutResponse
+    href: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse.html
+  - name: )
+- uid: Ecommerce.UI.Contracts.IOrderService.CreateOrder*
+  commentId: Overload:Ecommerce.UI.Contracts.IOrderService.CreateOrder
+  href: Ecommerce.UI.Contracts.IOrderService.html#Ecommerce_UI_Contracts_IOrderService_CreateOrder_System_Collections_Generic_IEnumerable_Ecommerce_Shared_Dtos_CartItemDto__
+  name: CreateOrder
+  nameWithType: IOrderService.CreateOrder
+  fullName: Ecommerce.UI.Contracts.IOrderService.CreateOrder
+- uid: System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.CartItemDto}
+  commentId: T:System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.CartItemDto}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<CartItemDto>
+  nameWithType: IEnumerable<CartItemDto>
+  fullName: System.Collections.Generic.IEnumerable<Ecommerce.Shared.Dtos.CartItemDto>
+  nameWithType.vb: IEnumerable(Of CartItemDto)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Ecommerce.Shared.Dtos.CartItemDto)
+  name.vb: IEnumerable(Of CartItemDto)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Ecommerce.Shared.Dtos.CartItemDto
+    name: CartItemDto
+    href: Ecommerce.Shared.Dtos.CartItemDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Dtos.CartItemDto
+    name: CartItemDto
+    href: Ecommerce.Shared.Dtos.CartItemDto.html
+  - name: )
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.CreateOrderResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Order.CreateOrderResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CreateOrderResponse>
+  nameWithType: Task<CreateOrderResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Order.CreateOrderResponse>
+  nameWithType.vb: Task(Of CreateOrderResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Order.CreateOrderResponse)
+  name.vb: Task(Of CreateOrderResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Order.CreateOrderResponse
+    name: CreateOrderResponse
+    href: Ecommerce.Shared.Responses.Order.CreateOrderResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Order.CreateOrderResponse
+    name: CreateOrderResponse
+    href: Ecommerce.Shared.Responses.Order.CreateOrderResponse.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

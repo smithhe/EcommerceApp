@@ -1,0 +1,664 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models.Address
+  commentId: T:Ecommerce.PayPal.Models.Address
+  id: Address
+  parent: Ecommerce.PayPal.Models
+  children:
+  - Ecommerce.PayPal.Models.Address.#ctor
+  - Ecommerce.PayPal.Models.Address.AddressLine1
+  - Ecommerce.PayPal.Models.Address.AddressLine2
+  - Ecommerce.PayPal.Models.Address.AdminArea1
+  - Ecommerce.PayPal.Models.Address.AdminArea2
+  - Ecommerce.PayPal.Models.Address.CountryCode
+  - Ecommerce.PayPal.Models.Address.PostalCode
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: Address
+  fullName: Ecommerce.PayPal.Models.Address
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Address.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Address
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Address.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: Represents an address in PayPal.
+  example: []
+  syntax:
+    content: public class Address
+    content.vb: Public Class Address
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.PayPal.Models.Address.AddressLine1
+  commentId: P:Ecommerce.PayPal.Models.Address.AddressLine1
+  id: AddressLine1
+  parent: Ecommerce.PayPal.Models.Address
+  langs:
+  - csharp
+  - vb
+  name: AddressLine1
+  nameWithType: Address.AddressLine1
+  fullName: Ecommerce.PayPal.Models.Address.AddressLine1
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Address.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddressLine1
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Address.cs
+    startLine: 14
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The first line of the address, such as number and street, for example, 173 Drury Lane.
+
+    Needed for data entry, and Compliance and Risk checks.
+
+    This field needs to pass the full address.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("address_line_1")]
+
+      public string? AddressLine1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("address_line_1")>
+
+      Public Property AddressLine1 As String
+  overload: Ecommerce.PayPal.Models.Address.AddressLine1*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: address_line_1
+- uid: Ecommerce.PayPal.Models.Address.AddressLine2
+  commentId: P:Ecommerce.PayPal.Models.Address.AddressLine2
+  id: AddressLine2
+  parent: Ecommerce.PayPal.Models.Address
+  langs:
+  - csharp
+  - vb
+  name: AddressLine2
+  nameWithType: Address.AddressLine2
+  fullName: Ecommerce.PayPal.Models.Address.AddressLine2
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Address.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddressLine2
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Address.cs
+    startLine: 20
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The second line of the address, for example, a suite or apartment number.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("address_line_2")]
+
+      public string? AddressLine2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("address_line_2")>
+
+      Public Property AddressLine2 As String
+  overload: Ecommerce.PayPal.Models.Address.AddressLine2*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: address_line_2
+- uid: Ecommerce.PayPal.Models.Address.AdminArea2
+  commentId: P:Ecommerce.PayPal.Models.Address.AdminArea2
+  id: AdminArea2
+  parent: Ecommerce.PayPal.Models.Address
+  langs:
+  - csharp
+  - vb
+  name: AdminArea2
+  nameWithType: Address.AdminArea2
+  fullName: Ecommerce.PayPal.Models.Address.AdminArea2
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Address.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AdminArea2
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Address.cs
+    startLine: 26
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: A city, town, or village. Smaller than admin_area_level_1.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("admin_area_2")]
+
+      public string? AdminArea2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("admin_area_2")>
+
+      Public Property AdminArea2 As String
+  overload: Ecommerce.PayPal.Models.Address.AdminArea2*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: admin_area_2
+- uid: Ecommerce.PayPal.Models.Address.AdminArea1
+  commentId: P:Ecommerce.PayPal.Models.Address.AdminArea1
+  id: AdminArea1
+  parent: Ecommerce.PayPal.Models.Address
+  langs:
+  - csharp
+  - vb
+  name: AdminArea1
+  nameWithType: Address.AdminArea1
+  fullName: Ecommerce.PayPal.Models.Address.AdminArea1
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Address.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AdminArea1
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Address.cs
+    startLine: 33
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The highest-level sub-division in a country, which is usually a province, state, or ISO-3166-2 subdivision.
+
+    This data is formatted for postal delivery, for example, CA and not California.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("admin_area_1")]
+
+      public string? AdminArea1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("admin_area_1")>
+
+      Public Property AdminArea1 As String
+  overload: Ecommerce.PayPal.Models.Address.AdminArea1*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: admin_area_1
+- uid: Ecommerce.PayPal.Models.Address.PostalCode
+  commentId: P:Ecommerce.PayPal.Models.Address.PostalCode
+  id: PostalCode
+  parent: Ecommerce.PayPal.Models.Address
+  langs:
+  - csharp
+  - vb
+  name: PostalCode
+  nameWithType: Address.PostalCode
+  fullName: Ecommerce.PayPal.Models.Address.PostalCode
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Address.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PostalCode
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Address.cs
+    startLine: 40
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    The postal code, which is the ZIP code or equivalent.
+
+    Typically required for countries with a postal code or an equivalent.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("postal_code")]
+
+      public string? PostalCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("postal_code")>
+
+      Public Property PostalCode As String
+  overload: Ecommerce.PayPal.Models.Address.PostalCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: postal_code
+- uid: Ecommerce.PayPal.Models.Address.CountryCode
+  commentId: P:Ecommerce.PayPal.Models.Address.CountryCode
+  id: CountryCode
+  parent: Ecommerce.PayPal.Models.Address
+  langs:
+  - csharp
+  - vb
+  name: CountryCode
+  nameWithType: Address.CountryCode
+  fullName: Ecommerce.PayPal.Models.Address.CountryCode
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Address.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CountryCode
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Address.cs
+    startLine: 46
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The 2-character ISO 3166-1 code that identifies the country or region.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("country_code")]
+
+      public string CountryCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("country_code")>
+
+      Public Property CountryCode As String
+  overload: Ecommerce.PayPal.Models.Address.CountryCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: country_code
+- uid: Ecommerce.PayPal.Models.Address.#ctor
+  commentId: M:Ecommerce.PayPal.Models.Address.#ctor
+  id: '#ctor'
+  parent: Ecommerce.PayPal.Models.Address
+  langs:
+  - csharp
+  - vb
+  name: Address()
+  nameWithType: Address.Address()
+  fullName: Ecommerce.PayPal.Models.Address.Address()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Infrastructure/Ecommerce.PayPal/Models/Address.cs
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  syntax:
+    content: public Address()
+    content.vb: Public Sub New()
+  overload: Ecommerce.PayPal.Models.Address.#ctor*
+  nameWithType.vb: Address.New()
+  fullName.vb: Ecommerce.PayPal.Models.Address.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.PayPal.Models
+  commentId: N:Ecommerce.PayPal.Models
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Models
+  nameWithType: Ecommerce.PayPal.Models
+  fullName: Ecommerce.PayPal.Models
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.PayPal.Models.Address.AddressLine1*
+  commentId: Overload:Ecommerce.PayPal.Models.Address.AddressLine1
+  href: Ecommerce.PayPal.Models.Address.html#Ecommerce_PayPal_Models_Address_AddressLine1
+  name: AddressLine1
+  nameWithType: Address.AddressLine1
+  fullName: Ecommerce.PayPal.Models.Address.AddressLine1
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.PayPal.Models.Address.AddressLine2*
+  commentId: Overload:Ecommerce.PayPal.Models.Address.AddressLine2
+  href: Ecommerce.PayPal.Models.Address.html#Ecommerce_PayPal_Models_Address_AddressLine2
+  name: AddressLine2
+  nameWithType: Address.AddressLine2
+  fullName: Ecommerce.PayPal.Models.Address.AddressLine2
+- uid: Ecommerce.PayPal.Models.Address.AdminArea2*
+  commentId: Overload:Ecommerce.PayPal.Models.Address.AdminArea2
+  href: Ecommerce.PayPal.Models.Address.html#Ecommerce_PayPal_Models_Address_AdminArea2
+  name: AdminArea2
+  nameWithType: Address.AdminArea2
+  fullName: Ecommerce.PayPal.Models.Address.AdminArea2
+- uid: Ecommerce.PayPal.Models.Address.AdminArea1*
+  commentId: Overload:Ecommerce.PayPal.Models.Address.AdminArea1
+  href: Ecommerce.PayPal.Models.Address.html#Ecommerce_PayPal_Models_Address_AdminArea1
+  name: AdminArea1
+  nameWithType: Address.AdminArea1
+  fullName: Ecommerce.PayPal.Models.Address.AdminArea1
+- uid: Ecommerce.PayPal.Models.Address.PostalCode*
+  commentId: Overload:Ecommerce.PayPal.Models.Address.PostalCode
+  href: Ecommerce.PayPal.Models.Address.html#Ecommerce_PayPal_Models_Address_PostalCode
+  name: PostalCode
+  nameWithType: Address.PostalCode
+  fullName: Ecommerce.PayPal.Models.Address.PostalCode
+- uid: Ecommerce.PayPal.Models.Address.CountryCode*
+  commentId: Overload:Ecommerce.PayPal.Models.Address.CountryCode
+  href: Ecommerce.PayPal.Models.Address.html#Ecommerce_PayPal_Models_Address_CountryCode
+  name: CountryCode
+  nameWithType: Address.CountryCode
+  fullName: Ecommerce.PayPal.Models.Address.CountryCode
+- uid: Ecommerce.PayPal.Models.Address.#ctor*
+  commentId: Overload:Ecommerce.PayPal.Models.Address.#ctor
+  isExternal: true
+  href: Ecommerce.PayPal.Models.Address.html#Ecommerce_PayPal_Models_Address__ctor
+  name: Address
+  nameWithType: Address.Address
+  fullName: Ecommerce.PayPal.Models.Address.Address
+  nameWithType.vb: Address.New
+  fullName.vb: Ecommerce.PayPal.Models.Address.New
+  name.vb: New

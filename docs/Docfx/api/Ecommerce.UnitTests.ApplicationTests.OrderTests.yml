@@ -1,0 +1,1844 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.OrderTests
+  id: OrderTests
+  parent: Ecommerce.UnitTests.ApplicationTests
+  children:
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.Setup
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  langs:
+  - csharp
+  - vb
+  name: OrderTests
+  nameWithType: OrderTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  type: Class
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: OrderTests
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 30
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class OrderTests
+    content.vb: >-
+      <TestFixture>
+
+      Public Class OrderTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.Setup
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.Setup
+  id: Setup
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: OrderTests.Setup()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.Setup()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Setup
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 43
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void Setup()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub Setup()
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.Setup*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue
+  id: AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue()
+  nameWithType: OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 74
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse
+  id: AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse()
+  nameWithType: OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 106
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse
+  id: AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse()
+  nameWithType: OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 131
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess
+  id: CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 167
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse
+  id: CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse()
+  nameWithType: OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 224
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse
+  id: CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse()
+  nameWithType: OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 249
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse
+  id: CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse()
+  nameWithType: OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 281
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse
+  id: CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse()
+  nameWithType: OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 313
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse
+  id: CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse()
+  nameWithType: OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 353
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse
+  id: CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse()
+  nameWithType: OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 401
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse
+  id: CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse()
+  nameWithType: OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 449
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 510
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  id: DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()
+  nameWithType: OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 534
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse
+  id: DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse()
+  nameWithType: OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 556
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 584
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  id: UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 609
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  id: UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 632
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse
+  id: UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse()
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 655
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse
+  id: UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse()
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 682
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  id: UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse()
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 709
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 738
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse
+  id: GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse()
+  nameWithType: OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 767
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse
+  id: GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse()
+  nameWithType: OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 790
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse
+  id: GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse()
+  nameWithType: OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 815
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse
+  id: GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse()
+  nameWithType: OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 843
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 872
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  id: GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()
+  nameWithType: OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 908
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse
+  id: GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse()
+  nameWithType: OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 936
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse
+  id: GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse()
+  nameWithType: OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 965
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 1005
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  id: GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()
+  nameWithType: OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 1038
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse
+  id: GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.OrderTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse()
+  nameWithType: OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/OrderTests.cs
+    startLine: 1063
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: Ecommerce.UnitTests.ApplicationTests
+  commentId: N:Ecommerce.UnitTests.ApplicationTests
+  href: Ecommerce.html
+  name: Ecommerce.UnitTests.ApplicationTests
+  nameWithType: Ecommerce.UnitTests.ApplicationTests
+  fullName: Ecommerce.UnitTests.ApplicationTests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.Setup*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.Setup
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_Setup
+  name: Setup
+  nameWithType: OrderTests.Setup
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.Setup
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue
+  name: AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue
+  nameWithType: OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_ValidRequestAndWithoutErrors_ReturnsTrue
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse
+  name: AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse
+  nameWithType: OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_InvalidOrderId_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse
+  name: AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse
+  nameWithType: OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.AddPayPalRequestIdCommandHandler_UpdateFails_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess
+  name: CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_ValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse
+  name: CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse
+  nameWithType: OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoCartItems_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse
+  name: CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse
+  nameWithType: OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse
+  name: CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse
+  nameWithType: OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WithNoUserId_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse
+  name: CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse
+  nameWithType: OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenProductIsNotFound_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse
+  name: CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse
+  nameWithType: OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderTotalIsNotGreaterThanZero_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse
+  name: CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse
+  nameWithType: OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderCreationFails_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse
+  name: CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse
+  nameWithType: OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  name: DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  nameWithType: OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse
+  name: DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse
+  nameWithType: OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.DeleteOrderCommandHandler_WhenDeleteFails_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  name: UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithNullOrder_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  name: UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WithEmptyUserName_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse
+  name: UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderTotalIsNotGeaterThanZero_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse
+  name: UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenOrderStatusIsNotInEnum_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  name: UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  nameWithType: OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.UpdateOrderCommandHandler_WhenUpdateFails_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse
+  name: GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse
+  nameWithType: OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithInvalidUserId_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse
+  name: GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse
+  nameWithType: OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithNoOrdersFound_ReturnsSuccessWithEmptyListResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse
+  name: GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse
+  nameWithType: OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WithOrdersInCreatedOrPendingStatus_ReturnsSuccessWithEmptyListResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse
+  name: GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse
+  nameWithType: OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetAllOrdersByUserIdQueryHandler_WhenErrorOccurs_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  name: GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  nameWithType: OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse
+  name: GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse
+  nameWithType: OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WithOrderAlreadyProcessed_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse
+  name: GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse
+  nameWithType: OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderAfterSuccessfulCheckoutQueryHandler_WhenUpdateFails_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  name: GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  nameWithType: OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WithInvalidOrderId_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.OrderTests.html#Ecommerce_UnitTests_ApplicationTests_OrderTests_GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse
+  name: GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse
+  nameWithType: OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.OrderTests.GetOrderByIdQueryHandler_WhenOrderItemsAreNotFound_ReturnsFailedResponse

@@ -1,0 +1,240 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Contracts.IPaypalClientService
+  commentId: T:Ecommerce.PayPal.Contracts.IPaypalClientService
+  id: IPaypalClientService
+  parent: Ecommerce.PayPal.Contracts
+  children:
+  - Ecommerce.PayPal.Contracts.IPaypalClientService.CreateOrder(Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest)
+  langs:
+  - csharp
+  - vb
+  name: IPaypalClientService
+  nameWithType: IPaypalClientService
+  fullName: Ecommerce.PayPal.Contracts.IPaypalClientService
+  type: Interface
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Contracts/IPaypalClientService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IPaypalClientService
+    path: ../../Infrastructure/Ecommerce.PayPal/Contracts/IPaypalClientService.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Contracts
+  syntax:
+    content: public interface IPaypalClientService
+    content.vb: Public Interface IPaypalClientService
+- uid: Ecommerce.PayPal.Contracts.IPaypalClientService.CreateOrder(Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest)
+  commentId: M:Ecommerce.PayPal.Contracts.IPaypalClientService.CreateOrder(Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest)
+  id: CreateOrder(Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest)
+  parent: Ecommerce.PayPal.Contracts.IPaypalClientService
+  langs:
+  - csharp
+  - vb
+  name: CreateOrder(CreatePayPalOrderRequest)
+  nameWithType: IPaypalClientService.CreateOrder(CreatePayPalOrderRequest)
+  fullName: Ecommerce.PayPal.Contracts.IPaypalClientService.CreateOrder(Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Contracts/IPaypalClientService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrder
+    path: ../../Infrastructure/Ecommerce.PayPal/Contracts/IPaypalClientService.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Contracts
+  syntax:
+    content: Task<CreatePayPalOrderResponse> CreateOrder(CreatePayPalOrderRequest request)
+    parameters:
+    - id: request
+      type: Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse}
+    content.vb: Function CreateOrder(request As CreatePayPalOrderRequest) As Task(Of CreatePayPalOrderResponse)
+  overload: Ecommerce.PayPal.Contracts.IPaypalClientService.CreateOrder*
+references:
+- uid: Ecommerce.PayPal.Contracts
+  commentId: N:Ecommerce.PayPal.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Contracts
+  nameWithType: Ecommerce.PayPal.Contracts
+  fullName: Ecommerce.PayPal.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts
+    name: Contracts
+    href: Ecommerce.PayPal.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Contracts
+    name: Contracts
+    href: Ecommerce.PayPal.Contracts.html
+- uid: Ecommerce.PayPal.Contracts.IPaypalClientService.CreateOrder*
+  commentId: Overload:Ecommerce.PayPal.Contracts.IPaypalClientService.CreateOrder
+  href: Ecommerce.PayPal.Contracts.IPaypalClientService.html#Ecommerce_PayPal_Contracts_IPaypalClientService_CreateOrder_Ecommerce_Shared_Requests_PayPal_CreatePayPalOrderRequest_
+  name: CreateOrder
+  nameWithType: IPaypalClientService.CreateOrder
+  fullName: Ecommerce.PayPal.Contracts.IPaypalClientService.CreateOrder
+- uid: Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest
+  commentId: T:Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest
+  parent: Ecommerce.Shared.Requests.PayPal
+  href: Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest.html
+  name: CreatePayPalOrderRequest
+  nameWithType: CreatePayPalOrderRequest
+  fullName: Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CreatePayPalOrderResponse>
+  nameWithType: Task<CreatePayPalOrderResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse>
+  nameWithType.vb: Task(Of CreatePayPalOrderResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse)
+  name.vb: Task(Of CreatePayPalOrderResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse
+    name: CreatePayPalOrderResponse
+    href: Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse
+    name: CreatePayPalOrderResponse
+    href: Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse.html
+  - name: )
+- uid: Ecommerce.Shared.Requests.PayPal
+  commentId: N:Ecommerce.Shared.Requests.PayPal
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Requests.PayPal
+  nameWithType: Ecommerce.Shared.Requests.PayPal
+  fullName: Ecommerce.Shared.Requests.PayPal
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.PayPal
+    name: PayPal
+    href: Ecommerce.Shared.Requests.PayPal.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.PayPal
+    name: PayPal
+    href: Ecommerce.Shared.Requests.PayPal.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

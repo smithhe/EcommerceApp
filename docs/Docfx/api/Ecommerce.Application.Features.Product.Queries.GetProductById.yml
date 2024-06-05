@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductById
+  commentId: N:Ecommerce.Application.Features.Product.Queries.GetProductById
+  id: Ecommerce.Application.Features.Product.Queries.GetProductById
+  children:
+  - Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQuery
+  - Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.Product.Queries.GetProductById
+  nameWithType: Ecommerce.Application.Features.Product.Queries.GetProductById
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductById
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQuery
+  commentId: T:Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQuery
+  parent: Ecommerce.Application.Features.Product.Queries.GetProductById
+  href: Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQuery.html
+  name: GetProductByIdQuery
+  nameWithType: GetProductByIdQuery
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQuery
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQueryHandler
+  commentId: T:Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQueryHandler
+  href: Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQueryHandler.html
+  name: GetProductByIdQueryHandler
+  nameWithType: GetProductByIdQueryHandler
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQueryHandler
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductById
+  commentId: N:Ecommerce.Application.Features.Product.Queries.GetProductById
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Product.Queries.GetProductById
+  nameWithType: Ecommerce.Application.Features.Product.Queries.GetProductById
+  fullName: Ecommerce.Application.Features.Product.Queries.GetProductById
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Product.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductById
+    name: GetProductById
+    href: Ecommerce.Application.Features.Product.Queries.GetProductById.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.Product.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductById
+    name: GetProductById
+    href: Ecommerce.Application.Features.Product.Queries.GetProductById.html

@@ -1,0 +1,1259 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  commentId: T:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  id: OrderEndpointTests
+  parent: Ecommerce.UnitTests.FastEndpointTests
+  children:
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.Setup
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  - Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  langs:
+  - csharp
+  - vb
+  name: OrderEndpointTests
+  nameWithType: OrderEndpointTests
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  type: Class
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: OrderEndpointTests
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 26
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class OrderEndpointTests
+    content.vb: >-
+      <TestFixture>
+
+      Public Class OrderEndpointTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.Setup
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.Setup
+  id: Setup
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: OrderEndpointTests.Setup()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.Setup()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Setup
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 37
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void Setup()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub Setup()
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.Setup*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse
+  id: CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse()
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 57
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  id: CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized()
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 100
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest
+  id: CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest()
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 125
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest
+  id: CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest()
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 154
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  id: CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError()
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 183
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse
+  id: CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse()
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 214
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse
+  id: CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse()
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 251
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: OrderEndpointTests.GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 298
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized
+  id: GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized()
+  nameWithType: OrderEndpointTests.GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 332
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  id: GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError()
+  nameWithType: OrderEndpointTests.GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 356
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 389
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized
+  id: GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized()
+  nameWithType: OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 423
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError
+  id: GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError()
+  nameWithType: OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 447
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: OrderEndpointTests.GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 480
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized
+  id: GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized()
+  nameWithType: OrderEndpointTests.GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 514
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  id: GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError()
+  nameWithType: OrderEndpointTests.GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 538
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: OrderEndpointTests.UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 571
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  id: UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized()
+  nameWithType: OrderEndpointTests.UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 605
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  commentId: M:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  id: UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  parent: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError()
+  nameWithType: OrderEndpointTests.UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError()
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+    path: ../../Tests/Ecommerce.UnitTests/FastEndpointTests/OrderEndpointTests.cs
+    startLine: 628
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.FastEndpointTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError() As Task
+  overload: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: Ecommerce.UnitTests.FastEndpointTests
+  commentId: N:Ecommerce.UnitTests.FastEndpointTests
+  href: Ecommerce.html
+  name: Ecommerce.UnitTests.FastEndpointTests
+  nameWithType: Ecommerce.UnitTests.FastEndpointTests
+  fullName: Ecommerce.UnitTests.FastEndpointTests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.FastEndpointTests
+    name: FastEndpointTests
+    href: Ecommerce.UnitTests.FastEndpointTests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.FastEndpointTests
+    name: FastEndpointTests
+    href: Ecommerce.UnitTests.FastEndpointTests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.Setup*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.Setup
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_Setup
+  name: Setup
+  nameWithType: OrderEndpointTests.Setup
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.Setup
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse
+  name: CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsCreateOrderResponse
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  name: CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest
+  name: CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_InvalidPaymentSource_ReturnsBadRequest
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest
+  name: CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WithoutCartItems_ReturnsBadRequest
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  name: CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse
+  name: CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenOrderNotCreated_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse
+  name: CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse
+  nameWithType: OrderEndpointTests.CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.CreateOrderEndpoint_WhenPayPalOrderNotCreated_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: OrderEndpointTests.GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized
+  name: GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized
+  nameWithType: OrderEndpointTests.GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_InvalidToken_ReturnsUnauthorized
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  name: GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  nameWithType: OrderEndpointTests.GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetAllOrdersByUserIdEndpoint_UnexpectedError_ReturnsInternalServerError
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized
+  name: GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized
+  nameWithType: OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_InvalidToken_ReturnsUnauthorized
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError
+  name: GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError
+  nameWithType: OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderAfterSuccessfulCheckoutEndpoint_UnexpectedError_ReturnsInternalServerError
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: OrderEndpointTests.GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized
+  name: GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized
+  nameWithType: OrderEndpointTests.GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_InvalidToken_ReturnsUnauthorized
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  name: GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  nameWithType: OrderEndpointTests.GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.GetOrderByIdEndpoint_UnexpectedError_ReturnsInternalServerError
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: OrderEndpointTests.UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  name: UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  nameWithType: OrderEndpointTests.UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_InvalidToken_ReturnsUnauthorized
+- uid: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError*
+  commentId: Overload:Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  href: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.html#Ecommerce_UnitTests_FastEndpointTests_OrderEndpointTests_UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  name: UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  nameWithType: OrderEndpointTests.UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError
+  fullName: Ecommerce.UnitTests.FastEndpointTests.OrderEndpointTests.UpdateOrderEndpoint_UnexpectedError_ReturnsInternalServerError

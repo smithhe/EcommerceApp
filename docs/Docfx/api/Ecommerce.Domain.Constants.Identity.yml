@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Domain.Constants.Identity
+  commentId: N:Ecommerce.Domain.Constants.Identity
+  id: Ecommerce.Domain.Constants.Identity
+  children:
+  - Ecommerce.Domain.Constants.Identity.PolicyNames
+  - Ecommerce.Domain.Constants.Identity.RoleNames
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Domain.Constants.Identity
+  nameWithType: Ecommerce.Domain.Constants.Identity
+  fullName: Ecommerce.Domain.Constants.Identity
+  type: Namespace
+  assemblies:
+  - Ecommerce.Domain
+references:
+- uid: Ecommerce.Domain.Constants.Identity.PolicyNames
+  commentId: T:Ecommerce.Domain.Constants.Identity.PolicyNames
+  href: Ecommerce.Domain.Constants.Identity.PolicyNames.html
+  name: PolicyNames
+  nameWithType: PolicyNames
+  fullName: Ecommerce.Domain.Constants.Identity.PolicyNames
+- uid: Ecommerce.Domain.Constants.Identity.RoleNames
+  commentId: T:Ecommerce.Domain.Constants.Identity.RoleNames
+  href: Ecommerce.Domain.Constants.Identity.RoleNames.html
+  name: RoleNames
+  nameWithType: RoleNames
+  fullName: Ecommerce.Domain.Constants.Identity.RoleNames

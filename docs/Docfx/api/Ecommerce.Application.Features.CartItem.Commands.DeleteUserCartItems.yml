@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  commentId: N:Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  id: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  children:
+  - Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommand
+  - Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  nameWithType: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommand
+  commentId: T:Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommand
+  parent: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  href: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommand.html
+  name: DeleteUserCartItemsCommand
+  nameWithType: DeleteUserCartItemsCommand
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommand
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommandHandler
+  commentId: T:Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommandHandler
+  href: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommandHandler.html
+  name: DeleteUserCartItemsCommandHandler
+  nameWithType: DeleteUserCartItemsCommandHandler
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommandHandler
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  commentId: N:Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  nameWithType: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  fullName: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.CartItem.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+    name: DeleteUserCartItems
+    href: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem
+    name: CartItem
+    href: Ecommerce.Application.Features.CartItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.CartItem.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+    name: DeleteUserCartItems
+    href: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.html

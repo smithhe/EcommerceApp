@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Worker
+  commentId: N:Ecommerce.Worker
+  id: Ecommerce.Worker
+  children:
+  - Ecommerce.Worker.EcommerceLogTextFormatter
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Worker
+  nameWithType: Ecommerce.Worker
+  fullName: Ecommerce.Worker
+  type: Namespace
+  assemblies:
+  - Ecommerce.Worker
+references:
+- uid: Ecommerce.Worker.EcommerceLogTextFormatter
+  commentId: T:Ecommerce.Worker.EcommerceLogTextFormatter
+  href: Ecommerce.Worker.EcommerceLogTextFormatter.html
+  name: EcommerceLogTextFormatter
+  nameWithType: EcommerceLogTextFormatter
+  fullName: Ecommerce.Worker.EcommerceLogTextFormatter

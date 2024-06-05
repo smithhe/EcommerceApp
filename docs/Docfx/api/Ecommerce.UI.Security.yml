@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Security
+  commentId: N:Ecommerce.UI.Security
+  id: Ecommerce.UI.Security
+  children:
+  - Ecommerce.UI.Security.AuthHeaderHandler
+  - Ecommerce.UI.Security.AuthStateProvider
+  - Ecommerce.UI.Security.JwtParser
+  - Ecommerce.UI.Security.LoginResponse
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UI.Security
+  nameWithType: Ecommerce.UI.Security
+  fullName: Ecommerce.UI.Security
+  type: Namespace
+  assemblies:
+  - Ecommerce.UI
+references:
+- uid: Ecommerce.UI.Security.AuthHeaderHandler
+  commentId: T:Ecommerce.UI.Security.AuthHeaderHandler
+  href: Ecommerce.UI.Security.AuthHeaderHandler.html
+  name: AuthHeaderHandler
+  nameWithType: AuthHeaderHandler
+  fullName: Ecommerce.UI.Security.AuthHeaderHandler
+- uid: Ecommerce.UI.Security.AuthStateProvider
+  commentId: T:Ecommerce.UI.Security.AuthStateProvider
+  href: Ecommerce.UI.Security.AuthStateProvider.html
+  name: AuthStateProvider
+  nameWithType: AuthStateProvider
+  fullName: Ecommerce.UI.Security.AuthStateProvider
+- uid: Ecommerce.UI.Security.JwtParser
+  commentId: T:Ecommerce.UI.Security.JwtParser
+  href: Ecommerce.UI.Security.JwtParser.html
+  name: JwtParser
+  nameWithType: JwtParser
+  fullName: Ecommerce.UI.Security.JwtParser
+- uid: Ecommerce.UI.Security.LoginResponse
+  commentId: T:Ecommerce.UI.Security.LoginResponse
+  href: Ecommerce.UI.Security.LoginResponse.html
+  name: LoginResponse
+  nameWithType: LoginResponse
+  fullName: Ecommerce.UI.Security.LoginResponse

@@ -1,0 +1,668 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.PayPal.Models.Shipping
+  commentId: T:Ecommerce.PayPal.Models.Shipping
+  id: Shipping
+  parent: Ecommerce.PayPal.Models
+  children:
+  - Ecommerce.PayPal.Models.Shipping.#ctor
+  - Ecommerce.PayPal.Models.Shipping.Address
+  - Ecommerce.PayPal.Models.Shipping.Name
+  - Ecommerce.PayPal.Models.Shipping.Options
+  - Ecommerce.PayPal.Models.Shipping.Type
+  langs:
+  - csharp
+  - vb
+  name: Shipping
+  nameWithType: Shipping
+  fullName: Ecommerce.PayPal.Models.Shipping
+  type: Class
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Shipping.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Shipping
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Shipping.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: Represents a shipping address in a PayPal order.
+  example: []
+  syntax:
+    content: public class Shipping
+    content.vb: Public Class Shipping
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.PayPal.Models.Shipping.Type
+  commentId: P:Ecommerce.PayPal.Models.Shipping.Type
+  id: Type
+  parent: Ecommerce.PayPal.Models.Shipping
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Shipping.Type
+  fullName: Ecommerce.PayPal.Models.Shipping.Type
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Shipping.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Type
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Shipping.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: >-
+    A classification for the method of purchase fulfillment (e.g shipping, in-store pickup, etc).
+
+    Either type or options may be present, but not both.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("type")]
+
+      public string? Type { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("type")>
+
+      Public Property Type As String
+  overload: Ecommerce.PayPal.Models.Shipping.Type*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: type
+- uid: Ecommerce.PayPal.Models.Shipping.Options
+  commentId: P:Ecommerce.PayPal.Models.Shipping.Options
+  id: Options
+  parent: Ecommerce.PayPal.Models.Shipping
+  langs:
+  - csharp
+  - vb
+  name: Options
+  nameWithType: Shipping.Options
+  fullName: Ecommerce.PayPal.Models.Shipping.Options
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Shipping.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Options
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Shipping.cs
+    startLine: 19
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: An array of shipping options that the payee or merchant offers to the payer to ship or pick up their items.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("options")]
+
+      public IEnumerable<ShippingOptions> Options { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{Ecommerce.PayPal.Models.ShippingOptions}
+    content.vb: >-
+      <JsonPropertyName("options")>
+
+      Public Property Options As IEnumerable(Of ShippingOptions)
+  overload: Ecommerce.PayPal.Models.Shipping.Options*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: options
+- uid: Ecommerce.PayPal.Models.Shipping.Name
+  commentId: P:Ecommerce.PayPal.Models.Shipping.Name
+  id: Name
+  parent: Ecommerce.PayPal.Models.Shipping
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Shipping.Name
+  fullName: Ecommerce.PayPal.Models.Shipping.Name
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Shipping.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Name
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Shipping.cs
+    startLine: 25
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The name of the person to whom to ship the items. Supports only the full_name property.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("name")]
+
+      public Name Name { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Name
+    content.vb: >-
+      <JsonPropertyName("name")>
+
+      Public Property Name As Name
+  overload: Ecommerce.PayPal.Models.Shipping.Name*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: Ecommerce.PayPal.Models.Shipping.Address
+  commentId: P:Ecommerce.PayPal.Models.Shipping.Address
+  id: Address
+  parent: Ecommerce.PayPal.Models.Shipping
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: Shipping.Address
+  fullName: Ecommerce.PayPal.Models.Shipping.Address
+  type: Property
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.PayPal/Models/Shipping.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Address
+    path: ../../Infrastructure/Ecommerce.PayPal/Models/Shipping.cs
+    startLine: 31
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  summary: The address of the person to whom to ship the items.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("address")]
+
+      public Address Address { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.PayPal.Models.Address
+    content.vb: >-
+      <JsonPropertyName("address")>
+
+      Public Property Address As Address
+  overload: Ecommerce.PayPal.Models.Shipping.Address*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: address
+- uid: Ecommerce.PayPal.Models.Shipping.#ctor
+  commentId: M:Ecommerce.PayPal.Models.Shipping.#ctor
+  id: '#ctor'
+  parent: Ecommerce.PayPal.Models.Shipping
+  langs:
+  - csharp
+  - vb
+  name: Shipping()
+  nameWithType: Shipping.Shipping()
+  fullName: Ecommerce.PayPal.Models.Shipping.Shipping()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Infrastructure/Ecommerce.PayPal/Models/Shipping.cs
+  assemblies:
+  - Ecommerce.PayPal
+  namespace: Ecommerce.PayPal.Models
+  syntax:
+    content: public Shipping()
+    content.vb: Public Sub New()
+  overload: Ecommerce.PayPal.Models.Shipping.#ctor*
+  nameWithType.vb: Shipping.New()
+  fullName.vb: Ecommerce.PayPal.Models.Shipping.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.PayPal.Models
+  commentId: N:Ecommerce.PayPal.Models
+  href: Ecommerce.html
+  name: Ecommerce.PayPal.Models
+  nameWithType: Ecommerce.PayPal.Models
+  fullName: Ecommerce.PayPal.Models
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.PayPal
+    name: PayPal
+    href: Ecommerce.PayPal.html
+  - name: .
+  - uid: Ecommerce.PayPal.Models
+    name: Models
+    href: Ecommerce.PayPal.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.PayPal.Models.Shipping.Type*
+  commentId: Overload:Ecommerce.PayPal.Models.Shipping.Type
+  href: Ecommerce.PayPal.Models.Shipping.html#Ecommerce_PayPal_Models_Shipping_Type
+  name: Type
+  nameWithType: Shipping.Type
+  fullName: Ecommerce.PayPal.Models.Shipping.Type
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.PayPal.Models.Shipping.Options*
+  commentId: Overload:Ecommerce.PayPal.Models.Shipping.Options
+  href: Ecommerce.PayPal.Models.Shipping.html#Ecommerce_PayPal_Models_Shipping_Options
+  name: Options
+  nameWithType: Shipping.Options
+  fullName: Ecommerce.PayPal.Models.Shipping.Options
+- uid: System.Collections.Generic.IEnumerable{Ecommerce.PayPal.Models.ShippingOptions}
+  commentId: T:System.Collections.Generic.IEnumerable{Ecommerce.PayPal.Models.ShippingOptions}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ShippingOptions>
+  nameWithType: IEnumerable<ShippingOptions>
+  fullName: System.Collections.Generic.IEnumerable<Ecommerce.PayPal.Models.ShippingOptions>
+  nameWithType.vb: IEnumerable(Of ShippingOptions)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Ecommerce.PayPal.Models.ShippingOptions)
+  name.vb: IEnumerable(Of ShippingOptions)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Ecommerce.PayPal.Models.ShippingOptions
+    name: ShippingOptions
+    href: Ecommerce.PayPal.Models.ShippingOptions.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.PayPal.Models.ShippingOptions
+    name: ShippingOptions
+    href: Ecommerce.PayPal.Models.ShippingOptions.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Ecommerce.PayPal.Models.Shipping.Name*
+  commentId: Overload:Ecommerce.PayPal.Models.Shipping.Name
+  href: Ecommerce.PayPal.Models.Shipping.html#Ecommerce_PayPal_Models_Shipping_Name
+  name: Name
+  nameWithType: Shipping.Name
+  fullName: Ecommerce.PayPal.Models.Shipping.Name
+- uid: Ecommerce.PayPal.Models.Name
+  commentId: T:Ecommerce.PayPal.Models.Name
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Name.html
+  name: Name
+  nameWithType: Name
+  fullName: Ecommerce.PayPal.Models.Name
+- uid: Ecommerce.PayPal.Models.Shipping.Address*
+  commentId: Overload:Ecommerce.PayPal.Models.Shipping.Address
+  href: Ecommerce.PayPal.Models.Shipping.html#Ecommerce_PayPal_Models_Shipping_Address
+  name: Address
+  nameWithType: Shipping.Address
+  fullName: Ecommerce.PayPal.Models.Shipping.Address
+- uid: Ecommerce.PayPal.Models.Address
+  commentId: T:Ecommerce.PayPal.Models.Address
+  parent: Ecommerce.PayPal.Models
+  href: Ecommerce.PayPal.Models.Address.html
+  name: Address
+  nameWithType: Address
+  fullName: Ecommerce.PayPal.Models.Address
+- uid: Ecommerce.PayPal.Models.Shipping.#ctor*
+  commentId: Overload:Ecommerce.PayPal.Models.Shipping.#ctor
+  isExternal: true
+  href: Ecommerce.PayPal.Models.Shipping.html#Ecommerce_PayPal_Models_Shipping__ctor
+  name: Shipping
+  nameWithType: Shipping.Shipping
+  fullName: Ecommerce.PayPal.Models.Shipping.Shipping
+  nameWithType.vb: Shipping.New
+  fullName.vb: Ecommerce.PayPal.Models.Shipping.New
+  name.vb: New

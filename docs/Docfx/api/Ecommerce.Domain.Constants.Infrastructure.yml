@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Domain.Constants.Infrastructure
+  commentId: N:Ecommerce.Domain.Constants.Infrastructure
+  id: Ecommerce.Domain.Constants.Infrastructure
+  children:
+  - Ecommerce.Domain.Constants.Infrastructure.PayPalConstants
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Domain.Constants.Infrastructure
+  nameWithType: Ecommerce.Domain.Constants.Infrastructure
+  fullName: Ecommerce.Domain.Constants.Infrastructure
+  type: Namespace
+  assemblies:
+  - Ecommerce.Domain
+references:
+- uid: Ecommerce.Domain.Constants.Infrastructure.PayPalConstants
+  commentId: T:Ecommerce.Domain.Constants.Infrastructure.PayPalConstants
+  href: Ecommerce.Domain.Constants.Infrastructure.PayPalConstants.html
+  name: PayPalConstants
+  nameWithType: PayPalConstants
+  fullName: Ecommerce.Domain.Constants.Infrastructure.PayPalConstants

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Identity
+  commentId: N:Ecommerce.Identity
+  id: Ecommerce.Identity
+  children:
+  - Ecommerce.Identity.IdentityServiceRegistration
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Identity
+  nameWithType: Ecommerce.Identity
+  fullName: Ecommerce.Identity
+  type: Namespace
+  assemblies:
+  - Ecommerce.Identity
+references:
+- uid: Ecommerce.Identity.IdentityServiceRegistration
+  commentId: T:Ecommerce.Identity.IdentityServiceRegistration
+  href: Ecommerce.Identity.IdentityServiceRegistration.html
+  name: IdentityServiceRegistration
+  nameWithType: IdentityServiceRegistration
+  fullName: Ecommerce.Identity.IdentityServiceRegistration

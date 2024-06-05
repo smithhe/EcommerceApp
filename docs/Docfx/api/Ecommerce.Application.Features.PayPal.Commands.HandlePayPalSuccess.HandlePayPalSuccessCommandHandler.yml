@@ -1,0 +1,853 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+  commentId: T:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+  id: HandlePayPalSuccessCommandHandler
+  parent: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  children:
+  - Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler},MediatR.IMediator)
+  - Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: HandlePayPalSuccessCommandHandler
+  nameWithType: HandlePayPalSuccessCommandHandler
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/PayPal/Commands/HandlePayPalSuccess/HandlePayPalSuccessCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: HandlePayPalSuccessCommandHandler
+    path: ../../Core/Ecommerce.Application/Features/PayPal/Commands/HandlePayPalSuccess/HandlePayPalSuccessCommandHandler.cs
+    startLine: 17
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  summary: A <xref href="MediatR.Mediator" data-throw-if-not-resolved="false"></xref> request handler for <xref href="Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: 'public class HandlePayPalSuccessCommandHandler : IRequestHandler<HandlePayPalSuccessCommand, bool>'
+    content.vb: Public Class HandlePayPalSuccessCommandHandler Implements IRequestHandler(Of HandlePayPalSuccessCommand, Boolean)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Boolean}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler},MediatR.IMediator)
+  commentId: M:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler},MediatR.IMediator)
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler},MediatR.IMediator)'
+  parent: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: HandlePayPalSuccessCommandHandler(ILogger<HandlePayPalSuccessCommandHandler>, IMediator)
+  nameWithType: HandlePayPalSuccessCommandHandler.HandlePayPalSuccessCommandHandler(ILogger<HandlePayPalSuccessCommandHandler>, IMediator)
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.HandlePayPalSuccessCommandHandler(Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler>, MediatR.IMediator)
+  type: Constructor
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/PayPal/Commands/HandlePayPalSuccess/HandlePayPalSuccessCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: .ctor
+    path: ../../Core/Ecommerce.Application/Features/PayPal/Commands/HandlePayPalSuccess/HandlePayPalSuccessCommandHandler.cs
+    startLine: 27
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  summary: Initializes a new instance of the <xref href="Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public HandlePayPalSuccessCommandHandler(ILogger<HandlePayPalSuccessCommandHandler> logger, IMediator mediator)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler}
+      description: The <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref> instance used for logging.
+    - id: mediator
+      type: MediatR.IMediator
+      description: The <xref href="MediatR.IMediator" data-throw-if-not-resolved="false"></xref> instance used for sending Mediator requests.
+    content.vb: Public Sub New(logger As ILogger(Of HandlePayPalSuccessCommandHandler), mediator As IMediator)
+  overload: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.#ctor*
+  nameWithType.vb: HandlePayPalSuccessCommandHandler.New(ILogger(Of HandlePayPalSuccessCommandHandler), IMediator)
+  fullName.vb: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.New(Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler), MediatR.IMediator)
+  name.vb: New(ILogger(Of HandlePayPalSuccessCommandHandler), IMediator)
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Threading.CancellationToken)
+  commentId: M:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Threading.CancellationToken)
+  id: Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Threading.CancellationToken)
+  parent: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Handle(HandlePayPalSuccessCommand, CancellationToken)
+  nameWithType: HandlePayPalSuccessCommandHandler.Handle(HandlePayPalSuccessCommand, CancellationToken)
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/PayPal/Commands/HandlePayPalSuccess/HandlePayPalSuccessCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Handle
+    path: ../../Core/Ecommerce.Application/Features/PayPal/Commands/HandlePayPalSuccess/HandlePayPalSuccessCommandHandler.cs
+    startLine: 42
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  summary: Handles the <xref href="Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand" data-throw-if-not-resolved="false"></xref> command
+  example: []
+  syntax:
+    content: public Task<bool> Handle(HandlePayPalSuccessCommand command, CancellationToken cancellationToken)
+    parameters:
+    - id: command
+      type: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+      description: The <xref href="Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand" data-throw-if-not-resolved="false"></xref> command to be handled.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> that can be used to request cancellation of the operation.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: >-
+        Returns <code>true</code> if the Ecommerce Order is updated successfully and the cart is emptied
+
+        Returns <code>false</code> if the Ecommerce Order fails to update or the cart fails to empty
+    content.vb: Public Function Handle(command As HandlePayPalSuccessCommand, cancellationToken As CancellationToken) As Task(Of Boolean)
+  overload: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.Handle*
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Boolean}.Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Threading.CancellationToken)
+references:
+- uid: MediatR.Mediator
+  commentId: T:MediatR.Mediator
+  isExternal: true
+  name: Mediator
+  nameWithType: Mediator
+  fullName: MediatR.Mediator
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+  commentId: T:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+  parent: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand.html
+  name: HandlePayPalSuccessCommand
+  nameWithType: HandlePayPalSuccessCommand
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  commentId: N:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  nameWithType: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.PayPal.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+    name: HandlePayPalSuccess
+    href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.PayPal.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+    name: HandlePayPalSuccess
+    href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Boolean}
+  commentId: T:MediatR.IRequestHandler{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Boolean}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`2
+  href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand.html
+  name: IRequestHandler<HandlePayPalSuccessCommand, bool>
+  nameWithType: IRequestHandler<HandlePayPalSuccessCommand, bool>
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand, bool>
+  nameWithType.vb: IRequestHandler(Of HandlePayPalSuccessCommand, Boolean)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand, Boolean)
+  name.vb: IRequestHandler(Of HandlePayPalSuccessCommand, Boolean)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+    name: HandlePayPalSuccessCommand
+    href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+    name: HandlePayPalSuccessCommand
+    href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequestHandler`2
+  commentId: T:MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<TRequest, TResponse>
+  nameWithType: IRequestHandler<TRequest, TResponse>
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse)
+  name.vb: IRequestHandler(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+  commentId: T:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+  href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.html
+  name: HandlePayPalSuccessCommandHandler
+  nameWithType: HandlePayPalSuccessCommandHandler
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: MediatR.IMediator
+  commentId: T:MediatR.IMediator
+  parent: MediatR
+  isExternal: true
+  name: IMediator
+  nameWithType: IMediator
+  fullName: MediatR.IMediator
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.#ctor*
+  commentId: Overload:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.#ctor
+  href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.html#Ecommerce_Application_Features_PayPal_Commands_HandlePayPalSuccess_HandlePayPalSuccessCommandHandler__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_Application_Features_PayPal_Commands_HandlePayPalSuccess_HandlePayPalSuccessCommandHandler__MediatR_IMediator_
+  name: HandlePayPalSuccessCommandHandler
+  nameWithType: HandlePayPalSuccessCommandHandler.HandlePayPalSuccessCommandHandler
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.HandlePayPalSuccessCommandHandler
+  nameWithType.vb: HandlePayPalSuccessCommandHandler.New
+  fullName.vb: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<HandlePayPalSuccessCommandHandler>
+  nameWithType: ILogger<HandlePayPalSuccessCommandHandler>
+  fullName: Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler>
+  nameWithType.vb: ILogger(Of HandlePayPalSuccessCommandHandler)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler)
+  name.vb: ILogger(Of HandlePayPalSuccessCommandHandler)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+    name: HandlePayPalSuccessCommandHandler
+    href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+    name: HandlePayPalSuccessCommandHandler
+    href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.html
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.Handle*
+  commentId: Overload:Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.Handle
+  href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.html#Ecommerce_Application_Features_PayPal_Commands_HandlePayPalSuccess_HandlePayPalSuccessCommandHandler_Handle_Ecommerce_Application_Features_PayPal_Commands_HandlePayPalSuccess_HandlePayPalSuccessCommand_System_Threading_CancellationToken_
+  name: Handle
+  nameWithType: HandlePayPalSuccessCommandHandler.Handle
+  fullName: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler.Handle
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Boolean}.Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Boolean}.Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Boolean}
+  definition: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand.html
+  name: Handle(HandlePayPalSuccessCommand, CancellationToken)
+  nameWithType: IRequestHandler<HandlePayPalSuccessCommand, bool>.Handle(HandlePayPalSuccessCommand, CancellationToken)
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand, bool>.Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of HandlePayPalSuccessCommand, Boolean).Handle(HandlePayPalSuccessCommand, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand, Boolean).Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Boolean}.Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+    name: HandlePayPalSuccessCommand
+    href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Boolean}.Handle(Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+    name: HandlePayPalSuccessCommand
+    href: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest, TResponse>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

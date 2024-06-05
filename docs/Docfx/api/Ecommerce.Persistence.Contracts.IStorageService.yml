@@ -1,0 +1,300 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Persistence.Contracts.IStorageService
+  commentId: T:Ecommerce.Persistence.Contracts.IStorageService
+  id: IStorageService
+  parent: Ecommerce.Persistence.Contracts
+  children:
+  - Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(System.String,System.String)
+  - Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(System.String,System.String,System.IO.Stream)
+  langs:
+  - csharp
+  - vb
+  name: IStorageService
+  nameWithType: IStorageService
+  fullName: Ecommerce.Persistence.Contracts.IStorageService
+  type: Interface
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IStorageService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IStorageService
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IStorageService.cs
+    startLine: 5
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  syntax:
+    content: public interface IStorageService
+    content.vb: Public Interface IStorageService
+- uid: Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(System.String,System.String,System.IO.Stream)
+  commentId: M:Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(System.String,System.String,System.IO.Stream)
+  id: UploadFileAsync(System.String,System.String,System.IO.Stream)
+  parent: Ecommerce.Persistence.Contracts.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: UploadFileAsync(string, string, Stream)
+  nameWithType: IStorageService.UploadFileAsync(string, string, Stream)
+  fullName: Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(string, string, System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IStorageService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UploadFileAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IStorageService.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  syntax:
+    content: Task<bool> UploadFileAsync(string remoteStoragePath, string fileName, Stream file)
+    parameters:
+    - id: remoteStoragePath
+      type: System.String
+    - id: fileName
+      type: System.String
+    - id: file
+      type: System.IO.Stream
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function UploadFileAsync(remoteStoragePath As String, fileName As String, file As Stream) As Task(Of Boolean)
+  overload: Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync*
+  nameWithType.vb: IStorageService.UploadFileAsync(String, String, Stream)
+  fullName.vb: Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync(String, String, System.IO.Stream)
+  name.vb: UploadFileAsync(String, String, Stream)
+- uid: Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(System.String,System.String)
+  commentId: M:Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(System.String,System.String)
+  id: DeleteFileAsync(System.String,System.String)
+  parent: Ecommerce.Persistence.Contracts.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: DeleteFileAsync(string, string)
+  nameWithType: IStorageService.DeleteFileAsync(string, string)
+  fullName: Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(string, string)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Persistence/Contracts/IStorageService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeleteFileAsync
+    path: ../../Infrastructure/Ecommerce.Persistence/Contracts/IStorageService.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.Persistence
+  namespace: Ecommerce.Persistence.Contracts
+  syntax:
+    content: Task<bool> DeleteFileAsync(string remoteStoragePath, string fileName)
+    parameters:
+    - id: remoteStoragePath
+      type: System.String
+    - id: fileName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function DeleteFileAsync(remoteStoragePath As String, fileName As String) As Task(Of Boolean)
+  overload: Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync*
+  nameWithType.vb: IStorageService.DeleteFileAsync(String, String)
+  fullName.vb: Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync(String, String)
+  name.vb: DeleteFileAsync(String, String)
+references:
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+- uid: Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync
+  href: Ecommerce.Persistence.Contracts.IStorageService.html#Ecommerce_Persistence_Contracts_IStorageService_UploadFileAsync_System_String_System_String_System_IO_Stream_
+  name: UploadFileAsync
+  nameWithType: IStorageService.UploadFileAsync
+  fullName: Ecommerce.Persistence.Contracts.IStorageService.UploadFileAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync*
+  commentId: Overload:Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync
+  href: Ecommerce.Persistence.Contracts.IStorageService.html#Ecommerce_Persistence_Contracts_IStorageService_DeleteFileAsync_System_String_System_String_
+  name: DeleteFileAsync
+  nameWithType: IStorageService.DeleteFileAsync
+  fullName: Ecommerce.Persistence.Contracts.IStorageService.DeleteFileAsync

@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  commentId: N:Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  id: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  children:
+  - Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommand
+  - Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  nameWithType: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  fullName: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommand
+  commentId: T:Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommand
+  parent: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  href: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommand.html
+  name: CancelPayPalOrderCommand
+  nameWithType: CancelPayPalOrderCommand
+  fullName: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommand
+- uid: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommandHandler
+  commentId: T:Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommandHandler
+  href: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommandHandler.html
+  name: CancelPayPalOrderCommandHandler
+  nameWithType: CancelPayPalOrderCommandHandler
+  fullName: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommandHandler
+- uid: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  commentId: N:Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  nameWithType: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  fullName: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.PayPal.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+    name: CancelPayPalOrder
+    href: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal
+    name: PayPal
+    href: Ecommerce.Application.Features.PayPal.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.PayPal.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+    name: CancelPayPalOrder
+    href: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.html

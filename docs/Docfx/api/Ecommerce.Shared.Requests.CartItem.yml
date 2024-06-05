@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Requests.CartItem
+  commentId: N:Ecommerce.Shared.Requests.CartItem
+  id: Ecommerce.Shared.Requests.CartItem
+  children:
+  - Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest
+  - Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest
+  - Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest
+  - Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest
+  - Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Requests.CartItem
+  nameWithType: Ecommerce.Shared.Requests.CartItem
+  fullName: Ecommerce.Shared.Requests.CartItem
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest
+  commentId: T:Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest
+  parent: Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest.html
+  name: CreateCartItemApiRequest
+  nameWithType: CreateCartItemApiRequest
+  fullName: Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest
+- uid: Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest
+  commentId: T:Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest
+  parent: Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest.html
+  name: DeleteCartItemApiRequest
+  nameWithType: DeleteCartItemApiRequest
+  fullName: Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest
+- uid: Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest
+  commentId: T:Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest
+  parent: Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest.html
+  name: DeleteUserCartItemsApiRequest
+  nameWithType: DeleteUserCartItemsApiRequest
+  fullName: Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest
+- uid: Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest
+  commentId: T:Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest
+  parent: Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest.html
+  name: GetUserCartItemsApiRequest
+  nameWithType: GetUserCartItemsApiRequest
+  fullName: Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest
+- uid: Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest
+  commentId: T:Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest
+  parent: Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest.html
+  name: UpdateCartItemApiRequest
+  nameWithType: UpdateCartItemApiRequest
+  fullName: Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest
+- uid: Ecommerce.Shared.Requests.CartItem
+  commentId: N:Ecommerce.Shared.Requests.CartItem
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Requests.CartItem
+  nameWithType: Ecommerce.Shared.Requests.CartItem
+  fullName: Ecommerce.Shared.Requests.CartItem
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.CartItem
+    name: CartItem
+    href: Ecommerce.Shared.Requests.CartItem.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.CartItem
+    name: CartItem
+    href: Ecommerce.Shared.Requests.CartItem.html

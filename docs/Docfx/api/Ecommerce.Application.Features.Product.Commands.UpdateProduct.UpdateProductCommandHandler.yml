@@ -1,0 +1,953 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+  commentId: T:Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+  id: UpdateProductCommandHandler
+  parent: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  children:
+  - Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IProductAsyncRepository,MediatR.IMediator)
+  - Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler
+  nameWithType: UpdateProductCommandHandler
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/Product/Commands/UpdateProduct/UpdateProductCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateProductCommandHandler
+    path: ../../Core/Ecommerce.Application/Features/Product/Commands/UpdateProduct/UpdateProductCommandHandler.cs
+    startLine: 19
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  summary: A <xref href="MediatR.Mediator" data-throw-if-not-resolved="false"></xref> request handler for <xref href="Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: 'public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, UpdateProductResponse>'
+    content.vb: Public Class UpdateProductCommandHandler Implements IRequestHandler(Of UpdateProductCommand, UpdateProductResponse)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,Ecommerce.Shared.Responses.Product.UpdateProductResponse}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IProductAsyncRepository,MediatR.IMediator)
+  commentId: M:Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IProductAsyncRepository,MediatR.IMediator)
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler},AutoMapper.IMapper,Ecommerce.Persistence.Contracts.IProductAsyncRepository,MediatR.IMediator)'
+  parent: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: UpdateProductCommandHandler(ILogger<UpdateProductCommandHandler>, IMapper, IProductAsyncRepository, IMediator)
+  nameWithType: UpdateProductCommandHandler.UpdateProductCommandHandler(ILogger<UpdateProductCommandHandler>, IMapper, IProductAsyncRepository, IMediator)
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.UpdateProductCommandHandler(Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler>, AutoMapper.IMapper, Ecommerce.Persistence.Contracts.IProductAsyncRepository, MediatR.IMediator)
+  type: Constructor
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/Product/Commands/UpdateProduct/UpdateProductCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: .ctor
+    path: ../../Core/Ecommerce.Application/Features/Product/Commands/UpdateProduct/UpdateProductCommandHandler.cs
+    startLine: 33
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  summary: Initializes a new instance of the <xref href="Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public UpdateProductCommandHandler(ILogger<UpdateProductCommandHandler> logger, IMapper mapper, IProductAsyncRepository productAsyncRepository, IMediator mediator)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler}
+      description: The <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref> instance used for logging.
+    - id: mapper
+      type: AutoMapper.IMapper
+      description: The <xref href="AutoMapper.IMapper" data-throw-if-not-resolved="false"></xref> instance used for mapping objects.
+    - id: productAsyncRepository
+      type: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+      description: The <xref href="Ecommerce.Persistence.Contracts.IProductAsyncRepository" data-throw-if-not-resolved="false"></xref> instance used for data access for <xref href="Ecommerce.Application.Features.Product" data-throw-if-not-resolved="false"></xref> entities.
+    - id: mediator
+      type: MediatR.IMediator
+      description: The <xref href="MediatR.IMediator" data-throw-if-not-resolved="false"></xref> instance used for sending Mediator requests.
+    content.vb: Public Sub New(logger As ILogger(Of UpdateProductCommandHandler), mapper As IMapper, productAsyncRepository As IProductAsyncRepository, mediator As IMediator)
+  overload: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.#ctor*
+  nameWithType.vb: UpdateProductCommandHandler.New(ILogger(Of UpdateProductCommandHandler), IMapper, IProductAsyncRepository, IMediator)
+  fullName.vb: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.New(Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler), AutoMapper.IMapper, Ecommerce.Persistence.Contracts.IProductAsyncRepository, MediatR.IMediator)
+  name.vb: New(ILogger(Of UpdateProductCommandHandler), IMapper, IProductAsyncRepository, IMediator)
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,System.Threading.CancellationToken)
+  commentId: M:Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,System.Threading.CancellationToken)
+  id: Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,System.Threading.CancellationToken)
+  parent: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Handle(UpdateProductCommand, CancellationToken)
+  nameWithType: UpdateProductCommandHandler.Handle(UpdateProductCommand, CancellationToken)
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Ecommerce.Application/Features/Product/Commands/UpdateProduct/UpdateProductCommandHandler.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Handle
+    path: ../../Core/Ecommerce.Application/Features/Product/Commands/UpdateProduct/UpdateProductCommandHandler.cs
+    startLine: 53
+  assemblies:
+  - Ecommerce.Application
+  namespace: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  summary: Handles the <xref href="Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand" data-throw-if-not-resolved="false"></xref> request
+  example: []
+  syntax:
+    content: public Task<UpdateProductResponse> Handle(UpdateProductCommand command, CancellationToken cancellationToken)
+    parameters:
+    - id: command
+      type: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+      description: The <xref href="Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand" data-throw-if-not-resolved="false"></xref> request to be handled.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> that can be used to request cancellation of the operation.
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Product.UpdateProductResponse}
+      description: >-
+        A <xref href="Ecommerce.Shared.Responses.Product.UpdateProductResponse" data-throw-if-not-resolved="false"></xref> with Success being <code>true</code> if the <xref href="Ecommerce.Application.Features.Product" data-throw-if-not-resolved="false"></xref> was updated;
+
+        Success will be <code>false</code> if no <xref href="Ecommerce.Application.Features.Product" data-throw-if-not-resolved="false"></xref> is found or validation of the command fails.
+
+        Message will contain the message to display to the user.
+
+        Validation Errors will be populated with errors to present if validation fails
+    content.vb: Public Function Handle(command As UpdateProductCommand, cancellationToken As CancellationToken) As Task(Of UpdateProductResponse)
+  overload: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.Handle*
+  implements:
+  - MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,Ecommerce.Shared.Responses.Product.UpdateProductResponse}.Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,System.Threading.CancellationToken)
+references:
+- uid: MediatR.Mediator
+  commentId: T:MediatR.Mediator
+  isExternal: true
+  name: Mediator
+  nameWithType: Mediator
+  fullName: MediatR.Mediator
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+  commentId: T:Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+  parent: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand.html
+  name: UpdateProductCommand
+  nameWithType: UpdateProductCommand
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  commentId: N:Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  nameWithType: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Product.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+    name: UpdateProduct
+    href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.Product.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+    name: UpdateProduct
+    href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,Ecommerce.Shared.Responses.Product.UpdateProductResponse}
+  commentId: T:MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,Ecommerce.Shared.Responses.Product.UpdateProductResponse}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`2
+  href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand.html
+  name: IRequestHandler<UpdateProductCommand, UpdateProductResponse>
+  nameWithType: IRequestHandler<UpdateProductCommand, UpdateProductResponse>
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand, Ecommerce.Shared.Responses.Product.UpdateProductResponse>
+  nameWithType.vb: IRequestHandler(Of UpdateProductCommand, UpdateProductResponse)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand, Ecommerce.Shared.Responses.Product.UpdateProductResponse)
+  name.vb: IRequestHandler(Of UpdateProductCommand, UpdateProductResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+    name: UpdateProductCommand
+    href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Product.UpdateProductResponse
+    name: UpdateProductResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Product/UpdateProductResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+    name: UpdateProductCommand
+    href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand.html
+  - name: ','
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Product.UpdateProductResponse
+    name: UpdateProductResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Product/UpdateProductResponse.cs
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequestHandler`2
+  commentId: T:MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<TRequest, TResponse>
+  nameWithType: IRequestHandler<TRequest, TResponse>
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse)
+  name.vb: IRequestHandler(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+  commentId: T:Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+  href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.html
+  name: UpdateProductCommandHandler
+  nameWithType: UpdateProductCommandHandler
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: AutoMapper.IMapper
+  commentId: T:AutoMapper.IMapper
+  parent: AutoMapper
+  isExternal: true
+  name: IMapper
+  nameWithType: IMapper
+  fullName: AutoMapper.IMapper
+- uid: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  commentId: T:Ecommerce.Persistence.Contracts.IProductAsyncRepository
+  parent: Ecommerce.Persistence.Contracts
+  href: Ecommerce.Persistence.Contracts.IProductAsyncRepository.html
+  name: IProductAsyncRepository
+  nameWithType: IProductAsyncRepository
+  fullName: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+- uid: Ecommerce.Application.Features.Product
+  commentId: N:Ecommerce.Application.Features.Product
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.Product
+  nameWithType: Ecommerce.Application.Features.Product
+  fullName: Ecommerce.Application.Features.Product
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.Product
+    name: Product
+    href: Ecommerce.Application.Features.Product.html
+- uid: MediatR.IMediator
+  commentId: T:MediatR.IMediator
+  parent: MediatR
+  isExternal: true
+  name: IMediator
+  nameWithType: IMediator
+  fullName: MediatR.IMediator
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.#ctor*
+  commentId: Overload:Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.#ctor
+  href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.html#Ecommerce_Application_Features_Product_Commands_UpdateProduct_UpdateProductCommandHandler__ctor_Microsoft_Extensions_Logging_ILogger_Ecommerce_Application_Features_Product_Commands_UpdateProduct_UpdateProductCommandHandler__AutoMapper_IMapper_Ecommerce_Persistence_Contracts_IProductAsyncRepository_MediatR_IMediator_
+  name: UpdateProductCommandHandler
+  nameWithType: UpdateProductCommandHandler.UpdateProductCommandHandler
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.UpdateProductCommandHandler
+  nameWithType.vb: UpdateProductCommandHandler.New
+  fullName.vb: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<UpdateProductCommandHandler>
+  nameWithType: ILogger<UpdateProductCommandHandler>
+  fullName: Microsoft.Extensions.Logging.ILogger<Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler>
+  nameWithType.vb: ILogger(Of UpdateProductCommandHandler)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler)
+  name.vb: ILogger(Of UpdateProductCommandHandler)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+    name: UpdateProductCommandHandler
+    href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+    name: UpdateProductCommandHandler
+    href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.html
+  - name: )
+- uid: AutoMapper
+  commentId: N:AutoMapper
+  isExternal: true
+  name: AutoMapper
+  nameWithType: AutoMapper
+  fullName: AutoMapper
+- uid: Ecommerce.Persistence.Contracts
+  commentId: N:Ecommerce.Persistence.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Persistence.Contracts
+  nameWithType: Ecommerce.Persistence.Contracts
+  fullName: Ecommerce.Persistence.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Persistence
+    name: Persistence
+    href: Ecommerce.Persistence.html
+  - name: .
+  - uid: Ecommerce.Persistence.Contracts
+    name: Contracts
+    href: Ecommerce.Persistence.Contracts.html
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Ecommerce.Shared.Responses.Product.UpdateProductResponse
+  commentId: T:Ecommerce.Shared.Responses.Product.UpdateProductResponse
+  href: Ecommerce.Shared.Responses.Product.UpdateProductResponse.html
+  name: UpdateProductResponse
+  nameWithType: UpdateProductResponse
+  fullName: Ecommerce.Shared.Responses.Product.UpdateProductResponse
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.Handle*
+  commentId: Overload:Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.Handle
+  href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.html#Ecommerce_Application_Features_Product_Commands_UpdateProduct_UpdateProductCommandHandler_Handle_Ecommerce_Application_Features_Product_Commands_UpdateProduct_UpdateProductCommand_System_Threading_CancellationToken_
+  name: Handle
+  nameWithType: UpdateProductCommandHandler.Handle
+  fullName: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler.Handle
+- uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,Ecommerce.Shared.Responses.Product.UpdateProductResponse}.Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,Ecommerce.Shared.Responses.Product.UpdateProductResponse}.Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,Ecommerce.Shared.Responses.Product.UpdateProductResponse}
+  definition: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand.html
+  name: Handle(UpdateProductCommand, CancellationToken)
+  nameWithType: IRequestHandler<UpdateProductCommand, UpdateProductResponse>.Handle(UpdateProductCommand, CancellationToken)
+  fullName: MediatR.IRequestHandler<Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand, Ecommerce.Shared.Responses.Product.UpdateProductResponse>.Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of UpdateProductCommand, UpdateProductResponse).Handle(UpdateProductCommand, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand, Ecommerce.Shared.Responses.Product.UpdateProductResponse).Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,Ecommerce.Shared.Responses.Product.UpdateProductResponse}.Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+    name: UpdateProductCommand
+    href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler{Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,Ecommerce.Shared.Responses.Product.UpdateProductResponse}.Handle(Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+    name: UpdateProductCommand
+    href: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Product.UpdateProductResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.Product.UpdateProductResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UpdateProductResponse>
+  nameWithType: Task<UpdateProductResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.Product.UpdateProductResponse>
+  nameWithType.vb: Task(Of UpdateProductResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.Product.UpdateProductResponse)
+  name.vb: Task(Of UpdateProductResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.Product.UpdateProductResponse
+    name: UpdateProductResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Product/UpdateProductResponse.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.Product.UpdateProductResponse
+    name: UpdateProductResponse
+    href: https://github.com/smithhe/EcommerceApp/blob/2d02db4bfed44ad43113812b0f7c0bdb0781183e/Core/Ecommerce.Shared/Responses/Product/UpdateProductResponse.cs
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest, TResponse>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

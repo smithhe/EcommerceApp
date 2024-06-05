@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.FastEndpoints.Endpoints.Product
+  commentId: N:Ecommerce.FastEndpoints.Endpoints.Product
+  id: Ecommerce.FastEndpoints.Endpoints.Product
+  children:
+  - Ecommerce.FastEndpoints.Endpoints.Product.CreateProductEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Product.DeleteProductEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Product.GetAllProductsByCategoryIdEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint
+  - Ecommerce.FastEndpoints.Endpoints.Product.UpdateProductEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.FastEndpoints.Endpoints.Product
+  nameWithType: Ecommerce.FastEndpoints.Endpoints.Product
+  fullName: Ecommerce.FastEndpoints.Endpoints.Product
+  type: Namespace
+  assemblies:
+  - Ecommerce.FastEndpoints
+references:
+- uid: Ecommerce.FastEndpoints.Endpoints.Product.CreateProductEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Product.CreateProductEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Product.CreateProductEndpoint.html
+  name: CreateProductEndpoint
+  nameWithType: CreateProductEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Product.CreateProductEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Product.DeleteProductEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Product.DeleteProductEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Product.DeleteProductEndpoint.html
+  name: DeleteProductEndpoint
+  nameWithType: DeleteProductEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Product.DeleteProductEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Product.GetAllProductsByCategoryIdEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Product.GetAllProductsByCategoryIdEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Product.GetAllProductsByCategoryIdEndpoint.html
+  name: GetAllProductsByCategoryIdEndpoint
+  nameWithType: GetAllProductsByCategoryIdEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Product.GetAllProductsByCategoryIdEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint.html
+  name: GetProductByIdEndpoint
+  nameWithType: GetProductByIdEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Product.UpdateProductEndpoint
+  commentId: T:Ecommerce.FastEndpoints.Endpoints.Product.UpdateProductEndpoint
+  href: Ecommerce.FastEndpoints.Endpoints.Product.UpdateProductEndpoint.html
+  name: UpdateProductEndpoint
+  nameWithType: UpdateProductEndpoint
+  fullName: Ecommerce.FastEndpoints.Endpoints.Product.UpdateProductEndpoint

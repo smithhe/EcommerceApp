@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Mail.Models.TemplateModels
+  commentId: N:Ecommerce.Mail.Models.TemplateModels
+  id: Ecommerce.Mail.Models.TemplateModels
+  children:
+  - Ecommerce.Mail.Models.TemplateModels.EmailConfirmationModel
+  - Ecommerce.Mail.Models.TemplateModels.OrderReceiptModel
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Mail.Models.TemplateModels
+  nameWithType: Ecommerce.Mail.Models.TemplateModels
+  fullName: Ecommerce.Mail.Models.TemplateModels
+  type: Namespace
+  assemblies:
+  - Ecommerce.Mail
+references:
+- uid: Ecommerce.Mail.Models.TemplateModels.EmailConfirmationModel
+  commentId: T:Ecommerce.Mail.Models.TemplateModels.EmailConfirmationModel
+  href: Ecommerce.Mail.Models.TemplateModels.EmailConfirmationModel.html
+  name: EmailConfirmationModel
+  nameWithType: EmailConfirmationModel
+  fullName: Ecommerce.Mail.Models.TemplateModels.EmailConfirmationModel
+- uid: Ecommerce.Mail.Models.TemplateModels.OrderReceiptModel
+  commentId: T:Ecommerce.Mail.Models.TemplateModels.OrderReceiptModel
+  href: Ecommerce.Mail.Models.TemplateModels.OrderReceiptModel.html
+  name: OrderReceiptModel
+  nameWithType: OrderReceiptModel
+  fullName: Ecommerce.Mail.Models.TemplateModels.OrderReceiptModel

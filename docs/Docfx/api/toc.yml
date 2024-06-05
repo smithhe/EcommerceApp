@@ -1,0 +1,963 @@
+### YamlMime:TableOfContent
+items:
+- uid: Ecommerce.Api
+  name: Ecommerce.Api
+  items:
+  - uid: Ecommerce.Api.EcommerceLogTextFormatter
+    name: EcommerceLogTextFormatter
+- uid: Ecommerce.Application
+  name: Ecommerce.Application
+  items:
+  - uid: Ecommerce.Application.ApplicationServiceRegistration
+    name: ApplicationServiceRegistration
+- uid: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  name: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem
+  items:
+  - uid: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommand
+    name: CreateCartItemCommand
+  - uid: Ecommerce.Application.Features.CartItem.Commands.CreateCartItem.CreateCartItemCommandHandler
+    name: CreateCartItemCommandHandler
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  name: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem
+  items:
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommand
+    name: DeleteCartItemCommand
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteCartItem.DeleteCartItemCommandHandler
+    name: DeleteCartItemCommandHandler
+- uid: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  name: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems
+  items:
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommand
+    name: DeleteUserCartItemsCommand
+  - uid: Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems.DeleteUserCartItemsCommandHandler
+    name: DeleteUserCartItemsCommandHandler
+- uid: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  name: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem
+  items:
+  - uid: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommand
+    name: UpdateCartItemCommand
+  - uid: Ecommerce.Application.Features.CartItem.Commands.UpdateCartItem.UpdateCartItemCommandHandler
+    name: UpdateCartItemCommandHandler
+- uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  name: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems
+  items:
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQuery
+    name: GetUserCartItemsQuery
+  - uid: Ecommerce.Application.Features.CartItem.Queries.GetUserCartItems.GetUserCartItemsQueryHandler
+    name: GetUserCartItemsQueryHandler
+- uid: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  name: Ecommerce.Application.Features.Category.Commands.CreateCategory
+  items:
+  - uid: Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommand
+    name: CreateCategoryCommand
+  - uid: Ecommerce.Application.Features.Category.Commands.CreateCategory.CreateCategoryCommandHandler
+    name: CreateCategoryCommandHandler
+- uid: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  name: Ecommerce.Application.Features.Category.Commands.DeleteCategory
+  items:
+  - uid: Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommand
+    name: DeleteCategoryCommand
+  - uid: Ecommerce.Application.Features.Category.Commands.DeleteCategory.DeleteCategoryCommandHandler
+    name: DeleteCategoryCommandHandler
+- uid: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  name: Ecommerce.Application.Features.Category.Commands.UpdateCategory
+  items:
+  - uid: Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommand
+    name: UpdateCategoryCommand
+  - uid: Ecommerce.Application.Features.Category.Commands.UpdateCategory.UpdateCategoryCommandHandler
+    name: UpdateCategoryCommandHandler
+- uid: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  name: Ecommerce.Application.Features.Category.Queries.GetAllCategories
+  items:
+  - uid: Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQuery
+    name: GetAllCategoriesQuery
+  - uid: Ecommerce.Application.Features.Category.Queries.GetAllCategories.GetAllCategoriesQueryHandler
+    name: GetAllCategoriesQueryHandler
+- uid: Ecommerce.Application.Features.Category.Queries.GetCategoryById
+  name: Ecommerce.Application.Features.Category.Queries.GetCategoryById
+  items:
+  - uid: Ecommerce.Application.Features.Category.Queries.GetCategoryById.GetCategoryByIdQuery
+    name: GetCategoryByIdQuery
+  - uid: Ecommerce.Application.Features.Category.Queries.GetCategoryById.GetCategoryByIdQueryHandler
+    name: GetCategoryByIdQueryHandler
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  name: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  items:
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommand
+    name: ConfirmEmailCommand
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommandHandler
+    name: ConfirmEmailCommandHandler
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  name: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser
+  items:
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommand
+    name: RegisterEcommerceUserCommand
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.RegisterEcommerceUser.RegisterEcommerceUserCommandHandler
+    name: RegisterEcommerceUserCommandHandler
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  name: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser
+  items:
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommand
+    name: UpdateEcommerceUserCommand
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdateEcommerceUser.UpdateEcommerceUserCommandHandler
+    name: UpdateEcommerceUserCommandHandler
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword
+  name: Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword
+  items:
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword.UpdatePasswordCommand
+    name: UpdatePasswordCommand
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.UpdatePassword.UpdatePasswordCommandHandler
+    name: UpdatePasswordCommandHandler
+- uid: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  name: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId
+  items:
+  - uid: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommand
+    name: AddPayPalRequestIdCommand
+  - uid: Ecommerce.Application.Features.Order.Commands.AddPayPalRequestId.AddPayPalRequestIdCommandHandler
+    name: AddPayPalRequestIdCommandHandler
+- uid: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  name: Ecommerce.Application.Features.Order.Commands.CreateOrder
+  items:
+  - uid: Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommand
+    name: CreateOrderCommand
+  - uid: Ecommerce.Application.Features.Order.Commands.CreateOrder.CreateOrderCommandHandler
+    name: CreateOrderCommandHandler
+- uid: Ecommerce.Application.Features.Order.Commands.DeleteOrder
+  name: Ecommerce.Application.Features.Order.Commands.DeleteOrder
+  items:
+  - uid: Ecommerce.Application.Features.Order.Commands.DeleteOrder.DeleteOrderCommand
+    name: DeleteOrderCommand
+  - uid: Ecommerce.Application.Features.Order.Commands.DeleteOrder.DeleteOrderCommandHandler
+    name: DeleteOrderCommandHandler
+- uid: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  name: Ecommerce.Application.Features.Order.Commands.UpdateOrder
+  items:
+  - uid: Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommand
+    name: UpdateOrderCommand
+  - uid: Ecommerce.Application.Features.Order.Commands.UpdateOrder.UpdateOrderCommandHandler
+    name: UpdateOrderCommandHandler
+- uid: Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId
+  name: Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId
+  items:
+  - uid: Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId.GetAllOrdersByUserIdQuery
+    name: GetAllOrdersByUserIdQuery
+  - uid: Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId.GetAllOrdersByUserIdQueryHandler
+    name: GetAllOrdersByUserIdQueryHandler
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  name: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout
+  items:
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQuery
+    name: GetOrderAfterSuccessfulCheckoutQuery
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderAfterSuccessfulCheckout.GetOrderAfterSuccessfulCheckoutQueryHandler
+    name: GetOrderAfterSuccessfulCheckoutQueryHandler
+- uid: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  name: Ecommerce.Application.Features.Order.Queries.GetOrderById
+  items:
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQuery
+    name: GetOrderByIdQuery
+  - uid: Ecommerce.Application.Features.Order.Queries.GetOrderById.GetOrderByIdQueryHandler
+    name: GetOrderByIdQueryHandler
+- uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  name: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem
+  items:
+  - uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommand
+    name: CreateOrderItemCommand
+  - uid: Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem.CreateOrderItemCommandHandler
+    name: CreateOrderItemCommandHandler
+- uid: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  name: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  items:
+  - uid: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQuery
+    name: GetAllOrderItemsByOrderIdQuery
+  - uid: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQueryHandler
+    name: GetAllOrderItemsByOrderIdQueryHandler
+- uid: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  name: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder
+  items:
+  - uid: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommand
+    name: CancelPayPalOrderCommand
+  - uid: Ecommerce.Application.Features.PayPal.Commands.CancelPayPalOrder.CancelPayPalOrderCommandHandler
+    name: CancelPayPalOrderCommandHandler
+- uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
+  name: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder
+  items:
+  - uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder.CreatePayPalOrderCommand
+    name: CreatePayPalOrderCommand
+  - uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder.CreatePayPalOrderCommandHandler
+    name: CreatePayPalOrderCommandHandler
+- uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  name: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey
+  items:
+  - uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommand
+    name: CreatePayPalReturnKeyCommand
+  - uid: Ecommerce.Application.Features.PayPal.Commands.CreatePayPalReturnKey.CreatePayPalReturnKeyCommandHandler
+    name: CreatePayPalReturnKeyCommandHandler
+- uid: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  name: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey
+  items:
+  - uid: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommand
+    name: DeletePayPalReturnKeyCommand
+  - uid: Ecommerce.Application.Features.PayPal.Commands.DeletePayPalReturnKey.DeletePayPalReturnKeyCommandHandler
+    name: DeletePayPalReturnKeyCommandHandler
+- uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  name: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
+  items:
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommand
+    name: HandlePayPalSuccessCommand
+  - uid: Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess.HandlePayPalSuccessCommandHandler
+    name: HandlePayPalSuccessCommandHandler
+- uid: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  name: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey
+  items:
+  - uid: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQuery
+    name: GetOrderByReturnKeyQuery
+  - uid: Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey.GetOrderByReturnKeyQueryHandler
+    name: GetOrderByReturnKeyQueryHandler
+- uid: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  name: Ecommerce.Application.Features.Product.Commands.CreateProduct
+  items:
+  - uid: Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommand
+    name: CreateProductCommand
+  - uid: Ecommerce.Application.Features.Product.Commands.CreateProduct.CreateProductCommandHandler
+    name: CreateProductCommandHandler
+- uid: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  name: Ecommerce.Application.Features.Product.Commands.DeleteProduct
+  items:
+  - uid: Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommand
+    name: DeleteProductCommand
+  - uid: Ecommerce.Application.Features.Product.Commands.DeleteProduct.DeleteProductCommandHandler
+    name: DeleteProductCommandHandler
+- uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  name: Ecommerce.Application.Features.Product.Commands.UpdateProduct
+  items:
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommand
+    name: UpdateProductCommand
+  - uid: Ecommerce.Application.Features.Product.Commands.UpdateProduct.UpdateProductCommandHandler
+    name: UpdateProductCommandHandler
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductById
+  name: Ecommerce.Application.Features.Product.Queries.GetProductById
+  items:
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQuery
+    name: GetProductByIdQuery
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductById.GetProductByIdQueryHandler
+    name: GetProductByIdQueryHandler
+- uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  name: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
+  items:
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQuery
+    name: GetAllProductsByCategoryIdQuery
+  - uid: Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId.GetAllProductsByCategoryIdQueryHandler
+    name: GetAllProductsByCategoryIdQueryHandler
+- uid: Ecommerce.Application.Features.Review.Commands.CreateReview
+  name: Ecommerce.Application.Features.Review.Commands.CreateReview
+  items:
+  - uid: Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommand
+    name: CreateReviewCommand
+  - uid: Ecommerce.Application.Features.Review.Commands.CreateReview.CreateReviewCommandHandler
+    name: CreateReviewCommandHandler
+- uid: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  name: Ecommerce.Application.Features.Review.Commands.DeleteReview
+  items:
+  - uid: Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommand
+    name: DeleteReviewCommand
+  - uid: Ecommerce.Application.Features.Review.Commands.DeleteReview.DeleteReviewCommandHandler
+    name: DeleteReviewCommandHandler
+- uid: Ecommerce.Application.Features.Review.Commands.UpdateReview
+  name: Ecommerce.Application.Features.Review.Commands.UpdateReview
+  items:
+  - uid: Ecommerce.Application.Features.Review.Commands.UpdateReview.UpdateReviewCommand
+    name: UpdateReviewCommand
+  - uid: Ecommerce.Application.Features.Review.Commands.UpdateReview.UpdateReviewCommandHandler
+    name: UpdateReviewCommandHandler
+- uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  name: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct
+  items:
+  - uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQuery
+    name: GetReviewsForProductQuery
+  - uid: Ecommerce.Application.Features.Review.Queries.GetReviewsForProduct.GetReviewsForProductQueryHandler
+    name: GetReviewsForProductQueryHandler
+- uid: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  name: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct
+  items:
+  - uid: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQuery
+    name: GetUserReviewForProductQuery
+  - uid: Ecommerce.Application.Features.Review.Queries.GetUserReviewForProduct.GetUserReviewForProductQueryHandler
+    name: GetUserReviewForProductQueryHandler
+- uid: Ecommerce.Application.Profiles
+  name: Ecommerce.Application.Profiles
+  items:
+  - uid: Ecommerce.Application.Profiles.MappingProfile
+    name: MappingProfile
+- uid: Ecommerce.Application.Validators.CartItem
+  name: Ecommerce.Application.Validators.CartItem
+  items:
+  - uid: Ecommerce.Application.Validators.CartItem.CreateCartItemValidator
+    name: CreateCartItemValidator
+  - uid: Ecommerce.Application.Validators.CartItem.UpdateCartItemValidator
+    name: UpdateCartItemValidator
+- uid: Ecommerce.Application.Validators.Category
+  name: Ecommerce.Application.Validators.Category
+  items:
+  - uid: Ecommerce.Application.Validators.Category.CreateCategoryValidator
+    name: CreateCategoryValidator
+  - uid: Ecommerce.Application.Validators.Category.UpdateCategoryValidator
+    name: UpdateCategoryValidator
+- uid: Ecommerce.Application.Validators.Order
+  name: Ecommerce.Application.Validators.Order
+  items:
+  - uid: Ecommerce.Application.Validators.Order.CreateOrderValidator
+    name: CreateOrderValidator
+  - uid: Ecommerce.Application.Validators.Order.UpdateOrderValidator
+    name: UpdateOrderValidator
+- uid: Ecommerce.Application.Validators.OrderItem
+  name: Ecommerce.Application.Validators.OrderItem
+  items:
+  - uid: Ecommerce.Application.Validators.OrderItem.CreateOrderItemValidator
+    name: CreateOrderItemValidator
+- uid: Ecommerce.Application.Validators.Product
+  name: Ecommerce.Application.Validators.Product
+  items:
+  - uid: Ecommerce.Application.Validators.Product.CreateProductValidator
+    name: CreateProductValidator
+  - uid: Ecommerce.Application.Validators.Product.UpdateProductValidator
+    name: UpdateProductValidator
+- uid: Ecommerce.Application.Validators.Review
+  name: Ecommerce.Application.Validators.Review
+  items:
+  - uid: Ecommerce.Application.Validators.Review.CreateReviewValidator
+    name: CreateReviewValidator
+  - uid: Ecommerce.Application.Validators.Review.UpdateReviewValidator
+    name: UpdateReviewValidator
+- uid: Ecommerce.Domain.Common
+  name: Ecommerce.Domain.Common
+  items:
+  - uid: Ecommerce.Domain.Common.AuditableEntity
+    name: AuditableEntity
+- uid: Ecommerce.Domain.Constants.Entities
+  name: Ecommerce.Domain.Constants.Entities
+  items:
+  - uid: Ecommerce.Domain.Constants.Entities.CartItemConstants
+    name: CartItemConstants
+  - uid: Ecommerce.Domain.Constants.Entities.CategoryConstants
+    name: CategoryConstants
+  - uid: Ecommerce.Domain.Constants.Entities.EcommerceUserConstants
+    name: EcommerceUserConstants
+  - uid: Ecommerce.Domain.Constants.Entities.OrderConstants
+    name: OrderConstants
+  - uid: Ecommerce.Domain.Constants.Entities.OrderItemConstants
+    name: OrderItemConstants
+  - uid: Ecommerce.Domain.Constants.Entities.ProductConstants
+    name: ProductConstants
+  - uid: Ecommerce.Domain.Constants.Entities.ReviewConstants
+    name: ReviewConstants
+- uid: Ecommerce.Domain.Constants.Identity
+  name: Ecommerce.Domain.Constants.Identity
+  items:
+  - uid: Ecommerce.Domain.Constants.Identity.PolicyNames
+    name: PolicyNames
+  - uid: Ecommerce.Domain.Constants.Identity.RoleNames
+    name: RoleNames
+- uid: Ecommerce.Domain.Constants.Infrastructure
+  name: Ecommerce.Domain.Constants.Infrastructure
+  items:
+  - uid: Ecommerce.Domain.Constants.Infrastructure.PayPalConstants
+    name: PayPalConstants
+- uid: Ecommerce.Domain.Entities
+  name: Ecommerce.Domain.Entities
+  items:
+  - uid: Ecommerce.Domain.Entities.CartItem
+    name: CartItem
+  - uid: Ecommerce.Domain.Entities.Category
+    name: Category
+  - uid: Ecommerce.Domain.Entities.EcommerceUser
+    name: EcommerceUser
+  - uid: Ecommerce.Domain.Entities.Order
+    name: Order
+  - uid: Ecommerce.Domain.Entities.OrderItem
+    name: OrderItem
+  - uid: Ecommerce.Domain.Entities.Product
+    name: Product
+  - uid: Ecommerce.Domain.Entities.Review
+    name: Review
+- uid: Ecommerce.Domain.Infrastructure
+  name: Ecommerce.Domain.Infrastructure
+  items:
+  - uid: Ecommerce.Domain.Infrastructure.OrderKey
+    name: OrderKey
+- uid: Ecommerce.FastEndpoints
+  name: Ecommerce.FastEndpoints
+  items:
+  - uid: Ecommerce.FastEndpoints.FastEndpointServiceRegistration
+    name: FastEndpointServiceRegistration
+- uid: Ecommerce.FastEndpoints.Contracts
+  name: Ecommerce.FastEndpoints.Contracts
+  items:
+  - uid: Ecommerce.FastEndpoints.Contracts.ITokenService
+    name: ITokenService
+- uid: Ecommerce.FastEndpoints.Endpoints.CartItem
+  name: Ecommerce.FastEndpoints.Endpoints.CartItem
+  items:
+  - uid: Ecommerce.FastEndpoints.Endpoints.CartItem.CreateCartItemEndpoint
+    name: CreateCartItemEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteCartItemEndpoint
+    name: DeleteCartItemEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.CartItem.DeleteUserCartItemsEndpoint
+    name: DeleteUserCartItemsEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.CartItem.GetUserCartItemsEndpoint
+    name: GetUserCartItemsEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.CartItem.UpdateCartItemEndpoint
+    name: UpdateCartItemEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Category
+  name: Ecommerce.FastEndpoints.Endpoints.Category
+  items:
+  - uid: Ecommerce.FastEndpoints.Endpoints.Category.CreateCategoryEndpoint
+    name: CreateCategoryEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Category.DeleteCategoryEndpoint
+    name: DeleteCategoryEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Category.GetAllCategoriesEndpoint
+    name: GetAllCategoriesEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Category.UpdateCategoryEndpoint
+    name: UpdateCategoryEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Order
+  name: Ecommerce.FastEndpoints.Endpoints.Order
+  items:
+  - uid: Ecommerce.FastEndpoints.Endpoints.Order.CreateOrderEndpoint
+    name: CreateOrderEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Order.GetAllOrdersByUserIdEndpoint
+    name: GetAllOrdersByUserIdEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Order.GetOrderAfterSuccessfulCheckoutEndpoint
+    name: GetOrderAfterSuccessfulCheckoutEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Order.GetOrderByIdEndpoint
+    name: GetOrderByIdEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Order.UpdateOrderEndpoint
+    name: UpdateOrderEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.PayPal
+  name: Ecommerce.FastEndpoints.Endpoints.PayPal
+  items:
+  - uid: Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalCancelReturnEndpoint
+    name: PayPalCancelReturnEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.PayPal.PayPalSuccessReturnEndpoint
+    name: PayPalSuccessReturnEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Product
+  name: Ecommerce.FastEndpoints.Endpoints.Product
+  items:
+  - uid: Ecommerce.FastEndpoints.Endpoints.Product.CreateProductEndpoint
+    name: CreateProductEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Product.DeleteProductEndpoint
+    name: DeleteProductEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Product.GetAllProductsByCategoryIdEndpoint
+    name: GetAllProductsByCategoryIdEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Product.GetProductByIdEndpoint
+    name: GetProductByIdEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Product.UpdateProductEndpoint
+    name: UpdateProductEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Review
+  name: Ecommerce.FastEndpoints.Endpoints.Review
+  items:
+  - uid: Ecommerce.FastEndpoints.Endpoints.Review.CreateReviewEndpoint
+    name: CreateReviewEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Review.DeleteReviewEndpoint
+    name: DeleteReviewEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Review.GetReviewsForProductEndpoint
+    name: GetReviewsForProductEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Review.GetUserReviewForProductEndpoint
+    name: GetUserReviewForProductEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Review.UpdateReviewEndpoint
+    name: UpdateReviewEndpoint
+- uid: Ecommerce.FastEndpoints.Endpoints.Security
+  name: Ecommerce.FastEndpoints.Endpoints.Security
+  items:
+  - uid: Ecommerce.FastEndpoints.Endpoints.Security.ConfirmEmailEndpoint
+    name: ConfirmEmailEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Security.LoginEndpoint
+    name: LoginEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Security.LogoutEndpoint
+    name: LogoutEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Security.RegisterEndpoint
+    name: RegisterEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Security.UpdateEcommerceUserEndpoint
+    name: UpdateEcommerceUserEndpoint
+  - uid: Ecommerce.FastEndpoints.Endpoints.Security.UpdatePasswordEndpoint
+    name: UpdatePasswordEndpoint
+- uid: Ecommerce.FastEndpoints.Services
+  name: Ecommerce.FastEndpoints.Services
+  items:
+  - uid: Ecommerce.FastEndpoints.Services.TokenService
+    name: TokenService
+- uid: Ecommerce.Identity
+  name: Ecommerce.Identity
+  items:
+  - uid: Ecommerce.Identity.IdentityServiceRegistration
+    name: IdentityServiceRegistration
+- uid: Ecommerce.Identity.Contracts
+  name: Ecommerce.Identity.Contracts
+  items:
+  - uid: Ecommerce.Identity.Contracts.IAuthenticationService
+    name: IAuthenticationService
+- uid: Ecommerce.Identity.Models
+  name: Ecommerce.Identity.Models
+  items:
+  - uid: Ecommerce.Identity.Models.JwtSettings
+    name: JwtSettings
+- uid: Ecommerce.Identity.Services
+  name: Ecommerce.Identity.Services
+  items:
+  - uid: Ecommerce.Identity.Services.AuthService
+    name: AuthService
+- uid: Ecommerce.Mail
+  name: Ecommerce.Mail
+  items:
+  - uid: Ecommerce.Mail.MailServiceRegistration
+    name: MailServiceRegistration
+- uid: Ecommerce.Mail.Contracts
+  name: Ecommerce.Mail.Contracts
+  items:
+  - uid: Ecommerce.Mail.Contracts.IEmailService
+    name: IEmailService
+  - uid: Ecommerce.Mail.Contracts.ITemplateModel
+    name: ITemplateModel
+- uid: Ecommerce.Mail.Models
+  name: Ecommerce.Mail.Models
+  items:
+  - uid: Ecommerce.Mail.Models.MailSettings
+    name: MailSettings
+- uid: Ecommerce.Mail.Models.Enums
+  name: Ecommerce.Mail.Models.Enums
+  items:
+  - uid: Ecommerce.Mail.Models.Enums.EmailTemplate
+    name: EmailTemplate
+- uid: Ecommerce.Mail.Models.TemplateModels
+  name: Ecommerce.Mail.Models.TemplateModels
+  items:
+  - uid: Ecommerce.Mail.Models.TemplateModels.EmailConfirmationModel
+    name: EmailConfirmationModel
+  - uid: Ecommerce.Mail.Models.TemplateModels.OrderReceiptModel
+    name: OrderReceiptModel
+- uid: Ecommerce.Mail.Services
+  name: Ecommerce.Mail.Services
+  items:
+  - uid: Ecommerce.Mail.Services.EmailService
+    name: EmailService
+- uid: Ecommerce.Messages.EcommerceUser
+  name: Ecommerce.Messages.EcommerceUser
+  items:
+  - uid: Ecommerce.Messages.EcommerceUser.SendEmailConfirmationMessage
+    name: SendEmailConfirmationMessage
+- uid: Ecommerce.Messages.Order
+  name: Ecommerce.Messages.Order
+  items:
+  - uid: Ecommerce.Messages.Order.SendOrderConfirmationMessage
+    name: SendOrderConfirmationMessage
+- uid: Ecommerce.PayPal
+  name: Ecommerce.PayPal
+  items:
+  - uid: Ecommerce.PayPal.PayPalServiceRegistration
+    name: PayPalServiceRegistration
+- uid: Ecommerce.PayPal.Contracts
+  name: Ecommerce.PayPal.Contracts
+  items:
+  - uid: Ecommerce.PayPal.Contracts.IPaypalClientService
+    name: IPaypalClientService
+  - uid: Ecommerce.PayPal.Contracts.ITokenCacheService
+    name: ITokenCacheService
+  - uid: Ecommerce.PayPal.Contracts.ITokenService
+    name: ITokenService
+- uid: Ecommerce.PayPal.Contracts.Refit
+  name: Ecommerce.PayPal.Contracts.Refit
+  items:
+  - uid: Ecommerce.PayPal.Contracts.Refit.IPayPalApiService
+    name: IPayPalApiService
+- uid: Ecommerce.PayPal.Models
+  name: Ecommerce.PayPal.Models
+  items:
+  - uid: Ecommerce.PayPal.Models.Address
+    name: Address
+  - uid: Ecommerce.PayPal.Models.BreakDown
+    name: BreakDown
+  - uid: Ecommerce.PayPal.Models.Currency
+    name: Currency
+  - uid: Ecommerce.PayPal.Models.ExperienceContext
+    name: ExperienceContext
+  - uid: Ecommerce.PayPal.Models.Item
+    name: Item
+  - uid: Ecommerce.PayPal.Models.Link
+    name: Link
+  - uid: Ecommerce.PayPal.Models.Name
+    name: Name
+  - uid: Ecommerce.PayPal.Models.PayPal
+    name: PayPal
+  - uid: Ecommerce.PayPal.Models.Payee
+    name: Payee
+  - uid: Ecommerce.PayPal.Models.PaymentSource
+    name: PaymentSource
+  - uid: Ecommerce.PayPal.Models.Phone
+    name: Phone
+  - uid: Ecommerce.PayPal.Models.PhoneNumber
+    name: PhoneNumber
+  - uid: Ecommerce.PayPal.Models.PurchaseAmount
+    name: PurchaseAmount
+  - uid: Ecommerce.PayPal.Models.PurchaseUnit
+    name: PurchaseUnit
+  - uid: Ecommerce.PayPal.Models.Shipping
+    name: Shipping
+  - uid: Ecommerce.PayPal.Models.ShippingOptions
+    name: ShippingOptions
+  - uid: Ecommerce.PayPal.Models.TaxInfo
+    name: TaxInfo
+  - uid: Ecommerce.PayPal.Models.Upc
+    name: Upc
+- uid: Ecommerce.PayPal.Models.Enums
+  name: Ecommerce.PayPal.Models.Enums
+  items:
+  - uid: Ecommerce.PayPal.Models.Enums.Category
+    name: Category
+  - uid: Ecommerce.PayPal.Models.Enums.HttpMethod
+    name: HttpMethod
+  - uid: Ecommerce.PayPal.Models.Enums.Intent
+    name: Intent
+  - uid: Ecommerce.PayPal.Models.Enums.LandingPage
+    name: LandingPage
+  - uid: Ecommerce.PayPal.Models.Enums.OrderStatus
+    name: OrderStatus
+  - uid: Ecommerce.PayPal.Models.Enums.PaymentMethodPreference
+    name: PaymentMethodPreference
+  - uid: Ecommerce.PayPal.Models.Enums.PhoneType
+    name: PhoneType
+  - uid: Ecommerce.PayPal.Models.Enums.ProcessingInstruction
+    name: ProcessingInstruction
+  - uid: Ecommerce.PayPal.Models.Enums.ShippingPreference
+    name: ShippingPreference
+  - uid: Ecommerce.PayPal.Models.Enums.ShippingType
+    name: ShippingType
+  - uid: Ecommerce.PayPal.Models.Enums.UpcType
+    name: UpcType
+  - uid: Ecommerce.PayPal.Models.Enums.UserAction
+    name: UserAction
+- uid: Ecommerce.PayPal.Models.Requests
+  name: Ecommerce.PayPal.Models.Requests
+  items:
+  - uid: Ecommerce.PayPal.Models.Requests.PayPalCreateOrderRequest
+    name: PayPalCreateOrderRequest
+- uid: Ecommerce.PayPal.Models.Responses
+  name: Ecommerce.PayPal.Models.Responses
+  items:
+  - uid: Ecommerce.PayPal.Models.Responses.PayPalAuthTokenResponse
+    name: PayPalAuthTokenResponse
+  - uid: Ecommerce.PayPal.Models.Responses.PayPalCreateOrderResponse
+    name: PayPalCreateOrderResponse
+- uid: Ecommerce.PayPal.Security
+  name: Ecommerce.PayPal.Security
+  items:
+  - uid: Ecommerce.PayPal.Security.AuthHeaderHandler
+    name: AuthHeaderHandler
+  - uid: Ecommerce.PayPal.Security.TokenCacheService
+    name: TokenCacheService
+  - uid: Ecommerce.PayPal.Security.TokenService
+    name: TokenService
+- uid: Ecommerce.PayPal.Services
+  name: Ecommerce.PayPal.Services
+  items:
+  - uid: Ecommerce.PayPal.Services.PaypalClientService
+    name: PaypalClientService
+- uid: Ecommerce.Persistence
+  name: Ecommerce.Persistence
+  items:
+  - uid: Ecommerce.Persistence.DatabaseInitializer
+    name: DatabaseInitializer
+  - uid: Ecommerce.Persistence.EcommercePersistenceDbContext
+    name: EcommercePersistenceDbContext
+  - uid: Ecommerce.Persistence.PersistenceServiceRegistration
+    name: PersistenceServiceRegistration
+- uid: Ecommerce.Persistence.Contracts
+  name: Ecommerce.Persistence.Contracts
+  items:
+  - uid: Ecommerce.Persistence.Contracts.IAsyncRepository`1
+    name: IAsyncRepository<T>
+  - uid: Ecommerce.Persistence.Contracts.ICartItemRepository
+    name: ICartItemRepository
+  - uid: Ecommerce.Persistence.Contracts.ICategoryAsyncRepository
+    name: ICategoryAsyncRepository
+  - uid: Ecommerce.Persistence.Contracts.IOrderAsyncRepository
+    name: IOrderAsyncRepository
+  - uid: Ecommerce.Persistence.Contracts.IOrderItemAsyncRepository
+    name: IOrderItemAsyncRepository
+  - uid: Ecommerce.Persistence.Contracts.IOrderKeyRepository
+    name: IOrderKeyRepository
+  - uid: Ecommerce.Persistence.Contracts.IProductAsyncRepository
+    name: IProductAsyncRepository
+  - uid: Ecommerce.Persistence.Contracts.IReviewAsyncRepository
+    name: IReviewAsyncRepository
+  - uid: Ecommerce.Persistence.Contracts.IStorageService
+    name: IStorageService
+- uid: Ecommerce.Persistence.Migrations
+  name: Ecommerce.Persistence.Migrations
+  items:
+  - uid: Ecommerce.Persistence.Migrations.InitDatabase
+    name: InitDatabase
+- uid: Ecommerce.Persistence.Repositories
+  name: Ecommerce.Persistence.Repositories
+  items:
+  - uid: Ecommerce.Persistence.Repositories.CartItemRepository
+    name: CartItemRepository
+  - uid: Ecommerce.Persistence.Repositories.CategoryAsyncRepository
+    name: CategoryAsyncRepository
+  - uid: Ecommerce.Persistence.Repositories.OrderAsyncRepository
+    name: OrderAsyncRepository
+  - uid: Ecommerce.Persistence.Repositories.OrderItemAsyncRepository
+    name: OrderItemAsyncRepository
+  - uid: Ecommerce.Persistence.Repositories.OrderKeyRepository
+    name: OrderKeyRepository
+  - uid: Ecommerce.Persistence.Repositories.ProductAsyncRepository
+    name: ProductAsyncRepository
+  - uid: Ecommerce.Persistence.Repositories.ReviewAsyncRepository
+    name: ReviewAsyncRepository
+- uid: Ecommerce.Persistence.Services
+  name: Ecommerce.Persistence.Services
+  items:
+  - uid: Ecommerce.Persistence.Services.ProductImageStorageService
+    name: ProductImageStorageService
+- uid: Ecommerce.Shared.Dtos
+  name: Ecommerce.Shared.Dtos
+  items:
+  - uid: Ecommerce.Shared.Dtos.CartItemDto
+    name: CartItemDto
+  - uid: Ecommerce.Shared.Dtos.CategoryDto
+    name: CategoryDto
+  - uid: Ecommerce.Shared.Dtos.OrderDto
+    name: OrderDto
+  - uid: Ecommerce.Shared.Dtos.OrderItemDto
+    name: OrderItemDto
+  - uid: Ecommerce.Shared.Dtos.ProductDto
+    name: ProductDto
+  - uid: Ecommerce.Shared.Dtos.ReviewDto
+    name: ReviewDto
+- uid: Ecommerce.Shared.Enums
+  name: Ecommerce.Shared.Enums
+  items:
+  - uid: Ecommerce.Shared.Enums.OrderStatus
+    name: OrderStatus
+  - uid: Ecommerce.Shared.Enums.PaymentSource
+    name: PaymentSource
+- uid: Ecommerce.Shared.Exceptions
+  name: Ecommerce.Shared.Exceptions
+  items:
+  - uid: Ecommerce.Shared.Exceptions.BadRequestException
+    name: BadRequestException
+  - uid: Ecommerce.Shared.Exceptions.InvalidPaymentSourceException
+    name: InvalidPaymentSourceException
+  - uid: Ecommerce.Shared.Exceptions.NotFoundException
+    name: NotFoundException
+- uid: Ecommerce.Shared.Extensions
+  name: Ecommerce.Shared.Extensions
+  items:
+  - uid: Ecommerce.Shared.Extensions.DateTimeExtensions
+    name: DateTimeExtensions
+  - uid: Ecommerce.Shared.Extensions.StringExtensions
+    name: StringExtensions
+- uid: Ecommerce.Shared.Requests.CartItem
+  name: Ecommerce.Shared.Requests.CartItem
+  items:
+  - uid: Ecommerce.Shared.Requests.CartItem.CreateCartItemApiRequest
+    name: CreateCartItemApiRequest
+  - uid: Ecommerce.Shared.Requests.CartItem.DeleteCartItemApiRequest
+    name: DeleteCartItemApiRequest
+  - uid: Ecommerce.Shared.Requests.CartItem.DeleteUserCartItemsApiRequest
+    name: DeleteUserCartItemsApiRequest
+  - uid: Ecommerce.Shared.Requests.CartItem.GetUserCartItemsApiRequest
+    name: GetUserCartItemsApiRequest
+  - uid: Ecommerce.Shared.Requests.CartItem.UpdateCartItemApiRequest
+    name: UpdateCartItemApiRequest
+- uid: Ecommerce.Shared.Requests.Category
+  name: Ecommerce.Shared.Requests.Category
+  items:
+  - uid: Ecommerce.Shared.Requests.Category.CreateCategoryApiRequest
+    name: CreateCategoryApiRequest
+  - uid: Ecommerce.Shared.Requests.Category.DeleteCategoryApiRequest
+    name: DeleteCategoryApiRequest
+  - uid: Ecommerce.Shared.Requests.Category.GetAllCategoriesApiRequest
+    name: GetAllCategoriesApiRequest
+  - uid: Ecommerce.Shared.Requests.Category.GetCategoryByIdApiRequest
+    name: GetCategoryByIdApiRequest
+  - uid: Ecommerce.Shared.Requests.Category.UpdateCategoryApiRequest
+    name: UpdateCategoryApiRequest
+- uid: Ecommerce.Shared.Requests.Order
+  name: Ecommerce.Shared.Requests.Order
+  items:
+  - uid: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+    name: CreateOrderApiRequest
+  - uid: Ecommerce.Shared.Requests.Order.GetAllOrdersByUserIdApiRequest
+    name: GetAllOrdersByUserIdApiRequest
+  - uid: Ecommerce.Shared.Requests.Order.GetOrderAfterSuccessfulCheckoutApiRequest
+    name: GetOrderAfterSuccessfulCheckoutApiRequest
+  - uid: Ecommerce.Shared.Requests.Order.GetOrderByIdApiRequest
+    name: GetOrderByIdApiRequest
+  - uid: Ecommerce.Shared.Requests.Order.UpdateOrderApiRequest
+    name: UpdateOrderApiRequest
+- uid: Ecommerce.Shared.Requests.PayPal
+  name: Ecommerce.Shared.Requests.PayPal
+  items:
+  - uid: Ecommerce.Shared.Requests.PayPal.CreatePayPalOrderRequest
+    name: CreatePayPalOrderRequest
+- uid: Ecommerce.Shared.Requests.Product
+  name: Ecommerce.Shared.Requests.Product
+  items:
+  - uid: Ecommerce.Shared.Requests.Product.CreateProductApiRequest
+    name: CreateProductApiRequest
+  - uid: Ecommerce.Shared.Requests.Product.DeleteProductApiRequest
+    name: DeleteProductApiRequest
+  - uid: Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest
+    name: GetAllProductsByCategoryIdApiRequest
+  - uid: Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest
+    name: GetProductByIdApiRequest
+  - uid: Ecommerce.Shared.Requests.Product.UpdateProductApiRequest
+    name: UpdateProductApiRequest
+- uid: Ecommerce.Shared.Requests.Review
+  name: Ecommerce.Shared.Requests.Review
+  items:
+  - uid: Ecommerce.Shared.Requests.Review.CreateReviewApiRequest
+    name: CreateReviewApiRequest
+  - uid: Ecommerce.Shared.Requests.Review.DeleteReviewApiRequest
+    name: DeleteReviewApiRequest
+  - uid: Ecommerce.Shared.Requests.Review.GetReviewsForProductApiRequest
+    name: GetReviewsForProductApiRequest
+  - uid: Ecommerce.Shared.Requests.Review.GetUserReviewForProductApiRequest
+    name: GetUserReviewForProductApiRequest
+  - uid: Ecommerce.Shared.Requests.Review.UpdateReviewApiRequest
+    name: UpdateReviewApiRequest
+- uid: Ecommerce.Shared.Responses
+  name: Ecommerce.Shared.Responses
+  items:
+  - uid: Ecommerce.Shared.Responses.BaseResponse
+    name: BaseResponse
+- uid: Ecommerce.Shared.Responses.CartItem
+  name: Ecommerce.Shared.Responses.CartItem
+  items:
+  - uid: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+    name: CreateCartItemResponse
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+    name: DeleteCartItemResponse
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse
+    name: DeleteUserCartItemsResponse
+  - uid: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+    name: GetUserCartItemsResponse
+  - uid: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse
+    name: UpdateCartItemResponse
+- uid: Ecommerce.Shared.Responses.Category
+  name: Ecommerce.Shared.Responses.Category
+  items:
+  - uid: Ecommerce.Shared.Responses.Category.CreateCategoryResponse
+    name: CreateCategoryResponse
+  - uid: Ecommerce.Shared.Responses.Category.DeleteCategoryResponse
+    name: DeleteCategoryResponse
+  - uid: Ecommerce.Shared.Responses.Category.GetAllCategoriesResponse
+    name: GetAllCategoriesResponse
+  - uid: Ecommerce.Shared.Responses.Category.GetCategoryByIdResponse
+    name: GetCategoryByIdResponse
+  - uid: Ecommerce.Shared.Responses.Category.UpdateCategoryResponse
+    name: UpdateCategoryResponse
+- uid: Ecommerce.Shared.Responses.Order
+  name: Ecommerce.Shared.Responses.Order
+  items:
+  - uid: Ecommerce.Shared.Responses.Order.CreateOrderResponse
+    name: CreateOrderResponse
+  - uid: Ecommerce.Shared.Responses.Order.DeleteOrderResponse
+    name: DeleteOrderResponse
+  - uid: Ecommerce.Shared.Responses.Order.GetAllOrdersByUserIdResponse
+    name: GetAllOrdersByUserIdResponse
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderAfterSuccessfulCheckoutResponse
+    name: GetOrderAfterSuccessfulCheckoutResponse
+  - uid: Ecommerce.Shared.Responses.Order.GetOrderByIdResponse
+    name: GetOrderByIdResponse
+  - uid: Ecommerce.Shared.Responses.Order.UpdateOrderResponse
+    name: UpdateOrderResponse
+- uid: Ecommerce.Shared.Responses.OrderItem
+  name: Ecommerce.Shared.Responses.OrderItem
+  items:
+  - uid: Ecommerce.Shared.Responses.OrderItem.CreateOrderItemResponse
+    name: CreateOrderItemResponse
+  - uid: Ecommerce.Shared.Responses.OrderItem.GetAllOrderItemsByOrderIdResponse
+    name: GetAllOrderItemsByOrderIdResponse
+- uid: Ecommerce.Shared.Responses.PayPal
+  name: Ecommerce.Shared.Responses.PayPal
+  items:
+  - uid: Ecommerce.Shared.Responses.PayPal.CreatePayPalOrderResponse
+    name: CreatePayPalOrderResponse
+- uid: Ecommerce.Shared.Responses.Product
+  name: Ecommerce.Shared.Responses.Product
+  items:
+  - uid: Ecommerce.Shared.Responses.Product.CreateProductResponse
+    name: CreateProductResponse
+  - uid: Ecommerce.Shared.Responses.Product.DeleteProductResponse
+    name: DeleteProductResponse
+  - uid: Ecommerce.Shared.Responses.Product.GetAllProductsByCategoryIdResponse
+    name: GetAllProductsByCategoryIdResponse
+  - uid: Ecommerce.Shared.Responses.Product.GetProductByIdResponse
+    name: GetProductByIdResponse
+  - uid: Ecommerce.Shared.Responses.Product.UpdateProductResponse
+    name: UpdateProductResponse
+- uid: Ecommerce.Shared.Responses.Review
+  name: Ecommerce.Shared.Responses.Review
+  items:
+  - uid: Ecommerce.Shared.Responses.Review.CreateReviewResponse
+    name: CreateReviewResponse
+  - uid: Ecommerce.Shared.Responses.Review.DeleteReviewResponse
+    name: DeleteReviewResponse
+  - uid: Ecommerce.Shared.Responses.Review.GetReviewsForProductResponse
+    name: GetReviewsForProductResponse
+  - uid: Ecommerce.Shared.Responses.Review.GetUserReviewForProductResponse
+    name: GetUserReviewForProductResponse
+  - uid: Ecommerce.Shared.Responses.Review.UpdateReviewResponse
+    name: UpdateReviewResponse
+- uid: Ecommerce.Shared.Security
+  name: Ecommerce.Shared.Security
+  items:
+  - uid: Ecommerce.Shared.Security.AuthenticatedUserModel
+    name: AuthenticatedUserModel
+  - uid: Ecommerce.Shared.Security.CustomClaims
+    name: CustomClaims
+  - uid: Ecommerce.Shared.Security.SignInResponseResult
+    name: SignInResponseResult
+- uid: Ecommerce.Shared.Security.Requests
+  name: Ecommerce.Shared.Security.Requests
+  items:
+  - uid: Ecommerce.Shared.Security.Requests.AuthenticationRequest
+    name: AuthenticationRequest
+  - uid: Ecommerce.Shared.Security.Requests.ConfirmEmailRequest
+    name: ConfirmEmailRequest
+  - uid: Ecommerce.Shared.Security.Requests.CreateUserRequest
+    name: CreateUserRequest
+  - uid: Ecommerce.Shared.Security.Requests.LogoutUserRequest
+    name: LogoutUserRequest
+  - uid: Ecommerce.Shared.Security.Requests.UpdateEcommerceUserRequest
+    name: UpdateEcommerceUserRequest
+  - uid: Ecommerce.Shared.Security.Requests.UpdatePasswordRequest
+    name: UpdatePasswordRequest
+- uid: Ecommerce.Shared.Security.Responses
+  name: Ecommerce.Shared.Security.Responses
+  items:
+  - uid: Ecommerce.Shared.Security.Responses.AuthenticateResponse
+    name: AuthenticateResponse
+  - uid: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse
+    name: ConfirmEmailResponse
+  - uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+    name: CreateUserResponse
+  - uid: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+    name: UpdateEcommerceUserResponse
+  - uid: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+    name: UpdatePasswordResponse
+- uid: Ecommerce.Worker
+  name: Ecommerce.Worker
+  items:
+  - uid: Ecommerce.Worker.EcommerceLogTextFormatter
+    name: EcommerceLogTextFormatter
+- uid: Ecommerce.Worker.Consumers.EcommerceUser
+  name: Ecommerce.Worker.Consumers.EcommerceUser
+  items:
+  - uid: Ecommerce.Worker.Consumers.EcommerceUser.SendEmailConfirmationConsumer
+    name: SendEmailConfirmationConsumer
+- uid: Ecommerce.Worker.Consumers.Order
+  name: Ecommerce.Worker.Consumers.Order
+  items:
+  - uid: Ecommerce.Worker.Consumers.Order.SendOrderConfirmationConsumer
+    name: SendOrderConfirmationConsumer
+memberLayout: SamePage

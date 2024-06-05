@@ -1,0 +1,1529 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  commentId: T:Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  id: PayPalTests
+  parent: Ecommerce.UnitTests.ApplicationTests
+  children:
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue
+  - Ecommerce.UnitTests.ApplicationTests.PayPalTests.Setup
+  langs:
+  - csharp
+  - vb
+  name: PayPalTests
+  nameWithType: PayPalTests
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  type: Class
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PayPalTests
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 27
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class PayPalTests
+    content.vb: >-
+      <TestFixture>
+
+      Public Class PayPalTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.Setup
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.Setup
+  id: Setup
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: PayPalTests.Setup()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.Setup()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: Setup
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 36
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void Setup()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub Setup()
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.Setup*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue
+  id: CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue()
+  nameWithType: PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 47
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  id: CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse()
+  nameWithType: PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 73
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse
+  id: CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse()
+  nameWithType: PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 93
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse
+  id: CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse()
+  nameWithType: PayPalTests.CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 118
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  id: CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  nameWithType: PayPalTests.CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 148
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse
+  id: CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse()
+  nameWithType: PayPalTests.CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 181
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse
+  id: CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse()
+  nameWithType: PayPalTests.CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 206
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse
+  id: CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse()
+  nameWithType: PayPalTests.CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 233
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey
+  id: CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey()
+  nameWithType: PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 270
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull
+  id: CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull()
+  nameWithType: PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 296
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull
+  id: CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull()
+  nameWithType: PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 320
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue
+  id: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue()
+  nameWithType: PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 350
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse
+  id: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse()
+  nameWithType: PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 371
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse
+  id: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse()
+  nameWithType: PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 391
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue
+  id: HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue()
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 416
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse
+  id: HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse()
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 446
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse
+  id: HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse()
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 464
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  id: HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse()
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 482
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse
+  id: HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse()
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 502
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse
+  id: HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse()
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 527
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder
+  id: GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder()
+  nameWithType: PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 561
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull
+  id: GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull()
+  nameWithType: PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 587
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull
+  id: GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull()
+  nameWithType: PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 605
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull
+  id: GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull()
+  nameWithType: PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 623
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull
+  commentId: M:Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull
+  id: GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull
+  parent: Ecommerce.UnitTests.ApplicationTests.PayPalTests
+  langs:
+  - csharp
+  - vb
+  name: GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull()
+  nameWithType: PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull()
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull()
+  type: Method
+  source:
+    remote:
+      path: Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull
+    path: ../../Tests/Ecommerce.UnitTests/ApplicationTests/PayPalTests.cs
+    startLine: 643
+  assemblies:
+  - Ecommerce.UnitTests
+  namespace: Ecommerce.UnitTests.ApplicationTests
+  syntax:
+    content: >-
+      [Test]
+
+      public Task GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Test>
+
+      Public Function GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull() As Task
+  overload: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: Ecommerce.UnitTests.ApplicationTests
+  commentId: N:Ecommerce.UnitTests.ApplicationTests
+  href: Ecommerce.html
+  name: Ecommerce.UnitTests.ApplicationTests
+  nameWithType: Ecommerce.UnitTests.ApplicationTests
+  fullName: Ecommerce.UnitTests.ApplicationTests
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UnitTests
+    name: UnitTests
+    href: Ecommerce.UnitTests.html
+  - name: .
+  - uid: Ecommerce.UnitTests.ApplicationTests
+    name: ApplicationTests
+    href: Ecommerce.UnitTests.ApplicationTests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.Setup*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.Setup
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_Setup
+  name: Setup
+  nameWithType: PayPalTests.Setup
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.Setup
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue
+  name: CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue
+  nameWithType: PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsTrue
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  name: CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  nameWithType: PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse
+  name: CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse
+  nameWithType: PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenOrderDeleteFails_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse
+  name: CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse
+  nameWithType: PayPalTests.CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CancelPayPalOrderCommandHandler_WhenReturnKeyDeleteFails_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  name: CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  nameWithType: PayPalTests.CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WithValidRequestAndWithoutErrors_ReturnsSuccess
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse
+  name: CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse
+  nameWithType: PayPalTests.CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenOrderHasNoItems_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse
+  name: CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse
+  nameWithType: PayPalTests.CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenReturnKeyCreationFails_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse
+  name: CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse
+  nameWithType: PayPalTests.CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalOrderCommandHandler_WhenPayPalOrderCreationFails_ReturnsFailedResponse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey
+  name: CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey
+  nameWithType: PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderExistsAndWithoutErrors_ReturnsReturnKey
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull
+  name: CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull
+  nameWithType: PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderDoesNotExist_ReturnsNull
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull
+  name: CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull
+  nameWithType: PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.CreatePayPalReturnKeyCommandHandler_WhenOrderKeyCreationFails_ReturnsNull
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue
+  name: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue
+  nameWithType: PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsTrue
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse
+  name: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse
+  nameWithType: PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDoesNotExist_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse
+  name: DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse
+  nameWithType: PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.DeletePayPalReturnKeyCommandHandler_WhenOrderKeyDeleteFails_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue
+  name: HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WithValidRequestAndWithoutErrors_ReturnsTrue
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse
+  name: HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsNull_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse
+  name: HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenReturnKeyIsEmpty_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  name: HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderDoesNotExist_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse
+  name: HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenOrderUpdateFails_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse
+  name: HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse
+  nameWithType: PayPalTests.HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder
+  name: GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder
+  nameWithType: PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyExistsAndWithoutErrors_ReturnsOrder
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull
+  name: GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull
+  nameWithType: PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsNull_ReturnsNull
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull
+  name: GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull
+  nameWithType: PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenReturnKeyIsEmpty_ReturnsNull
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull
+  name: GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull
+  nameWithType: PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderKeyDoesNotExist_ReturnsNull
+- uid: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull*
+  commentId: Overload:Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull
+  href: Ecommerce.UnitTests.ApplicationTests.PayPalTests.html#Ecommerce_UnitTests_ApplicationTests_PayPalTests_GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull
+  name: GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull
+  nameWithType: PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull
+  fullName: Ecommerce.UnitTests.ApplicationTests.PayPalTests.GetOrderByReturnKeyQueryHandler_WhenOrderLookupFails_ReturnsNull

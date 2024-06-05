@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Requests.Product
+  commentId: N:Ecommerce.Shared.Requests.Product
+  id: Ecommerce.Shared.Requests.Product
+  children:
+  - Ecommerce.Shared.Requests.Product.CreateProductApiRequest
+  - Ecommerce.Shared.Requests.Product.DeleteProductApiRequest
+  - Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest
+  - Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest
+  - Ecommerce.Shared.Requests.Product.UpdateProductApiRequest
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Requests.Product
+  nameWithType: Ecommerce.Shared.Requests.Product
+  fullName: Ecommerce.Shared.Requests.Product
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Requests.Product.CreateProductApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Product.CreateProductApiRequest
+  parent: Ecommerce.Shared.Requests.Product
+  href: Ecommerce.Shared.Requests.Product.CreateProductApiRequest.html
+  name: CreateProductApiRequest
+  nameWithType: CreateProductApiRequest
+  fullName: Ecommerce.Shared.Requests.Product.CreateProductApiRequest
+- uid: Ecommerce.Shared.Requests.Product.DeleteProductApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Product.DeleteProductApiRequest
+  parent: Ecommerce.Shared.Requests.Product
+  href: Ecommerce.Shared.Requests.Product.DeleteProductApiRequest.html
+  name: DeleteProductApiRequest
+  nameWithType: DeleteProductApiRequest
+  fullName: Ecommerce.Shared.Requests.Product.DeleteProductApiRequest
+- uid: Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest
+  parent: Ecommerce.Shared.Requests.Product
+  href: Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest.html
+  name: GetAllProductsByCategoryIdApiRequest
+  nameWithType: GetAllProductsByCategoryIdApiRequest
+  fullName: Ecommerce.Shared.Requests.Product.GetAllProductsByCategoryIdApiRequest
+- uid: Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest
+  parent: Ecommerce.Shared.Requests.Product
+  href: Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest.html
+  name: GetProductByIdApiRequest
+  nameWithType: GetProductByIdApiRequest
+  fullName: Ecommerce.Shared.Requests.Product.GetProductByIdApiRequest
+- uid: Ecommerce.Shared.Requests.Product.UpdateProductApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Product.UpdateProductApiRequest
+  parent: Ecommerce.Shared.Requests.Product
+  href: Ecommerce.Shared.Requests.Product.UpdateProductApiRequest.html
+  name: UpdateProductApiRequest
+  nameWithType: UpdateProductApiRequest
+  fullName: Ecommerce.Shared.Requests.Product.UpdateProductApiRequest
+- uid: Ecommerce.Shared.Requests.Product
+  commentId: N:Ecommerce.Shared.Requests.Product
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Requests.Product
+  nameWithType: Ecommerce.Shared.Requests.Product
+  fullName: Ecommerce.Shared.Requests.Product
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Product
+    name: Product
+    href: Ecommerce.Shared.Requests.Product.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Product
+    name: Product
+    href: Ecommerce.Shared.Requests.Product.html

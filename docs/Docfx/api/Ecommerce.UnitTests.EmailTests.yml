@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.EmailTests
+  commentId: N:Ecommerce.UnitTests.EmailTests
+  id: Ecommerce.UnitTests.EmailTests
+  children:
+  - Ecommerce.UnitTests.EmailTests.EmailServiceTests
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UnitTests.EmailTests
+  nameWithType: Ecommerce.UnitTests.EmailTests
+  fullName: Ecommerce.UnitTests.EmailTests
+  type: Namespace
+  assemblies:
+  - Ecommerce.UnitTests
+references:
+- uid: Ecommerce.UnitTests.EmailTests.EmailServiceTests
+  commentId: T:Ecommerce.UnitTests.EmailTests.EmailServiceTests
+  href: Ecommerce.UnitTests.EmailTests.EmailServiceTests.html
+  name: EmailServiceTests
+  nameWithType: EmailServiceTests
+  fullName: Ecommerce.UnitTests.EmailTests.EmailServiceTests

@@ -1,0 +1,531 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Contracts.ICartService
+  commentId: T:Ecommerce.UI.Contracts.ICartService
+  id: ICartService
+  parent: Ecommerce.UI.Contracts
+  children:
+  - Ecommerce.UI.Contracts.ICartService.AddItemToCart(Ecommerce.Shared.Dtos.CartItemDto)
+  - Ecommerce.UI.Contracts.ICartService.ClearCart(System.Guid)
+  - Ecommerce.UI.Contracts.ICartService.GetItemsInCart(System.Guid)
+  - Ecommerce.UI.Contracts.ICartService.RemoveItemFromCart(Ecommerce.Shared.Dtos.CartItemDto)
+  - Ecommerce.UI.Contracts.ICartService.UpdateItemInCart(Ecommerce.Shared.Dtos.CartItemDto)
+  langs:
+  - csharp
+  - vb
+  name: ICartService
+  nameWithType: ICartService
+  fullName: Ecommerce.UI.Contracts.ICartService
+  type: Interface
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ICartService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ICartService
+    path: ../../UI/Ecommerce.UI/Contracts/ICartService.cs
+    startLine: 7
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: public interface ICartService
+    content.vb: Public Interface ICartService
+- uid: Ecommerce.UI.Contracts.ICartService.AddItemToCart(Ecommerce.Shared.Dtos.CartItemDto)
+  commentId: M:Ecommerce.UI.Contracts.ICartService.AddItemToCart(Ecommerce.Shared.Dtos.CartItemDto)
+  id: AddItemToCart(Ecommerce.Shared.Dtos.CartItemDto)
+  parent: Ecommerce.UI.Contracts.ICartService
+  langs:
+  - csharp
+  - vb
+  name: AddItemToCart(CartItemDto)
+  nameWithType: ICartService.AddItemToCart(CartItemDto)
+  fullName: Ecommerce.UI.Contracts.ICartService.AddItemToCart(Ecommerce.Shared.Dtos.CartItemDto)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ICartService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: AddItemToCart
+    path: ../../UI/Ecommerce.UI/Contracts/ICartService.cs
+    startLine: 9
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<CreateCartItemResponse> AddItemToCart(CartItemDto cartItem)
+    parameters:
+    - id: cartItem
+      type: Ecommerce.Shared.Dtos.CartItemDto
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse}
+    content.vb: Function AddItemToCart(cartItem As CartItemDto) As Task(Of CreateCartItemResponse)
+  overload: Ecommerce.UI.Contracts.ICartService.AddItemToCart*
+- uid: Ecommerce.UI.Contracts.ICartService.RemoveItemFromCart(Ecommerce.Shared.Dtos.CartItemDto)
+  commentId: M:Ecommerce.UI.Contracts.ICartService.RemoveItemFromCart(Ecommerce.Shared.Dtos.CartItemDto)
+  id: RemoveItemFromCart(Ecommerce.Shared.Dtos.CartItemDto)
+  parent: Ecommerce.UI.Contracts.ICartService
+  langs:
+  - csharp
+  - vb
+  name: RemoveItemFromCart(CartItemDto)
+  nameWithType: ICartService.RemoveItemFromCart(CartItemDto)
+  fullName: Ecommerce.UI.Contracts.ICartService.RemoveItemFromCart(Ecommerce.Shared.Dtos.CartItemDto)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ICartService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: RemoveItemFromCart
+    path: ../../UI/Ecommerce.UI/Contracts/ICartService.cs
+    startLine: 11
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<DeleteCartItemResponse> RemoveItemFromCart(CartItemDto cartItem)
+    parameters:
+    - id: cartItem
+      type: Ecommerce.Shared.Dtos.CartItemDto
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}
+    content.vb: Function RemoveItemFromCart(cartItem As CartItemDto) As Task(Of DeleteCartItemResponse)
+  overload: Ecommerce.UI.Contracts.ICartService.RemoveItemFromCart*
+- uid: Ecommerce.UI.Contracts.ICartService.ClearCart(System.Guid)
+  commentId: M:Ecommerce.UI.Contracts.ICartService.ClearCart(System.Guid)
+  id: ClearCart(System.Guid)
+  parent: Ecommerce.UI.Contracts.ICartService
+  langs:
+  - csharp
+  - vb
+  name: ClearCart(Guid)
+  nameWithType: ICartService.ClearCart(Guid)
+  fullName: Ecommerce.UI.Contracts.ICartService.ClearCart(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ICartService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: ClearCart
+    path: ../../UI/Ecommerce.UI/Contracts/ICartService.cs
+    startLine: 13
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<DeleteUserCartItemsResponse> ClearCart(Guid userId)
+    parameters:
+    - id: userId
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse}
+    content.vb: Function ClearCart(userId As Guid) As Task(Of DeleteUserCartItemsResponse)
+  overload: Ecommerce.UI.Contracts.ICartService.ClearCart*
+- uid: Ecommerce.UI.Contracts.ICartService.UpdateItemInCart(Ecommerce.Shared.Dtos.CartItemDto)
+  commentId: M:Ecommerce.UI.Contracts.ICartService.UpdateItemInCart(Ecommerce.Shared.Dtos.CartItemDto)
+  id: UpdateItemInCart(Ecommerce.Shared.Dtos.CartItemDto)
+  parent: Ecommerce.UI.Contracts.ICartService
+  langs:
+  - csharp
+  - vb
+  name: UpdateItemInCart(CartItemDto)
+  nameWithType: ICartService.UpdateItemInCart(CartItemDto)
+  fullName: Ecommerce.UI.Contracts.ICartService.UpdateItemInCart(Ecommerce.Shared.Dtos.CartItemDto)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ICartService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: UpdateItemInCart
+    path: ../../UI/Ecommerce.UI/Contracts/ICartService.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<UpdateCartItemResponse> UpdateItemInCart(CartItemDto cartItem)
+    parameters:
+    - id: cartItem
+      type: Ecommerce.Shared.Dtos.CartItemDto
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse}
+    content.vb: Function UpdateItemInCart(cartItem As CartItemDto) As Task(Of UpdateCartItemResponse)
+  overload: Ecommerce.UI.Contracts.ICartService.UpdateItemInCart*
+- uid: Ecommerce.UI.Contracts.ICartService.GetItemsInCart(System.Guid)
+  commentId: M:Ecommerce.UI.Contracts.ICartService.GetItemsInCart(System.Guid)
+  id: GetItemsInCart(System.Guid)
+  parent: Ecommerce.UI.Contracts.ICartService
+  langs:
+  - csharp
+  - vb
+  name: GetItemsInCart(Guid)
+  nameWithType: ICartService.GetItemsInCart(Guid)
+  fullName: Ecommerce.UI.Contracts.ICartService.GetItemsInCart(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: UI/Ecommerce.UI/Contracts/ICartService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: GetItemsInCart
+    path: ../../UI/Ecommerce.UI/Contracts/ICartService.cs
+    startLine: 17
+  assemblies:
+  - Ecommerce.UI
+  namespace: Ecommerce.UI.Contracts
+  syntax:
+    content: Task<GetUserCartItemsResponse> GetItemsInCart(Guid userId)
+    parameters:
+    - id: userId
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}
+    content.vb: Function GetItemsInCart(userId As Guid) As Task(Of GetUserCartItemsResponse)
+  overload: Ecommerce.UI.Contracts.ICartService.GetItemsInCart*
+references:
+- uid: Ecommerce.UI.Contracts
+  commentId: N:Ecommerce.UI.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.UI.Contracts
+  nameWithType: Ecommerce.UI.Contracts
+  fullName: Ecommerce.UI.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.UI
+    name: UI
+    href: Ecommerce.UI.html
+  - name: .
+  - uid: Ecommerce.UI.Contracts
+    name: Contracts
+    href: Ecommerce.UI.Contracts.html
+- uid: Ecommerce.UI.Contracts.ICartService.AddItemToCart*
+  commentId: Overload:Ecommerce.UI.Contracts.ICartService.AddItemToCart
+  href: Ecommerce.UI.Contracts.ICartService.html#Ecommerce_UI_Contracts_ICartService_AddItemToCart_Ecommerce_Shared_Dtos_CartItemDto_
+  name: AddItemToCart
+  nameWithType: ICartService.AddItemToCart
+  fullName: Ecommerce.UI.Contracts.ICartService.AddItemToCart
+- uid: Ecommerce.Shared.Dtos.CartItemDto
+  commentId: T:Ecommerce.Shared.Dtos.CartItemDto
+  parent: Ecommerce.Shared.Dtos
+  href: Ecommerce.Shared.Dtos.CartItemDto.html
+  name: CartItemDto
+  nameWithType: CartItemDto
+  fullName: Ecommerce.Shared.Dtos.CartItemDto
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CreateCartItemResponse>
+  nameWithType: Task<CreateCartItemResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse>
+  nameWithType.vb: Task(Of CreateCartItemResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse)
+  name.vb: Task(Of CreateCartItemResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+    name: CreateCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse
+    name: CreateCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.CreateCartItemResponse.html
+  - name: )
+- uid: Ecommerce.Shared.Dtos
+  commentId: N:Ecommerce.Shared.Dtos
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Dtos
+  nameWithType: Ecommerce.Shared.Dtos
+  fullName: Ecommerce.Shared.Dtos
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Dtos
+    name: Dtos
+    href: Ecommerce.Shared.Dtos.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Ecommerce.UI.Contracts.ICartService.RemoveItemFromCart*
+  commentId: Overload:Ecommerce.UI.Contracts.ICartService.RemoveItemFromCart
+  href: Ecommerce.UI.Contracts.ICartService.html#Ecommerce_UI_Contracts_ICartService_RemoveItemFromCart_Ecommerce_Shared_Dtos_CartItemDto_
+  name: RemoveItemFromCart
+  nameWithType: ICartService.RemoveItemFromCart
+  fullName: Ecommerce.UI.Contracts.ICartService.RemoveItemFromCart
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DeleteCartItemResponse>
+  nameWithType: Task<DeleteCartItemResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse>
+  nameWithType.vb: Task(Of DeleteCartItemResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse)
+  name.vb: Task(Of DeleteCartItemResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+    name: DeleteCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse
+    name: DeleteCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.DeleteCartItemResponse.html
+  - name: )
+- uid: Ecommerce.UI.Contracts.ICartService.ClearCart*
+  commentId: Overload:Ecommerce.UI.Contracts.ICartService.ClearCart
+  href: Ecommerce.UI.Contracts.ICartService.html#Ecommerce_UI_Contracts_ICartService_ClearCart_System_Guid_
+  name: ClearCart
+  nameWithType: ICartService.ClearCart
+  fullName: Ecommerce.UI.Contracts.ICartService.ClearCart
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DeleteUserCartItemsResponse>
+  nameWithType: Task<DeleteUserCartItemsResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse>
+  nameWithType.vb: Task(Of DeleteUserCartItemsResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse)
+  name.vb: Task(Of DeleteUserCartItemsResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse
+    name: DeleteUserCartItemsResponse
+    href: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse
+    name: DeleteUserCartItemsResponse
+    href: Ecommerce.Shared.Responses.CartItem.DeleteUserCartItemsResponse.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.UI.Contracts.ICartService.UpdateItemInCart*
+  commentId: Overload:Ecommerce.UI.Contracts.ICartService.UpdateItemInCart
+  href: Ecommerce.UI.Contracts.ICartService.html#Ecommerce_UI_Contracts_ICartService_UpdateItemInCart_Ecommerce_Shared_Dtos_CartItemDto_
+  name: UpdateItemInCart
+  nameWithType: ICartService.UpdateItemInCart
+  fullName: Ecommerce.UI.Contracts.ICartService.UpdateItemInCart
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UpdateCartItemResponse>
+  nameWithType: Task<UpdateCartItemResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse>
+  nameWithType.vb: Task(Of UpdateCartItemResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse)
+  name.vb: Task(Of UpdateCartItemResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse
+    name: UpdateCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse
+    name: UpdateCartItemResponse
+    href: Ecommerce.Shared.Responses.CartItem.UpdateCartItemResponse.html
+  - name: )
+- uid: Ecommerce.UI.Contracts.ICartService.GetItemsInCart*
+  commentId: Overload:Ecommerce.UI.Contracts.ICartService.GetItemsInCart
+  href: Ecommerce.UI.Contracts.ICartService.html#Ecommerce_UI_Contracts_ICartService_GetItemsInCart_System_Guid_
+  name: GetItemsInCart
+  nameWithType: ICartService.GetItemsInCart
+  fullName: Ecommerce.UI.Contracts.ICartService.GetItemsInCart
+- uid: System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}
+  commentId: T:System.Threading.Tasks.Task{Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetUserCartItemsResponse>
+  nameWithType: Task<GetUserCartItemsResponse>
+  fullName: System.Threading.Tasks.Task<Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse>
+  nameWithType.vb: Task(Of GetUserCartItemsResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse)
+  name.vb: Task(Of GetUserCartItemsResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+    name: GetUserCartItemsResponse
+    href: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse
+    name: GetUserCartItemsResponse
+    href: Ecommerce.Shared.Responses.CartItem.GetUserCartItemsResponse.html
+  - name: )

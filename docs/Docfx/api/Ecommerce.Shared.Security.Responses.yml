@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Security.Responses
+  commentId: N:Ecommerce.Shared.Security.Responses
+  id: Ecommerce.Shared.Security.Responses
+  children:
+  - Ecommerce.Shared.Security.Responses.AuthenticateResponse
+  - Ecommerce.Shared.Security.Responses.ConfirmEmailResponse
+  - Ecommerce.Shared.Security.Responses.CreateUserResponse
+  - Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+  - Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Security.Responses
+  nameWithType: Ecommerce.Shared.Security.Responses
+  fullName: Ecommerce.Shared.Security.Responses
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Security.Responses.AuthenticateResponse
+  commentId: T:Ecommerce.Shared.Security.Responses.AuthenticateResponse
+  href: Ecommerce.Shared.Security.Responses.AuthenticateResponse.html
+  name: AuthenticateResponse
+  nameWithType: AuthenticateResponse
+  fullName: Ecommerce.Shared.Security.Responses.AuthenticateResponse
+- uid: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse
+  commentId: T:Ecommerce.Shared.Security.Responses.ConfirmEmailResponse
+  href: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse.html
+  name: ConfirmEmailResponse
+  nameWithType: ConfirmEmailResponse
+  fullName: Ecommerce.Shared.Security.Responses.ConfirmEmailResponse
+- uid: Ecommerce.Shared.Security.Responses.CreateUserResponse
+  commentId: T:Ecommerce.Shared.Security.Responses.CreateUserResponse
+  href: Ecommerce.Shared.Security.Responses.CreateUserResponse.html
+  name: CreateUserResponse
+  nameWithType: CreateUserResponse
+  fullName: Ecommerce.Shared.Security.Responses.CreateUserResponse
+- uid: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+  commentId: T:Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+  href: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse.html
+  name: UpdateEcommerceUserResponse
+  nameWithType: UpdateEcommerceUserResponse
+  fullName: Ecommerce.Shared.Security.Responses.UpdateEcommerceUserResponse
+- uid: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+  commentId: T:Ecommerce.Shared.Security.Responses.UpdatePasswordResponse
+  href: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse.html
+  name: UpdatePasswordResponse
+  nameWithType: UpdatePasswordResponse
+  fullName: Ecommerce.Shared.Security.Responses.UpdatePasswordResponse

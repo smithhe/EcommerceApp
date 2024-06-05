@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Security
+  commentId: N:Ecommerce.Shared.Security
+  id: Ecommerce.Shared.Security
+  children:
+  - Ecommerce.Shared.Security.AuthenticatedUserModel
+  - Ecommerce.Shared.Security.CustomClaims
+  - Ecommerce.Shared.Security.SignInResponseResult
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Security
+  nameWithType: Ecommerce.Shared.Security
+  fullName: Ecommerce.Shared.Security
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Security.AuthenticatedUserModel
+  commentId: T:Ecommerce.Shared.Security.AuthenticatedUserModel
+  href: Ecommerce.Shared.Security.AuthenticatedUserModel.html
+  name: AuthenticatedUserModel
+  nameWithType: AuthenticatedUserModel
+  fullName: Ecommerce.Shared.Security.AuthenticatedUserModel
+- uid: Ecommerce.Shared.Security.CustomClaims
+  commentId: T:Ecommerce.Shared.Security.CustomClaims
+  href: Ecommerce.Shared.Security.CustomClaims.html
+  name: CustomClaims
+  nameWithType: CustomClaims
+  fullName: Ecommerce.Shared.Security.CustomClaims
+- uid: Ecommerce.Shared.Security.SignInResponseResult
+  commentId: T:Ecommerce.Shared.Security.SignInResponseResult
+  parent: Ecommerce.Shared.Security
+  href: Ecommerce.Shared.Security.SignInResponseResult.html
+  name: SignInResponseResult
+  nameWithType: SignInResponseResult
+  fullName: Ecommerce.Shared.Security.SignInResponseResult
+- uid: Ecommerce.Shared.Security
+  commentId: N:Ecommerce.Shared.Security
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Security
+  nameWithType: Ecommerce.Shared.Security
+  fullName: Ecommerce.Shared.Security
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Security
+    name: Security
+    href: Ecommerce.Shared.Security.html

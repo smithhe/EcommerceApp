@@ -1,0 +1,229 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Mail.Contracts.IEmailService
+  commentId: T:Ecommerce.Mail.Contracts.IEmailService
+  id: IEmailService
+  parent: Ecommerce.Mail.Contracts
+  children:
+  - Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+  langs:
+  - csharp
+  - vb
+  name: IEmailService
+  nameWithType: IEmailService
+  fullName: Ecommerce.Mail.Contracts.IEmailService
+  type: Interface
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Contracts/IEmailService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: IEmailService
+    path: ../../Infrastructure/Ecommerce.Mail/Contracts/IEmailService.cs
+    startLine: 8
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Contracts
+  summary: Contract for sending emails
+  example: []
+  syntax:
+    content: public interface IEmailService
+    content.vb: Public Interface IEmailService
+- uid: Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+  commentId: M:Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+  id: SendEmailAsync(System.String,System.String,Ecommerce.Mail.Models.Enums.EmailTemplate,Ecommerce.Mail.Contracts.ITemplateModel)
+  parent: Ecommerce.Mail.Contracts.IEmailService
+  langs:
+  - csharp
+  - vb
+  name: SendEmailAsync(string, string, EmailTemplate, ITemplateModel)
+  nameWithType: IEmailService.SendEmailAsync(string, string, EmailTemplate, ITemplateModel)
+  fullName: Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(string, string, Ecommerce.Mail.Models.Enums.EmailTemplate, Ecommerce.Mail.Contracts.ITemplateModel)
+  type: Method
+  source:
+    remote:
+      path: Infrastructure/Ecommerce.Mail/Contracts/IEmailService.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: SendEmailAsync
+    path: ../../Infrastructure/Ecommerce.Mail/Contracts/IEmailService.cs
+    startLine: 17
+  assemblies:
+  - Ecommerce.Mail
+  namespace: Ecommerce.Mail.Contracts
+  summary: Sends an email asynchronously
+  example: []
+  syntax:
+    content: Task SendEmailAsync(string sendTo, string subject, EmailTemplate templateToUse, ITemplateModel templateModel)
+    parameters:
+    - id: sendTo
+      type: System.String
+      description: The email address to send to
+    - id: subject
+      type: System.String
+      description: The subject of the email
+    - id: templateToUse
+      type: Ecommerce.Mail.Models.Enums.EmailTemplate
+      description: The email template to use
+    - id: templateModel
+      type: Ecommerce.Mail.Contracts.ITemplateModel
+      description: The model with the information to fill into the template
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SendEmailAsync(sendTo As String, subject As String, templateToUse As EmailTemplate, templateModel As ITemplateModel) As Task
+  overload: Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync*
+  nameWithType.vb: IEmailService.SendEmailAsync(String, String, EmailTemplate, ITemplateModel)
+  fullName.vb: Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync(String, String, Ecommerce.Mail.Models.Enums.EmailTemplate, Ecommerce.Mail.Contracts.ITemplateModel)
+  name.vb: SendEmailAsync(String, String, EmailTemplate, ITemplateModel)
+references:
+- uid: Ecommerce.Mail.Contracts
+  commentId: N:Ecommerce.Mail.Contracts
+  href: Ecommerce.html
+  name: Ecommerce.Mail.Contracts
+  nameWithType: Ecommerce.Mail.Contracts
+  fullName: Ecommerce.Mail.Contracts
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Contracts
+    name: Contracts
+    href: Ecommerce.Mail.Contracts.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Contracts
+    name: Contracts
+    href: Ecommerce.Mail.Contracts.html
+- uid: Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync*
+  commentId: Overload:Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync
+  href: Ecommerce.Mail.Contracts.IEmailService.html#Ecommerce_Mail_Contracts_IEmailService_SendEmailAsync_System_String_System_String_Ecommerce_Mail_Models_Enums_EmailTemplate_Ecommerce_Mail_Contracts_ITemplateModel_
+  name: SendEmailAsync
+  nameWithType: IEmailService.SendEmailAsync
+  fullName: Ecommerce.Mail.Contracts.IEmailService.SendEmailAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Ecommerce.Mail.Models.Enums.EmailTemplate
+  commentId: T:Ecommerce.Mail.Models.Enums.EmailTemplate
+  parent: Ecommerce.Mail.Models.Enums
+  href: Ecommerce.Mail.Models.Enums.EmailTemplate.html
+  name: EmailTemplate
+  nameWithType: EmailTemplate
+  fullName: Ecommerce.Mail.Models.Enums.EmailTemplate
+- uid: Ecommerce.Mail.Contracts.ITemplateModel
+  commentId: T:Ecommerce.Mail.Contracts.ITemplateModel
+  parent: Ecommerce.Mail.Contracts
+  href: Ecommerce.Mail.Contracts.ITemplateModel.html
+  name: ITemplateModel
+  nameWithType: ITemplateModel
+  fullName: Ecommerce.Mail.Contracts.ITemplateModel
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Mail.Models.Enums
+  commentId: N:Ecommerce.Mail.Models.Enums
+  href: Ecommerce.html
+  name: Ecommerce.Mail.Models.Enums
+  nameWithType: Ecommerce.Mail.Models.Enums
+  fullName: Ecommerce.Mail.Models.Enums
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Models
+    name: Models
+    href: Ecommerce.Mail.Models.html
+  - name: .
+  - uid: Ecommerce.Mail.Models.Enums
+    name: Enums
+    href: Ecommerce.Mail.Models.Enums.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Mail
+    name: Mail
+    href: Ecommerce.Mail.html
+  - name: .
+  - uid: Ecommerce.Mail.Models
+    name: Models
+    href: Ecommerce.Mail.Models.html
+  - name: .
+  - uid: Ecommerce.Mail.Models.Enums
+    name: Enums
+    href: Ecommerce.Mail.Models.Enums.html
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

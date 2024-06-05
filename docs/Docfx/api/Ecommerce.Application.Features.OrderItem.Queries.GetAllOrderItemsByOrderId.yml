@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  commentId: N:Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  id: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  children:
+  - Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQuery
+  - Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  nameWithType: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  fullName: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQuery
+  commentId: T:Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQuery
+  parent: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  href: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQuery.html
+  name: GetAllOrderItemsByOrderIdQuery
+  nameWithType: GetAllOrderItemsByOrderIdQuery
+  fullName: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQuery
+- uid: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQueryHandler
+  commentId: T:Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQueryHandler
+  href: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQueryHandler.html
+  name: GetAllOrderItemsByOrderIdQueryHandler
+  nameWithType: GetAllOrderItemsByOrderIdQueryHandler
+  fullName: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.GetAllOrderItemsByOrderIdQueryHandler
+- uid: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  commentId: N:Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  nameWithType: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  fullName: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem
+    name: OrderItem
+    href: Ecommerce.Application.Features.OrderItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.OrderItem.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+    name: GetAllOrderItemsByOrderId
+    href: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem
+    name: OrderItem
+    href: Ecommerce.Application.Features.OrderItem.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem.Queries
+    name: Queries
+    href: Ecommerce.Application.Features.OrderItem.Queries.html
+  - name: .
+  - uid: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId
+    name: GetAllOrderItemsByOrderId
+    href: Ecommerce.Application.Features.OrderItem.Queries.GetAllOrderItemsByOrderId.html

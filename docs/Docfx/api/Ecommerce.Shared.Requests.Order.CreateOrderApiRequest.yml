@@ -1,0 +1,573 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+  commentId: T:Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+  id: CreateOrderApiRequest
+  parent: Ecommerce.Shared.Requests.Order
+  children:
+  - Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.#ctor
+  - Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.CartItems
+  - Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.PaymentSource
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderApiRequest
+  nameWithType: CreateOrderApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+  type: Class
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Requests/Order/CreateOrderApiRequest.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CreateOrderApiRequest
+    path: ../../Core/Ecommerce.Shared/Requests/Order/CreateOrderApiRequest.cs
+    startLine: 10
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Requests.Order
+  summary: A Api request to create a new Order
+  example: []
+  syntax:
+    content: public class CreateOrderApiRequest
+    content.vb: Public Class CreateOrderApiRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.CartItems
+  commentId: P:Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.CartItems
+  id: CartItems
+  parent: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+  langs:
+  - csharp
+  - vb
+  name: CartItems
+  nameWithType: CreateOrderApiRequest.CartItems
+  fullName: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.CartItems
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Requests/Order/CreateOrderApiRequest.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: CartItems
+    path: ../../Core/Ecommerce.Shared/Requests/Order/CreateOrderApiRequest.cs
+    startLine: 15
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Requests.Order
+  summary: The items in the cart to create the order from
+  example: []
+  syntax:
+    content: public IEnumerable<CartItemDto>? CartItems { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.CartItemDto}
+    content.vb: Public Property CartItems As IEnumerable(Of CartItemDto)
+  overload: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.CartItems*
+- uid: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.PaymentSource
+  commentId: P:Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.PaymentSource
+  id: PaymentSource
+  parent: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+  langs:
+  - csharp
+  - vb
+  name: PaymentSource
+  nameWithType: CreateOrderApiRequest.PaymentSource
+  fullName: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.PaymentSource
+  type: Property
+  source:
+    remote:
+      path: Core/Ecommerce.Shared/Requests/Order/CreateOrderApiRequest.cs
+      branch: dev
+      repo: https://github.com/smithhe/EcommerceApp.git
+    id: PaymentSource
+    path: ../../Core/Ecommerce.Shared/Requests/Order/CreateOrderApiRequest.cs
+    startLine: 20
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Requests.Order
+  summary: The method of payment for the order
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(JsonStringEnumConverter))]
+
+      public PaymentSource PaymentSource { get; set; }
+    parameters: []
+    return:
+      type: Ecommerce.Shared.Enums.PaymentSource
+    content.vb: >-
+      <JsonConverter(GetType(JsonStringEnumConverter))>
+
+      Public Property PaymentSource As PaymentSource
+  overload: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.PaymentSource*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonConverterAttribute
+    ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.Text.Json.Serialization.JsonStringEnumConverter
+- uid: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.#ctor
+  commentId: M:Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.#ctor
+  id: '#ctor'
+  parent: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderApiRequest()
+  nameWithType: CreateOrderApiRequest.CreateOrderApiRequest()
+  fullName: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.CreateOrderApiRequest()
+  type: Constructor
+  source:
+    href: https://github.com/smithhe/EcommerceApp/blob/af529cf6f48068d4977fc4a85e2e73774d61d4b3/Core/Ecommerce.Shared/Requests/Order/CreateOrderApiRequest.cs
+  assemblies:
+  - Ecommerce.Shared
+  namespace: Ecommerce.Shared.Requests.Order
+  syntax:
+    content: public CreateOrderApiRequest()
+    content.vb: Public Sub New()
+  overload: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.#ctor*
+  nameWithType.vb: CreateOrderApiRequest.New()
+  fullName.vb: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.New()
+  name.vb: New()
+references:
+- uid: Ecommerce.Shared.Requests.Order
+  commentId: N:Ecommerce.Shared.Requests.Order
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Requests.Order
+  nameWithType: Ecommerce.Shared.Requests.Order
+  fullName: Ecommerce.Shared.Requests.Order
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Order
+    name: Order
+    href: Ecommerce.Shared.Requests.Order.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests
+    name: Requests
+    href: Ecommerce.Shared.Requests.html
+  - name: .
+  - uid: Ecommerce.Shared.Requests.Order
+    name: Order
+    href: Ecommerce.Shared.Requests.Order.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.CartItems*
+  commentId: Overload:Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.CartItems
+  href: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.html#Ecommerce_Shared_Requests_Order_CreateOrderApiRequest_CartItems
+  name: CartItems
+  nameWithType: CreateOrderApiRequest.CartItems
+  fullName: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.CartItems
+- uid: System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.CartItemDto}
+  commentId: T:System.Collections.Generic.IEnumerable{Ecommerce.Shared.Dtos.CartItemDto}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<CartItemDto>
+  nameWithType: IEnumerable<CartItemDto>
+  fullName: System.Collections.Generic.IEnumerable<Ecommerce.Shared.Dtos.CartItemDto>
+  nameWithType.vb: IEnumerable(Of CartItemDto)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Ecommerce.Shared.Dtos.CartItemDto)
+  name.vb: IEnumerable(Of CartItemDto)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Ecommerce.Shared.Dtos.CartItemDto
+    name: CartItemDto
+    href: Ecommerce.Shared.Dtos.CartItemDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Ecommerce.Shared.Dtos.CartItemDto
+    name: CartItemDto
+    href: Ecommerce.Shared.Dtos.CartItemDto.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.PaymentSource*
+  commentId: Overload:Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.PaymentSource
+  href: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.html#Ecommerce_Shared_Requests_Order_CreateOrderApiRequest_PaymentSource
+  name: PaymentSource
+  nameWithType: CreateOrderApiRequest.PaymentSource
+  fullName: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.PaymentSource
+- uid: Ecommerce.Shared.Enums.PaymentSource
+  commentId: T:Ecommerce.Shared.Enums.PaymentSource
+  parent: Ecommerce.Shared.Enums
+  href: Ecommerce.Shared.Enums.PaymentSource.html
+  name: PaymentSource
+  nameWithType: PaymentSource
+  fullName: Ecommerce.Shared.Enums.PaymentSource
+- uid: Ecommerce.Shared.Enums
+  commentId: N:Ecommerce.Shared.Enums
+  href: Ecommerce.html
+  name: Ecommerce.Shared.Enums
+  nameWithType: Ecommerce.Shared.Enums
+  fullName: Ecommerce.Shared.Enums
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Enums
+    name: Enums
+    href: Ecommerce.Shared.Enums.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Shared
+    name: Shared
+    href: Ecommerce.Shared.html
+  - name: .
+  - uid: Ecommerce.Shared.Enums
+    name: Enums
+    href: Ecommerce.Shared.Enums.html
+- uid: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.#ctor*
+  commentId: Overload:Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.#ctor
+  isExternal: true
+  href: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.html#Ecommerce_Shared_Requests_Order_CreateOrderApiRequest__ctor
+  name: CreateOrderApiRequest
+  nameWithType: CreateOrderApiRequest.CreateOrderApiRequest
+  fullName: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.CreateOrderApiRequest
+  nameWithType.vb: CreateOrderApiRequest.New
+  fullName.vb: Ecommerce.Shared.Requests.Order.CreateOrderApiRequest.New
+  name.vb: New

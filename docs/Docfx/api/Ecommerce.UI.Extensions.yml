@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UI.Extensions
+  commentId: N:Ecommerce.UI.Extensions
+  id: Ecommerce.UI.Extensions
+  children:
+  - Ecommerce.UI.Extensions.NavigationManagerExtensions
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UI.Extensions
+  nameWithType: Ecommerce.UI.Extensions
+  fullName: Ecommerce.UI.Extensions
+  type: Namespace
+  assemblies:
+  - Ecommerce.UI
+references:
+- uid: Ecommerce.UI.Extensions.NavigationManagerExtensions
+  commentId: T:Ecommerce.UI.Extensions.NavigationManagerExtensions
+  href: Ecommerce.UI.Extensions.NavigationManagerExtensions.html
+  name: NavigationManagerExtensions
+  nameWithType: NavigationManagerExtensions
+  fullName: Ecommerce.UI.Extensions.NavigationManagerExtensions

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.UnitTests.PayPalTests
+  commentId: N:Ecommerce.UnitTests.PayPalTests
+  id: Ecommerce.UnitTests.PayPalTests
+  children:
+  - Ecommerce.UnitTests.PayPalTests.PaypalClientServiceTests
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.UnitTests.PayPalTests
+  nameWithType: Ecommerce.UnitTests.PayPalTests
+  fullName: Ecommerce.UnitTests.PayPalTests
+  type: Namespace
+  assemblies:
+  - Ecommerce.UnitTests
+references:
+- uid: Ecommerce.UnitTests.PayPalTests.PaypalClientServiceTests
+  commentId: T:Ecommerce.UnitTests.PayPalTests.PaypalClientServiceTests
+  href: Ecommerce.UnitTests.PayPalTests.PaypalClientServiceTests.html
+  name: PaypalClientServiceTests
+  nameWithType: PaypalClientServiceTests
+  fullName: Ecommerce.UnitTests.PayPalTests.PaypalClientServiceTests

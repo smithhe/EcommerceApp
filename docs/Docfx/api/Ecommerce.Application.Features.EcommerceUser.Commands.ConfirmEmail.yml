@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  commentId: N:Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  id: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  children:
+  - Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommand
+  - Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  nameWithType: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommand
+  commentId: T:Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommand
+  parent: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommand.html
+  name: ConfirmEmailCommand
+  nameWithType: ConfirmEmailCommand
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommand
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommandHandler
+  commentId: T:Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommandHandler
+  href: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommandHandler.html
+  name: ConfirmEmailCommandHandler
+  nameWithType: ConfirmEmailCommandHandler
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.ConfirmEmailCommandHandler
+- uid: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  commentId: N:Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  href: Ecommerce.html
+  name: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  nameWithType: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  fullName: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+  spec.csharp:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser
+    name: EcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+    name: ConfirmEmail
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.html
+  spec.vb:
+  - uid: Ecommerce
+    name: Ecommerce
+    href: Ecommerce.html
+  - name: .
+  - uid: Ecommerce.Application
+    name: Application
+    href: Ecommerce.Application.html
+  - name: .
+  - uid: Ecommerce.Application.Features
+    name: Features
+    href: Ecommerce.Application.Features.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser
+    name: EcommerceUser
+    href: Ecommerce.Application.Features.EcommerceUser.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands
+    name: Commands
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.html
+  - name: .
+  - uid: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail
+    name: ConfirmEmail
+    href: Ecommerce.Application.Features.EcommerceUser.Commands.ConfirmEmail.html

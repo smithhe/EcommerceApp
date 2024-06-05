@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Application.Validators.Category
+  commentId: N:Ecommerce.Application.Validators.Category
+  id: Ecommerce.Application.Validators.Category
+  children:
+  - Ecommerce.Application.Validators.Category.CreateCategoryValidator
+  - Ecommerce.Application.Validators.Category.UpdateCategoryValidator
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Application.Validators.Category
+  nameWithType: Ecommerce.Application.Validators.Category
+  fullName: Ecommerce.Application.Validators.Category
+  type: Namespace
+  assemblies:
+  - Ecommerce.Application
+references:
+- uid: Ecommerce.Application.Validators.Category.CreateCategoryValidator
+  commentId: T:Ecommerce.Application.Validators.Category.CreateCategoryValidator
+  href: Ecommerce.Application.Validators.Category.CreateCategoryValidator.html
+  name: CreateCategoryValidator
+  nameWithType: CreateCategoryValidator
+  fullName: Ecommerce.Application.Validators.Category.CreateCategoryValidator
+- uid: Ecommerce.Application.Validators.Category.UpdateCategoryValidator
+  commentId: T:Ecommerce.Application.Validators.Category.UpdateCategoryValidator
+  href: Ecommerce.Application.Validators.Category.UpdateCategoryValidator.html
+  name: UpdateCategoryValidator
+  nameWithType: UpdateCategoryValidator
+  fullName: Ecommerce.Application.Validators.Category.UpdateCategoryValidator

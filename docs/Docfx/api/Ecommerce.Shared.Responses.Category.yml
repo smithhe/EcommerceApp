@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ecommerce.Shared.Responses.Category
+  commentId: N:Ecommerce.Shared.Responses.Category
+  id: Ecommerce.Shared.Responses.Category
+  children:
+  - Ecommerce.Shared.Responses.Category.CreateCategoryResponse
+  - Ecommerce.Shared.Responses.Category.DeleteCategoryResponse
+  - Ecommerce.Shared.Responses.Category.GetAllCategoriesResponse
+  - Ecommerce.Shared.Responses.Category.GetCategoryByIdResponse
+  - Ecommerce.Shared.Responses.Category.UpdateCategoryResponse
+  langs:
+  - csharp
+  - vb
+  name: Ecommerce.Shared.Responses.Category
+  nameWithType: Ecommerce.Shared.Responses.Category
+  fullName: Ecommerce.Shared.Responses.Category
+  type: Namespace
+  assemblies:
+  - Ecommerce.Shared
+references:
+- uid: Ecommerce.Shared.Responses.Category.CreateCategoryResponse
+  commentId: T:Ecommerce.Shared.Responses.Category.CreateCategoryResponse
+  href: Ecommerce.Shared.Responses.Category.CreateCategoryResponse.html
+  name: CreateCategoryResponse
+  nameWithType: CreateCategoryResponse
+  fullName: Ecommerce.Shared.Responses.Category.CreateCategoryResponse
+- uid: Ecommerce.Shared.Responses.Category.DeleteCategoryResponse
+  commentId: T:Ecommerce.Shared.Responses.Category.DeleteCategoryResponse
+  href: Ecommerce.Shared.Responses.Category.DeleteCategoryResponse.html
+  name: DeleteCategoryResponse
+  nameWithType: DeleteCategoryResponse
+  fullName: Ecommerce.Shared.Responses.Category.DeleteCategoryResponse
+- uid: Ecommerce.Shared.Responses.Category.GetAllCategoriesResponse
+  commentId: T:Ecommerce.Shared.Responses.Category.GetAllCategoriesResponse
+  href: Ecommerce.Shared.Responses.Category.GetAllCategoriesResponse.html
+  name: GetAllCategoriesResponse
+  nameWithType: GetAllCategoriesResponse
+  fullName: Ecommerce.Shared.Responses.Category.GetAllCategoriesResponse
+- uid: Ecommerce.Shared.Responses.Category.GetCategoryByIdResponse
+  commentId: T:Ecommerce.Shared.Responses.Category.GetCategoryByIdResponse
+  href: Ecommerce.Shared.Responses.Category.GetCategoryByIdResponse.html
+  name: GetCategoryByIdResponse
+  nameWithType: GetCategoryByIdResponse
+  fullName: Ecommerce.Shared.Responses.Category.GetCategoryByIdResponse
+- uid: Ecommerce.Shared.Responses.Category.UpdateCategoryResponse
+  commentId: T:Ecommerce.Shared.Responses.Category.UpdateCategoryResponse
+  href: Ecommerce.Shared.Responses.Category.UpdateCategoryResponse.html
+  name: UpdateCategoryResponse
+  nameWithType: UpdateCategoryResponse
+  fullName: Ecommerce.Shared.Responses.Category.UpdateCategoryResponse
