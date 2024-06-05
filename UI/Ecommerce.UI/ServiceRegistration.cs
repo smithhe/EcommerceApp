@@ -49,7 +49,13 @@ namespace Ecommerce.UI
 		//https://github.com/reactiveui/refit
 		private static void AddRefit(IServiceCollection services, IConfiguration configuration)
 		{
-			string apiEndpoint = configuration["ApiUri"] ?? "http://localhost:5128";
+			string? apiEndpoint = configuration["ApiUri"];
+
+			if (string.IsNullOrEmpty(apiEndpoint))
+			{
+				apiEndpoint = "http://localhost:5128";
+			}
+			
 			Console.WriteLine(apiEndpoint);
 			
 			services.AddRefitClient<ICategoryApiService>()
