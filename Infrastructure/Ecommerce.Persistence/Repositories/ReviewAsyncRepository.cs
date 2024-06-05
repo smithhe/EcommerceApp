@@ -229,7 +229,12 @@ namespace Ecommerce.Persistence.Repositories
 			
 			try
 			{
-				average = await this._dbContext.Reviews.Where(r => r.ProductId == productId).AverageAsync(r => r.Stars);
+				IQueryable<Review> reviews = this._dbContext.Reviews.Where(r => r.ProductId == productId);
+				
+				if (reviews.Any())
+				{
+					average = await reviews.AverageAsync(r => r.Stars);
+				}
 			}
 			catch (Exception e)
 			{

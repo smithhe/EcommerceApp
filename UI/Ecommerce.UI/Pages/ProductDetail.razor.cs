@@ -117,7 +117,7 @@ namespace Ecommerce.UI.Pages
 			
 			GetUserReviewForProductResponse existingReviewResponse = await this.ReviewService.GetUserReview(authState.User.Identity?.Name ?? string.Empty, Convert.ToInt32(this.ProductId));
 
-			if (existingReviewResponse.Success)
+			if (existingReviewResponse.Success && existingReviewResponse.UserReview != null)
 			{
 				this.UserHasReview = true;
 				this.ExistingUserReview = existingReviewResponse.UserReview;
