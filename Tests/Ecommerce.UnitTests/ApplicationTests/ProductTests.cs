@@ -81,7 +81,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
             };
             
             this._productRepository.Setup(p => p.AddAsync(It.IsAny<Product>())).ReturnsAsync(1);
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
@@ -195,7 +195,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
                 {
@@ -234,7 +234,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
                 {
@@ -272,7 +272,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
                 {
@@ -309,7 +309,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(false);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(false);
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
                 {
@@ -347,7 +347,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
                 {
@@ -386,7 +386,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
                 {
@@ -424,7 +424,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
                 {
@@ -462,7 +462,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
                 {
@@ -500,7 +500,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
                 {
@@ -537,7 +537,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
                 {
@@ -571,7 +571,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
             };
             
             this._productRepository.Setup(p => p.AddAsync(It.IsAny<Product>())).ReturnsAsync(-1);
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
                 {
@@ -687,7 +687,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
             
             this._productRepository.Setup(p => p.UpdateAsync(It.IsAny<Product>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetCategoryByIdResponse
@@ -796,7 +796,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
@@ -836,7 +836,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
@@ -875,7 +875,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
@@ -913,7 +913,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(false);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(false);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
@@ -952,7 +952,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
@@ -992,7 +992,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
@@ -1031,7 +1031,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
@@ -1070,7 +1070,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
@@ -1109,7 +1109,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
@@ -1147,7 +1147,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 UserName = _userName
             };
             
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))
@@ -1182,7 +1182,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
             };
             
             this._productRepository.Setup(p => p.UpdateAsync(It.IsAny<Product>())).ReturnsAsync(false);
-            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>())).ReturnsAsync(true);
+            this._productRepository.Setup(p => p.IsNameUnique(It.IsAny<string>(), It.IsAny<int>())).ReturnsAsync(true);
             this._productRepository.Setup(p => p.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._product);
             
             this._mediator.Setup(m => m.Send(It.IsAny<GetCategoryByIdQuery>(), It.IsAny<CancellationToken>()))

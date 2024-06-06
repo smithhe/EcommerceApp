@@ -46,7 +46,7 @@ namespace Ecommerce.Application.Validators.Review
 
 		private async Task<bool> ReviewDoesNotExist(ReviewDto review, CancellationToken cancellationToken)
 		{
-			Domain.Entities.Review? existingReview = await this._reviewAsyncRepository.GetByIdAsync(review.Id);
+			Domain.Entities.Review? existingReview = await this._reviewAsyncRepository.GetUserReviewForProduct(review.UserName, review.ProductId);
 			return existingReview == null || existingReview.Id == -1;
 		}
 		
