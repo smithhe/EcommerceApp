@@ -188,15 +188,16 @@ namespace Ecommerce.Persistence.Repositories
 		/// Checks the table to see if the Name of a <see cref="Product"/> already exists
 		/// </summary>
 		/// <param name="name">The name to check for</param>
+		/// <param name="id">The id of the product if already exists</param>
 		/// <returns>
 		/// <c>false</c> if found;
 		/// <c>true</c> if not found
 		/// </returns>
-		public async Task<bool> IsNameUnique(string name)
+		public async Task<bool> IsNameUnique(string name, int id)
 		{
 			Product? product = await this.GetByNameAsync(name);
-
-			return product == null;
+			
+			return product == null || product.Id == id;
 		}
 
 		/// <summary>

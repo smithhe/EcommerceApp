@@ -43,7 +43,7 @@ namespace Ecommerce.Application.Validators.Product
 		
 		private async Task<bool> NameIsUnique(CreateProductCommand createProductCommand, CancellationToken cancellationToken)
 		{
-			return await this._productAsyncRepository.IsNameUnique(createProductCommand.ProductToCreate!.Name);
+			return await this._productAsyncRepository.IsNameUnique(createProductCommand.ProductToCreate!.Name, -1);
 		}
 		
 		private async Task<bool> CategoryExists(CreateProductCommand createProductCommand, CancellationToken cancellationToken)
