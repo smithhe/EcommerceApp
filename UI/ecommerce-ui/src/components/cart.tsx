@@ -5,7 +5,8 @@ import productService from "../services/ProductService.ts";
 import {Product} from "../models/Product.ts";
 import {useNavigate} from "react-router-dom";
 import cartService from "../services/CartService.ts";
-import {toast} from "react-toastify";
+import {toast, ToastContainer} from "react-toastify";
+import Modal from "react-modal";
 
 const Cart = () => {
     const {isAuthenticated, claims} = useAuth();
@@ -13,16 +14,20 @@ const Cart = () => {
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
     const [products, setProducts] = useState<Product[]>([]);
     const [cartTotal, setCartTotal] = useState<number>(0);
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [modalCount, setModalCount] = useState<number>(0);
+    const [modalProductName, setModalProductName] = useState<string>('');
+    const [modalProductDesc, setModalProductDesc] = useState<string>('');
+    const [modalCartItem, setModalCartItem] = useState<CartItem | undefined>(undefined);
 
     useEffect(() => {
         if (isAuthenticated === false)
         {
-            navigate('/login');
             return;
         }
 
         const loadCart = async () => {
-            const getCartItemsResponse = await cartService.getItemsInCart(claims?.["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || '');
+            const getCartItemsResponse = await cartService.getItemsInCart(claims?.["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"] || '');
 
             if (getCartItemsResponse.success === false)
             {
@@ -30,14 +35,14 @@ const Cart = () => {
                 return;
             }
 
-            setCartItems(getCartItemsResponse.cartItems);
+            const localCartItems: CartItem[] = getCartItemsResponse.cartItems;
 
-            if (cartItems.length === 0)
+            if (localCartItems.length === 0)
             {
                 return;
             }
 
-            const productIds = Array.from(new Set(cartItems.map(c => c.productId)));
+            const productIds = Array.from(new Set(localCartItems.map(c => c.productId)));
 
             const localProducts = []
             for (const id of productIds) {
@@ -50,25 +55,117 @@ const Cart = () => {
             }
 
             setProducts(localProducts);
-            calculateCartTotal(localProducts);
+            setCartItems(localCartItems);
+            calculateCartTotal(products);
         }
 
-        const calculateCartTotal = (productList: Product[]) => {
-            let localCartTotal = 0;
 
-            cartItems.forEach((cartItem) => {
-                const product = productList[cartItem.productId];
-                localCartTotal += cartItem.quantity * product.price;
-            })
-
-            setCartTotal(localCartTotal);
-        }
 
         loadCart();
-    }, [cartItems]);
+    }, [cartItems, isAuthenticated, claims]);
+
+    const calculateCartTotal = (productList: Product[]) => {
+        let localCartTotal = 0;
+
+        cartItems.forEach((cartItem) => {
+            const product = productList.find(p => p.id === cartItem.productId);
+            
+            if (product)
+            {
+                localCartTotal += cartItem.quantity * product.price;
+            }
+        })
+
+        setCartTotal(localCartTotal);
+    }
 
     const startShoppingClick = () => {
         navigate('/categories');
+    }
+
+    const editCartItemClick = async (cartItem: CartItem) =>  {
+        const cartItemProduct = products.find(p => p.id === cartItem.productId);
+
+        if (cartItemProduct == undefined)
+        {
+            toast.error('Unable to edit product');
+            return;
+        }
+
+        setModalCartItem(cartItem);
+        setModalProductName(cartItemProduct.name);
+        setModalProductDesc(cartItemProduct.description);
+        setModalCount(cartItem.quantity);
+        setIsOpen(true);
+    }
+
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+        },
+    };
+
+    const removeCartItem = async (cartItem: CartItem) =>  {
+        const response = await cartService.removeItemFromCart(cartItem);
+
+        if (response.success)
+        {
+            setCartItems(cartItems.filter(c => c.id === cartItem.id));
+            return;
+        }
+
+        toast.error(response.message);
+    }
+
+    const clearCart = async () => {
+        const response = await cartService.clearCart(claims?.["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"] || '');
+
+        if (response.success)
+        {
+            setCartItems([]);
+            return;
+        }
+
+        toast.error(response.message);
+    }
+
+    const closeModal = async () => {
+        setIsOpen(false);
+
+        if (modalCartItem == undefined)
+        {
+            toast.error('Unable to update cart item');
+            return;
+        }
+
+        modalCartItem.quantity = modalCount;
+
+        const updateCartItemResponse = await cartService.updateItemInCart(modalCartItem);
+
+        if (updateCartItemResponse.success)
+        {
+            const localCartItems = cartItems.filter(c => c.id === modalCartItem.id);
+            localCartItems.push(modalCartItem);
+
+            calculateCartTotal(products);
+        } else if (updateCartItemResponse.validationErrors.length > 0)
+        {
+            updateCartItemResponse.validationErrors.forEach((validationError: string) => {
+                toast.warn(validationError);
+            });
+        }
+        else {
+            toast.error(updateCartItemResponse.message);
+        }
+    }
+
+    const cancelCloseModal = () => {
+        setIsOpen(false);
     }
 
     return (
@@ -81,7 +178,7 @@ const Cart = () => {
                         </h1>
                     </div>
                     <div className="col-md-6 text-end">
-                        <button className="btn btn-danger">Clear Cart</button>
+                        <button className="btn btn-danger" onClick={clearCart}>Clear Cart</button>
                     </div>
                 </div>
 
@@ -98,16 +195,23 @@ const Cart = () => {
                     </thead>
                     <tbody>
                     {cartItems.map((item, index) => {
+                        const product = products.find(p => p.id === item.productId);
+
+                        if (product == undefined)
+                        {
+                            return;
+                        }
 
                         return (
                             <tr key={index}>
                                 <td></td>
                                 <td>{item.quantity}</td>
-                                <td>@product?.Price.ToString("C")</td>
-                                <td>@price.ToString("C")</td>
+                                <td>${product.price.toFixed(2)}</td>
+                                <td>${(product.price * item.quantity).toFixed(2)}</td>
                                 <td>
-                                    <button className="btn btn-primary">Edit</button>
-                                    <button className="btn btn-danger">X</button>
+                                    <button className="btn btn-primary" onClick={() => editCartItemClick(item)}>Edit
+                                    </button>
+                                    <button className="btn btn-danger ms-2" onClick={() => removeCartItem(item)}>X</button>
                                 </td>
                             </tr>
                         )
@@ -124,8 +228,17 @@ const Cart = () => {
                             <div className="col-md-3"></div>
 
                             <div className="col-md-6">
-                                <button className="btn btn-success form-control">
+                                <button className="btn btn-primary form-control" disabled>
                                     <i className="bi bi-paypal"></i> Checkout with PayPal
+                                </button>
+                            </div>
+                        </div>
+                        <div className="row w-100 mt-2">
+                            <div className="col-md-3"></div>
+
+                            <div className="col-md-6">
+                                <button className="btn btn-success form-control">
+                                    <i className="bi bi-cash"></i> Checkout
                                 </button>
                             </div>
                         </div>
@@ -141,10 +254,34 @@ const Cart = () => {
                         </div>
                     </div>
                 )}
+
+                <Modal isOpen={modalIsOpen} style={customStyles} contentLabel="Update Quantity">
+                    <div className="simple-form mx-4 ">
+                        <div className="row text-center">
+                            <h1 className="card-title">{modalProductName}</h1>
+                            <p className="card-text mt-2">{modalProductDesc}</p>
+                        </div>
+                        <div className="row mt-3">
+                            <div className="form-group text-center">
+                                <label htmlFor="quantity" className="h5">Quantity:</label>
+                                <input type="number" className="form-control" id="quantity" name="quantity" min="1"
+                                       onChange={(e) => setModalCount(Number(e.target.value))}/>
+                            </div>
+                        </div>
+
+                        <div className="row mt-4">
+                            <button type="submit" className="btn btn-primary form-control" onClick={closeModal}>Add to
+                                Cart
+                            </button>
+                            <button className="btn btn-secondary form-control mt-2" onClick={cancelCloseModal}>Cancel
+                            </button>
+                        </div>
+                    </div>
+                </Modal>
+                <ToastContainer/>
             </div>
         </>
-    )
-        ;
+    );
 }
 
 export default Cart;
