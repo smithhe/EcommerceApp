@@ -7,10 +7,13 @@ import {useNavigate} from "react-router-dom";
 import cartService from "../services/CartService.ts";
 import {toast, ToastContainer} from "react-toastify";
 import Modal from "react-modal";
+import orderService from "../services/OrderService.ts";
+import {PaymentSource} from "../models/PaymentSource.ts";
 
 const Cart = () => {
     const {isAuthenticated, claims} = useAuth();
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
     const [products, setProducts] = useState<Product[]>([]);
     const [cartTotal, setCartTotal] = useState<number>(0);
@@ -21,6 +24,8 @@ const Cart = () => {
     const [modalCartItem, setModalCartItem] = useState<CartItem | undefined>(undefined);
 
     useEffect(() => {
+        setLoading(true);
+
         if (isAuthenticated === false)
         {
             return;
@@ -54,30 +59,36 @@ const Cart = () => {
                 }
             }
 
+
             setProducts(localProducts);
             setCartItems(localCartItems);
             calculateCartTotal(products);
         }
 
+        const calculateCartTotal = (productList: Product[]) => {
+            let localCartTotal = 0;
 
+            cartItems.forEach((cartItem) => {
+                const product = productList.find(p => p.id === cartItem.productId);
+
+                if (product)
+                {
+                    localCartTotal += cartItem.quantity * product.price;
+                }
+            })
+
+            setCartTotal(localCartTotal);
+            setLoading(false);
+        }
 
         loadCart();
-    }, [cartItems, isAuthenticated, claims]);
+    }, [isAuthenticated]);
 
-    const calculateCartTotal = (productList: Product[]) => {
-        let localCartTotal = 0;
-
-        cartItems.forEach((cartItem) => {
-            const product = productList.find(p => p.id === cartItem.productId);
-            
-            if (product)
-            {
-                localCartTotal += cartItem.quantity * product.price;
-            }
-        })
-
-        setCartTotal(localCartTotal);
+    if (cartItems.length === 0 && loading) {
+        return <p><em>Loading...</em></p>
     }
+
+
 
     const startShoppingClick = () => {
         navigate('/categories');
@@ -152,7 +163,7 @@ const Cart = () => {
             const localCartItems = cartItems.filter(c => c.id === modalCartItem.id);
             localCartItems.push(modalCartItem);
 
-            calculateCartTotal(products);
+            //calculateCartTotal(products);
         } else if (updateCartItemResponse.validationErrors.length > 0)
         {
             updateCartItemResponse.validationErrors.forEach((validationError: string) => {
@@ -166,6 +177,19 @@ const Cart = () => {
 
     const cancelCloseModal = () => {
         setIsOpen(false);
+    }
+
+    const startStandardCheckout = async () => {
+        const response = await orderService.createOrder(cartItems, PaymentSource.Standard);
+
+        if (response.success && response.redirectUrl)
+        {
+            navigate(response.redirectUrl);
+        }
+        else
+        {
+            toast.error(response.message);
+        }
     }
 
     return (
@@ -237,7 +261,7 @@ const Cart = () => {
                             <div className="col-md-3"></div>
 
                             <div className="col-md-6">
-                                <button className="btn btn-success form-control">
+                                <button className="btn btn-success form-control" onClick={() => startStandardCheckout}>
                                     <i className="bi bi-cash"></i> Checkout
                                 </button>
                             </div>
