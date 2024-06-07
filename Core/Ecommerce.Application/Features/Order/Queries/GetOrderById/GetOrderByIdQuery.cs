@@ -12,5 +12,10 @@ namespace Ecommerce.Application.Features.Order.Queries.GetOrderById
 		/// The unique identifier of the <see cref="Order"/> to retrieve
 		/// </summary>
 		public int Id { get; set; }
+
+		/// <summary>
+		/// Optional parameter to fetch the <see cref="OrderItem"/> associated with the <see cref="Order"/>
+		/// </summary>
+		public bool FetchOrderItems { get; set; } = true;
 	}
 }

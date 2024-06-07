@@ -3,7 +3,9 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Ecommerce.Application.Features.Order.Commands.CreateOrder;
+using Ecommerce.Application.Features.Order.Commands.UpdateOrder;
 using Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder;
+using Ecommerce.Domain.Constants.Entities;
 using Ecommerce.Domain.Constants.Identity;
 using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.Shared.Enums;
@@ -14,6 +16,7 @@ using Ecommerce.Shared.Responses.PayPal;
 using FastEndpoints;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.FastEndpoints.Endpoints.Order
@@ -26,6 +29,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 		private readonly ILogger<CreateOrderEndpoint> _logger;
 		private readonly IMediator _mediator;
 		private readonly ITokenService _tokenService;
+		private readonly IConfiguration _configuration;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="CreateOrderEndpoint"/> class.
@@ -33,11 +37,13 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 		/// <param name="logger">The <see cref="ILogger"/> instance used for logging.</param>
 		/// <param name="mediator">The <see cref="IMediator"/> instance used for sending Mediator requests.</param>
 		/// <param name="tokenService"> The <see cref="ITokenService"/> instance used for operations on Auth tokens passed in requests </param>
-		public CreateOrderEndpoint(ILogger<CreateOrderEndpoint> logger, IMediator mediator, ITokenService tokenService)
+		/// <param name="configuration">The <see cref="IConfiguration"/> instance used for configuration settings.</param>
+		public CreateOrderEndpoint(ILogger<CreateOrderEndpoint> logger, IMediator mediator, ITokenService tokenService, IConfiguration configuration)
 		{
 			this._logger = logger;
 			this._mediator = mediator;
 			this._tokenService = tokenService;
+			this._configuration = configuration;
 		}
 		
 		/// <summary>
@@ -77,6 +83,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 				return;
 			}
 
+
 			//Create the Ecommerce Order
 			CreateOrderResponse response;
 			try
@@ -111,6 +118,9 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 			{
 				switch (req.PaymentSource)
 				{
+					case PaymentSource.Standard:
+						await this.HandleStandardPaymentSource(response, ct);
+						break;
 					case PaymentSource.PayPal:
 						await this.HandlePayPalPaymentSource(response, ct);
 						break;
@@ -128,7 +138,7 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 			catch (Exception e)
 			{
 				//Unexpected error
-				this._logger.LogError(e, "Error when attempting to create PayPal Order");
+				this._logger.LogError(e, "Error when attempting to handle Payment Source");
 				await this.SendAsync(new CreateOrderResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
@@ -161,6 +171,40 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 
 			//Valid Request
 			return true;
+		}
+
+		/// <summary>
+		/// Handles skipping an official payment source and just updates the order status to Processing
+		/// </summary>
+		/// <param name="response">The <see cref="CreateOrderResponse"/> from creating the internal system order</param>
+		/// <param name="ct">The <see cref="CancellationToken"/> that can be used to request cancellation of the operation.</param>
+		private async Task HandleStandardPaymentSource(CreateOrderResponse response, CancellationToken ct)
+		{
+			//Get the UI Url from the configuration
+			string? uiUrl = this._configuration["UIUrl"];
+			
+			//Update the order status to Pending
+			response.Order!.Status = OrderStatus.Pending;
+			
+			//Update the order in the database
+			UpdateOrderResponse updateOrderResponse = await this._mediator.Send(new UpdateOrderCommand
+			{
+				OrderToUpdate = response.Order!,
+				UserName = "System"
+			}, ct);
+			
+			//Check if the update was successful
+			if (updateOrderResponse.Success == false)
+			{
+				//Order was not updated send the response
+				response.Success = false;
+				response.Message = OrderConstants._createErrorMessage;
+				response.Order = null;
+			}
+			else
+			{
+				response.RedirectUrl = $"{uiUrl}/checkout/success/{response.Order!.Id}";
+			}
 		}
 		
 		/// <summary>

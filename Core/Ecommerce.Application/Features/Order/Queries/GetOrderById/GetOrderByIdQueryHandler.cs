@@ -65,20 +65,25 @@ namespace Ecommerce.Application.Features.Order.Queries.GetOrderById
 				return response;
 			}
 			
-			//Get all order items by order ID
-			GetAllOrderItemsByOrderIdResponse orderItemsResponse = await this._mediator.Send(new GetAllOrderItemsByOrderIdQuery { OrderId = query.Id }, cancellationToken);
-
-			//Check if the order items were retrieved successfully
-			if (orderItemsResponse.Success == false)
-			{
-				response.Success = false;
-				response.Message = OrderConstants._getOrderByIdErrorMessage;
-				return response;
-			}
-			
-			//Map the order and order items to the response
+			//Map the order to the response
 			response.Order = this._mapper.Map<OrderDto>(order);
-			response.Order.OrderItems = orderItemsResponse.OrderItems;
+
+			if (query.FetchOrderItems)
+			{
+				//Get all order items by order ID
+				GetAllOrderItemsByOrderIdResponse orderItemsResponse = await this._mediator.Send(new GetAllOrderItemsByOrderIdQuery { OrderId = query.Id }, cancellationToken);
+
+				//Check if the order items were retrieved successfully
+				if (orderItemsResponse.Success == false)
+				{
+					response.Success = false;
+					response.Message = OrderConstants._getOrderByIdErrorMessage;
+					return response;
+				}
+				
+				//Add the order items to the response
+				response.Order.OrderItems = orderItemsResponse.OrderItems;
+			}
 			
 			//Return the response
 			return response;

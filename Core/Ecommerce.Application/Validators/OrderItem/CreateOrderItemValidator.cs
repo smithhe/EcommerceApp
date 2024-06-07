@@ -27,7 +27,7 @@ namespace Ecommerce.Application.Validators.OrderItem
 		
 		private async Task<bool> OrderExists(CreateOrderItemCommand command, CancellationToken cancellationToken)
 		{
-			return (await this._mediator.Send(new GetOrderByIdQuery { Id = command.OrderItemToCreate.OrderId }, cancellationToken)).Order != null;
+			return (await this._mediator.Send(new GetOrderByIdQuery { Id = command.OrderItemToCreate.OrderId, FetchOrderItems = false}, cancellationToken)).Order != null;
 		}
 	}
 }

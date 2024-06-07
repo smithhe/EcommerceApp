@@ -169,6 +169,13 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			orderToCreate.CreatedBy = command.UserName;
 			orderToCreate.CreatedDate = DateTime.UtcNow.ToEst();
 			
+			//Update the order items
+			foreach (Domain.Entities.OrderItem orderItem in orderToCreate.OrderItems)
+			{
+				orderItem.CreatedBy = command.UserName;
+				orderItem.CreatedDate = DateTime.UtcNow.ToEst();
+			}
+			
 			//Create the order
 			int newId = await this._orderAsyncRepository.AddAsync(orderToCreate);
 			
@@ -198,40 +205,6 @@ namespace Ecommerce.Application.Features.Order.Commands.CreateOrder
 			//Map the order to the response
 			response.Order = this._mapper.Map<OrderDto?>(order);
 			response.Order!.OrderItems = newOrder.OrderItems;
-
-			//-----------------------------------------------------------------------------------------------
-			// Creating the order items
-			//-----------------------------------------------------------------------------------------------
-			
-			//Create all the order items for the order
-			foreach (OrderItemDto orderItem in newOrder.OrderItems)
-			{
-				//Update the order Id before sending the request
-				orderItem.OrderId = newId;
-				CreateOrderItemResponse orderItemResponse = await this._mediator.Send(new CreateOrderItemCommand
-				{
-					OrderItemToCreate = orderItem,
-					UserName = command.UserName
-				}, cancellationToken);
-
-				if (orderItemResponse.Success == false)
-				{
-					this._logger.LogError("Order Item failed to create, rolling back order creation");
-					response.Success = false;
-					response.Message = OrderConstants._createErrorMessage;
-					response.Order = null;
-					
-					//Delete the order since the items failed to create
-					await this._orderAsyncRepository.DeleteAsync(order);
-					
-					if (orderItemResponse.ValidationErrors.Count > 0)
-					{
-						response.ValidationErrors.Concat(orderItemResponse.ValidationErrors);
-					}
-
-					break;
-				}
-			}
 
 			return response;
 		}
