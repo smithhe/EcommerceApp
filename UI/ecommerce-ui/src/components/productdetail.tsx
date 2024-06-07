@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Product} from "../models/Product.ts";
@@ -10,11 +10,13 @@ import {Review} from "../models/Review.ts";
 import productService from "../services/ProductService.ts";
 import reviewService from "../services/ReviewService.ts";
 import cartService from "../services/CartService.ts";
+import Modal from "react-modal";
+import {CartItem} from "../models/CartItem.ts";
+
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import ReactStars from 'react-rating-stars-component';
-import Modal from "react-modal";
-import {CartItem} from "../models/CartItem.ts";
+
 
 const ProductDetail = () => {
     const { productId } = useParams<{ productId?: string }>();
@@ -25,9 +27,9 @@ const ProductDetail = () => {
     const [userHasReview, setUserHasReview] = useState<boolean>(false);
     const [starRating, setStarRating] = useState<number>(0)
     const [comments, setComments] = useState<string>('');
-    const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [modalIsOpen, setIsOpen] = useState(false);
     const [modalCount, setModalCount] = useState<number>(0);
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (!productId) {
@@ -138,7 +140,7 @@ const ProductDetail = () => {
             setIsOpen(true);
         }
         else {
-            //redirect('/login');
+            navigate('/login');
         }
     };
 
