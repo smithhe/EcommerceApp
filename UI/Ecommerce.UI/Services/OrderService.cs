@@ -89,12 +89,12 @@ namespace Ecommerce.UI.Services
                 : JsonConvert.DeserializeObject<GetOrderAfterSuccessfulCheckoutResponse>(response.Error.Content)!;
         }
         
-        public async Task<CreateOrderResponse> CreateOrder(IEnumerable<CartItemDto> cartItems)
+        public async Task<CreateOrderResponse> CreateOrder(IEnumerable<CartItemDto> cartItems, PaymentSource paymentSource)
         {
             ApiResponse<CreateOrderResponse> response = await this._orderApiService.CreateOrder(new CreateOrderApiRequest
             {
                 CartItems = cartItems,
-                PaymentSource = PaymentSource.PayPal
+                PaymentSource = paymentSource
             });
             
             if (response.IsSuccessStatusCode)

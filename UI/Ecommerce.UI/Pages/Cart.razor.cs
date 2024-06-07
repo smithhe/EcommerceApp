@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Ecommerce.Shared.Enums;
 using Ecommerce.Shared.Responses.Order;
 
 namespace Ecommerce.UI.Pages
@@ -178,7 +179,21 @@ namespace Ecommerce.UI.Pages
 		
 		private async Task PayPalCheckoutClick()
 		{
-			CreateOrderResponse response = await this.OrderService.CreateOrder(this.CartItems!);
+			CreateOrderResponse response = await this.OrderService.CreateOrder(this.CartItems!, PaymentSource.PayPal);
+			
+			if (response.Success && string.IsNullOrEmpty(response.RedirectUrl) == false)
+			{
+				this.NavigationManager.NavigateTo(response.RedirectUrl);
+			}
+			else
+			{
+				this.ToastService.ShowError(response.Message!);
+			}
+		}
+		
+		private async Task StandardCheckoutClick()
+		{
+			CreateOrderResponse response = await this.OrderService.CreateOrder(this.CartItems!, PaymentSource.Standard);
 			
 			if (response.Success && string.IsNullOrEmpty(response.RedirectUrl) == false)
 			{

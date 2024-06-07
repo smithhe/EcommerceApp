@@ -71,8 +71,17 @@ else
                 <div class="col-md-3"></div>
 
                 <div class="col-md-6">
-                    <button class="btn btn-success form-control" @onclick="PayPalCheckoutClick">
+                    <button class="btn btn-primary form-control" @onclick="PayPalCheckoutClick" disabled>
                         <i class="bi bi-paypal"></i> Checkout with PayPal
+                    </button>
+                </div>
+            </div>
+            <div class="row w-100 mt-2">
+                <div class="col-md-3"></div>
+
+                <div class="col-md-6">
+                    <button class="btn btn-success form-control" @onclick="StandardCheckoutClick">
+                        <i class="bi bi-cash"></i> Checkout
                     </button>
                 </div>
             </div>
