@@ -1,0 +1,20 @@
+.product-card {
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Set card height to 100% */
+    overflow: hidden; /* Hide any overflow content */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+.card-img-top {
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: contain; /* Maintain image aspect ratio */
+    padding: 10px; /* Add padding to the image */
+}
+
+.card-body {
+    flex-grow: 1; /* Allow card body to grow to fill available space */
+}

@@ -1,0 +1,9 @@
+.container-bg {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))!important;
+  padding: 20px; /* Add padding for spacing */
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 56px);
+  flex-wrap: wrap; /* Allow cards to wrap within the container */
+}
