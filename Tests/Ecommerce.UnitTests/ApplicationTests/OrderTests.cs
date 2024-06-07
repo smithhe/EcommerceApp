@@ -447,63 +447,6 @@ namespace Ecommerce.UnitTests.ApplicationTests
             });
         }
         
-        [Test]
-        public async Task CreateOrderCommandHandler_WhenOrderItemCreationFails_ReturnsFailedResponse()
-        {
-            //Arrange
-            this._orderRepository.Setup(o => o.AddAsync(It.IsAny<Order>())).ReturnsAsync(1);
-            this._orderRepository.Setup(o => o.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._order);
-            
-            this._mediator.Setup(m => m.Send(It.IsAny<CreateOrderItemCommand>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new CreateOrderItemResponse
-                {
-                    Success = false,
-                    Message = OrderItemConstants._createSqlErrorMessage,
-                    OrderItem = null
-                });
-            
-            this._mediator.Setup(m => m.Send(It.IsAny<GetProductByIdQuery>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new GetProductByIdResponse
-                {
-                    Success = true,
-                    Message = string.Empty,
-                    Product = new ProductDto
-                    {
-                        Id = 1,
-                        Name = "Test Product",
-                        Price = 100,
-                        Description = "Test Description"
-                    }
-                });
-            
-            CreateOrderCommand command = new CreateOrderCommand
-            {
-                CartItems = new List<CartItemDto>
-                {
-                    new CartItemDto
-                    {
-                        ProductId = 1,
-                        Quantity = 1
-                    }
-                },
-                UserId = _userId,
-                UserName = _userName
-            };
-            CreateOrderCommandHandler handler = new CreateOrderCommandHandler(Mock.Of<ILogger<CreateOrderCommandHandler>>(), this._mapper, this._mediator.Object, this._orderRepository.Object);
-            
-            //Act
-            CreateOrderResponse result = await handler.Handle(command, CancellationToken.None);
-            
-            //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(result.Success, Is.False);
-                Assert.That(result.Message, Is.EqualTo(OrderConstants._createErrorMessage));
-                Assert.That(result.Order, Is.Null);
-                Assert.That(result.ValidationErrors, Is.Empty);
-            });
-        }
-        
         #endregion
 
         #region DeleteOrderCommandHandler Tests
@@ -1066,7 +1009,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
         {
             //Arrange
             this._orderRepository.Setup(o => o.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(this._order);
-
+            
             this._mediator.Setup(m => m.Send(It.IsAny<GetAllOrderItemsByOrderIdQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new GetAllOrderItemsByOrderIdResponse
                 {

@@ -19,6 +19,7 @@ using Ecommerce.Shared.Responses.Order;
 using Ecommerce.Shared.Responses.PayPal;
 using FastEndpoints;
 using MediatR;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Moq;
 
@@ -34,12 +35,14 @@ namespace Ecommerce.UnitTests.FastEndpointTests
         
         private Mock<ITokenService> _tokenService = null!;
         private Mock<IMediator> _mediator = null!;
+        private Mock<IConfiguration> _configuration = null!;
         
         [SetUp]
         public void Setup()
         {
             this._tokenService = new Mock<ITokenService>();
             this._mediator = new Mock<IMediator>();
+            this._configuration = new Mock<IConfiguration>();
             
             this._orderDto = new OrderDto
             {
@@ -81,7 +84,7 @@ namespace Ecommerce.UnitTests.FastEndpointTests
             this._mediator.Setup(m => m.Send(It.IsAny<CreatePayPalOrderCommand>(), default(CancellationToken)))
                 .ReturnsAsync(new CreatePayPalOrderResponse { Success = true, RedirectUrl = "redirectUrl" });
 
-            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object);
+            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object, this._configuration.Object);
             
             // Act
             await endpoint.HandleAsync(request, default(CancellationToken));
@@ -106,7 +109,7 @@ namespace Ecommerce.UnitTests.FastEndpointTests
             
             this._tokenService.Setup(t => t.ValidateTokenAsync(It.IsAny<string>())).ReturnsAsync(false);
             
-            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object);
+            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object, this._configuration.Object);
             
             // Act
             await endpoint.HandleAsync(request, default(CancellationToken));
@@ -135,7 +138,7 @@ namespace Ecommerce.UnitTests.FastEndpointTests
             
             this._tokenService.Setup(t => t.ValidateTokenAsync(It.IsAny<string>())).ReturnsAsync(true);
             
-            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object);
+            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object, this._configuration.Object);
             
             // Act
             await endpoint.HandleAsync(request, default(CancellationToken));
@@ -164,7 +167,7 @@ namespace Ecommerce.UnitTests.FastEndpointTests
             
             this._tokenService.Setup(t => t.ValidateTokenAsync(It.IsAny<string>())).ReturnsAsync(true);
             
-            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object);
+            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object, this._configuration.Object);
             
             // Act
             await endpoint.HandleAsync(request, default(CancellationToken));
@@ -195,7 +198,7 @@ namespace Ecommerce.UnitTests.FastEndpointTests
             this._mediator.Setup(m => m.Send(It.IsAny<CreateOrderCommand>(), default(CancellationToken)))
                 .ThrowsAsync(new Exception());
             
-            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object);
+            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object, this._configuration.Object);
             
             // Act
             await endpoint.HandleAsync(request, default(CancellationToken));
@@ -232,7 +235,7 @@ namespace Ecommerce.UnitTests.FastEndpointTests
             this._mediator.Setup(m => m.Send(It.IsAny<CreateOrderCommand>(), default(CancellationToken)))
                 .ReturnsAsync(createOrderResponse);
             
-            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object);
+            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object, this._configuration.Object);
             
             // Act
             await endpoint.HandleAsync(request, default(CancellationToken));
@@ -275,7 +278,7 @@ namespace Ecommerce.UnitTests.FastEndpointTests
             this._mediator.Setup(m => m.Send(It.IsAny<CreatePayPalOrderCommand>(), default(CancellationToken)))
                 .ReturnsAsync(new CreatePayPalOrderResponse { Success = false, Message = PayPalConstants._createOrderErrorMessage, RedirectUrl = "redirectUrl" });
             
-            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object);
+            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object, this._configuration.Object);
             
             // Act
             await endpoint.HandleAsync(request, default(CancellationToken));

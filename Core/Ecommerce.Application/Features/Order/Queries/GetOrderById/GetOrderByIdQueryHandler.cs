@@ -77,6 +77,7 @@ namespace Ecommerce.Application.Features.Order.Queries.GetOrderById
 				if (orderItemsResponse.Success == false)
 				{
 					response.Success = false;
+					response.Order = null;
 					response.Message = OrderConstants._getOrderByIdErrorMessage;
 					return response;
 				}
