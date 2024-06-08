@@ -7,4 +7,11 @@ This is app is not finished and is still being updated but following the instruc
 <br>
 <br>
 Local setup instructions can be found
-<a href="https://smithhe.github.io/EcommerceApp/get-started.html">here</a>
+<a href="https://smithhe.github.io/EcommerceApp/getting-started.html">here</a>
+
+<br>
+<br>
+More details on this project can be found
+<a href="https://smithhe.github.io/EcommerceApp/getting-started.html">here</a>
+
+
