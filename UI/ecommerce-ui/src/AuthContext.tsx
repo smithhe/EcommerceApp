@@ -1,10 +1,12 @@
 import React, {createContext, ReactNode, useContext, useEffect, useState} from 'react';
 import {jwtDecode} from "jwt-decode";
+import authService from "./AuthService.ts";
 
 interface AuthContextType {
-    checkAuth: () => boolean;
     claims: TokenClaims | undefined;
     isAuthenticated: boolean;
+    login: (userName: string, password: string) => Promise<any>;
+    logout: (userName: string) => void;
 }
 
 interface TokenClaims {
@@ -22,7 +24,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const [claims, setClaims] = useState<TokenClaims>();
     const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
-    const checkAuth = () => {
+    useEffect(() => {
         const token = localStorage.getItem('authToken');
 
         if (token != null) {
@@ -37,15 +39,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         if (decodedClaims) {
             setClaims(decodedClaims);
         }
-
-        if (token != null)
-        {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
+    }, []);
 
     const decodeToken = (token: string | null): TokenClaims | null => {
         if (token == null) return null;
@@ -58,12 +52,42 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         }
     };
 
-    useEffect(() => {
-        checkAuth();
-    }, []);
+    const login = async (userName: string, password: string): Promise<any> => {
+        const response = await authService.login(userName, password);
+
+        if (response.success) {
+            localStorage.setItem('authToken', response.token!);
+            setIsAuthenticated(true);
+
+            const decodedClaims = decodeToken(response.token!);
+
+            if (decodedClaims) {
+                setClaims(decodedClaims);
+            }
+
+            return {
+                success: true
+            };
+        }
+
+        return {
+            success: false,
+            message: response.message
+        }
+    }
+
+    const logout = async (userName: string) => {
+        await authService.logout(userName);
+
+        localStorage.removeItem('authToken');
+        setIsAuthenticated(false);
+        setClaims(undefined);
+    }
+
+
 
     return (
-        <AuthContext.Provider value={{ checkAuth, claims, isAuthenticated }}>
+        <AuthContext.Provider value={{ claims, isAuthenticated, login, logout }}>
             {children}
         </AuthContext.Provider>
     );

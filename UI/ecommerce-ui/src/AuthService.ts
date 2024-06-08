@@ -46,10 +46,11 @@ const login = async (username: string, password: string) => {
             }
         }
 
-        localStorage.setItem('authToken', JSON.stringify(response.data.token));
+        //localStorage.setItem('authToken', JSON.stringify(response.data.token));
 
         return {
-            success: true
+            success: true,
+            token: response.data.token
         }
 
     } catch (error) {
@@ -65,7 +66,7 @@ const logout = async (username: string) => {
         console.log(error);
     }
 
-    localStorage.removeItem('authToken');
+    //
 }
 
 interface CreateUserResponse {

@@ -1,28 +1,26 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import authService from '../../AuthService';
+//import authService from '../../AuthService';
 import '../../styles/Login.css'
+import {useAuth} from "../../AuthContext.tsx";
 
-const Login: React.FC = () => {
+const Login = () => {
     const [username, setUsername] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [isProcessing, setIsProcessing] = useState<boolean>(false);
-    //const [error, setError] = useState<string>('');
+    const [error, setError] = useState<string>('');
+    const [displayError, setDisplayError] = useState<boolean>(false);
     const navigate = useNavigate();
-
-    let errorMessage: string = '';
-    let displayError: boolean = false;
-
+    const { isAuthenticated, login } = useAuth();
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-        //setError('');
 
-        displayError = false;
+        setDisplayError(false);
         setIsProcessing(true);
 
         try {
-            const response = await authService.login(username, password);
+            const response = await login(username, password);
 
             if (response.success) {
                 navigate('/'); // Redirect to a protected route or dashboard
@@ -30,28 +28,31 @@ const Login: React.FC = () => {
 
             if (response.message)
             {
-                errorMessage = response.message;
-                displayError = true;
+                setError(response.message);
+                setDisplayError(true);
             }
             else {
-                errorMessage = 'Unexpected Error Occurred';
-                displayError = true;
+                setError('Unexpected Error Occurred')
+                setDisplayError(true);
             }
 
         } catch (err) {
-            //setError('Invalid credentials');
-            errorMessage = 'Unexpected Error Occurred';
-            displayError = true;
+            setError('Unexpected Error Occurred')
+            setDisplayError(true);
         }
 
         setIsProcessing(false);
     };
 
+    if (isAuthenticated) {
+        navigate('/');
+    }
+
     return (
         <div className="container mt-5">
             <div className="row justify-content-center">
 
-                {displayError ? (<div className="alert alert-danger text-center" role="alert">{errorMessage}</div>) : (<div></div>)}
+                {displayError ? (<div className="alert alert-danger text-center" role="alert">{error}</div>) : (<div></div>)}
 
                 <div className="col-md-6">
                     <div className="login-form">

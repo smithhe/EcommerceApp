@@ -1,25 +1,22 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../AuthContext.tsx";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 const NavMenu = () => {
     const { isAuthenticated, claims } = useAuth();
-    const [localIsAuthenticated, setIsAuthenticated] = useState<boolean>();
+    const [localIsAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+    const [displayName, setDisplayName] = useState<string>("User");
 
     useEffect(() => {
         setIsAuthenticated(isAuthenticated);
-    }, [isAuthenticated]);
-
-    const getDisplayName = () : string => {
         if (isAuthenticated) {
-            const firstName = claims?.FirstName;
-            const lastName = claims?.LastName;
-
-            return `${firstName} ${lastName}`;
+            const firstName = claims?.FirstName || "";
+            const lastName = claims?.LastName || "";
+            setDisplayName(`${firstName} ${lastName}`);
+        } else {
+            setDisplayName("User");
         }
-
-        return "User";
-    }
+    }, [isAuthenticated, claims]);
 
     return (
         <nav className="navbar navbar-expand-lg bg-dark-subtle">
@@ -42,37 +39,31 @@ const NavMenu = () => {
                     <div className="d-flex">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             {localIsAuthenticated ? (
-                                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li>
-                                        <a className="nav-link" href='/Profile'> Welcome, {getDisplayName()}</a>
+                                <>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href='/Profile'> Welcome, {displayName}</a>
                                     </li>
-
-                                    <li>
+                                    <li className="nav-item">
                                         <a className="nav-link" href="/Cart"><i className="bi bi-cart4"></i> Cart</a>
                                     </li>
-
-                                    <li>
-                                    <a className="nav-link" href="/Orders"><i className="bi bi-card-list"></i> Orders</a>
-                                    </li>
-
                                     <li className="nav-item">
-                                    <a className="nav-link" href="/logout"><i className="bi bi-box-arrow-in-right"></i> Logout</a>
+                                        <a className="nav-link" href="/Orders"><i className="bi bi-card-list"></i> Orders</a>
                                     </li>
-                                </ul>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="/logout"><i className="bi bi-box-arrow-in-right"></i> Logout</a>
+                                    </li>
+                                </>
                             ) : (
-                                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li className="nav-item">
-                                        <a className="nav-link" href="/login"><i
-                                            className="bi bi-box-arrow-in-right"></i> Login</a>
-                                    </li>
-                                </ul>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/login"><i className="bi bi-box-arrow-in-right"></i> Login</a>
+                                </li>
                             )}
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
-    )
+    );
 }
 
-export default NavMenu
+export default NavMenu;

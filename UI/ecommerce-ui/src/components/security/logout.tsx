@@ -1,20 +1,21 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from "../../AuthContext.tsx";
-import authService from "../../AuthService.ts";
+//import authService from "../../AuthService.ts";
 
-const Logout: React.FC = () => {
-    const { claims } = useAuth();
+const Logout = () => {
+    const { claims, logout } = useAuth();
     const navigate = useNavigate();
 
     useEffect( () => {
         const logoutCall = async () => {
-            await authService.logout(claims?.["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || '');
+            await logout(claims?.["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || '');
         }
 
-        logoutCall();
-        navigate('/');
-    }, []);
+        logoutCall().then(() => {
+            navigate('/');
+        });
+    });
 
     return (
         <div>
