@@ -20,7 +20,7 @@ const Categories = () => {
         };
 
         fetchCategories();
-    });
+    }, []);
 
     const onCategoryButtonClick = (categoryId: number) => {
         navigate(`/products/${categoryId}`);
