@@ -46,7 +46,7 @@ const ProductDetail = () => {
 
             const userReviewResponse = await reviewService.getUserReview(claims?.["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || '', response.product.id)
 
-            if (userReviewResponse.success)
+            if (userReviewResponse.success && userReview != null)
             {
                 setUserHasReview(true);
                 setStarRating(userReviewResponse.userReview.starRatings);
