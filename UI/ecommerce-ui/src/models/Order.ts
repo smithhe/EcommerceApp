@@ -5,7 +5,7 @@ import {OrderItem} from "./OrderItem.ts";
 export class Order {
     id: number;
     userId: string; // Using string to represent Guid
-    createdDate: Date;
+    createdDate: string;
     status: OrderStatus;
     total: number;
     payPalRequestId: string; // Using string to represent Guid
@@ -14,7 +14,7 @@ export class Order {
     constructor(
         id: number,
         userId: string,
-        createdDate: Date,
+        createdDate: string,
         status: OrderStatus,
         total: number,
         payPalRequestId: string,

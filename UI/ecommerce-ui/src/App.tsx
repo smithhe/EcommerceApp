@@ -10,6 +10,7 @@ import {AuthProvider} from "./AuthContext.tsx";
 import ProductDetail from "./components/productdetail.tsx";
 import Logout from "./components/security/logout.tsx";
 import Cart from "./components/cart.tsx";
+import Orders from "./components/Orders.tsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
             <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={<Register />} />
             <Route path="/cart" element={<Cart />}  />
+            <Route path="/orders" element={<Orders />}  />
             <Route path="/checkout/success/:orderId" element={<Cart />}  />
         </Route>
     )
