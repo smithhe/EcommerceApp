@@ -16,6 +16,7 @@ interface TokenClaims {
     FirstName: string;
     LastName: string;
     "http://schemas.microsoft.com/ws/2008/06/identity/claims/role": string;
+    nbf: number;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -27,14 +28,29 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     useEffect(() => {
         const token = localStorage.getItem('authToken');
 
-        if (token != null) {
+        const date = new Date();
+        const now_utc = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(),
+            date.getUTCDate(), date.getUTCHours(),
+            date.getUTCMinutes(), date.getUTCSeconds());
+
+        const currentTime = new Date(now_utc);
+
+        const decodedClaims = decodeToken(token);
+
+        if (decodedClaims == null) {
+            setIsAuthenticated(false);
+            return;
+        }
+
+        const expDate = new Date((decodedClaims.nbf * 1000));
+
+
+        if (token != null && currentTime > expDate) {
             setIsAuthenticated(true);
         }
         else {
             setIsAuthenticated(false);
         }
-
-        const decodedClaims = decodeToken(token);
 
         if (decodedClaims) {
             setClaims(decodedClaims);
