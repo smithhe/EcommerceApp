@@ -13,7 +13,7 @@ Wanting to get away from these problems and also have a tool that I can work to 
 After a few months of development it became apparent to me via conversations with others that this tool could be useful for others wanting to learn how to build a full stack application from scratch. Not only just the application, but the devops process, following security standards, being able to reproduce the same result on a fairly minimal budget, etc.
 
 ## Instructions
-For instructions on how to get the project up and running locally click here
+For instructions on how to get the project up and running locally click [here](./getting-started.md)
 
 If you are interested in forking the project to try running it in your own environment a guide will be posted soon on how to do that.
 
@@ -22,6 +22,8 @@ The following documentation has been designed for those looking to get more in d
 
 The tech stack for this project is mainly .Net with Blazor as the frontend and .Net API using fast-endpoints as a backend. Additionally there is a console project that acts as a worker to handle messages put on a queue by the API, currently that is limited to sending emails out.
 
+Recently a React UI has been created and uploaded as well so if you are more interested in a javascript/typescript front end that is available to be used as well.
+
 From a devops perspective the apps all get containerized via the docker files and are pushed to a dockerhub repo. I chose to use DigitalOcean for hosting my cloud environment given my previous history with them as well as the better pricing for hosting a sql server and a k8s environment. Terraform was used to setup most of the cloud resources but some manual work is needed, such as setting up DNS and ssl certificates, etc.
 
-For more details please follow a link to the Introduction page.
+For more details please follow a link to the [Introduction page](./introduction.md).

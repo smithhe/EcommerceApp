@@ -8,7 +8,9 @@ To setup and run the project locally you will need to first install the prequisi
 
 Optionally if you would like to have your containers hosted on a separate machine Portainer would be a good option to setup and manage the stack for this application.
 
-### Additional Setup Requirements
+### Optional Setup Requirements
+These are a list of requirements you only need if you want to have a real mail server and use paypal when doing checkout
+
 * A PayPal account
     
     The current implemented method for checkout is through PayPal, in order to use the checkout system you will need to setup a dev account and get the credentials to make API calls as well as sandbox credentials to complete a checkout
@@ -16,9 +18,9 @@ Optionally if you would like to have your containers hosted on a separate machin
     
     If you opt to not use the mailhog server below and want to have emails actually sent out you will need to set something up and get the credentials necessary for the secrets.json file in the worker project.
 
-### Setup Steps
+### Dotnet Project Setup Steps
 1) Open Powershell and move into the root directory of the project
-    - Your shell path should look similar to `C:\EcommerceApp>` on windows
+    - Your shell path should look similar to `C:\GitRepos\EcommerceApp>` on windows
     - For `superior` Linux users it should look more like this `~/GitRepos/EcommerceApp$`
     <br/><br/>
 2) Run the following command to set up a MySQL Docker Container
@@ -74,8 +76,36 @@ Optionally if you would like to have your containers hosted on a separate machin
         }
     }
     ```
-8) (Mailhog Only)
-9) Run the UI and API project together in an IDE of your choice
+8) (Mailhog Only) Update the `MailServiceRegistration.cs` file so it looks like this
+    ```csharp
+    //Use for local testing with MailHog
+    SmtpClient client = new SmtpClient
+    {
+        EnableSsl = false,
+        Port = 1025,
+        Host = "mailhog"
+    };
+    
+    //Use for sending emails with a real SMTP server
+    // SmtpClient client = new SmtpClient (mailSettings.Host)
+    // {
+    //     EnableSsl = true,
+    //     Port = mailSettings.Port,
+    //     UseDefaultCredentials = false,
+    //     Credentials = new System.Net.NetworkCredential(mailSettings.UserName, mailSettings.Password)
+    // };
+    ```
+9) Run the UI, API, and Worker projects together in an IDE of your choice
+
+### React UI Setup Steps
+1) Run the following command to download the dependencies you will need for the project
+    ```bash
+    npm install
+    ```
+2) Use an IDE of your choice or run the following command to run the UI locally
+    ```bash
+    npm run dev
+    ```
 
 ### Post Setup Instructions
 
