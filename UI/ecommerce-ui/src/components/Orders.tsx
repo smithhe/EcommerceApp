@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 import orderService from "../services/OrderService.ts";
 import {useAuth} from "../AuthContext.tsx";
 import {toast, ToastContainer} from "react-toastify";
+import DateUtils from '../utils/DateUtils.ts'
 
 
 const Orders = () => {
@@ -36,25 +37,6 @@ const Orders = () => {
             console.log('Orders Loaded');
         })
     }, [isAuthenticated, claims]);
-
-    const formatDate = (dateString: string): string => {
-        //6/6/2024 10:39:00 PM
-        const date = new Date(dateString);
-
-        const year = date.getFullYear();
-        const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are 0-based
-        const day = date.getDate().toString().padStart(2, '0');
-
-        let hours = date.getHours();
-        const minutes = date.getMinutes().toString().padStart(2, '0');
-
-        const ampm = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12;
-        hours = hours ? hours : 12; // The hour '0' should be '12'
-        const strHours = hours.toString().padStart(2, '0');
-
-        return `${month}/${day}/${year} ${strHours}:${minutes} ${ampm}`;
-    }
 
     const orderDetailsClick = (orderId: number) => {
         navigate(`/orderdetail/${orderId}`)
@@ -114,8 +96,8 @@ const Orders = () => {
                     orders.map((order, index) => (
                         <tr key={index}>
                             <td className="text-center">{order.id}</td>
-                            <td className="text-center">{formatDate(order.createdDate)}</td>
-                            <td className="text-center">{order.total.toFixed(2)}</td>
+                            <td className="text-center">{DateUtils.formatDate(order.createdDate)}</td>
+                            <td className="text-center">${order.total.toFixed(2)}</td>
                             <td className="text-center">{OrderStatus[order.status]}</td>
                             <td>
                                 <div className="row text-center">
