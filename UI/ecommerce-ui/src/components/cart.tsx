@@ -13,15 +13,24 @@ import {PaymentSource} from "../models/PaymentSource.ts";
 const Cart = () => {
     const {isAuthenticated, claims} = useAuth();
     const navigate = useNavigate();
+
     const [loading, setLoading] = useState(false);
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
-    const [products, setProducts] = useState<Product[]>([]);
-    const [cartTotal, setCartTotal] = useState<number>(0);
+    const [cartTotal, setCartTotal] = useState<number>();
     const [modalIsOpen, setIsOpen] = useState(false);
+    const [products, setProducts] = useState<Product[]>([]);
     const [modalCount, setModalCount] = useState<number>(0);
     const [modalProductName, setModalProductName] = useState<string>('');
     const [modalProductDesc, setModalProductDesc] = useState<string>('');
-    const [modalCartItem, setModalCartItem] = useState<CartItem | undefined>(undefined);
+    const [modalCartItem, setModalCartItem] = useState<CartItem>();
+    
+    //const [reload, setReload] = useState(false);
+
+    //let modalCount: number = 0;
+    //let modalProductName: string = '';
+    //let modalProductDesc: string = '';
+    //let modalCartItem: CartItem | undefined = undefined;
+    //const products: Product[] = [];
 
     useEffect(() => {
         setLoading(true);
@@ -48,8 +57,8 @@ const Cart = () => {
             }
 
             const productIds = Array.from(new Set(localCartItems.map(c => c.productId)));
+            const localProducts: Product[] = []
 
-            const localProducts = []
             for (const id of productIds) {
                 const getProductResponse = await productService.getProductById(id);
 
@@ -59,17 +68,10 @@ const Cart = () => {
                 }
             }
 
-
-            setProducts(localProducts);
-            setCartItems(localCartItems);
-            calculateCartTotal(products);
-        }
-
-        const calculateCartTotal = (productList: Product[]) => {
             let localCartTotal = 0;
 
-            cartItems.forEach((cartItem) => {
-                const product = productList.find(p => p.id === cartItem.productId);
+            localCartItems.forEach((cartItem) => {
+                const product = localProducts.find(p => p.id === cartItem.productId);
 
                 if (product)
                 {
@@ -78,8 +80,11 @@ const Cart = () => {
             })
 
             setCartTotal(localCartTotal);
-            setLoading(false);
+            setProducts(localProducts);
+            setCartItems(localCartItems);
         }
+
+
 
         loadCart();
     }, [isAuthenticated]);
@@ -87,8 +92,6 @@ const Cart = () => {
     if (cartItems.length === 0 && loading) {
         return <p><em>Loading...</em></p>
     }
-
-
 
     const startShoppingClick = () => {
         navigate('/categories');
@@ -103,10 +106,10 @@ const Cart = () => {
             return;
         }
 
-        setModalCartItem(cartItem);
-        setModalProductName(cartItemProduct.name);
+        setModalCartItem(cartItem)
+        setModalProductName(cartItemProduct.name)
         setModalProductDesc(cartItemProduct.description);
-        setModalCount(cartItem.quantity);
+        setModalCount(cartItem.quantity)
         setIsOpen(true);
     }
 
@@ -160,7 +163,7 @@ const Cart = () => {
 
         if (updateCartItemResponse.success)
         {
-            const localCartItems = cartItems.filter(c => c.id === modalCartItem.id);
+            const localCartItems = cartItems.filter(c => c.id === modalCartItem!.id);
             localCartItems.push(modalCartItem);
 
             //calculateCartTotal(products);
@@ -228,7 +231,7 @@ const Cart = () => {
 
                         return (
                             <tr key={index}>
-                                <td></td>
+                                <td>{product.name}</td>
                                 <td>{item.quantity}</td>
                                 <td>${product.price.toFixed(2)}</td>
                                 <td>${(product.price * item.quantity).toFixed(2)}</td>
@@ -246,7 +249,7 @@ const Cart = () => {
                 {cartItems.length != 0 ? (
                     <>
                         <div className="row w-100 text-center">
-                            <h2>Total: ${cartTotal.toFixed(2)}</h2>
+                            <h2>Total: ${cartTotal?.toFixed(2)}</h2>
                         </div>
                         <div className="row w-100 mt-2">
                             <div className="col-md-3"></div>
@@ -288,8 +291,8 @@ const Cart = () => {
                         <div className="row mt-3">
                             <div className="form-group text-center">
                                 <label htmlFor="quantity" className="h5">Quantity:</label>
-                                <input type="number" className="form-control" id="quantity" name="quantity" min="1"
-                                       onChange={(e) => setModalCount(Number(e.target.value))}/>
+                                <input type="number" className="form-control" id="quantity" name="quantity" min="1" value={modalCount}
+                                       onChange={(e) => setModalCount((Number(e.target.value)))}/>
                             </div>
                         </div>
 
