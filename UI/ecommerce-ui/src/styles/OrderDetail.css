@@ -1,0 +1,10 @@
+.btn-borderless {
+    border: none;
+    background-color: transparent;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
