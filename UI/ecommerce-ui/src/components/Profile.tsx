@@ -1,11 +1,9 @@
 import {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
 import {useAuth} from "../AuthContext.tsx";
 import {toast, ToastContainer} from "react-toastify";
 
 
 const Profile = () => {
-    const navigate = useNavigate();
     const {isAuthenticated, claims, updateProfile, updatePassword} = useAuth();
 
     const [userName, setUserName] = useState('');
