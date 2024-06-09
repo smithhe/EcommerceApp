@@ -195,6 +195,11 @@ const Cart = () => {
         }
     }
 
+    if (!cartItems)
+    {
+        return <p><em>Loading...</em></p>;
+    }
+
     return (
         <>
             <div className="container mt-4">
