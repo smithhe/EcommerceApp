@@ -6,21 +6,21 @@ import LoadingIcon from "./childComponents/LoadingIcon.tsx";
 
 
 const PaymentReturn = () => {
-    const { ordertId } = useParams<{ ordertId?: string }>();
+    const { orderId } = useParams<{ orderId?: string }>();
     const [newOrder, setNewOrder] = useState<Order>();
     const [showError, setShowError] = useState(false);
     const [error, setError] = useState<string>();
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (ordertId == undefined)
+        if (orderId == undefined)
         {
             return;
         }
 
         const loadOrder = async () => {
             setShowError(false);
-            const response = await orderService.getOrderAfterSuccessfulCheckout(parseInt(ordertId));
+            const response = await orderService.getOrderAfterSuccessfulCheckout(parseInt(orderId));
 
             if (response.success === false)
             {
