@@ -6,6 +6,7 @@ import orderService from "../services/OrderService.ts";
 import {useAuth} from "../AuthContext.tsx";
 import {toast, ToastContainer} from "react-toastify";
 import DateUtils from '../utils/DateUtils.ts'
+import LoadingIcon from "./childComponents/LoadingIcon.tsx";
 
 
 const Orders = () => {
@@ -68,7 +69,7 @@ const Orders = () => {
     }
 
     if (orders == undefined) {
-        return <p><em>Loading...</em></p>;
+        return <LoadingIcon/>;
     }
 
     return (

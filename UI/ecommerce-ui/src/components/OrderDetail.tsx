@@ -5,6 +5,7 @@ import orderService from "../services/OrderService.ts";
 import {toast, ToastContainer} from "react-toastify";
 import DateUtils from "../utils/DateUtils.ts";
 import {OrderStatus} from "../models/OrderStatus.ts";
+import LoadingIcon from "./childComponents/LoadingIcon.tsx";
 
 
 const OrderDetail = () => {
@@ -41,7 +42,7 @@ const OrderDetail = () => {
 
     if (!order)
     {
-        return <p><em>Loading...</em></p>;
+        return <LoadingIcon/>;
     }
 
     return (

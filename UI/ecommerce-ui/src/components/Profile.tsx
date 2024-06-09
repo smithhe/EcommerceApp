@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {useAuth} from "../AuthContext.tsx";
 import {toast, ToastContainer} from "react-toastify";
+import LoadingIcon from "./childComponents/LoadingIcon.tsx";
 
 
 const Profile = () => {
@@ -95,7 +96,7 @@ const Profile = () => {
 
     if (userName == '')
     {
-        return <p><em>Loading...</em></p>;
+        return <LoadingIcon/>;
     }
 
     return (

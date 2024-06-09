@@ -16,6 +16,7 @@ import {CartItem} from "../models/CartItem.ts";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import ReactStars from 'react-rating-stars-component';
+import LoadingIcon from "./childComponents/LoadingIcon.tsx";
 
 
 const ProductDetail = () => {
@@ -162,7 +163,7 @@ const ProductDetail = () => {
     }
 
     if (!product) {
-        return <p><em>Loading...</em></p>;
+        return <LoadingIcon/>;
     }
 
     return (

@@ -10,6 +10,7 @@ import productService from "../services/ProductService";
 import Modal from "react-modal";
 import cartService from "../services/CartService.ts";
 import {CartItem} from "../models/CartItem.ts";
+import LoadingIcon from "./childComponents/LoadingIcon.tsx";
 
 const Products = () => {
     const [productList, setProductList] = useState<Product[]>([]);
@@ -89,7 +90,7 @@ const Products = () => {
     }
 
     if (productList.length === 0) {
-        return <p><em>Loading...</em></p>;
+        return <LoadingIcon/>;
     }
 
     return (

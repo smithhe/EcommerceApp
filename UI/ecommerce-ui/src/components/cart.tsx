@@ -9,12 +9,12 @@ import {toast, ToastContainer} from "react-toastify";
 import Modal from "react-modal";
 import orderService from "../services/OrderService.ts";
 import {PaymentSource} from "../models/PaymentSource.ts";
+import LoadingIcon from "./childComponents/LoadingIcon.tsx";
 
 const Cart = () => {
     const {isAuthenticated, claims} = useAuth();
     const navigate = useNavigate();
 
-    const [loading, setLoading] = useState(false);
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
     const [cartTotal, setCartTotal] = useState<number>();
     const [modalIsOpen, setIsOpen] = useState(false);
@@ -33,8 +33,6 @@ const Cart = () => {
     //const products: Product[] = [];
 
     useEffect(() => {
-        setLoading(true);
-
         if (isAuthenticated === false)
         {
             return;
@@ -88,10 +86,6 @@ const Cart = () => {
 
         loadCart();
     }, [isAuthenticated]);
-
-    if (cartItems.length === 0 && loading) {
-        return <p><em>Loading...</em></p>
-    }
 
     const startShoppingClick = () => {
         navigate('/categories');
@@ -195,9 +189,9 @@ const Cart = () => {
         }
     }
 
-    if (!cartItems)
+    if (!cartItems || cartItems.length === 0)
     {
-        return <p><em>Loading...</em></p>;
+        return <LoadingIcon/>;
     }
 
     return (

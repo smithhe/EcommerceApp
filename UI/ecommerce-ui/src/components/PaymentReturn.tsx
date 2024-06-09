@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {Order} from "../models/Order.ts";
 import {useNavigate, useParams} from "react-router-dom";
 import orderService from "../services/OrderService.ts";
+import LoadingIcon from "./childComponents/LoadingIcon.tsx";
 
 
 const PaymentReturn = () => {
@@ -34,7 +35,7 @@ const PaymentReturn = () => {
     });
 
     if (!newOrder) {
-        return <p><em>Loading...</em></p>;
+        return <LoadingIcon/>;
     }
 
     const getTotal = () : string => {
