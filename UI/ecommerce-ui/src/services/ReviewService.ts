@@ -3,8 +3,7 @@ import {Review} from "../models/Review.ts";
 
 const submitReview = async (review: Review) => {
     try {
-        const response = await axiosInstance.post(`/api/review/create`,
-        {
+        const response = await axiosInstance.post(`/api/review/create`, {
             ReviewToCreate: review
         });
 
@@ -53,7 +52,7 @@ const removeReview = async (review: Review) => {
 const updateReview = async (review: Review) => {
     try {
         const response = await axiosInstance.put(`/api/review/update`, {
-            data: {ReviewToUpdate: review}
+            ReviewToUpdate: review
         });
 
         if (response.data) {

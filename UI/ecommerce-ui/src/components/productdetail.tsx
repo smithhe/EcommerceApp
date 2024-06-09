@@ -30,6 +30,7 @@ const ProductDetail = () => {
     const [comments, setComments] = useState<string>('');
     const [modalIsOpen, setIsOpen] = useState(false);
     const [modalCount, setModalCount] = useState<number>(0);
+    const [savingReview, setSavingReview] = useState<boolean>(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -87,6 +88,7 @@ const ProductDetail = () => {
     const updateReview = async () => {
         if (userReview == undefined) return;
 
+        setSavingReview(true);
         const reviewToUpdate = userReview;
 
         reviewToUpdate.stars = starRating;
@@ -96,10 +98,13 @@ const ProductDetail = () => {
 
         if (response.success)
         {
-            setUserReview(reviewToUpdate)
+            setUserReview(reviewToUpdate);
+            setSavingReview(false);
+            setIsEditing(false);
             return;
         }
 
+        setSavingReview(false);
         toast.error(response.message);
     }
 
@@ -250,32 +255,38 @@ const ProductDetail = () => {
                                     <div className="card mb-4">
                                         <div className="card-body">
                                             <h5 className="card-title">Update Your Review</h5>
-                                            <form>
-                                                <div className="form-group">
-                                                    <div className="ratings">
-                                                    <span className="rating-stars text-primary text-center">
-                                                        <ReactStars count={5} onChange={ratingChanged} size={24}
-                                                                    activeColor="#ffd700"  />
-                                                    </span>
-                                                    </div>
+                                            <div className="form-group">
+                                                <div className="ratings">
+                                                <span className="rating-stars text-primary text-center">
+                                                    <ReactStars count={5} onChange={ratingChanged} size={24}
+                                                                activeColor="#ffd700"  />
+                                                </span>
                                                 </div>
+                                            </div>
 
-                                                <div className="form-group">
-                                                    <label htmlFor="comments">Comments (Max 500 characters):</label>
-                                                    <textarea className="form-control" id="comments" name="comments"
-                                                              rows={4} maxLength={500} required></textarea>
-                                                </div>
+                                            <div className="form-group">
+                                                <label htmlFor="comments">Comments (Max 500 characters):</label>
+                                                <textarea className="form-control" id="comments" name="comments"
+                                                          rows={4} maxLength={500}></textarea>
+                                            </div>
 
+                                            {savingReview ? (
+                                                <button type="submit" className="btn btn-primary mt-2">
+                                                    <span className="spinner-border spinner-border-sm"
+                                                          role="status"></span>
+                                                    Saving Changes
+                                                </button>
+                                            ) : (
                                                 <button type="button" className="btn btn-primary mt-2"
                                                         onClick={() => updateReview()}>Save Changes
                                                 </button>
-                                                <button type="button" className="btn btn-danger mt-2 ms-2"
-                                                        onClick={() => deleteReview()}>Delete
-                                                </button>
-                                                <button type="button" className="btn btn-secondary mt-2 ms-2"
-                                                        onClick={() => cancelEditing()}>Cancel
-                                                </button>
-                                            </form>
+                                            )}
+                                            <button type="button" className="btn btn-danger mt-2 ms-2"
+                                                    onClick={() => deleteReview()}>Delete
+                                            </button>
+                                            <button type="button" className="btn btn-secondary mt-2 ms-2"
+                                                    onClick={() => cancelEditing()}>Cancel
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
