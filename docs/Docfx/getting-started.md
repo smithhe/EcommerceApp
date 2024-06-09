@@ -38,7 +38,7 @@ These are a list of requirements you only need if you want to have a real mail s
 4) Update your `appsettings.Development.json` or file in the API project to have the following connection string <br/> (You *SHOULD* change the values to match your MySQL container setup)
     ```json
     "ConnectionStrings": {
-        "DefaultConnection": "server=localhost;port=3306;database=ecommerce;user=applicationuser;password=password"
+        "datastorage": "server=localhost;port=3306;database=ecommerce;user=applicationuser;password=password"
     }
     ```
 5) You will need to use a program of your choice or bash into the container to access your MySql database to run the following snippet as a user with admin privileges
