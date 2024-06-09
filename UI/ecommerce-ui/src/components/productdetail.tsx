@@ -47,7 +47,7 @@ const ProductDetail = () => {
 
             const userReviewResponse = await reviewService.getUserReview(claims?.["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || '', response.product.id)
 
-            if (userReviewResponse.success && userReview != null)
+            if (userReviewResponse.success && userReviewResponse.userReview != null)
             {
                 setUserHasReview(true);
                 setStarRating(userReviewResponse.userReview.starRatings);
@@ -63,8 +63,8 @@ const ProductDetail = () => {
             setProduct(response.product);
         };
 
-        fetchProduct();
-    }, [claims, isAuthenticated, productId]);
+        fetchProduct().then(() => {console.log('Product Fetched')});
+    }, [productId, isAuthenticated, claims]);
 
     const ratingChanged = (newRating: number) => {
         setStarRating(newRating);
@@ -162,7 +162,7 @@ const ProductDetail = () => {
         setIsOpen(false);
     }
 
-    if (!product) {
+    if (!product || (!userReview && userHasReview)) {
         return <LoadingIcon/>;
     }
 
