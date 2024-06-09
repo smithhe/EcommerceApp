@@ -206,11 +206,7 @@ const ProductDetail = () => {
                 <div className="row">
                     <div className="col text-center">
                         <h1 className="display-6">Price: ${product.price}</h1>
-                        {product == null ? (
-                            <button type="button" className="btn btn-primary btn-lg">Add to Cart <i className="bi bi-cart4"></i></button>
-                            ) : (
-                            <button type="button" className="btn btn-primary btn-lg" onClick={addToCartClick}>Add to Cart <i className="bi bi-cart4"></i></button>
-                            )}
+                        <button type="button" className="btn btn-primary btn-lg" onClick={addToCartClick}>Add to Cart <i className="bi bi-cart4"></i></button>
                     </div>
                 </div>
 
@@ -306,25 +302,23 @@ const ProductDetail = () => {
                             <div className="card mb-4">
                                 <div className="card-body">
                                     <h5 className="card-title">Submit Your Review</h5>
-                                    <form className="align-content-center" onSubmit={() => createReview()}>
-                                        <div className="form-group">
-                                            <div className="ratings">
-                                                <span className="rating-stars text-primary text-center">
-                                                    <ReactStars count={5} onChange={ratingChanged} size={24}
-                                                                activeColor="#ffd700"/>
-                                                </span>
-                                            </div>
+                                    <div className="form-group">
+                                        <div className="ratings">
+                                            <span className="rating-stars text-primary text-center">
+                                                <ReactStars count={5} onChange={ratingChanged} size={24}
+                                                            activeColor="#ffd700"/>
+                                            </span>
                                         </div>
+                                    </div>
 
-                                        <div className="form-group">
-                                            <label htmlFor="comments">Comments (Max 500 characters):</label>
-                                            <textarea className="form-control" id="comments" name="comments" rows={4}
-                                                      maxLength={500} required
-                                                      onChange={(e) => setComments(e.target.value)}></textarea>
-                                        </div>
+                                    <div className="form-group">
+                                        <label htmlFor="comments">Comments (Max 500 characters):</label>
+                                        <textarea className="form-control" id="comments" name="comments" rows={4}
+                                                  maxLength={500}
+                                                  onChange={(e) => setComments(e.target.value)}></textarea>
+                                    </div>
 
-                                        <button type="submit" className="btn btn-primary mt-2">Submit Review</button>
-                                    </form>
+                                    <button type="button" className="btn btn-primary mt-2" onClick={createReview}>Submit Review</button>
                                 </div>
                             </div>
                         </div>
