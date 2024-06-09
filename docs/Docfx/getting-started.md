@@ -49,7 +49,7 @@ These are a list of requirements you only need if you want to have a real mail s
     ```json
     {
         "JwtSettings": {
-        "Key": "somevalue"
+        "Key": "somevaluesuperduperlongstringthatwillbeatleast128bitslongandsatisfytherequirementofhthealgowereusinghere"
         },
         "Paypal": {
             "ClientId": "AnId",
@@ -71,7 +71,7 @@ These are a list of requirements you only need if you want to have a real mail s
         "MailSettings": {
             "Host": "localhost",
             "Port": 1025,
-            "UserName": "CHANGEME",
+            "UserName": "ecommerce@techforge.com",
             "Password": "CHANGEME"
         }
     }
@@ -83,7 +83,7 @@ These are a list of requirements you only need if you want to have a real mail s
     {
         EnableSsl = false,
         Port = 1025,
-        Host = "localhost"
+        Host = mailSettings.Host
     };
     
     //Use for sending emails with a real SMTP server

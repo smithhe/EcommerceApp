@@ -33,7 +33,7 @@ namespace Ecommerce.Mail
             // {
             //     EnableSsl = false,
             //     Port = 1025,
-            //     Host = "mailSettings.UserName"
+            //     Host = mailSettings.Host
             // };
             
             //Use for sending emails with a real SMTP server
