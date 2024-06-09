@@ -99,20 +99,27 @@ interface ConfirmEmailResponse {
 }
 
 const confirmEmail = async (userId: string, emailToken: string) => {
-    const response = await axiosInstance.post<ConfirmEmailResponse>(`/api/user/confirm-email`, {
-        UserId: userId,
-        EmailToken: emailToken
-    });
+    try {
+        const response = await axiosInstance.post<ConfirmEmailResponse>(`/api/user/confirm-email`, {
+            UserId: userId,
+            EmailToken: emailToken
+        });
 
-    if (response.data != null)
-    {
-        return response.data;
+        if (response.data != null)
+        {
+            return response.data;
+        }
+
+        return {
+            success: false,
+            errors: ['Unexpected Error Occurred']
+        };
+    } catch (error) {
+        return {
+            success: false,
+            errors: ['Unexpected Error Occurred']
+        };
     }
-
-    return {
-        success: false,
-        errors: ['Unexpected Error Occurred']
-    };
 }
 
 const updateProfile = async (firstName: string, lastName: string, updateUserName: string, userName: string, email: string) => {

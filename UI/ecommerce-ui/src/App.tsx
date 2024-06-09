@@ -13,6 +13,8 @@ import Cart from "./components/cart.tsx";
 import Orders from "./components/Orders.tsx";
 import OrderDetail from "./components/OrderDetail.tsx";
 import Profile from "./components/Profile.tsx";
+import PaymentReturn from "./components/PaymentReturn.tsx";
+import ConfirmEmail from "./components/security/ConfirmEmail.tsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -27,8 +29,9 @@ const router = createBrowserRouter(
             <Route path="/cart" element={<Cart />}  />
             <Route path="/orders" element={<Orders />}  />
             <Route path="/orderdetail/:orderId" element={<OrderDetail />}  />
-            <Route path="/checkout/success/:orderId" element={<Cart />}  />
+            <Route path="/checkout/success/:orderId" element={<PaymentReturn />}  />
             <Route path="/profile" element={<Profile />}  />
+            <Route path="/ConfirmEmail" element={<ConfirmEmail />}  />
         </Route>
     )
 )
