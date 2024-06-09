@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {Order} from "../models/Order.ts";
 import {useNavigate, useParams} from "react-router-dom";
 import orderService from "../services/OrderService.ts";
@@ -11,8 +11,12 @@ const PaymentReturn = () => {
     const [showError, setShowError] = useState(false);
     const [error, setError] = useState<string>();
     const navigate = useNavigate();
+    const hasFetched = useRef(false);
 
     useEffect(() => {
+        if (hasFetched.current) return; // Prevent further calls if already fetched
+        hasFetched.current = true; // Mark as fetched
+
         if (orderId == undefined)
         {
             return;
@@ -31,8 +35,8 @@ const PaymentReturn = () => {
             setNewOrder(response.order);
         }
 
-        loadOrder();
-    });
+        loadOrder().then(() => {console.log('Order loaded')});
+    }, []);
 
     if (!newOrder) {
         return <LoadingIcon/>;
