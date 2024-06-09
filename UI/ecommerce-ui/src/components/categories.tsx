@@ -10,7 +10,7 @@ import LoadingIcon from "./childComponents/LoadingIcon.tsx";
 const Categories = () => {
     const navigate = useNavigate();
 
-    const [categoryList, setCategoryList] = useState<Category[]>([]);
+    const [categoryList, setCategoryList] = useState<Category[] | undefined>(undefined);
 
     useEffect(() => {
         //Loads in the categories
@@ -34,10 +34,11 @@ const Categories = () => {
     };
 
     //Default loading screen for when
-    if (!categoryList || categoryList.length === 0) {
+    if (!categoryList) {
         return <LoadingIcon/>;
     }
 
+    //Page to display once we have loaded in the category list
     return (
         <div className="container mt-5">
             <div className="header text-center">
