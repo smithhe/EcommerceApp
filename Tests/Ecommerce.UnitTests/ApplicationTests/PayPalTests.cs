@@ -429,11 +429,6 @@ namespace Ecommerce.UnitTests.ApplicationTests
                 {
                     Success = true
                 });
-            this._mediator.Setup(m => m.Send(It.IsAny<DeleteUserCartItemsCommand>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new DeleteUserCartItemsResponse
-                {
-                    Success = true
-                });
             
             HandlePayPalSuccessCommandHandler handler = new HandlePayPalSuccessCommandHandler(Mock.Of<ILogger<HandlePayPalSuccessCommandHandler>>(),this._mediator.Object);
             
@@ -512,36 +507,6 @@ namespace Ecommerce.UnitTests.ApplicationTests
             this._mediator.Setup(x => x.Send(It.IsAny<GetOrderByReturnKeyQuery>(), It.IsAny<CancellationToken>())).ReturnsAsync(new OrderDto());
             this._mediator.Setup(m => m.Send(It.IsAny<UpdateOrderCommand>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new UpdateOrderResponse
-                {
-                    Success = false
-                });
-            
-            HandlePayPalSuccessCommandHandler handler = new HandlePayPalSuccessCommandHandler(Mock.Of<ILogger<HandlePayPalSuccessCommandHandler>>(),this._mediator.Object);
-            
-            //Act
-            bool result = await handler.Handle(command, CancellationToken.None);
-            
-            //Assert
-            Assert.That(result, Is.False);
-        }
-        
-        [Test]
-        public async Task HandlePayPalSuccessCommandHandler_WhenCartEmptyFails_ReturnsFalse()
-        {
-            //Arrange
-            HandlePayPalSuccessCommand command = new HandlePayPalSuccessCommand
-            {
-                ReturnKey = _returnKey
-            };
-            
-            this._mediator.Setup(x => x.Send(It.IsAny<GetOrderByReturnKeyQuery>(), It.IsAny<CancellationToken>())).ReturnsAsync(new OrderDto());
-            this._mediator.Setup(m => m.Send(It.IsAny<UpdateOrderCommand>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new UpdateOrderResponse
-                {
-                    Success = true
-                });
-            this._mediator.Setup(m => m.Send(It.IsAny<DeleteUserCartItemsCommand>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new DeleteUserCartItemsResponse
                 {
                     Success = false
                 });

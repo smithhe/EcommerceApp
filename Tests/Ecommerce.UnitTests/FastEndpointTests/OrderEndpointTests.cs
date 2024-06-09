@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems;
 using Ecommerce.Application.Features.Order.Commands.CreateOrder;
 using Ecommerce.Application.Features.Order.Commands.UpdateOrder;
 using Ecommerce.Application.Features.Order.Queries.GetAllOrdersByUserId;
@@ -15,6 +16,7 @@ using Ecommerce.FastEndpoints.Endpoints.Order;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Enums;
 using Ecommerce.Shared.Requests.Order;
+using Ecommerce.Shared.Responses.CartItem;
 using Ecommerce.Shared.Responses.Order;
 using Ecommerce.Shared.Responses.PayPal;
 using FastEndpoints;
@@ -83,6 +85,7 @@ namespace Ecommerce.UnitTests.FastEndpointTests
                 .ReturnsAsync(createOrderResponse);
             this._mediator.Setup(m => m.Send(It.IsAny<CreatePayPalOrderCommand>(), default(CancellationToken)))
                 .ReturnsAsync(new CreatePayPalOrderResponse { Success = true, RedirectUrl = "redirectUrl" });
+            this._mediator.Setup(m => m.Send(It.IsAny<DeleteUserCartItemsCommand>(), default(CancellationToken))).ReturnsAsync(new DeleteUserCartItemsResponse { Success = true });
 
             CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object, this._configuration.Object);
             
@@ -294,7 +297,50 @@ namespace Ecommerce.UnitTests.FastEndpointTests
                 Assert.That(result.ValidationErrors, Is.Empty);
             });
         }
+        
+        [Test]
+        public async Task CreateOrderEndpoint_WhenCartEmptyFails_ReturnsFailedResponse()
+        {
+            // Arrange
+            CreateOrderApiRequest request = new CreateOrderApiRequest
+            {
+                PaymentSource = PaymentSource.PayPal,
+                CartItems = new CartItemDto[] { new CartItemDto() }
+            };
+            
+            CreateOrderResponse createOrderResponse = new CreateOrderResponse
+            {
+                Success = true,
+                Message = OrderConstants._createSuccessMessage,
+                Order = this._orderDto
+            };
+            
+            this._tokenService.Setup(t => t.ValidateTokenAsync(It.IsAny<string>())).ReturnsAsync(true);
+            this._tokenService.Setup(t => t.GetUserIdFromToken(It.IsAny<string>())).Returns(_userId);
+            this._tokenService.Setup(t => t.GetUserNameFromToken(It.IsAny<string>())).Returns(_userName);
+            
+            this._mediator.Setup(m => m.Send(It.IsAny<CreateOrderCommand>(), default(CancellationToken)))
+                .ReturnsAsync(createOrderResponse);
+            this._mediator.Setup(m => m.Send(It.IsAny<CreatePayPalOrderCommand>(), default(CancellationToken)))
+                .ReturnsAsync(new CreatePayPalOrderResponse { Success = true, RedirectUrl = "redirectUrl" });
+            this._mediator.Setup(m => m.Send(It.IsAny<DeleteUserCartItemsCommand>(), default(CancellationToken))).ReturnsAsync(new DeleteUserCartItemsResponse { Success = false });
 
+            CreateOrderEndpoint endpoint = Factory.Create<CreateOrderEndpoint>(Mock.Of<ILogger<CreateOrderEndpoint>>(), this._mediator.Object, this._tokenService.Object, this._configuration.Object);
+            
+            // Act
+            await endpoint.HandleAsync(request, default(CancellationToken));
+            CreateOrderResponse result = endpoint.Response;
+
+            // Assert
+            Assert.Multiple(() =>
+            {
+                Assert.That(result.Success, Is.False);
+                Assert.That(result.Message, Is.EqualTo("Unexpected Error Occurred"));
+                Assert.That(result.Order, Is.Null);
+                Assert.That(result.RedirectUrl, Is.Null);
+                Assert.That(result.ValidationErrors, Is.Empty);
+            });
+        }
         #endregion
 
         #region GetAllOrdersByUserIdEndpoint Tests

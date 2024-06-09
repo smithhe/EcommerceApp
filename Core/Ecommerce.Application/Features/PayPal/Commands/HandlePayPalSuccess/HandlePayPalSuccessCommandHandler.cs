@@ -82,17 +82,6 @@ namespace Ecommerce.Application.Features.PayPal.Commands.HandlePayPalSuccess
                 return false;
             }
             
-            //Empty the cart
-            DeleteUserCartItemsResponse deleteUserCartItemsResponse = await this._mediator.Send(new DeleteUserCartItemsCommand { UserId = order.UserId }, cancellationToken);
-
-            //Check if the cart empty was successful
-            if (deleteUserCartItemsResponse.Success == false)
-            {
-                //Log the error and return false
-                this._logger.LogError("Failed to empty the cart for the user");
-                return false;
-            }
-            
             //Return success
             return true;
         }

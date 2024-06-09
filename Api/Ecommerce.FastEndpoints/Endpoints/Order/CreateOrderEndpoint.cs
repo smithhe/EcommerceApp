@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems;
 using Ecommerce.Application.Features.Order.Commands.CreateOrder;
 using Ecommerce.Application.Features.Order.Commands.UpdateOrder;
 using Ecommerce.Application.Features.PayPal.Commands.CreatePayPalOrder;
@@ -11,6 +12,7 @@ using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.Shared.Enums;
 using Ecommerce.Shared.Exceptions;
 using Ecommerce.Shared.Requests.Order;
+using Ecommerce.Shared.Responses.CartItem;
 using Ecommerce.Shared.Responses.Order;
 using Ecommerce.Shared.Responses.PayPal;
 using FastEndpoints;
@@ -142,6 +144,22 @@ namespace Ecommerce.FastEndpoints.Endpoints.Order
 				await this.SendAsync(new CreateOrderResponse { Success = false, Message = "Unexpected Error Occurred" },
 					500, ct);
 				return;
+			}
+			
+			//Empty the cart if payment was successful
+			if (response.Success)
+			{
+				DeleteUserCartItemsResponse deleteUserCartItemsResponse = await this._mediator.Send(new DeleteUserCartItemsCommand { UserId = this._tokenService.GetUserIdFromToken(token) ?? Guid.Empty }, ct);
+				
+				//Check if the cart empty was successful
+				if (deleteUserCartItemsResponse.Success == false)
+				{
+					//Log the error and return false
+					this._logger.LogError("Failed to empty the cart for the user");
+					await this.SendAsync(new CreateOrderResponse { Success = false, Message = "Unexpected Error Occurred" },
+						500, ct);
+					return;
+				}
 			}
 
 			//Send the response
