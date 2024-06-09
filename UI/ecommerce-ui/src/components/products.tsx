@@ -13,7 +13,7 @@ import {CartItem} from "../models/CartItem.ts";
 import LoadingIcon from "./childComponents/LoadingIcon.tsx";
 
 const Products = () => {
-    const [productList, setProductList] = useState<Product[]>([]);
+    const [productList, setProductList] = useState<Product[] | undefined>(undefined);
     const { categoryId } = useParams<{ categoryId: string }>();
     const { isAuthenticated, claims } = useAuth();
     const navigate = useNavigate();
@@ -35,19 +35,20 @@ const Products = () => {
             if (response.success) {
                 setProductList(response.products);
             } else {
+                setProductList([]);
                 toast.error(response.message);
             }
         };
 
-        fetchProducts();
+        fetchProducts().then(() => {console.log('Products loaded')});
     }, [categoryId]);
 
     const addToCartClick = (productId: number) => {
-        if (isAuthenticated === false) {
+        if (!isAuthenticated) {
             navigate('/login');
         }
 
-        const product = productList.find((p) => p.id === productId);
+        const product = productList?.find((p) => p.id === productId);
 
         if (product == undefined)
         {
@@ -89,7 +90,7 @@ const Products = () => {
         setIsOpen(false);
     }
 
-    if (productList.length === 0) {
+    if (!productList) {
         return <LoadingIcon/>;
     }
 
