@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {CartItem} from "../models/CartItem.ts";
 import {useAuth} from "../AuthContext.tsx";
 import productService from "../services/ProductService.ts";
@@ -15,7 +15,7 @@ const Cart = () => {
     const {isAuthenticated, claims} = useAuth();
     const navigate = useNavigate();
 
-    const [cartItems, setCartItems] = useState<CartItem[]>([]);
+    const [cartItems, setCartItems] = useState<CartItem[] | undefined>(undefined);
     const [cartTotal, setCartTotal] = useState<number>();
     const [modalIsOpen, setIsOpen] = useState(false);
     const [products, setProducts] = useState<Product[]>([]);
@@ -44,6 +44,7 @@ const Cart = () => {
 
             if (localCartItems.length === 0)
             {
+                setCartItems([]);
                 return;
             }
 
@@ -74,7 +75,6 @@ const Cart = () => {
             setProducts(localProducts);
             setCartItems(localCartItems);
         }
-
 
 
         loadCart().then(() => {console.log('Cart Loaded')});
