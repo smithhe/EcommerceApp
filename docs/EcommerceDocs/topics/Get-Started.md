@@ -19,7 +19,7 @@
 4) Update your `appsettings.Development.json` file in the API project to have the following connection string <br/> (You *SHOULD* change the values to match your MySQL container setup)
     <code-block lang="json">
         "ConnectionStrings": {
-            "DefaultConnection": "server=localhost;port=3306;database=ecommerce;user=applicationuser;password=Welcome1!"
+            "datastorage": "server=localhost;port=3306;database=ecommerce;user=applicationuser;password=Welcome1!"
         }
     </code-block>
 5) You will need to use a program of your choice or bash into the container to access your MySql database to run the following snippet as a user with admin privileges
