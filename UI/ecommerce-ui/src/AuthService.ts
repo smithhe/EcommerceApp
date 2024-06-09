@@ -65,8 +65,6 @@ const logout = async (username: string) => {
     catch (error) {
         console.log(error);
     }
-
-    //
 }
 
 interface CreateUserResponse {
@@ -117,19 +115,69 @@ const confirmEmail = async (userId: string, emailToken: string) => {
     };
 }
 
-const isAuthenticated = (): boolean => {
-    const token = localStorage.getItem('authToken');
+const updateProfile = async (firstName: string, lastName: string, updateUserName: string, userName: string, email: string) => {
+    try {
+        const response = await axiosInstance.put(`/api/user/update`, {
+            FirstName: firstName,
+            LastName: lastName,
+            UpdateUserName: updateUserName,
+            UserName: userName,
+            Email: email
+        });
 
-    return !!token;
+        if (response.status >= 200 && response.status < 300) {
+            return response.data;
+        }
+
+        return {
+            success: false,
+            message: response.data.message || "Unexpected Error Occurred",
+            validationErrors: []
+        };
+    } catch (error) {
+        console.log(error);
+        return {
+            success: false,
+            message: "Unexpected Error Occurred",
+            validationErrors: []
+        };
+    }
 }
 
+const updatePassword = async (userName: string, currentPassword: string, newPassword: string) => {
+    try {
+        const response = await axiosInstance.put(`/api/password/update`, {
+            UserName: userName,
+            CurrentPassword: currentPassword,
+            NewPassword: newPassword
+        });
+
+        if (response.status >= 200 && response.status < 300) {
+            return response.data;
+        }
+
+        return {
+            success: false,
+            message: response.data.message || "Unexpected Error Occurred",
+            validationErrors: []
+        };
+    } catch (error) {
+        console.log(error);
+        return {
+            success: false,
+            message: "Unexpected Error Occurred",
+            validationErrors: []
+        };
+    }
+}
 
 const authService = {
     login,
     logout,
     registerUser,
     confirmEmail,
-    isAuthenticated
+    updateProfile,
+    updatePassword
 };
 
 export default authService;

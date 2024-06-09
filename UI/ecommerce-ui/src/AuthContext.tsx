@@ -7,6 +7,8 @@ interface AuthContextType {
     isAuthenticated: boolean;
     login: (userName: string, password: string) => Promise<any>;
     logout: (userName: string) => void;
+    updateProfile: (firstName: string, lastName: string, updateUserName: string, userName: string, email: string) => Promise<any>;
+    updatePassword: (userName: string, currentPassword: string, newPassword: string) => Promise<any>;
 }
 
 interface TokenClaims {
@@ -100,10 +102,42 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         setClaims(undefined);
     }
 
+    const updateProfile = async (firstName: string, lastName: string, updateUserName: string, userName: string, email: string)=> {
+        const response = await authService.updateProfile(firstName, lastName, updateUserName, userName, email);
 
+        if (response.success) {
+            localStorage.setItem('authToken', response.updatedAccessToken);
+            setIsAuthenticated(true);
+
+            const decodedClaims = decodeToken(response.updatedAccessToken);
+
+            if (decodedClaims) {
+                setClaims(decodedClaims);
+            }
+        }
+
+        return response;
+    }
+
+    const updatePassword = async (userName: string, currentPassword: string, newPassword: string) => {
+        const response = await authService.updatePassword(userName, currentPassword, newPassword);
+
+        if (response.success) {
+            localStorage.setItem('authToken', response.updatedAccessToken);
+            setIsAuthenticated(true);
+
+            const decodedClaims = decodeToken(response.updatedAccessToken);
+
+            if (decodedClaims) {
+                setClaims(decodedClaims);
+            }
+        }
+
+        return response;
+    }
 
     return (
-        <AuthContext.Provider value={{ claims, isAuthenticated, login, logout }}>
+        <AuthContext.Provider value={{ claims, isAuthenticated, login, logout, updateProfile, updatePassword }}>
             {children}
         </AuthContext.Provider>
     );
