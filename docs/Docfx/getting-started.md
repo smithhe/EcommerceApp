@@ -11,9 +11,6 @@ Optionally if you would like to have your containers hosted on a separate machin
 ### Optional Setup Requirements
 These are a list of requirements you only need if you want to have a real mail server and use paypal when doing checkout
 
-* A PayPal account
-    
-    The current implemented method for checkout is through PayPal, in order to use the checkout system you will need to setup a dev account and get the credentials to make API calls as well as sandbox credentials to complete a checkout
 * A mail server
     
     If you opt to not use the mailhog server below and want to have emails actually sent out you will need to set something up and get the credentials necessary for the secrets.json file in the worker project.
