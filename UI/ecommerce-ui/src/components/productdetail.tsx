@@ -31,54 +31,59 @@ const ProductDetail = () => {
     const [modalIsOpen, setIsOpen] = useState(false);
     const [modalCount, setModalCount] = useState<number>(0);
     const [savingReview, setSavingReview] = useState<boolean>(false);
+    const [deletingReview, setDeletingReview] = useState<boolean>(false);
+    const [updatingReview, setUpdatingReview] = useState<boolean>(false);
+
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (!productId) {
-            toast.error('Invalid product ID');
-            return;
-        }
-
-        const fetchProduct = async () => {
-            const response = await productService.getProductById(parseInt(productId));
-            if (response.success == false) {
-                toast.error(response.message);
-                return;
-            }
-
-            const userReviewResponse = await reviewService.getUserReview(claims?.["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || '', response.product.id)
-
-            if (userReviewResponse.success && userReviewResponse.userReview != null)
-            {
-                setUserHasReview(true);
-                setStarRating(userReviewResponse.userReview.starRatings);
-                setUserReview(userReviewResponse.userReview);
-
-                const index = response.product.customerReviews.findIndex((r: Review) => r.id === userReviewResponse.userReview.id);
-                if (index > -1)
-                {
-                    response.product.customerReviews = response.product.customerReviews.slice(0, index).concat(response.product.customerReviews.slice(index + 1));
-                }
-            }
-
-            setProduct(response.product);
-        };
-
-        fetchProduct().then(() => {console.log('Product Fetched')});
+        refreshPageInfo().then(() => {console.log('Product Fetched')});
     }, [productId, isAuthenticated, claims]);
 
     const ratingChanged = (newRating: number) => {
         setStarRating(newRating);
     };
 
+    const refreshPageInfo = async () => {
+        if (!productId) {
+            toast.error('Invalid product ID');
+            return;
+        }
+
+        const response = await productService.getProductById(parseInt(productId));
+        if (response.success == false) {
+            toast.error(response.message);
+            return;
+        }
+
+        const userReviewResponse = await reviewService.getUserReview(claims?.["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || '', response.product.id)
+
+        if (userReviewResponse.success && userReviewResponse.userReview != null)
+        {
+            setUserHasReview(true);
+            setStarRating(userReviewResponse.userReview.starRatings);
+            setUserReview(userReviewResponse.userReview);
+
+            const index = response.product.customerReviews.findIndex((r: Review) => r.id === userReviewResponse.userReview.id);
+            if (index > -1)
+            {
+                response.product.customerReviews = response.product.customerReviews.slice(0, index).concat(response.product.customerReviews.slice(index + 1));
+            }
+        }
+
+        setProduct(response.product);
+    }
+
     const createReview = async () => {
         const newReview: Review = new Review(0, product?.id || 0, claims?.["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || '', starRating, comments);
+        setSavingReview(true);
 
         const response = await reviewService.submitReview(newReview);
 
         if (response.success)
         {
-            setUserReview(response.review);
+            setSavingReview(false);
+            await refreshPageInfo();
             return;
         }
 
@@ -88,7 +93,7 @@ const ProductDetail = () => {
     const updateReview = async () => {
         if (userReview == undefined) return;
 
-        setSavingReview(true);
+        setUpdatingReview(true);
         const reviewToUpdate = userReview;
 
         reviewToUpdate.stars = starRating;
@@ -98,9 +103,10 @@ const ProductDetail = () => {
 
         if (response.success)
         {
-            setUserReview(reviewToUpdate);
-            setSavingReview(false);
+
+            await refreshPageInfo();
             setIsEditing(false);
+            setUpdatingReview(false);
             return;
         }
 
@@ -111,11 +117,15 @@ const ProductDetail = () => {
     const deleteReview = async () => {
         if (userReview == undefined) return;
 
+        setDeletingReview(true);
         const response = await reviewService.removeReview(userReview);
 
         if (response.success)
         {
+            setDeletingReview(false);
             setUserReview(undefined);
+            setUserHasReview(false);
+            await refreshPageInfo();
             return;
         }
 
@@ -167,7 +177,7 @@ const ProductDetail = () => {
         setIsOpen(false);
     }
 
-    if (!product || (!userReview && userHasReview)) {
+    if (!product) {
         return <LoadingIcon/>;
     }
 
@@ -270,7 +280,7 @@ const ProductDetail = () => {
                                                           rows={4} maxLength={500}></textarea>
                                             </div>
 
-                                            {savingReview ? (
+                                            {updatingReview ? (
                                                 <button type="submit" className="btn btn-primary mt-2">
                                                     <span className="spinner-border spinner-border-sm"
                                                           role="status"></span>
@@ -281,9 +291,19 @@ const ProductDetail = () => {
                                                         onClick={() => updateReview()}>Save Changes
                                                 </button>
                                             )}
-                                            <button type="button" className="btn btn-danger mt-2 ms-2"
-                                                    onClick={() => deleteReview()}>Delete
-                                            </button>
+
+                                            {deletingReview ? (
+                                                <button type="button" className="btn btn-danger mt-2 ms-2">
+                                                    <span className="spinner-border spinner-border-sm"
+                                                          role="status"></span>
+                                                    Deleting Review
+                                                </button>
+                                            ) : (
+                                                <button type="button" className="btn btn-danger mt-2 ms-2"
+                                                        onClick={() => deleteReview()}>Delete
+                                                </button>
+                                            )}
+
                                             <button type="button" className="btn btn-secondary mt-2 ms-2"
                                                     onClick={() => cancelEditing()}>Cancel
                                             </button>
@@ -302,7 +322,15 @@ const ProductDetail = () => {
                                             </div>
                                             <p className="card-text mt-2">{userReview?.comments}</p>
                                             <button type="button" className="btn btn-primary" onClick={() => editReview()}>Edit</button>
-                                            <button type="button" className="btn btn-danger ms-2" onClick={() => deleteReview()}>Delete</button>
+                                            {deletingReview ? (
+                                                <button type="button" className="btn btn-danger ms-2">
+                                                    <span className="spinner-border spinner-border-sm"
+                                                          role="status"></span>
+                                                    Deleting Review
+                                                </button>
+                                            ) : (
+                                                <button type="button" className="btn btn-danger ms-2" onClick={() => deleteReview()}>Delete</button>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -329,7 +357,15 @@ const ProductDetail = () => {
                                                   onChange={(e) => setComments(e.target.value)}></textarea>
                                     </div>
 
-                                    <button type="button" className="btn btn-primary mt-2" onClick={createReview}>Submit Review</button>
+                                    {savingReview ? (
+                                        <button type="button" className="btn btn-primary mt-2">
+                                            <span className="spinner-border spinner-border-sm"
+                                                  role="status"></span>
+                                            Submitting Review
+                                        </button>
+                                    ) : (
+                                        <button type="button" className="btn btn-primary mt-2" onClick={createReview}>Submit Review</button>
+                                    )}
                                 </div>
                             </div>
                         </div>
