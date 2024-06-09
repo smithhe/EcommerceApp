@@ -45,15 +45,15 @@ These are a list of requirements you only need if you want to have a real mail s
    ```sql
     SET GLOBAL event_scheduler = ON;
    ```
-6) Add a secrets.json file to the API project and add paste the following into it<br/> Be sure to update the sections with the values for your project
+6) Add a secrets.json file to the API project and add paste the following into it<br/> Be sure to update the sections with the values for your project, and match your settings to what was used in the docker container setup step
     ```json
     {
         "JwtSettings": {
-        "Key": "somevalue",
+        "Key": "somevalue"
         },
         "Paypal": {
             "ClientId": "AnId",
-            "Secret": "something",
+            "Secret": "something"
         },
         "RabbitMQ": {
             "Username": "CHANGEME",
@@ -69,21 +69,21 @@ These are a list of requirements you only need if you want to have a real mail s
             "Password": "CHANGEME"
         },
         "MailSettings": {
-            "Host": "mailhog",
+            "Host": "localhost",
             "Port": 1025,
             "UserName": "CHANGEME",
             "Password": "CHANGEME"
         }
     }
     ```
-8) (Mailhog Only) Update the `MailServiceRegistration.cs` file so it looks like this
+8) (Mailhog Only) Update the `MailServiceRegistration.cs` file under the `Ecommerce.Mail` class library project so it looks like this
     ```csharp
     //Use for local testing with MailHog
     SmtpClient client = new SmtpClient
     {
         EnableSsl = false,
         Port = 1025,
-        Host = "mailhog"
+        Host = "localhost"
     };
     
     //Use for sending emails with a real SMTP server
@@ -95,7 +95,11 @@ These are a list of requirements you only need if you want to have a real mail s
     //     Credentials = new System.Net.NetworkCredential(mailSettings.UserName, mailSettings.Password)
     // };
     ```
-9) Run the UI, API, and Worker projects together in an IDE of your choice
+9) If you plan to use the Blazor UI instead of the React UI go into the appsettings.json file in the Api project and update the UIUrl property to the following value
+    ```json
+    "UIUrl": "http://localhost:5233"
+    ```
+10) Run the API, Worker, and optionall the UI projects together in an IDE of your choice, if you are using mailhog you can access your inbox at localhost:8025
 
 ### React UI Setup Steps
 1) Run the following command to download the dependencies you will need for the project
