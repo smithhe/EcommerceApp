@@ -23,17 +23,10 @@ const Cart = () => {
     const [modalProductName, setModalProductName] = useState<string>('');
     const [modalProductDesc, setModalProductDesc] = useState<string>('');
     const [modalCartItem, setModalCartItem] = useState<CartItem>();
-    
-    //const [reload, setReload] = useState(false);
-
-    //let modalCount: number = 0;
-    //let modalProductName: string = '';
-    //let modalProductDesc: string = '';
-    //let modalCartItem: CartItem | undefined = undefined;
-    //const products: Product[] = [];
+    const [isProcessing, setIsProcessing] = useState<boolean>(false);
 
     useEffect(() => {
-        if (isAuthenticated === false)
+        if (!isAuthenticated)
         {
             return;
         }
@@ -84,8 +77,8 @@ const Cart = () => {
 
 
 
-        loadCart();
-    }, [isAuthenticated]);
+        loadCart().then(() => {console.log('Cart Loaded')});
+    }, [isAuthenticated, claims]);
 
     const startShoppingClick = () => {
         navigate('/categories');
@@ -177,19 +170,21 @@ const Cart = () => {
     }
 
     const startStandardCheckout = async () => {
+        setIsProcessing(true);
         const response = await orderService.createOrder(cartItems, PaymentSource.Standard);
 
         if (response.success && response.redirectUrl)
         {
-            navigate(response.redirectUrl);
+            window.location.href = response.redirectUrl;
         }
         else
         {
             toast.error(response.message);
         }
+        setIsProcessing(false);
     }
 
-    if (!cartItems || cartItems.length === 0)
+    if (!cartItems)
     {
         return <LoadingIcon/>;
     }
@@ -263,9 +258,16 @@ const Cart = () => {
                             <div className="col-md-3"></div>
 
                             <div className="col-md-6">
-                                <button className="btn btn-success form-control" onClick={() => startStandardCheckout}>
-                                    <i className="bi bi-cash"></i> Checkout
-                                </button>
+                                {isProcessing ? (
+                                    <button type="submit" className="btn btn-success form-control">
+                                        <span className="spinner-border spinner-border-sm" role="status"></span>
+                                        Creating Order
+                                    </button>
+                                ) : (
+                                    <button className="btn btn-success form-control" onClick={startStandardCheckout}>
+                                        <i className="bi bi-cash"></i> Checkout
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </>
