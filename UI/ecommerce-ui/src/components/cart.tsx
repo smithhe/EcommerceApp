@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import {CartItem} from "../models/CartItem.ts";
 import {useAuth} from "../AuthContext.tsx";
 import productService from "../services/ProductService.ts";
@@ -112,6 +112,10 @@ const Cart = () => {
     };
 
     const removeCartItem = async (cartItem: CartItem) =>  {
+        if (!cartItems) {
+            return;
+        }
+
         const response = await cartService.removeItemFromCart(cartItem);
 
         if (response.success)
@@ -150,8 +154,11 @@ const Cart = () => {
 
         if (updateCartItemResponse.success)
         {
-            const localCartItems = cartItems.filter(c => c.id === modalCartItem!.id);
-            localCartItems.push(modalCartItem);
+            const localCartItems = cartItems?.filter(c => c.id === modalCartItem!.id);
+
+            if (localCartItems) {
+                localCartItems.push(modalCartItem);
+            }
 
             //calculateCartTotal(products);
         } else if (updateCartItemResponse.validationErrors.length > 0)
@@ -170,6 +177,10 @@ const Cart = () => {
     }
 
     const startStandardCheckout = async () => {
+        if (!cartItems) {
+            return;
+        }
+
         setIsProcessing(true);
         const response = await orderService.createOrder(cartItems, PaymentSource.Standard);
 
