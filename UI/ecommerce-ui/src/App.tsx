@@ -12,6 +12,7 @@ import Logout from "./components/security/logout.tsx";
 import Cart from "./components/cart.tsx";
 import Orders from "./components/Orders.tsx";
 import OrderDetail from "./components/OrderDetail.tsx";
+import Profile from "./components/Profile.tsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
             <Route path="/orders" element={<Orders />}  />
             <Route path="/orderdetail/:orderId" element={<OrderDetail />}  />
             <Route path="/checkout/success/:orderId" element={<Cart />}  />
+            <Route path="/profile" element={<Profile />}  />
         </Route>
     )
 )
