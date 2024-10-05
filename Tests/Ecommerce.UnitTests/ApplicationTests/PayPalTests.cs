@@ -1,6 +1,5 @@
 using System.Threading;
 using System.Threading.Tasks;
-using Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems;
 using Ecommerce.Application.Features.Order.Commands.DeleteOrder;
 using Ecommerce.Application.Features.Order.Commands.UpdateOrder;
 using Ecommerce.Application.Features.Order.Queries.GetOrderById;
@@ -16,7 +15,6 @@ using Ecommerce.PayPal.Contracts;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Requests.PayPal;
-using Ecommerce.Shared.Responses.CartItem;
 using Ecommerce.Shared.Responses.Order;
 using Ecommerce.Shared.Responses.PayPal;
 using MediatR;

@@ -1,11 +1,9 @@
 using System.Threading;
 using System.Threading.Tasks;
-using Ecommerce.Application.Features.CartItem.Commands.DeleteUserCartItems;
 using Ecommerce.Application.Features.Order.Commands.UpdateOrder;
 using Ecommerce.Application.Features.PayPal.Queries.GetOrderByReturnKey;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Enums;
-using Ecommerce.Shared.Responses.CartItem;
 using Ecommerce.Shared.Responses.Order;
 using MediatR;
 using Microsoft.Extensions.Logging;

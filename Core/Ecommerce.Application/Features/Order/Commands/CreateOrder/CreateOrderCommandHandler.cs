@@ -1,12 +1,9 @@
 using AutoMapper;
-using AutoMapper.Internal;
-using Ecommerce.Application.Features.OrderItem.Commands.CreateOrderItem;
 using Ecommerce.Application.Validators.Order;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Persistence.Contracts;
 using Ecommerce.Shared.Dtos;
 using Ecommerce.Shared.Responses.Order;
-using Ecommerce.Shared.Responses.OrderItem;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
