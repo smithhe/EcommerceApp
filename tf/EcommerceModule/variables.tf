@@ -18,12 +18,6 @@ variable "dockerhub_access_token" {
   sensitive   = true
 }
 
-variable "namespace" {
-  description = "The k8s namespace to install resources into"
-  type        = string
-  default     = "ecommerce"
-}
-
 variable "certmanager_namespace" {
   description = "The k8s namespace to install cert-manager resources into"
   type        = string
