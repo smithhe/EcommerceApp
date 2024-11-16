@@ -9,14 +9,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     
-    # Step 1: Get the source
     steps:
+      # Step 1: Get the source
       - name: Get the sources
         uses: actions/checkout@v4
 
-    # Step 2: Run the cake build script
+      # Step 2: Setup CakeBuild
+      - name: Setup Cake
+        run: |
+          dotnet tool install Cake.Tool --version 4.0.0
+
+      # Step 3: Run the cake build script
       - name: Run the build script
-        uses: cake-build/cake-action@v2
-        with:
-          cake-version: 4.0.0
-          script-path: ./BuildFiles/build.cake
+        run: |
+          dotnet cake ./BuildFiles/build.cake
