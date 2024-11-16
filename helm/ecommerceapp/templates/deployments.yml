@@ -15,8 +15,6 @@ spec:
         app: {{ .Values.api.selector }}
     spec:
       priorityClassName: high-priority
-      imagePullSecrets:
-        - name: docker-registry
       containers:
       - name: {{ .Values.deployments.api.container.name }}
         image: "{{ .Values.deployments.api.image.repository }}:{{ .Values.deployments.api.image.tag }}"
@@ -92,8 +90,6 @@ spec:
         app: {{ .Values.ui.selector }}
     spec:
       priorityClassName: high-priority
-      imagePullSecrets:
-        - name: docker-registry
       containers:
       - name: {{ .Values.deployments.ui.container.name }}
         image: "{{ .Values.deployments.ui.image.repository }}:{{ .Values.deployments.ui.image.tag }}"
@@ -129,8 +125,6 @@ spec:
         app: {{ .Values.worker.selector }}
     spec:
       priorityClassName: high-priority
-      imagePullSecrets:
-        - name: docker-registry
       containers:
       - name: {{ .Values.deployments.worker.container.name }}
         image: "{{ .Values.deployments.worker.image.repository }}:{{ .Values.deployments.worker.image.tag }}"
