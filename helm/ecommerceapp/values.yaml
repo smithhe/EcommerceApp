@@ -20,7 +20,7 @@ secrets:
     EcommerceRabbitMQUsername: ""
     EcommerceRabbitMQPassword: ""
     EcommerceMailSettingsHost: ""
-    EcommerceMailSettingsPort: ""
+    EcommerceMailSettingsPort: 
     EcommerceMailSettingsUserName: ""
     EcommerceMailSettingsPassword: ""
 
