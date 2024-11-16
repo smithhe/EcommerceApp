@@ -17,7 +17,7 @@ jobs:
       # Step 2: Setup CakeBuild
       - name: Setup Cake
         run: |
-          dotnet tool install Cake.Tool --version 4.0.0
+          dotnet tool install Cake.Tool --version 5.0.0
 
       # Step 3: Run the cake build script
       - name: Run the build script
