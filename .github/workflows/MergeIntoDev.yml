@@ -21,17 +21,15 @@ jobs:
           username: smithhe95
           password: ${{ secrets.DOCKERHUB_ACCESSTOKEN }}
 
-      # Step 3: Build and Push the API Image
+      # Step 3: Setup CakeBuild
+      - name: Setup Cake
+        run: |
+          dotnet tool install Cake.Tool --version 4.0.0
+
+      # Step 4: Build and Push the API Image
       - name: Build and Push Api Image
-        uses: cake-build/cake-action@v2
-        with:
-          cake-version: 4.0.0
-          script-path: ./BuildFiles/build.cake
-          arguments: |
-            build: API
-            configuration: Release
-            target: Docker Push
-            dockerWorkingDirectory: ${{ github.workspace }}
+        run: |
+          dotnet cake ./BuildFiles/build.cake --build=API --target='Docker Push' --configuration=Release --dockerWorkingDirectory=${{ github.workspace }}
   
   Build-And-Push-UI-Image:
     name: Build UI Image
@@ -48,18 +46,15 @@ jobs:
           username: smithhe95
           password: ${{ secrets.DOCKERHUB_ACCESSTOKEN }}
 
-      # Step 3: Build and Push the UI Image
+      # Step 3: Setup CakeBuild
+      - name: Setup Cake
+        run: |
+          dotnet tool install Cake.Tool --version 4.0.0
+
+      # Step 4: Build and Push the UI Image
       - name: Build and Push UI Image
-        uses: cake-build/cake-action@v2
-        with:
-          cake-version: 4.0.0
-          script-path: ./BuildFiles/build.cake
-          arguments: |
-            build: UI
-            configuration: Release
-            target: Docker Push
-            environmentArg: ${{ vars.UI_ENVIRONMENT }}
-            dockerWorkingDirectory: ${{ github.workspace }}
+        run: |
+          dotnet cake ./BuildFiles/build.cake --build=UI --target='Docker Push' --configuration=Release --environmentArg=QA --dockerWorkingDirectory=${{ github.workspace }}
   
   Build-And-Push-Worker-Image:
     name: Build Worker Image
@@ -76,14 +71,12 @@ jobs:
           username: smithhe95
           password: ${{ secrets.DOCKERHUB_ACCESSTOKEN }}
 
-      # Step 3: Build and Push the Worker Image
+      # Step 3: Setup CakeBuild
+      - name: Setup Cake
+        run: |
+          dotnet tool install Cake.Tool --version 4.0.0
+
+      # Step 4: Build and Push the Worker Image
       - name: Build and Push Worker Image
-        uses: cake-build/cake-action@v2
-        with:
-          cake-version: 4.0.0
-          script-path: ./BuildFiles/build.cake
-          arguments: |
-            build: Worker
-            configuration: Release
-            target: Docker Push
-            dockerWorkingDirectory: ${{ github.workspace }}
+        run: |
+          dotnet cake ./BuildFiles/build.cake --build=Worker --target='Docker Push' --configuration=Release --dockerWorkingDirectory=${{ github.workspace }}
