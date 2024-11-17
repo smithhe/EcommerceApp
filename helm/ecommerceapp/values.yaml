@@ -227,7 +227,7 @@ autoscalers:
 # Ingress specific values cert-manager.io/issuer: lets-encrypt-cluster-issuer
 #--------------------------------------------------------------------
 ingress:
-  enabled: true
+  enabled: false
   name: ecommerce-ingress
   className: nginx
   annotations:
