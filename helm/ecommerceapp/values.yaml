@@ -24,8 +24,6 @@ secrets:
     EcommerceMailSettingsUserName: ""
     EcommerceMailSettingsPassword: ""
 
-# IF you change these values
-# MAKE SURE they match what is put in the kubernetes.tf file
 connectionString:
   secretName: "ecommerce-database"
   secretKey: "connection-string"
