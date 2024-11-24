@@ -1,3 +1,4 @@
+{{- if .Values.autoscalers.enabled }}
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -56,3 +57,4 @@ spec:
       target:
         type: Utilization
         averageUtilization: {{ .Values.autoscalers.worker.averageUtilization }}
+{{- end }}
