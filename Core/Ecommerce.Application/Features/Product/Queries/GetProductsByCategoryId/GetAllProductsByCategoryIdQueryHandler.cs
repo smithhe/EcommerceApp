@@ -63,9 +63,7 @@ namespace Ecommerce.Application.Features.Product.Queries.GetProductsByCategoryId
 			if (products.Any() == false)
 			{
 				this._logger.LogWarning("Failed to find any products for the category");
-				
-				response.Success = false;
-				response.Message = ProductConstants._getAllProductsByCategoryErrorMessage;
+				response.Message = ProductConstants._getAllProductsByCategoryNoProductsFoundMessage;
 			}
 
 			//Return the response
