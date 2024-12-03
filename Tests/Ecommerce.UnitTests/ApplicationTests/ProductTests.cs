@@ -1333,7 +1333,7 @@ namespace Ecommerce.UnitTests.ApplicationTests
         }
         
         [Test]
-        public async Task GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsFailedResponse()
+        public async Task GetAllProductsByCategoryIdQueryHandler_WhenNoProductsFound_ReturnsSpecialResponse()
         {
             //Arrange
             GetAllProductsByCategoryIdQuery query = new GetAllProductsByCategoryIdQuery
@@ -1351,8 +1351,8 @@ namespace Ecommerce.UnitTests.ApplicationTests
             //Assert
             Assert.Multiple(() =>
             {
-                Assert.That(result.Success, Is.False);
-                Assert.That(result.Message, Is.EqualTo(ProductConstants._getAllProductsByCategoryErrorMessage));
+                Assert.That(result.Success, Is.True);
+                Assert.That(result.Message, Is.EqualTo(ProductConstants._getAllProductsByCategoryNoProductsFoundMessage));
                 Assert.That(result.Products, Is.Empty);
             });
         }

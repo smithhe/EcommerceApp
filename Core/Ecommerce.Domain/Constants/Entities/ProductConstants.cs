@@ -16,7 +16,7 @@ namespace Ecommerce.Domain.Constants.Entities
         public const string _getProductByIdReviewsNotFoundErrorMessage = "Error retrieving the product reviews, please try again later.";
         
         public const string _getAllProductsByCategorySuccessMessage = "Successfully retrieved all products.";
-        public const string _getAllProductsByCategoryErrorMessage = "Error retrieving products, please try again later.";
+        public const string _getAllProductsByCategoryNoProductsFoundMessage = "Sorry, but no products exist for this category. Check again later.";
         
         public const string _genericValidationErrorMessage = "Please fix the listed errors and try again.";
     }
