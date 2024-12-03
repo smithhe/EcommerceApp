@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -9,8 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="FastEndpoints" Version="5.32.0" />
-      <PackageReference Include="FastEndpoints.Swagger" Version="5.32.0" />
+      <PackageReference Include="FastEndpoints" Version="5.30.0" />
+      <PackageReference Include="FastEndpoints.Swagger" Version="5.30.0" />
     </ItemGroup>
 
     <ItemGroup>

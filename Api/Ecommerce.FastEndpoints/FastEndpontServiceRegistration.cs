@@ -1,4 +1,3 @@
-using System;
 using Ecommerce.Application;
 using Ecommerce.FastEndpoints.Contracts;
 using Ecommerce.FastEndpoints.Services;
@@ -34,8 +33,7 @@ namespace Ecommerce.FastEndpoints
 						s.Description = "API documentation for the Ecommerce application";
 					};
 					
-					// ReSharper disable once RedundantDelegateCreation
-					options.EndpointFilter = new Func<EndpointDefinition, bool>((endpoint) => endpoint.EndpointTags == null);
+					options.EndpointFilter = (endpoint) => endpoint.EndpointTags == null;
 					options.AutoTagPathSegmentIndex = 0;
 				});
 		}
