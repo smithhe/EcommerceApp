@@ -36,7 +36,7 @@ namespace Ecommerce.UI.Services
 
 			if (response.IsSuccessStatusCode)
 			{
-				return response.Content;
+				return response.Content!;
 			}
 			
 			return string.IsNullOrEmpty(response.Error.Content) ? 
@@ -112,7 +112,7 @@ namespace Ecommerce.UI.Services
 				return error!;
 			}
 			
-			UpdateEcommerceUserResponse content = response.Content;
+			UpdateEcommerceUserResponse content = response.Content!;
 			
 			if (string.IsNullOrEmpty(content.UpdatedAccessToken))
 			{
@@ -146,7 +146,7 @@ namespace Ecommerce.UI.Services
 				return error!;
 			}
 			
-			UpdatePasswordResponse content = response.Content;
+			UpdatePasswordResponse content = response.Content!;
 			
 			if (string.IsNullOrEmpty(content.UpdatedAccessToken))
 			{
@@ -170,7 +170,7 @@ namespace Ecommerce.UI.Services
 			
 			if (response.IsSuccessStatusCode)
 			{
-				return response.Content;
+				return response.Content!;
 			}
 			
 			return string.IsNullOrEmpty(response.Error.Content) ? 

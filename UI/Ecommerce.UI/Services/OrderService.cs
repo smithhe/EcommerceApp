@@ -30,7 +30,7 @@ namespace Ecommerce.UI.Services
 			
             if (response.IsSuccessStatusCode)
             {
-                return response.Content;
+                return response.Content!;
             }
 			
             return string.IsNullOrEmpty(response.Error.Content) ? 
@@ -47,7 +47,7 @@ namespace Ecommerce.UI.Services
             
             if (response.IsSuccessStatusCode)
             {
-                return response.Content;
+                return response.Content!;
             }
 			
             return string.IsNullOrEmpty(response.Error.Content) ? 
@@ -64,7 +64,7 @@ namespace Ecommerce.UI.Services
             
             if (response.IsSuccessStatusCode)
             {
-                return response.Content;
+                return response.Content!;
             }
             
             return string.IsNullOrEmpty(response.Error.Content) ? 
@@ -81,7 +81,7 @@ namespace Ecommerce.UI.Services
             
             if (response.IsSuccessStatusCode)
             {
-                return response.Content;
+                return response.Content!;
             }
             
             return string.IsNullOrEmpty(response.Error.Content) ? 
@@ -99,7 +99,7 @@ namespace Ecommerce.UI.Services
             
             if (response.IsSuccessStatusCode)
             {
-                return response.Content;
+                return response.Content!;
             }
             
             return string.IsNullOrEmpty(response.Error.Content) ? 
