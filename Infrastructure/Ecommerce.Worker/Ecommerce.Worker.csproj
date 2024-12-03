@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <UserSecretsId>11e7c595-24e0-4d24-8d3a-1be9e4e30c3e</UserSecretsId>
         <PreserveCompilationContext>true</PreserveCompilationContext>
@@ -10,9 +10,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MassTransit" Version="8.2.5" />
-      <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.5" />
-      <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+      <PackageReference Include="MassTransit" Version="8.3.2" />
+      <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.2" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
       <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
       <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
       <PackageReference Include="Serilog.Sinks.Grafana.Loki" Version="8.3.0" />
