@@ -15,6 +15,17 @@
         <img src="images/ajax-loader.gif" alt="Loading..."/>
     </div>
 }
+else if (this.ProductList.Any() == false)
+{
+    <div class="container mt-5">
+        <div class="text-center mb-3">
+            <h1 class="products-header">No Products Currently Available</h1>
+        </div>
+        <div class="text-center mb-3">
+            <button class="btn btn-primary" @onclick="HeadBackButton_Click">Head Back</button>
+        </div>
+    </div>
+}
 else
 {
     <div class="container mt-5">

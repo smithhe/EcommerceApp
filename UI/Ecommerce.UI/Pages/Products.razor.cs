@@ -32,9 +32,14 @@ namespace Ecommerce.UI.Pages
 		{
 			GetAllProductsByCategoryIdResponse response = await this.ProductService.GetAllProducts(Convert.ToInt32(this.CategoryId));
 			
-			if (response.Success)
+			if (response.Success && response.Products.Any())
 			{
 				this.ProductList = response.Products;
+			}
+			else if (response.Success)
+			{
+				this.ProductList = Array.Empty<ProductDto>();
+				this.ToastService.ShowInfo(response.Message!);
 			}
 			else
 			{
@@ -86,6 +91,11 @@ namespace Ecommerce.UI.Pages
 			{
 				this.ToastService.ShowError(response.Message!);
 			}
+		}
+
+		private void HeadBackButton_Click()
+		{
+			this.NavigationManager.NavigateTo("/Categories");
 		}
 	}
 }
